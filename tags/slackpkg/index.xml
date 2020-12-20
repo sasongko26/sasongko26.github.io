@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>slackpkg on Catatan Sasongko</title>
-    <link>http://sasongko26.github.io/tags/slackpkg/</link>
+    <link>http://sasongko.web.id/tags/slackpkg/</link>
     <description>Recent content in slackpkg on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://sasongko26.github.io/tags/slackpkg/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://sasongko.web.id/tags/slackpkg/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Slackpkg packages database error</title>
-      <link>http://sasongko26.github.io/2018-04-03-slackpkg-packages-database-error/</link>
+      <link>http://sasongko.web.id/2018-04-03-slackpkg-packages-database-error/</link>
       <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko26.github.io/2018-04-03-slackpkg-packages-database-error/</guid>
+      <guid>http://sasongko.web.id/2018-04-03-slackpkg-packages-database-error/</guid>
       <description>Siang ini, upgrade beberapa paket SBo, salah satunya adalah nodejs. Tetapi terjadi insiden di sela-sela prosesnya : lowbatt sehingga laptop mati. Kejadian ini awalnya tidak saya ketahui, karena banyak paket yang di-upgrade sehingga lama kemudian saya tinggal mengerjakan pekerjaan yang lain.
 Singkat cerita, saya ingin upgrade paket-paket official melalui slackpkgslackpkg upgrade-all FATAL! There is some problem in packages database or maybe an installation or upgrade in progress: nodejs-6.11.2-x86_64-1_SBo-upgraded-2018-04-03,11:12:24 If you continue you may corrupt packages database.</description>
     </item>
     
     <item>
       <title>Nonaktifkan Penghapusan Unduhan Slackpkg</title>
-      <link>http://sasongko26.github.io/2016-09-10-nonaktif-delall-slackpkg/</link>
+      <link>http://sasongko.web.id/2016-09-10-nonaktif-delall-slackpkg/</link>
       <pubDate>Sat, 10 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko26.github.io/2016-09-10-nonaktif-delall-slackpkg/</guid>
+      <guid>http://sasongko.web.id/2016-09-10-nonaktif-delall-slackpkg/</guid>
       <description>Secara default, slackpkgakan menghapus semua file yang di- download / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di /etc/slackpkg/slackpkg.confpada baris 77
 DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah onmenjadi off.</description>
     </item>
     
     <item>
       <title>Upgrade ke Slackware 14.2</title>
-      <link>http://sasongko26.github.io/2016-07-03-upgrade-slackware-142/</link>
+      <link>http://sasongko.web.id/2016-07-03-upgrade-slackware-142/</link>
       <pubDate>Sun, 03 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko26.github.io/2016-07-03-upgrade-slackware-142/</guid>
+      <guid>http://sasongko.web.id/2016-07-03-upgrade-slackware-142/</guid>
       <description>Sehubungan dengan telah rilisnya Slackware 14.2 maka silahkan melakukan upgrade untuk mendapatkan keamanan yang lebih bagus dan fitur-fitur baru. Saya selama ini melakukan upgrade bertahap demi penghematan kuota internet. Dimulai dengan upgrade ke current karena saat itu versi stable yang baru (14.2) masih dalam proses pengembangan. Upgrade ini menggunakan slackpkg. Dan tentu saja membutuhkan sambungan internet.
  Pilih cermin atau mirror. Dengan menyunting /etc/slackpkg/mirrors, menghilangkan tanda komentar/tanda pagar pada repo yang diinginkan.</description>
     </item>

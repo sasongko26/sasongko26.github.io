@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hardware on Catatan Sasongko</title>
-    <link>http://sasongko26.github.io/tags/hardware/</link>
+    <link>http://sasongko.web.id/tags/hardware/</link>
     <description>Recent content in hardware on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Dec 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://sasongko26.github.io/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Dec 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://sasongko.web.id/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enable TLP on i3wm</title>
-      <link>http://sasongko26.github.io/2016-12-12-enable-tlp-on-i3/</link>
+      <link>http://sasongko.web.id/2016-12-12-enable-tlp-on-i3/</link>
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko26.github.io/2016-12-12-enable-tlp-on-i3/</guid>
+      <guid>http://sasongko.web.id/2016-12-12-enable-tlp-on-i3/</guid>
       <description>Beberapa hari yang lalu install i3 (i3wm)menggunakan sbopkg. Biasanya, dengan desktop environment lain seperti Mate, baterai bisa bertahan 4 - 6 jam. Namun, dengan i3 belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.
 Cek powertopternyata banyak yang Bad seperti default-nya tanpa TLP. Padahal service TLP saat booting jalan, Tunable di powertophanya 1 yang Bad lainnya Good semua.
 I3 memiliki berkas konfigurasi /etc/i3/config. Konfigurasi itu yang saya gunakan.</description>
@@ -20,10 +20,10 @@ I3 memiliki berkas konfigurasi /etc/i3/config. Konfigurasi itu yang saya gunakan
     
     <item>
       <title>Cek Harddisk Korup</title>
-      <link>http://sasongko26.github.io/2016-08-17-cek-harddisk-korup/</link>
+      <link>http://sasongko.web.id/2016-08-17-cek-harddisk-korup/</link>
       <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko26.github.io/2016-08-17-cek-harddisk-korup/</guid>
+      <guid>http://sasongko.web.id/2016-08-17-cek-harddisk-korup/</guid>
       <description>Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya
 dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck. Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu /dev/sda1. Dan direkomendasikan untuk menjalankan fsck.
 fsck /dev/sda1 fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.</description>
