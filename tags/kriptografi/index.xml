@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kriptografi on Catatan Sasongko</title>
+    <link>http://sasongko26.github.io/tags/kriptografi/</link>
+    <description>Recent content in kriptografi on Catatan Sasongko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Jan 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://sasongko26.github.io/tags/kriptografi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enkripsi File dengan gnupg</title>
+      <link>http://sasongko26.github.io/2017-01-14-enkripsi-dg-gpg/</link>
+      <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2017-01-14-enkripsi-dg-gpg/</guid>
+      <description>Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupgatau yang biasa disebut dengan gpg.
+$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
+$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi </description>
+    </item>
+    
+    <item>
+      <title>Enkripsi File dengan OpenSSL</title>
+      <link>http://sasongko26.github.io/2017-01-08-enkripsi-dg-openssl/</link>
+      <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2017-01-08-enkripsi-dg-openssl/</guid>
+      <description>Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
+Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssldengan cipher rc4. File hasil enkripsi saya namai rahasia.odtyang saya taruh di fd dan fd saya mountdi /media/hd0. Kemudian akan ditanya password enkripsinya.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android on Catatan Sasongko</title>
+    <link>http://sasongko26.github.io/tags/android/</link>
+    <description>Recent content in android on Catatan Sasongko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://sasongko26.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Screenshot android dengan adb</title>
+      <link>http://sasongko26.github.io/2020-08-21-screenshot-via-adb/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2020-08-21-screenshot-via-adb/</guid>
+      <description>Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di external memory (sdcard) dengan nama file screenshot.png
+adb shell screencap -p /sdcard/screenshot.png </description>
+    </item>
+    
+    <item>
+      <title>Aktivasi android GPS via adb</title>
+      <link>http://sasongko26.github.io/2020-05-24-aktivasi-android-gps-adb/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2020-05-24-aktivasi-android-gps-adb/</guid>
+      <description>Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan adbadb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti angka 3 dengan 0.</description>
+    </item>
+    
+    <item>
+      <title>MtpErrorCantOpenDevice</title>
+      <link>http://sasongko26.github.io/2020-01-10-mtperrorcantopendevice/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2020-01-10-mtperrorcantopendevice/</guid>
+      <description>Ketika akan memindahkan data dari HP android ke laptop melalui thunar, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui jmtpfs$ jmtpfs Device 0 (VID=0e8d and PID=201d) is a MediaTek Inc Elephone P8000. error returned by libusb_claim_interface() = -6LIBMTP PANIC: Unable to initialize device terminate called after throwing an instance of &amp;#39;MtpErrorCantOpenDevice&amp;#39; what(): Can&amp;#39;t open device Aborted Ada masalah di libusb. Coba reinstall libusb# slackpkg reinstall libusb Alhamdulillah sukses.</description>
+    </item>
+    
+    <item>
+      <title>Restart android via adb</title>
+      <link>http://sasongko26.github.io/2019-08-03-restart-android-via-adb/</link>
+      <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2019-08-03-restart-android-via-adb/</guid>
+      <description>Catatan kali ini masih seputar troubleshoot HP android dengan komputer terutama Slackware.
+Tadi malam, HP yang OS android touchscreen-nya tidak ada respon. Di semua bagian layar. Tapi tombol power dan volume masih berfungsi. Begitu juga dengan konektivitas internet maupun telepon. Mau mencoba di-restart, tombol power normal tapi untuk memilih shutdown atau reboot tidak bisa karena tochscreen-nya tidak ada respon. Lepas baterai? Tidak bisa karena baterainya tanam.
+Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersedia di SBo).</description>
+    </item>
+    
+    <item>
+      <title>Back Up Data HP Android</title>
+      <link>http://sasongko26.github.io/2019-06-09-backup-android/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2019-06-09-backup-android/</guid>
+      <description>Sebelum berganti ponsel atau HP sangat disarankan untuk mem-back up data-data penting, seperti dokumen, foto, video, maupun chat WhatsApp. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi Slackware.
+Persiapan Slackware Pastikan bisa menjalankan adbyang merupakan bagian dari android tools. Kalau belum bisa install dari SBo
+Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer pakai adbbisa lebih cepat
+Persiapan Android Aktifkan mode USB debugging yang ada di Settings &amp;ndash;&amp;gt; Developer options.</description>
+    </item>
+    
+    <item>
+      <title>Install Android Tools</title>
+      <link>http://sasongko26.github.io/2016-05-07-install-android-tools/</link>
+      <pubDate>Sat, 07 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2016-05-07-install-android-tools/</guid>
+      <description>Di catatan kemarin sudah saya sampaikan [cara install sbopkg]({% post_url 2016-05-03-install-sbopkg %}), nah sekarang adalah contoh cara menggunakan sbopkg, untuk install Android Tools.
+Jalankan sebagai root
+sbopkg Tersedia pilihan Sync, Changelog, Packages, Updates, Browse, Search, Queue, Utilities, Help.
+Pilih SearchMasukkan kata kuncinya, misalnya androidKemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan OK.
+Keluar beraneka opsi. Alangkah baiknya baca-baca READMEatau Infodulu terutama untuk cek dependensi pada bagian REQUIRESetelah semua dependensi terpenuhi, silahkan lanjut, pilih Processkemudian Installlalu StartProses, download, build dan install dimulai.</description>
+    </item>
+    
+    <item>
+      <title>Install Google Play Downloader</title>
+      <link>http://sasongko26.github.io/2015-07-18-install-googleplaydownloader/</link>
+      <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2015-07-18-install-googleplaydownloader/</guid>
+      <description>GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:
+ python-protobuf (&amp;gt;=2.4) python-requests (&amp;gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&amp;gt;=2.8) python 2.5+ java (opsional)  Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
+easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).</description>
+    </item>
+    
+  </channel>
+</rss>

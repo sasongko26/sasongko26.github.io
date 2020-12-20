@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>security on Catatan Sasongko</title>
+    <link>http://sasongko26.github.io/tags/security/</link>
+    <description>Recent content in security on Catatan Sasongko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://sasongko26.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chromium Disable Unlock Keyring</title>
+      <link>http://sasongko26.github.io/2019-04-19-chromium-disable-unlock-keyring/</link>
+      <pubDate>Fri, 19 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2019-04-19-chromium-disable-unlock-keyring/</guid>
+      <description>Mungkin ada yang merasa bosan setiap membuka Chromium muncul kotak dialog Unlock Keyring.
+Itu bisa diatasi, agar tidak muncul lagi. Aktifkan CHROMIUM_FLAGSpada /etc/chromium/00-default.conf.
+CHROMIUM_FLAGS=&amp;#34;--password-store=basic&amp;#34; </description>
+    </item>
+    
+    <item>
+      <title>Mengapa Enkripsi dengan OpenSSL?</title>
+      <link>http://sasongko26.github.io/2018-06-12-mengapa-openssl/</link>
+      <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2018-06-12-mengapa-openssl/</guid>
+      <description>Mengapa saya suka mengenkripsi file dengan openssl? Karena
+ Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&amp;hellip;.  </description>
+    </item>
+    
+    <item>
+      <title>Libsodium Masuk -Current</title>
+      <link>http://sasongko26.github.io/2017-12-08-libsodium-masuk-current/</link>
+      <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2017-12-08-libsodium-masuk-current/</guid>
+      <description>Pada hari Rabu 6 Desember 2017 jam 14.13.48 UTC, Patrick Volkerding selaku BDFL Slackware, memberikan update di kanal -current. Salah satunya adalah menambahkan libsodium-1.0.15. Libsodium merupakan library atau pustaka untuk enkripsi, dekripsi, signature (tanda tangan digital), dlsb.
+Bagi saya, masuknya libsodiummembawa konsekwensi untuk rebuild dnscrypt-proxyyang menggunakan libsodium. libsodiumyang sebelumnya adalah versi 1.0.13 dari SBo sedangkan versi baru dari official Slackware 1.0.15. Hal ini diketahui dari gagalnya men-start service dnscrypt-proxy .</description>
+    </item>
+    
+    <item>
+      <title>Mengamankan File Folder</title>
+      <link>http://sasongko26.github.io/2017-11-15-mengamankan-file-folder/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2017-11-15-mengamankan-file-folder/</guid>
+      <description>Salah satu hal yang membuat saya menggunakan linux khususnya Slackware adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan .pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan steganografi tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}) atau [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}).</description>
+    </item>
+    
+    <item>
+      <title>Disable Command&#39;s History</title>
+      <link>http://sasongko26.github.io/2017-03-27-disable-commands-history/</link>
+      <pubDate>Mon, 27 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2017-03-27-disable-commands-history/</guid>
+      <description>Secara default, perintah/command yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan command historyatau membaca isi ~/.bash_history. Ini bisa di-disable. Caranya, membuat file di /etc/profile.d/, yang isinya
+export HISTFILE=/dev/null export HISTSIZE=0 </description>
+    </item>
+    
+    <item>
+      <title>Enkripsi File dengan gnupg</title>
+      <link>http://sasongko26.github.io/2017-01-14-enkripsi-dg-gpg/</link>
+      <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2017-01-14-enkripsi-dg-gpg/</guid>
+      <description>Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupgatau yang biasa disebut dengan gpg.
+$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
+$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi </description>
+    </item>
+    
+    <item>
+      <title>Enkripsi File dengan OpenSSL</title>
+      <link>http://sasongko26.github.io/2017-01-08-enkripsi-dg-openssl/</link>
+      <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2017-01-08-enkripsi-dg-openssl/</guid>
+      <description>Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
+Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssldengan cipher rc4. File hasil enkripsi saya namai rahasia.odtyang saya taruh di fd dan fd saya mountdi /media/hd0. Kemudian akan ditanya password enkripsinya.</description>
+    </item>
+    
+  </channel>
+</rss>

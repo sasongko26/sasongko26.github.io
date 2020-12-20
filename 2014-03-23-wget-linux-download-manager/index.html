@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Menggunakan WGet Linux Download Manager &middot; Catatan Sasongko</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://sasongko26.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://sasongko26.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://sasongko26.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://sasongko26.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://sasongko26.github.io/"><h1>Catatan Sasongko</h1></a>
+      <p class="lead">
+       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://sasongko26.github.io/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Menggunakan WGet Linux Download Manager</h1>
+  <time datetime=2014-03-23T10:28:12Z class="post-date">Sun, Mar 23, 2014</time>
+  <p>Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume.
+Cara menggunakannya mudah.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span>
+</code></pre></div><p>untuk mem-pause download tekan Ctrl+C. Dan untuk melanjutkan kembali tambahkan opsi -c.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span> -c
+</code></pre></div><p>Untuk lebih lengkapnya tentang wget ada di manual wget.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget -h 
+GNU Wget 1.15, adalah sebuah non-interaktif network retriever. 
+Penggunaan: wget <span style="color:#f92672">[</span>PILIHAN<span style="color:#f92672">]</span>... <span style="color:#f92672">[</span>URL<span style="color:#f92672">]</span>... 
+
+Argumen yang wajib untuk pilihan panjang juga wajib untuk pilihan yang pendek. 
+
+Memulai: 
+  -V,  --version           menampilkan versi dari Wget dan keluar. 
+  -h,  --help              menampilkan bantuan ini. 
+  -b,  --background        pergi ke background setelah memulai. 
+  -e,  --execute<span style="color:#f92672">=</span>COMMAND   menjalankan sebuah perintah <span style="color:#e6db74">`</span>.wgetrc<span style="color:#e6db74">&#39;-style. 
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Mencatat dan memasukan berkas: 
+</span><span style="color:#e6db74">  -o,  --output-file=FILE     pesan log pada FILE. 
+</span><span style="color:#e6db74">  -a,  --append-output=FILE  tambahkan pesan pada FILE. 
+</span><span style="color:#e6db74">  -d,  --debug               tampilkan banyak informasi debugging. 
+</span><span style="color:#e6db74">  -q,  --quiet               diam (tidak ada output). 
+</span><span style="color:#e6db74">  -v,  --verbose             jadi verbose (ini yang default). 
+</span><span style="color:#e6db74">   -nv, --no-verbose          matikan verboseness, tanpa menjadi quiet. 
+</span><span style="color:#e6db74">       --report-speed=TYPE   Output bandwidth as TYPE.  TYPE can be bits. 
+</span><span style="color:#e6db74">  -i,  --input-file=BERKAS    download URLs ditemukan dalam lokal atau BERKAS eksternal. 
+</span><span style="color:#e6db74">  -F,  --force-html          perlakukan input file sebagai HTML. 
+</span><span style="color:#e6db74">  -B,  --base=URL            telusuri berkas masukan HTML (-i -F) 
+</span><span style="color:#e6db74">                             relatif ke URL. 
+</span><span style="color:#e6db74">       --config=FILE         Specify config file to use. 
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Download: 
+</span><span style="color:#e6db74">  -t,  --tries=NUMBER            set nomor mencoba ke NUMBER (0 untuk tidak terbatas). 
+</span><span style="color:#e6db74">       --retry-connrefused       coba lagi walaupun koneksi ditolak. 
+</span><span style="color:#e6db74">  -O,  --output-document=FILE    tulis document pada FILE. 
+</span><span style="color:#e6db74">  -nc, --no-clobber              skip downloads that would download to 
+</span><span style="color:#e6db74">                                 existing files (overwriting them). 
+</span><span style="color:#e6db74">  -c,  --continue                lanjutkan mengambil file yang terdownload  sebagian. 
+</span><span style="color:#e6db74">       --progress=TYPE           pilih tipe gauge progress. 
+</span><span style="color:#e6db74">  -N,  --timestamping            jangan mengambil kembali file kecuali file 
+</span><span style="color:#e6db74">                                 lebih baru dari file local. 
+</span><span style="color:#e6db74">  --no-use-server-timestamps     don&#39;</span>t set the local file<span style="color:#e6db74">&#39;s timestamp by 
+</span><span style="color:#e6db74">                                 the one on the server. 
+</span><span style="color:#e6db74">  -S,  --server-response         tampilkan balasan server. 
+</span><span style="color:#e6db74">       --spider                  jangan mendownload apapun. 
+</span><span style="color:#e6db74">  -T,  --timeout=SECONDS         set semua nilai timeout pada SECONDS. 
+</span><span style="color:#e6db74">       --dns-timeout=SECS        set the DNS lookup timeout pada SECS. 
+</span><span style="color:#e6db74">       --connect-timeout=SECS    set the connect timeout pada SECS. 
+</span><span style="color:#e6db74">       --read-timeout=SECS       set the read timeout pada SECS. 
+</span><span style="color:#e6db74">  -w,  --wait=SECONDS            tunggu SECONDS diantara pengambilan. 
+</span><span style="color:#e6db74">       --waitretry=SECONDS       tunggu 1..SECONDS diantara pencobaan dari sebuah pengambilan. 
+</span><span style="color:#e6db74">       --random-wait             wait from 0.5*WAIT...1.5*WAIT secs between retrievals. 
+</span><span style="color:#e6db74">       --no-proxy                secara eksplisit mematikan proxy. 
+</span><span style="color:#e6db74">  -Q,  --quota=NUMBER            set pengambilan quota pada NUMBER. 
+</span><span style="color:#e6db74">       --bind-address=ADDRESS    bind ke ADDRESS (hostname atau IP) pada local host. 
+</span><span style="color:#e6db74">       --limit-rate=RATE         batasi kecepatan download ke RATE. 
+</span><span style="color:#e6db74">       --no-dns-cache            matikan caching dari DNS lookups. 
+</span><span style="color:#e6db74">       --restrict-file-names=OS  restrict karakter dalam nama file ke salah satu dari yang dibolehkan oleh OS. 
+</span><span style="color:#e6db74">       --ignore-case             abaikan besar/kecil huruf ketika mencocokan files/direktori.. 
+</span><span style="color:#e6db74">  -4,  --inet4-only              hanya menghubungi ke alamat IPv4 saja. 
+</span><span style="color:#e6db74">  -6,  --inet6-only              hanya menghubungi ke alamat IPv6 saja. 
+</span><span style="color:#e6db74">       --prefer-family=FAMILY    hubungi terlebih dahulu alamat dari family  yang dispesifikasikan, 
+</span><span style="color:#e6db74">                                 salah satu dari IPv6, IPv4 atau none. 
+</span><span style="color:#e6db74">       --user=USER               set kedua ftp dan http user pada USER. 
+</span><span style="color:#e6db74">       --password=PASS           set kedua ftp dan http password pada PASS. 
+</span><span style="color:#e6db74">       --ask-password            tanya untuk kata sandi. 
+</span><span style="color:#e6db74">       --no-iri                  non-aktifkan dukungan IRI. 
+</span><span style="color:#e6db74">       --local-encoding=ENC      gunakan ENC sebagai pengkodean lokal untuk IRI. 
+</span><span style="color:#e6db74">       --remote-encoding=ENC     gunakan ENC sebagai pengkodean baku remote. 
+</span><span style="color:#e6db74">       --unlink                  remove file before clobber. 
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Direktori: 
+</span><span style="color:#e6db74">  -nd,  --no-directories          jangan membuat direktori. 
+</span><span style="color:#e6db74">  -x,  --force-directories        paksa pembuatan direktori. 
+</span><span style="color:#e6db74">  -nH, --no-host-directories      jangan buat host directories. 
+</span><span style="color:#e6db74">       --protocol-directories     gunakan nama protocol dalam direktori. 
+</span><span style="color:#e6db74">  -P,  --directory-prefix=PREFIX  simpan file pada PREFIX/... 
+</span><span style="color:#e6db74">       --cut-dirs=NUMBER           abaikan NUMBER remote komponen direktori. 
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Pilihan HTTP: 
+</span><span style="color:#e6db74">       --http-user=USER        set http user pada USER. 
+</span><span style="color:#e6db74">       --http-password=PASS    set http password pada PASS. 
+</span><span style="color:#e6db74">       --nocache               dissallow server-cached data. 
+</span><span style="color:#e6db74">       --default-page=NAMA     Ubah nama halaman baku (biasanya 
+</span><span style="color:#e6db74">                               ini `index.html&#39;</span>.<span style="color:#f92672">)</span>. 
+  -E,  --adjust-extension      simpan HTML/CSS dokumen dengan ekstensi yang sesuai. 
+       --ignore-length         abaikan <span style="color:#e6db74">`</span>Content-Length<span style="color:#e6db74">&#39; bagian header. 
+</span><span style="color:#e6db74">       --header=STRING         masukkan STRING dalam headers. 
+</span><span style="color:#e6db74">       --max-redirect          batas maksimal yang diperbolehkan untuk redirection setiap halaman. 
+</span><span style="color:#e6db74">       --proxy-user=USER       set USER sebagai username proxy. 
+</span><span style="color:#e6db74">       --proxy-password=PASS   set PASS sebagai password proxy. 
+</span><span style="color:#e6db74">       --referer=URL           masukkan `Referer: URL&#39;</span> header dalam HTTP request. 
+       --save-headers          simpan HTTP headers pada file. 
+  -U,  --user-agent<span style="color:#f92672">=</span>AGENT      identifikasi sebagai AGEN daripada sebagai Wget/VERSION. 
+       --no-http-keep-alive    disable HTTP keep-alive <span style="color:#f92672">(</span>persistent koneksi<span style="color:#f92672">)</span>. 
+       --no-cookies            jangan menggunakan cookies. 
+       --load-cookies<span style="color:#f92672">=</span>FILE     load cookies dari FILE sebelum session. 
+       --save-cookies<span style="color:#f92672">=</span>FILE     simpan cookies pada FILE sesudah session. 
+       --keep-session-cookies  load dan simpan session <span style="color:#f92672">(</span>non-permanen<span style="color:#f92672">)</span> cookies. 
+       --post-data<span style="color:#f92672">=</span>STRING      gunakan metoda POST; kirim STRING sebagai data. 
+       --post-file<span style="color:#f92672">=</span>FILE        gunakan metoda POST; kirim isi dari FILE. 
+       --method<span style="color:#f92672">=</span>HTTPMethod     use method <span style="color:#e6db74">&#34;HTTPMethod&#34;</span> in the header. 
+       --body-data<span style="color:#f92672">=</span>STRING      Send STRING as data. --method MUST be set. 
+       --body-file<span style="color:#f92672">=</span>FILE        Send contents of FILE. --method MUST be set. 
+       --content-disposition   Lihat header Content-Disposition ketika memilih 
+                               berkas lokal <span style="color:#f92672">(</span>EKSPERIMEN<span style="color:#f92672">)</span>. 
+       --content-on-error      output the received content on server errors. 
+       --auth-no-challenge     Kirim informasi otentifikasi standar HTTP tanpa 
+                               harus menunggu untuk ditanyai oleh server. 
+
+Pilihan HTTPS <span style="color:#f92672">(</span>SSL/TLS<span style="color:#f92672">)</span>: 
+       --secure-protocol<span style="color:#f92672">=</span>PR     choose secure protocol, one of auto, SSLv2, 
+                                SSLv3, TLSv1 and PFS. 
+       --https-only             only follow secure HTTPS links 
+       --no-check-certificate   jangan memvalidasi server certificate. 
+       --certificate<span style="color:#f92672">=</span>FILE       client certificate file. 
+       --certificate-type<span style="color:#f92672">=</span>TYPE  tipe sertifikate client, PEM atau DER. 
+       --private-key<span style="color:#f92672">=</span>FILE       private key file. 
+       --private-key-type<span style="color:#f92672">=</span>TYPE  tipe private key, PEM atau DER. 
+       --ca-certificate<span style="color:#f92672">=</span>FILE    file yang berisi CA<span style="color:#e6db74">&#39;s. 
+</span><span style="color:#e6db74">       --ca-directory=DIR       direktori dimana hash list dari CA&#39;</span>s disimpan 
+       --random-file<span style="color:#f92672">=</span>FILE       file dengan data acak untuk seeding SSL PRNG. 
+       --egd-file<span style="color:#f92672">=</span>FILE          penamaan file EGD socket dengan data random. 
+
+Pilihan FTP: 
+       --ftp-user<span style="color:#f92672">=</span>USER         set ftp user pada USER. 
+       --ftp-password<span style="color:#f92672">=</span>PASS     set ftp password pada PASS. 
+       --no-remove-listing     jangan hapus file <span style="color:#e6db74">`</span>.listing<span style="color:#960050;background-color:#1e0010">&#39;</span>. 
+       --no-glob               matikan FTP nama file globbing. 
+       --no-passive-ftp        disable the <span style="color:#e6db74">&#34;passive&#34;</span> mode trasfer. 
+       --preserve-permissions  preserver remote file permissions. 
+       --retr-symlinks         ketika berekursif, ambil linked-to files <span style="color:#f92672">(</span>bukan dir<span style="color:#f92672">)</span>. 
+
+WARC options: 
+       --warc-file<span style="color:#f92672">=</span>FILENAME      save request/response data to a .warc.gz file. 
+       --warc-header<span style="color:#f92672">=</span>STRING      insert STRING into the warcinfo record. 
+       --warc-max-size<span style="color:#f92672">=</span>NUMBER    set maximum size of WARC files to NUMBER. 
+       --warc-cdx                write CDX index files. 
+       --warc-dedup<span style="color:#f92672">=</span>FILENAME     <span style="color:#66d9ef">do</span> not store records listed in this CDX file. 
+       --no-warc-compression     <span style="color:#66d9ef">do</span> not compress WARC files with GZIP. 
+       --no-warc-digests         <span style="color:#66d9ef">do</span> not calculate SHA1 digests. 
+       --no-warc-keep-log        <span style="color:#66d9ef">do</span> not store the log file in a WARC record. 
+       --warc-tempdir<span style="color:#f92672">=</span>DIRECTORY  location <span style="color:#66d9ef">for</span> temporary files created by the 
+                                 WARC writer. 
+
+Recursive download: 
+  -r,  --recursive          spesifikasikan untuk mendownload rekursif. 
+  -l,  --level<span style="color:#f92672">=</span>NUMBER      maksimum kedalaman rekursi <span style="color:#f92672">(</span>inf atau <span style="color:#ae81ff">0</span> untuk tak terhingga<span style="color:#f92672">)</span>. 
+       --delete-after       delete files locally sesudah mendownloadnya. 
+  -k,  --convert-links      buat links dalam HTML yang didownload atau CSS yang 
+                            menunjuk ke berkas lokal. 
+  --backups<span style="color:#f92672">=</span>N   before writing file X, rotate up to N backup files. 
+  -K,  --backup-converted   sebelum mengubah file X, backup sebagai X.orig. 
+  -m,  --mirror             shortcut untuk -N -r -l inf --no-remove-listing. 
+  -p,  --page-requisites    ambil semua gambar, dll. yang diperlukan untuk menampilkan file HTML. 
+       --strict-comments    hidupkan strick <span style="color:#f92672">(</span>SGML<span style="color:#f92672">)</span> handling dari komentar HTML. 
+
+Recursive diterima/ditolak: 
+  -A,  --accept<span style="color:#f92672">=</span>LIST               list yang dipisahkan oleh koma yang berisiekstensi yang diterima. 
+  -R,  --reject<span style="color:#f92672">=</span>LIST               list yang dipisahkan oleh koma yang berisiekstensi yang ditolak. 
+       --accept-regex<span style="color:#f92672">=</span>REGEX        regex matching accepted URLs. 
+       --reject-regex<span style="color:#f92672">=</span>REGEX        regex matching rejected URLs. 
+       --regex-type<span style="color:#f92672">=</span>TYPE           regex type <span style="color:#f92672">(</span>posix<span style="color:#f92672">)</span>. 
+  -D,  --domains<span style="color:#f92672">=</span>LIST              list yang dipisahkan oleh koma yang berisidomains yang dibolehkan. 
+       --exclude-domains<span style="color:#f92672">=</span>LIST      list yang dipisahkan oleh koma yang berisidomains yang direject/tolak. 
+       --follow-ftp                ikuti link FTP dari dokumen HTML. 
+       --follow-tags<span style="color:#f92672">=</span>LIST          list yang dipisahkan oleh koma yang berisitag HTML yang diikuti 
+       --ignore-tags<span style="color:#f92672">=</span>LIST          list yang dipisahkan oleh koma yang berisitag HTML yang diabaikan. 
+  -H,  --span-hosts                pergi ke host asing ketika recursive. 
+  -L,  --relative                  hanya mengikuti links relative saja. 
+  -I,  --include-directories<span style="color:#f92672">=</span>LIST  list dari direktori yang dibolehkan. 
+  --trust-server-names             use the name specified by the redirection 
+                                   url last component. 
+  -X,  --exclude-directories<span style="color:#f92672">=</span>LIST   list dari direktori yang diabaikan. 
+  -np, --no-parent                 jangan merambah direktori atasnya. 
+
+Laporkan bug dan saran kepada &lt;bug-wget@gnu.org&gt;
+</code></pre></div>
+</div>
+
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+      
+    
+  </body>
+</html>

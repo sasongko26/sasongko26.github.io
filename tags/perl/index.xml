@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>perl on Catatan Sasongko</title>
+    <link>http://sasongko26.github.io/tags/perl/</link>
+    <description>Recent content in perl on Catatan Sasongko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Jul 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://sasongko26.github.io/tags/perl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix sbotools Perl unescaped left brace in regex is deprecated here</title>
+      <link>http://sasongko26.github.io/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/</link>
+      <pubDate>Tue, 17 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/</guid>
+      <description>Siang ini, sudah agak lama tidak check update paket-paket dari SBo. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.
+$ sbocheck # command ini dijalankan oleh root Unescaped left brace in regex is deprecated here (and will be fatal in Perl 5.32), passed through in regex; marked by &amp;lt;-- HERE in m/\$({ &amp;lt;-- HERE |)[A-Za-z0-9_]+(}|)/ at /usr/share/perl5/SBO/Lib/Build.pm line 244 Ada masalah ternyata dan masalahnya di Perl.</description>
+    </item>
+    
+    <item>
+      <title>Pentingnya Shebang</title>
+      <link>http://sasongko26.github.io/2018-06-18-pentingnya-shebang/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2018-06-18-pentingnya-shebang/</guid>
+      <description>Shebang itu apa? Pengguna linux, BSD, ataupun mac yang terbiasa melihat source code sangat mungkin sudah tidak asing lagi dengan shebang. Ada yang menyebut shebang sebagai sh bang, shabang, hashbang, hashpling, dan poundbang. Shebang ini dituliskan di baris pertama, yakni diawali dengan #!.
+Contoh, untuk perl :
+#!/usr/bin/perl atau
+#!/usr/bin/env perl Sebagai pengguna linux khususnya Slackware, user akan merasakan betapa pentingnya shebang ini. Kepentingannya terkait fungsi shebang itu sendiri dan bagaimana user menjalankannya.</description>
+    </item>
+    
+    <item>
+      <title>Uninstall Manual Semua Modul Perl</title>
+      <link>http://sasongko26.github.io/2018-05-08-uninstall-all-perl-modules-manually/</link>
+      <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2018-05-08-uninstall-all-perl-modules-manually/</guid>
+      <description>Cara uninstall semua modul perl yang dulunya install dari CPAN secara manual :
+rm -r /usr/local/{lib{,64},share}/perl5 </description>
+    </item>
+    
+    <item>
+      <title>Install Padre</title>
+      <link>http://sasongko26.github.io/2017-01-19-install-padre/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2017-01-19-install-padre/</guid>
+      <description>Padremerupakan integrated development environment (IDE) untuk bahasa pemrograman perl.
+Padreini belum dimasukkan ke dalam paket resmi Slackware maupun SBo. Sehingga ada 2 kemungkinan cara menginstallnya.
+  Build sendiri dari source
+  Install dari cpan  Cara yang saya gunakan adalah cara kedua, yaitu
+$ cpan -i Padre </description>
+    </item>
+    
+  </channel>
+</rss>

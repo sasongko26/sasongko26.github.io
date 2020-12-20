@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Set Default Brightness &middot; Catatan Sasongko</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://sasongko26.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://sasongko26.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://sasongko26.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://sasongko26.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://sasongko26.github.io/"><h1>Catatan Sasongko</h1></a>
+      <p class="lead">
+       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://sasongko26.github.io/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Set Default Brightness</h1>
+  <time datetime=2016-07-10T00:00:00Z class="post-date">Sun, Jul 10, 2016</time>
+  <p>Kecerahan monitor / <em>brightness</em> 100% membuat mata cepat lelah. Apalagi kalau secara <em>default</em> begitu masuk X <em>brightness</em>-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan <em>Computer Vision Syndrome</em>.</p>
+<p>Berapa persen <em>brightness</em> yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur <em>brightness</em> bisa gunakan <!-- raw HTML omitted -->xbacklight<!-- raw HTML omitted -->.</p>
+<p>Untuk mengetahui berapa persen <em>brightness</em> yang digunakan saat ini <!-- raw HTML omitted -->xbacklight<!-- raw HTML omitted -->. Sedangkan untuk mengubahnya <!-- raw HTML omitted -->xbacklight -set persen<!-- raw HTML omitted -->. Contoh akan diatur <em>brightness</em>-nya 15%:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">xbacklight -set <span style="color:#ae81ff">15</span>
+</code></pre></div><p>Pengaturan ini hanyalah bersifat <em>current</em>/temporer. Setelah dihidupkan ulang <em>brightness</em> kembali ke 100%.</p>
+<p>Untuk membuatnya permanen, dalam arti membuat <em>brightness</em> sesuai keinginan (tidak 100%) walau di-<em>restart</em>, jadikan saja sebagai <em>autostart</em>. Caranya, klik menu <!-- raw HTML omitted -->Applications<!-- raw HTML omitted --> &ndash;&gt; <!-- raw HTML omitted -->Settings<!-- raw HTML omitted --> &ndash;&gt; <!-- raw HTML omitted -->Session and Startup<!-- raw HTML omitted --></p>
+<p><img src="/gambar/session-startup.png" alt=""></p>
+<p>Klik tab <!-- raw HTML omitted -->Application Autostart<!-- raw HTML omitted --> kemudian klik tombol <!-- raw HTML omitted -->+ Add<!-- raw HTML omitted --></p>
+<p><img src="/gambar/application-autostart.png" alt=""></p>
+<p>Lalu diisi</p>
+<p><img src="/gambar/add-autostart.png" alt=""></p>
+<p>Yang paling penting adalah bagian <!-- raw HTML omitted -->Command<!-- raw HTML omitted -->. Silahkan isikan <!-- raw HTML omitted -->xbacklight<!-- raw HTML omitted -->-nya. Di sini saya gunakan 15%. Adapun <!-- raw HTML omitted -->Name<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->Description<!-- raw HTML omitted --> silahkan diisi sesuai selera yang dapat dipahami bahwa itu adalah untuk mengatur <em>brightness</em> (jaga-jaga kalau lupa <!-- raw HTML omitted -->xbacklight<!-- raw HTML omitted --> itu fungsinya apa).</p>
+
+</div>
+
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+      
+    
+  </body>
+</html>

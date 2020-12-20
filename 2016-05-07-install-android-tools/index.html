@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Install Android Tools &middot; Catatan Sasongko</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://sasongko26.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://sasongko26.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://sasongko26.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://sasongko26.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://sasongko26.github.io/"><h1>Catatan Sasongko</h1></a>
+      <p class="lead">
+       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://sasongko26.github.io/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Install Android Tools</h1>
+  <time datetime=2016-05-07T00:00:00Z class="post-date">Sat, May 7, 2016</time>
+  <p>Di catatan kemarin sudah saya sampaikan [cara install <strong>sbopkg</strong>]({% post_url 2016-05-03-install-sbopkg %}), nah sekarang adalah contoh cara menggunakan <strong>sbopkg</strong>, untuk install <strong>Android Tools</strong>.</p>
+<p>Jalankan sebagai <strong>root</strong></p>
+<pre><code>sbopkg
+</code></pre><p><img src="/gambar/sbopkg-android-tools-1.png" alt="">
+Tersedia pilihan <strong>Sync, Changelog, Packages, Updates, Browse, Search, Queue, Utilities, Help</strong>.</p>
+<p>Pilih <!-- raw HTML omitted -->Search<!-- raw HTML omitted --></p>
+<p>Masukkan kata kuncinya, misalnya <!-- raw HTML omitted -->android<!-- raw HTML omitted --></p>
+<p><img src="/gambar/sbopkg-android-tools-2.png" alt=""></p>
+<p>Kemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan <!-- raw HTML omitted -->OK<!-- raw HTML omitted -->.</p>
+<p><img src="/gambar/sbopkg-android-tools-3.png" alt=""></p>
+<p>Keluar beraneka opsi. Alangkah baiknya baca-baca <!-- raw HTML omitted -->README<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->Info<!-- raw HTML omitted --> dulu terutama untuk cek dependensi pada bagian <!-- raw HTML omitted -->REQUIRE<!-- raw HTML omitted --></p>
+<p><img src="/gambar/sbopkg-android-tools-4.png" alt=""></p>
+<p><img src="/gambar/sbopkg-android-tools-5.png" alt=""></p>
+<p>Setelah semua dependensi terpenuhi, silahkan lanjut, pilih <!-- raw HTML omitted -->Process<!-- raw HTML omitted --> kemudian <!-- raw HTML omitted -->Install<!-- raw HTML omitted --> lalu <!-- raw HTML omitted -->Start<!-- raw HTML omitted --></p>
+<p><img src="/gambar/sbopkg-android-tools-6.png" alt=""></p>
+<p><img src="/gambar/sbopkg-android-tools-7.png" alt=""></p>
+<p>Proses, download, build dan install dimulai. Silahkan tunggu.</p>
+
+</div>
+
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+      
+    
+  </body>
+</html>

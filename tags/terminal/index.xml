@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>terminal on Catatan Sasongko</title>
+    <link>http://sasongko26.github.io/tags/terminal/</link>
+    <description>Recent content in terminal on Catatan Sasongko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://sasongko26.github.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pentingnya Shebang</title>
+      <link>http://sasongko26.github.io/2018-06-18-pentingnya-shebang/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2018-06-18-pentingnya-shebang/</guid>
+      <description>Shebang itu apa? Pengguna linux, BSD, ataupun mac yang terbiasa melihat source code sangat mungkin sudah tidak asing lagi dengan shebang. Ada yang menyebut shebang sebagai sh bang, shabang, hashbang, hashpling, dan poundbang. Shebang ini dituliskan di baris pertama, yakni diawali dengan #!.
+Contoh, untuk perl :
+#!/usr/bin/perl atau
+#!/usr/bin/env perl Sebagai pengguna linux khususnya Slackware, user akan merasakan betapa pentingnya shebang ini. Kepentingannya terkait fungsi shebang itu sendiri dan bagaimana user menjalankannya.</description>
+    </item>
+    
+    <item>
+      <title>Operation not possible due to RF-kill</title>
+      <link>http://sasongko26.github.io/2018-06-15-operation-not-possible-due-to-rfkill/</link>
+      <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2018-06-15-operation-not-possible-due-to-rfkill/</guid>
+      <description>Pagi ini, refreshing dengan berganti desktop environment (DE) memakai Window Maker (WM). DE yang jarang digunakan karena biasanya memakai XFCE. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk tethering. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong Network Manager atau Wicd aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah root.</description>
+    </item>
+    
+    <item>
+      <title>Convert Video Menjadi MP3</title>
+      <link>http://sasongko26.github.io/2018-05-18-convert-video-mp3/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2018-05-18-convert-video-mp3/</guid>
+      <description>Ternyata tidak sulit mengkonversi/convert video menjadi audio, dalam hal ini mp3. Misalkan, akan dikonversi file video Gambang_Semarang.mkv menjadi file Gambang_Semarang.mp3
+ffmpeg -i Gambang_Semarang.mkv -b:a 128K -vn Gambang_Semarang.mp3 (output) dari command tersebut di atas sengaja tidak ditampilkan di sini karena agak panjang.
+Cara ini juga berlaku untuk mengubah file mp4 ke mp3 atau dengan kata lain, sebenarnya mengekstrak audio yang ada di dalam video.</description>
+    </item>
+    
+    <item>
+      <title>Salah Password di Terminal</title>
+      <link>http://sasongko26.github.io/2018-04-23-salah-password-terminal/</link>
+      <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2018-04-23-salah-password-terminal/</guid>
+      <description>Pengguna GNU/Linux mungkin pernah salah menuliskan password saat login melalui terminal. Apa yang dilakukan?
+Mungkin sebagian ada yang menekan backspaceberkali-kali sampai dirasa cukup. Ya, sampai dirasa cukup. Sampai dirasa kursor sudah kembali ke posisi awal penulisan password. Tapi, tahukah kalau ada cara yang lebih smart ?
+Ya, dengan kombinasi Ctrl + u .</description>
+    </item>
+    
+    <item>
+      <title>Menghapus dengan Pengecualian</title>
+      <link>http://sasongko26.github.io/2017-07-29-menghapus-dengan-pengecualian/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2017-07-29-menghapus-dengan-pengecualian/</guid>
+      <description>Sebagai pengguna SBo dan sbopkg, file yang dihasilkan proses build ditaruh di /tmp. Folder ini lama-lama semakin banyak isinya. Padahal filenya bisa dikatakan tidak terpakai. Script masih aman tersimpan rapi di /var/lib/sbopkg. Sedangkan source-nya di /var/cache/sbopkg.
+Semua yang ada di folder /tmpakan saya hapus kecuali file yang berekstensi txt. Saya memang kadang iseng nulis-nulis sesuatu kemudian saya simpan dengan ekstensi txtdan ditaruh di /tmp. File-file ini tidak mau saya hapus, buat dibaca jadi hiburan sendiri kelak bahwa dulu pernah iseng nulis seperti itu&amp;hellip; Hahahaha&amp;hellip;.</description>
+    </item>
+    
+    <item>
+      <title>qtFM Segmentation Fault Pascaupgrade</title>
+      <link>http://sasongko26.github.io/2017-01-12-qtfm-segfault-pascaupgrade-changelog12jan17/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2017-01-12-qtfm-segfault-pascaupgrade-changelog12jan17/</guid>
+      <description>Changelog current hari ini 12 Januari 2017 ramai sekali. Upgrade dan rebuilt secara masif seolah menjadi kado tahun baru dari Patrick Volkerding. Dan ternyata berimbas segfault alias Segmentation faultpada qtFMfile manager berbasis Qtyang saya install dari SBo.</description>
+    </item>
+    
+    <item>
+      <title>Scrolling pada XTerm</title>
+      <link>http://sasongko26.github.io/2016-12-08-scrolling-xterm/</link>
+      <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2016-12-08-scrolling-xterm/</guid>
+      <description>Di kalangan pengguna GNU/Linux mungkin xtermkurang familiar. Mengingat desktop environment populer seperti GNOME, KDE, Xfce, Matedan LXQttelah mempunyai terminal emulator sendiri. Selain itu, xtermdianggap memiliki keterbatasan. Salah satunya adalah tidak bisa scrolling karena tidak adanya scrollbar.
+xtermmemang lain daripada yang lain. Secara default memang scrollbar itu tidak terlihat, tetapi bisa dimunculkan. Tekan dan tahan Ctrlkemudian tekan dan tahan tombol tengah mouse, pilih Enable Scrollbar. Scrollbar akan tampil di sebelah kiri. Untuk melakukan scrolling bisa menggunakan tombol tengah mouse yang diarahkan ke scrollbar kemudian putar ke atas atau bawah sesuai keinginan.</description>
+    </item>
+    
+    <item>
+      <title>nmcli untuk konek wifi</title>
+      <link>http://sasongko26.github.io/2016-12-07-nmcli-konek-wifi/</link>
+      <pubDate>Wed, 07 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2016-12-07-nmcli-konek-wifi/</guid>
+      <description>Untuk konek internet baik itu melalui modem, LAN, maupun wifi, pengguna GNU/Linux lebih sering menggunakan network manageryang applet-nya biasanya ada di panel sebelah kanan walau sebenarnya ada cara lain seperti ifconfigdan dhcpcd. Kalau dalam mode grafis sih saya rasa tidak masalah, tapi bagaimana kalau sedang berada dalam mode teks yang jelas tidak terpampang applet network manager-nya? nmcliadalah solusinya.
+Lah, buat apa sih repot-repot mode teks? Jadul, ga modern! Benar. Kalau keperluannya hanya download file berukuran besar, dan dalam waktu bersamaan ada kegiatan lain yang tidak bisa ditinggalkan, beralih ke mode teks bisa dijadikan pilihan, mengingat dalam mode teks aplikasi yang dijalankan tidak sebanyak dalam mode grafis sehingga menghemat memory dan daya.</description>
+    </item>
+    
+    <item>
+      <title>Copy Paste di Terminal</title>
+      <link>http://sasongko26.github.io/2015-09-30-copas-terminal/</link>
+      <pubDate>Wed, 30 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2015-09-30-copas-terminal/</guid>
+      <description>Bagaimana sih caranya copy paste teks yang ada di Terminal? Untuk copy blok tulisannya kemudian klik kanan pilih Copy, atau setelah diblok tekan Ctrl Shift C. Sedangkan untuk paste ke terminal silahkan klik kanan pilih Paste atau tekan Ctrl Shift V.</description>
+    </item>
+    
+    <item>
+      <title>Operasi Direktori di Linux</title>
+      <link>http://sasongko26.github.io/2015-06-01-operasi-direktori/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2015-06-01-operasi-direktori/</guid>
+      <description>Operasi direktori/folder adalah suatu hal yang mendasar di linux. Walaupun sekarang banyak desktop environment yang menyebabkan sedikit interaksi dengan terminal langsung karena tinggal klik saja dalam mode grafis (GUI), kami akan tetap sampaikan bagaimana melakukannya dalam mode teks (CLI).
+Mengetahui posisi direktori sekarang Gunakan
+pwd untuk mengetahui saat ini aktif di mana. Contoh
+$ pwd /home/sasongko Tampak bahwa direktori saat ini adalah di /home/sasongko.
+Menampilkan isi direktori ls /direktori Contoh berikut akan menampilkan isi dari direktori /etc</description>
+    </item>
+    
+    <item>
+      <title>Memformat Flashdisk di LInux</title>
+      <link>http://sasongko26.github.io/2015-05-30-memformat-flashdisk-di-linux/</link>
+      <pubDate>Sat, 30 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2015-05-30-memformat-flashdisk-di-linux/</guid>
+      <description>Memformat flashdisk di linux adalah hal yang mudah.
+Pertama, pastikan flashdisknya terdeteksi oleh sistem. Pada kesempatan ini merk flashdisknya adalah Toshiba.
+$ lsusb Bus 001 Device 003: ID 0930:1400 Toshiba Corp. Memory Stick 2GB Bus 001 Device 002: ID 04f2:b483 Chicony Electronics Co., Ltd Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub Perhatikan baris 2, flashdisk terdeteksi.</description>
+    </item>
+    
+    <item>
+      <title>Ekstrak File zip</title>
+      <link>http://sasongko26.github.io/2015-05-13-ekstrak-file-zip/</link>
+      <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2015-05-13-ekstrak-file-zip/</guid>
+      <description>Ekstensi zip adalah salah satu ekstensi file kompresi/archive. File kompresi yang lain adalah [tar.gz]({% post_url 2015-04-28-ekstrak-file-tar-gz %}).
+Bagaimana ekstrak file zip? $ unzip namafile.zip </description>
+    </item>
+    
+    <item>
+      <title>Ekstrak File .tar.gz</title>
+      <link>http://sasongko26.github.io/2015-04-28-ekstrak-file-tar-gz/</link>
+      <pubDate>Tue, 28 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2015-04-28-ekstrak-file-tar-gz/</guid>
+      <description>Kemarin di grup facebook Ubuntu Indonesia ada yang bertanya yang intinya
+ Bagaimana cara install file .tar.gz?
+ File dengan ekstensi tar.gz adalah file kompresi/arsip. &amp;lsquo;Saudara&amp;rsquo; dari tar.gz yang juga sering dijumpai adalah [zip]({% post_url 2015-05-13-ekstrak-file-zip %}). Atau, bagi yang sebelum memakai linux sudah sangat familiar dengan Windows, tar.gz ini mirip dengan rar.
+Nah, file kompresi ini bukanlah file installer, tetapi bisa jadi mengandung file installer. File installer di linux ada berbagai macam ekstensinya, contoh deb, rpm, tgz, dan sh.</description>
+    </item>
+    
+    <item>
+      <title>Ekstrak File tar.xz</title>
+      <link>http://sasongko26.github.io/2014-12-30-ekstrak-file-tarxz/</link>
+      <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2014-12-30-ekstrak-file-tarxz/</guid>
+      <description>Berkas atau file dengan ekstensi tar.xz adalah berkas kompresi/arsip. Untuk mengekstraknya mudah.
+$ tar xpf nama_file.tar.xz </description>
+    </item>
+    
+    <item>
+      <title>Konek Internet Recovery Mode</title>
+      <link>http://sasongko26.github.io/2014-10-14-konek-internet-recovery/</link>
+      <pubDate>Tue, 14 Oct 2014 22:03:10 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2014-10-14-konek-internet-recovery/</guid>
+      <description>Secara default, saat kita berada dalam mode pemulihan (recovery mode) tidak akan bisa tersambung internet. Untuk menyambungkannya lakukan langkah berikut. Oya kali ini penggunaan dalam virtual box setting jaringan NAT. kemudian Lalu kita cek apakah sudah tersambung dengan melakukan ping ke google Yak, sudah konek! Alhamdulillah&amp;hellip;&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Menggunakan Perintah Echo</title>
+      <link>http://sasongko26.github.io/2014-03-24-menggunakan-perintah-echo/</link>
+      <pubDate>Mon, 24 Mar 2014 10:01:12 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2014-03-24-menggunakan-perintah-echo/</guid>
+      <description>Echo merupakan perintah bahasa bash (bahasa yang digunakan terminal) untuk menampilkan output ke monitor.
+$ echo “teks yang diinginkan” teks yang diinginkan Contoh:
+$ echo &amp;quot;halloooo.....&amp;quot; halloooo..... $ echo &amp;quot;BlankOn Linux Indonesia&amp;quot; BlankOn Linux Indonesia </description>
+    </item>
+    
+    <item>
+      <title>Menggunakan WGet Linux Download Manager</title>
+      <link>http://sasongko26.github.io/2014-03-23-wget-linux-download-manager/</link>
+      <pubDate>Sun, 23 Mar 2014 10:28:12 +0000</pubDate>
+      
+      <guid>http://sasongko26.github.io/2014-03-23-wget-linux-download-manager/</guid>
+      <description>Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume. Cara menggunakannya mudah.
+$ wget [url] untuk mem-pause download tekan Ctrl+C. Dan untuk melanjutkan kembali tambahkan opsi -c.
+$ wget [url] -c Untuk lebih lengkapnya tentang wget ada di manual wget.
+$ wget -h GNU Wget 1.15, adalah sebuah non-interaktif network retriever.</description>
+    </item>
+    
+  </channel>
+</rss>
