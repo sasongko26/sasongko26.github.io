@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on Catatan Sasongko</title>
-    <link>http://sasongko.web.id/tags/python/</link>
+    <link>https://sasongko.web.id/tags/python/</link>
     <description>Recent content in python on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jul 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://sasongko.web.id/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jul 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Virt-Manager ImportError: No module named requests</title>
-      <link>http://sasongko.web.id/2016-07-04-virtmanager-no-module-requests/</link>
+      <link>https://sasongko.web.id/2016-07-04-virtmanager-no-module-requests/</link>
       <pubDate>Mon, 04 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2016-07-04-virtmanager-no-module-requests/</guid>
+      <guid>https://sasongko.web.id/2016-07-04-virtmanager-no-module-requests/</guid>
       <description>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Managertidak bisa dijalankan.
 $ virt-manager Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt; from virtinst import util as util File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt; from virtinst.distroinstaller import DistroInstaller File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt; from . import urlfetcher File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requestsmenunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.</description>
     </item>
     
     <item>
       <title>pip InsecurePlatformWarning</title>
-      <link>http://sasongko.web.id/2016-01-21-pip-insecureplatformwarning/</link>
+      <link>https://sasongko.web.id/2016-01-21-pip-insecureplatformwarning/</link>
       <pubDate>Thu, 21 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2016-01-21-pip-insecureplatformwarning/</guid>
+      <guid>https://sasongko.web.id/2016-01-21-pip-insecureplatformwarning/</guid>
       <description>Saat melakukan pencarian dengan pip, muncul pesan
 /usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:315: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning. SNIMissingWarning /usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:120: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail.</description>
     </item>
     
     <item>
       <title>Install gdrv</title>
-      <link>http://sasongko.web.id/2015-07-26-install-gdrv/</link>
+      <link>https://sasongko.web.id/2015-07-26-install-gdrv/</link>
       <pubDate>Sun, 26 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2015-07-26-install-gdrv/</guid>
+      <guid>https://sasongko.web.id/2015-07-26-install-gdrv/</guid>
       <description>gdrv adalah command line tool berbasis python untuk Google Drive. Cara menginstallnya
 pip install gdrv </description>
     </item>
     
     <item>
       <title>Install Google Play Downloader</title>
-      <link>http://sasongko.web.id/2015-07-18-install-googleplaydownloader/</link>
+      <link>https://sasongko.web.id/2015-07-18-install-googleplaydownloader/</link>
       <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2015-07-18-install-googleplaydownloader/</guid>
+      <guid>https://sasongko.web.id/2015-07-18-install-googleplaydownloader/</guid>
       <description>GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:
  python-protobuf (&amp;gt;=2.4) python-requests (&amp;gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&amp;gt;=2.8) python 2.5+ java (opsional)  Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
 easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).</description>
@@ -50,20 +50,20 @@ easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall de
     
     <item>
       <title>Install wxPython</title>
-      <link>http://sasongko.web.id/2015-07-18-install-wxpython/</link>
+      <link>https://sasongko.web.id/2015-07-18-install-wxpython/</link>
       <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2015-07-18-install-wxpython/</guid>
+      <guid>https://sasongko.web.id/2015-07-18-install-wxpython/</guid>
       <description>wxPython adalah salah satu toolkit untuk membuat aplikasi grafis dengan python. Untuk menginstallnya mudah, kita install saja slackbuildnya. Pastikan tersambung internet.
 wget http://slackbuilds.org/slackbuilds/14.1/libraries/wxPython.tar.gz tar xzf wxPython.tar.gz cd wxPython wget http://downloads.sourceforge.net/wxpython/wxPython-src-2.8.12.1.tar.bz2 sh wxPython.SlackBuild installpkg /tmp/wxPython-2.8.12.1-x86_64-2_SBo.tgz </description>
     </item>
     
     <item>
       <title>Install pip</title>
-      <link>http://sasongko.web.id/2015-07-13-install-pip/</link>
+      <link>https://sasongko.web.id/2015-07-13-install-pip/</link>
       <pubDate>Mon, 13 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2015-07-13-install-pip/</guid>
+      <guid>https://sasongko.web.id/2015-07-13-install-pip/</guid>
       <description>Pip akan memudahkan kita semua untuk menginstall paket-paket yang terkait dengan python.
 wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py python get-pip.py </description>
     </item>

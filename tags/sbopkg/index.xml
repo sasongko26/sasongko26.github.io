@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sbopkg on Catatan Sasongko</title>
-    <link>http://sasongko.web.id/tags/sbopkg/</link>
+    <link>https://sasongko.web.id/tags/sbopkg/</link>
     <description>Recent content in sbopkg on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://sasongko.web.id/tags/sbopkg/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/sbopkg/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reverse Dependency sbopkg</title>
-      <link>http://sasongko.web.id/2019-04-20-reverse-dependency-sbopkg/</link>
+      <link>https://sasongko.web.id/2019-04-20-reverse-dependency-sbopkg/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2019-04-20-reverse-dependency-sbopkg/</guid>
+      <guid>https://sasongko.web.id/2019-04-20-reverse-dependency-sbopkg/</guid>
       <description>Secara default sbopkgtidak menyediakan fitur reverse dependency. Adapun untuk butuh dependency-nya apa saja bisa menggunakan sqg. Bagaimana tahu reverse dependency-nya?
 Ini cara sederhana yang saya gunakan
 grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan cara tersebut bisa diketahui suatu paket/package itu menjadi dependensi dari paket apa. Tapi, salah 1 dari output tersebut tidak lain adalah paket itu sendiri. Dan, package yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah packages tersebut terinstall atau tidak.</description>
@@ -20,20 +20,20 @@ grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan ca
     
     <item>
       <title>Upgrade Slackbuilds Slackware 14.2</title>
-      <link>http://sasongko.web.id/2016-07-03-upgrade-slackbuilds/</link>
+      <link>https://sasongko.web.id/2016-07-03-upgrade-slackbuilds/</link>
       <pubDate>Sun, 03 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2016-07-03-upgrade-slackbuilds/</guid>
+      <guid>https://sasongko.web.id/2016-07-03-upgrade-slackbuilds/</guid>
       <description>Setelah melakukan [ upgrade sistem ke Slackware 14.2]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya upgrade juga paket yang diinstal dari slackbuilds.org.
  Upgrade sbopkg: sbopkg -u Versi sbopkgterbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik D Hasil unduhan : /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Setelah diunduh, upgrade : upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Karena menghasilkan konfigurasi baru, lakukan slackpkg new-configdan pilih overwrite saja. Kemudian update ke repo 14.2 : sbopkgpilih Utilitieslalu Repository. Kemudian pilih SBo (14.</description>
     </item>
     
     <item>
       <title>Install sbopkg</title>
-      <link>http://sasongko.web.id/2016-05-03-install-sbopkg/</link>
+      <link>https://sasongko.web.id/2016-05-03-install-sbopkg/</link>
       <pubDate>Tue, 03 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2016-05-03-install-sbopkg/</guid>
+      <guid>https://sasongko.web.id/2016-05-03-install-sbopkg/</guid>
       <description>Adakalanya pengguna Slackware membutuhkan paket/aplikasi di luar yang dirilis secara resmi oleh Slackware tapi tidak mau repot install dari kode sumber (source code). SlackBuilds.org (SBo) inilah yang mewujudkannya. Di SBo tersedia ribuan paket yang dapat dijalankan dengan baik di Slackware.
 Kecuali dalam bentuk web interface SBo juga bisa dinikmati dalam bentuk command line interface yang dinamakan sbopkg. Sbopkg secara default tidak ter-install karena paket ini memang paket third party.
 Untuk install-nya mudah.</description>

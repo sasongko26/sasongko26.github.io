@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>forensik on Catatan Sasongko</title>
-    <link>http://sasongko.web.id/tags/forensik/</link>
+    <link>https://sasongko.web.id/tags/forensik/</link>
     <description>Recent content in forensik on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://sasongko.web.id/tags/forensik/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/forensik/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Deteksi duplikasi file</title>
-      <link>http://sasongko.web.id/2020-06-01-deteksi-duplikasi-file/</link>
+      <link>https://sasongko.web.id/2020-06-01-deteksi-duplikasi-file/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2020-06-01-deteksi-duplikasi-file/</guid>
+      <guid>https://sasongko.web.id/2020-06-01-deteksi-duplikasi-file/</guid>
       <description>Walau sudah ada tools yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan tools bawaan Slackware. Tools yang umum digunakan antara lain fslint, fdupesatau jdupes. Adapun tools yang biasa saya gunakan
  sha512sum awk uniq grep  Misalkan, akan mencari adakah duplikasi file di folder Downloads. Pertama, catat dulu hash-nya. Di sini saya gunakan sha512. Kumpulan sha512 tersebut disatukan dalam file downloads.sha512. File ini terdiri dari 2 kolom.</description>
     </item>
     
     <item>
       <title>Mengapa Enkripsi dengan OpenSSL?</title>
-      <link>http://sasongko.web.id/2018-06-12-mengapa-openssl/</link>
+      <link>https://sasongko.web.id/2018-06-12-mengapa-openssl/</link>
       <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2018-06-12-mengapa-openssl/</guid>
+      <guid>https://sasongko.web.id/2018-06-12-mengapa-openssl/</guid>
       <description>Mengapa saya suka mengenkripsi file dengan openssl? Karena
  Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&amp;hellip;.  </description>
     </item>
     
     <item>
       <title>Enkripsi File dengan gnupg</title>
-      <link>http://sasongko.web.id/2017-01-14-enkripsi-dg-gpg/</link>
+      <link>https://sasongko.web.id/2017-01-14-enkripsi-dg-gpg/</link>
       <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2017-01-14-enkripsi-dg-gpg/</guid>
+      <guid>https://sasongko.web.id/2017-01-14-enkripsi-dg-gpg/</guid>
       <description>Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupgatau yang biasa disebut dengan gpg.
 $ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
 $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi </description>
@@ -40,20 +40,20 @@ $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi </description>
     
     <item>
       <title>Enkripsi File dengan OpenSSL</title>
-      <link>http://sasongko.web.id/2017-01-08-enkripsi-dg-openssl/</link>
+      <link>https://sasongko.web.id/2017-01-08-enkripsi-dg-openssl/</link>
       <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2017-01-08-enkripsi-dg-openssl/</guid>
+      <guid>https://sasongko.web.id/2017-01-08-enkripsi-dg-openssl/</guid>
       <description>Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
 Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssldengan cipher rc4. File hasil enkripsi saya namai rahasia.odtyang saya taruh di fd dan fd saya mountdi /media/hd0. Kemudian akan ditanya password enkripsinya.</description>
     </item>
     
     <item>
       <title>Mengembalikan File yang Terhapus dengan Testdisk</title>
-      <link>http://sasongko.web.id/2015-10-30-recovery-file-testdisk/</link>
+      <link>https://sasongko.web.id/2015-10-30-recovery-file-testdisk/</link>
       <pubDate>Fri, 30 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2015-10-30-recovery-file-testdisk/</guid>
+      <guid>https://sasongko.web.id/2015-10-30-recovery-file-testdisk/</guid>
       <description>Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/recovery file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.
 Sebagai root jalankan
 testdisk kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih No Log karena merasa log ini tidak terlalu penting. Selanjutnya akan terdeteksi media simpan yang terpasang di komputer.</description>
@@ -61,10 +61,10 @@ testdisk kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan
     
     <item>
       <title>Install Testdisk</title>
-      <link>http://sasongko.web.id/2015-10-29-install-testdisk/</link>
+      <link>https://sasongko.web.id/2015-10-29-install-testdisk/</link>
       <pubDate>Thu, 29 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2015-10-29-install-testdisk/</guid>
+      <guid>https://sasongko.web.id/2015-10-29-install-testdisk/</guid>
       <description>Testdisk adalah salah satu aplikasi digital forensik multiplatform. Bisa dijalankan di Windows (NT4, 2000, 2003, XP, Vista dan 7), Linux, FreeBSD, OpenBSD, NetBSD, SunOS, dan MacOS. Adapun kegunaannya untuk mengembalikan partisi yang terhapus beserta file-file yang ada di dalamnya. Informasi lebih lengkap tentang testdisk bisa didapatkan di sini.
 Sebenarnya untuk Slackware sudah ada slackbuild-nya, tapi tidak ada salahnya kalau install dari kode sumber. Penginstallan dijalankan dengan level root.
 wget http://www.cgsecurity.org/testdisk-7.0.tar.bz2 tar xjvf testdisk-7.</description>
@@ -72,10 +72,10 @@ wget http://www.cgsecurity.org/testdisk-7.0.tar.bz2 tar xjvf testdisk-7.</descri
     
     <item>
       <title>InstalL Sleuth Kit Slackware</title>
-      <link>http://sasongko.web.id/2015-06-18-install-sleuthkit-slackware/</link>
+      <link>https://sasongko.web.id/2015-06-18-install-sleuthkit-slackware/</link>
       <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2015-06-18-install-sleuthkit-slackware/</guid>
+      <guid>https://sasongko.web.id/2015-06-18-install-sleuthkit-slackware/</guid>
       <description>The Sleuth Kit atau disingkat TSK adalah tools digital forensik yang bersifat open source, multiplatform dan text-mode (command line interface). TSK bisa digunakan untuk melakukan analisis pada barang bukti, atau lebih tepatnya citra disk (raw image). Misalnya untuk mengetahui berkas apa saja yang ada di dalam hardisk dan adakah berkas yang dihapus dari hardisk itu.
 Dependensi:
  autoconf, automake, libtool C/C++ compiler (gcc, gcc++) [JDK (opsional)]({% post_url 2015-06-07-install-jdk-slackware %})  Install cukup mudah, kita akan install langsung TSK dari source code yang ada di github</description>
@@ -83,28 +83,28 @@ Dependensi:
     
     <item>
       <title>Mengubah LiveDVD Menjadi ISO</title>
-      <link>http://sasongko.web.id/2015-05-23-konversi-livedvd-iso/</link>
+      <link>https://sasongko.web.id/2015-05-23-konversi-livedvd-iso/</link>
       <pubDate>Sat, 23 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2015-05-23-konversi-livedvd-iso/</guid>
+      <guid>https://sasongko.web.id/2015-05-23-konversi-livedvd-iso/</guid>
       <description>Beberapa waktu lalu lihat DVD BlankOn 8 Rote nganggur di seonggok kumpulan CD/DVD. Enaknya diapain ya itu DVD? Kalau dibiarkan khawatirnya kotor malah ngga bisa digunakan lagi. Ya udah mending dibuat file ISO aja. Kalau dibuat file ISO insya Allah manfaatnya lebih banyak karena tersimpan di hardisk bisa lebih tahan lama daripada dalam bentuk DVD, dan suatu saat nanti kalau dibutuhkan tapi DVDnya ngga bisa dipakai tinggal dibakar aja ISOnya entah itu jadi DVD atau ke flashdisk.</description>
     </item>
     
     <item>
       <title>Definisi Komputer Forensik</title>
-      <link>http://sasongko.web.id/2013-11-10-definisi-komputer-forensik/</link>
+      <link>https://sasongko.web.id/2013-11-10-definisi-komputer-forensik/</link>
       <pubDate>Sun, 10 Nov 2013 17:03:56 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2013-11-10-definisi-komputer-forensik/</guid>
+      <guid>https://sasongko.web.id/2013-11-10-definisi-komputer-forensik/</guid>
       <description>Digital forensik atau Computer forensic adalah serangkaian metodologi yang digunakan dalam melakukan akuisisi (imaging), pengumpulan, analisa, serta presentasi bukti digital. Bukti digital mencakup setiap informasi elektronik yang disimpan atau diolah menggunakan teknologi komputer sehingga dapat digunakan untuk mendukung atau menolak tentang bagaimana sebuah insiden atau tindakan pelanggaran hukum terjadi. Karena keterlibatan proses computer forensic adalah setelah terjadinya suatu insiden maka metodologi yang tepat sangat diperlukan untuk mempercepat proses investigasi serta mendapatkan bukti-bukti digital yang akurat.</description>
     </item>
     
     <item>
       <title>Kompetisi Tipuan Atas Nama Toyota</title>
-      <link>http://sasongko.web.id/2014-06-24-penipuan-atas-nama-toyota/</link>
+      <link>https://sasongko.web.id/2014-06-24-penipuan-atas-nama-toyota/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sasongko.web.id/2014-06-24-penipuan-atas-nama-toyota/</guid>
+      <guid>https://sasongko.web.id/2014-06-24-penipuan-atas-nama-toyota/</guid>
       <description>Kemarin penulis mendapat email, “Tantangan Buat Para Blogger SEO” yang isinya Tapi, karena curiga ini penipuan, penulis cek di website resmi Toyota ternyata tidak ada informasi kompetisi atau lomba menulis tersebut. Kemudian penulis tanyakan ke Customer Support Toyota via email
 mendapatkan balasan
 Jadi, mari kita berinternet secara sehat, tidak melakukan penipuan dan waspada terhadap penipuan.</description>
