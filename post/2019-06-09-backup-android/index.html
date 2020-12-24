@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Back Up Data HP Android &middot; Catatan Sasongko</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://sasongko.web.id/"><h1>Catatan Sasongko</h1></a>
+	 
+	  <p class="lead">
+       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://sasongko.web.id/">Home</a> </li>
+        
+		<li><a href="https://sasongko.web.id/about">Profil</a></li>
+		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
+      </ul>
+    </nav>
+	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
+ <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+
+		</div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Back Up Data HP Android</h1>
+  <time datetime=2019-06-09T00:00:00Z class="post-date">Sun, Jun 9, 2019</time>
+  <p>Sebelum berganti ponsel atau HP sangat disarankan untuk mem-<em>back up</em> data-data penting, seperti dokumen, foto, video, maupun chat <em>WhatsApp</em>. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi <strong>Slackware</strong>.</p>
+<h1 id="persiapan-slackware">Persiapan <strong>Slackware</strong></h1>
+<p>Pastikan bisa menjalankan <!-- raw HTML omitted -->adb<!-- raw HTML omitted --> yang merupakan bagian dari <!-- raw HTML omitted -->android tools<!-- raw HTML omitted -->. Kalau belum bisa install dari SBo</p>
+<h1 id="mengapa-adb">Mengapa adb?</h1>
+<p>Mengapa <!-- raw HTML omitted -->adb<!-- raw HTML omitted -->? Mengapa tidak pakai <em>file manager</em> saja? Karena transfer pakai <!-- raw HTML omitted -->adb<!-- raw HTML omitted --> bisa lebih cepat</p>
+<h1 id="persiapan-android">Persiapan <strong>Android</strong></h1>
+<p>Aktifkan mode <strong>USB debugging</strong> yang ada di <em>Settings</em> &ndash;&gt; <em>Developer options</em>. Apabila tidak ada bagian <em>Developer options</em> aktifkan dulu dengan cara <em>Settings</em> &ndash;&gt; <em>About phone</em>. Tekan beberapa kali <em>Build number</em> sampai muncul keterangan yang kurang lebih seperti ini &ldquo;You are now a developer&rdquo;. Jangan lupa konfirmasi izin akses perangkat.
+Pada HP tertentu mungkin akan diminta memasukkan IMEI terlebih dahulu sebagai <em>password</em> untuk mengakses <em>Developer options</em>.
+Dan, ingat-ingat lokasi penyimpanan file datanya. Dalam catatan kali ini ada di penyimpanan/memory internal (bukan memory external) di folder <!-- raw HTML omitted -->pindah<!-- raw HTML omitted -->.</p>
+<h1 id="next">Next</h1>
+<p>Sambungkan kedua perangkat. Dari laptop kita gunakan <!-- raw HTML omitted -->adb<!-- raw HTML omitted --></p>
+<p>Pastikan perangkat telah siap digunakan. Cek apakah androidnya sudah siap</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ adb devices
+List of devices attached
+9H75BEO7W4UORSKF	device
+</code></pre></div><p>Ok. Siap.</p>
+<p>Kita pindahkan datanya ke <em>current working directory</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ adb pull /storage/emulated/0/pindah/ .
+</code></pre></div><p>Tunggu sampai selesai</p>
+
+</div>
+
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+      
+    
+  </body>
+</html>

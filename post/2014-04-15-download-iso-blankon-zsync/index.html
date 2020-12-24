@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Download ISO BlankOn dengan ZSync &middot; Catatan Sasongko</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://sasongko.web.id/"><h1>Catatan Sasongko</h1></a>
+	 
+	  <p class="lead">
+       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://sasongko.web.id/">Home</a> </li>
+        
+		<li><a href="https://sasongko.web.id/about">Profil</a></li>
+		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
+      </ul>
+    </nav>
+	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
+ <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+
+		</div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Download ISO BlankOn dengan ZSync</h1>
+  <time datetime=2014-04-15T07:22:12Z class="post-date">Tue, Apr 15, 2014</time>
+  <p>Sebagai anggota Quality Assurance (Tim Jaminan Kualitas) BlankOn, kami bertanggung jawab untuk menemukan kutu (bugs) sebanyak-banyaknya. Hampir setiap hari rilis iso baru dan 2 bulan sekali ada rilis kandidat baru, istilahnya sih jahitan.Tiap berkas iso baik itu i386 maupun amd64 berukuran sekitar 1GB. Kalau setiap hari iso tersebut harus diunduh, waaahhhh bakal tekor! :D</p>
+<p>Alhamdulillah iso BlankOn bisa diunduh dengan rsync dan zsync sehingga bisa lebih hemat karena tidak perlu mengunduh semua isi iso tapi hanya perubahannya saja. Walau demikian, kami akan sampaikan yang zsync nya saja dulu. Cara menggunakan zsync sangat mudah.</p>
+<h1 id="install-zsync">Install zsync</h1>
+<p>{% highlight bash %}
+$ sudo apt-get install zsync
+{% endhighlight %}</p>
+<h1 id="download-dengan-zsync">Download dengan Zsync</h1>
+<p>Sebelumnya sudah ada iso yang kita miliki
+{% highlight bash %}
+$ ls
+tambora-desktop-amd64.iso
+tambora-desktop-i386.iso
+{% endhighlight %}</p>
+<p>Akan diunduh iso yang berarsitektur 64 bit (tambora-desktop-amd64.iso) yang terbaru. Pada direktori di mana tersimpan berkas iso jalankan zsync.
+{% highlight bash %}
+$ zsync url_iso
+$ zsync <a href="http://cdimage.blankonlinux.or.id/blankon/livedvd-harian/current/tambora-desktop-amd64.iso.zsync">http://cdimage.blankonlinux.or.id/blankon/livedvd-harian/current/tambora-desktop-amd64.iso.zsync</a>
+#################### 100.0% 43.9 kBps DONE</p>
+<p>reading seed file tambora-desktop-amd64.iso ***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************Read tambora-desktop-amd64.iso. Target 67.5% complete.   <br>
+downloading from <a href="http://cdimage.blankonlinux.or.id/blankon/livedvd-harian/current/tambora-desktop-amd64.iso:">http://cdimage.blankonlinux.or.id/blankon/livedvd-harian/current/tambora-desktop-amd64.iso:</a>
+#############&mdash;&mdash;- 68.4% 3.9 kBps         ETA<br>
+#############&mdash;&mdash;- 69.7% 5.5 kBps         ETA<br>
+{% endhighlight %}
+Tampak bahwa iso yang sudah ada berbeda dengan iso yang terbaru. Iso lama berisi 67,5% iso terbaru. Jadi dalam kasus ini mengunduh dengan zsync lebih hemat 67,5% daripada mengunduh keseluruhan iso dari awal.</p>
+
+</div>
+
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+      
+    
+  </body>
+</html>

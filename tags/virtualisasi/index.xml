@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 11 Sep 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/virtualisasi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mount qcow2</title>
-      <link>https://sasongko.web.id/2016-09-11-mount-qcow2/</link>
+      <link>https://sasongko.web.id/post/2016-09-11-mount-qcow2/</link>
       <pubDate>Sun, 11 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sasongko.web.id/2016-09-11-mount-qcow2/</guid>
+      <guid>https://sasongko.web.id/post/2016-09-11-mount-qcow2/</guid>
       <description>Untuk mengaitkan/mount berkas qcow2ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
 Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
 modprobe nbd max_part=N max_part=Nisikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2tersebut kalau dijalankan dengan qemuberisi 8 partisi, maka nilai Nadalah 8.
@@ -21,30 +21,30 @@ Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbdyang
     
     <item>
       <title>Virtual Manager unable to connect to libvirt</title>
-      <link>https://sasongko.web.id/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</link>
+      <link>https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</link>
       <pubDate>Tue, 05 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sasongko.web.id/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</guid>
+      <guid>https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</guid>
       <description>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Managerbelum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failuredengan detail sebagai berikut
 Unable to connect to libvirt. internal error: Cannot find suitable emulator for x86_64 Libvirt URI is: qemu:///system Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 979, in _open_thread self._populate_initial_state() File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 941, in _populate_initial_state logging.</description>
     </item>
     
     <item>
       <title>Virt-Manager ImportError: No module named requests</title>
-      <link>https://sasongko.web.id/2016-07-04-virtmanager-no-module-requests/</link>
+      <link>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</link>
       <pubDate>Mon, 04 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sasongko.web.id/2016-07-04-virtmanager-no-module-requests/</guid>
+      <guid>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</guid>
       <description>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Managertidak bisa dijalankan.
 $ virt-manager Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt; from virtinst import util as util File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt; from virtinst.distroinstaller import DistroInstaller File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt; from . import urlfetcher File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requestsmenunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.</description>
     </item>
     
     <item>
       <title>Konversi VDI ke VMDK</title>
-      <link>https://sasongko.web.id/2014-10-14-konversi-vdi-ke-vmdk/</link>
+      <link>https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/</link>
       <pubDate>Tue, 14 Oct 2014 09:43:09 +0000</pubDate>
       
-      <guid>https://sasongko.web.id/2014-10-14-konversi-vdi-ke-vmdk/</guid>
+      <guid>https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/</guid>
       <description>Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.
 Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya
 $ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% Clone hard disk created in format &#39;VMDK&#39;. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa Hardisk virtualnya sudah terkonversi.</description>

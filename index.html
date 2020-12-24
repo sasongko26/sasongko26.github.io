@@ -33,6 +33,7 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <a href="https://sasongko.web.id/"><h1>Catatan Sasongko</h1></a>
+	 
 	  <p class="lead">
        Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
       </p>
@@ -42,30 +43,45 @@
       <ul class="sidebar-nav">
         <li><a href="https://sasongko.web.id/">Home</a> </li>
         
+		<li><a href="https://sasongko.web.id/about">Profil</a></li>
+		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
       </ul>
     </nav>
+	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
+ <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
 
-    <p>&copy; 2020. All rights reserved. </p>
-  </div>
+		</div>
 </aside>
 
     <main class="content container">
     <div class="posts">
 <article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-12-20-beralih-hugo/">Beralih ke Hugo</a>
+    <a href="https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/">Start up time kernel 5.10.2</a>
+  </h1>
+  <time datetime="2020-12-24T00:00:00Z" class="post-date">Thu, Dec 24, 2020</time>
+  Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam main tree slackware current. Saat catatan ini dituliskan, sudah &ldquo;mendarat&rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk start up? Yang dimaksud start up di sini adalah kondisi dari eksekusi elilo dan initrd sampai muncul login prompt.
+$ dmesg | tail -5 # perintah ini dieksekusi sebagai root walaupun prompt sign-nya user biasa [ 20.
+  
+  <div class="read-more-link">
+    <a href="/post/2020-12-24-startup-time-kernel-5-10-2/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://sasongko.web.id/post/2020-12-20-beralih-hugo/">Beralih ke Hugo</a>
   </h1>
   <time datetime="2020-12-20T00:00:00Z" class="post-date">Sun, Dec 20, 2020</time>
   Mengapa beralih dari jekyll ke hugo? Keunggulan hugo :
  Instalnya simpel. Hanya berupa binary. Jekyll butuh banyak dependensi tersedia di SBo lebih memudahkan dalam install, upgrade, remove kalau sudah tidak perlu cari pengalaman baru. selama 3 tahun ini menggunakan jekyll simpel,banyak dokumentasi dan theme yang free. Hugo setelah dicermati memberikan prospek yang tidak kalah bagus dibanding jekyll. Bagus di sini maksudnya adalah tergantung selera penulis. Hehehehe  Sedangkan kelemahan hugo adalah tidak didukung secara resmi oleh Github Page.
   
   <div class="read-more-link">
-    <a href="/2020-12-20-beralih-hugo/">Read More…</a>
+    <a href="/post/2020-12-20-beralih-hugo/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-10-22-akses-whatsapp-web-seamonkey/">Akses WhatsApp Web via Seamonkey</a>
+    <a href="https://sasongko.web.id/post/2020-10-22-akses-whatsapp-web-seamonkey/">Akses WhatsApp Web via Seamonkey</a>
   </h1>
   <time datetime="2020-10-22T00:00:00Z" class="post-date">Thu, Oct 22, 2020</time>
   Beberapa waktu ini saya lebih sering browsing dengan Seamonkey karena lebih ringan dan cepat (penilaian subjektif). Overall lancar jaya aman terkendali. Namun, ada 1 yang tidak bisa dilakukan : akses WhatsApp Web!
@@ -74,7 +90,7 @@ Untuk mengatasinya,
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-08-21-screenshot-via-adb/">Screenshot android dengan adb</a>
+    <a href="https://sasongko.web.id/post/2020-08-21-screenshot-via-adb/">Screenshot android dengan adb</a>
   </h1>
   <time datetime="2020-08-21T00:00:00Z" class="post-date">Fri, Aug 21, 2020</time>
   Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di external memory (sdcard) dengan nama file screenshot.png
@@ -82,7 +98,7 @@ adb shell screencap -p /sdcard/screenshot.png
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-08-15-mengenal-r-home/">Mengenal R_HOME</a>
+    <a href="https://sasongko.web.id/post/2020-08-15-mengenal-r-home/">Mengenal R_HOME</a>
   </h1>
   <time datetime="2020-08-15T00:00:00Z" class="post-date">Sat, Aug 15, 2020</time>
   R_HOME adalah direktori tempat R diinstall. Maksudnya, pada direktori inilah terdapat file binary dan konfigurasinya. Pada linux khususnya slackware, R_HOME ada di
@@ -90,7 +106,7 @@ adb shell screencap -p /sdcard/screenshot.png
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-08-07-networkmanager-device-not-ready/">NetworkManager device not ready</a>
+    <a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">NetworkManager device not ready</a>
   </h1>
   <time datetime="2020-08-07T00:00:00Z" class="post-date">Fri, Aug 7, 2020</time>
   Baru beberapa hari memakai (lagi) NetworkManager, sudah bermasalah (lagi).
@@ -100,12 +116,12 @@ echo &#34;managed=true&#34; &gt;&gt; /etc/NetworkManager/NetworkManager.conf Tap
 Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] config: unknown key &#39;managed&#39; in section [main] of file &#39;/etc/NetworkManager/NetworkManager.conf Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal).
   
   <div class="read-more-link">
-    <a href="/2020-08-07-networkmanager-device-not-ready/">Read More…</a>
+    <a href="/post/2020-08-07-networkmanager-device-not-ready/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-08-04-bye-wicd/">Bye wicd</a>
+    <a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Bye wicd</a>
   </h1>
   <time datetime="2020-08-04T00:00:00Z" class="post-date">Tue, Aug 4, 2020</time>
   Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan wicd dari repo slackware current.
@@ -114,19 +130,19 @@ Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] co
   Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripada NetworkManager. Kenyamanan ini sebenarnya karena saya tidak mau repot, NetworkManager seringkali timbulkan masalah, salah satunya mengatur hostname dan domain.
   
   <div class="read-more-link">
-    <a href="/2020-08-04-bye-wicd/">Read More…</a>
+    <a href="/post/2020-08-04-bye-wicd/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-06-20-edit-video-ffmpeg-lossless/">Edit video ffmpeg tanpa menurunkan kualitas</a>
+    <a href="https://sasongko.web.id/post/2020-06-20-edit-video-ffmpeg-lossless/">Edit video ffmpeg tanpa menurunkan kualitas</a>
   </h1>
   <time datetime="2020-06-20T00:00:00Z" class="post-date">Sat, Jun 20, 2020</time>
   Ketika mengedit video menggunakan ffmpeg, filter video ataupun filter yang lebih kompleks seperti menambahkan watermark, tanpa pengaturan tambahan kadang hasilnya mengecewakan. Gambar pada video menjadi pecah. Untuk meminimalisirnya, bisa ditambahkan opsi -q:v 0.
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-06-11-memisahkan-halaman-pdf/">Memisahkan halaman PDF</a>
+    <a href="https://sasongko.web.id/post/2020-06-11-memisahkan-halaman-pdf/">Memisahkan halaman PDF</a>
   </h1>
   <time datetime="2020-06-11T00:00:00Z" class="post-date">Thu, Jun 11, 2020</time>
   Kadang kita perlu mengambil beberapa halaman dari e-book atau sejenisnya yang bertipe pdf. Kita bisa gunakan pdfjam. Misalkan akan mengambil halaman 10-21 dari file buku.pdf.
@@ -134,19 +150,19 @@ pdfjam buku.pdf &#39;10-21&#39;
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-06-01-deteksi-duplikasi-file/">Deteksi duplikasi file</a>
+    <a href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/">Deteksi duplikasi file</a>
   </h1>
   <time datetime="2020-06-01T00:00:00Z" class="post-date">Mon, Jun 1, 2020</time>
   Walau sudah ada tools yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan tools bawaan Slackware. Tools yang umum digunakan antara lain fslint, fdupesatau jdupes. Adapun tools yang biasa saya gunakan
  sha512sum awk uniq grep  Misalkan, akan mencari adakah duplikasi file di folder Downloads. Pertama, catat dulu hash-nya. Di sini saya gunakan sha512. Kumpulan sha512 tersebut disatukan dalam file downloads.sha512. File ini terdiri dari 2 kolom.
   
   <div class="read-more-link">
-    <a href="/2020-06-01-deteksi-duplikasi-file/">Read More…</a>
+    <a href="/post/2020-06-01-deteksi-duplikasi-file/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-05-30-menggabungkan-video/">Menggabungkan video ffmpeg</a>
+    <a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Menggabungkan video ffmpeg</a>
   </h1>
   <time datetime="2020-05-30T00:00:00Z" class="post-date">Sat, May 30, 2020</time>
   Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu
@@ -154,12 +170,12 @@ pdfjam buku.pdf &#39;10-21&#39;
 $ vim list-piknik file &#39;piknik-1.
   
   <div class="read-more-link">
-    <a href="/2020-05-30-menggabungkan-video/">Read More…</a>
+    <a href="/post/2020-05-30-menggabungkan-video/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-05-29-operasi-direktori-r/">Operasi direktori R</a>
+    <a href="https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/">Operasi direktori R</a>
   </h1>
   <time datetime="2020-05-29T00:00:00Z" class="post-date">Fri, May 29, 2020</time>
   Mengetahui working directory Secara default, working directory pada Slackware adalah home directory user atau di mana command Rdijalankan.
@@ -167,7 +183,7 @@ getwd() Mengganti working directory Misal, akan berpindah working directory ke D
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-05-25-mengetahui-volume-suara-video/">Mengetahui volume suara video</a>
+    <a href="https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/">Mengetahui volume suara video</a>
   </h1>
   <time datetime="2020-05-25T00:00:00Z" class="post-date">Mon, May 25, 2020</time>
   Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.
@@ -175,19 +191,19 @@ Untuk mengetahui intensitas suara video intro.mkv
 $ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &#39;intro.mkv&#39;: Metadata: COMPATIBLE_BRANDS: isommp42 COM.ANDROID.VERSION: 9 MAJOR_BRAND : mp42 MINOR_VERSION : 0 ENCODER : Lavf58.29.100 Duration: 00:00:14.90, start: 0.000000, bitrate: 5559 kb/s Stream #0:0(eng): Video: mpeg4 (Simple Profile), yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 1k tbn, 30 tbc (default) Metadata: HANDLER_NAME : VideoHandle ENCODER : Lavc58.
   
   <div class="read-more-link">
-    <a href="/2020-05-25-mengetahui-volume-suara-video/">Read More…</a>
+    <a href="/post/2020-05-25-mengetahui-volume-suara-video/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-05-24-aktivasi-android-gps-adb/">Aktivasi android GPS via adb</a>
+    <a href="https://sasongko.web.id/post/2020-05-24-aktivasi-android-gps-adb/">Aktivasi android GPS via adb</a>
   </h1>
   <time datetime="2020-05-24T00:00:00Z" class="post-date">Sun, May 24, 2020</time>
   Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan adbadb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti angka 3 dengan 0.
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-05-21-menambah-watermark-gambar-video/">Menambah watermark gambar ke video dengan ffmpeg</a>
+    <a href="https://sasongko.web.id/post/2020-05-21-menambah-watermark-gambar-video/">Menambah watermark gambar ke video dengan ffmpeg</a>
   </h1>
   <time datetime="2020-05-24T00:00:00Z" class="post-date">Sun, May 24, 2020</time>
   Misalkan kita akan memberikan watermark berupa gambar logo.png ke video ramadhan.mkv. Watermark ditempatkan di pojok kiri bawah. Video dengan watermark diberi nama ramadhan-fix.mkv
@@ -196,7 +212,7 @@ ffmpeg -i ramadhan.mkv -i logo.png -filter_complex &#34;overlay=x=0:y=(main_h-ov
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-05-24-mengubah-resolusi-video-ffmpeg/">Mengubah resolusi video ffmpeg</a>
+    <a href="https://sasongko.web.id/post/2020-05-24-mengubah-resolusi-video-ffmpeg/">Mengubah resolusi video ffmpeg</a>
   </h1>
   <time datetime="2020-05-24T00:00:00Z" class="post-date">Sun, May 24, 2020</time>
   Misalkan terdapat video VID20200509135621.mp4, dengan resolusi 3840x2160 SAR 1:1 DAR 16:9. Akan diubah resolusinya menjadi 1920x1080 dengan tetap memperhatikan SAR dan DAR. Video hasil scaling ini diberi nama VID20200509135621-1080p.mkv. Perubahan ini sekaligus konversi ke mkv agar menghemat space.
@@ -204,19 +220,19 @@ ffmpeg -i VID20200509135621.mp4 -vf &#34;scale=1920:1080, setdar=16:9, setsar=1:
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Disable tampilan konfigurasi ffmpeg</a>
+    <a href="https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Disable tampilan konfigurasi ffmpeg</a>
   </h1>
   <time datetime="2020-05-23T00:00:00Z" class="post-date">Sat, May 23, 2020</time>
   Secara default, output ffmpegakan menampilkan built configuration yang digunakan.
 $ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers built with gcc 9.2.0 (GCC) configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-4.2.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack libavutil 56. 31.100 / 56. 31.100 libavcodec 58. 54.100 / 58.
   
   <div class="read-more-link">
-    <a href="/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Read More…</a>
+    <a href="/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-05-22-mengenal-r-factor/">Mengenal objek R factor</a>
+    <a href="https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/">Mengenal objek R factor</a>
   </h1>
   <time datetime="2020-05-22T00:00:00Z" class="post-date">Fri, May 22, 2020</time>
   Factor adalah representasi data kategorik. Factor bisa dibuat dengan fungsi factor()atau cut(). Saya lebih sering menggunakan cut()karena lebih aplikatif saat akan mengubah skala data dari rasio atau interval ke ordinal.
@@ -224,12 +240,12 @@ Contoh, bmi adalah data body mass index (BMI) atau indeks massa tubuh (IMT). Kla
  &lt; 18,5 : underweight 18,5 - 24,99 : normal 25 - 29,99 : overweight &gt; 30 : obese/obesitas Untuk obesitas, masih bisa diklasifikasikan menjadi 3 30 - 34,99 : obese class 1 35 - 39,99 : obese class 2 &gt; 40 : extreme obesity  &gt; bmi &lt;- c(20, 21.
   
   <div class="read-more-link">
-    <a href="/2020-05-22-mengenal-r-factor/">Read More…</a>
+    <a href="/post/2020-05-22-mengenal-r-factor/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-05-14-edit-volume-audio-ffmpeg/">Edit volume suara</a>
+    <a href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/">Edit volume suara</a>
   </h1>
   <time datetime="2020-05-14T00:00:00Z" class="post-date">Thu, May 14, 2020</time>
   Editing kali ini adalah bagaimana mengubah volume default audio/suara menggunakan ffmpeg. Misal, file yang akan diinput/diedit adalah video.mp4. Karena suaranya terlalu pelan, akan dinaikkan menjadi 5x semula melalui filter audio. File hasil editan diberi nama video-louder.webm.
@@ -237,12 +253,12 @@ ffmpeg -i video.mp4 -filter:a &#34;volume=5&#34; video-louder.webm Apabila suara
 ffmpeg -i video.mp4 -filter:a &#34;volume=0.5&#34; new.webm Atau, dengan menuliskan volume suaranya secara langsung.
   
   <div class="read-more-link">
-    <a href="/2020-05-14-edit-volume-audio-ffmpeg/">Read More…</a>
+    <a href="/post/2020-05-14-edit-volume-audio-ffmpeg/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-05-13-convert-jpg-pdf/">Convert jpg ke pdf</a>
+    <a href="https://sasongko.web.id/post/2020-05-13-convert-jpg-pdf/">Convert jpg ke pdf</a>
   </h1>
   <time datetime="2020-05-13T00:00:00Z" class="post-date">Wed, May 13, 2020</time>
   Untuk menjadikan file jpg ke pdf caranya mudah. Misalkan file-gambar.jpg akan diubah menjadi pdf dengan nama dokumen.pdf
@@ -250,7 +266,7 @@ convert file-gambar.jpg dokumen.pdf
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-05-12-melihat-isi-file-zip/">Melihat isi file zip</a>
+    <a href="https://sasongko.web.id/post/2020-05-12-melihat-isi-file-zip/">Melihat isi file zip</a>
   </h1>
   <time datetime="2020-05-12T00:00:00Z" class="post-date">Tue, May 12, 2020</time>
   Menggunakan linux terutama slackware membuat pekerjaan lebih ringan dan efisien. Suatu ketika diberikan sebuah file terkompresi zip yang misterius. Misterius karena ukurannya besar dan konon kata empunya file tersebut ngehang saat akan dibuka di komputer dengan sistem bukan slackware juga bukan linux. Dan ketika dibuka di slackware ketahuanlah nama &ldquo;penduduk&rdquo; zip tersebut.
@@ -258,7 +274,7 @@ zip -sf namafile.zip # atau less namafile.zip
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-05-05-trimming-video-ffmpeg/">Trimming Video ffmpeg</a>
+    <a href="https://sasongko.web.id/post/2020-05-05-trimming-video-ffmpeg/">Trimming Video ffmpeg</a>
   </h1>
   <time datetime="2020-05-05T00:00:00Z" class="post-date">Tue, May 5, 2020</time>
   Misalkan, kita akan mencuplik sebagian (trimming) video video-asli.mp4 dari menit ke 57 lebih 34 detik sampai durasi ke 1 jam 2 menit 5 detik. Fila hasil trimming adalah cuplikan.mp4
@@ -266,7 +282,7 @@ ffmpeg -i video-asli.mp4 -ss 00:57:34 -to 01:02:05 -c copy cuplikan.mp4
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-04-29-mengenal-vector-r/">Mengenal Objek R Vector</a>
+    <a href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">Mengenal Objek R Vector</a>
   </h1>
   <time datetime="2020-04-29T00:00:00Z" class="post-date">Wed, Apr 29, 2020</time>
   Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.
@@ -274,110 +290,110 @@ Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal
 Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).
   
   <div class="read-more-link">
-    <a href="/2020-04-29-mengenal-vector-r/">Read More…</a>
+    <a href="/post/2020-04-29-mengenal-vector-r/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-04-11-install-jasp/">Install JASP</a>
+    <a href="https://sasongko.web.id/post/2020-04-11-install-jasp/">Install JASP</a>
   </h1>
   <time datetime="2020-04-11T00:00:00Z" class="post-date">Sat, Apr 11, 2020</time>
   JASP, singkatan dari Jeffreys&rsquo;s Amazing Statistic Program, merupakan open source statistics software. Software ini layak dijadikan pilihan utama karena:
  Open source. Karena open source semua orang boleh memakai, melihat source code-nya dan berkontribusi (melaporkan masalah, mengusulkan fitur dan perbaikan). Silahkan menuju ke https://github.com/jasp-stats/jasp-desktop . Pengembangan dinaungi oleh akademisi dari University of Amsterdam, Duke University, University of Southampton, UNiversity of Sussex, University of Missouri, Athens University of Economics dan Business, Missouri State University, University of Groningen, Nyenrode Business University, University of Zurich dan Ludwig-Maximilians-Universität München.
   
   <div class="read-more-link">
-    <a href="/2020-04-11-install-jasp/">Read More…</a>
+    <a href="/post/2020-04-11-install-jasp/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-04-04-dispersi-data-dengan-r/">Dispersi Data dengan R</a>
+    <a href="https://sasongko.web.id/post/2020-04-04-dispersi-data-dengan-r/">Dispersi Data dengan R</a>
   </h1>
   <time datetime="2020-04-04T00:00:00Z" class="post-date">Sat, Apr 4, 2020</time>
   Dispersi atau ukuran penyebaran data menunjukkan seberapa bervariasi suatu data. Kali ini data yang digunakan diambil dari dataset ldeaths yang merupakan bagian dari UKLungDeaths. Dataset UKLungDeaths berisi data jumlah kematian akibat penyakit bronchitis, emphysema dan asma di Inggris dalam kurun waktu 1974-1979. Data ini disajikan berdasarkan bulan dan jenis kelamin. Secara total untuk kedua jenis kelamin ada di ldeaths, laki-laki mdeaths dan perempuan fdeaths.
 Nilai minimal min(ldeaths) [1] 1300 Nilai maksimal max(ldeaths) [1] 3891 Range range(ldeaths) [1] 1300 3891 Varians var(ldeaths) [1] 371911.
   
   <div class="read-more-link">
-    <a href="/2020-04-04-dispersi-data-dengan-r/">Read More…</a>
+    <a href="/post/2020-04-04-dispersi-data-dengan-r/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-03-21-tendensi-sentral-dengan-r/">Tendensi Sentral dengan R</a>
+    <a href="https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/">Tendensi Sentral dengan R</a>
   </h1>
   <time datetime="2020-03-21T00:00:00Z" class="post-date">Sat, Mar 21, 2020</time>
   Data yang digunakan :
 &gt; nilai [1] 25 60 79 32 57 74 52 70 82 36 75 77 81 95 41 65 92 85 55 66 52 10 64 75 78 [26] 25 80 98 81 67 41 71 83 54 64 72 88 62 74 45 60 78 89 76 48 84 84 90 15 79 [51] 35 67 17 82 69 74 63 80 85 61 Mean &gt; mean(nilai) [1] 65.
   
   <div class="read-more-link">
-    <a href="/2020-03-21-tendensi-sentral-dengan-r/">Read More…</a>
+    <a href="/post/2020-03-21-tendensi-sentral-dengan-r/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-03-14-input-data-r/">Input Data R</a>
+    <a href="https://sasongko.web.id/post/2020-03-14-input-data-r/">Input Data R</a>
   </h1>
   <time datetime="2020-03-14T00:00:00Z" class="post-date">Sat, Mar 14, 2020</time>
   Input data dalam R sangat mudah dan ada beragam cara, yaitu:
  Menuliskan dalam bentuk syntax. Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100 Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel.
   
   <div class="read-more-link">
-    <a href="/2020-03-14-input-data-r/">Read More…</a>
+    <a href="/post/2020-03-14-input-data-r/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-02-13-r-slackware-default-packages/">Package bawaan R Slackware</a>
+    <a href="https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/">Package bawaan R Slackware</a>
   </h1>
   <time datetime="2020-02-13T00:00:00Z" class="post-date">Thu, Feb 13, 2020</time>
   Berikut adalah package atau library R yang secara default terinstall di Slackware melalui SBo.
  KernSmooth.Functions for Kernel Smoothing Supporting Wand &amp; Jones (1995) MASS. Support Functions and Datasets for Venables and Ripley&rsquo;s MASS Matrix. Sparse and Dense Matrix Classes and Methods base. The R Base Package boot. Bootstrap Functions (Originally by Angelo Canty for S) class. Functions for Classification cluster. &ldquo;Finding Groups in Data&rdquo;: Cluster Analysis Extended Rousseeuw et al.
   
   <div class="read-more-link">
-    <a href="/2020-02-13-r-slackware-default-packages/">Read More…</a>
+    <a href="/post/2020-02-13-r-slackware-default-packages/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-02-10-mengenal-r/">Mengenal R</a>
+    <a href="https://sasongko.web.id/post/2020-02-10-mengenal-r/">Mengenal R</a>
   </h1>
   <time datetime="2020-02-10T00:00:00Z" class="post-date">Mon, Feb 10, 2020</time>
   R adalah salah satu bahasa pemrograman yang banyak digunakan dan bersifat open source. R bisa dikatakan sebagai bahasa pemrograman spesialis data. Tidak mengherankan kalau R digunakan untuk keperluan handling data seperti statistik, data mining, data science dan machine learning.
 Meskipun bersifat open source, sampai sekarang belum ada sistem operasi open source yang memasukkan R secara default terinstall dalam sistemnya. Namun demikian beberapa distro linux menyertakan R ke dalam repo resmi. Distro tersebut antara lain Debian, OpenSUSE dan Ubuntu.
   
   <div class="read-more-link">
-    <a href="/2020-02-10-mengenal-r/">Read More…</a>
+    <a href="/post/2020-02-10-mengenal-r/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-02-01-fullscreen-firefox/">Fullscreen Mozilla Firefox</a>
+    <a href="https://sasongko.web.id/post/2020-02-01-fullscreen-firefox/">Fullscreen Mozilla Firefox</a>
   </h1>
   <time datetime="2020-02-01T00:00:00Z" class="post-date">Sat, Feb 1, 2020</time>
   Terkadang saat browsing perlu fokus sehingga tampilan pun butuh fullscreen. Pada Mozilla Firefox, secara default F11adalah tombol untuk fullscreen dan exit fullscreen. Akan tetapi, hal ini tidak berlaku pada kami, Slackware64 current dengan desktop environment XFCE yang berjalan di laptop Lenovo Ideapad 110-14IBR. Pada perangkat kami ini, F11untuk mengurangi brightness. Maka, untuk fullscreen dan exit-nya kami gunakan Fn F11.
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2020-01-10-mtperrorcantopendevice/">MtpErrorCantOpenDevice</a>
+    <a href="https://sasongko.web.id/post/2020-01-10-mtperrorcantopendevice/">MtpErrorCantOpenDevice</a>
   </h1>
   <time datetime="2020-01-10T00:00:00Z" class="post-date">Fri, Jan 10, 2020</time>
   Ketika akan memindahkan data dari HP android ke laptop melalui thunar, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui jmtpfs$ jmtpfs Device 0 (VID=0e8d and PID=201d) is a MediaTek Inc Elephone P8000. error returned by libusb_claim_interface() = -6LIBMTP PANIC: Unable to initialize device terminate called after throwing an instance of &#39;MtpErrorCantOpenDevice&#39; what(): Can&#39;t open device Aborted Ada masalah di libusb. Coba reinstall libusb# slackpkg reinstall libusb Alhamdulillah sukses.
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2019-12-01-rename-banyak-file-sekaligus/"></a>
+    <a href="https://sasongko.web.id/post/2019-12-01-rename-banyak-file-sekaligus/"></a>
   </h1>
   <time datetime="2019-12-01T00:00:00Z" class="post-date">Sun, Dec 1, 2019</time>
   Tak terasa ternyata sudah lebih dari 3 bulan tidak posting. Mengapa? Sibuk? Kesibukan sebenarnya seperti biasa. Tidak ada peningkatan kesibukan secara signifikan. Lalu mengapa? Alasannya simpel. Karena semua kegiatan berkomputer baik-baik saja. Tidak ada masalah. Biasanya saya menulis di sini ketika saya menghadapi masalah terkait penggunaan komputer. Nah, kali ini masalahnya adalah saya menemukan banyak file yang namanya tidak sesuai dengan standar saya.
 Contoh, adik-adik asisten anatomi mengirimkan softcopy materi asistensi.
   
   <div class="read-more-link">
-    <a href="/2019-12-01-rename-banyak-file-sekaligus/">Read More…</a>
+    <a href="/post/2019-12-01-rename-banyak-file-sekaligus/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2019-08-03-restart-android-via-adb/">Restart android via adb</a>
+    <a href="https://sasongko.web.id/post/2019-08-03-restart-android-via-adb/">Restart android via adb</a>
   </h1>
   <time datetime="2019-08-03T00:00:00Z" class="post-date">Sat, Aug 3, 2019</time>
   Catatan kali ini masih seputar troubleshoot HP android dengan komputer terutama Slackware.
@@ -385,12 +401,12 @@ Tadi malam, HP yang OS android touchscreen-nya tidak ada respon. Di semua bagian
 Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersedia di SBo).
   
   <div class="read-more-link">
-    <a href="/2019-08-03-restart-android-via-adb/">Read More…</a>
+    <a href="/post/2019-08-03-restart-android-via-adb/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2019-06-09-backup-android/">Back Up Data HP Android</a>
+    <a href="https://sasongko.web.id/post/2019-06-09-backup-android/">Back Up Data HP Android</a>
   </h1>
   <time datetime="2019-06-09T00:00:00Z" class="post-date">Sun, Jun 9, 2019</time>
   Sebelum berganti ponsel atau HP sangat disarankan untuk mem-back up data-data penting, seperti dokumen, foto, video, maupun chat WhatsApp. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi Slackware.
@@ -399,12 +415,12 @@ Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer
 Persiapan Android Aktifkan mode USB debugging yang ada di Settings &ndash;&gt; Developer options.
   
   <div class="read-more-link">
-    <a href="/2019-06-09-backup-android/">Read More…</a>
+    <a href="/post/2019-06-09-backup-android/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2019-04-20-reverse-dependency-sbopkg/">Reverse Dependency sbopkg</a>
+    <a href="https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/">Reverse Dependency sbopkg</a>
   </h1>
   <time datetime="2019-04-20T00:00:00Z" class="post-date">Sat, Apr 20, 2019</time>
   Secara default sbopkgtidak menyediakan fitur reverse dependency. Adapun untuk butuh dependency-nya apa saja bisa menggunakan sqg. Bagaimana tahu reverse dependency-nya?
@@ -412,12 +428,12 @@ Ini cara sederhana yang saya gunakan
 grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan cara tersebut bisa diketahui suatu paket/package itu menjadi dependensi dari paket apa. Tapi, salah 1 dari output tersebut tidak lain adalah paket itu sendiri. Dan, package yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah packages tersebut terinstall atau tidak.
   
   <div class="read-more-link">
-    <a href="/2019-04-20-reverse-dependency-sbopkg/">Read More…</a>
+    <a href="/post/2019-04-20-reverse-dependency-sbopkg/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2019-04-19-chromium-disable-unlock-keyring/">Chromium Disable Unlock Keyring</a>
+    <a href="https://sasongko.web.id/post/2019-04-19-chromium-disable-unlock-keyring/">Chromium Disable Unlock Keyring</a>
   </h1>
   <time datetime="2019-04-19T00:00:00Z" class="post-date">Fri, Apr 19, 2019</time>
   Mungkin ada yang merasa bosan setiap membuka Chromium muncul kotak dialog Unlock Keyring.
@@ -426,7 +442,7 @@ CHROMIUM_FLAGS=&#34;--password-store=basic&#34;
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2019-04-01-membuat-user-baru/">Membuat User Baru</a>
+    <a href="https://sasongko.web.id/post/2019-04-01-membuat-user-baru/">Membuat User Baru</a>
   </h1>
   <time datetime="2019-04-01T00:00:00Z" class="post-date">Mon, Apr 1, 2019</time>
   Secara default, pascainstalasi Slackware hanya ada 1 user yaitu root. Slackware mempercayakan sepenuhnya apa yang akan dilakukan para penggunanya, karena memang hampir semua pengguna Slackware adalah pengguna yang telah berpengalaman. Namun, tak ada salahnya saya tuliskan di sini bagaimana cara membuat akun user baru di Slackware sebagai pengingat buat saya pribadi maupun pengguna lainnya.
@@ -434,12 +450,12 @@ Command-nya simpel saja
 R/ adduser # saya gunakan R/ sebagai pengganti shell prompt untuk root kemudian isi sesuai petunjuk yang diberikan.
   
   <div class="read-more-link">
-    <a href="/2019-04-01-membuat-user-baru/">Read More…</a>
+    <a href="/post/2019-04-01-membuat-user-baru/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2019-03-30-memulai-mariadb/">Memulai MariaDB</a>
+    <a href="https://sasongko.web.id/post/2019-03-30-memulai-mariadb/">Memulai MariaDB</a>
   </h1>
   <time datetime="2019-03-30T00:00:00Z" class="post-date">Sat, Mar 30, 2019</time>
   Apa itu MariaDB MariaDB adalah software untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.
@@ -447,24 +463,24 @@ Install MariaDB Secara default, apabila Slackware diisnntall full system maka Ma
 Memulai MariaDB Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. prompt R/menunjukkan dilakukan dengan priviledge rootR/ mysql_install_db R/ chown -R mysql:mysql /var/lib/mysql R/ chmod +x /etc/rc.
   
   <div class="read-more-link">
-    <a href="/2019-03-30-memulai-mariadb/">Read More…</a>
+    <a href="/post/2019-03-30-memulai-mariadb/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/">Hapus Aplikasi yang Diinstall Tanggal Tertentu</a>
+    <a href="https://sasongko.web.id/post/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/">Hapus Aplikasi yang Diinstall Tanggal Tertentu</a>
   </h1>
   <time datetime="2018-12-08T00:00:00Z" class="post-date">Sat, Dec 8, 2018</time>
   Tiga hari ini mencoba-coba install kdenlive, aplikasi editor video yang konon handal. Sengaja disebut konon karena belum membuktikannya secara langsung. Setelah semua beres diinstall ternyata malah berubah pikiran. Apa perlu saya pakai editor video? Toh selama ini tidak pernah edit video dan pekerjaan sehari-hari juga tidak bersentuhan langsung dengan pembuatan maupun editing video. Jadi hapus sajalah.
 kdenlive-nya sukses di-uninstall, tapi bagaimana dengan seabrek dependensinya? Hapus juga deh! Kalau besok-besok diperlukan tinggal install lagi.
   
   <div class="read-more-link">
-    <a href="/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/">Read More…</a>
+    <a href="/post/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-08-31-bermain-tetris-emacs/">Bermain Tetris dengan Emacs</a>
+    <a href="https://sasongko.web.id/post/2018-08-31-bermain-tetris-emacs/">Bermain Tetris dengan Emacs</a>
   </h1>
   <time datetime="2018-08-31T00:00:00Z" class="post-date">Fri, Aug 31, 2018</time>
   Emacs sebagai text editor legendaris mempunyai banyak fitur. Salah satunya adalah tetris. Sebagai penggemar tetris tentunya belum afdhal kalau belum memainkannya.
@@ -473,19 +489,19 @@ Untuk memainkannya tekan tombol Puntuk pause dan melanjutkannya, panah kanan-kir
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/">Fix sbotools Perl unescaped left brace in regex is deprecated here</a>
+    <a href="https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/">Fix sbotools Perl unescaped left brace in regex is deprecated here</a>
   </h1>
   <time datetime="2018-07-17T00:00:00Z" class="post-date">Tue, Jul 17, 2018</time>
   Siang ini, sudah agak lama tidak check update paket-paket dari SBo. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.
 $ sbocheck # command ini dijalankan oleh root Unescaped left brace in regex is deprecated here (and will be fatal in Perl 5.32), passed through in regex; marked by &lt;-- HERE in m/\$({ &lt;-- HERE |)[A-Za-z0-9_]+(}|)/ at /usr/share/perl5/SBO/Lib/Build.pm line 244 Ada masalah ternyata dan masalahnya di Perl.
   
   <div class="read-more-link">
-    <a href="/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/">Read More…</a>
+    <a href="/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-06-23-kosongkan-trash/">Hapus Trash via Command Line</a>
+    <a href="https://sasongko.web.id/post/2018-06-23-kosongkan-trash/">Hapus Trash via Command Line</a>
   </h1>
   <time datetime="2018-06-23T00:00:00Z" class="post-date">Sat, Jun 23, 2018</time>
   Iseng-iseng buka hidden folder ada yang menarik. File yang ada di Trash (bisa buka di Thunar dengan path trash:///sama dengan yang ada di ~/.local/share/Trash/files/. Sehingga kalau ingin mengosongkan Trash dan posisi sedang di CLI dan tidak membuka file manager ataupun lagi aras-arasen, sangat bisa.
@@ -493,7 +509,7 @@ rm -rv ~/.local/share/Trash/*
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-06-19-mencoba-manokwari/">Mencoba Manokwari</a>
+    <a href="https://sasongko.web.id/post/2018-06-19-mencoba-manokwari/">Mencoba Manokwari</a>
   </h1>
   <time datetime="2018-06-19T00:00:00Z" class="post-date">Tue, Jun 19, 2018</time>
   Beberapa waktu yang lalu mencoba install manokwari dan berhasil dengan beberapa kekurangan.
@@ -503,12 +519,12 @@ Tentang dependensi, saya bagi menjadi 3 bagian.
  meson glib2 gtk+3 atk cairo x11 libnotify    Tersedia di SBo
   
   <div class="read-more-link">
-    <a href="/2018-06-19-mencoba-manokwari/">Read More…</a>
+    <a href="/post/2018-06-19-mencoba-manokwari/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-06-19-mengganti-kata-secara-massal/">Mengganti Kata Secara Massal</a>
+    <a href="https://sasongko.web.id/post/2018-06-19-mengganti-kata-secara-massal/">Mengganti Kata Secara Massal</a>
   </h1>
   <time datetime="2018-06-19T00:00:00Z" class="post-date">Tue, Jun 19, 2018</time>
   Dulu, saat masih menggunakan BlankOn, ternyata pada beberapa postingan di blog ini ada ketidakseragaman, yaitu tag blankOn dan blankon yang sebenarnya secara esensial sama saja.
@@ -517,7 +533,7 @@ sed -i &#39;s/blankOn/blankon/g&#39; _posts/*.md
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-06-18-pentingnya-shebang/">Pentingnya Shebang</a>
+    <a href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/">Pentingnya Shebang</a>
   </h1>
   <time datetime="2018-06-18T00:00:00Z" class="post-date">Mon, Jun 18, 2018</time>
   Shebang itu apa? Pengguna linux, BSD, ataupun mac yang terbiasa melihat source code sangat mungkin sudah tidak asing lagi dengan shebang. Ada yang menyebut shebang sebagai sh bang, shabang, hashbang, hashpling, dan poundbang. Shebang ini dituliskan di baris pertama, yakni diawali dengan #!.
@@ -526,23 +542,23 @@ Contoh, untuk perl :
 #!/usr/bin/env perl Sebagai pengguna linux khususnya Slackware, user akan merasakan betapa pentingnya shebang ini. Kepentingannya terkait fungsi shebang itu sendiri dan bagaimana user menjalankannya.
   
   <div class="read-more-link">
-    <a href="/2018-06-18-pentingnya-shebang/">Read More…</a>
+    <a href="/post/2018-06-18-pentingnya-shebang/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-06-15-operation-not-possible-due-to-rfkill/">Operation not possible due to RF-kill</a>
+    <a href="https://sasongko.web.id/post/2018-06-15-operation-not-possible-due-to-rfkill/">Operation not possible due to RF-kill</a>
   </h1>
   <time datetime="2018-06-16T00:00:00Z" class="post-date">Sat, Jun 16, 2018</time>
   Pagi ini, refreshing dengan berganti desktop environment (DE) memakai Window Maker (WM). DE yang jarang digunakan karena biasanya memakai XFCE. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk tethering. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong Network Manager atau Wicd aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah root.
   
   <div class="read-more-link">
-    <a href="/2018-06-15-operation-not-possible-due-to-rfkill/">Read More…</a>
+    <a href="/post/2018-06-15-operation-not-possible-due-to-rfkill/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-06-12-mengapa-openssl/">Mengapa Enkripsi dengan OpenSSL?</a>
+    <a href="https://sasongko.web.id/post/2018-06-12-mengapa-openssl/">Mengapa Enkripsi dengan OpenSSL?</a>
   </h1>
   <time datetime="2018-06-12T00:00:00Z" class="post-date">Tue, Jun 12, 2018</time>
   Mengapa saya suka mengenkripsi file dengan openssl? Karena
@@ -550,7 +566,7 @@ Contoh, untuk perl :
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-05-18-convert-video-mp3/">Convert Video Menjadi MP3</a>
+    <a href="https://sasongko.web.id/post/2018-05-18-convert-video-mp3/">Convert Video Menjadi MP3</a>
   </h1>
   <time datetime="2018-05-18T00:00:00Z" class="post-date">Fri, May 18, 2018</time>
   Ternyata tidak sulit mengkonversi/convert video menjadi audio, dalam hal ini mp3. Misalkan, akan dikonversi file video Gambang_Semarang.mkv menjadi file Gambang_Semarang.mp3
@@ -559,7 +575,7 @@ Cara ini juga berlaku untuk mengubah file mp4 ke mp3 atau dengan kata lain, sebe
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-05-08-uninstall-all-perl-modules-manually/">Uninstall Manual Semua Modul Perl</a>
+    <a href="https://sasongko.web.id/post/2018-05-08-uninstall-all-perl-modules-manually/">Uninstall Manual Semua Modul Perl</a>
   </h1>
   <time datetime="2018-05-08T00:00:00Z" class="post-date">Tue, May 8, 2018</time>
   Cara uninstall semua modul perl yang dulunya install dari CPAN secara manual :
@@ -567,7 +583,7 @@ rm -r /usr/local/{lib{,64},share}/perl5
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-04-23-salah-password-terminal/">Salah Password di Terminal</a>
+    <a href="https://sasongko.web.id/post/2018-04-23-salah-password-terminal/">Salah Password di Terminal</a>
   </h1>
   <time datetime="2018-04-23T00:00:00Z" class="post-date">Mon, Apr 23, 2018</time>
   Pengguna GNU/Linux mungkin pernah salah menuliskan password saat login melalui terminal. Apa yang dilakukan?
@@ -576,7 +592,7 @@ Ya, dengan kombinasi Ctrl + u .
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-04-21-mengubah-nama-jalan-osm/">Mengubah Nama Jalan OSM</a>
+    <a href="https://sasongko.web.id/post/2018-04-21-mengubah-nama-jalan-osm/">Mengubah Nama Jalan OSM</a>
   </h1>
   <time datetime="2018-04-21T00:00:00Z" class="post-date">Sat, Apr 21, 2018</time>
   Ketika [menggunakan OpenStreetMap (OSM)]({% post_url 2018-04-13-cari-lokasi-osm %}) dan menjumpai ada data/informasi yang kita tahu tidak benar, kita diijinkan untuk memperbaikinya. Inilah kelebihan OSM yang bersifat open source.
@@ -584,12 +600,12 @@ Kali ini memperbaiki kesalahan nama jalan. Jalan yang keliru penamaannya adalah 
 Kesalahan tersebut sudah saya perbaiki, sehingga kalau Pembaca membukanya di OSM peta di atas sudah tidak berlaku.
   
   <div class="read-more-link">
-    <a href="/2018-04-21-mengubah-nama-jalan-osm/">Read More…</a>
+    <a href="/post/2018-04-21-mengubah-nama-jalan-osm/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-04-13-cari-lokasi-osm/">Mencari Lokasi dengan OpenStreetMap</a>
+    <a href="https://sasongko.web.id/post/2018-04-13-cari-lokasi-osm/">Mencari Lokasi dengan OpenStreetMap</a>
   </h1>
   <time datetime="2018-04-13T00:00:00Z" class="post-date">Fri, Apr 13, 2018</time>
   Dari [catatan sebelumnya]({% post_url 2018-04-12-mengenal-josm %}) diketahui bahwa OSM adalah layanan peta digital. Berikut cara menggunakannya.
@@ -598,12 +614,12 @@ Apabila ditemukan akan ditampilkan seperti di bawah ini
 Kemudian klik hasil pencarian untuk mengetahui detil lokasi.
   
   <div class="read-more-link">
-    <a href="/2018-04-13-cari-lokasi-osm/">Read More…</a>
+    <a href="/post/2018-04-13-cari-lokasi-osm/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-04-12-mengenal-josm/">Mengenal JOSM dan OpenStreetMap</a>
+    <a href="https://sasongko.web.id/post/2018-04-12-mengenal-josm/">Mengenal JOSM dan OpenStreetMap</a>
   </h1>
   <time datetime="2018-04-12T00:00:00Z" class="post-date">Thu, Apr 12, 2018</time>
   Sebenarnya sudah lama ingin menulis dengan topik Geographical Information System (GIS) tapi baru sempat sekarang.
@@ -611,48 +627,48 @@ OSM Apakah OSM itu? OpenStreetMap (OSM) adalah salah satu layanan peta digital s
  Open source.
   
   <div class="read-more-link">
-    <a href="/2018-04-12-mengenal-josm/">Read More…</a>
+    <a href="/post/2018-04-12-mengenal-josm/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-04-03-slackpkg-packages-database-error/">Slackpkg packages database error</a>
+    <a href="https://sasongko.web.id/post/2018-04-03-slackpkg-packages-database-error/">Slackpkg packages database error</a>
   </h1>
   <time datetime="2018-04-03T00:00:00Z" class="post-date">Tue, Apr 3, 2018</time>
   Siang ini, upgrade beberapa paket SBo, salah satunya adalah nodejs. Tetapi terjadi insiden di sela-sela prosesnya : lowbatt sehingga laptop mati. Kejadian ini awalnya tidak saya ketahui, karena banyak paket yang di-upgrade sehingga lama kemudian saya tinggal mengerjakan pekerjaan yang lain.
 Singkat cerita, saya ingin upgrade paket-paket official melalui slackpkgslackpkg upgrade-all FATAL! There is some problem in packages database or maybe an installation or upgrade in progress: nodejs-6.11.2-x86_64-1_SBo-upgraded-2018-04-03,11:12:24 If you continue you may corrupt packages database.
   
   <div class="read-more-link">
-    <a href="/2018-04-03-slackpkg-packages-database-error/">Read More…</a>
+    <a href="/post/2018-04-03-slackpkg-packages-database-error/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2018-02-18-rename-network-interface/">Rename Network Interface</a>
+    <a href="https://sasongko.web.id/post/2018-02-18-rename-network-interface/">Rename Network Interface</a>
   </h1>
   <time datetime="2018-02-18T00:00:00Z" class="post-date">Sun, Feb 18, 2018</time>
   Entah mengapa tadi kepikiran untuk jalankan ifconfig -a. Ternyata kemudian ada output yang menarik
 eth0: flags=4099&lt;UP,BROADCAST,MULTICAST&gt; mtu 1500 ether c8:5b:76:66:51:6a txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt; mtu 65536 inet 127.0.0.1 netmask 255.0.0.0 inet6 ::1 prefixlen 128 scopeid 0x10&lt;host&gt; loop txqueuelen 1000 (Local Loopback) RX packets 0 bytes 0 (0.
   
   <div class="read-more-link">
-    <a href="/2018-02-18-rename-network-interface/">Read More…</a>
+    <a href="/post/2018-02-18-rename-network-interface/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-12-08-libsodium-masuk-current/">Libsodium Masuk -Current</a>
+    <a href="https://sasongko.web.id/post/2017-12-08-libsodium-masuk-current/">Libsodium Masuk -Current</a>
   </h1>
   <time datetime="2017-12-08T00:00:00Z" class="post-date">Fri, Dec 8, 2017</time>
   Pada hari Rabu 6 Desember 2017 jam 14.13.48 UTC, Patrick Volkerding selaku BDFL Slackware, memberikan update di kanal -current. Salah satunya adalah menambahkan libsodium-1.0.15. Libsodium merupakan library atau pustaka untuk enkripsi, dekripsi, signature (tanda tangan digital), dlsb.
 Bagi saya, masuknya libsodiummembawa konsekwensi untuk rebuild dnscrypt-proxyyang menggunakan libsodium. libsodiumyang sebelumnya adalah versi 1.0.13 dari SBo sedangkan versi baru dari official Slackware 1.0.15. Hal ini diketahui dari gagalnya men-start service dnscrypt-proxy .
   
   <div class="read-more-link">
-    <a href="/2017-12-08-libsodium-masuk-current/">Read More…</a>
+    <a href="/post/2017-12-08-libsodium-masuk-current/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-11-22-switch-huge-kernel-4-14/">Menggunakan Kernel Huge 4.14.0</a>
+    <a href="https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/">Menggunakan Kernel Huge 4.14.0</a>
   </h1>
   <time datetime="2017-11-22T00:00:00Z" class="post-date">Wed, Nov 22, 2017</time>
   Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang bootloop apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. Update terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui rebuilt elilo.
@@ -661,12 +677,12 @@ eliloconfig yang secara otomatis juga akan meng- generate elilo.confyang berisi 
 Namun, saya kurang suka dengan cara otomatis ini. Dan saya memilih melakukannya secara manual saja agar lebih fleksibel dalam konfigurasinya.
   
   <div class="read-more-link">
-    <a href="/2017-11-22-switch-huge-kernel-4-14/">Read More…</a>
+    <a href="/post/2017-11-22-switch-huge-kernel-4-14/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-11-18-switch-generic-kernel-4-14/">Kernel 4.14.0 Masuk -Current, Beralih ke Kernel Generic</a>
+    <a href="https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/">Kernel 4.14.0 Masuk -Current, Beralih ke Kernel Generic</a>
   </h1>
   <time datetime="2017-11-18T00:00:00Z" class="post-date">Sat, Nov 18, 2017</time>
   Setelah 2 minggu, -Current kembali mendapatkan update Jum&rsquo;at kemarin tanggal 17 November 2017. Banyak update, ada yang upgraded, rebuilt, added, dan removed. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.
@@ -674,23 +690,23 @@ Setelah upgrade dan eliloconfigkemudian restart, ternyata muncul masalah! Bootlo
 Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk recovery-nya lebih mudah. Boot dari DVD kemudian waktu muncul grubpilih opsi yang intinya detect another operating system (persisnya saya lupa).
   
   <div class="read-more-link">
-    <a href="/2017-11-18-switch-generic-kernel-4-14/">Read More…</a>
+    <a href="/post/2017-11-18-switch-generic-kernel-4-14/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-11-15-mengamankan-file-folder/">Mengamankan File Folder</a>
+    <a href="https://sasongko.web.id/post/2017-11-15-mengamankan-file-folder/">Mengamankan File Folder</a>
   </h1>
   <time datetime="2017-11-15T00:00:00Z" class="post-date">Wed, Nov 15, 2017</time>
   Salah satu hal yang membuat saya menggunakan linux khususnya Slackware adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan .pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan steganografi tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}) atau [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}).
   
   <div class="read-more-link">
-    <a href="/2017-11-15-mengamankan-file-folder/">Read More…</a>
+    <a href="/post/2017-11-15-mengamankan-file-folder/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-08-08-set-clang-as-default-c-compiler/">Mengatur Clang Sebagai C Compiler Utama</a>
+    <a href="https://sasongko.web.id/post/2017-08-08-set-clang-as-default-c-compiler/">Mengatur Clang Sebagai C Compiler Utama</a>
   </h1>
   <time datetime="2017-08-08T00:00:00Z" class="post-date">Tue, Aug 8, 2017</time>
   Secara default, C Compiler yang digunakan adalah gcc. Namun, apabila diinginkan, bisa dialihkan menggunakan clang. Caranya, buat file di /etc/profile.dmisalnya c-compiler.sh, yang isinya
@@ -698,42 +714,42 @@ export CC=/usr/bin/clang export CXX=/usr/bin/clang++
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-07-31-multi-slackware-elilo/">Multi Slackware dengan elilo</a>
+    <a href="https://sasongko.web.id/post/2017-07-31-multi-slackware-elilo/">Multi Slackware dengan elilo</a>
   </h1>
   <time datetime="2017-07-31T00:00:00Z" class="post-date">Mon, Jul 31, 2017</time>
   Posting kali ini terinspirasi dari Pak Walesa yang menulis di sini dan ini. Perbedaannya adalah pada boot loader yang digunakan. Saya gunakan elilo. Selain itu, sudah ada existing Slackware64 current dan Slackware64 14.2. Keduanya dengan filesystem ext4. Mau ditambahkan yang stable (Slackware64 14.2 dan Slackware 14.2) tetapi dengan filesystem btrfs. Jadi dual Slackware stable ini akan ditempatkan di dalam partisi yang sama. Sebenarnya tripleboot dengan Windows 10, tetapi Windows 10 sangat jarang dipakai.
   
   <div class="read-more-link">
-    <a href="/2017-07-31-multi-slackware-elilo/">Read More…</a>
+    <a href="/post/2017-07-31-multi-slackware-elilo/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-07-29-menghapus-dengan-pengecualian/">Menghapus dengan Pengecualian</a>
+    <a href="https://sasongko.web.id/post/2017-07-29-menghapus-dengan-pengecualian/">Menghapus dengan Pengecualian</a>
   </h1>
   <time datetime="2017-07-29T00:00:00Z" class="post-date">Sat, Jul 29, 2017</time>
   Sebagai pengguna SBo dan sbopkg, file yang dihasilkan proses build ditaruh di /tmp. Folder ini lama-lama semakin banyak isinya. Padahal filenya bisa dikatakan tidak terpakai. Script masih aman tersimpan rapi di /var/lib/sbopkg. Sedangkan source-nya di /var/cache/sbopkg.
 Semua yang ada di folder /tmpakan saya hapus kecuali file yang berekstensi txt. Saya memang kadang iseng nulis-nulis sesuatu kemudian saya simpan dengan ekstensi txtdan ditaruh di /tmp. File-file ini tidak mau saya hapus, buat dibaca jadi hiburan sendiri kelak bahwa dulu pernah iseng nulis seperti itu&hellip; Hahahaha&hellip;.
   
   <div class="read-more-link">
-    <a href="/2017-07-29-menghapus-dengan-pengecualian/">Read More…</a>
+    <a href="/post/2017-07-29-menghapus-dengan-pengecualian/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-07-05-akibat-lupa-eliloconfig/">Akibat Lupa eliloconfig</a>
+    <a href="https://sasongko.web.id/post/2017-07-05-akibat-lupa-eliloconfig/">Akibat Lupa eliloconfig</a>
   </h1>
   <time datetime="2017-07-05T00:00:00Z" class="post-date">Wed, Jul 5, 2017</time>
   Kemarin melihat ChangeLog ada beberapa update yang sebagian di antaranya adalah security fix. Salah satu update adalah kernel. Melakukan upgrade semuanya baik-baik saja dan lanjut shutdown. Siang ini, bootingpun masih fine dan no problem. Begitu juga login. Baru terasa saat ingin masuk desktop malah gagal.
 $ startx xauth: file /home/sasongko/.serverauth.2717 does not exist X.Org X Server 1.19.3 Release Date: 2017-03-15 X Protocol Version 11, Revision 0 Build Operating System: Slackware 14.
   
   <div class="read-more-link">
-    <a href="/2017-07-05-akibat-lupa-eliloconfig/">Read More…</a>
+    <a href="/post/2017-07-05-akibat-lupa-eliloconfig/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-07-05-convert-word-pdf-massal/">Convert Word ke PDF Secara Massal</a>
+    <a href="https://sasongko.web.id/post/2017-07-05-convert-word-pdf-massal/">Convert Word ke PDF Secara Massal</a>
   </h1>
   <time datetime="2017-07-05T00:00:00Z" class="post-date">Wed, Jul 5, 2017</time>
   LibreOfficesudah lama mendukung konversi file dari Word/Writer (doc, docx dan odt) ke file pdf. Keunggulannya adalah bisa melakukan konversi secara massal.
@@ -742,7 +758,7 @@ $ soffice --headless --nologo --convert-to pdf:writer_pdf_Export --outdir ~/conv
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-07-04-presentasi-lcd-projector/">Presentasi dengan LCD Projector</a>
+    <a href="https://sasongko.web.id/post/2017-07-04-presentasi-lcd-projector/">Presentasi dengan LCD Projector</a>
   </h1>
   <time datetime="2017-07-04T00:00:00Z" class="post-date">Tue, Jul 4, 2017</time>
   Tools yang digunakan adalah xrandr. Sebenarnya bisa menggunakan aplikasi GUI yang disediakan desktop environment masing-masing, tapi saya lebih suka menggunakan xrandragar universal bisa digunakan di lingkungan desktop apapun, entah itu Fluxbox, FVWM, TWM, Xfce, KDE, Lumina, LXQt, Mate, Cinnamon, dsb.
@@ -750,24 +766,24 @@ Pertama, identifikasi monitor/screen primer yang aktif tersambung saat ini, jang
 $ xrandr Screen 0: minimum 8 x 8, current 1366 x 768, maximum 32767 x 32767 eDP1 connected primary 1366x768+0+0 (normal left inverted right x axis y axis) 310mm x 170mm 1366x768 59.
   
   <div class="read-more-link">
-    <a href="/2017-07-04-presentasi-lcd-projector/">Read More…</a>
+    <a href="/post/2017-07-04-presentasi-lcd-projector/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-07-02-rilis-lumina-1.3.0/">Rilis Lumina 1.3.0</a>
+    <a href="https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/">Rilis Lumina 1.3.0</a>
   </h1>
   <time datetime="2017-07-02T00:00:00Z" class="post-date">Sun, Jul 2, 2017</time>
   Di suasana Idul Fitri, 26 Juni 2017, Ken Moore selaku project leader Luminamengumumkan perihal rilisnya Lumina Desktop 1.3.0. Selang 4 hari kemudian dirilis patch yang pertama untuk 1.3.0. Catatan rilis resmi silahkan dibaca di sini.
 Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini tergolong istimewa. Mulai versi 1.3.0 ini luminasemakin powerfull untuk digunakan di Slackware. Sampai dengan versi 1.2.0_p1 (1.2.0 patchset 1), Restartdan Power Offpada menu sama sekali tidak berfungsi.
   
   <div class="read-more-link">
-    <a href="/2017-07-02-rilis-lumina-1.3.0/">Read More…</a>
+    <a href="/post/2017-07-02-rilis-lumina-1.3.0/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-03-27-disable-commands-history/">Disable Command&#39;s History</a>
+    <a href="https://sasongko.web.id/post/2017-03-27-disable-commands-history/">Disable Command&#39;s History</a>
   </h1>
   <time datetime="2017-03-27T00:00:00Z" class="post-date">Mon, Mar 27, 2017</time>
   Secara default, perintah/command yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan command historyatau membaca isi ~/.bash_history. Ini bisa di-disable. Caranya, membuat file di /etc/profile.d/, yang isinya
@@ -775,7 +791,7 @@ export HISTFILE=/dev/null export HISTSIZE=0
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-03-25-konek-internet-usb-tethering/">Konek Internet USB Tethering</a>
+    <a href="https://sasongko.web.id/post/2017-03-25-konek-internet-usb-tethering/">Konek Internet USB Tethering</a>
   </h1>
   <time datetime="2017-03-25T00:00:00Z" class="post-date">Sat, Mar 25, 2017</time>
   Salah satu keunggulan GNU/Linux terutama Slackware adalah berlakunya banyak jalan menuju Roma. Contohnya untuk konek/menyambung ke internet, ada beberapa cara antara lain :
@@ -783,24 +799,24 @@ export HISTFILE=/dev/null export HISTSIZE=0
 Misalkan akan menyambungkan internet melalui USB tethering - cara melakukan USB tethering tidak saya bahas,
   
   <div class="read-more-link">
-    <a href="/2017-03-25-konek-internet-usb-tethering/">Read More…</a>
+    <a href="/post/2017-03-25-konek-internet-usb-tethering/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-02-11-install-blankon-debootstrap/">Install BlankOn dengan Debootstrap</a>
+    <a href="https://sasongko.web.id/post/2017-02-11-install-blankon-debootstrap/">Install BlankOn dengan Debootstrap</a>
   </h1>
   <time datetime="2017-02-11T00:00:00Z" class="post-date">Sat, Feb 11, 2017</time>
   Hari ini, sabtu, 11 Januari 2017, hujan turun lagi. Dan di kala hujan deras dan nggrejih begini sejak pagi, suwung pun melanda. Tiba-tiba terbersit untuk install BlankOn yang telah lama saya tinggalkan.
 Teringat, DVD/USB installer-nya sudah tak ada. Iso-nya pun terhapus. So, what&rsquo;s next? Download iso BlankOn? Ide bagus, tapi sayang kuota tak mencukupi. Beli DVD/USB tak memungkinkan. Harus pesan dulu, sampai di tangan paling cepat besok senin, keburu sudah tidak kepengin installl lagi.
   
   <div class="read-more-link">
-    <a href="/2017-02-11-install-blankon-debootstrap/">Read More…</a>
+    <a href="/post/2017-02-11-install-blankon-debootstrap/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-01-19-install-padre/">Install Padre</a>
+    <a href="https://sasongko.web.id/post/2017-01-19-install-padre/">Install Padre</a>
   </h1>
   <time datetime="2017-01-19T00:00:00Z" class="post-date">Thu, Jan 19, 2017</time>
   Padremerupakan integrated development environment (IDE) untuk bahasa pemrograman perl.
@@ -811,7 +827,7 @@ $ cpan -i Padre
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-01-14-enkripsi-dg-gpg/">Enkripsi File dengan gnupg</a>
+    <a href="https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/">Enkripsi File dengan gnupg</a>
   </h1>
   <time datetime="2017-01-14T00:00:00Z" class="post-date">Sat, Jan 14, 2017</time>
   Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupgatau yang biasa disebut dengan gpg.
@@ -820,26 +836,26 @@ $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-01-12-qtfm-segfault-pascaupgrade-changelog12jan17/">qtFM Segmentation Fault Pascaupgrade</a>
+    <a href="https://sasongko.web.id/post/2017-01-12-qtfm-segfault-pascaupgrade-changelog12jan17/">qtFM Segmentation Fault Pascaupgrade</a>
   </h1>
   <time datetime="2017-01-12T00:00:00Z" class="post-date">Thu, Jan 12, 2017</time>
   Changelog current hari ini 12 Januari 2017 ramai sekali. Upgrade dan rebuilt secara masif seolah menjadi kado tahun baru dari Patrick Volkerding. Dan ternyata berimbas segfault alias Segmentation faultpada qtFMfile manager berbasis Qtyang saya install dari SBo.
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-01-08-enkripsi-dg-openssl/">Enkripsi File dengan OpenSSL</a>
+    <a href="https://sasongko.web.id/post/2017-01-08-enkripsi-dg-openssl/">Enkripsi File dengan OpenSSL</a>
   </h1>
   <time datetime="2017-01-08T00:00:00Z" class="post-date">Sun, Jan 8, 2017</time>
   Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
 Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssldengan cipher rc4. File hasil enkripsi saya namai rahasia.odtyang saya taruh di fd dan fd saya mountdi /media/hd0. Kemudian akan ditanya password enkripsinya.
   
   <div class="read-more-link">
-    <a href="/2017-01-08-enkripsi-dg-openssl/">Read More…</a>
+    <a href="/post/2017-01-08-enkripsi-dg-openssl/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-01-02-kbbi-qt-slackbuild/">KBBI Qt SlackBuild</a>
+    <a href="https://sasongko.web.id/post/2017-01-02-kbbi-qt-slackbuild/">KBBI Qt SlackBuild</a>
   </h1>
   <time datetime="2017-01-02T00:00:00Z" class="post-date">Mon, Jan 2, 2017</time>
   Alhamdulillah malam ini bisa membuat slackbuild untuk KBBI Qt. Sebenarnya sih sudah sejak kira-kira 2 bulan yang lalu ingin membuat slackbuildnya, baru kesampaian sekarang.
@@ -847,31 +863,31 @@ KBBI Qtadalah aplikasi Kamus Besar Bahasa Indonesia (KBBI) yang dikembangkan ole
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2017-01-01-blankon-wallpapers-slackbuild/">blankon-wallpapers slackbuild</a>
+    <a href="https://sasongko.web.id/post/2017-01-01-blankon-wallpapers-slackbuild/">blankon-wallpapers slackbuild</a>
   </h1>
   <time datetime="2017-01-01T00:00:00Z" class="post-date">Sun, Jan 1, 2017</time>
   Alhamdulillah, hari ini, 1 Januari 2017, tepat di hari pertama tahun 2017, Tim Pengembang BlankOn secara resmi merilis BlankOn X dengan codename Tambora. Dan di hari ini pula, saya rilis blankon-wallpapers slackbuildsecara resmi, walaupun sebenarnya sudah saya taruh di repo github sejak beberapa hari yang lalu.
 Tujuan pembuatan slackbuild ini adalah untuk memasyarakatkan ke-Indonesia-an. BlankOn sebagai salah satu dari beberapa distro GNU/Linux yang dikembangkan oleh rakyat Indonesia tentu memiliki kekhasan bila dibandingkan dengan distro lainnya seperti Debian, Ubuntu, dan Fedora.
   
   <div class="read-more-link">
-    <a href="/2017-01-01-blankon-wallpapers-slackbuild/">Read More…</a>
+    <a href="/post/2017-01-01-blankon-wallpapers-slackbuild/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-12-24-notif-lowbat-i3/">Notifikasi Baterai Lemah i3</a>
+    <a href="https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/">Notifikasi Baterai Lemah i3</a>
   </h1>
   <time datetime="2016-12-24T00:00:00Z" class="post-date">Sat, Dec 24, 2016</time>
   Salah satu keistimewaan i3atau i3wmadalah belum adanya notifikasi/pemberitahuan saat baterai lemah perlu di-charge. Status baterai sudah ada di bar/panel yang ditampilkan oleh i3status.
 Berikut adalah script sederhana untuk menampilkan notifikasi saat baterai sedang lemah dan tidak sedang di-charge. Jika baterai telah mencapai batas (di sini saya gunakan 5%) maka setiap 30 detik akan tampil notifikasi untuk segera dilakukan charging Wayahe dicas bro&hellip;.!. Dan ketika baterai sudah terisi full 100% tetapi masih dalam kondisi dicas akan tampil notifikasi tiap 30 detik bahwa baterai sudah full.
   
   <div class="read-more-link">
-    <a href="/2016-12-24-notif-lowbat-i3/">Read More…</a>
+    <a href="/post/2016-12-24-notif-lowbat-i3/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-12-12-enable-tlp-on-i3/">Enable TLP on i3wm</a>
+    <a href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/">Enable TLP on i3wm</a>
   </h1>
   <time datetime="2016-12-12T00:00:00Z" class="post-date">Mon, Dec 12, 2016</time>
   Beberapa hari yang lalu install i3 (i3wm)menggunakan sbopkg. Biasanya, dengan desktop environment lain seperti Mate, baterai bisa bertahan 4 - 6 jam. Namun, dengan i3 belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.
@@ -879,36 +895,36 @@ Cek powertopternyata banyak yang Bad seperti default-nya tanpa TLP. Padahal serv
 I3 memiliki berkas konfigurasi /etc/i3/config. Konfigurasi itu yang saya gunakan.
   
   <div class="read-more-link">
-    <a href="/2016-12-12-enable-tlp-on-i3/">Read More…</a>
+    <a href="/post/2016-12-12-enable-tlp-on-i3/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-12-08-scrolling-xterm/">Scrolling pada XTerm</a>
+    <a href="https://sasongko.web.id/post/2016-12-08-scrolling-xterm/">Scrolling pada XTerm</a>
   </h1>
   <time datetime="2016-12-08T00:00:00Z" class="post-date">Thu, Dec 8, 2016</time>
   Di kalangan pengguna GNU/Linux mungkin xtermkurang familiar. Mengingat desktop environment populer seperti GNOME, KDE, Xfce, Matedan LXQttelah mempunyai terminal emulator sendiri. Selain itu, xtermdianggap memiliki keterbatasan. Salah satunya adalah tidak bisa scrolling karena tidak adanya scrollbar.
 xtermmemang lain daripada yang lain. Secara default memang scrollbar itu tidak terlihat, tetapi bisa dimunculkan. Tekan dan tahan Ctrlkemudian tekan dan tahan tombol tengah mouse, pilih Enable Scrollbar. Scrollbar akan tampil di sebelah kiri. Untuk melakukan scrolling bisa menggunakan tombol tengah mouse yang diarahkan ke scrollbar kemudian putar ke atas atau bawah sesuai keinginan.
   
   <div class="read-more-link">
-    <a href="/2016-12-08-scrolling-xterm/">Read More…</a>
+    <a href="/post/2016-12-08-scrolling-xterm/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-12-07-nmcli-konek-wifi/">nmcli untuk konek wifi</a>
+    <a href="https://sasongko.web.id/post/2016-12-07-nmcli-konek-wifi/">nmcli untuk konek wifi</a>
   </h1>
   <time datetime="2016-12-07T00:00:00Z" class="post-date">Wed, Dec 7, 2016</time>
   Untuk konek internet baik itu melalui modem, LAN, maupun wifi, pengguna GNU/Linux lebih sering menggunakan network manageryang applet-nya biasanya ada di panel sebelah kanan walau sebenarnya ada cara lain seperti ifconfigdan dhcpcd. Kalau dalam mode grafis sih saya rasa tidak masalah, tapi bagaimana kalau sedang berada dalam mode teks yang jelas tidak terpampang applet network manager-nya? nmcliadalah solusinya.
 Lah, buat apa sih repot-repot mode teks? Jadul, ga modern! Benar. Kalau keperluannya hanya download file berukuran besar, dan dalam waktu bersamaan ada kegiatan lain yang tidak bisa ditinggalkan, beralih ke mode teks bisa dijadikan pilihan, mengingat dalam mode teks aplikasi yang dijalankan tidak sebanyak dalam mode grafis sehingga menghemat memory dan daya.
   
   <div class="read-more-link">
-    <a href="/2016-12-07-nmcli-konek-wifi/">Read More…</a>
+    <a href="/post/2016-12-07-nmcli-konek-wifi/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-10-29-maleo-slackbuild/">Maleo Slackbuild</a>
+    <a href="https://sasongko.web.id/post/2016-10-29-maleo-slackbuild/">Maleo Slackbuild</a>
   </h1>
   <time datetime="2016-10-29T00:00:00Z" class="post-date">Sat, Oct 29, 2016</time>
   Maleo adalah paket khas BlankOn untuk menjalankan aplikasi HTML5. Bagi pengguna Slackware yang berminat silahkan mencoba slackbuild yang saya buat di sini.
@@ -917,19 +933,19 @@ Adapun dependensinya adalah :
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-10-01-upgrade-plasma-5/">Upgrade Plasma 5</a>
+    <a href="https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/">Upgrade Plasma 5</a>
   </h1>
   <time datetime="2016-10-01T00:00:00Z" class="post-date">Sat, Oct 1, 2016</time>
   Secara resmi, Slackware masih menggunakan KDE 4 yang &ldquo;ketinggalan jaman&rdquo; padahal pengembang KDE telah merilis KDE (sekarang biasa disebut Plasma) 5. Plasma 5 ini masih tetap seperti &ldquo;kakaknya&rdquo; (KDE 4) yang boros memory dibandingkan Xfce. Tapi, masya Allah tampilan lebih keren!
 Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah membuat slackbuild dan binary package-nya yang bisa kita gunakan. Versi terakhir versi Eric saat ini adalah Plasma 5.7.4 sedangkan insya Allah tanggal 4 Oktober 2016 KDE merilis Plasma 5.
   
   <div class="read-more-link">
-    <a href="/2016-10-01-upgrade-plasma-5/">Read More…</a>
+    <a href="/post/2016-10-01-upgrade-plasma-5/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-09-11-mount-qcow2/">Mount qcow2</a>
+    <a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Mount qcow2</a>
   </h1>
   <time datetime="2016-09-11T00:00:00Z" class="post-date">Sun, Sep 11, 2016</time>
   Untuk mengaitkan/mount berkas qcow2ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
@@ -938,12 +954,12 @@ modprobe nbd max_part=N max_part=Nisikan jumlah partisi yang ingin ditangani pad
 Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbdyang mengaktifkan koneksi file /mnt/virtual/image/ign11.qcow2ke /dev/nbd0&gt;
   
   <div class="read-more-link">
-    <a href="/2016-09-11-mount-qcow2/">Read More…</a>
+    <a href="/post/2016-09-11-mount-qcow2/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-09-10-nonaktif-delall-slackpkg/">Nonaktifkan Penghapusan Unduhan Slackpkg</a>
+    <a href="https://sasongko.web.id/post/2016-09-10-nonaktif-delall-slackpkg/">Nonaktifkan Penghapusan Unduhan Slackpkg</a>
   </h1>
   <time datetime="2016-09-10T00:00:00Z" class="post-date">Sat, Sep 10, 2016</time>
   Secara default, slackpkgakan menghapus semua file yang di- download / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di /etc/slackpkg/slackpkg.confpada baris 77
@@ -951,7 +967,7 @@ DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya le
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-08-17-cek-harddisk-korup/">Cek Harddisk Korup</a>
+    <a href="https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/">Cek Harddisk Korup</a>
   </h1>
   <time datetime="2016-08-17T00:00:00Z" class="post-date">Wed, Aug 17, 2016</time>
   Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya
@@ -959,12 +975,12 @@ dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmo
 fsck /dev/sda1 fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.
   
   <div class="read-more-link">
-    <a href="/2016-08-17-cek-harddisk-korup/">Read More…</a>
+    <a href="/post/2016-08-17-cek-harddisk-korup/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-08-07-mengatur-dns-default/">Mengatur DNS Default</a>
+    <a href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/">Mengatur DNS Default</a>
   </h1>
   <time datetime="2016-08-07T00:00:00Z" class="post-date">Sun, Aug 7, 2016</time>
   Secara default, DNS atau Domain Name Server yang digunakan adalah DNS dari operator/penyedia layanan internet. Namun sayangnya, operator tertentu kurang baik dalam penapisan/pemblokiran situs-situs negatif sehingga kadang konten-konten pornografi, judi, dan konten lainnya yang tidak sesuai dengan norma kesusilaan dan budaya Indonesia dapat sampai ke hadapan kita. Oleh karena itulah perlu menggunakan DNS lain.
@@ -972,12 +988,12 @@ Penggantian DNS ini ada 2 cara, yaitu manual dan otomatis.
 Cara manual dengan menyunting berkas /etc/resolv.conf. Mengganti nameserver yang ada dengan nameserver yang diinginkan.
   
   <div class="read-more-link">
-    <a href="/2016-08-07-mengatur-dns-default/">Read More…</a>
+    <a href="/post/2016-08-07-mengatur-dns-default/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-07-28-terperangkap-windowmaker/">Terperangkap WindowMaker</a>
+    <a href="https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/">Terperangkap WindowMaker</a>
   </h1>
   <time datetime="2016-07-28T00:00:00Z" class="post-date">Thu, Jul 28, 2016</time>
   Mencoba merasakan kejadulan WindowMaker yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama xfce melalui command xwmconfig, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di WindowMaker. Bahkan tidak bisa ganti DE lainnya termasuk KDE dan Mate.
@@ -985,7 +1001,7 @@ Tapi kemudian bisa teratasi dengan menghapus .xinitrcdan folder GNUStepyang ada 
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-07-10-set-default-brightness/">Set Default Brightness</a>
+    <a href="https://sasongko.web.id/post/2016-07-10-set-default-brightness/">Set Default Brightness</a>
   </h1>
   <time datetime="2016-07-10T00:00:00Z" class="post-date">Sun, Jul 10, 2016</time>
   Kecerahan monitor / brightness 100% membuat mata cepat lelah. Apalagi kalau secara default begitu masuk X brightness-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan Computer Vision Syndrome.
@@ -993,60 +1009,60 @@ Berapa persen brightness yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk
 Untuk mengetahui berapa persen brightness yang digunakan saat ini xbacklight. Sedangkan untuk mengubahnya xbacklight -set persen. Contoh akan diatur brightness-nya 15%:
   
   <div class="read-more-link">
-    <a href="/2016-07-10-set-default-brightness/">Read More…</a>
+    <a href="/post/2016-07-10-set-default-brightness/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Virtual Manager unable to connect to libvirt</a>
+    <a href="https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Virtual Manager unable to connect to libvirt</a>
   </h1>
   <time datetime="2016-07-05T00:00:00Z" class="post-date">Tue, Jul 5, 2016</time>
   Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Managerbelum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failuredengan detail sebagai berikut
 Unable to connect to libvirt. internal error: Cannot find suitable emulator for x86_64 Libvirt URI is: qemu:///system Traceback (most recent call last): File &#34;/usr/share/virt-manager/virtManager/connection.py&#34;, line 979, in _open_thread self._populate_initial_state() File &#34;/usr/share/virt-manager/virtManager/connection.py&#34;, line 941, in _populate_initial_state logging.
   
   <div class="read-more-link">
-    <a href="/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Read More…</a>
+    <a href="/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-07-04-virtmanager-no-module-requests/">Virt-Manager ImportError: No module named requests</a>
+    <a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Virt-Manager ImportError: No module named requests</a>
   </h1>
   <time datetime="2016-07-04T00:00:00Z" class="post-date">Mon, Jul 4, 2016</time>
   Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Managertidak bisa dijalankan.
 $ virt-manager Traceback (most recent call last): File &#34;/usr/share/virt-manager/virt-manager&#34;, line 33, in &lt;module&gt; from virtinst import util as util File &#34;/usr/share/virt-manager/virtinst/__init__.py&#34;, line 89, in &lt;module&gt; from virtinst.distroinstaller import DistroInstaller File &#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;, line 23, in &lt;module&gt; from . import urlfetcher File &#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;, line 34, in &lt;module&gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requestsmenunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.
   
   <div class="read-more-link">
-    <a href="/2016-07-04-virtmanager-no-module-requests/">Read More…</a>
+    <a href="/post/2016-07-04-virtmanager-no-module-requests/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-07-03-upgrade-slackware-142/">Upgrade ke Slackware 14.2</a>
+    <a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackware-142/">Upgrade ke Slackware 14.2</a>
   </h1>
   <time datetime="2016-07-03T00:00:00Z" class="post-date">Sun, Jul 3, 2016</time>
   Sehubungan dengan telah rilisnya Slackware 14.2 maka silahkan melakukan upgrade untuk mendapatkan keamanan yang lebih bagus dan fitur-fitur baru. Saya selama ini melakukan upgrade bertahap demi penghematan kuota internet. Dimulai dengan upgrade ke current karena saat itu versi stable yang baru (14.2) masih dalam proses pengembangan. Upgrade ini menggunakan slackpkg. Dan tentu saja membutuhkan sambungan internet.
  Pilih cermin atau mirror. Dengan menyunting /etc/slackpkg/mirrors, menghilangkan tanda komentar/tanda pagar pada repo yang diinginkan.
   
   <div class="read-more-link">
-    <a href="/2016-07-03-upgrade-slackware-142/">Read More…</a>
+    <a href="/post/2016-07-03-upgrade-slackware-142/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-07-03-upgrade-slackbuilds/">Upgrade Slackbuilds Slackware 14.2</a>
+    <a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/">Upgrade Slackbuilds Slackware 14.2</a>
   </h1>
   <time datetime="2016-07-03T00:00:00Z" class="post-date">Sun, Jul 3, 2016</time>
   Setelah melakukan [ upgrade sistem ke Slackware 14.2]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya upgrade juga paket yang diinstal dari slackbuilds.org.
  Upgrade sbopkg: sbopkg -u Versi sbopkgterbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik D Hasil unduhan : /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Setelah diunduh, upgrade : upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Karena menghasilkan konfigurasi baru, lakukan slackpkg new-configdan pilih overwrite saja. Kemudian update ke repo 14.2 : sbopkgpilih Utilitieslalu Repository. Kemudian pilih SBo (14.
   
   <div class="read-more-link">
-    <a href="/2016-07-03-upgrade-slackbuilds/">Read More…</a>
+    <a href="/post/2016-07-03-upgrade-slackbuilds/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-06-30-ganti-theme-xfce/">Ganti Theme Xfce</a>
+    <a href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/">Ganti Theme Xfce</a>
   </h1>
   <time datetime="2016-06-30T00:00:00Z" class="post-date">Thu, Jun 30, 2016</time>
   Bosan dengan tampilan theme yang itu-itu aja? Tenang, theme-nya bisa diganti kok, bahkan diganti agar tampilannya mirip Mac OS X. Sebagai contoh akan kita install theme GlossyP3 yang membuat tampilan menjadi mirip Mac OS X.
@@ -1054,12 +1070,12 @@ Download terlebih dahulu berkasnya dari sini (pastikan tersambung internet). Ber
 Kemudian ke Settings &mdash;&gt; Appearancepilih GlossyP3Kemudian, meminjam kata Mario Teguh, dan lihat apa yang terjadi.
   
   <div class="read-more-link">
-    <a href="/2016-06-30-ganti-theme-xfce/">Read More…</a>
+    <a href="/post/2016-06-30-ganti-theme-xfce/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-06-26-konek-inet-nmcli/">Konek Internet dengan nmcli</a>
+    <a href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/">Konek Internet dengan nmcli</a>
   </h1>
   <time datetime="2016-06-26T00:00:00Z" class="post-date">Sun, Jun 26, 2016</time>
   Menyambung catatan tentang [hilangnya ikon atau NetworkManager]({% post_url 2015-12-26-ikon-networkmanager-hilang %}). Jika nm-applettidak mempan untuk menampilkan applet NetworkManager, maka kita bisa gunakan nmcli.
@@ -1067,12 +1083,12 @@ nmcliadalah NetworkManager dengan antarmuka teks (command line interface).
 nmcli Usage: nmcli [OPTIONS] OBJECT { COMMAND | help } OPTIONS -t[erse] terse output -p[retty] pretty output -m[ode] tabular|multiline output mode -c[olors] auto|yes|no whether to use colors in output -f[ields] &lt;field1,field2,...&gt;|all|common specify fields to output -e[scape] yes|no escape columns separators in values -a[sk] ask for missing parameters -s[how-secrets] allow displaying passwords -w[ait] &lt;seconds&gt; set timeout waiting for finishing operations -v[ersion] show program version -h[elp] print this help OBJECT g[eneral] NetworkManager's general status and operations n[etworking] overall networking control r[adio] NetworkManager radio switches c[onnection] NetworkManager's connections d[evice] devices managed by NetworkManager a[gent] NetworkManager secret agent or polkit agent m[onitor] monitor NetworkManager changes Untuk melihat sambungan/koneksi yang telah dibuat dengan NetworkManager gunakan nmcli c.
   
   <div class="read-more-link">
-    <a href="/2016-06-26-konek-inet-nmcli/">Read More…</a>
+    <a href="/post/2016-06-26-konek-inet-nmcli/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-05-12-download-fathul-muin-maktabah-elkirtas/">Download Kitab Fathul Muin Maktabah Elkirtas</a>
+    <a href="https://sasongko.web.id/post/2016-05-12-download-fathul-muin-maktabah-elkirtas/">Download Kitab Fathul Muin Maktabah Elkirtas</a>
   </h1>
   <time datetime="2016-05-12T00:00:00Z" class="post-date">Thu, May 12, 2016</time>
   Pertama, buka Maktabah Elkirtasnya dulu dan pastikan tersambung internet.
@@ -1086,7 +1102,7 @@ Klik YesKitab Fathul Muin siap dikaji.
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-05-07-install-android-tools/">Install Android Tools</a>
+    <a href="https://sasongko.web.id/post/2016-05-07-install-android-tools/">Install Android Tools</a>
   </h1>
   <time datetime="2016-05-07T00:00:00Z" class="post-date">Sat, May 7, 2016</time>
   Di catatan kemarin sudah saya sampaikan [cara install sbopkg]({% post_url 2016-05-03-install-sbopkg %}), nah sekarang adalah contoh cara menggunakan sbopkg, untuk install Android Tools.
@@ -1096,12 +1112,12 @@ Pilih SearchMasukkan kata kuncinya, misalnya androidKemudian akan muncul paket y
 Keluar beraneka opsi. Alangkah baiknya baca-baca READMEatau Infodulu terutama untuk cek dependensi pada bagian REQUIRESetelah semua dependensi terpenuhi, silahkan lanjut, pilih Processkemudian Installlalu StartProses, download, build dan install dimulai.
   
   <div class="read-more-link">
-    <a href="/2016-05-07-install-android-tools/">Read More…</a>
+    <a href="/post/2016-05-07-install-android-tools/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-05-05-solved-slackware-current-hang/">[SOLVED] Slackware Current Susah Booting dan Shutdown</a>
+    <a href="https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/">[SOLVED] Slackware Current Susah Booting dan Shutdown</a>
   </h1>
   <time datetime="2016-05-05T00:00:00Z" class="post-date">Thu, May 5, 2016</time>
   Tiga bulan lalu saya sambat Slackware current [hang]({% post_url 2016-02-08-slackware-current-hang %}) saat booting dan shutdown. Sekarang masalah tersebut teratasi.
@@ -1109,12 +1125,12 @@ Secara default laptop Asus X453MA diperuntukkan bagi pengguna Microsoft Windows.
 Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.1 oleh pihak toko. Awalnya saya pilih kosongan aja sesuai aslinya.
   
   <div class="read-more-link">
-    <a href="/2016-05-05-solved-slackware-current-hang/">Read More…</a>
+    <a href="/post/2016-05-05-solved-slackware-current-hang/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-05-03-install-sbopkg/">Install sbopkg</a>
+    <a href="https://sasongko.web.id/post/2016-05-03-install-sbopkg/">Install sbopkg</a>
   </h1>
   <time datetime="2016-05-03T00:00:00Z" class="post-date">Tue, May 3, 2016</time>
   Adakalanya pengguna Slackware membutuhkan paket/aplikasi di luar yang dirilis secara resmi oleh Slackware tapi tidak mau repot install dari kode sumber (source code). SlackBuilds.org (SBo) inilah yang mewujudkannya. Di SBo tersedia ribuan paket yang dapat dijalankan dengan baik di Slackware.
@@ -1122,24 +1138,24 @@ Kecuali dalam bentuk web interface SBo juga bisa dinikmati dalam bentuk command 
 Untuk install-nya mudah.
   
   <div class="read-more-link">
-    <a href="/2016-05-03-install-sbopkg/">Read More…</a>
+    <a href="/post/2016-05-03-install-sbopkg/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-04-29-install-tor/">Install Tor Browser</a>
+    <a href="https://sasongko.web.id/post/2016-04-29-install-tor/">Install Tor Browser</a>
   </h1>
   <time datetime="2016-04-29T00:00:00Z" class="post-date">Fri, Apr 29, 2016</time>
   Tor Browser adalah peramban web yang sangat memerhatikan privasi. Kita bisa mengakses web secara anonim/ anonymous karena melewati jaringan Tor yang beraneka jalur.
 Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slackware 14.1 download link-nya expired. Tor Stable terbaru adalah versi 5.5.5 dan ini belum tersedia SBo resminya untuk Slackware. Jadi kita akan install mandiri. Tentu saja kita butuh koneksi internet untuk mengunduh berkasnya. Tor tersedia untuk Linux, Windows maupun Mac Os X, baik arsitektur 32 bit maupun 64 bit.
   
   <div class="read-more-link">
-    <a href="/2016-04-29-install-tor/">Read More…</a>
+    <a href="/post/2016-04-29-install-tor/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-04-28-nano-file-browser/">Kekuatan Tersembunyi Nano : Menampilkan File Tersembunyi</a>
+    <a href="https://sasongko.web.id/post/2016-04-28-nano-file-browser/">Kekuatan Tersembunyi Nano : Menampilkan File Tersembunyi</a>
   </h1>
   <time datetime="2016-04-28T00:00:00Z" class="post-date">Thu, Apr 28, 2016</time>
   Bertahun-tahun pakai linux, baru sadar ternyata nano punya kekuatan tersembunyi. Bisa menampilkan file maupun folder yang hidden secara otomatis.
@@ -1149,12 +1165,12 @@ Nah, nano secara default akan menampilkan hidden file saat digunakan untuk menca
 Perhatikan bagian bawahnya, ada beberapa opsi yang bisa dilakukan.
   
   <div class="read-more-link">
-    <a href="/2016-04-28-nano-file-browser/">Read More…</a>
+    <a href="/post/2016-04-28-nano-file-browser/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-02-26-mouse-stuck/">Mouse Stuck</a>
+    <a href="https://sasongko.web.id/post/2016-02-26-mouse-stuck/">Mouse Stuck</a>
   </h1>
   <time datetime="2016-02-26T00:00:00Z" class="post-date">Fri, Feb 26, 2016</time>
   Setelah upgrade current ternyata ada masalah dengan mouse. Mouse mengalami stuck, ga ada respons saat drag, drop, bahkan ga bisa klik baik klik kiri maupun kanan. Dari grup di telegram dapat informasi dari Pak Willy hal serupa juga dialami oleh beberapa slacker yang lainnya. Alhamdulillah masalah ini bisa solved dengan mudahnya di Slackware64 saya.
@@ -1162,60 +1178,60 @@ Dengan akses root copas /lib/modprobe.d/psmouse.confke /etc/modprobe.d. Kemudian
 ############################################################################## # Do not edit this file; instead, copy it to /etc/modprobe.
   
   <div class="read-more-link">
-    <a href="/2016-02-26-mouse-stuck/">Read More…</a>
+    <a href="/post/2016-02-26-mouse-stuck/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-02-08-slackware-current-hang/">Slackware Current Susah Booting dan Shutdown</a>
+    <a href="https://sasongko.web.id/post/2016-02-08-slackware-current-hang/">Slackware Current Susah Booting dan Shutdown</a>
   </h1>
   <time datetime="2016-02-08T00:00:00Z" class="post-date">Mon, Feb 8, 2016</time>
   Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering stuck saat boot dan shutdown.
 Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis ID-Slackware, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.
   
   <div class="read-more-link">
-    <a href="/2016-02-08-slackware-current-hang/">Read More…</a>
+    <a href="/post/2016-02-08-slackware-current-hang/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2016-01-21-pip-insecureplatformwarning/">pip InsecurePlatformWarning</a>
+    <a href="https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/">pip InsecurePlatformWarning</a>
   </h1>
   <time datetime="2016-01-21T00:00:00Z" class="post-date">Thu, Jan 21, 2016</time>
   Saat melakukan pencarian dengan pip, muncul pesan
 /usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:315: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning. SNIMissingWarning /usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:120: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail.
   
   <div class="read-more-link">
-    <a href="/2016-01-21-pip-insecureplatformwarning/">Read More…</a>
+    <a href="/post/2016-01-21-pip-insecureplatformwarning/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-12-26-menggunakan-gdrv/">Cara Menggunakan gdrv</a>
+    <a href="https://sasongko.web.id/post/2015-12-26-menggunakan-gdrv/">Cara Menggunakan gdrv</a>
   </h1>
   <time datetime="2015-12-26T00:00:00Z" class="post-date">Sat, Dec 26, 2015</time>
   gdrv adalah salah satu command line interface tool berbasis python untuk Google Drive. Cara menginstallnya silahkan buka [catatan ini]({% post_url 2015-07-26-install-gdrv %}). Adapun cara penggunaannya adalah sebagai berikut:
 $ gdrv -h usage: gdrv [-h] [-v] [-w] [-V] {ftp,pull,search,url,push,mkdir,share,trash,list,init} ... YMK google drive command line tool positional arguments: {ftp,pull,search,url,push,mkdir,share,trash,list,init} drive sub command ftp interactive mode like sftp, lftp pull command pull help search command search help url command url help push command push help mkdir command mkdir help share command share help trash command trash help list command list help init command init help optional arguments: -h, --help show this help message and exit -v, --verbose increse verbosity/logging level -w, --write-config write a default config -V, --version show version infomation Pertama, inisiasi dulu,
   
   <div class="read-more-link">
-    <a href="/2015-12-26-menggunakan-gdrv/">Read More…</a>
+    <a href="/post/2015-12-26-menggunakan-gdrv/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-12-26-mount-iso-image/">Mount ISO Image</a>
+    <a href="https://sasongko.web.id/post/2015-12-26-mount-iso-image/">Mount ISO Image</a>
   </h1>
   <time datetime="2015-12-26T00:00:00Z" class="post-date">Sat, Dec 26, 2015</time>
   Mempunyai berkas citra ISO/ISO image ada manfaatnya. Pertama, sebagai cadangan kalau FD/DVD installernya tidak dapat digunakan. Kedua, untuk melakukan remaster. Bagaimana caranya mengetahui isi dari ISO tersebut? Paket apa saja yang ada di dalamnya? Untuk distro tertentu seperti slackware misalnya, paket yang disertakan bisa dilihat dengan mudah dari ISO tanpa harus membakarnya. Kita mount saja ISOnya.
 Misalkan berkas ISO yang akan di mount adalah slackware64-14.1-install-dvd.iso, dan akan di-mount di /mnt/iso
   
   <div class="read-more-link">
-    <a href="/2015-12-26-mount-iso-image/">Read More…</a>
+    <a href="/post/2015-12-26-mount-iso-image/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-12-26-ikon-networkmanager-hilang/">Tidak Ada Ikon NetworkManager di Panel</a>
+    <a href="https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/">Tidak Ada Ikon NetworkManager di Panel</a>
   </h1>
   <time datetime="2015-12-26T00:00:00Z" class="post-date">Sat, Dec 26, 2015</time>
   Iseng-iseng install lagi slackware tapi tanpa paket yang ada di kategori ap atau direktori slackware/ap dan xap (slackware64/xap).
@@ -1224,12 +1240,12 @@ Install dulu appletnya. Karena saya punya berkas ISOnya maka installnya bisa off
 installpkg /mnt/iso/slackware64/xap/network-manager*.txz Ketika memunculkan ikon/applet NetworkManagernya ke panel,
   
   <div class="read-more-link">
-    <a href="/2015-12-26-ikon-networkmanager-hilang/">Read More…</a>
+    <a href="/post/2015-12-26-ikon-networkmanager-hilang/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-12-12-install-bzr/">Install Bazaar</a>
+    <a href="https://sasongko.web.id/post/2015-12-12-install-bzr/">Install Bazaar</a>
   </h1>
   <time datetime="2015-12-12T00:00:00Z" class="post-date">Sat, Dec 12, 2015</time>
   Bazaar atau disingkat bzr adalah salah 1 jenis control version system seperti git.
@@ -1238,7 +1254,7 @@ $ wget http://launchpad.net/bzr/2.6/2.6.0/+download/bzr-2.6.0.tar.gz $ tar xzf b
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-11-06-ganti-de/">Ganti Desktop Environment</a>
+    <a href="https://sasongko.web.id/post/2015-11-06-ganti-de/">Ganti Desktop Environment</a>
   </h1>
   <time datetime="2015-11-06T00:00:00Z" class="post-date">Fri, Nov 6, 2015</time>
   Biar tidak membosankan, kadangkala kita butuh ganti desktop environment (DE). Caranya (root privileges),
@@ -1246,19 +1262,19 @@ xwmconfig Pilih X Windows (atau DE)-nya. Kemudian Ok atau tekan Enter, Log out d
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-11-06-install-mate-desktop/">Install Mate Desktop</a>
+    <a href="https://sasongko.web.id/post/2015-11-06-install-mate-desktop/">Install Mate Desktop</a>
   </h1>
   <time datetime="2015-11-06T00:00:00Z" class="post-date">Fri, Nov 6, 2015</time>
   Walaupun desktop environment resmi Slackware adalah KDE dan Xfce, kita tetap bisa menggunakan DE lain, mate contohnya. Mate punya tampilan menarik tapi tetap ringan. Installnya mudah kok, seperti biasa pakai slackbuilds. Pastikan tersambung internet untuk mengunduh berkasnya, oya kita butuh kira-kira 500 MB untuk download mate.
 Pertama, dengan peramban web buka github mate slackbuilds. Nah, karena di sini menggunakan 14.1 (bukan current) maka pilih branch 14.1-mate-1.10. Setelah itu unduh tarball/zipnya kemudian ekstrak.
   
   <div class="read-more-link">
-    <a href="/2015-11-06-install-mate-desktop/">Read More…</a>
+    <a href="/post/2015-11-06-install-mate-desktop/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-10-30-recovery-file-testdisk/">Mengembalikan File yang Terhapus dengan Testdisk</a>
+    <a href="https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/">Mengembalikan File yang Terhapus dengan Testdisk</a>
   </h1>
   <time datetime="2015-10-30T00:00:00Z" class="post-date">Fri, Oct 30, 2015</time>
   Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/recovery file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.
@@ -1266,12 +1282,12 @@ Sebagai root jalankan
 testdisk kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih No Log karena merasa log ini tidak terlalu penting. Selanjutnya akan terdeteksi media simpan yang terpasang di komputer.
   
   <div class="read-more-link">
-    <a href="/2015-10-30-recovery-file-testdisk/">Read More…</a>
+    <a href="/post/2015-10-30-recovery-file-testdisk/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-10-29-install-testdisk/">Install Testdisk</a>
+    <a href="https://sasongko.web.id/post/2015-10-29-install-testdisk/">Install Testdisk</a>
   </h1>
   <time datetime="2015-10-29T00:00:00Z" class="post-date">Thu, Oct 29, 2015</time>
   Testdisk adalah salah satu aplikasi digital forensik multiplatform. Bisa dijalankan di Windows (NT4, 2000, 2003, XP, Vista dan 7), Linux, FreeBSD, OpenBSD, NetBSD, SunOS, dan MacOS. Adapun kegunaannya untuk mengembalikan partisi yang terhapus beserta file-file yang ada di dalamnya. Informasi lebih lengkap tentang testdisk bisa didapatkan di sini.
@@ -1279,12 +1295,12 @@ Sebenarnya untuk Slackware sudah ada slackbuild-nya, tapi tidak ada salahnya kal
 wget http://www.cgsecurity.org/testdisk-7.0.tar.bz2 tar xjvf testdisk-7.
   
   <div class="read-more-link">
-    <a href="/2015-10-29-install-testdisk/">Read More…</a>
+    <a href="/post/2015-10-29-install-testdisk/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-10-01-download-video-youtube/">Download Video Youtube</a>
+    <a href="https://sasongko.web.id/post/2015-10-01-download-video-youtube/">Download Video Youtube</a>
   </h1>
   <time datetime="2015-10-01T00:00:00Z" class="post-date">Thu, Oct 1, 2015</time>
   Download video dari Youtube adalah hal yang mudah bagi pengguna Slackware. Paling tidak ada 2 cara. Cara pertama menggunakan peramban web, dan cara kedua menggunakan youtube-dl yang berantar muka teks. Di sini menggunakan cara kedua. Untuk menginstall youtube-dl silahkan [klik di sini]({% post_url 2015-10-01-install-youtubedl %}).
@@ -1293,12 +1309,12 @@ youtube-dl url_video_youtube Contoh, akan URL video yang akan di download adalah
 youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54 Kalau ada beberapa video yang ingin didownload, masukkan saja URLnya ke satu file, tiap baris 1 URL, kemudian cara downloadnya tambahkan opsi -a
   
   <div class="read-more-link">
-    <a href="/2015-10-01-download-video-youtube/">Read More…</a>
+    <a href="/post/2015-10-01-download-video-youtube/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-10-01-install-youtubedl/">Install Youtube Downloader</a>
+    <a href="https://sasongko.web.id/post/2015-10-01-install-youtubedl/">Install Youtube Downloader</a>
   </h1>
   <time datetime="2015-10-01T00:00:00Z" class="post-date">Thu, Oct 1, 2015</time>
   Siapa bilang pakai Slackware ga bisa download video dari Youtube? Bisa kok pakai youtube-dl.Cara installnya gampang. Pastikan terhubung ke internet untuk mengunduh berkasnya. Dan untuk install butuh hak akses root. Di sini kita pakai cara yang mudah saja, install dari slackbuilds.org.
@@ -1306,14 +1322,14 @@ cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-d
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-09-30-copas-terminal/">Copy Paste di Terminal</a>
+    <a href="https://sasongko.web.id/post/2015-09-30-copas-terminal/">Copy Paste di Terminal</a>
   </h1>
   <time datetime="2015-09-30T00:00:00Z" class="post-date">Wed, Sep 30, 2015</time>
   Bagaimana sih caranya copy paste teks yang ada di Terminal? Untuk copy blok tulisannya kemudian klik kanan pilih Copy, atau setelah diblok tekan Ctrl Shift C. Sedangkan untuk paste ke terminal silahkan klik kanan pilih Paste atau tekan Ctrl Shift V.
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-08-17-setting-internet-xl-slackware/">Setting Internet XL Slackware</a>
+    <a href="https://sasongko.web.id/post/2015-08-17-setting-internet-xl-slackware/">Setting Internet XL Slackware</a>
   </h1>
   <time datetime="2015-08-17T00:00:00Z" class="post-date">Mon, Aug 17, 2015</time>
   Di [catatan yang lalu]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) telah kami sampaikan cara konek internet di Slackware dengan modem, ppp, dan internet provider atau operator Tri. Kali ini akan kami ganti dengan operator XL.
@@ -1321,12 +1337,12 @@ Sunting berkas /etc/ppp/options
 # General configuration options for PPPD: lock defaultroute noipdefault modem /dev/ttyUSB0 460800 crtscts # Uncomment the line below for more verbose error reporting: #debug # If you have a default route already, pppd may require the other side # to authenticate itself, which most ISPs will not do.
   
   <div class="read-more-link">
-    <a href="/2015-08-17-setting-internet-xl-slackware/">Read More…</a>
+    <a href="/post/2015-08-17-setting-internet-xl-slackware/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-08-01-unduh-iso-slackware-current/">Unduh ISO Slackware Current</a>
+    <a href="https://sasongko.web.id/post/2015-08-01-unduh-iso-slackware-current/">Unduh ISO Slackware Current</a>
   </h1>
   <time datetime="2015-08-01T00:00:00Z" class="post-date">Sat, Aug 1, 2015</time>
   Slackware adalah distro yang istimewa. Tak seperti distro lainnya yang menyediakan ISO versi terbaru atau current yang masih dalam pengembangan, slackware tidak merilis current ISO secara resmi. Walaupun demikian, ada yang menyediakannya bagi yang berminat, salah satunya bisa didapatkan di repo ftp://ftp.slackware.no.
@@ -1335,12 +1351,12 @@ Sebelumnya cek dulu ISO terbaru
 $ rsync ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/ drwxr-xr-x 4,096 2015/07/28 10:00:29 .
   
   <div class="read-more-link">
-    <a href="/2015-08-01-unduh-iso-slackware-current/">Read More…</a>
+    <a href="/post/2015-08-01-unduh-iso-slackware-current/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-07-26-install-gdrv/">Install gdrv</a>
+    <a href="https://sasongko.web.id/post/2015-07-26-install-gdrv/">Install gdrv</a>
   </h1>
   <time datetime="2015-07-26T00:00:00Z" class="post-date">Sun, Jul 26, 2015</time>
   gdrv adalah command line tool berbasis python untuk Google Drive. Cara menginstallnya
@@ -1348,7 +1364,7 @@ pip install gdrv
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-07-18-install-googleplaydownloader/">Install Google Play Downloader</a>
+    <a href="https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/">Install Google Play Downloader</a>
   </h1>
   <time datetime="2015-07-18T00:00:00Z" class="post-date">Sat, Jul 18, 2015</time>
   GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:
@@ -1356,12 +1372,12 @@ pip install gdrv
 easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).
   
   <div class="read-more-link">
-    <a href="/2015-07-18-install-googleplaydownloader/">Read More…</a>
+    <a href="/post/2015-07-18-install-googleplaydownloader/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-07-18-install-wxpython/">Install wxPython</a>
+    <a href="https://sasongko.web.id/post/2015-07-18-install-wxpython/">Install wxPython</a>
   </h1>
   <time datetime="2015-07-18T00:00:00Z" class="post-date">Sat, Jul 18, 2015</time>
   wxPython adalah salah satu toolkit untuk membuat aplikasi grafis dengan python. Untuk menginstallnya mudah, kita install saja slackbuildnya. Pastikan tersambung internet.
@@ -1369,7 +1385,7 @@ wget http://slackbuilds.org/slackbuilds/14.1/libraries/wxPython.tar.gz tar xzf w
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-07-13-install-pip/">Install pip</a>
+    <a href="https://sasongko.web.id/post/2015-07-13-install-pip/">Install pip</a>
   </h1>
   <time datetime="2015-07-13T00:00:00Z" class="post-date">Mon, Jul 13, 2015</time>
   Pip akan memudahkan kita semua untuk menginstall paket-paket yang terkait dengan python.
@@ -1377,19 +1393,19 @@ wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py python get-pip.
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-07-13-mount-partisi-otomatis/">Mount Partisi Otomatis</a>
+    <a href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/">Mount Partisi Otomatis</a>
   </h1>
   <time datetime="2015-07-13T00:00:00Z" class="post-date">Mon, Jul 13, 2015</time>
   Masih melanjutkan catatan yang kemarin tentang pemartisian. Setelah [membuat partisi]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) kemudian [diformat]({% post_url 2015-07-12-memformat-partisi %}), langkah selanjutnya adalah memutuskan apakah partisi itu akan di-mount secara otomatis saat boot atau tidak.
 Nah, karena partisi /dev/sda9 yang bersistem ext4 kemarin akan saya jadikan sebagai tempat source code paket/aplikasi, seperti untuk menyimpan berkas slackbuild, saya putuskan untuk mengaitkannya secara otomatis di /usr/local/src. Caranya adalah dengan menambahkan baris berikut ke /etc/fstab
   
   <div class="read-more-link">
-    <a href="/2015-07-13-mount-partisi-otomatis/">Read More…</a>
+    <a href="/post/2015-07-13-mount-partisi-otomatis/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-07-12-memformat-partisi/">Memformat Partisi</a>
+    <a href="https://sasongko.web.id/post/2015-07-12-memformat-partisi/">Memformat Partisi</a>
   </h1>
   <time datetime="2015-07-12T00:00:00Z" class="post-date">Sun, Jul 12, 2015</time>
   Melanjutkan catatan [kemarin]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) sekarang partisinya diformat menjadi ext4, format filesystem yang umum digunakan untuk linux dengan kestabilan yang tidak diragukan lagi.
@@ -1397,24 +1413,24 @@ Partisi yang akan diformat ext4 adalah /dev/sda9 dan akan diberi label sebagai s
 # mkfs -t ext4 -L 'src' /dev/sda9 mke2fs 1.42.8 (20-Jun-2013) Filesystem label=src OS type: Linux Block size=4096 (log=2) Fragment size=4096 (log=2) Stride=0 blocks, Stripe width=0 blocks 871408 inodes, 3482075 blocks 174103 blocks (5.
   
   <div class="read-more-link">
-    <a href="/2015-07-12-memformat-partisi/">Read More…</a>
+    <a href="/post/2015-07-12-memformat-partisi/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-07-11-membuat-partisi-dengan-cgdisk/">Membuat Partisi dengan cgdisk</a>
+    <a href="https://sasongko.web.id/post/2015-07-11-membuat-partisi-dengan-cgdisk/">Membuat Partisi dengan cgdisk</a>
   </h1>
   <time datetime="2015-07-11T00:00:00Z" class="post-date">Sat, Jul 11, 2015</time>
   Partitioning atau pemartisian atau pembuatan partisi adalah pengetahuan yang harus dimiliki sebelum menginstall linux. Jika harddisk dianalogikan dengan rumah, maka partisi adalah kamar atau ruangan yang ada di dalam rumah itu. Kita bisa mengatur berapa jumlah kamar beserta ukuran dan fungsinya.
 Skema partisi yang digunakan adalah GPT, bukan MBR, jadi pemartisian menggunakan cgdisk saja biar lebih mudah. Selain cgdisk bisa menggunakan gdisk. Sedangkan untuk MBR menggunakan cfdisk atau fdisk. Keempatnya berantarmuka text dan dijalankan oleh root.
   
   <div class="read-more-link">
-    <a href="/2015-07-11-membuat-partisi-dengan-cgdisk/">Read More…</a>
+    <a href="/post/2015-07-11-membuat-partisi-dengan-cgdisk/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-28-konek-internet-menggunakan-pppsetup/">Konek Internet Slackware</a>
+    <a href="https://sasongko.web.id/post/2015-06-28-konek-internet-menggunakan-pppsetup/">Konek Internet Slackware</a>
   </h1>
   <time datetime="2015-06-28T00:00:00Z" class="post-date">Sun, Jun 28, 2015</time>
   Di catatan yang lalu sudah pernah dibahas cara konek internet di Slackware dengan [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}). Sekarang masih tentang cara konek internet melalui modem di Slackware, hanya saja caranya berbeda. Kali ini menggunakan pppsetup yang secara default sudah dimiliki Slackware.
@@ -1424,12 +1440,12 @@ pppsetup Tekan enter.
 Isi phone number dengan
   
   <div class="read-more-link">
-    <a href="/2015-06-28-konek-internet-menggunakan-pppsetup/">Read More…</a>
+    <a href="/post/2015-06-28-konek-internet-menggunakan-pppsetup/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-25-install-unrar/">Install Unrar</a>
+    <a href="https://sasongko.web.id/post/2015-06-25-install-unrar/">Install Unrar</a>
   </h1>
   <time datetime="2015-06-25T00:00:00Z" class="post-date">Thu, Jun 25, 2015</time>
   Di antara file kompresi/arsip yang ada, kompresi yang tidak saya utamakan adalah rar. Simpel sih alasannya, karena secara default baik BlankOn maupun Slackware tidak meng-embed ekstraktornya :D. Harus install dulu. Pastikan tersambung internet untuk mengunduh berkas.
@@ -1438,12 +1454,12 @@ $ sudo apt-get install unrar Sedangkan untuk Slackware install slackbuildnya saj
 # cd /usr/local/src # wget http://slackbuilds.org/slackbuilds/14.1/system/unrar.tar.gz # tar xzf unrar.tgr.gz # cd unrar # wget http://www.rarlab.com/rar/unrarsrc-5.2.6.tar.gz # sh unrar.
   
   <div class="read-more-link">
-    <a href="/2015-06-25-install-unrar/">Read More…</a>
+    <a href="/post/2015-06-25-install-unrar/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-18-install-sleuthkit-slackware/">InstalL Sleuth Kit Slackware</a>
+    <a href="https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/">InstalL Sleuth Kit Slackware</a>
   </h1>
   <time datetime="2015-06-18T00:00:00Z" class="post-date">Thu, Jun 18, 2015</time>
   The Sleuth Kit atau disingkat TSK adalah tools digital forensik yang bersifat open source, multiplatform dan text-mode (command line interface). TSK bisa digunakan untuk melakukan analisis pada barang bukti, atau lebih tepatnya citra disk (raw image). Misalnya untuk mengetahui berkas apa saja yang ada di dalam hardisk dan adakah berkas yang dihapus dari hardisk itu.
@@ -1451,12 +1467,12 @@ Dependensi:
  autoconf, automake, libtool C/C++ compiler (gcc, gcc++) [JDK (opsional)]({% post_url 2015-06-07-install-jdk-slackware %})  Install cukup mudah, kita akan install langsung TSK dari source code yang ada di github
   
   <div class="read-more-link">
-    <a href="/2015-06-18-install-sleuthkit-slackware/">Read More…</a>
+    <a href="/post/2015-06-18-install-sleuthkit-slackware/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-17-install-xfburn-slackware/">Install Xfburn Slackware</a>
+    <a href="https://sasongko.web.id/post/2015-06-17-install-xfburn-slackware/">Install Xfburn Slackware</a>
   </h1>
   <time datetime="2015-06-17T00:00:00Z" class="post-date">Wed, Jun 17, 2015</time>
   Xfburn adalah aplikasi burning CD/DVD/BD dari XFCE. Versi terbaru saat ini 0.5.4, dengan dependensi:
@@ -1466,12 +1482,12 @@ $ wget http://slackbuilds.org/slackbuilds/14.1/system/xfburn.tar.gz Ekstrak kemu
 $ tar xzf xfburn.tar.gz ; cd xfburn Unduh kode sumber xfburn
   
   <div class="read-more-link">
-    <a href="/2015-06-17-install-xfburn-slackware/">Read More…</a>
+    <a href="/post/2015-06-17-install-xfburn-slackware/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-16-install-libburn-slackware/">Install libburn Slackware</a>
+    <a href="https://sasongko.web.id/post/2015-06-16-install-libburn-slackware/">Install libburn Slackware</a>
   </h1>
   <time datetime="2015-06-16T00:00:00Z" class="post-date">Tue, Jun 16, 2015</time>
   Libburn adalah pustaka (library) untuk menulis ke CD, DVD, dan blueray.
@@ -1484,12 +1500,12 @@ $ wget http://files.libburnia-project.org/releases/libburn-1.4.0.tar.gz Install 
 sh libburn.
   
   <div class="read-more-link">
-    <a href="/2015-06-16-install-libburn-slackware/">Read More…</a>
+    <a href="/post/2015-06-16-install-libburn-slackware/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-16-install-libisofs-slackware/">Install libisofs Slackware</a>
+    <a href="https://sasongko.web.id/post/2015-06-16-install-libisofs-slackware/">Install libisofs Slackware</a>
   </h1>
   <time datetime="2015-06-16T00:00:00Z" class="post-date">Tue, Jun 16, 2015</time>
   Libisofs adalah pustaka untuk membuat filesystem ISO-9660.
@@ -1503,7 +1519,7 @@ $ cd libisofs $ wget http://files.libburnia-project.org/releases/libisofs-1.4.0.
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-15-cek-paket-terinstall-slackware/">Cek Paket Terinstall di Slackware</a>
+    <a href="https://sasongko.web.id/post/2015-06-15-cek-paket-terinstall-slackware/">Cek Paket Terinstall di Slackware</a>
   </h1>
   <time datetime="2015-06-15T00:00:00Z" class="post-date">Mon, Jun 15, 2015</time>
   Untuk mengetahui apakah suatu paket atau aplikasi telah terpasang di Slackware kita atau belum caranya mudah.
@@ -1512,19 +1528,19 @@ $ ls /var/log/packages | grep xfce gtk-xfce-engine-3.0.1-x86_64-1 libxfce4ui-4.1
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-14-jalankan-sudo-tanpa-password/">Jalankan Sudo Tanpa Password</a>
+    <a href="https://sasongko.web.id/post/2015-06-14-jalankan-sudo-tanpa-password/">Jalankan Sudo Tanpa Password</a>
   </h1>
   <time datetime="2015-06-14T00:00:00Z" class="post-date">Sun, Jun 14, 2015</time>
   Idealnya perintah sudo memang memerlukan password/kata sandi karena hakikat sudo itu pengguna &ldquo;meminjam&rdquo; hak super user / root. Tapi, password itu bisa saja kita hilangkan. Maksudnya, tidak perlu menuliskan password, contoh
 $ wvdial 3 bash: wvdial: command not found Baris 2, command not found menunjukkan 2 kemungkinan. Kemungkinan pertama, perintah yang diketikkan memang tidak ada. Kemungkinan kedua, perintah itu memerlukan hak root. Nah perintah [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) ini yang bisa menjalankan adalah root atau sudoers (pengguna yang bisa menjalankan perintah hak root tapi dengan syarat memasukkan passwordnya root.
   
   <div class="read-more-link">
-    <a href="/2015-06-14-jalankan-sudo-tanpa-password/">Read More…</a>
+    <a href="/post/2015-06-14-jalankan-sudo-tanpa-password/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-06-download-seluruh-website/">Download Seluruh Isi Website</a>
+    <a href="https://sasongko.web.id/post/2015-06-06-download-seluruh-website/">Download Seluruh Isi Website</a>
   </h1>
   <time datetime="2015-06-09T00:00:00Z" class="post-date">Tue, Jun 9, 2015</time>
   Melanjutkan [catatan yang lalu]({% post_url 2014-03-23-wget-linux-download-manager %}), kali ini adalah penggunaan wget untuk mengunduh/download website secara keseluruhan/rekursif.
@@ -1532,30 +1548,30 @@ $ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url sila
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-09-install-libreoffice-slackbuild/">Install Libre Office di Slackware</a>
+    <a href="https://sasongko.web.id/post/2015-06-09-install-libreoffice-slackbuild/">Install Libre Office di Slackware</a>
   </h1>
   <time datetime="2015-06-09T00:00:00Z" class="post-date">Tue, Jun 9, 2015</time>
   Secara default aplikasi perkantoran yang disediakan Slackware bukan Libre Office. Kalau pada saat instalasi Slackware (yang penulis gunakan arsitektur 64 bit) memilih full install maka aplikasi perkantoran yang terpasang adalah Calligra. Dibandingkan dengan Calligra, saya merasa lebih sreg menggunakan LibreOffice karena kompatibilitasnya yang lebih baik terhadap dokumen yang dibuat dengan Ms Office (harap maklum, masih banyak saudara-saudara kita yang belum bisa move on ke open source dan tidak semua menggunakan Ms Office bajakan).
   
   <div class="read-more-link">
-    <a href="/2015-06-09-install-libreoffice-slackbuild/">Read More…</a>
+    <a href="/post/2015-06-09-install-libreoffice-slackbuild/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-09-uninstall-calligra/">Uninstall Calligra Office Suite</a>
+    <a href="https://sasongko.web.id/post/2015-06-09-uninstall-calligra/">Uninstall Calligra Office Suite</a>
   </h1>
   <time datetime="2015-06-09T00:00:00Z" class="post-date">Tue, Jun 9, 2015</time>
   Calligra adalah office suite atau aplikasi perkantoran yang dikembangkan KDE yang dulu bernama KOffice. Kalau memasang KDE secara full kita akan mendapatinya.
 Calligra memang layak digunakan untuk keperluan perkantoran. Performanya dalam mengolah dokumen terbuka (open document format/ODF) cukup bagus. Namun sayangnya, Calligra tidak kompatibel dengan dokumen OOXML (dokumen yang dibuat dengan Microsoft Office). Tak jarang Calligra menjadi hang saat membuka atau mengolah dokumen dengan format docx (Ms Word), xlsx (Ms Excel) dan pptx (Ms PowerPoint).
   
   <div class="read-more-link">
-    <a href="/2015-06-09-uninstall-calligra/">Read More…</a>
+    <a href="/post/2015-06-09-uninstall-calligra/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-07-install-jdk-slackware/">Install JDK Slackware</a>
+    <a href="https://sasongko.web.id/post/2015-06-07-install-jdk-slackware/">Install JDK Slackware</a>
   </h1>
   <time datetime="2015-06-07T00:00:00Z" class="post-date">Sun, Jun 7, 2015</time>
   Java Development Kit atau yang biasa disingkat JDK ini berguna untuk membuat/mengembangkan aplikasi berbasis Java. Selain itu, untuk menginstall dan/atau menjalankan aplikasi tertentu disyaratkan JDK, seperti LibreOffice, Netbeans dan Aptana. Sebelum install kita unduh dulu dari http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html .
@@ -1564,24 +1580,24 @@ Untuk bisa mengunduh harus menyetujui perjanjian lisensi dulu (Accept License Ag
 Kemudian pindahkan hasil unduhan ke /usr/local/src dilanjutkan dengan pindah ke direktori /usr/local/src
   
   <div class="read-more-link">
-    <a href="/2015-06-07-install-jdk-slackware/">Read More…</a>
+    <a href="/post/2015-06-07-install-jdk-slackware/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-06-sebelum-install-linux/">Hal-hal yang Harus Diketahui Sebelum Menginstall Linux</a>
+    <a href="https://sasongko.web.id/post/2015-06-06-sebelum-install-linux/">Hal-hal yang Harus Diketahui Sebelum Menginstall Linux</a>
   </h1>
   <time datetime="2015-06-06T00:00:00Z" class="post-date">Sat, Jun 6, 2015</time>
   Memang sudah seharusnya sebelum menginstall linux kita memiliki beberapa pengetahuan yang memadai. Imam Bukhari mengatakan &ldquo;al ilmu qablal qawl wal amal&rdquo; yang maksudnya sebelum melakukan sesuatu harus dilandasi dengan ilmu/pengetahuan tentang apa yang akan dilakukannya itu. Dan dalam ilmu fiqh / hukum Islam dikenal kaidah &ldquo;al umuru bimaqashidiha&rdquo; yang artinya setiap perkara itu tergantung maksud/niatnya. Kaidah ini diambil dari hadits &ldquo;innamal a&rsquo;malu binniyat&rdquo; segala sesuatu tergantung niatnya.
 Pertama yang harus diketahui adalah niat.
   
   <div class="read-more-link">
-    <a href="/2015-06-06-sebelum-install-linux/">Read More…</a>
+    <a href="/post/2015-06-06-sebelum-install-linux/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-06-01-operasi-direktori/">Operasi Direktori di Linux</a>
+    <a href="https://sasongko.web.id/post/2015-06-01-operasi-direktori/">Operasi Direktori di Linux</a>
   </h1>
   <time datetime="2015-06-01T00:00:00Z" class="post-date">Mon, Jun 1, 2015</time>
   Operasi direktori/folder adalah suatu hal yang mendasar di linux. Walaupun sekarang banyak desktop environment yang menyebabkan sedikit interaksi dengan terminal langsung karena tinggal klik saja dalam mode grafis (GUI), kami akan tetap sampaikan bagaimana melakukannya dalam mode teks (CLI).
@@ -1591,12 +1607,12 @@ $ pwd /home/sasongko Tampak bahwa direktori saat ini adalah di /home/sasongko.
 Menampilkan isi direktori ls /direktori Contoh berikut akan menampilkan isi dari direktori /etc
   
   <div class="read-more-link">
-    <a href="/2015-06-01-operasi-direktori/">Read More…</a>
+    <a href="/post/2015-06-01-operasi-direktori/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-05-30-memformat-flashdisk-di-linux/">Memformat Flashdisk di LInux</a>
+    <a href="https://sasongko.web.id/post/2015-05-30-memformat-flashdisk-di-linux/">Memformat Flashdisk di LInux</a>
   </h1>
   <time datetime="2015-05-30T00:00:00Z" class="post-date">Sat, May 30, 2015</time>
   Memformat flashdisk di linux adalah hal yang mudah.
@@ -1604,63 +1620,63 @@ Pertama, pastikan flashdisknya terdeteksi oleh sistem. Pada kesempatan ini merk 
 $ lsusb Bus 001 Device 003: ID 0930:1400 Toshiba Corp. Memory Stick 2GB Bus 001 Device 002: ID 04f2:b483 Chicony Electronics Co., Ltd Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub Perhatikan baris 2, flashdisk terdeteksi.
   
   <div class="read-more-link">
-    <a href="/2015-05-30-memformat-flashdisk-di-linux/">Read More…</a>
+    <a href="/post/2015-05-30-memformat-flashdisk-di-linux/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-05-23-konversi-livedvd-iso/">Mengubah LiveDVD Menjadi ISO</a>
+    <a href="https://sasongko.web.id/post/2015-05-23-konversi-livedvd-iso/">Mengubah LiveDVD Menjadi ISO</a>
   </h1>
   <time datetime="2015-05-23T00:00:00Z" class="post-date">Sat, May 23, 2015</time>
   Beberapa waktu lalu lihat DVD BlankOn 8 Rote nganggur di seonggok kumpulan CD/DVD. Enaknya diapain ya itu DVD? Kalau dibiarkan khawatirnya kotor malah ngga bisa digunakan lagi. Ya udah mending dibuat file ISO aja. Kalau dibuat file ISO insya Allah manfaatnya lebih banyak karena tersimpan di hardisk bisa lebih tahan lama daripada dalam bentuk DVD, dan suatu saat nanti kalau dibutuhkan tapi DVDnya ngga bisa dipakai tinggal dibakar aja ISOnya entah itu jadi DVD atau ke flashdisk.
   
   <div class="read-more-link">
-    <a href="/2015-05-23-konversi-livedvd-iso/">Read More…</a>
+    <a href="/post/2015-05-23-konversi-livedvd-iso/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-05-14-developer-mengajar-5/">Developer Mengajar 5.0</a>
+    <a href="https://sasongko.web.id/post/2015-05-14-developer-mengajar-5/">Developer Mengajar 5.0</a>
   </h1>
   <time datetime="2015-05-14T00:00:00Z" class="post-date">Thu, May 14, 2015</time>
   
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-05-02-kontes-desain-web-kominfo-2015/">Kontes Desain Web Kominfo 2015</a>
+    <a href="https://sasongko.web.id/post/2015-05-02-kontes-desain-web-kominfo-2015/">Kontes Desain Web Kominfo 2015</a>
   </h1>
   <time datetime="2015-05-14T00:00:00Z" class="post-date">Thu, May 14, 2015</time>
   Dalam rangka semangat Reformasi Birokrasi dan mengedepankan pelayanan prima kepada publik/masyarakat, Kementerian Komunikasi dan Informatika telah dan terus melakukan berbagai upaya, salah satunya adalah dalam hal pemberian/penyajian informasi kepada publik/masyarakat melalui Website Kominfo. Guna mendukung upaya tersebut lebih baik lagi, Kementerian Komunikasi dan Informatika akan melakukan pembaharuan dan desain kembali Website Kominfo dengan melibatkan peran serta masyarakat melalui Lomba/Kontes Desain Website Kominfo Tahun 2015.
 Hal ini dilakukan tidak hanya untuk memperbaiki tampilan Website Kominfo saja melainkan juga untuk merombak arsitektur Website Kominfo sehingga akan lebih banyak lagi fitur layanan dan informasi publik yang dapat disampaikan/disajikan kepada publik/masyarakat.
   
   <div class="read-more-link">
-    <a href="/2015-05-02-kontes-desain-web-kominfo-2015/">Read More…</a>
+    <a href="/post/2015-05-02-kontes-desain-web-kominfo-2015/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-05-14-semnas-dampak-hacking-thd-kemunduran-ekonomi/">Seminar Dampak Hacking terhadap Kemunduran Ekonomi</a>
+    <a href="https://sasongko.web.id/post/2015-05-14-semnas-dampak-hacking-thd-kemunduran-ekonomi/">Seminar Dampak Hacking terhadap Kemunduran Ekonomi</a>
   </h1>
   <time datetime="2015-05-14T00:00:00Z" class="post-date">Thu, May 14, 2015</time>
   
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-05-14-semnas-hologram-augmented-reality/">Seminar Hologram &amp; Augmented Reality</a>
+    <a href="https://sasongko.web.id/post/2015-05-14-semnas-hologram-augmented-reality/">Seminar Hologram &amp; Augmented Reality</a>
   </h1>
   <time datetime="2015-05-14T00:00:00Z" class="post-date">Thu, May 14, 2015</time>
   
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-05-14-semnas-security-forensic/">Seminar Nasional Information Technology Security vs Forensic</a>
+    <a href="https://sasongko.web.id/post/2015-05-14-semnas-security-forensic/">Seminar Nasional Information Technology Security vs Forensic</a>
   </h1>
   <time datetime="2015-05-14T00:00:00Z" class="post-date">Thu, May 14, 2015</time>
   
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-05-13-ekstrak-file-zip/">Ekstrak File zip</a>
+    <a href="https://sasongko.web.id/post/2015-05-13-ekstrak-file-zip/">Ekstrak File zip</a>
   </h1>
   <time datetime="2015-05-13T00:00:00Z" class="post-date">Wed, May 13, 2015</time>
   Ekstensi zip adalah salah satu ekstensi file kompresi/archive. File kompresi yang lain adalah [tar.gz]({% post_url 2015-04-28-ekstrak-file-tar-gz %}).
@@ -1668,31 +1684,31 @@ Bagaimana ekstrak file zip? $ unzip namafile.zip
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-05-01-pelatihan-sertifikasi-tik-1/">Pelatihan dan Sertifikasi Profesi TIK Gelombang I 2015</a>
+    <a href="https://sasongko.web.id/post/2015-05-01-pelatihan-sertifikasi-tik-1/">Pelatihan dan Sertifikasi Profesi TIK Gelombang I 2015</a>
   </h1>
   <time datetime="2015-05-01T00:00:00Z" class="post-date">Fri, May 1, 2015</time>
   Dalam rangka Pengembangan Sumber Daya Manusia (SDM) sektor Teknologi Informasi dan Komunikasi, Balai Pelatihan dan Pengembangan Teknologi Informasi dan Komunikasi (BPPTIK) Kementerian Komunikasi dan Informatika (Kemkominfo) akan mengadakan Pelatihan dan Sertifikasi profesi di sektor TIK secara gratis. Pelatihan dan Sertifikasi gelombang ke-1 ini diprioritaskan untuk calon peserta dari daerah Kabupaten Bandung, Kabupaten Bandung Barat, dan sekitarnya. Program yang dibuka yaitu sebagai berikut:
   Pelatihan Junior Network Administration dan Sertifikasi Junior Network Administrator
   
   <div class="read-more-link">
-    <a href="/2015-05-01-pelatihan-sertifikasi-tik-1/">Read More…</a>
+    <a href="/post/2015-05-01-pelatihan-sertifikasi-tik-1/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-05-01-pelatihan-sertifikasi-tik-2/">Pelatihan dan Sertifikasi Profesi TIK Gelombang II 2015</a>
+    <a href="https://sasongko.web.id/post/2015-05-01-pelatihan-sertifikasi-tik-2/">Pelatihan dan Sertifikasi Profesi TIK Gelombang II 2015</a>
   </h1>
   <time datetime="2015-05-01T00:00:00Z" class="post-date">Fri, May 1, 2015</time>
   Dalam rangka Pengembangan Sumber Daya Manusia (SDM) sektor Teknologi Informasi dan Komunikasi, Balai Pelatihan dan Pengembangan Teknologi Informasi dan Komunikasi (BPPTIK) Kementerian Komunikasi dan Informatika (Kemkominfo) akan mengadakan Pelatihan dan Sertifikasi profesi di sektor TIK secara gratis. Pelatihan dan Sertifikasi gelombang ke-2 ini diprioritaskan untuk calon peserta dari daerah Kota Bandung, Kota Cimahi, dan sekitarnya. Program yang dibuka yaitu sebagai berikut:
   Pelatihan Junior Graphic Design dan Sertifikasi Junior Graphic Designer
   
   <div class="read-more-link">
-    <a href="/2015-05-01-pelatihan-sertifikasi-tik-2/">Read More…</a>
+    <a href="/post/2015-05-01-pelatihan-sertifikasi-tik-2/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-04-28-ekstrak-file-tar-gz/">Ekstrak File .tar.gz</a>
+    <a href="https://sasongko.web.id/post/2015-04-28-ekstrak-file-tar-gz/">Ekstrak File .tar.gz</a>
   </h1>
   <time datetime="2015-04-28T00:00:00Z" class="post-date">Tue, Apr 28, 2015</time>
   Kemarin di grup facebook Ubuntu Indonesia ada yang bertanya yang intinya
@@ -1701,31 +1717,31 @@ Bagaimana ekstrak file zip? $ unzip namafile.zip
 Nah, file kompresi ini bukanlah file installer, tetapi bisa jadi mengandung file installer. File installer di linux ada berbagai macam ekstensinya, contoh deb, rpm, tgz, dan sh.
   
   <div class="read-more-link">
-    <a href="/2015-04-28-ekstrak-file-tar-gz/">Read More…</a>
+    <a href="/post/2015-04-28-ekstrak-file-tar-gz/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-04-28-semnas-cloud-computing-in-government/">Seminar Nasional Cloud Computing in Government</a>
+    <a href="https://sasongko.web.id/post/2015-04-28-semnas-cloud-computing-in-government/">Seminar Nasional Cloud Computing in Government</a>
   </h1>
   <time datetime="2015-04-28T00:00:00Z" class="post-date">Tue, Apr 28, 2015</time>
   
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-04-25-hapus-kde-slackware/">Hapus KDE Slackware</a>
+    <a href="https://sasongko.web.id/post/2015-04-25-hapus-kde-slackware/">Hapus KDE Slackware</a>
   </h1>
   <time datetime="2015-04-25T00:00:00Z" class="post-date">Sat, Apr 25, 2015</time>
   Kalau kita install Slackware secara full, maka desktop environment yang terinstall adalah KDE. Bagi beberapa pengguna mungkin KDE menimbulkan masalah karena pemakaian RAM dan CPU Usage yang notabene tinggi daripada DE yang lain. BIsakah KDE dihapus? Bisa
 # slackpkg remove kde kemudian pilih paket apa saja yang akan dihapus dengan memberi tanda silang (x). Untuk memberi atau menghapus tanda x tekan spasi. Kalau sudah silahkan tekan Ok dan menunggu beberapa saat sampai uninstall KDE nya selesai.
   
   <div class="read-more-link">
-    <a href="/2015-04-25-hapus-kde-slackware/">Read More…</a>
+    <a href="/post/2015-04-25-hapus-kde-slackware/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-04-25-konversi-deb-tgz/">Konversi Paket deb ke tgz</a>
+    <a href="https://sasongko.web.id/post/2015-04-25-konversi-deb-tgz/">Konversi Paket deb ke tgz</a>
   </h1>
   <time datetime="2015-04-25T00:00:00Z" class="post-date">Sat, Apr 25, 2015</time>
   Untuk mengkonversi paket deb ke tgz kita bisa menggunakan alien.
@@ -1733,19 +1749,19 @@ Nah, file kompresi ini bukanlah file installer, tetapi bisa jadi mengandung file
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-04-10-install-maktabah-alqirthas/">Install Maktabah Alqirthas di BlankOn</a>
+    <a href="https://sasongko.web.id/post/2015-04-10-install-maktabah-alqirthas/">Install Maktabah Alqirthas di BlankOn</a>
   </h1>
   <time datetime="2015-04-08T00:00:00Z" class="post-date">Wed, Apr 8, 2015</time>
   Maktabah Alqirthas atau Maktabah Elkirtas atau Elkirtasse adalah padanan Maktabah Syamilah-nya Windows yang lintas platform, tersedia untuk Windows dan Linux. Bisa untuk membaca kitab kuning digital, mengubah, bahkan sampai membuat kitab sendiri. Tampilannya menarik, user friendly (bagi yang bisa bahasa Arab atau terbiasa membaca kitab Arab gundul).
 Cara menginstallnya mudah. Sebenarnya di repo BlankOn sudah ada, tapi ada sedikit masalah saat menambahkan kitab. Maka, di sini kita pakai yang dari sumber aslinya saja bukan dari repo BlankOn.
   
   <div class="read-more-link">
-    <a href="/2015-04-10-install-maktabah-alqirthas/">Read More…</a>
+    <a href="/post/2015-04-10-install-maktabah-alqirthas/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-04-01-install-wvdial-slackware/">Install WvDial di Slackware</a>
+    <a href="https://sasongko.web.id/post/2015-04-01-install-wvdial-slackware/">Install WvDial di Slackware</a>
   </h1>
   <time datetime="2015-04-01T00:00:00Z" class="post-date">Wed, Apr 1, 2015</time>
   Agar bisa internetan di Slackware dengan modem tentunya kita harus install dulu paket atau aplikasinya. Aplikasi yang penulis sarankan adalah WvDial. WvDial ini berbasis text/CLI, bisa untuk GSM maupun CDMA. Slackware yang digunakan Slackware 14.1.
@@ -1760,12 +1776,12 @@ WvStreams :
   Slackbuild : http://slackbuilds.
   
   <div class="read-more-link">
-    <a href="/2015-04-01-install-wvdial-slackware/">Read More…</a>
+    <a href="/post/2015-04-01-install-wvdial-slackware/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-12-30-ekstrak-file-tarxz/">Ekstrak File tar.xz</a>
+    <a href="https://sasongko.web.id/post/2014-12-30-ekstrak-file-tarxz/">Ekstrak File tar.xz</a>
   </h1>
   <time datetime="2014-12-30T00:00:00Z" class="post-date">Tue, Dec 30, 2014</time>
   Berkas atau file dengan ekstensi tar.xz adalah berkas kompresi/arsip. Untuk mengekstraknya mudah.
@@ -1773,25 +1789,25 @@ $ tar xpf nama_file.tar.xz
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-11-26-mencoba-blankon-liveiso/">Booting BlankOn LiveISO</a>
+    <a href="https://sasongko.web.id/post/2014-11-26-mencoba-blankon-liveiso/">Booting BlankOn LiveISO</a>
   </h1>
   <time datetime="2014-11-26T11:30:51Z" class="post-date">Wed, Nov 26, 2014</time>
   Bagi yang ingin menggunakan BlankOn, ada baiknya mencoba BlankOn dulu tanpa memasangnya. Percobaan ini biasanya disebut dengan istilah live. Umumnya percobaan ini menggunaan sarana atau media berupa DVD sehingga muncullah istilah livedvd, atau flashdisk yang kemudian memunculkan liveusb. Bisakah kita live tanpa dvd maupun usb? Bisa saja, asal kita punya ISO-nya. Kita akan me-live langsung dari komputer atau laptop yang sudah terpasang BlankOn atau distro linux lainnya. Dengan ini kita ga perlu repot membakar ISOnya ke DVD atau membuat liveusb segala.
   
   <div class="read-more-link">
-    <a href="/2014-11-26-mencoba-blankon-liveiso/">Read More…</a>
+    <a href="/post/2014-11-26-mencoba-blankon-liveiso/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-10-14-konek-internet-recovery/">Konek Internet Recovery Mode</a>
+    <a href="https://sasongko.web.id/post/2014-10-14-konek-internet-recovery/">Konek Internet Recovery Mode</a>
   </h1>
   <time datetime="2014-10-14T22:03:10Z" class="post-date">Tue, Oct 14, 2014</time>
   Secara default, saat kita berada dalam mode pemulihan (recovery mode) tidak akan bisa tersambung internet. Untuk menyambungkannya lakukan langkah berikut. Oya kali ini penggunaan dalam virtual box setting jaringan NAT. kemudian Lalu kita cek apakah sudah tersambung dengan melakukan ping ke google Yak, sudah konek! Alhamdulillah&hellip;&hellip;
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-10-14-konversi-vdi-ke-vmdk/">Konversi VDI ke VMDK</a>
+    <a href="https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/">Konversi VDI ke VMDK</a>
   </h1>
   <time datetime="2014-10-14T09:43:09Z" class="post-date">Tue, Oct 14, 2014</time>
   Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.
@@ -1800,25 +1816,25 @@ $ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%..
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-08-03-dpkg-force-overwrite/">DPKG Force Overwrite</a>
+    <a href="https://sasongko.web.id/post/2014-08-03-dpkg-force-overwrite/">DPKG Force Overwrite</a>
   </h1>
   <time datetime="2014-08-03T12:40:22Z" class="post-date">Sun, Aug 3, 2014</time>
   Alhamdulillah bertambah lagi 1 pengguna BlankOn, sahabat yang sudah saya anggap seperti saudara sendiri, memberikan kepercayaan kepada BlankOn untuk menjadi sistem operasi utama di laptop pertamanya. Dari 2 distro linux yang saya tawarkan dan telah dicobanya secara live, dia lebih memilih BlankOn 9 daripada Ubuntu 13.04. Pemasangan BlankOn lancar jaya. Karena ISO yang saya punya adalah ISO sesaat setelah rilis (saya unduh tanggal 18 Februari 2014), maka saya merasa wajib untuk memperbaruinya.
   
   <div class="read-more-link">
-    <a href="/2014-08-03-dpkg-force-overwrite/">Read More…</a>
+    <a href="/post/2014-08-03-dpkg-force-overwrite/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-09-07-video-chatting-dengan-pidgin/">Video Chatting dengan Pidgin</a>
+    <a href="https://sasongko.web.id/post/2014-09-07-video-chatting-dengan-pidgin/">Video Chatting dengan Pidgin</a>
   </h1>
   <time datetime="2014-07-09T11:30:51Z" class="post-date">Wed, Jul 9, 2014</time>
   BlankOn telah menyediakan aplikasi Pidgin untuk instant messaging atau chatting. Pidgin bisa digunakan untuk ngobrol di IRC, YM, dll. Bagaimana caranya? Video karya Pak Sokhibi ini akan menunjukkan caranya chattingan IRC dengan Pidgin. 
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-07-03-mengatur-indentasi-gedit/">Mengatur Indentasi gEdit</a>
+    <a href="https://sasongko.web.id/post/2014-07-03-mengatur-indentasi-gedit/">Mengatur Indentasi gEdit</a>
   </h1>
   <time datetime="2014-07-03T08:00:00Z" class="post-date">Thu, Jul 3, 2014</time>
   Untuk keperluan coding, bagi pengguna gedit sebagai text editor-nya, pengaturan indentasi sangatlah penting.
@@ -1828,7 +1844,7 @@ $ gsettings set org.gnome.gedit.preferences.editor tabs-size 4
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-06-23-mengenal-berkas-deb/">Mengenal Berkas .deb</a>
+    <a href="https://sasongko.web.id/post/2014-06-23-mengenal-berkas-deb/">Mengenal Berkas .deb</a>
   </h1>
   <time datetime="2014-06-23T23:02:12Z" class="post-date">Mon, Jun 23, 2014</time>
   File atau berkas berekstensi deb adalah file paket installer debian dan turunannya. File deb adalah sejenis dengan file rpm pada keluarga redhat. Tatanama file deb
@@ -1837,37 +1853,37 @@ skype-debian_4.2.0.13-1_i386.deb
 Nama paketnya skype-debian. Versinya 4.2.0.13-1. Arsitekturnya, i386 untuk 32 bit atau amd64 untuk 64 bit. Menampilkan informasi file deb Untuk mengetahui seluk beluk file deb gunakan dpkg -I
   
   <div class="read-more-link">
-    <a href="/2014-06-23-mengenal-berkas-deb/">Read More…</a>
+    <a href="/post/2014-06-23-mengenal-berkas-deb/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-06-02-seminar-blankon-jaringan/">Seminar BlankOn &amp; Jaringan</a>
+    <a href="https://sasongko.web.id/post/2014-06-02-seminar-blankon-jaringan/">Seminar BlankOn &amp; Jaringan</a>
   </h1>
   <time datetime="2014-06-02T00:00:00Z" class="post-date">Mon, Jun 2, 2014</time>
   
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-05-06-seminar-keamanan-teknologi-informasi/">Seminar Keamanan Teknologi Informasi</a>
+    <a href="https://sasongko.web.id/post/2014-05-06-seminar-keamanan-teknologi-informasi/">Seminar Keamanan Teknologi Informasi</a>
   </h1>
   <time datetime="2014-05-06T00:00:00Z" class="post-date">Tue, May 6, 2014</time>
   
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-04-26-blokir-situs-porno/">Blokir Situs Porno di BlankOn Linux</a>
+    <a href="https://sasongko.web.id/post/2014-04-26-blokir-situs-porno/">Blokir Situs Porno di BlankOn Linux</a>
   </h1>
   <time datetime="2014-04-26T11:30:51Z" class="post-date">Sat, Apr 26, 2014</time>
   BlankOn adalah salah satu distro linux karya Indonesia yang dibuat tidak dengan main-main. Ya, hanya salah satu satu distro karena ada distro lain seperti IGN. Pengembang BlankOn serius menjalankan misi dan filosofi BlankOn. BlankOn diambil dari kata Blank dan On, mengandung filosofi bahwa pengguna BlankOn diharapkan berubah dari Blank (kosong, belum tahu, belum sadar) menjadi On (tahu dan sadar sepenuhnya). Maksudnya? Pengguna diharapkan sadar akan ke-Indonesia-annya. Bangsa Indonesia sejak dulu kala dikenal sebagai bangsa yang bermartabat, bangsa yang menjunjung tinggi moral.
   
   <div class="read-more-link">
-    <a href="/2014-04-26-blokir-situs-porno/">Read More…</a>
+    <a href="/post/2014-04-26-blokir-situs-porno/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-04-21-bermain-mario-bros-blankon-linux/">Bermain Super Mario Bros di BlankOn Linux</a>
+    <a href="https://sasongko.web.id/post/2014-04-21-bermain-mario-bros-blankon-linux/">Bermain Super Mario Bros di BlankOn Linux</a>
   </h1>
   <time datetime="2014-04-21T03:12:57Z" class="post-date">Mon, Apr 21, 2014</time>
   Masih ingat dengan ini?
@@ -1876,12 +1892,12 @@ Ya! itu adalah permainan Super Mario Brothers atau yang lebih biasa disebut Mari
 Untuk memainkannya klik menu Aplikasi &gt; Permainan &gt; Super Mario Untuk memainkan mario di ubuntu caranya tidak jauh beda.
   
   <div class="read-more-link">
-    <a href="/2014-04-21-bermain-mario-bros-blankon-linux/">Read More…</a>
+    <a href="/post/2014-04-21-bermain-mario-bros-blankon-linux/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-04-17-apt-gantikan-apt-get/">apt Gantikan apt-get</a>
+    <a href="https://sasongko.web.id/post/2014-04-17-apt-gantikan-apt-get/">apt Gantikan apt-get</a>
   </h1>
   <time datetime="2014-04-17T11:30:51Z" class="post-date">Thu, Apr 17, 2014</time>
   Selain penggunaan Gnome 3.12, BlankOn X Tambora akan memiliki fitur baru yakni penyingkatan perintah apt-get menjadi apt saja. Contoh :
@@ -1890,19 +1906,19 @@ $ sudo apt update Tapi, fitur ini baru tersedia untuk Debian Sid dan BlankOn Tam
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-04-15-download-iso-blankon-zsync/">Download ISO BlankOn dengan ZSync</a>
+    <a href="https://sasongko.web.id/post/2014-04-15-download-iso-blankon-zsync/">Download ISO BlankOn dengan ZSync</a>
   </h1>
   <time datetime="2014-04-15T07:22:12Z" class="post-date">Tue, Apr 15, 2014</time>
   Sebagai anggota Quality Assurance (Tim Jaminan Kualitas) BlankOn, kami bertanggung jawab untuk menemukan kutu (bugs) sebanyak-banyaknya. Hampir setiap hari rilis iso baru dan 2 bulan sekali ada rilis kandidat baru, istilahnya sih jahitan.Tiap berkas iso baik itu i386 maupun amd64 berukuran sekitar 1GB. Kalau setiap hari iso tersebut harus diunduh, waaahhhh bakal tekor! :D
 Alhamdulillah iso BlankOn bisa diunduh dengan rsync dan zsync sehingga bisa lebih hemat karena tidak perlu mengunduh semua isi iso tapi hanya perubahannya saja.
   
   <div class="read-more-link">
-    <a href="/2014-04-15-download-iso-blankon-zsync/">Read More…</a>
+    <a href="/post/2014-04-15-download-iso-blankon-zsync/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-04-05-mengetahui-versi-linux-terinstall/">Mengetahui Versi Linux Terinstall</a>
+    <a href="https://sasongko.web.id/post/2014-04-05-mengetahui-versi-linux-terinstall/">Mengetahui Versi Linux Terinstall</a>
   </h1>
   <time datetime="2014-04-05T05:22:12Z" class="post-date">Sat, Apr 5, 2014</time>
   Untuk mengetahui linux apa yang terinstall atau terpasang dapat menggunakan perintah
@@ -1911,7 +1927,7 @@ $ lsb_release -a No LSB modules are available. Distributor ID:Blankon Descriptio
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-03-28-mengetahui-tanggal-sekarang/">Mengetahui Tanggal Sekarang</a>
+    <a href="https://sasongko.web.id/post/2014-03-28-mengetahui-tanggal-sekarang/">Mengetahui Tanggal Sekarang</a>
   </h1>
   <time datetime="2014-03-28T22:15:25Z" class="post-date">Fri, Mar 28, 2014</time>
   BlankOn secara default sudah menampilkan panel tanggal di sebelah kanan. Itu saat kita menggunakan dalam mode grafis. Lalu bagaimana kalau kita berada dalam CLI? Perintah date adalah jawabannya.
@@ -1919,7 +1935,7 @@ $ date Jum Mar 28 22:15:25 WIB 2014 Dari perintah tersebut tampak bahwa sekarang
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-03-24-menggunakan-perintah-echo/">Menggunakan Perintah Echo</a>
+    <a href="https://sasongko.web.id/post/2014-03-24-menggunakan-perintah-echo/">Menggunakan Perintah Echo</a>
   </h1>
   <time datetime="2014-03-24T10:01:12Z" class="post-date">Mon, Mar 24, 2014</time>
   Echo merupakan perintah bahasa bash (bahasa yang digunakan terminal) untuk menampilkan output ke monitor.
@@ -1928,7 +1944,7 @@ $ echo &quot;halloooo.....&quot; halloooo..... $ echo &quot;BlankOn Linux Indone
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-03-23-wget-linux-download-manager/">Menggunakan WGet Linux Download Manager</a>
+    <a href="https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/">Menggunakan WGet Linux Download Manager</a>
   </h1>
   <time datetime="2014-03-23T10:28:12Z" class="post-date">Sun, Mar 23, 2014</time>
   Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume. Cara menggunakannya mudah.
@@ -1937,35 +1953,60 @@ $ wget [url] -c Untuk lebih lengkapnya tentang wget ada di manual wget.
 $ wget -h GNU Wget 1.15, adalah sebuah non-interaktif network retriever.
   
   <div class="read-more-link">
-    <a href="/2014-03-23-wget-linux-download-manager/">Read More…</a>
+    <a href="/post/2014-03-23-wget-linux-download-manager/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-03-01-disable-automount/">Disable Automount BlankOn 9 Suroboyo</a>
+    <a href="https://sasongko.web.id/post/2014-03-01-disable-automount/">Disable Automount BlankOn 9 Suroboyo</a>
   </h1>
   <time datetime="2014-03-01T11:30:51Z" class="post-date">Sat, Mar 1, 2014</time>
   Walaupun diturunkan dari debian, BlankOn Suroboyo berbeda dengan debian karena pada Suroboyo secara default akan secara otomatis membuka media simpan (flashdisk misalnya) setelah media disambungkan ke komputer/laptop. Fitur ini dinamakan automount-open media yang agak mirip dengan autorun pada windows. Beberapa orang mungkin merasa terganggu dan ingin mematikan. Atau sebaliknya, pengguna debian justru ingin mengaktifkan fitur ini. Bagaimana cara mengaturnya?
 $ gsettings set org.gnome.desktop.media-handling automount false $ gsettings set org.gnome.desktop.media-handling automount-open false Atau untuk tampilan grafisnya gunakan dconf-editor / penyunting dconf yang mana harus install dulu, sedangkan debian tidak usah karena dconf-editor sudah terpasang.
   
   <div class="read-more-link">
-    <a href="/2014-03-01-disable-automount/">Read More…</a>
+    <a href="/post/2014-03-01-disable-automount/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2013-11-10-definisi-komputer-forensik/">Definisi Komputer Forensik</a>
+    <a href="https://sasongko.web.id/post/2013-11-10-definisi-komputer-forensik/">Definisi Komputer Forensik</a>
   </h1>
   <time datetime="2013-11-10T17:03:56Z" class="post-date">Sun, Nov 10, 2013</time>
   Digital forensik atau Computer forensic adalah serangkaian metodologi yang digunakan dalam melakukan akuisisi (imaging), pengumpulan, analisa, serta presentasi bukti digital. Bukti digital mencakup setiap informasi elektronik yang disimpan atau diolah menggunakan teknologi komputer sehingga dapat digunakan untuk mendukung atau menolak tentang bagaimana sebuah insiden atau tindakan pelanggaran hukum terjadi. Karena keterlibatan proses computer forensic adalah setelah terjadinya suatu insiden maka metodologi yang tepat sangat diperlukan untuk mempercepat proses investigasi serta mendapatkan bukti-bukti digital yang akurat.
   
   <div class="read-more-link">
-    <a href="/2013-11-10-definisi-komputer-forensik/">Read More…</a>
+    <a href="/post/2013-11-10-definisi-komputer-forensik/">Read More…</a>
   </div>
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-10-16-hapus-kernel-lama-debian/">Hapus Kernel Lama Debian</a>
+    <a href="https://sasongko.web.id/logo/">Makna Logo</a>
+  </h1>
+  <time datetime="2013-11-10T00:00:00Z" class="post-date">Sun, Nov 10, 2013</time>
+  Warna dasar hijau. Hijau adalah warna dedaunan. Daun berwarna hijau karena mengandung klorofil. Klorofil menyerap sinar matahari kemudian terjadi fotosintesis yang sangat bermanfaat dalam kehidupan, baik kehidupan tumbuhan itu sendiri maupun makhluk lain (misalnya manusia dan hewan) yang ada di sekitarnya. Kami berharap blog ini dapat memberikan manfaat bagi masyarakat luas.
+Tulisan Catatan Sasongko. Adalah judul blog ini.
+Tulisan Ilmu adalah buruan dan tulisan adalah pengikatnya. Tulisan tersebut adalah perkataan Imam Syafi&rsquo;iy dalam kitab Ad Diwan.
+  
+  <div class="read-more-link">
+    <a href="/logo/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://sasongko.web.id/about/">Profil</a>
+  </h1>
+  <time datetime="2013-11-10T00:00:00Z" class="post-date">Sun, Nov 10, 2013</time>
+  Blog ini merupakan sebagian dokumentasi atau catatan pribadi dari Sasongko Bawono, seorang pengguna GNU/Linux (untuk selanjutnya hanya saya sebut linux) amatir, berisi tentang penggunaan linux dan free and open source software (FOSS) lainnya. Penulis bukanlah orang yang mahir sehingga masih memerlukan masukan, kritik, dan saran agar menjadi lebih baik lagi. Silahkan sampaikan melalui surel/email.
+Linux yang digunakan sehari-hari adalah Slackware64 current. Walaupun demikian, pada blog ini masih tersimpan beberapa catatan saat menggunakan BlankOn.
+  
+  <div class="read-more-link">
+    <a href="/about/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/">Hapus Kernel Lama Debian</a>
   </h1>
   <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
   Setelah upgrade kernel, ada yang kurang sreg. Ternyata kernelnya malah jadi ada 2. ini terlihat di grub
@@ -1974,7 +2015,7 @@ OK, kernel yang lama (2.6.32-5-686) dihapus saja.
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2014-06-24-penipuan-atas-nama-toyota/">Kompetisi Tipuan Atas Nama Toyota</a>
+    <a href="https://sasongko.web.id/post/2014-06-24-penipuan-atas-nama-toyota/">Kompetisi Tipuan Atas Nama Toyota</a>
   </h1>
   <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
   Kemarin penulis mendapat email, “Tantangan Buat Para Blogger SEO” yang isinya Tapi, karena curiga ini penipuan, penulis cek di website resmi Toyota ternyata tidak ada informasi kompetisi atau lomba menulis tersebut. Kemudian penulis tanyakan ke Customer Support Toyota via email
@@ -1983,7 +2024,7 @@ Jadi, mari kita berinternet secara sehat, tidak melakukan penipuan dan waspada t
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://sasongko.web.id/2015-02-09-lomba-aplikasi-html5/">Lomba Aplikasi HTML5 BlankOn</a>
+    <a href="https://sasongko.web.id/post/2015-02-09-lomba-aplikasi-html5/">Lomba Aplikasi HTML5 BlankOn</a>
   </h1>
   <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
   

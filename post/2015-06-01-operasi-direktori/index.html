@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Operasi Direktori di Linux &middot; Catatan Sasongko</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://sasongko.web.id/"><h1>Catatan Sasongko</h1></a>
+	 
+	  <p class="lead">
+       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://sasongko.web.id/">Home</a> </li>
+        
+		<li><a href="https://sasongko.web.id/about">Profil</a></li>
+		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
+      </ul>
+    </nav>
+	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
+ <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+
+		</div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Operasi Direktori di Linux</h1>
+  <time datetime=2015-06-01T00:00:00Z class="post-date">Mon, Jun 1, 2015</time>
+  <p>Operasi direktori/folder adalah suatu hal yang mendasar di linux. Walaupun sekarang banyak desktop environment yang menyebabkan sedikit interaksi dengan terminal langsung karena tinggal klik saja dalam mode grafis (GUI), kami akan tetap sampaikan bagaimana melakukannya dalam mode teks (CLI).</p>
+<h1 id="mengetahui-posisi-direktori-sekarang">Mengetahui posisi direktori sekarang</h1>
+<p>Gunakan</p>
+<pre><code>pwd
+</code></pre><p>untuk mengetahui saat ini aktif di mana. Contoh</p>
+<pre><code>$ pwd
+/home/sasongko
+</code></pre><p>Tampak bahwa direktori saat ini adalah di /home/sasongko.</p>
+<h1 id="menampilkan-isi-direktori">Menampilkan isi direktori</h1>
+<pre><code>ls /direktori
+</code></pre><p>Contoh berikut akan menampilkan isi dari direktori /etc</p>
+<pre><code>$ ls /etc
+ConsoleKit		   hosts.allow		  pine.conf
+DIR_COLORS		   hosts.deny		  pkcs11
+HOSTNAME		   hosts.equiv		  pm
+ImageMagick-6		   hp			  polkit-1
+NetworkManager		   htdig		  ppp
+UPower			   httpd		  printcap
+X11			   identd.conf		  profile
+a2ps-site.cfg		   idn.conf.sample	  profile.d
+a2ps.cfg		   idnalias.conf.sample   proftpd.conf
+acpi			   im_palette-small.pal   protocols
+adjtime			   im_palette-tiny.pal	  quotagrpadmins-sample
+alsa			   im_palette.pal	  quotatab-sample
+anthy-conf		   imrc			  radiusclient
+asciidoc		   inetd.conf		  random-seed
+asound.state		   init.d		  rc.d
+at-spi2			   inittab		  rc0.d
+at.deny			   inputrc		  rc1.d
+auto.master		   iproute2		  rc2.d
+auto.master.d		   irssi.conf		  rc3.d
+auto.misc		   issue		  rc4.d
+auto.net		   issue.net		  rc5.d
+auto.smb		   joe			  rc6.d
+autofs_ldap_auth.conf	   kde			  rc_keymaps
+avahi			   ld.so.cache		  rc_maps.cfg
+bash_completion.d	   ld.so.conf		  request-key.conf
+bind.keys		   lftp.conf		  request-key.d
+bluetooth		   libnl		  resolv.conf
+bootptab		   lilo.conf_example	  rmt
+ca-certificates		   localtime		  rndc.key
+ca-certificates.conf	   localtime-copied-from  rpc
+cgconfig.conf		   login.access		  samba
+cgred.conf		   login.defs		  sane.d
+cgrules.conf		   logrotate.conf	  scim
+cgsnapshot_blacklist.conf  logrotate.d		  screenrc
+conntrackd		   lrzip.conf		  securetty
+cron.d			   lvm			  sensors.d
+cron.daily		   lxc			  sensors3.conf
+cron.hourly		   lynx.cfg		  serial.conf
+cron.monthly		   lynx.lss		  services
+cron.weekly		   mail			  sgml
+crypttab		   mc			  shadow
+csh.login		   mcelog		  shadow-
+cups			   mdadm.conf		  shells
+cupshelpers		   mediaprm		  skel
+dbus-1			   mercurial		  slackpkg
+default			   minicom.users	  slackware-version
+dhclient.conf		   minirc.dfl		  slrn.rc
+dhclient.conf.example	   misc			  slsh.rc
+dhcpcd.conf		   mke2fs.conf		  smartd.conf
+dhcpcd.duid		   mkinitrd.conf.sample   snmp
+dhcpd.conf		   modprobe.d		  soma
+dhcpd.conf.example	   motd			  ssh
+dialogrc		   mplayer		  ssl
+distcc			   mtab			  stunnel
+dnsmasq.conf		   mtab.fuselock	  sudoers
+dnsmasq.d		   mtools.conf		  sudoers.d
+drirc			   mutt			  syslog.conf
+enscript.cfg		   my.cnf		  sysstat
+esd.conf		   my.cnf.d		  termcap
+ethertypes		   mysqlaccess.conf	  termcap-BSD
+exports			   nail.rc		  termcap-Linux
+fb.modes		   named.conf		  tin
+file			   nanorc		  udev
+fonts			   netatalk		  udisks2
+foomatic		   netgroup		  ulogd.conf
+fstab			   networks		  uniconf.conf
+ftpusers		   nfsmount.conf	  updatedb.conf
+gamin			   nntpserver		  usb_modeswitch.conf
+gconf			   nscd.conf		  usb_modeswitch.d
+genpowerd.conf		   nsswitch.conf	  uucp
+gettydefs		   nsswitch.conf-nis	  vga
+gimp			   ntp			  virtuoso.ini
+gnupg			   ntp.conf		  vsftpd.conf
+gpm-root.conf		   ntp.conf.orig	  warnquota.conf-sample
+gpm-syn.conf		   obex-data-server	  wgetrc
+gpm-twiddler.conf	   openldap		  wpa_supplicant.conf
+group			   openvpn		  wvdial.conf
+group-			   organization		  xboard.conf
+grub.d			   os-release		  xdg
+gshadow			   pango		  xml
+gtk			   passwd		  xpdfrc
+gtk-2.0			   passwd-		  yp.conf
+gtk-3.0			   pcmcia		  ytalkrc
+hardwareclock		   pear.conf		  zprofile
+host.conf		   php
+hosts			   php-fpm
+</code></pre><h1 id="masuk-ke-direktori">Masuk ke direktori</h1>
+<p>Gunakan</p>
+<pre><code>cd /direktori
+</code></pre><p>untuk masuk atau berpindah ke direktori lainnya.</p>
+<p>Untuk berpindah ke direktori di atasnya</p>
+<pre><code>cd ..
+</code></pre><p>Sedangkan untuk kembali ke direktori home</p>
+<pre><code>cd
+</code></pre><h1 id="membuat-direktori-baru">Membuat direktori baru</h1>
+<pre><code>mkdir /direktori_yang_ingin_dibuat
+</code></pre><h1 id="menyalin-direktori">Menyalin direktori</h1>
+<pre><code>cp /direktori_awal /direktori_baru
+</code></pre><h1 id="memindah-direktori">Memindah direktori</h1>
+<pre><code>mv /direktori_awal /direktori_baru
+</code></pre><h1 id="menghapus-direktori">Menghapus direktori</h1>
+<p>Kalau direktori itu kosong</p>
+<pre><code>rmdir /direktori
+</code></pre><p>Kalau ada isinya dan ingin menghapus direktori beserta isinya</p>
+<pre><code>rm -r /direktori
+</code></pre>
+</div>
+
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+      
+    
+  </body>
+</html>

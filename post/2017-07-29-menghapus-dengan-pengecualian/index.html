@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Menghapus dengan Pengecualian &middot; Catatan Sasongko</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://sasongko.web.id/"><h1>Catatan Sasongko</h1></a>
+	 
+	  <p class="lead">
+       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://sasongko.web.id/">Home</a> </li>
+        
+		<li><a href="https://sasongko.web.id/about">Profil</a></li>
+		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
+      </ul>
+    </nav>
+	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
+ <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+
+		</div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Menghapus dengan Pengecualian</h1>
+  <time datetime=2017-07-29T00:00:00Z class="post-date">Sat, Jul 29, 2017</time>
+  <p>Sebagai pengguna <em>SBo</em> dan <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->, file yang dihasilkan proses <em>build</em> ditaruh di <!-- raw HTML omitted -->/tmp<!-- raw HTML omitted -->. Folder ini lama-lama semakin banyak isinya. Padahal filenya bisa dikatakan tidak terpakai. <em>Script</em> masih aman tersimpan rapi di <!-- raw HTML omitted -->/var/lib/sbopkg<!-- raw HTML omitted -->. Sedangkan <em>source</em>-nya di <!-- raw HTML omitted -->/var/cache/sbopkg<!-- raw HTML omitted -->.</p>
+<p>Semua yang ada di folder <!-- raw HTML omitted -->/tmp<!-- raw HTML omitted --> akan saya hapus kecuali file yang berekstensi <!-- raw HTML omitted -->txt<!-- raw HTML omitted -->. Saya memang kadang iseng nulis-nulis sesuatu kemudian saya simpan dengan ekstensi <!-- raw HTML omitted -->txt<!-- raw HTML omitted --> dan ditaruh di <!-- raw HTML omitted -->/tmp<!-- raw HTML omitted -->. File-file ini tidak mau saya hapus, buat dibaca jadi hiburan sendiri kelak bahwa dulu pernah iseng nulis seperti itu&hellip; Hahahaha&hellip;..</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /tmp
+shopt -s extglob
+rm -rv !<span style="color:#f92672">(</span>*.txt<span style="color:#f92672">)</span>
+</code></pre></div>
+</div>
+
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+      
+    
+  </body>
+</html>

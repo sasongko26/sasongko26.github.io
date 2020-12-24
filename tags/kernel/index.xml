@@ -6,13 +6,23 @@
     <description>Recent content in kernel on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/kernel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/kernel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Start up time kernel 5.10.2</title>
+      <link>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</link>
+      <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</guid>
+      <description>Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam main tree slackware current. Saat catatan ini dituliskan, sudah &amp;ldquo;mendarat&amp;rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk start up? Yang dimaksud start up di sini adalah kondisi dari eksekusi elilo dan initrd sampai muncul login prompt.
+$ dmesg | tail -5 # perintah ini dieksekusi sebagai root walaupun prompt sign-nya user biasa [ 20.</description>
+    </item>
+    
     <item>
       <title>Menggunakan Kernel Huge 4.14.0</title>
-      <link>https://sasongko.web.id/2017-11-22-switch-huge-kernel-4-14/</link>
+      <link>https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/</link>
       <pubDate>Wed, 22 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sasongko.web.id/2017-11-22-switch-huge-kernel-4-14/</guid>
+      <guid>https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/</guid>
       <description>Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang bootloop apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. Update terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui rebuilt elilo.
 Setelah upgrade terutama untuk elilojangan lupa menjalankan
 eliloconfig yang secara otomatis juga akan meng- generate elilo.confyang berisi pengaturan boot dengan kernel huge.
@@ -21,10 +31,10 @@ Namun, saya kurang suka dengan cara otomatis ini. Dan saya memilih melakukannya 
     
     <item>
       <title>Kernel 4.14.0 Masuk -Current, Beralih ke Kernel Generic</title>
-      <link>https://sasongko.web.id/2017-11-18-switch-generic-kernel-4-14/</link>
+      <link>https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/</link>
       <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sasongko.web.id/2017-11-18-switch-generic-kernel-4-14/</guid>
+      <guid>https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/</guid>
       <description>Setelah 2 minggu, -Current kembali mendapatkan update Jum&amp;rsquo;at kemarin tanggal 17 November 2017. Banyak update, ada yang upgraded, rebuilt, added, dan removed. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.
 Setelah upgrade dan eliloconfigkemudian restart, ternyata muncul masalah! Bootloop! Loading vmlinuz&amp;hellip; langsung reboot. Begitu seterusnya.
 Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk recovery-nya lebih mudah. Boot dari DVD kemudian waktu muncul grubpilih opsi yang intinya detect another operating system (persisnya saya lupa).</description>
@@ -32,20 +42,20 @@ Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk rec
     
     <item>
       <title>Akibat Lupa eliloconfig</title>
-      <link>https://sasongko.web.id/2017-07-05-akibat-lupa-eliloconfig/</link>
+      <link>https://sasongko.web.id/post/2017-07-05-akibat-lupa-eliloconfig/</link>
       <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sasongko.web.id/2017-07-05-akibat-lupa-eliloconfig/</guid>
+      <guid>https://sasongko.web.id/post/2017-07-05-akibat-lupa-eliloconfig/</guid>
       <description>Kemarin melihat ChangeLog ada beberapa update yang sebagian di antaranya adalah security fix. Salah satu update adalah kernel. Melakukan upgrade semuanya baik-baik saja dan lanjut shutdown. Siang ini, bootingpun masih fine dan no problem. Begitu juga login. Baru terasa saat ingin masuk desktop malah gagal.
 $ startx xauth: file /home/sasongko/.serverauth.2717 does not exist X.Org X Server 1.19.3 Release Date: 2017-03-15 X Protocol Version 11, Revision 0 Build Operating System: Slackware 14.</description>
     </item>
     
     <item>
       <title>[SOLVED] Slackware Current Susah Booting dan Shutdown</title>
-      <link>https://sasongko.web.id/2016-05-05-solved-slackware-current-hang/</link>
+      <link>https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/</link>
       <pubDate>Thu, 05 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sasongko.web.id/2016-05-05-solved-slackware-current-hang/</guid>
+      <guid>https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/</guid>
       <description>Tiga bulan lalu saya sambat Slackware current [hang]({% post_url 2016-02-08-slackware-current-hang %}) saat booting dan shutdown. Sekarang masalah tersebut teratasi.
 Secara default laptop Asus X453MA diperuntukkan bagi pengguna Microsoft Windows. Hal ini terlihat dari web resminya yang menyediakan driver hanya untuk Windows khususnya Windows 8.1 dan Windows 10. Juga terlihat dari &amp;ldquo;paket bundling&amp;rdquo;-nya yang menyediakan Windows preinstalled.
 Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.1 oleh pihak toko. Awalnya saya pilih kosongan aja sesuai aslinya.</description>
@@ -53,10 +63,10 @@ Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.
     
     <item>
       <title>Mouse Stuck</title>
-      <link>https://sasongko.web.id/2016-02-26-mouse-stuck/</link>
+      <link>https://sasongko.web.id/post/2016-02-26-mouse-stuck/</link>
       <pubDate>Fri, 26 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sasongko.web.id/2016-02-26-mouse-stuck/</guid>
+      <guid>https://sasongko.web.id/post/2016-02-26-mouse-stuck/</guid>
       <description>Setelah upgrade current ternyata ada masalah dengan mouse. Mouse mengalami stuck, ga ada respons saat drag, drop, bahkan ga bisa klik baik klik kiri maupun kanan. Dari grup di telegram dapat informasi dari Pak Willy hal serupa juga dialami oleh beberapa slacker yang lainnya. Alhamdulillah masalah ini bisa solved dengan mudahnya di Slackware64 saya.
 Dengan akses root copas /lib/modprobe.d/psmouse.confke /etc/modprobe.d. Kemudian uncomment baris terakhir.
 ############################################################################## # Do not edit this file; instead, copy it to /etc/modprobe.</description>
@@ -64,20 +74,20 @@ Dengan akses root copas /lib/modprobe.d/psmouse.confke /etc/modprobe.d. Kemudian
     
     <item>
       <title>Slackware Current Susah Booting dan Shutdown</title>
-      <link>https://sasongko.web.id/2016-02-08-slackware-current-hang/</link>
+      <link>https://sasongko.web.id/post/2016-02-08-slackware-current-hang/</link>
       <pubDate>Mon, 08 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sasongko.web.id/2016-02-08-slackware-current-hang/</guid>
+      <guid>https://sasongko.web.id/post/2016-02-08-slackware-current-hang/</guid>
       <description>Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering stuck saat boot dan shutdown.
 Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis ID-Slackware, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.</description>
     </item>
     
     <item>
       <title>Hapus Kernel Lama Debian</title>
-      <link>https://sasongko.web.id/2014-10-16-hapus-kernel-lama-debian/</link>
+      <link>https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sasongko.web.id/2014-10-16-hapus-kernel-lama-debian/</guid>
+      <guid>https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/</guid>
       <description>Setelah upgrade kernel, ada yang kurang sreg. Ternyata kernelnya malah jadi ada 2. ini terlihat di grub
 OK, kernel yang lama (2.6.32-5-686) dihapus saja.
 # apt-get remove linux-image-2.6.32-5-686 kemudian restart.</description>
