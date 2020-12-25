@@ -6,7 +6,28 @@
     <description>Recent content in forensik on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/forensik/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/forensik/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengetahui kapan komputer dinyalakan</title>
+      <link>https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</guid>
+      <description>Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan dmesg
+$ dmesg -T | head -1 [Fri Dec 25 00:39:42 2020] Linux version 5.10.2 Penjelasan command :
+ eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp | adalah pipe, untu menjadikan output dmesg sebagai input untuk head head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya [Fri Dec 25 00:39:42 2020] Linux version 5.</description>
+    </item>
+    
+    <item>
+      <title>Start up time kernel 5.10.2</title>
+      <link>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</link>
+      <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</guid>
+      <description>Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam main tree slackware current. Saat catatan ini dituliskan, sudah &amp;ldquo;mendarat&amp;rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk start up. Yang dimaksud start up di sini adalah kondisi dari eksekusi elilo dan initrd sampai muncul login prompt.
+$ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segment Routing with IPv6 [ 32.</description>
+    </item>
+    
     <item>
       <title>Deteksi duplikasi file</title>
       <link>https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/</link>

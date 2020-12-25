@@ -32,7 +32,7 @@
   <aside class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="https://sasongko.web.id/"><h1>Catatan Sasongko</h1></a>
+      <a href="https://sasongko.web.id/"><h2>Catatan Sasongko</h2></a>
 	 
 	  <p class="lead">
        Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
@@ -57,11 +57,24 @@
     <div class="posts">
 <article class="post">
   <h1 class="post-title">
+    <a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Mengetahui kapan komputer dinyalakan</a>
+  </h1>
+  <time datetime="2020-12-25T00:00:00Z" class="post-date">Fri, Dec 25, 2020</time>
+  Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan dmesg
+$ dmesg -T | head -1 [Fri Dec 25 00:39:42 2020] Linux version 5.10.2 Penjelasan command :
+ eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp | adalah pipe, untu menjadikan output dmesg sebagai input untuk head head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya [Fri Dec 25 00:39:42 2020] Linux version 5.
+  
+  <div class="read-more-link">
+    <a href="/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
     <a href="https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/">Start up time kernel 5.10.2</a>
   </h1>
   <time datetime="2020-12-24T00:00:00Z" class="post-date">Thu, Dec 24, 2020</time>
-  Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam main tree slackware current. Saat catatan ini dituliskan, sudah &ldquo;mendarat&rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk start up? Yang dimaksud start up di sini adalah kondisi dari eksekusi elilo dan initrd sampai muncul login prompt.
-$ dmesg | tail -5 # perintah ini dieksekusi sebagai root walaupun prompt sign-nya user biasa [ 20.
+  Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam main tree slackware current. Saat catatan ini dituliskan, sudah &ldquo;mendarat&rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk start up. Yang dimaksud start up di sini adalah kondisi dari eksekusi elilo dan initrd sampai muncul login prompt.
+$ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segment Routing with IPv6 [ 32.
   
   <div class="read-more-link">
     <a href="/post/2020-12-24-startup-time-kernel-5-10-2/">Read More…</a>
