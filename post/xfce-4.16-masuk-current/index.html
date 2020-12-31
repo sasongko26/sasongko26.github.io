@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Fix sbotools Perl unescaped left brace in regex is deprecated here &middot; Catatan Sasongko</title>
+  <title>Xfce 4.16 Masuk Current &middot; Catatan Sasongko</title>
   <meta name="description" content="" />
 
   
@@ -54,12 +54,20 @@
 
     <main class="content container">
     <div class="post">
-  <h1>Fix sbotools Perl unescaped left brace in regex is deprecated here</h1>
-  <time datetime=2018-07-17T00:00:00Z class="post-date">Tue, Jul 17, 2018</time>
-  <p>Siang ini, sudah agak lama tidak <em>check update</em> paket-paket dari <a href="http://slackbuilds.org">SBo</a>. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sbocheck <span style="color:#75715e"># command ini dijalankan oleh root</span>
-Unescaped left brace in regex is deprecated here <span style="color:#f92672">(</span>and will be fatal in Perl 5.32<span style="color:#f92672">)</span>, passed through in regex; marked by &lt;-- HERE in m/<span style="color:#ae81ff">\$</span><span style="color:#f92672">({</span> &lt;-- HERE |<span style="color:#f92672">)[</span>A-Za-z0-9_<span style="color:#f92672">]</span>+<span style="color:#f92672">(}</span>|<span style="color:#f92672">)</span>/ at /usr/share/perl5/SBO/Lib/Build.pm line <span style="color:#ae81ff">244</span>
-</code></pre></div><p>Ada masalah ternyata dan masalahnya di <a href="http://sasongko.web.id/tags/#perl">Perl</a>. Simpel sih solusinya. Buka file <!-- raw HTML omitted -->/usr/share/perl5/SBO/Lib/Build.pm<!-- raw HTML omitted -->, pada <em>line</em> 244 karakter <!-- raw HTML omitted -->{<!-- raw HTML omitted --> diganti <!-- raw HTML omitted -->{<!-- raw HTML omitted --></p>
+  <h1>Xfce 4.16 Masuk Current</h1>
+  <time datetime=2020-12-28T00:00:00Z class="post-date">Mon, Dec 28, 2020</time>
+  <p>Pagi ini, Patrick memasukkan <strong>xfce 4.16</strong> ke <em>slackware current main tree</em> tanpa singgah di /testing. <em>Interface</em> <strong>xfce 4.16</strong> lebih cantik dan menarik dibanding sebelumnya. Demikian pula <em>icons</em>-nya.</p>
+<p>Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown <strong>xfce</strong> stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses <em>development</em>.</p>
+<p>Ada beberapa hal yang menjadi catatan buat penulis terkait <strong>xfce 4.16</strong> ini, yaitu</p>
+<ol>
+<li><em>Interface</em> lebih cantik dan menarik</li>
+<li>Penambahan <strong>xfce4-panel-profiles</strong> yang memungkinkan untuk menyimpan profil/konfigurasi panel. Sangat bermanfaat bagi mereka yang suka berganti-ganti tampilan panel, ukuran dan letak panel, serta <em>shortcut</em> apa saja yang berada di panel.</li>
+<li>Perubahan letak tombol <strong>Open</strong> atau <strong>Save</strong> pada <em>dialog box</em> yang sebelumnya di bawah menjadi di atas. Ini memudahkan pengguna. Tidak usah geser <em>mouse</em> terlalu jauh atau repot <strong>tab</strong> berkali-kali.</li>
+<li>Penambahan <strong>libgtop</strong> yang memungkinkan <em>user</em> mengetahui informasi singkat sistem melalui tab <strong>System</strong> pada <strong>About Xfce</strong></li>
+</ol>
+<p><img src="/gambar/about-xfce-4.14.png" alt="about xfce 4.14">
+<img src="/gambar/about-xfce-4.16.png" alt="about xfce 4.16"></p>
+<p>Dan, yang utama adalah, <strong>xfce</strong> tetap menjadi <em>desktop environment</em> yang ringan, cantik dan <em>powerfull</em>.</p>
 
 </div>
 
