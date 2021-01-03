@@ -1,80 +1,536 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html lang="en">
+
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>xfce &middot; Catatan Sasongko</title>
-  <meta name="description" content="" />
+
+    
 
   
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
 
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
 
   
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
 
   
-  <link href="https://sasongko.web.id/tags/xfce/index.xml" rel="alternate" type="application/rss+xml" title="Catatan Sasongko" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
+    href='/tags/xfce/index.xml' />
+  
+
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
 </head>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://sasongko.web.id/"><h2>Catatan Sasongko</h2></a>
-	 
-	  <p class="lead">
-       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
-      </p>
-    </div>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://sasongko.web.id/">Home</a> </li>
-        
-		<li><a href="https://sasongko.web.id/about">Profil</a></li>
-		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
-      </ul>
-    </nav>
-	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
- <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+<body>
+<div id="layout">
 
-		</div>
-</aside>
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
 
-    <main class="content container">
-    <ul class="posts">
-<li>
-    <span><a href="https://sasongko.web.id/post/xfce-4.16-masuk-current/">Xfce 4.16 Masuk Current</a> <time class="pull-right post-list" datetime="2020-12-28T00:00:00Z">Mon, Dec 28, 2020</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2020-02-01-fullscreen-firefox/">Fullscreen Mozilla Firefox</a> <time class="pull-right post-list" datetime="2020-02-01T00:00:00Z">Sat, Feb 1, 2020</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2018-06-23-kosongkan-trash/">Hapus Trash via Command Line</a> <time class="pull-right post-list" datetime="2018-06-23T00:00:00Z">Sat, Jun 23, 2018</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/">Terperangkap WindowMaker</a> <time class="pull-right post-list" datetime="2016-07-28T00:00:00Z">Thu, Jul 28, 2016</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2016-07-10-set-default-brightness/">Set Default Brightness</a> <time class="pull-right post-list" datetime="2016-07-10T00:00:00Z">Sun, Jul 10, 2016</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/">Ganti Theme Xfce</a> <time class="pull-right post-list" datetime="2016-06-30T00:00:00Z">Thu, Jun 30, 2016</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2015-11-06-ganti-de/">Ganti Desktop Environment</a> <time class="pull-right post-list" datetime="2015-11-06T00:00:00Z">Fri, Nov 6, 2015</time></span>
-  </li>
-</ul>
-    </main>
+  
 
-    
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
       
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
     
-  </body>
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href='/tags/xfce/index.xml'><i
+          class="fas fa-rss"></i>RSS</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>xfce</h1>
+</div>
+
+<div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/">Xfce 4.16 Masuk Current</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>28 Dec 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Pagi ini, Patrick memasukkan xfce 4.16 ke slackware current main tree tanpa singgah di /testing. Interface xfce 4.16 lebih cantik dan menarik dibanding sebelumnya. Demikian pula icons-nya.
+Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown xfce stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses development.
+Ada beberapa hal yang menjadi catatan buat penulis terkait xfce 4.16 ini, yaitu
+ Interface lebih cantik dan menarik Penambahan xfce4-panel-profiles yang memungkinkan untuk menyimpan profil/konfigurasi panel.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2020-12-28-xfce-4.16-masuk-current/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-02-01-fullscreen-firefox/">Fullscreen Mozilla Firefox</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Feb 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/firefox">firefox</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Terkadang saat browsing perlu fokus sehingga tampilan pun butuh fullscreen. Pada Mozilla Firefox, secara default F11adalah tombol untuk fullscreen dan exit fullscreen. Akan tetapi, hal ini tidak berlaku pada kami, Slackware64 current dengan desktop environment XFCE yang berjalan di laptop Lenovo Ideapad 110-14IBR. Pada perangkat kami ini, F11untuk mengurangi brightness. Maka, untuk fullscreen dan exit-nya kami gunakan Fn F11.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2018-06-23-kosongkan-trash/">Hapus Trash via Command Line</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 Jun 2018, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Iseng-iseng buka hidden folder ada yang menarik. File yang ada di Trash (bisa buka di Thunar dengan path trash:///sama dengan yang ada di ~/.local/share/Trash/files/. Sehingga kalau ingin mengosongkan Trash dan posisi sedang di CLI dan tidak membuka file manager ataupun lagi aras-arasen, sangat bisa.
+rm -rv ~/.local/share/Trash/* 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/">Terperangkap WindowMaker</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>28 Jul 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/mate">mate</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Mencoba merasakan kejadulan WindowMaker yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama xfce melalui command xwmconfig, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di WindowMaker. Bahkan tidak bisa ganti DE lainnya termasuk KDE dan Mate.
+Tapi kemudian bisa teratasi dengan menghapus .xinitrcdan folder GNUStepyang ada di homedirektori pengguna.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-07-10-set-default-brightness/">Set Default Brightness</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Jul 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Kecerahan monitor / brightness 100% membuat mata cepat lelah. Apalagi kalau secara default begitu masuk X brightness-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan Computer Vision Syndrome.
+Berapa persen brightness yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur brightness bisa gunakan xbacklight.
+Untuk mengetahui berapa persen brightness yang digunakan saat ini xbacklight. Sedangkan untuk mengubahnya xbacklight -set persen. Contoh akan diatur brightness-nya 15%:
+  </p>
+
+  
+  <footer>
+    <a href="/post/2016-07-10-set-default-brightness/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/">Ganti Theme Xfce</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 Jun 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/theme">theme</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Bosan dengan tampilan theme yang itu-itu aja? Tenang, theme-nya bisa diganti kok, bahkan diganti agar tampilannya mirip Mac OS X. Sebagai contoh akan kita install theme GlossyP3 yang membuat tampilan menjadi mirip Mac OS X.
+Download terlebih dahulu berkasnya dari sini (pastikan tersambung internet). Berkas dalam bentuk arsip .tar.bz2ekstrak ke direktori /usr/share/themesdengan hak administrator atau root.
+Kemudian ke Settings &mdash;&gt; Appearancepilih GlossyP3Kemudian, meminjam kata Mario Teguh, dan lihat apa yang terjadi.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2016-06-30-ganti-theme-xfce/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2015-11-06-ganti-de/">Ganti Desktop Environment</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>06 Nov 2015, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/mate">mate</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Biar tidak membosankan, kadangkala kita butuh ganti desktop environment (DE). Caranya (root privileges),
+xwmconfig Pilih X Windows (atau DE)-nya. Kemudian Ok atau tekan Enter, Log out dan Log in kembali.
+  </p>
+
+  
+</article>
+
+  
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>

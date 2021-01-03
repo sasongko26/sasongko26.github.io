@@ -1,130 +1,195 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html lang="en">
+
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Mengenal Berkas .deb &middot; Catatan Sasongko</title>
-  <meta name="description" content="" />
 
-  
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
-
-
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+    
 
   
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
 </head>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://sasongko.web.id/"><h2>Catatan Sasongko</h2></a>
-	 
-	  <p class="lead">
-       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
-      </p>
-    </div>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://sasongko.web.id/">Home</a> </li>
-        
-		<li><a href="https://sasongko.web.id/about">Profil</a></li>
-		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
-      </ul>
-    </nav>
-	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
- <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+<body>
+<div id="layout">
 
-		</div>
-</aside>
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
 
-    <main class="content container">
-    <div class="post">
-  <h1>Mengenal Berkas .deb</h1>
-  <time datetime=2014-06-23T23:02:12Z class="post-date">Mon, Jun 23, 2014</time>
-  <p>File atau berkas berekstensi deb adalah file paket installer debian dan turunannya. File deb adalah sejenis dengan file rpm pada keluarga redhat.
-Tatanama file deb</p>
-<p>Contoh, penulis punya file <strong>skype-debian_4.2.0.13-1_i386.deb</strong>. Tatanama ini ada 3 informasi penting yang masing-masing dipisahkan tanda underscore.</p>
-<p><strong>skype-debian_4.2.0.13-1_i386.deb</strong></p>
-<pre><code>Nama paketnya skype-debian.
-Versinya 4.2.0.13-1.
-Arsitekturnya, i386 untuk 32 bit atau amd64 untuk 64 bit.
-</code></pre><h1 id="menampilkan-informasi-file-deb">Menampilkan informasi file deb</h1>
-<p>Untuk mengetahui seluk beluk file deb gunakan dpkg -I</p>
-<p>contoh</p>
-<pre><code>$ dpkg -I skype-debian_4.2.0.13-1_i386.deb
-new debian package, version 2.0. 
- size 16308334 bytes: control archive=4855 bytes. 
-      32 bytes,     1 lines      conffiles            
-    1099 bytes,    20 lines      control              
-   10411 bytes,   144 lines      md5sums              
- Package: skype 
- Version: 4.2.0.13-1 
- Section: non-free/net 
- Priority: extra 
- Architecture: i386 
- Depends: libasound2 (&gt;= 1.0.16), libc6 (&gt;= 2.3.6-6~), libc6 (&gt;= 2.7), libgcc1 (&gt;= 1:4.1.1), libqt4-dbus (&gt;= 4:4.5.3), libqt4-network (&gt;= 4:4.8.0), libqt4-xml (&gt;= 4:4.5.3), libqtcore4 (&gt;= 4:4.7.0~beta1), libqtgui4 (&gt;= 4:4.8.0), libqtwebkit4 (&gt;= 2.1.0~2011week13), libstdc++6 (&gt;= 4.6), libx11-6, libxext6, libxss1, libxv1, libssl1.0.0, libasound2-plugins 
- Conflicts: skype-mid, skype-common, skype-bin 
- Replaces: skype-mid, skype-common, skype-bin 
- Installed-Size: 36483 
- Maintainer: Skype Technologies &lt;info@skype.net&gt; 
- Description: Wherever you are, wherever they are 
-  Skype keeps you together. Call, see, message and share with others. 
-   * It's free to download and join. 
-   * Call, instant message and send photos and documents to anyone else on Skype. 
-   * And with a webcam you can catch up face-to-face with a video call. 
-   * Call mobiles and landlines worldwide at low rates. 
-   * Easily text message anywhere in the world. 
-   * Get your friends together on a conference call. 
-  . 
-  And that's just the start... 
+  
 
-</code></pre><h1 id="memasang-file-deb">Memasang file deb</h1>
-<p>Sebelum memasang atau install, pastikan semua dependensi telah terinstall. Pemasangan gunakan sudo dpkg -i paket. Contoh</p>
-<pre><code>$ sudo dpkg -i skype-debian_4.2.0.13-1_i386.deb
-</code></pre><p>Atau, kalau ingin memasang dengan mode grafis silahkan pakai aplikasi <em>gdebi</em>.</p>
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
 
 </div>
 
-<h2>Comments</h2>
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </main>
 
-    
-      
-    
-  </body>
+  <div id="main">
+
+
+<div class="header">
+  <h1>Mengenal Berkas .deb</h1>
+</div>
+<div class="content">
+  
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+
+
+
+
+<script src="/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+</body>
 </html>
+

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta name="generator" content="Hugo 0.79.0" />
+
+  <title>Catatan Sasongko</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
+    href='/index.xml' />
+  
+
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href='/index.xml'><i
+          class="fas fa-rss"></i>RSS</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Catatan Sasongko</h1>
+  <h2></h2>
+</div>
+
+<div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-12-07-nmcli-konek-wifi/">nmcli untuk konek wifi</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>07 Dec 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk konek internet baik itu melalui modem, LAN, maupun wifi, pengguna GNU/Linux lebih sering menggunakan network manageryang applet-nya biasanya ada di panel sebelah kanan walau sebenarnya ada cara lain seperti ifconfigdan dhcpcd. Kalau dalam mode grafis sih saya rasa tidak masalah, tapi bagaimana kalau sedang berada dalam mode teks yang jelas tidak terpampang applet network manager-nya? nmcliadalah solusinya.
+Lah, buat apa sih repot-repot mode teks? Jadul, ga modern! Benar. Kalau keperluannya hanya download file berukuran besar, dan dalam waktu bersamaan ada kegiatan lain yang tidak bisa ditinggalkan, beralih ke mode teks bisa dijadikan pilihan, mengingat dalam mode teks aplikasi yang dijalankan tidak sebanyak dalam mode grafis sehingga menghemat memory dan daya.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2016-12-07-nmcli-konek-wifi/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-10-29-maleo-slackbuild/">Maleo Slackbuild</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Oct 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackbuild">slackbuild</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Maleo adalah paket khas BlankOn untuk menjalankan aplikasi HTML5. Bagi pengguna Slackware yang berminat silahkan mencoba slackbuild yang saya buat di sini.
+Adapun dependensinya adalah :
+ vala libwebp gnome-js-common seed  
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/">Upgrade Plasma 5</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Oct 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara resmi, Slackware masih menggunakan KDE 4 yang &ldquo;ketinggalan jaman&rdquo; padahal pengembang KDE telah merilis KDE (sekarang biasa disebut Plasma) 5. Plasma 5 ini masih tetap seperti &ldquo;kakaknya&rdquo; (KDE 4) yang boros memory dibandingkan Xfce. Tapi, masya Allah tampilan lebih keren!
+Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah membuat slackbuild dan binary package-nya yang bisa kita gunakan. Versi terakhir versi Eric saat ini adalah Plasma 5.7.4 sedangkan insya Allah tanggal 4 Oktober 2016 KDE merilis Plasma 5.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2016-10-01-upgrade-plasma-5/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Mount qcow2</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Sep 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk mengaitkan/mount berkas qcow2ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
+Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
+modprobe nbd max_part=N max_part=Nisikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2tersebut kalau dijalankan dengan qemuberisi 8 partisi, maka nilai Nadalah 8.
+Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbdyang mengaktifkan koneksi file /mnt/virtual/image/ign11.qcow2ke /dev/nbd0&gt;
+  </p>
+
+  
+  <footer>
+    <a href="/post/2016-09-11-mount-qcow2/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-09-10-nonaktif-delall-slackpkg/">Nonaktifkan Penghapusan Unduhan Slackpkg</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Sep 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackpkg">slackpkg</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, slackpkgakan menghapus semua file yang di- download / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di /etc/slackpkg/slackpkg.confpada baris 77
+DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah onmenjadi off.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/">Cek Harddisk Korup</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>17 Aug 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya
+dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck. Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu /dev/sda1. Dan direkomendasikan untuk menjalankan fsck.
+fsck /dev/sda1 fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2016-08-17-cek-harddisk-korup/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/">Mengatur DNS Default</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>07 Aug 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, DNS atau Domain Name Server yang digunakan adalah DNS dari operator/penyedia layanan internet. Namun sayangnya, operator tertentu kurang baik dalam penapisan/pemblokiran situs-situs negatif sehingga kadang konten-konten pornografi, judi, dan konten lainnya yang tidak sesuai dengan norma kesusilaan dan budaya Indonesia dapat sampai ke hadapan kita. Oleh karena itulah perlu menggunakan DNS lain.
+Penggantian DNS ini ada 2 cara, yaitu manual dan otomatis.
+Cara manual dengan menyunting berkas /etc/resolv.conf. Mengganti nameserver yang ada dengan nameserver yang diinginkan.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2016-08-07-mengatur-dns-default/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/">Terperangkap WindowMaker</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>28 Jul 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/mate">mate</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Mencoba merasakan kejadulan WindowMaker yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama xfce melalui command xwmconfig, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di WindowMaker. Bahkan tidak bisa ganti DE lainnya termasuk KDE dan Mate.
+Tapi kemudian bisa teratasi dengan menghapus .xinitrcdan folder GNUStepyang ada di homedirektori pengguna.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-07-10-set-default-brightness/">Set Default Brightness</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Jul 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Kecerahan monitor / brightness 100% membuat mata cepat lelah. Apalagi kalau secara default begitu masuk X brightness-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan Computer Vision Syndrome.
+Berapa persen brightness yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur brightness bisa gunakan xbacklight.
+Untuk mengetahui berapa persen brightness yang digunakan saat ini xbacklight. Sedangkan untuk mengubahnya xbacklight -set persen. Contoh akan diatur brightness-nya 15%:
+  </p>
+
+  
+  <footer>
+    <a href="/post/2016-07-10-set-default-brightness/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Virtual Manager unable to connect to libvirt</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 Jul 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Managerbelum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failuredengan detail sebagai berikut
+Unable to connect to libvirt. internal error: Cannot find suitable emulator for x86_64 Libvirt URI is: qemu:///system Traceback (most recent call last): File &#34;/usr/share/virt-manager/virtManager/connection.py&#34;, line 979, in _open_thread self._populate_initial_state() File &#34;/usr/share/virt-manager/virtManager/connection.py&#34;, line 941, in _populate_initial_state logging.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+
+  
+
+
+<nav class="pagination" role="pagination">
+  
+  <a href="/page/8/"><i class="fa fa-chevron-left"></i></a>
+  
+  <span>&nbsp;9 / 18&nbsp;</span>
+  
+  <a href="/page/10/"><i class="fa fa-chevron-right"></i></a>
+  
+</nav>
+
+
+
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

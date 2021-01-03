@@ -1,127 +1,195 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html lang="en">
+
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Rename Network Interface &middot; Catatan Sasongko</title>
-  <meta name="description" content="" />
 
-  
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
-
-
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+    
 
   
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
 </head>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://sasongko.web.id/"><h2>Catatan Sasongko</h2></a>
-	 
-	  <p class="lead">
-       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
-      </p>
-    </div>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://sasongko.web.id/">Home</a> </li>
-        
-		<li><a href="https://sasongko.web.id/about">Profil</a></li>
-		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
-      </ul>
-    </nav>
-	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
- <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+<body>
+<div id="layout">
 
-		</div>
-</aside>
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
 
-    <main class="content container">
-    <div class="post">
-  <h1>Rename Network Interface</h1>
-  <time datetime=2018-02-18T00:00:00Z class="post-date">Sun, Feb 18, 2018</time>
-  <p>Entah mengapa tadi kepikiran untuk jalankan <!-- raw HTML omitted -->ifconfig -a<!-- raw HTML omitted -->. Ternyata kemudian ada <em>output</em> yang menarik</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">eth0: flags<span style="color:#f92672">=</span>4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu <span style="color:#ae81ff">1500</span>
-        ether c8:5b:76:66:51:6a  txqueuelen <span style="color:#ae81ff">1000</span>  <span style="color:#f92672">(</span>Ethernet<span style="color:#f92672">)</span>
-        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
-        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
-        TX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
-        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
+  
 
-lo: flags<span style="color:#f92672">=</span>73&lt;UP,LOOPBACK,RUNNING&gt;  mtu <span style="color:#ae81ff">65536</span>
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen <span style="color:#ae81ff">128</span>  scopeid 0x10&lt;host&gt;
-        loop  txqueuelen <span style="color:#ae81ff">1000</span>  <span style="color:#f92672">(</span>Local Loopback<span style="color:#f92672">)</span>
-        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
-        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
-        TX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
-        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+    </ul>
+  </div>
 
-wlan1: flags<span style="color:#f92672">=</span>4098&lt;BROADCAST,MULTICAST&gt;  mtu <span style="color:#ae81ff">1500</span>
-        ether ca:b0:da:b5:3d:75  txqueuelen <span style="color:#ae81ff">1000</span>  <span style="color:#f92672">(</span>Ethernet<span style="color:#f92672">)</span>
-        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
-        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
-        TX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
-        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
-</code></pre></div><p>Menariknya adalah angka index <em>interface</em>-nya. Semua 0 kecuali <!-- raw HTML omitted -->wlan<!-- raw HTML omitted --> yang 1 sendiri. Sebenarnya <em>no problem</em> sih, cuma ga sedap dipandang aja. Kalau indexnya kompak 0 kan cakep. Hahahaha&hellip;..</p>
-<p>Penelusuran mengapa <em>interface</em>-nya <!-- raw HTML omitted -->wlan1<!-- raw HTML omitted --> bukan <!-- raw HTML omitted -->wlan0<!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /etc/udev/rules.d/70-persistent-net.rules
-<span style="color:#75715e"># PCI device 0x10ec:/sys/devices/pci0000:00/0000:00:1c.3/0000:03:00.0 (r8169)</span>
-SUBSYSTEM<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;net&#34;</span>, ACTION<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;add&#34;</span>, DRIVERS<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;?*&#34;</span>, ATTR<span style="color:#f92672">{</span>address<span style="color:#f92672">}==</span><span style="color:#e6db74">&#34;c8:5b:76:66:51:6a&#34;</span>, ATTR<span style="color:#f92672">{</span>dev_id<span style="color:#f92672">}==</span><span style="color:#e6db74">&#34;0x0&#34;</span>, ATTR<span style="color:#f92672">{</span>type<span style="color:#f92672">}==</span><span style="color:#e6db74">&#34;1&#34;</span>, KERNEL<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;eth*&#34;</span>, NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;eth0&#34;</span>
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
 
-<span style="color:#75715e"># PCI device 0x168c:/sys/devices/pci0000:00/0000:00:1c.2/0000:02:00.0 (ath10k_pci)</span>
-SUBSYSTEM<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;net&#34;</span>, ACTION<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;add&#34;</span>, DRIVERS<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;?*&#34;</span>, ATTR<span style="color:#f92672">{</span>address<span style="color:#f92672">}==</span><span style="color:#e6db74">&#34;ca:b0:da:b5:3d:75&#34;</span>, ATTR<span style="color:#f92672">{</span>dev_id<span style="color:#f92672">}==</span><span style="color:#e6db74">&#34;0x0&#34;</span>, ATTR<span style="color:#f92672">{</span>type<span style="color:#f92672">}==</span><span style="color:#e6db74">&#34;1&#34;</span>, KERNEL<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;wlan*&#34;</span>, NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;wlan0&#34;</span>
+    
 
-<span style="color:#75715e"># PCI device 0x168c:/sys/devices/pci0000:00/0000:00:1c.2/0000:02:00.0 (ath10k_pci)</span>
-SUBSYSTEM<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;net&#34;</span>, ACTION<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;add&#34;</span>, DRIVERS<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;?*&#34;</span>, ATTR<span style="color:#f92672">{</span>address<span style="color:#f92672">}==</span><span style="color:#e6db74">&#34;ca:b0:da:b5:3d:75&#34;</span>, ATTR<span style="color:#f92672">{</span>dev_id<span style="color:#f92672">}==</span><span style="color:#e6db74">&#34;0x0&#34;</span>, ATTR<span style="color:#f92672">{</span>type<span style="color:#f92672">}==</span><span style="color:#e6db74">&#34;1&#34;</span>, KERNEL<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;wlan*&#34;</span>, NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;wlan1&#34;</span>
+    
 
-<span style="color:#75715e"># USB device 0x0cf3:0x9271 (usb)</span>
-SUBSYSTEM<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;net&#34;</span>, ACTION<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;add&#34;</span>, DRIVERS<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;?*&#34;</span>, ATTR<span style="color:#f92672">{</span>address<span style="color:#f92672">}==</span><span style="color:#e6db74">&#34;84:16:f9:18:92:40&#34;</span>, ATTR<span style="color:#f92672">{</span>dev_id<span style="color:#f92672">}==</span><span style="color:#e6db74">&#34;0x0&#34;</span>, ATTR<span style="color:#f92672">{</span>type<span style="color:#f92672">}==</span><span style="color:#e6db74">&#34;1&#34;</span>, KERNEL<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;wlan*&#34;</span>, NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;wlan2&#34;</span>
-</code></pre></div><p>Ternyata 1 <em>device</em> dengan <em>address</em> (<!-- raw HTML omitted -->ca:b0:da:b5:3d:75<!-- raw HTML omitted -->) diberi 2 nama yaitu <!-- raw HTML omitted -->wlan0<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->wlan1<!-- raw HTML omitted -->. Ya sudah yang <!-- raw HTML omitted -->wlan1<!-- raw HTML omitted --> dikomen aja. Beres.</p>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
 
 </div>
 
-<h2>Comments</h2>
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </main>
 
-    
-      
-    
-  </body>
+  <div id="main">
+
+
+<div class="header">
+  <h1>Rename Network Interface</h1>
+</div>
+<div class="content">
+  
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+
+
+
+
+<script src="/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+</body>
 </html>
+

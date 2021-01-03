@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta name="generator" content="Hugo 0.79.0" />
+
+  <title>Catatan Sasongko</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
+    href='/index.xml' />
+  
+
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href='/index.xml'><i
+          class="fas fa-rss"></i>RSS</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Catatan Sasongko</h1>
+  <h2></h2>
+</div>
+
+<div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/">Edit volume suara</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 May 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Editing kali ini adalah bagaimana mengubah volume default audio/suara menggunakan ffmpeg. Misal, file yang akan diinput/diedit adalah video.mp4. Karena suaranya terlalu pelan, akan dinaikkan menjadi 5x semula melalui filter audio. File hasil editan diberi nama video-louder.webm.
+ffmpeg -i video.mp4 -filter:a &#34;volume=5&#34; video-louder.webm Apabila suara terlalu nyaring bisa dipelankan. Berikut akan dipelankan menjadi setengahnya dari volume semula dan file baru diberi nama new.webm
+ffmpeg -i video.mp4 -filter:a &#34;volume=0.5&#34; new.webm Atau, dengan menuliskan volume suaranya secara langsung.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2020-05-14-edit-volume-audio-ffmpeg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-13-convert-jpg-pdf/">Convert jpg ke pdf</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 May 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk menjadikan file jpg ke pdf caranya mudah. Misalkan file-gambar.jpg akan diubah menjadi pdf dengan nama dokumen.pdf
+convert file-gambar.jpg dokumen.pdf 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-12-melihat-isi-file-zip/">Melihat isi file zip</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 May 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Menggunakan linux terutama slackware membuat pekerjaan lebih ringan dan efisien. Suatu ketika diberikan sebuah file terkompresi zip yang misterius. Misterius karena ukurannya besar dan konon kata empunya file tersebut ngehang saat akan dibuka di komputer dengan sistem bukan slackware juga bukan linux. Dan ketika dibuka di slackware ketahuanlah nama &ldquo;penduduk&rdquo; zip tersebut.
+zip -sf namafile.zip # atau less namafile.zip 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-05-trimming-video-ffmpeg/">Trimming Video ffmpeg</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 May 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Misalkan, kita akan mencuplik sebagian (trimming) video video-asli.mp4 dari menit ke 57 lebih 34 detik sampai durasi ke 1 jam 2 menit 5 detik. Fila hasil trimming adalah cuplikan.mp4
+ffmpeg -i video-asli.mp4 -ss 00:57:34 -to 01:02:05 -c copy cuplikan.mp4 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">Mengenal Objek R Vector</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Apr 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.
+Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.
+Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).
+  </p>
+
+  
+  <footer>
+    <a href="/post/2020-04-29-mengenal-vector-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-04-11-install-jasp/">Install JASP</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Apr 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  JASP, singkatan dari Jeffreys&rsquo;s Amazing Statistic Program, merupakan open source statistics software. Software ini layak dijadikan pilihan utama karena:
+ Open source. Karena open source semua orang boleh memakai, melihat source code-nya dan berkontribusi (melaporkan masalah, mengusulkan fitur dan perbaikan). Silahkan menuju ke https://github.com/jasp-stats/jasp-desktop . Pengembangan dinaungi oleh akademisi dari University of Amsterdam, Duke University, University of Southampton, UNiversity of Sussex, University of Missouri, Athens University of Economics dan Business, Missouri State University, University of Groningen, Nyenrode Business University, University of Zurich dan Ludwig-Maximilians-Universität München.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2020-04-11-install-jasp/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-04-04-dispersi-data-dengan-r/">Dispersi Data dengan R</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Apr 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Dispersi atau ukuran penyebaran data menunjukkan seberapa bervariasi suatu data. Kali ini data yang digunakan diambil dari dataset ldeaths yang merupakan bagian dari UKLungDeaths. Dataset UKLungDeaths berisi data jumlah kematian akibat penyakit bronchitis, emphysema dan asma di Inggris dalam kurun waktu 1974-1979. Data ini disajikan berdasarkan bulan dan jenis kelamin. Secara total untuk kedua jenis kelamin ada di ldeaths, laki-laki mdeaths dan perempuan fdeaths.
+Nilai minimal min(ldeaths) [1] 1300 Nilai maksimal max(ldeaths) [1] 3891 Range range(ldeaths) [1] 1300 3891 Varians var(ldeaths) [1] 371911.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2020-04-04-dispersi-data-dengan-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/">Tendensi Sentral dengan R</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>21 Mar 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Data yang digunakan :
+&gt; nilai [1] 25 60 79 32 57 74 52 70 82 36 75 77 81 95 41 65 92 85 55 66 52 10 64 75 78 [26] 25 80 98 81 67 41 71 83 54 64 72 88 62 74 45 60 78 89 76 48 84 84 90 15 79 [51] 35 67 17 82 69 74 63 80 85 61 Mean &gt; mean(nilai) [1] 65.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2020-03-21-tendensi-sentral-dengan-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-03-14-input-data-r/">Input Data R</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 Mar 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Input data dalam R sangat mudah dan ada beragam cara, yaitu:
+ Menuliskan dalam bentuk syntax. Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100 Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2020-03-14-input-data-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/">Package bawaan R Slackware</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Feb 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Berikut adalah package atau library R yang secara default terinstall di Slackware melalui SBo.
+ KernSmooth.Functions for Kernel Smoothing Supporting Wand &amp; Jones (1995) MASS. Support Functions and Datasets for Venables and Ripley&rsquo;s MASS Matrix. Sparse and Dense Matrix Classes and Methods base. The R Base Package boot. Bootstrap Functions (Originally by Angelo Canty for S) class. Functions for Classification cluster. &ldquo;Finding Groups in Data&rdquo;: Cluster Analysis Extended Rousseeuw et al.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2020-02-13-r-slackware-default-packages/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+
+  
+
+
+<nav class="pagination" role="pagination">
+  
+  <a href="/page/2/"><i class="fa fa-chevron-left"></i></a>
+  
+  <span>&nbsp;3 / 18&nbsp;</span>
+  
+  <a href="/page/4/"><i class="fa fa-chevron-right"></i></a>
+  
+</nav>
+
+
+
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

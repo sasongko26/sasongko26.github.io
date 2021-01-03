@@ -1,131 +1,192 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html lang="en">
+
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Konek Internet Slackware &middot; Catatan Sasongko</title>
-  <meta name="description" content="" />
 
-  
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
-
-
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+    
 
   
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
 </head>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://sasongko.web.id/"><h2>Catatan Sasongko</h2></a>
-	 
-	  <p class="lead">
-       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
-      </p>
-    </div>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://sasongko.web.id/">Home</a> </li>
-        
-		<li><a href="https://sasongko.web.id/about">Profil</a></li>
-		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
-      </ul>
-    </nav>
-	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
- <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+<body>
+<div id="layout">
 
-		</div>
-</aside>
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
 
-    <main class="content container">
-    <div class="post">
-  <h1>Konek Internet Slackware</h1>
-  <time datetime=2015-06-28T00:00:00Z class="post-date">Sun, Jun 28, 2015</time>
-  <p>Di catatan yang lalu sudah pernah dibahas cara konek internet di Slackware dengan [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}). Sekarang masih tentang cara konek internet melalui modem di Slackware, hanya saja caranya berbeda. Kali ini menggunakan <em>pppsetup</em> yang secara default sudah dimiliki Slackware.</p>
-<p>Perangkat yang kami gunakan:</p>
-<ul>
-<li>laptop <a href="http://www.bhinneka.com/Associate/asc_clicks.aspx?BARef=BATL150600398&amp;BATrcID=linfocatatansas225204&amp;Link=http%3a%2f%2fwww.bhinneka.com%2fproducts%2fsku00215793%2fasus_notebook_x453ma-bing-wx320b_-_black.aspx">Asus X453MA</a></li>
-<li>modem USB Huawei E1550</li>
-<li>simcard dengan internet service provider 3.</li>
-</ul>
-<p>Cara-cara berikut ini dijalankan oleh root.</p>
-<pre><code>pppsetup
-</code></pre><p><img src="/gambar/pppsetup-01.png" alt=""></p>
-<p>Tekan enter.</p>
-<p><img src="/gambar/pppsetup-02.png" alt=""></p>
-<p>Isi phone number dengan</p>
-<pre><code>ATDT*99***1#
-</code></pre><p>Kemudian, lokasi modem silahkan lanjutkan dengan memberikan nilai default/biarkan saja, karena nanti akan kita ubah.</p>
-<p><img src="/gambar/pppsetup-03.png" alt=""></p>
-<p>Baud rate ini kami gunakan 9600</p>
-<p><img src="/gambar/pppsetup-04.png" alt=""></p>
-<p>Kemudian, penawaran callback, pilih saja NO</p>
-<p><img src="/gambar/pppsetup-05.png" alt=""></p>
-<p>Domain ISP kosongkan saja</p>
-<p><img src="/gambar/pppsetup-06.png" alt=""></p>
-<p>Untuk nameserver kami gunakan 10.0.28.66, Anda bisa mencobanya dengan 10.0.28.67 atau yang lainnya.</p>
-<p><img src="/gambar/pppsetup-07.png" alt=""></p>
-<p>Pengaturan selanjutnya otentikasi, gunakan PAP.</p>
-<p><img src="/gambar/pppsetup-08.png" alt=""></p>
-<p>Untuk username karena menggunakan 3 maka username dan passwordnya sama yaitu 3data</p>
-<p><img src="/gambar/pppsetup-09.png" alt=""></p>
-<p><img src="/gambar/pppsetup-10.png" alt=""></p>
-<p>Selanjutnya akan tampil hasil pengaturan, silahkan exit.</p>
-<p><img src="/gambar/pppsetup-11.png" alt=""></p>
-<p>Saatnya melakukan modifikasi.</p>
-<pre><code>nano /etc/ppp/options
-</code></pre><p>Ganti</p>
-<pre><code>/dev/modem
-</code></pre><p>dengan</p>
-<pre><code>/dev/ttyUSB0
-</code></pre><p>Untuk menyambungkan ke internet</p>
-<pre><code>ppp-go
-</code></pre><p><img src="/gambar/pppsetup-12.png" alt="">
-Sedangkan untuk diskonek</p>
-<pre><code>ppp-off
-</code></pre>
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
 </div>
 
-<h2>Comments</h2>
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </main>
 
-    
-      
-    
-  </body>
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Konek Internet Slackware</h1>
+</div>
+<div class="content">
+  
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>
+

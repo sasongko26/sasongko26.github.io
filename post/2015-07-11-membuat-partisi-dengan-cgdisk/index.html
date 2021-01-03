@@ -1,110 +1,192 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html lang="en">
+
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Membuat Partisi dengan cgdisk &middot; Catatan Sasongko</title>
-  <meta name="description" content="" />
 
-  
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
-
-
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+    
 
   
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
 </head>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://sasongko.web.id/"><h2>Catatan Sasongko</h2></a>
-	 
-	  <p class="lead">
-       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
-      </p>
-    </div>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://sasongko.web.id/">Home</a> </li>
-        
-		<li><a href="https://sasongko.web.id/about">Profil</a></li>
-		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
-      </ul>
-    </nav>
-	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
- <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+<body>
+<div id="layout">
 
-		</div>
-</aside>
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
 
-    <main class="content container">
-    <div class="post">
-  <h1>Membuat Partisi dengan cgdisk</h1>
-  <time datetime=2015-07-11T00:00:00Z class="post-date">Sat, Jul 11, 2015</time>
-  <p><em>Partitioning</em> atau pemartisian atau pembuatan partisi adalah pengetahuan yang harus dimiliki sebelum menginstall linux. Jika harddisk dianalogikan dengan rumah, maka partisi adalah kamar atau ruangan yang ada di dalam rumah itu. Kita bisa mengatur berapa jumlah kamar beserta ukuran dan fungsinya.</p>
-<p>Skema partisi yang digunakan adalah GPT, bukan MBR, jadi pemartisian menggunakan cgdisk saja biar lebih mudah. Selain cgdisk bisa menggunakan gdisk. Sedangkan untuk MBR menggunakan cfdisk atau fdisk. Keempatnya berantarmuka text dan dijalankan oleh root. Oya, untuk antarmuka grafis (GUI) bisa menggunakan gparted.</p>
-<pre><code>cgdisk /dev/sda
-</code></pre><p>Perintah cgdisk diikuti dengan disk yang akan dipartisi. Karena ini merupakan hardisk utama maka /dev/sda. Kalau harddisk external atau flashdisk tidak akan dikenal sebagai /dev/sda tetapi bisa jadi /dev/sdb.</p>
-<p>Di hardisk yang saya gunakan ini, sudah ada beberapa partisi untuk berbagai keperluan (di sini dualboot Windows 8.1 dan Slackware 14.1). Mau buat 1 lagi.
-<img src="/gambar/cgdisk-01.png" alt="">
-Masih ada 4 partisi kosong. Yang akan dibuat partisi baru adalah yang ukuran 13.3GiB. Seluruh ukuran 13.3GiB ini akan kita gunakan untuk 1 partisi. Arahkan kursor padanya pilih [ New ]. Gunakan panah atas bawah untuk memilih partisi. Gunakan panah kanan kiri untuk menentukan opsi.</p>
-<p>Isikan First sector, kalau ga mau ambil pusing biarlah default saja. Enter.
-<img src="/gambar/cgdisk-02.png" alt="">
-Isikan ukurannya atau Size in Sectors. Bisa dengan menuliskan dalam KB (K), MB (M), GB (G) atau TB (T). Bisa juga menulis sektornya. Di sini saya pakai default saja.
-<img src="gambar/cgdisk-03.png" alt="">
-Selanjutnya mengisikan filesystem. Karena mau saya pakai untuk slackware ya biarlah default Linux filesystem.
-<img src="/gambar/cgdisk-04.png" alt="">
-Selanjutnya, nama atau label partisinya. Silahkan isi sesuka hati atau biarkan kosong juga ga apa-apa.
-<img src="/gambar/cgdisk-05.png" alt="">
-Langkah selanjutnya adalah membuat partisi tadi secara resmi. Pilih [ Write ]. Awas, Write ini akan menghapus semua data yang ada di partisi itu. Kalau memang partisinya kosong ya ga masalah.
-<img src="/gambar/cgdisk-06.png" alt="">
-Karena pemartisian berisiko kehilangan data, kita akan dikonfirmasi lagi, yakin atau tidak? Ketik yes kalau akan melanjutkan proses, atau no untuk membatalkannya.
-<img src="/gambar/cgdisk-07.png" alt="">
-Partisi sudah jadi. Mungkin perlu restart untuk meresmikan partisi barunya. Tekan sembarang tombol untuk keluar dari cgdisk.
-<img src="/gambar/cgdisk-08.png" alt=""></p>
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
 
 </div>
 
-<h2>Comments</h2>
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </main>
 
-    
-      
-    
-  </body>
+  <div id="main">
+
+
+<div class="header">
+  <h1>Membuat Partisi dengan cgdisk</h1>
+</div>
+<div class="content">
+  
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>
+

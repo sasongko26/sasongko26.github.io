@@ -1,139 +1,192 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html lang="en">
+
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Mengenal Objek R Vector &middot; Catatan Sasongko</title>
-  <meta name="description" content="" />
 
-  
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
-
-
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+    
 
   
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
 </head>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://sasongko.web.id/"><h2>Catatan Sasongko</h2></a>
-	 
-	  <p class="lead">
-       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
-      </p>
-    </div>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://sasongko.web.id/">Home</a> </li>
-        
-		<li><a href="https://sasongko.web.id/about">Profil</a></li>
-		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
-      </ul>
-    </nav>
-	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
- <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+<body>
+<div id="layout">
 
-		</div>
-</aside>
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
 
-    <main class="content container">
-    <div class="post">
-  <h1>Mengenal Objek R Vector</h1>
-  <time datetime=2020-04-29T00:00:00Z class="post-date">Wed, Apr 29, 2020</time>
-  <p>Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-<em>handle</em> data.</p>
-<p>Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.</p>
-<h1 id="apa-sih-vector">Apa sih vector?</h1>
-<p>Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga <em>boolean (TRUE FALSE)</em>.</p>
-<h1 id="membuat-vector">Membuat vector</h1>
-<p>Misalkan akan dibuat vector x dengan elemen berupa angka 1</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> x <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
-</code></pre></div><p>Vector kota dengan elemen kata Semarang. Semarang merupakan string, maka penulisannya diapit tanda kutip</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> kota <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;Semarang&#34;</span>
-</code></pre></div><p>Vector cek dengan elemen boolean TRUE</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">cek <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">TRUE</span>
-</code></pre></div><p>Jika vectornya memiliki elemen lebih dari 1, membuatnya dengan <em>function</em> yang bernama <em>combine</em>. <em>Function</em> ini didefinisikan dengan <!-- raw HTML omitted -->c()<!-- raw HTML omitted -->, elemennya dituliskan dalam tanda kurung.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Ali&#34;</span>, <span style="color:#e6db74">&#34;Budi&#34;</span>, <span style="color:#e6db74">&#34;Cici&#34;</span>, <span style="color:#e6db74">&#34;Deni&#34;</span>, <span style="color:#e6db74">&#34;Eka&#34;</span>)
-<span style="color:#f92672">&gt;</span> tinggi_badan <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">155</span>, <span style="color:#ae81ff">178</span>, <span style="color:#ae81ff">163</span>, <span style="color:#ae81ff">158</span>, <span style="color:#ae81ff">142</span>)
-</code></pre></div><h1 id="operasi-vector">Operasi vector</h1>
-<h2 id="menampilkan-vector">menampilkan vector</h2>
-<p>Untuk menampilkan elemen atau isi dari vector cukup tuliskan nama vectornya. Contoh, menampilkan data tinggi badan yang dimasukkan ke dalam vector tinggi_badan</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> tinggi_badan
-</code></pre></div><p>Angka dalam kurung siku di sebelah kiri pada tiap baris yang ditampilkan menunjukkan indeks/letak data ke berapa. Contoh [1] berarti data tepat di sebelah kanannya adalah data pertama. [20] berarti data tepat di kanannya adalah data ke-20. Begitu seterusnya.</p>
-<h2 id="length">length()</h2>
-<p>Fungsi <!-- raw HTML omitted -->length()<!-- raw HTML omitted --> digunakan untuk mengetahui panjang vector (sebenarnya tidak hanya berlaku untuk vector, tapi juga objek lain seperti factor). Ketika data sudah dipegang, apa yang kemudian dilakukan? Ya, mengecek data. Salah satu pengecekannya adalah apakah data sudah lengkap? Kalau kuesioner yang harus diisi ada 10 item, apakah semua item sudah diisi? Ini contoh penggunaan <!-- raw HTML omitted -->length()<!-- raw HTML omitted --> dalam praktik.</p>
-<p>Contoh, akan dicek berapa banyaknya data tinggi_badan</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">length</span>(tinggi_badan)
-<span style="color:#ae81ff">5</span>
-</code></pre></div><h2 id="indeks">Indeks</h2>
-<p>Indeks menunjukkan letak data tersebut. Penulisannya <!-- raw HTML omitted -->namavector[nomer_indeks]<!-- raw HTML omitted -->. Angka dalam kurung siku adalah nomor indeksnya. Contoh</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Ali&#34;</span>, <span style="color:#e6db74">&#34;Budi&#34;</span>, <span style="color:#e6db74">&#34;Cici&#34;</span>, <span style="color:#e6db74">&#34;Deni&#34;</span>, <span style="color:#e6db74">&#34;Eka&#34;</span>)
-<span style="color:#f92672">&gt;</span> nama[1]
-[1] <span style="color:#e6db74">&#34;Ali&#34;</span>
-<span style="color:#f92672">&gt;</span> nama[5]
-[1] <span style="color:#e6db74">&#34;Eka&#34;</span>
-</code></pre></div><p>Kalau ingin menampilkan pengecualian gunakan indeks negatif. Misalnya, akan menampilkan 4 data pertama, berarti data ke-5 tidak ingin ditampilkan, maka</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama[<span style="color:#ae81ff">-5</span>]
-[1] <span style="color:#e6db74">&#34;Ali&#34;</span>  <span style="color:#e6db74">&#34;Budi&#34;</span> <span style="color:#e6db74">&#34;Cici&#34;</span> <span style="color:#e6db74">&#34;Deni&#34;</span>
-</code></pre></div><h2 id="_replace_-elemen"><em>replace</em> elemen</h2>
-<p>Apabila ada data yang ternyata tidak sesuai, <em>typo</em> atau salah ketik misalnya, bisa diganti. Misalnya data nama, data ke-5 diganti dari Eka menjadi Erna</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama[5] <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;Erna&#34;</span>
-</code></pre></div><p>Penggantian ini bisa juga lebih dari 1 elemen. Misalkan data ke-4 dan 5 diganti menjadi Dedi dan Ema.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama<span style="color:#a6e22e">[c</span>(<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>)] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Dedi&#34;</span>, <span style="color:#e6db74">&#34;Ema&#34;</span>)
-</code></pre></div><h2 id="menambah-elemen">Menambah elemen</h2>
-<p>Misalkan data nama akan ditambahkan dengan Fahri, Gandi, Hilda, Imam, Joko.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">append</span>(nama,<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Fahri&#34;</span>, <span style="color:#e6db74">&#34;Gandi&#34;</span>, <span style="color:#e6db74">&#34;Hilda&#34;</span>, <span style="color:#e6db74">&#34;Imam&#34;</span>, <span style="color:#e6db74">&#34;Joko&#34;</span>))
-[1] <span style="color:#e6db74">&#34;Ali&#34;</span>   <span style="color:#e6db74">&#34;Budi&#34;</span>  <span style="color:#e6db74">&#34;Cici&#34;</span>  <span style="color:#e6db74">&#34;Dedi&#34;</span>  <span style="color:#e6db74">&#34;Ema&#34;</span>   <span style="color:#e6db74">&#34;Fahri&#34;</span> <span style="color:#e6db74">&#34;Gandi&#34;</span> <span style="color:#e6db74">&#34;Hilda&#34;</span> <span style="color:#e6db74">&#34;Imam&#34;</span> 
-[10] <span style="color:#e6db74">&#34;Joko&#34;</span>
-</code></pre></div><h2 id="menghapus-elemen">Menghapus elemen</h2>
-<p>Misalkan akan dihapus nama Budi yang merupakan elemen ke-2</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama <span style="color:#f92672">&lt;-</span> nama[<span style="color:#ae81ff">-2</span>]
-</code></pre></div><h2 id="operasi-matematika">Operasi matematika</h2>
-<p>Misalkan, untuk keperluan menghitung <em>body mass index</em> atau indeks massa tubuh (IMT). Tinggi badan yang digunakan adalah dalam satuan meter. Sementara data yang masuk dalam centimeter. Akan dibuat variabel baru (berupa vector tentunya) IMT yang diperoleh dari menghitung berat_badan dibagi kuadrat tinggi_badan dalam meter.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">IMT <span style="color:#f92672">&lt;-</span> berat_badan<span style="color:#f92672">/</span>(tinggi_badan<span style="color:#f92672">/</span><span style="color:#ae81ff">100</span>)^2
-</code></pre></div>
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
 </div>
 
-<h2>Comments</h2>
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </main>
 
-    
-      
-    
-  </body>
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Mengenal Objek R Vector</h1>
+</div>
+<div class="content">
+  
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>
+

@@ -1,80 +1,524 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html lang="en">
+
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>android &middot; Catatan Sasongko</title>
-  <meta name="description" content="" />
+
+    
 
   
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
 
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
 
   
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
 
   
-  <link href="https://sasongko.web.id/tags/android/index.xml" rel="alternate" type="application/rss+xml" title="Catatan Sasongko" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
+    href='/tags/android/index.xml' />
+  
+
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
 </head>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://sasongko.web.id/"><h2>Catatan Sasongko</h2></a>
-	 
-	  <p class="lead">
-       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
-      </p>
-    </div>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://sasongko.web.id/">Home</a> </li>
-        
-		<li><a href="https://sasongko.web.id/about">Profil</a></li>
-		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
-      </ul>
-    </nav>
-	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
- <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+<body>
+<div id="layout">
 
-		</div>
-</aside>
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
 
-    <main class="content container">
-    <ul class="posts">
-<li>
-    <span><a href="https://sasongko.web.id/post/2020-08-21-screenshot-via-adb/">Screenshot android dengan adb</a> <time class="pull-right post-list" datetime="2020-08-21T00:00:00Z">Fri, Aug 21, 2020</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2020-05-24-aktivasi-android-gps-adb/">Aktivasi android GPS via adb</a> <time class="pull-right post-list" datetime="2020-05-24T00:00:00Z">Sun, May 24, 2020</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2020-01-10-mtperrorcantopendevice/">MtpErrorCantOpenDevice</a> <time class="pull-right post-list" datetime="2020-01-10T00:00:00Z">Fri, Jan 10, 2020</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2019-08-03-restart-android-via-adb/">Restart android via adb</a> <time class="pull-right post-list" datetime="2019-08-03T00:00:00Z">Sat, Aug 3, 2019</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2019-06-09-backup-android/">Back Up Data HP Android</a> <time class="pull-right post-list" datetime="2019-06-09T00:00:00Z">Sun, Jun 9, 2019</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2016-05-07-install-android-tools/">Install Android Tools</a> <time class="pull-right post-list" datetime="2016-05-07T00:00:00Z">Sat, May 7, 2016</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/">Install Google Play Downloader</a> <time class="pull-right post-list" datetime="2015-07-18T00:00:00Z">Sat, Jul 18, 2015</time></span>
-  </li>
-</ul>
-    </main>
+  
 
-    
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
       
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
     
-  </body>
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href='/tags/android/index.xml'><i
+          class="fas fa-rss"></i>RSS</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>android</h1>
+</div>
+
+<div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-08-21-screenshot-via-adb/">Screenshot android dengan adb</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>21 Aug 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di external memory (sdcard) dengan nama file screenshot.png
+adb shell screencap -p /sdcard/screenshot.png 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-24-aktivasi-android-gps-adb/">Aktivasi android GPS via adb</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>24 May 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan adbadb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti angka 3 dengan 0.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-01-10-mtperrorcantopendevice/">MtpErrorCantOpenDevice</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Jan 2020, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Ketika akan memindahkan data dari HP android ke laptop melalui thunar, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui jmtpfs$ jmtpfs Device 0 (VID=0e8d and PID=201d) is a MediaTek Inc Elephone P8000. error returned by libusb_claim_interface() = -6LIBMTP PANIC: Unable to initialize device terminate called after throwing an instance of &#39;MtpErrorCantOpenDevice&#39; what(): Can&#39;t open device Aborted Ada masalah di libusb. Coba reinstall libusb# slackpkg reinstall libusb Alhamdulillah sukses.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2019-08-03-restart-android-via-adb/">Restart android via adb</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Aug 2019, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Catatan kali ini masih seputar troubleshoot HP android dengan komputer terutama Slackware.
+Tadi malam, HP yang OS android touchscreen-nya tidak ada respon. Di semua bagian layar. Tapi tombol power dan volume masih berfungsi. Begitu juga dengan konektivitas internet maupun telepon. Mau mencoba di-restart, tombol power normal tapi untuk memilih shutdown atau reboot tidak bisa karena tochscreen-nya tidak ada respon. Lepas baterai? Tidak bisa karena baterainya tanam.
+Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersedia di SBo).
+  </p>
+
+  
+  <footer>
+    <a href="/post/2019-08-03-restart-android-via-adb/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2019-06-09-backup-android/">Back Up Data HP Android</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>09 Jun 2019, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Sebelum berganti ponsel atau HP sangat disarankan untuk mem-back up data-data penting, seperti dokumen, foto, video, maupun chat WhatsApp. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi Slackware.
+Persiapan Slackware Pastikan bisa menjalankan adbyang merupakan bagian dari android tools. Kalau belum bisa install dari SBo
+Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer pakai adbbisa lebih cepat
+Persiapan Android Aktifkan mode USB debugging yang ada di Settings &ndash;&gt; Developer options.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2019-06-09-backup-android/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-05-07-install-android-tools/">Install Android Tools</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>07 May 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Di catatan kemarin sudah saya sampaikan [cara install sbopkg]({% post_url 2016-05-03-install-sbopkg %}), nah sekarang adalah contoh cara menggunakan sbopkg, untuk install Android Tools.
+Jalankan sebagai root
+sbopkg Tersedia pilihan Sync, Changelog, Packages, Updates, Browse, Search, Queue, Utilities, Help.
+Pilih SearchMasukkan kata kuncinya, misalnya androidKemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan OK.
+Keluar beraneka opsi. Alangkah baiknya baca-baca READMEatau Infodulu terutama untuk cek dependensi pada bagian REQUIRESetelah semua dependensi terpenuhi, silahkan lanjut, pilih Processkemudian Installlalu StartProses, download, build dan install dimulai.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2016-05-07-install-android-tools/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/">Install Google Play Downloader</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Jul 2015, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:
+ python-protobuf (&gt;=2.4) python-requests (&gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&gt;=2.8) python 2.5+ java (opsional)  Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
+easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).
+  </p>
+
+  
+  <footer>
+    <a href="/post/2015-07-18-install-googleplaydownloader/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>
