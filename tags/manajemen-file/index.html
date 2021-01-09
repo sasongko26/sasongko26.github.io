@@ -1,74 +1,421 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html lang="en">
+
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>manajemen file &middot; Catatan Sasongko</title>
-  <meta name="description" content="" />
+
+    
 
   
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
 
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
 
   
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
 
   
-  <link href="https://sasongko.web.id/tags/manajemen-file/index.xml" rel="alternate" type="application/rss+xml" title="Catatan Sasongko" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
+    href='https://sasongko.web.id/tags/manajemen-file/index.xml' />
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+    
+        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
+    
+  
+  
+    
+        <script src="https://sasongko.web.id/js/my.js"></script>
+    
+  
+
 </head>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://sasongko.web.id/"><h2>Catatan Sasongko</h2></a>
-	 
-	  <p class="lead">
-       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
-      </p>
-    </div>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://sasongko.web.id/">Home</a> </li>
-        
-		<li><a href="https://sasongko.web.id/about">Profil</a></li>
-		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
-      </ul>
-    </nav>
-	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
- <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+<body>
+<div id="layout">
 
-		</div>
-</aside>
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
 
-    <main class="content container">
-    <ul class="posts">
-<li>
-    <span><a href="https://sasongko.web.id/post/2020-06-11-memisahkan-halaman-pdf/">Memisahkan halaman PDF</a> <time class="pull-right post-list" datetime="2020-06-11T00:00:00Z">Thu, Jun 11, 2020</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/">Deteksi duplikasi file</a> <time class="pull-right post-list" datetime="2020-06-01T00:00:00Z">Mon, Jun 1, 2020</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2020-05-12-melihat-isi-file-zip/">Melihat isi file zip</a> <time class="pull-right post-list" datetime="2020-05-12T00:00:00Z">Tue, May 12, 2020</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2019-12-01-rename-banyak-file-sekaligus/"></a> <time class="pull-right post-list" datetime="2019-12-01T00:00:00Z">Sun, Dec 1, 2019</time></span>
-  </li>
-</ul>
-    </main>
+  
 
-    
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
       
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
     
-  </body>
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href='https://sasongko.web.id/tags/manajemen-file/index.xml'><i
+          class="fas fa-rss"></i>RSS</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>manajemen file</h1>
+</div>
+
+<div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-06-11-memisahkan-halaman-pdf/">Memisahkan halaman PDF</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Jun 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Kadang kita perlu mengambil beberapa halaman dari e-book atau sejenisnya yang bertipe pdf. Kita bisa gunakan pdfjam. Misalkan akan mengambil halaman 10-21 dari file buku.pdf.
+pdfjam buku.pdf &#39;10-21&#39; 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/">Deteksi duplikasi file</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Jun 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Walau sudah ada tools yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan tools bawaan Slackware. Tools yang umum digunakan antara lain fslint, fdupesatau jdupes. Adapun tools yang biasa saya gunakan
+ sha512sum awk uniq grep  Misalkan, akan mencari adakah duplikasi file di folder Downloads. Pertama, catat dulu hash-nya. Di sini saya gunakan sha512. Kumpulan sha512 tersebut disatukan dalam file downloads.sha512. File ini terdiri dari 2 kolom.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-12-melihat-isi-file-zip/">Melihat isi file zip</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 May 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Menggunakan linux terutama slackware membuat pekerjaan lebih ringan dan efisien. Suatu ketika diberikan sebuah file terkompresi zip yang misterius. Misterius karena ukurannya besar dan konon kata empunya file tersebut ngehang saat akan dibuka di komputer dengan sistem bukan slackware juga bukan linux. Dan ketika dibuka di slackware ketahuanlah nama &ldquo;penduduk&rdquo; zip tersebut.
+zip -sf namafile.zip # atau less namafile.zip 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2019-12-01-rename-banyak-file-sekaligus/"></a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Dec 2019</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Tak terasa ternyata sudah lebih dari 3 bulan tidak posting. Mengapa? Sibuk? Kesibukan sebenarnya seperti biasa. Tidak ada peningkatan kesibukan secara signifikan. Lalu mengapa? Alasannya simpel. Karena semua kegiatan berkomputer baik-baik saja. Tidak ada masalah. Biasanya saya menulis di sini ketika saya menghadapi masalah terkait penggunaan komputer. Nah, kali ini masalahnya adalah saya menemukan banyak file yang namanya tidak sesuai dengan standar saya.
+Contoh, adik-adik asisten anatomi mengirimkan softcopy materi asistensi.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2019-12-01-rename-banyak-file-sekaligus/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>

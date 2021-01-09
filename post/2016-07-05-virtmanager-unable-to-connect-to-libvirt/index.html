@@ -1,127 +1,234 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html lang="en">
+
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Virtual Manager unable to connect to libvirt &middot; Catatan Sasongko</title>
-  <meta name="description" content="" />
 
-  
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
-
-
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+    
 
   
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+    
+        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
+    
+  
+  
+    
+        <script src="https://sasongko.web.id/js/my.js"></script>
+    
+  
+
 </head>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://sasongko.web.id/"><h2>Catatan Sasongko</h2></a>
-	 
-	  <p class="lead">
-       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
-      </p>
-    </div>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://sasongko.web.id/">Home</a> </li>
-        
-		<li><a href="https://sasongko.web.id/about">Profil</a></li>
-		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
-      </ul>
-    </nav>
-	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
- <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+<body>
+<div id="layout">
 
-		</div>
-</aside>
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
 
-    <main class="content container">
-    <div class="post">
-  <h1>Virtual Manager unable to connect to libvirt</h1>
-  <time datetime=2016-07-05T00:00:00Z class="post-date">Tue, Jul 5, 2016</time>
-  <p>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata <!-- raw HTML omitted -->Virtual Manager<!-- raw HTML omitted --> belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka <em>graphical front-end</em>-nya, tapi ternyata kemudian muncul kotak dialog <!-- raw HTML omitted -->Virtual Machine Manager Connection Failure<!-- raw HTML omitted --> dengan detail sebagai berikut</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Unable to connect to libvirt.
+  
 
-internal error: Cannot find suitable emulator <span style="color:#66d9ef">for</span> x86_64
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
+      
+        </li>
+      
+    </ul>
+  </div>
 
-Libvirt URI is: qemu:///system
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
 
-Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:
-  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtManager/connection.py&#34;</span>, line 979, in _open_thread
-    self._populate_initial_state<span style="color:#f92672">()</span>
-  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtManager/connection.py&#34;</span>, line 941, in _populate_initial_state
-    logging.debug<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;conn version=%s&#34;</span>, self._backend.conn_version<span style="color:#f92672">())</span>
-  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtinst/connection.py&#34;</span>, line 316, in conn_version
-    self._conn_version <span style="color:#f92672">=</span> self._libvirtconn.getVersion<span style="color:#f92672">()</span>
-  File <span style="color:#e6db74">&#34;/usr/lib64/python2.7/site-packages/libvirt.py&#34;</span>, line 3984, in getVersion
-    <span style="color:#66d9ef">if</span> ret <span style="color:#f92672">==</span> -1: raise libvirtError <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;virConnectGetVersion() failed&#39;</span>, conn<span style="color:#f92672">=</span>self<span style="color:#f92672">)</span>
-libvirtError: internal error: Cannot find suitable emulator <span style="color:#66d9ef">for</span> x86_64
-</code></pre></div><p>Cek <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> apakah masih terinstall atau tidak. Harusnya sih memang terinstall karena saya belum pernah menghapusnya.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls /var/log/packages|grep qemu
-qemu-2.6.0-x86_64-1_SBo
-</code></pre></div><p>Disebutkan <!-- raw HTML omitted -->Unable to connect to libvirt<!-- raw HTML omitted --> dengan <!-- raw HTML omitted -->Libvirt URI is: qemu:///system<!-- raw HTML omitted -->, dan <!-- raw HTML omitted -->internal error: Cannot find suitable emulator for x86_64<!-- raw HTML omitted -->, padahal terinstall <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> ini kan aneh. Pasti ada masalah dengan <!-- raw HTML omitted -->qemu<!-- raw HTML omitted -->-nya.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ qemu-system-x86_64
-qemu-system-x86_64: error <span style="color:#66d9ef">while</span> loading shared libraries: libcacard.so.0: cannot open shared object file: No such file or directory
-</code></pre></div><p>Nah, ada titik terang. Masalah dependensi. <!-- raw HTML omitted -->libcacard<!-- raw HTML omitted --> tidak ada, berarti harus diinstall. Tapi installnya dari mana?</p>
-<p>Pertama, asumsikan <!-- raw HTML omitted -->libcacard<!-- raw HTML omitted --> ini paket resmi dari <strong>Slackware</strong>. Cek dengan <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">slackpkg search libcacard
+    
 
-Looking <span style="color:#66d9ef">for</span> libcacard in package list. Please wait... DONE
+    
 
-No package name matches the pattern.
-</code></pre></div><p>Karena tidak ada, cek <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> karena <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> installnya dari <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sbopkg -g libcacard
-Searching <span style="color:#66d9ef">for</span> libcacard
-Found the following matches <span style="color:#66d9ef">for</span> libcacard:
-libraries/libcacard
-</code></pre></div><p>OK, ketemu. Ada <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->-nya, install!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sbopkg -i libcacard
-</code></pre></div><p>install selesai. Konfirmasi <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> dengan <!-- raw HTML omitted -->qemu-system-x86_64<!-- raw HTML omitted --> apakah masih bermasalah. Ternyata ok. Lanjut buka <!-- raw HTML omitted -->virt-manager<!-- raw HTML omitted -->-nya. Ok. Done! Alhamdulillah&hellip;</p>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
 
 </div>
 
-<h2>Comments</h2>
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </main>
 
-    
-      
-    
-  </body>
+  <div id="main">
+
+
+<div class="header">
+  <h1>Virtual Manager unable to connect to libvirt</h1>
+</div>
+<div class="content">
+  
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+
+
+
+
+<script src="https://sasongko.web.id/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+</body>
 </html>
+

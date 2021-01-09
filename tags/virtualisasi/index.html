@@ -1,74 +1,442 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html lang="en">
+
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>virtualisasi &middot; Catatan Sasongko</title>
-  <meta name="description" content="" />
+
+    
 
   
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
 
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
 
   
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
 
   
-  <link href="https://sasongko.web.id/tags/virtualisasi/index.xml" rel="alternate" type="application/rss+xml" title="Catatan Sasongko" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
+    href='https://sasongko.web.id/tags/virtualisasi/index.xml' />
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+    
+        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
+    
+  
+  
+    
+        <script src="https://sasongko.web.id/js/my.js"></script>
+    
+  
+
 </head>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://sasongko.web.id/"><h2>Catatan Sasongko</h2></a>
-	 
-	  <p class="lead">
-       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
-      </p>
-    </div>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://sasongko.web.id/">Home</a> </li>
-        
-		<li><a href="https://sasongko.web.id/about">Profil</a></li>
-		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
-      </ul>
-    </nav>
-	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
- <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+<body>
+<div id="layout">
 
-		</div>
-</aside>
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
 
-    <main class="content container">
-    <ul class="posts">
-<li>
-    <span><a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Mount qcow2</a> <time class="pull-right post-list" datetime="2016-09-11T00:00:00Z">Sun, Sep 11, 2016</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Virtual Manager unable to connect to libvirt</a> <time class="pull-right post-list" datetime="2016-07-05T00:00:00Z">Tue, Jul 5, 2016</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Virt-Manager ImportError: No module named requests</a> <time class="pull-right post-list" datetime="2016-07-04T00:00:00Z">Mon, Jul 4, 2016</time></span>
-  </li><li>
-    <span><a href="https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/">Konversi VDI ke VMDK</a> <time class="pull-right post-list" datetime="2014-10-14T09:43:09Z">Tue, Oct 14, 2014</time></span>
-  </li>
-</ul>
-    </main>
+  
 
-    
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
       
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
     
-  </body>
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href='https://sasongko.web.id/tags/virtualisasi/index.xml'><i
+          class="fas fa-rss"></i>RSS</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>virtualisasi</h1>
+</div>
+
+<div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Mount qcow2</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Sep 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk mengaitkan/mount berkas qcow2ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
+Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
+modprobe nbd max_part=N max_part=Nisikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2tersebut kalau dijalankan dengan qemuberisi 8 partisi, maka nilai Nadalah 8.
+Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbdyang mengaktifkan koneksi file /mnt/virtual/image/ign11.qcow2ke /dev/nbd0&gt;
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Virtual Manager unable to connect to libvirt</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 Jul 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Managerbelum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failuredengan detail sebagai berikut
+Unable to connect to libvirt. internal error: Cannot find suitable emulator for x86_64 Libvirt URI is: qemu:///system Traceback (most recent call last): File &#34;/usr/share/virt-manager/virtManager/connection.py&#34;, line 979, in _open_thread self._populate_initial_state() File &#34;/usr/share/virt-manager/virtManager/connection.py&#34;, line 941, in _populate_initial_state logging.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Virt-Manager ImportError: No module named requests</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Jul 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Managertidak bisa dijalankan.
+$ virt-manager Traceback (most recent call last): File &#34;/usr/share/virt-manager/virt-manager&#34;, line 33, in &lt;module&gt; from virtinst import util as util File &#34;/usr/share/virt-manager/virtinst/__init__.py&#34;, line 89, in &lt;module&gt; from virtinst.distroinstaller import DistroInstaller File &#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;, line 23, in &lt;module&gt; from . import urlfetcher File &#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;, line 34, in &lt;module&gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requestsmenunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/">Konversi VDI ke VMDK</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 Oct 2014</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.
+Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya
+$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% Clone hard disk created in format 'VMDK'. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa Hardisk virtualnya sudah terkonversi.
+  </p>
+
+  
+</article>
+
+  
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>

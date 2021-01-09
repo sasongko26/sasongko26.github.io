@@ -1,127 +1,231 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html lang="en">
+
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Mount qcow2 &middot; Catatan Sasongko</title>
-  <meta name="description" content="" />
 
-  
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://sasongko.web.id/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
-
-
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+    
 
   
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+    
+        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
+    
+  
+  
+    
+        <script src="https://sasongko.web.id/js/my.js"></script>
+    
+  
+
 </head>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://sasongko.web.id/"><h2>Catatan Sasongko</h2></a>
-	 
-	  <p class="lead">
-       Catatan Penggunaan Slackware &amp; Open Source Software Lainnya 
-      </p>
-    </div>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://sasongko.web.id/">Home</a> </li>
-        
-		<li><a href="https://sasongko.web.id/about">Profil</a></li>
-		<li><a href="https://sasongko.web.id/logo">Makna logo</a></li>
-      </ul>
-    </nav>
-	<p><img src="https://sasongko.web.id//logocatatansasongko.png" />	</p>
- <p>Catatan ini dibuat menggunakan <a href="http://slackware.com">slackware</a>, <a href="https://github.com">github</a>, dan <a href="https://gohugo.io">hugo</a> dengan theme <a href="https://github.com/spf13/hyde)">hyde</a></p>
+<body>
+<div id="layout">
 
-		</div>
-</aside>
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
 
-    <main class="content container">
-    <div class="post">
-  <h1>Mount qcow2</h1>
-  <time datetime=2016-09-11T00:00:00Z class="post-date">Sun, Sep 11, 2016</time>
-  <p>Untuk mengaitkan/<em>mount</em> berkas <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> ternyata tidak bisa langsung di- <em>mount</em> begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses <em>root</em></p>
-<p>Modul kernel NBD aktifkan dulu. Secara <em>default</em> modul NBD nonaktif. Untuk mengaktifkannya</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">modprobe nbd max_part<span style="color:#f92672">=</span>N
-</code></pre></div><p><!-- raw HTML omitted -->max_part=N<!-- raw HTML omitted --> isikan jumlah partisi yang ingin ditangani pada <!-- raw HTML omitted -->N<!-- raw HTML omitted -->. Misalnya, <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> tersebut kalau dijalankan dengan <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> berisi 8 partisi, maka nilai <!-- raw HTML omitted -->N<!-- raw HTML omitted --> adalah 8.</p>
-<p>Setalah modul NBD aktif, jalankan <!-- raw HTML omitted -->qemu-nbd<!-- raw HTML omitted -->. Di sini akan dijalankan <!-- raw HTML omitted -->qemu-nbd<!-- raw HTML omitted --> yang mengaktifkan koneksi file <!-- raw HTML omitted -->/mnt/virtual/image/ign11.qcow2<!-- raw HTML omitted --> ke <!-- raw HTML omitted -->/dev/nbd0&gt;</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">qemu-nbd -c /dev/nbd0 /mnt/virtual/image/ign11.qcow2
-</code></pre></div><p>Berhubung <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> adalah harddisk virtual berisi sistem operasi (di sini isinya <em>IGOS Nusantara 11</em>) maka tidak mungkin hanya terdiri dari 1 partisi. Minimal ada 2 partisi, yaitu <!-- raw HTML omitted -->/<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->/swap<!-- raw HTML omitted -->. Cek, tabel partisinya</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fdisk -l /dev/nbd0
+  
 
-Disk /dev/nbd0: <span style="color:#ae81ff">20</span> GiB, <span style="color:#ae81ff">21474836480</span> bytes, <span style="color:#ae81ff">41943040</span> sectors
-Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
-Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
-I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
-Disklabel type: dos
-Disk identifier: 0x4173c32c
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
+      
+        </li>
+      
+    </ul>
+  </div>
 
-Device      Boot   Start      End  Sectors  Size Id Type
-/dev/nbd0p1 *       <span style="color:#ae81ff">2048</span>  <span style="color:#ae81ff">1026047</span>  <span style="color:#ae81ff">1024000</span>  500M <span style="color:#ae81ff">83</span> Linux
-/dev/nbd0p2      <span style="color:#ae81ff">1026048</span> <span style="color:#ae81ff">41943039</span> <span style="color:#ae81ff">40916992</span> 19.5G 8e Linux LVM
-</code></pre></div><p>Nah, ada 2 partisi. Eh, tapi ternyata  tipenya <!-- raw HTML omitted -->LVM<!-- raw HTML omitted -->. Ya sudah, aktifkan saja. <em>Scan</em> dulu</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vgscan
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
 
-Reading all physical volumes.  This may take a <span style="color:#66d9ef">while</span>...
-  Found volume group <span style="color:#e6db74">&#34;in1-3mm_igos-nusantara&#34;</span> using metadata type lvm2
+    
 
-</code></pre></div><p>Terdeteksi sebagai <!-- raw HTML omitted -->in1-3mm_igos-nusantara<!-- raw HTML omitted -->.</p>
-<p>Kemudian aktifkan</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vgchange -ay   
+    
 
-   <span style="color:#ae81ff">2</span> logical volume<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> in volume group <span style="color:#e6db74">&#34;in1-3mm_igos-nusantara&#34;</span> now active
-</code></pre></div><p>Ada 2 <em>logical volume</em> atau partisi yang semuanya sudah aktif, Apa sajakah itu?</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls /dev/in1-3mm_igos-nusantara
+    
 
-root  swap
-</code></pre></div><p>Ada partisi <!-- raw HTML omitted -->root<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->swap<!-- raw HTML omitted -->.</p>
-<p>Misalkan <em>mount</em> partisi <!-- raw HTML omitted -->root<!-- raw HTML omitted -->-nya ke <!-- raw HTML omitted -->/mnt/tmp<!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mount /dev/in1-3mm_igos-nusantara/root /mnt/tmp
-</code></pre></div><p>Ok. Selesai. Alhamdulillah.</p>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
 
 </div>
 
-<h2>Comments</h2>
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "catatansasongko" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </main>
 
-    
-      
-    
-  </body>
+  <div id="main">
+
+
+<div class="header">
+  <h1>Mount qcow2</h1>
+</div>
+<div class="content">
+  
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>
+

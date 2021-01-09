@@ -248,6 +248,15 @@ Cara menginstallnya mudah. Sebenarnya di repo BlankOn sudah ada, tapi ada sediki
     </item>
     
     <item>
+      <title>Lomba Aplikasi HTML5 BlankOn</title>
+      <link>https://sasongko.web.id/post/2015-02-09-lomba-aplikasi-html5/</link>
+      <pubDate>Mon, 09 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2015-02-09-lomba-aplikasi-html5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Ekstrak File tar.xz</title>
       <link>https://sasongko.web.id/post/2014-12-30-ekstrak-file-tarxz/</link>
       <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
@@ -264,6 +273,17 @@ $ tar xpf nama_file.tar.xz </description>
       
       <guid>https://sasongko.web.id/post/2014-11-26-mencoba-blankon-liveiso/</guid>
       <description>Bagi yang ingin menggunakan BlankOn, ada baiknya mencoba BlankOn dulu tanpa memasangnya. Percobaan ini biasanya disebut dengan istilah live. Umumnya percobaan ini menggunaan sarana atau media berupa DVD sehingga muncullah istilah livedvd, atau flashdisk yang kemudian memunculkan liveusb. Bisakah kita live tanpa dvd maupun usb? Bisa saja, asal kita punya ISO-nya. Kita akan me-live langsung dari komputer atau laptop yang sudah terpasang BlankOn atau distro linux lainnya. Dengan ini kita ga perlu repot membakar ISOnya ke DVD atau membuat liveusb segala.</description>
+    </item>
+    
+    <item>
+      <title>Hapus Kernel Lama Debian</title>
+      <link>https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/</link>
+      <pubDate>Thu, 16 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/</guid>
+      <description>Setelah upgrade kernel, ada yang kurang sreg. Ternyata kernelnya malah jadi ada 2. ini terlihat di grub
+OK, kernel yang lama (2.6.32-5-686) dihapus saja.
+# apt-get remove linux-image-2.6.32-5-686 kemudian restart.</description>
     </item>
     
     <item>
@@ -419,26 +439,6 @@ $ wget -h GNU Wget 1.15, adalah sebuah non-interaktif network retriever.</descri
       <guid>https://sasongko.web.id/post/2014-03-01-disable-automount/</guid>
       <description>Walaupun diturunkan dari debian, BlankOn Suroboyo berbeda dengan debian karena pada Suroboyo secara default akan secara otomatis membuka media simpan (flashdisk misalnya) setelah media disambungkan ke komputer/laptop. Fitur ini dinamakan automount-open media yang agak mirip dengan autorun pada windows. Beberapa orang mungkin merasa terganggu dan ingin mematikan. Atau sebaliknya, pengguna debian justru ingin mengaktifkan fitur ini. Bagaimana cara mengaturnya?
 $ gsettings set org.gnome.desktop.media-handling automount false $ gsettings set org.gnome.desktop.media-handling automount-open false Atau untuk tampilan grafisnya gunakan dconf-editor / penyunting dconf yang mana harus install dulu, sedangkan debian tidak usah karena dconf-editor sudah terpasang.</description>
-    </item>
-    
-    <item>
-      <title>Hapus Kernel Lama Debian</title>
-      <link>https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/</guid>
-      <description>Setelah upgrade kernel, ada yang kurang sreg. Ternyata kernelnya malah jadi ada 2. ini terlihat di grub
-OK, kernel yang lama (2.6.32-5-686) dihapus saja.
-# apt-get remove linux-image-2.6.32-5-686 kemudian restart.</description>
-    </item>
-    
-    <item>
-      <title>Lomba Aplikasi HTML5 BlankOn</title>
-      <link>https://sasongko.web.id/post/2015-02-09-lomba-aplikasi-html5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://sasongko.web.id/post/2015-02-09-lomba-aplikasi-html5/</guid>
-      <description></description>
     </item>
     
   </channel>
