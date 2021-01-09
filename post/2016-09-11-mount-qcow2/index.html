@@ -209,9 +209,175 @@
 
 <div class="header">
   <h1>Mount qcow2</h1>
+  <h2></h2>
 </div>
 <div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Sep 2016</time>
+  </div>
+
   
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  <p>Untuk mengaitkan/<em>mount</em> berkas <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> ternyata tidak bisa langsung di- <em>mount</em> begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses <em>root</em></p>
+<p>Modul kernel NBD aktifkan dulu. Secara <em>default</em> modul NBD nonaktif. Untuk mengaktifkannya</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">modprobe nbd max_part<span style="color:#f92672">=</span>N
+</code></pre></div><p><!-- raw HTML omitted -->max_part=N<!-- raw HTML omitted --> isikan jumlah partisi yang ingin ditangani pada <!-- raw HTML omitted -->N<!-- raw HTML omitted -->. Misalnya, <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> tersebut kalau dijalankan dengan <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> berisi 8 partisi, maka nilai <!-- raw HTML omitted -->N<!-- raw HTML omitted --> adalah 8.</p>
+<p>Setalah modul NBD aktif, jalankan <!-- raw HTML omitted -->qemu-nbd<!-- raw HTML omitted -->. Di sini akan dijalankan <!-- raw HTML omitted -->qemu-nbd<!-- raw HTML omitted --> yang mengaktifkan koneksi file <!-- raw HTML omitted -->/mnt/virtual/image/ign11.qcow2<!-- raw HTML omitted --> ke <!-- raw HTML omitted -->/dev/nbd0&gt;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">qemu-nbd -c /dev/nbd0 /mnt/virtual/image/ign11.qcow2
+</code></pre></div><p>Berhubung <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> adalah harddisk virtual berisi sistem operasi (di sini isinya <em>IGOS Nusantara 11</em>) maka tidak mungkin hanya terdiri dari 1 partisi. Minimal ada 2 partisi, yaitu <!-- raw HTML omitted -->/<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->/swap<!-- raw HTML omitted -->. Cek, tabel partisinya</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fdisk -l /dev/nbd0
+
+Disk /dev/nbd0: <span style="color:#ae81ff">20</span> GiB, <span style="color:#ae81ff">21474836480</span> bytes, <span style="color:#ae81ff">41943040</span> sectors
+Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
+Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+Disklabel type: dos
+Disk identifier: 0x4173c32c
+
+Device      Boot   Start      End  Sectors  Size Id Type
+/dev/nbd0p1 *       <span style="color:#ae81ff">2048</span>  <span style="color:#ae81ff">1026047</span>  <span style="color:#ae81ff">1024000</span>  500M <span style="color:#ae81ff">83</span> Linux
+/dev/nbd0p2      <span style="color:#ae81ff">1026048</span> <span style="color:#ae81ff">41943039</span> <span style="color:#ae81ff">40916992</span> 19.5G 8e Linux LVM
+</code></pre></div><p>Nah, ada 2 partisi. Eh, tapi ternyata  tipenya <!-- raw HTML omitted -->LVM<!-- raw HTML omitted -->. Ya sudah, aktifkan saja. <em>Scan</em> dulu</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vgscan
+
+Reading all physical volumes.  This may take a <span style="color:#66d9ef">while</span>...
+  Found volume group <span style="color:#e6db74">&#34;in1-3mm_igos-nusantara&#34;</span> using metadata type lvm2
+
+</code></pre></div><p>Terdeteksi sebagai <!-- raw HTML omitted -->in1-3mm_igos-nusantara<!-- raw HTML omitted -->.</p>
+<p>Kemudian aktifkan</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vgchange -ay   
+
+   <span style="color:#ae81ff">2</span> logical volume<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> in volume group <span style="color:#e6db74">&#34;in1-3mm_igos-nusantara&#34;</span> now active
+</code></pre></div><p>Ada 2 <em>logical volume</em> atau partisi yang semuanya sudah aktif, Apa sajakah itu?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls /dev/in1-3mm_igos-nusantara
+
+root  swap
+</code></pre></div><p>Ada partisi <!-- raw HTML omitted -->root<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->swap<!-- raw HTML omitted -->.</p>
+<p>Misalkan <em>mount</em> partisi <!-- raw HTML omitted -->root<!-- raw HTML omitted -->-nya ke <!-- raw HTML omitted -->/mnt/tmp<!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mount /dev/in1-3mm_igos-nusantara/root /mnt/tmp
+</code></pre></div><p>Ok. Selesai. Alhamdulillah.</p>
+
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-09-11-mount-qcow2%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-09-11-mount-qcow2%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-09-11-mount-qcow2%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-09-11-mount-qcow2%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-09-11-mount-qcow2%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-09-11-mount-qcow2%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://sasongko.web.id/post/2016-09-10-nonaktif-delall-slackpkg/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://sasongko.web.id/post/2016-09-10-nonaktif-delall-slackpkg/">Nonaktifkan Penghapusan Unduhan Slackpkg</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/">Upgrade Plasma 5</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'catatansasongko';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 </div>
@@ -219,6 +385,19 @@
 <script src="https://sasongko.web.id/js/ui.js"></script>
 <script src="https://sasongko.web.id/js/menus.js"></script>
 
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49503242-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
 
 
 

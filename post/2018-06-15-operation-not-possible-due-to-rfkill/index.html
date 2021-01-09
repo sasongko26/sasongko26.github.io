@@ -209,9 +209,232 @@
 
 <div class="header">
   <h1>Operation not possible due to RF-kill</h1>
+  <h2></h2>
 </div>
 <div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>16 Jun 2018</time>
+  </div>
+
   
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  <p>Pagi ini, <em>refreshing</em> dengan berganti <em>desktop environment (DE)</em> memakai <strong>Window Maker (WM)</strong>. DE yang jarang digunakan karena biasanya memakai <strong>XFCE</strong>. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk <em>tethering</em>. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong <strong>Network Manager</strong> atau <strong>Wicd</strong> aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah <em>root</em>. Di sini <!-- raw HTML omitted -->$<!-- raw HTML omitted --> maksudnya adalah tetap dilakukan oleh <em>root</em>. Untuk memudahkan <em>syntax highlighting</em> karena kalau <em>command</em>-nya ditulis dengan <!-- raw HTML omitted -->#<!-- raw HTML omitted --> akan terbaca sebagai komentar sehingga tidak begitu jelas terbacanya.</p>
+<p>Pertama, cek wifi adapter dan interfacenya. Sebenarnya saya sudah hafal interfacenya wlan0, tapi karena jarang pakai WM ya lakukan &ldquo;prosedur standar&rdquo; untuk memudahkan <em>troubleshoot</em> siapa tahu beda atau ada masalah. Firasat ini ternyata benar.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ iw dev
+phy#0
+	Interface wlan0
+		ifindex <span style="color:#ae81ff">3</span>
+		wdev 0x1
+		addr cc:b0:da:b5:yy:xx
+		type managed
+		txpower 0.00 dBm
+</code></pre></div><p>Ok, masih tetap sama wlan0 dengan <em>device adapter</em> terdaftar sebagai phy#0.</p>
+<p><em>Next</em>, cek <em>wifi</em> statusnya apakah kondisi <em>up</em> atau <em>down</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ip link show wlan0
+3: wlan0: &lt;BROADCAST,MULTICAST&gt; mtu <span style="color:#ae81ff">1500</span> qdisc noop state DOWN mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
+    link/ether cc:b0:da:b5:yy:xx brd ff:ff:ff:ff:bb:aa
+</code></pre></div><p>Masih <em>down</em>. Ok, kita <em>up</em>-kan.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ip link set wlan0 up
+RTNETLINK answers: Operation not possible due to RF-kill
+</code></pre></div><p>O&rsquo;o&hellip;.</p>
+<p>Ini mengagetkan! Sudah 5 tahun lebih tidak <em>ngutak-atik</em> RF-kill dan selama pakai <strong>Slackware</strong> <em>fine fine</em> aja. FYI, terakhir mengetikkan <em>command</em> <!-- raw HTML omitted -->rfkill<!-- raw HTML omitted --> ya sekitar 5 tahunan yang lalu, saat &ldquo;membelot&rdquo; sejenak memakai <strong>Kali Linux</strong>. Ya, sejenak. Hanya sejenak, tapi persisnya berapa lama mbuh&hellip;.. Yang penting terus tetap <strong>Slackware</strong>.</p>
+<p>Karena kaget, seakan tak percaya, kontan mencari <em>2nd opinion</em> memakai <!-- raw HTML omitted -->ifconfig<!-- raw HTML omitted -->.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ifconfig wlan0 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
+</code></pre></div><p>Ternyata sama saja.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rfkill list
+0: ideapad_wlan: Wireless LAN
+	Soft blocked: yes
+	Hard blocked: no
+1: ideapad_bluetooth: Bluetooth
+	Soft blocked: yes
+	Hard blocked: no
+2: phy0: Wireless LAN
+	Soft blocked: yes
+	Hard blocked: no
+3: hci0: Bluetooth
+	Soft blocked: yes
+	Hard blocked: no
+</code></pre></div><p>Ternyata terblokir. Entah mengapa dan bagaimana prosesnya bisa terblokir.
+Yo wislah, di-<em>unblock</em> saja.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rfkill unblock <span style="color:#ae81ff">2</span>
+</code></pre></div><p>Cek lagi apakah masih terblokir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rfkill list <span style="color:#ae81ff">2</span>
+2: phy0: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+</code></pre></div><p>Selanjutnya, coba <em>up</em>-kan lagi.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ip link set wlan0 up
+$ ip link show wlan0
+3: wlan0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc mq state DOWN mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
+    link/ether cc:b0:da:b5:xx:yy brd ff:ff:ff:ff:bb:aa
+</code></pre></div><p>Alhamdulillah sudah ada tanda kehidupan. Sudah <em>up</em> walaupun belum tersambung ke mana pun. tahu darimana?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ iw wlan0 link
+Not connected
+</code></pre></div><p><em>Next</em>, scan apa ada wifi</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ iw wlan0 scan | egrep <span style="color:#e6db74">&#39;(SSID|Authentication)&#39;</span>
+	SSID: EN <span style="color:#ae81ff">262</span> XY
+		 * Authentication suites: PSK
+</code></pre></div><p>Sebenarnya <em>output</em>-nya panjang, tapi berhubung hanya butuh SSID sama autentikasinya ya sudah di egrep aja.</p>
+<p>Dan karena ada passwordnya, perlu diatur terlebih dulu</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vi /etc/wpa_supplicant.conf
+network<span style="color:#f92672">={</span>
+    ssid<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;EN 262 XY&#34;</span>
+    psk<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;indcncniub&#34;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Coba konekkan</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant.conf
+Successfully initialized wpa_supplicant
+</code></pre></div><p>Konfirmasi,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ iw wlan0 link
+Connected to 20:5e:f7:cb:jj:hh <span style="color:#f92672">(</span>on wlan0<span style="color:#f92672">)</span>
+	SSID: EN <span style="color:#ae81ff">262</span> XY
+	freq: <span style="color:#ae81ff">2437</span>
+	RX: <span style="color:#ae81ff">11111</span> bytes <span style="color:#f92672">(</span><span style="color:#ae81ff">126</span> packets<span style="color:#f92672">)</span>
+	TX: <span style="color:#ae81ff">1438</span> bytes <span style="color:#f92672">(</span><span style="color:#ae81ff">14</span> packets<span style="color:#f92672">)</span>
+	signal: -29 dBm
+	tx bitrate: 1.0 MBit/s
+
+	bss flags:	short-preamble short-slot-time
+	dtim period:	<span style="color:#ae81ff">3</span>
+	beacon int:	<span style="color:#ae81ff">100</span>
+</code></pre></div><p>Sipp. Konek. Saatnya minta ip.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dhclient wlan0
+</code></pre></div><p>Test koneksi</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ping -c <span style="color:#ae81ff">5</span> google.com
+PING google.com <span style="color:#f92672">(</span>172.217.194.100<span style="color:#f92672">)</span> 56<span style="color:#f92672">(</span>84<span style="color:#f92672">)</span> bytes of data.
+<span style="color:#ae81ff">64</span> bytes from 172.217.194.100: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">41</span> time<span style="color:#f92672">=</span>52.5 ms
+<span style="color:#ae81ff">64</span> bytes from 172.217.194.100: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">41</span> time<span style="color:#f92672">=</span><span style="color:#ae81ff">377</span> ms
+<span style="color:#ae81ff">64</span> bytes from 172.217.194.100: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">41</span> time<span style="color:#f92672">=</span>54.0 ms
+<span style="color:#ae81ff">64</span> bytes from 172.217.194.100: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">41</span> time<span style="color:#f92672">=</span><span style="color:#ae81ff">217</span> ms
+<span style="color:#ae81ff">64</span> bytes from 172.217.194.100: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">41</span> time<span style="color:#f92672">=</span><span style="color:#ae81ff">445</span> ms
+
+--- google.com ping statistics ---
+<span style="color:#ae81ff">5</span> packets transmitted, <span style="color:#ae81ff">5</span> received, 0% packet loss, time 13070ms
+rtt min/avg/max/mdev <span style="color:#f92672">=</span> 52.536/229.255/445.066/161.638 ms
+</code></pre></div><p>Ok. Beres!</p>
+
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2018-06-15-operation-not-possible-due-to-rfkill%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2018-06-15-operation-not-possible-due-to-rfkill%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2018-06-15-operation-not-possible-due-to-rfkill%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2018-06-15-operation-not-possible-due-to-rfkill%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2018-06-15-operation-not-possible-due-to-rfkill%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2018-06-15-operation-not-possible-due-to-rfkill%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://sasongko.web.id/post/2018-06-12-mengapa-openssl/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://sasongko.web.id/post/2018-06-12-mengapa-openssl/">Mengapa Enkripsi dengan OpenSSL?</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/">Pentingnya Shebang</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'catatansasongko';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 </div>
@@ -219,6 +442,19 @@
 <script src="https://sasongko.web.id/js/ui.js"></script>
 <script src="https://sasongko.web.id/js/menus.js"></script>
 
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49503242-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
 
 
 

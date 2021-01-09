@@ -209,9 +209,301 @@
 
 <div class="header">
   <h1>Install WvDial di Slackware</h1>
+  <h2></h2>
 </div>
 <div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Apr 2015</time>
+  </div>
+
   
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  <p>Agar bisa internetan di Slackware dengan modem tentunya kita harus install dulu paket atau aplikasinya. Aplikasi yang penulis sarankan adalah WvDial. WvDial ini berbasis text/CLI, bisa untuk GSM maupun CDMA. Slackware yang digunakan Slackware 14.1.</p>
+<p>Paket yang dibutuhkan:</p>
+<ul>
+<li>
+<p>WvStreams</p>
+</li>
+<li>
+<p>WvDial</p>
+</li>
+</ul>
+<p>Kita akan unduh dari sini</p>
+<p>WvStreams :</p>
+<ul>
+<li>
+<p>Slackbuild : <a href="http://slackbuilds.org/slackbuilds/14.1/libraries/wvstreams.tar.gz">http://slackbuilds.org/slackbuilds/14.1/libraries/wvstreams.tar.gz</a></p>
+</li>
+<li>
+<p>Source code : <a href="http://wvstreams.googlecode.com/files/wvstreams-4.6.1.tar.gz">http://wvstreams.googlecode.com/files/wvstreams-4.6.1.tar.gz</a></p>
+</li>
+</ul>
+<p>WvDial :</p>
+<ul>
+<li>
+<p>Slackbuild : <a href="http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tar.gz">http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tar.gz</a></p>
+</li>
+<li>
+<p>Source code : <a href="http://wvstreams.googlecode.com/files/wvdial-1.61.tar.gz">http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tar.gz</a></p>
+</li>
+</ul>
+<p>Kemudian masuk ke /usr/local/src</p>
+<pre><code># cd /usr/local/src
+</code></pre><p>Kemudian salin slackbuild wvstream dan wvdial ke direktori ini (/usr/local/src).</p>
+<p>Yang harus diinstall dahulu adalah wvstreams. Ekstrak slackbuild wvstream</p>
+<pre><code># tar -xzf wvstreams.tar.gz
+</code></pre><p>Akan muncul direktori wvstreams pindahlah ke direktori ini. Salin source code wvstreams ke direktori wvstreams kemudian ekstrak di direktori ini</p>
+<pre><code># tar -xzf wvstreams-4.6.1.tar.gz
+</code></pre><p>Setelah itu, beri slackbuildnya hak eksekusi dan jalankan slackbuildnya</p>
+<pre><code># chmod +x wvstreams.SlackBuild &amp;&amp; ./wvstream.SlackBuild
+</code></pre><p>Kemudian akan terbuat file installer wvstreams-4.6.1-i486-1_SBo.tgz di /tmp. Nama file ini mungkin tidak sama untuk Anda, silahkan disesuaikan, kalau arsitektur komputer yang Anda gunakan 64 bit maka i486 ganti X86_64.</p>
+<pre><code># installpkg /tmp/wvstreams-4.6.1-i486-1_SBo.tgz
+</code></pre><p>Install wvstreams selesai. Sekarang lanjut install wvdial. Caranya sama seperti install wvstreams. Yaitu:</p>
+<!-- raw HTML omitted -->
+<p>Scanning your serial ports for a modem.</p>
+<p>Modem Port Scan&lt;*1&gt;: S0   S1   S2   S3<br>
+ttyUSB0&lt;*1&gt;: ATQ0 V1 E1 &ndash; OK
+ttyUSB0&lt;*1&gt;: ATQ0 V1 E1 Z &ndash; OK
+ttyUSB0&lt;*1&gt;: ATQ0 V1 E1 S0=0 &ndash; OK
+ttyUSB0&lt;*1&gt;: ATQ0 V1 E1 S0=0 &amp;C1 &ndash; OK
+ttyUSB0&lt;*1&gt;: ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 &ndash; OK
+ttyUSB0&lt;*1&gt;: ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0 &ndash; OK
+ttyUSB0&lt;*1&gt;: Modem Identifier: ATI &ndash; Manufacturer: huawei
+ttyUSB0&lt;*1&gt;: Speed 9600: AT &ndash; OK
+ttyUSB0&lt;*1&gt;: Max speed is 9600; that should be safe.
+ttyUSB0&lt;*1&gt;: ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0 &ndash; OK
+ttyUSB1&lt;*1&gt;: ATQ0 V1 E1 &ndash; failed with 2400 baud, next try: 9600 baud
+ttyUSB1&lt;*1&gt;: ATQ0 V1 E1 &ndash; failed with 9600 baud, next try: 9600 baud
+ttyUSB1&lt;*1&gt;: ATQ0 V1 E1 &ndash; and failed too at 115200, giving up.
+ttyUSB2&lt;*1&gt;: ATQ0 V1 E1 &ndash; OK
+ttyUSB2&lt;*1&gt;: ATQ0 V1 E1 Z &ndash; OK
+ttyUSB2&lt;*1&gt;: ATQ0 V1 E1 S0=0 &ndash; OK
+ttyUSB2&lt;*1&gt;: ATQ0 V1 E1 S0=0 &amp;C1 &ndash; OK
+ttyUSB2&lt;*1&gt;: ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 &ndash; OK
+ttyUSB2&lt;*1&gt;: ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0 &ndash; OK
+ttyUSB2&lt;*1&gt;: Modem Identifier: ATI &ndash; Model: E1550
+ttyUSB2&lt;*1&gt;: Speed 9600: AT &ndash; OK
+ttyUSB2&lt;*1&gt;: Max speed is 9600; that should be safe.
+ttyUSB2&lt;*1&gt;: ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0 &ndash; OK</p>
+<p>Found a modem on /dev/ttyUSB0.
+Modem configuration written to /etc/wvdial.conf.
+ttyUSB0<!-- raw HTML omitted -->: Speed 9600; init &ldquo;ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0&rdquo;
+ttyUSB2<!-- raw HTML omitted -->: Speed 9600; init &ldquo;ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0&rdquo;</p>
+<pre><code>Kemudian kita atur file konfigurasinya di /etc/wvdial.conf
+</code></pre><p>[Dialer Defaults]
+Init1 = ATZ
+Init2 = ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0
+Modem = /dev/ttyUSB0
+Phone = 0
+Idle Seconds = 300
+Modem Type = Analog Modem
+Stupid Mode = 1
+Compuserve = 0
+Baud = 9600
+Auto DNS = 1
+Dial Command = ATDT
+Ask Password = 0
+ISDN = 0
+; Password = <!-- raw HTML omitted -->
+; Username = <!-- raw HTML omitted --></p>
+<pre><code>Berikut ini adalah konfigurasi wvdial penulis dengan ISP 3 modem Huawei E1550.
+</code></pre><p>[Dialer Defaults]
+Init1 = ATZ
+Init2 = ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0
+Modem = /dev/ttyUSB0
+Phone = 0
+Idle Seconds = 300
+Modem Type = Analog Modem
+Stupid Mode = 1
+Compuserve = 0
+Baud = 9600
+Auto DNS = 1
+Dial Command = ATDT
+Ask Password = 0
+ISDN = 0
+; Password = <!-- raw HTML omitted -->
+; Username = <!-- raw HTML omitted --></p>
+<p>[Dialer 3data]
+Init1 = ATZ
+Init2 = ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0
+Init3 = AT+CGDCONT=1,&ldquo;IP&rdquo;,&ldquo;3data&rdquo;
+Modem = /dev/ttyUSB0
+Phone = 0
+Idle Seconds = 300
+Modem Type = USB Modem
+Stupid Mode = 1
+Compuserve = 0
+Baud = 9600
+Auto DNS = 1
+Dial Command = ATDT
+Ask Password = 0
+ISDN = 0
+Password = 3data
+Username = 3data
+New PPPD = yes
+Phone = <em>99</em>**1#</p>
+<pre><code>Untuk menjalankannya
+</code></pre><h1 id="wvdial-3data">wvdial 3data</h1>
+<pre><code>Nah, kalau keluar output seperti ini berarti sudah ada tanda-tanda konek.
+</code></pre><p>&ndash;&gt; WvDial: Internet dialer version 1.61
+&ndash;&gt; Initializing modem.
+&ndash;&gt; Sending: ATZ
+ATZ
+OK
+&ndash;&gt; Sending: ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0
+ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0
+OK
+&ndash;&gt; Sending: AT+CGDCONT=1,&ldquo;IP&rdquo;,&ldquo;3data&rdquo;
+AT+CGDCONT=1,&ldquo;IP&rdquo;,&ldquo;3data&rdquo;
+OK
+&ndash;&gt; Modem initialized.
+&ndash;&gt; Idle Seconds = 300, disabling automatic reconnect.
+&ndash;&gt; Sending: ATDT<em>99</em><em><em>1#
+&ndash;&gt; Waiting for carrier.
+ATDT</em>99</em>**1#
+CONNECT
+&ndash;&gt; Carrier detected.  Starting PPP immediately.
+&ndash;&gt; Starting pppd at Sun Apr 19 10:09:14 2015
+&ndash;&gt; Pid of pppd: 1669
+&ndash;&gt; Using interface ppp0
+&ndash;&gt; pppd: [08]pk·<code>[17]F p[18]F  --&gt; pppd: [08]pk·</code>[17]F p[18]F
+&ndash;&gt; pppd: [08]pk·<code>[17]F p[18]F  --&gt; pppd: [08]pk·</code>[17]F p[18]F
+&ndash;&gt; pppd: [08]pk·<code>[17]F p[18]F  --&gt; pppd: [08]pk·</code>[17]F p[18]F
+&ndash;&gt; local  IP address 10.107.213.208
+&ndash;&gt; pppd: [08]pk·<code>[17]F p[18]F  --&gt; remote IP address 10.64.64.64 --&gt; pppd: [08]pk·</code>[17]F p[18]F
+&ndash;&gt; primary   DNS address 10.0.27.2
+&ndash;&gt; pppd: [08]pk·<code>[17]F p[18]F  --&gt; secondary DNS address 10.0.28.66 --&gt; pppd: [08]pk·</code>[17]F p[18]F</p>
+<pre><code>Loh kok disebut tanda-tanda konek? Kan di situ udah jelas ada tulisan **CONNECT** ,... ya karena ternyata
+</code></pre><h1 id="ping-googlecom">ping google.com</h1>
+<p>ping: unknown host google.com</p>
+<pre><code>buat nge-ping aja gagal apalagi browsing!
+
+Oke, kalau terjadi seperti itu, salin aja /etc/ppp/resolv.conf ke /etc/resolv.conf
+</code></pre><h1 id="cp-etcpppresolvconf-etcresolvconf">cp /etc/ppp/resolv.conf /etc/resolv.conf</h1>
+<pre><code>Coba ping lagi
+</code></pre><h1 id="ping-googlecom-1">ping google.com</h1>
+<p>PING google.com (114.4.42.88) 56(84) bytes of data.
+64 bytes from 114.4.42.88: icmp_seq=1 ttl=58 time=1018 ms
+64 bytes from 114.4.42.88: icmp_seq=2 ttl=58 time=1209 ms
+64 bytes from 114.4.42.88: icmp_seq=3 ttl=58 time=369 ms
+64 bytes from 114.4.42.88: icmp_seq=4 ttl=58 time=689 ms
+64 bytes from 114.4.42.88: icmp_seq=5 ttl=58 time=371 ms</p>
+<pre><code></code></pre>
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-04-01-install-wvdial-slackware%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-04-01-install-wvdial-slackware%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-04-01-install-wvdial-slackware%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-04-01-install-wvdial-slackware%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-04-01-install-wvdial-slackware%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-04-01-install-wvdial-slackware%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://sasongko.web.id/post/2015-02-09-lomba-aplikasi-html5/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://sasongko.web.id/post/2015-02-09-lomba-aplikasi-html5/">Lomba Aplikasi HTML5 BlankOn</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://sasongko.web.id/post/2015-04-10-install-maktabah-alqirthas/">Install Maktabah Alqirthas di BlankOn</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://sasongko.web.id/post/2015-04-10-install-maktabah-alqirthas/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'catatansasongko';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 </div>
@@ -219,6 +511,19 @@
 <script src="https://sasongko.web.id/js/ui.js"></script>
 <script src="https://sasongko.web.id/js/menus.js"></script>
 
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49503242-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
 
 
 

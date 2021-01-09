@@ -209,9 +209,154 @@
 
 <div class="header">
   <h1>Input Data R</h1>
+  <h2></h2>
 </div>
 <div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 Mar 2020</time>
+  </div>
+
   
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  <p>Input data dalam R sangat mudah dan ada beragam cara, yaitu:</p>
+<ol>
+<li>Menuliskan dalam bentuk <em>syntax</em>.  Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100</li>
+<li>Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel.</li>
+<li>Import dari file. Data dibuat tanpa menggunakan R dan disimpan ke dalam bentuk file. Data bisa dibuat menggunakan text editor (contoh vim, gvim, nano, pico, kate), aplikasi perkantoran (LibreOffice Calc dan Microsoft Excel) atau aplikasi statistik lainnya seperti SPSS, Minitab, dan Stata).</li>
+</ol>
+<p>Pada kesempatan ini yang digunakan adalah cara pertama. Misalkan datanya adalah nilai ujian dari 60 mahasiswa sebagai berikut :</p>
+<p>25 60 79 32 57 74 52 70 82 36 75 77 81 95 41 65 92 85 55 66 52 10 64 75 78 25 80 98 81 67 41 71 83 54 64 72 88 62 74 45 60 78 89 76 48 84 84 90 15 79 35 67 17 82 69 74 63 80 85 61.</p>
+<p><em>Syntax</em>-nya</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">nilai <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">79</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">74</span>, <span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">82</span>, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">75</span>, <span style="color:#ae81ff">77</span>, <span style="color:#ae81ff">81</span>, <span style="color:#ae81ff">95</span>, <span style="color:#ae81ff">41</span>, <span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">92</span>, <span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">66</span>, <span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">75</span>, <span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">98</span>, <span style="color:#ae81ff">81</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">41</span>, <span style="color:#ae81ff">71</span>, <span style="color:#ae81ff">83</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">72</span>, <span style="color:#ae81ff">88</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">74</span>, <span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">89</span>, <span style="color:#ae81ff">76</span>, <span style="color:#ae81ff">48</span>, <span style="color:#ae81ff">84</span>, <span style="color:#ae81ff">84</span>, <span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">79</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">82</span>, <span style="color:#ae81ff">69</span>, <span style="color:#ae81ff">74</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">61</span>)
+</code></pre></div><p>Untuk menampilkan data tersebut</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">nilai
+ [1] <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">60</span> <span style="color:#ae81ff">79</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">57</span> <span style="color:#ae81ff">74</span> <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">70</span> <span style="color:#ae81ff">82</span> <span style="color:#ae81ff">36</span> <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">77</span> <span style="color:#ae81ff">81</span> <span style="color:#ae81ff">95</span> <span style="color:#ae81ff">41</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">92</span> <span style="color:#ae81ff">85</span> <span style="color:#ae81ff">55</span> <span style="color:#ae81ff">66</span> <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">78</span>
+[26] <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">80</span> <span style="color:#ae81ff">98</span> <span style="color:#ae81ff">81</span> <span style="color:#ae81ff">67</span> <span style="color:#ae81ff">41</span> <span style="color:#ae81ff">71</span> <span style="color:#ae81ff">83</span> <span style="color:#ae81ff">54</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">88</span> <span style="color:#ae81ff">62</span> <span style="color:#ae81ff">74</span> <span style="color:#ae81ff">45</span> <span style="color:#ae81ff">60</span> <span style="color:#ae81ff">78</span> <span style="color:#ae81ff">89</span> <span style="color:#ae81ff">76</span> <span style="color:#ae81ff">48</span> <span style="color:#ae81ff">84</span> <span style="color:#ae81ff">84</span> <span style="color:#ae81ff">90</span> <span style="color:#ae81ff">15</span> <span style="color:#ae81ff">79</span>
+[51] <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">67</span> <span style="color:#ae81ff">17</span> <span style="color:#ae81ff">82</span> <span style="color:#ae81ff">69</span> <span style="color:#ae81ff">74</span> <span style="color:#ae81ff">63</span> <span style="color:#ae81ff">80</span> <span style="color:#ae81ff">85</span> <span style="color:#ae81ff">61</span>
+</code></pre></div><p>Kemudian, disarankan untuk mengecek apakah data sudah lengkap.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a6e22e">length</span>(nilai)
+[1] <span style="color:#ae81ff">60</span>
+</code></pre></div><p><em>Output</em> 60, sama dengan jumlah mahasiswa yang mengikuti ujian. Dengan demikian data sudah lengkap dan siap diolah lebih lanjut.</p>
+
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-03-14-input-data-r%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-03-14-input-data-r%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-03-14-input-data-r%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-03-14-input-data-r%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-03-14-input-data-r%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-03-14-input-data-r%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/">Package bawaan R Slackware</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/">Tendensi Sentral dengan R</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'catatansasongko';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 </div>
@@ -219,6 +364,19 @@
 <script src="https://sasongko.web.id/js/ui.js"></script>
 <script src="https://sasongko.web.id/js/menus.js"></script>
 
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49503242-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
 
 
 

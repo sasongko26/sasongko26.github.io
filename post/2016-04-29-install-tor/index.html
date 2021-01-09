@@ -209,9 +209,150 @@
 
 <div class="header">
   <h1>Install Tor Browser</h1>
+  <h2></h2>
 </div>
 <div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Apr 2016</time>
+  </div>
+
   
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/tor">tor</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/firefox">firefox</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  <p><a href="http://torproject.org">Tor Browser</a> adalah peramban web yang sangat memerhatikan privasi. Kita bisa mengakses web secara anonim/ <em>anonymous</em> karena melewati jaringan Tor yang beraneka jalur.</p>
+<p>Sebenarnya di <a href="http://slackbuilds.org">SBo</a> sudah tersedia browser satu ini. Tapi sayang untuk versi <strong>Slackware 14.1</strong> <em>download link</em>-nya <em>expired</em>. <em>Tor Stable</em> terbaru adalah versi 5.5.5 dan ini belum tersedia SBo resminya untuk Slackware. Jadi kita akan install mandiri. Tentu saja kita butuh koneksi internet untuk mengunduh berkasnya. Tor tersedia untuk Linux, Windows maupun Mac Os X, baik arsitektur 32 bit maupun 64 bit. Ini tidak hanya berlaku untuk Slackware tapi juga BlankOn. Di sini digunakan 64 bit. <strong>Proses instalasi dengan bukan root</strong>.</p>
+<pre><code>wget https://www.torproject.org/dist/torbrowser/5.5.5/tor-browser-linux64-5.5.5_en-US.tar.xz
+tar xvJf tor-browser-linux64-5.5.5_en-US.tar.xz
+./start-tor-browser.desktop
+</code></pre><p>Kemudian muncul jendela pengaturan <em>network</em> / jaringan. Gunakan saja pengaturan <em>default</em> dari Tor, klik <!-- raw HTML omitted -->Connect<!-- raw HTML omitted --></p>
+<p><img src="https://sasongko.web.id/gambar/tor-install.png" alt=""></p>
+<p>Tunggu sebentar, koneksi ke jaringan Tor sedang disambungkan.</p>
+<p><img src="https://sasongko.web.id/gambar/tor-install-2.png" alt=""></p>
+<p>Setelah tersambung, Tor siap digunakan. Harap perhatikan, jangan <em>maximize</em> jendela Tor, karena kalau jendelanya di-<em>maximize</em> bisa mengakibatkan kita kehilangan privasi karena posisi kita <em>browsing</em> bisa terdeteksi.</p>
+<p><img src="https://sasongko.web.id/gambar/tor-siap.png" alt=""></p>
+<p>Untuk menjalankan Tor, eksekusi file <!-- raw HTML omitted -->start-tor-browser.desktop<!-- raw HTML omitted -->.</p>
+<p>Dan perlu diperhatikan juga, <strong>ada website yang memblokir diakses dari IP tertentu ataupun juga memblokir akses dari Tor</strong>.</p>
+
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-04-29-install-tor%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-04-29-install-tor%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-04-29-install-tor%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-04-29-install-tor%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-04-29-install-tor%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-04-29-install-tor%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://sasongko.web.id/post/2016-04-28-nano-file-browser/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://sasongko.web.id/post/2016-04-28-nano-file-browser/">Kekuatan Tersembunyi Nano : Menampilkan File Tersembunyi</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://sasongko.web.id/post/2016-05-03-install-sbopkg/">Install sbopkg</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://sasongko.web.id/post/2016-05-03-install-sbopkg/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'catatansasongko';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 </div>
@@ -219,6 +360,19 @@
 <script src="https://sasongko.web.id/js/ui.js"></script>
 <script src="https://sasongko.web.id/js/menus.js"></script>
 
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49503242-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
 
 
 

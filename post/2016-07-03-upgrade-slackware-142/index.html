@@ -209,9 +209,145 @@
 
 <div class="header">
   <h1>Upgrade ke Slackware 14.2</h1>
+  <h2></h2>
 </div>
 <div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Jul 2016</time>
+  </div>
+
   
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackpkg">slackpkg</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  <p>Sehubungan dengan telah rilisnya <strong>Slackware 14.2</strong> maka silahkan melakukan <em>upgrade</em> untuk mendapatkan keamanan yang lebih bagus dan fitur-fitur baru. Saya selama ini melakukan <strong><em>upgrade</em> bertahap demi penghematan kuota internet</strong>. Dimulai dengan upgrade ke <em>current</em> karena saat itu versi <em>stable</em> yang baru (14.2) masih dalam proses pengembangan. <em>Upgrade</em> ini menggunakan <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted -->. Dan tentu saja membutuhkan sambungan internet.</p>
+<ol>
+<li>Pilih cermin atau <em>mirror</em>. Dengan menyunting <!-- raw HTML omitted -->/etc/slackpkg/mirrors<!-- raw HTML omitted -->, menghilangkan tanda komentar/tanda pagar pada repo yang diinginkan. Tersedia banyak repo yang bisa dijadikan rujukan, tetapi sayangnya baru 2 repo lokal yang resmi terdaftar, yaitu <em>UI</em> dan <em>UKDW</em>. Saya gunakan milik UKDW karena lebih dekat (UKDW di Yogyakarta sedangkan saya di Semarang) sehingga harapannya lebih cepat. Bisa juga memilih repo <em>Slackware.com</em> yang secara otomatis akan memilihkan repo terdekat. Pastikan hanya 1 repo yang dipilih.</li>
+<li><em>Update</em> daftar paket dengan melakukan <!-- raw HTML omitted -->slackpkg update<!-- raw HTML omitted --></li>
+<li><em>Upgrade</em> <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --> untuk mendapatkan alamat repo 14.2. <em>Upgrade</em> juga <!-- raw HTML omitted -->glibc-solibs<!-- raw HTML omitted -->. Keduanya dapat dilakukan secara simultan : <!-- raw HTML omitted -->slackpkg upgrade slackpkg glibc-solibs<!-- raw HTML omitted --></li>
+<li>Kalau muncul pertanyaan tentang konfigurasi baru, pilih saja <!-- raw HTML omitted -->O<!-- raw HTML omitted --> alias <!-- raw HTML omitted -->overwrite<!-- raw HTML omitted -->. Kalau tidak muncul lakukan <!-- raw HTML omitted -->slackpkg new-config<!-- raw HTML omitted --></li>
+<li>Setelah <em>upgrade</em> <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --> pilih repo lagi karena ada perubahan alamat/URL repo kemudian <em>update</em> lagi.</li>
+<li>Lanjut install paket-paket baru yang sebelumnya tidak ada : <!-- raw HTML omitted -->slackpkg install-new<!-- raw HTML omitted --></li>
+<li><em>Upgrade</em> sistem : <!-- raw HTML omitted -->slackpkg upgrade-all<!-- raw HTML omitted -->. Akan ditampilkan paket yang bisa di-<em>upgrade</em>. Hilangkan tanda bintangnya dengan menekan tombol <!-- raw HTML omitted -->spasi<!-- raw HTML omitted --> bila tidak ingin paket tersebut di-<em>upgrade</em> kemudian <!-- raw HTML omitted -->OK<!-- raw HTML omitted -->.</li>
+<li>Hapus paket yang tidak berguna. Paket yang perlu dihapus dan berbagai perubahan dari Slackware 14.1 ke 14.2 bisa dilihat <a href="http://repo.ukdw.ac.id/slackware/slackware64-14.2/CHANGES_AND_HINTS.TXT">di sini</a> : <!-- raw HTML omitted -->slackpkg remove    <!-- raw HTML omitted --></li>
+<li>Karena ada pergantian kernel, jangan lupa konfigurasi ulang <em>boot loader</em> itu <!-- raw HTML omitted -->lilo<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->elilo<!-- raw HTML omitted -->. Kalau menggunakan <!-- raw HTML omitted -->lilo<!-- raw HTML omitted --> : <!-- raw HTML omitted -->liloconfig<!-- raw HTML omitted -->. Kalau menggunakan <!-- raw HTML omitted -->elilo<!-- raw HTML omitted --> : <!-- raw HTML omitted -->eliloconfig<!-- raw HTML omitted --></li>
+</ol>
+
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-07-03-upgrade-slackware-142%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-07-03-upgrade-slackware-142%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-07-03-upgrade-slackware-142%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-07-03-upgrade-slackware-142%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-07-03-upgrade-slackware-142%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2016-07-03-upgrade-slackware-142%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/">Upgrade Slackbuilds Slackware 14.2</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Virt-Manager ImportError: No module named requests</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'catatansasongko';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 </div>
@@ -219,6 +355,19 @@
 <script src="https://sasongko.web.id/js/ui.js"></script>
 <script src="https://sasongko.web.id/js/menus.js"></script>
 
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49503242-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
 
 
 

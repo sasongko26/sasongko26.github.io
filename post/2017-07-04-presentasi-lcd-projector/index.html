@@ -209,9 +209,195 @@
 
 <div class="header">
   <h1>Presentasi dengan LCD Projector</h1>
+  <h2></h2>
 </div>
 <div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Jul 2017</time>
+  </div>
+
   
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  <p><em>Tools</em> yang digunakan adalah <!-- raw HTML omitted -->xrandr<!-- raw HTML omitted -->. Sebenarnya bisa menggunakan aplikasi GUI yang disediakan <em>desktop environment</em> masing-masing, tapi saya lebih suka menggunakan <!-- raw HTML omitted -->xrandr<!-- raw HTML omitted --> agar universal bisa digunakan di lingkungan desktop apapun, entah itu <!-- raw HTML omitted -->Fluxbox, FVWM, TWM, Xfce, KDE, Lumina, LXQt, Mate, Cinnamon<!-- raw HTML omitted -->, dsb.</p>
+<p>Pertama, identifikasi monitor/<em>screen</em> primer yang aktif tersambung saat ini, jangan sambungkan proyektor dulu</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ xrandr
+Screen 0: minimum <span style="color:#ae81ff">8</span> x 8, current <span style="color:#ae81ff">1366</span> x 768, maximum <span style="color:#ae81ff">32767</span> x <span style="color:#ae81ff">32767</span>
+eDP1 connected primary 1366x768+0+0 <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span> 310mm x 170mm
+   1366x768      59.97*+
+   1024x768      60.00  
+   1024x576      60.00  
+   960x540       60.00  
+   800x600       60.32    56.25  
+   864x486       60.00  
+   640x480       59.94  
+   720x405       60.00  
+   680x384       60.00  
+   640x360       60.00  
+DP1 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
+DP2 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
+HDMI1 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
+HDMI2 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
+VIRTUAL1 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
+</code></pre></div><p>Monitor primer saat ini terdeteksi sebagai <!-- raw HTML omitted -->eDP1<!-- raw HTML omitted --> dengan resolusi/mode 1366x768.</p>
+<p>Kemudian, sambungkan dengan proyektor</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ xrandr
+Screen 0: minimum <span style="color:#ae81ff">8</span> x 8, current <span style="color:#ae81ff">1366</span> x 768, maximum <span style="color:#ae81ff">32767</span> x <span style="color:#ae81ff">32767</span>
+eDP1 connected primary 1366x768+0+0 <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span> 310mm x 170mm
+   1366x768      59.97*+
+   1024x768      60.00  
+   1024x576      60.00  
+   960x540       60.00  
+   800x600       60.32    56.25  
+   864x486       60.00  
+   640x480       59.94  
+   720x405       60.00  
+   680x384       60.00  
+   640x360       60.00  
+DP1 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
+DP2 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
+HDMI1 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
+HDMI2 connected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
+   1024x768      70.07 +  85.00    75.03    60.00  
+   1920x1080     60.00    59.94  
+   1600x1200     60.00  
+   1280x1024     85.02    75.02  
+   1440x900      59.89  
+   1280x960      85.00  
+   1280x800      59.81  
+   1152x864      75.00  
+   1280x720      60.00    59.94  
+   1024x768i     86.96  
+   832x624       74.55  
+   800x600       85.06    72.19    75.00    60.32    56.25  
+   640x480       85.01    75.00    72.81    66.67    60.00    59.94  
+   720x400       87.85    70.08  
+VIRTUAL1 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
+</code></pre></div><p>Proyektor terdeteksi sebagai <!-- raw HTML omitted -->HDMI2<!-- raw HTML omitted --> dengan mode aktif 1024x768.</p>
+<p><!-- raw HTML omitted -->eDP1<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->HDMI2<!-- raw HTML omitted --> sama-sama mempunyai mode 1024x768. Mode inilah yang akan dipakai.</p>
+<p>Karena mode pada <!-- raw HTML omitted -->eDP1<!-- raw HTML omitted --> sekarang adalah 1366x768, maka harus disesuaikan menjadi 1024x768.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ xrandr -s 1024x768
+</code></pre></div><p>Selanjutnya apa yang tampil di monitor <!-- raw HTML omitted -->eDP1<!-- raw HTML omitted --> juga akan ditampilkan di proyektor (<!-- raw HTML omitted -->HDMI2<!-- raw HTML omitted -->) sama persis.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ xrandr --output HDMI2 --mode 1024x768 --same-as eDP1
+</code></pre></div><p>Kalau ingin menonaktifkan sambungan ke <!-- raw HTML omitted -->HDMI2<!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ xrandr --output HDMI2 --off
+</code></pre></div><p>Nah, setelah presentasi selesai, jangan lupa ubah lagi mode monitor <!-- raw HTML omitted -->eDP1<!-- raw HTML omitted --> ke 1366x768</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ xrandr -s 1366x768
+</code></pre></div>
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2017-07-04-presentasi-lcd-projector%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2017-07-04-presentasi-lcd-projector%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2017-07-04-presentasi-lcd-projector%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2017-07-04-presentasi-lcd-projector%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2017-07-04-presentasi-lcd-projector%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2017-07-04-presentasi-lcd-projector%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/">Rilis Lumina 1.3.0</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://sasongko.web.id/post/2017-07-05-convert-word-pdf-massal/">Convert Word ke PDF Secara Massal</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://sasongko.web.id/post/2017-07-05-convert-word-pdf-massal/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'catatansasongko';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 </div>
@@ -219,6 +405,19 @@
 <script src="https://sasongko.web.id/js/ui.js"></script>
 <script src="https://sasongko.web.id/js/menus.js"></script>
 
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49503242-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
 
 
 

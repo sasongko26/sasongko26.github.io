@@ -209,9 +209,176 @@
 
 <div class="header">
   <h1>Memformat Flashdisk di LInux</h1>
+  <h2></h2>
 </div>
 <div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 May 2015</time>
+  </div>
+
   
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  <p>Memformat flashdisk di linux adalah hal yang mudah.</p>
+<p>Pertama, pastikan flashdisknya terdeteksi oleh sistem. Pada kesempatan ini merk flashdisknya adalah Toshiba.</p>
+<pre><code>$ lsusb
+Bus 001 Device 003: ID 0930:1400 Toshiba Corp. Memory Stick 2GB
+Bus 001 Device 002: ID 04f2:b483 Chicony Electronics Co., Ltd 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+</code></pre><p>Perhatikan baris 2, flashdisk terdeteksi. Untuk lebih meyakinkan lagi, sekaligus mengetahui flashdisk ini diperlakukan sebagai apa oleh sistem, segera setelah flashdisk ditancapkan,</p>
+<pre><code>$ su
+Password:
+# dmesg | tail -20
+[  842.096153] usb 1-2: new high-speed USB device number 4 using xhci_hcd
+[  842.113907] usb 1-2: New USB device found, idVendor=0930, idProduct=1400
+[  842.113930] usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[  842.113946] usb 1-2: Product: TOSHIBA USB DRV
+[  842.113959] usb 1-2: Manufacturer: TOSHIBA
+[  842.113973] usb 1-2: SerialNumber: 07B60907914CACE7
+[  842.114961] usb-storage 1-2:1.0: USB Mass Storage device detected
+[  842.116210] scsi5 : usb-storage 1-2:1.0
+[  843.154056] scsi 5:0:0:0: Direct-Access     TOSHIBA  TOSHIBA USB DRV  PMAP PQ: 0 ANSI: 0 CCS
+[  843.908583] sd 5:0:0:0: [sdb] 7823360 512-byte logical blocks: (4.00 GB/3.73 GiB)
+[  843.909766] sd 5:0:0:0: [sdb] Write Protect is off
+[  843.909786] sd 5:0:0:0: [sdb] Mode Sense: 23 00 00 00
+[  843.910861] sd 5:0:0:0: [sdb] No Caching mode page found
+[  843.910877] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  843.915571] sd 5:0:0:0: [sdb] No Caching mode page found
+[  843.915587] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  843.948245]  sdb: sdb1
+[  843.951693] sd 5:0:0:0: [sdb] No Caching mode page found
+[  843.951714] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  843.951737] sd 5:0:0:0: [sdb] Attached SCSI removable disk
+</code></pre><p>Tampak bahwa flashdisk Toshiba itu dianggap oleh sistem sebagai /dev/sdb1.</p>
+<p>Nah, karena flashdisk ini biasanya dibawa kemana-mana, digunakan untuk pertukaran file antar komputer yang mana mayoritas komputer di Indonesia umumnya bersistem Windows, maka flashdisknya diformat FAT32 saja agar tetap terbaca di Windows.</p>
+<pre><code># mkfs.vfat -F 32 -n &quot;ini punyaku&quot; /dev/sdb1
+mkfs.fat 3.0.22 (2013-07-19)
+</code></pre><ul>
+<li>mkfs.vfat digunakan untuk membuat file sistem dengan format FAT.</li>
+<li>opsi -F 32 untuk memformat menjadi FAT32, seperti yang digunakan flashdisk pada umumnya.</li>
+<li>opsi -n digunakan untuk memberikan label atau nama dari flashdisknya. Silahkan ganti &ldquo;ini punyaku&rdquo; dengan label pilihan Anda.</li>
+<li>/dev/sdb1 adalah device flashdisknya. Bisa saja di komputer Anda berbeda. Silahkan disesuaikan.</li>
+</ul>
+
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-05-30-memformat-flashdisk-di-linux%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-05-30-memformat-flashdisk-di-linux%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-05-30-memformat-flashdisk-di-linux%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-05-30-memformat-flashdisk-di-linux%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-05-30-memformat-flashdisk-di-linux%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-05-30-memformat-flashdisk-di-linux%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://sasongko.web.id/post/2015-05-23-konversi-livedvd-iso/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://sasongko.web.id/post/2015-05-23-konversi-livedvd-iso/">Mengubah LiveDVD Menjadi ISO</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://sasongko.web.id/post/2015-06-01-operasi-direktori/">Operasi Direktori di Linux</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://sasongko.web.id/post/2015-06-01-operasi-direktori/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'catatansasongko';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 </div>
@@ -219,6 +386,19 @@
 <script src="https://sasongko.web.id/js/ui.js"></script>
 <script src="https://sasongko.web.id/js/menus.js"></script>
 
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49503242-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
 
 
 

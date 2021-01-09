@@ -209,9 +209,152 @@
 
 <div class="header">
   <h1>Membuat Partisi dengan cgdisk</h1>
+  <h2></h2>
 </div>
 <div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Jul 2015</time>
+  </div>
+
   
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  <p><em>Partitioning</em> atau pemartisian atau pembuatan partisi adalah pengetahuan yang harus dimiliki sebelum menginstall linux. Jika harddisk dianalogikan dengan rumah, maka partisi adalah kamar atau ruangan yang ada di dalam rumah itu. Kita bisa mengatur berapa jumlah kamar beserta ukuran dan fungsinya.</p>
+<p>Skema partisi yang digunakan adalah GPT, bukan MBR, jadi pemartisian menggunakan cgdisk saja biar lebih mudah. Selain cgdisk bisa menggunakan gdisk. Sedangkan untuk MBR menggunakan cfdisk atau fdisk. Keempatnya berantarmuka text dan dijalankan oleh root. Oya, untuk antarmuka grafis (GUI) bisa menggunakan gparted.</p>
+<pre><code>cgdisk /dev/sda
+</code></pre><p>Perintah cgdisk diikuti dengan disk yang akan dipartisi. Karena ini merupakan hardisk utama maka /dev/sda. Kalau harddisk external atau flashdisk tidak akan dikenal sebagai /dev/sda tetapi bisa jadi /dev/sdb.</p>
+<p>Di hardisk yang saya gunakan ini, sudah ada beberapa partisi untuk berbagai keperluan (di sini dualboot Windows 8.1 dan Slackware 14.1). Mau buat 1 lagi.
+<img src="https://sasongko.web.id/gambar/cgdisk-01.png" alt="">
+Masih ada 4 partisi kosong. Yang akan dibuat partisi baru adalah yang ukuran 13.3GiB. Seluruh ukuran 13.3GiB ini akan kita gunakan untuk 1 partisi. Arahkan kursor padanya pilih [ New ]. Gunakan panah atas bawah untuk memilih partisi. Gunakan panah kanan kiri untuk menentukan opsi.</p>
+<p>Isikan First sector, kalau ga mau ambil pusing biarlah default saja. Enter.
+<img src="https://sasongko.web.id/gambar/cgdisk-02.png" alt="">
+Isikan ukurannya atau Size in Sectors. Bisa dengan menuliskan dalam KB (K), MB (M), GB (G) atau TB (T). Bisa juga menulis sektornya. Di sini saya pakai default saja.
+<img src="gambar/cgdisk-03.png" alt="">
+Selanjutnya mengisikan filesystem. Karena mau saya pakai untuk slackware ya biarlah default Linux filesystem.
+<img src="https://sasongko.web.id/gambar/cgdisk-04.png" alt="">
+Selanjutnya, nama atau label partisinya. Silahkan isi sesuka hati atau biarkan kosong juga ga apa-apa.
+<img src="https://sasongko.web.id/gambar/cgdisk-05.png" alt="">
+Langkah selanjutnya adalah membuat partisi tadi secara resmi. Pilih [ Write ]. Awas, Write ini akan menghapus semua data yang ada di partisi itu. Kalau memang partisinya kosong ya ga masalah.
+<img src="https://sasongko.web.id/gambar/cgdisk-06.png" alt="">
+Karena pemartisian berisiko kehilangan data, kita akan dikonfirmasi lagi, yakin atau tidak? Ketik yes kalau akan melanjutkan proses, atau no untuk membatalkannya.
+<img src="https://sasongko.web.id/gambar/cgdisk-07.png" alt="">
+Partisi sudah jadi. Mungkin perlu restart untuk meresmikan partisi barunya. Tekan sembarang tombol untuk keluar dari cgdisk.
+<img src="https://sasongko.web.id/gambar/cgdisk-08.png" alt=""></p>
+
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-07-11-membuat-partisi-dengan-cgdisk%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-07-11-membuat-partisi-dengan-cgdisk%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-07-11-membuat-partisi-dengan-cgdisk%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-07-11-membuat-partisi-dengan-cgdisk%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-07-11-membuat-partisi-dengan-cgdisk%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2015-07-11-membuat-partisi-dengan-cgdisk%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://sasongko.web.id/post/2015-06-28-konek-internet-menggunakan-pppsetup/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://sasongko.web.id/post/2015-06-28-konek-internet-menggunakan-pppsetup/">Konek Internet Slackware</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://sasongko.web.id/post/2015-07-12-memformat-partisi/">Memformat Partisi</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://sasongko.web.id/post/2015-07-12-memformat-partisi/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'catatansasongko';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 </div>
@@ -219,6 +362,19 @@
 <script src="https://sasongko.web.id/js/ui.js"></script>
 <script src="https://sasongko.web.id/js/menus.js"></script>
 
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49503242-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
 
 
 
