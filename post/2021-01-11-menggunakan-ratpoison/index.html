@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  <title>Fix sbotools Perl unescaped left brace in regex is deprecated here &middot; Catatan Sasongko</title>
+  <title>Menggunakan ratpoison &middot; Catatan Sasongko</title>
 
     
 
@@ -208,7 +208,7 @@
 
 
 <div class="header">
-  <h1>Fix sbotools Perl unescaped left brace in regex is deprecated here</h1>
+  <h1>Menggunakan ratpoison</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -217,7 +217,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>17 Jul 2018</time>
+    <time>11 Jan 2021</time>
   </div>
 
   
@@ -232,7 +232,9 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/ratpoison">ratpoison</a>
     
   </div>
   
@@ -241,25 +243,32 @@
 </div>
 
 
-  <p>Siang ini, sudah agak lama tidak <em>check update</em> paket-paket dari <a href="http://slackbuilds.org">SBo</a>. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sbocheck <span style="color:#75715e"># command ini dijalankan oleh root</span>
-Unescaped left brace in regex is deprecated here <span style="color:#f92672">(</span>and will be fatal in Perl 5.32<span style="color:#f92672">)</span>, passed through in regex; marked by &lt;-- HERE in m/<span style="color:#ae81ff">\$</span><span style="color:#f92672">({</span> &lt;-- HERE |<span style="color:#f92672">)[</span>A-Za-z0-9_<span style="color:#f92672">]</span>+<span style="color:#f92672">(}</span>|<span style="color:#f92672">)</span>/ at /usr/share/perl5/SBO/Lib/Build.pm line <span style="color:#ae81ff">244</span>
-</code></pre></div><p>Ada masalah ternyata dan masalahnya di <a href="http://sasongko.web.id/tags/#perl">Perl</a>. Simpel sih solusinya. Buka file <!-- raw HTML omitted -->/usr/share/perl5/SBO/Lib/Build.pm<!-- raw HTML omitted -->, pada <em>line</em> 244 karakter { diganti {</p>
+  <p><strong>Ratpoison</strong> sesuai namanya benar adalah racun! <em>Mouse</em>-nya terkena racun! Penggunaan <em>mouse</em> menjadi minimal. <em>User</em> banyak menggunakan <em>keyboard</em>.</p>
+<p>Memasuki lingkungan <strong>ratpoison</strong> <em>user</em> disambut interface hitam (mungkin dengan disertai banyangannya sendiri). Sudut kanan atas muncul ucapan selamat datang <strong>Welcome to ratpoison! Hit <code>C - t ?</code> for help.</strong>. Bagi yang selalu berpesta dalam gemerlapnya <strong>KDE Plasma, Cinnamon, Xfce, Mate, Budgie</strong>, dll sangat mungkin merasa <em>njegleg</em> atau keheranan bahkan mungkin bingung atau linglung. Tapi slackers insyaallah tetap tenang-tenang saja, bisa beradaptasi. Apalagi kalau <strong>emacs</strong> adalah <em>text editor</em> favoritnya. Apa hubungannya? Keduanya mempunyai <em>keybindings</em> yang serupa.</p>
+<p><em>Keybindings</em>-nya ada banyak. Di sini hanya ditampilkan beberapa saja yang sangat penting</p>
+<ol>
+<li>C - t <em>keybindings</em> utama. Oiya, bagi yang tidak terbiasa menggunakan <strong>emacs</strong> perlu tahu maksud C - adalah menekan dan tahan Ctrl kemudian tekan tombol berikutnya. C adalah Ctrl.</li>
+<li>C - t ! atau C - t shift 1 Untuk mengeksekusi <em>command</em> dengan <strong>shell</strong>. Sudut kanan atas akan terdapat <em>space</em> /bin/sh -c</li>
+<li>C - t ? atau C - t shift / untuk menampilkan contekan daftar <em>keybindings</em></li>
+<li>C - t k <em>close</em> window yang sedang diaktifkan</li>
+<li>C - t q keluar dari <strong>ratpoison</strong>. Kalau cara ini gagal bisa dengan C - t : kemudian tuliskan quit</li>
+</ol>
+<p>Itu sih tidak menarik! Kalau ada yang cantik dan praktis mengapa pakai yang sulit? Dalam dunia perlinuxan, sah-sah saja pemikiran demikian. Bebas memilih mana yang dia inginkan atau yang sesuai kebutuhannya, itulah salah satu filosofi dari <em>free</em>. <strong>Free is freedom</strong>. Jadi, bagi yang berjiwa petualang, menyukai tantangan, dan punya kemauan belajar, ingin menggunakan <strong>ratpoison</strong>, waktu dan tempat dipersilahkan&hellip;.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-11-menggunakan-ratpoison%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-11-menggunakan-ratpoison%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-11-menggunakan-ratpoison%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-11-menggunakan-ratpoison%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-11-menggunakan-ratpoison%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-11-menggunakan-ratpoison%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -291,13 +300,13 @@ Unescaped left brace in regex is deprecated here <span style="color:#f92672">(</
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2018-06-23-kosongkan-trash/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2018-06-23-kosongkan-trash/">Hapus Trash via Command Line</a>
+      <a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Mengetahui kondisi baterai</a>
     </nav>
     
   </div>
@@ -306,14 +315,8 @@ Unescaped left brace in regex is deprecated here <span style="color:#f92672">(</
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2018-08-31-bermain-tetris-emacs/">Bermain Tetris dengan Emacs</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2018-08-31-bermain-tetris-emacs/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
@@ -365,9 +368,6 @@ Unescaped left brace in regex is deprecated here <span style="color:#f92672">(</
 
 
 
-<script src="https://sasongko.web.id/js/math-code.js"></script>
-  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-  
 
 
 </body>

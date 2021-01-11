@@ -7,7 +7,7 @@
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  <title>power manager &middot; Catatan Sasongko</title>
+  <title>sed &middot; Catatan Sasongko</title>
 
     
 
@@ -43,7 +43,7 @@
  
   
   <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
-    href='https://sasongko.web.id/tags/power-manager/index.xml' />
+    href='https://sasongko.web.id/tags/sed/index.xml' />
   
 
   
@@ -118,7 +118,7 @@
 
     
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://sasongko.web.id/tags/power-manager/index.xml'><i
+      <a class="pure-menu-link" href='https://sasongko.web.id/tags/sed/index.xml'><i
           class="fas fa-rss"></i>RSS</a>
     </li>
     
@@ -216,20 +216,20 @@
 
 
 <div class="header">
-  <h1>power manager</h1>
+  <h1>sed</h1>
 </div>
 
 <div class="content">
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Mengetahui kondisi baterai</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2018-06-19-mengganti-kata-secara-massal/">Mengganti Kata Secara Massal</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Jan 2021</time>
+    <time>19 Jun 2018</time>
   </div>
 
   
@@ -244,11 +244,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/power-manager">power-manager</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sed">sed</a>
     
   </div>
   
@@ -260,66 +256,11 @@
   </header>
 
   <p>
-  Mengecek kondisi baterai laptop melalui terminal atau command line interface sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara default sudah menyertakan desktop environment seperti xfce, kde, mate, cinnamon, budgie, lumina dan manokwari dengan interface yang cantik dan menarik. DE tersebut sudah mempunyai power manager lengkap dengan applet-nya yang tak pernah bosan nempel di panel.
-Bagaimana kalau &lsquo;hanya&rsquo; menggunakan window manager seperti GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm atau ratpoison yang tidak mempunyai power manager sendiri?
+  Dulu, saat masih menggunakan BlankOn, ternyata pada beberapa postingan di blog ini ada ketidakseragaman, yaitu tag blankOn dan blankon yang sebenarnya secara esensial sama saja.
+Sekarang sudah diperbaiki. Kata &ldquo;blankOn&rdquo; yang ada di tiap file diganti &ldquo;blankon&rdquo;. Penggantian ini secara massal saja biar lebih praktis. Filenya di direktori _posts.
+sed -i &#39;s/blankOn/blankon/g&#39; _posts/*.md 
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/">Enable TLP on i3wm</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>12 Dec 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/power-manager">power manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/i3">i3</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Beberapa hari yang lalu install i3 (i3wm)menggunakan sbopkg. Biasanya, dengan desktop environment lain seperti Mate, baterai bisa bertahan 4 - 6 jam. Namun, dengan i3 belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.
-Cek powertopternyata banyak yang Bad seperti default-nya tanpa TLP. Padahal service TLP saat booting jalan, Tunable di powertophanya 1 yang Bad lainnya Good semua.
-I3 memiliki berkas konfigurasi /etc/i3/config. Konfigurasi itu yang saya gunakan.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

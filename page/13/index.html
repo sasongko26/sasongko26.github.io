@@ -224,6 +224,56 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/">Install Google Play Downloader</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Jul 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:
+ python-protobuf (&gt;=2.4) python-requests (&gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&gt;=2.8) python 2.5+ java (opsional)  Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
+easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-07-18-install-wxpython/">Install wxPython</a></h2>
 
     <div class="post-meta">
@@ -634,57 +684,6 @@ $ tar xzf xfburn.tar.gz ; cd xfburn Unduh kode sumber xfburn
   
   <footer>
     <a href="https://sasongko.web.id/post/2015-06-17-install-xfburn-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-16-install-libburn-slackware/">Install libburn Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>16 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Libburn adalah pustaka (library) untuk menulis ke CD, DVD, dan blueray.
-Berikut langkah-langkah installnya di slackware melalui slackbuild. Adapun versi libburn yang diinstall adalah 1.4.0.
-Pertama, pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh paket. Kemudian unduh slackbuild libburn.
-$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libburn.tar.gz Ekstrak
-$ tar xzf libburn.tar.gz Akan terbentuk folder libburn. Pindah direktori ke folder itu.
-$ cd libburn Kemudian unduh kode sumber libburn.
-$ wget http://files.libburnia-project.org/releases/libburn-1.4.0.tar.gz Install slackbuildnya
-sh libburn.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-16-install-libburn-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

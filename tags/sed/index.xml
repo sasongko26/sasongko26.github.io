@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sed on Catatan Sasongko</title>
+    <link>https://sasongko.web.id/tags/sed/</link>
+    <description>Recent content in sed on Catatan Sasongko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 19 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/sed/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengganti Kata Secara Massal</title>
+      <link>https://sasongko.web.id/post/2018-06-19-mengganti-kata-secara-massal/</link>
+      <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2018-06-19-mengganti-kata-secara-massal/</guid>
+      <description>Dulu, saat masih menggunakan BlankOn, ternyata pada beberapa postingan di blog ini ada ketidakseragaman, yaitu tag blankOn dan blankon yang sebenarnya secara esensial sama saja.
+Sekarang sudah diperbaiki. Kata &amp;ldquo;blankOn&amp;rdquo; yang ada di tiap file diganti &amp;ldquo;blankon&amp;rdquo;. Penggantian ini secara massal saja biar lebih praktis. Filenya di direktori _posts.
+sed -i &amp;#39;s/blankOn/blankon/g&amp;#39; _posts/*.md </description>
+    </item>
+    
+  </channel>
+</rss>
