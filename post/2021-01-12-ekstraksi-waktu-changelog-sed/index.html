@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  <title>Menggunakan ratpoison &middot; Catatan Sasongko</title>
+  <title>Ekstraksi waktu pada changelog dengan sed &middot; Catatan Sasongko</title>
 
     
 
@@ -208,7 +208,7 @@
 
 
 <div class="header">
-  <h1>Menggunakan ratpoison</h1>
+  <h1>Ekstraksi waktu pada changelog dengan sed</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -217,7 +217,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Jan 2021</time>
+    <time>12 Jan 2021</time>
   </div>
 
   
@@ -232,9 +232,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/ratpoison">ratpoison</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sed">sed</a>
     
   </div>
   
@@ -243,32 +241,37 @@
 </div>
 
 
-  <p><strong>Ratpoison</strong> sesuai namanya benar adalah racun! <em>Mouse</em>-nya terkena racun! Penggunaan <em>mouse</em> menjadi minimal. <em>User</em> banyak menggunakan <em>keyboard</em>.</p>
-<p>Memasuki lingkungan <strong>ratpoison</strong> <em>user</em> disambut interface hitam (mungkin dengan disertai bayangannya sendiri). Sudut kanan atas muncul ucapan selamat datang <strong>Welcome to ratpoison! Hit <code>C - t ?</code> for help.</strong>. Bagi yang selalu berpesta dalam gemerlapnya <strong>KDE Plasma, Cinnamon, Xfce, Mate, Budgie</strong>, dll sangat mungkin merasa <em>njegleg</em> atau keheranan bahkan mungkin bingung atau linglung. Tapi slackers insyaallah tetap tenang-tenang saja, bisa beradaptasi. Apalagi kalau <strong>emacs</strong> adalah <em>text editor</em> favoritnya. Apa hubungannya? Keduanya mempunyai <em>keybindings</em> yang serupa.</p>
-<p><em>Keybindings</em>-nya ada banyak. Di sini hanya ditampilkan beberapa saja yang sangat penting</p>
+  <p>Ini adalah keisengan di kala WFH alias <em>work from home</em>. Melakukan ekstraksi waktu pada <em>changelog</em> <strong>slackware64-current</strong> yang terakhir kami update 8 Januari 2021.</p>
+<p>Changelognya terdiri dari 4 bagian:</p>
 <ol>
-<li>C - t <em>keybindings</em> utama. Oiya, bagi yang tidak terbiasa menggunakan <strong>emacs</strong> perlu tahu maksud C - adalah menekan dan tahan Ctrl kemudian tekan tombol berikutnya. C adalah Ctrl.</li>
-<li>C - t ! atau C - t shift 1 Untuk mengeksekusi <em>command</em> dengan <strong>shell</strong>. Sudut kanan atas akan terdapat <em>space</em> /bin/sh -c</li>
-<li>C - t ? atau C - t shift / untuk menampilkan contekan daftar <em>keybindings</em></li>
-<li>C - t k <em>close</em> window yang sedang diaktifkan</li>
-<li>C - t q keluar dari <strong>ratpoison</strong>. Kalau cara ini gagal bisa dengan C - t : kemudian tuliskan quit</li>
+<li>Waktu</li>
+<li><em>Packages</em> yang mengalami perubahan (<em>Upgraded, Removed, Added</em>)</li>
+<li>Keterangan perubahan</li>
+<li>Pembatas <em>update</em> antarwaktu (+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+)</li>
 </ol>
-<p>Itu sih tidak menarik! Kalau ada yang cantik dan praktis mengapa pakai yang sulit? Dalam dunia perlinuxan, sah-sah saja pemikiran demikian. Bebas memilih mana yang dia inginkan atau yang sesuai kebutuhannya, itulah salah satu filosofi dari <em>free</em>. <strong>Free is freedom</strong>. Jadi, bagi yang berjiwa petualang, menyukai tantangan, dan punya kemauan belajar, ingin menggunakan <strong>ratpoison</strong>, waktu dan tempat dipersilahkan&hellip;.</p>
+<p>Akan diambil yang no.1 saja.</p>
+<p>Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.txt.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sed <span style="color:#e6db74">&#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!d&#39;</span> /var/lib/slackpkg/ChangeLog.txt &gt; changelog-date.txt
+</code></pre></div><p>Hapus semua baris yang berakhiran dengan tanda titik.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sed -i <span style="color:#e6db74">&#39;/\.$/d&#39;</span> changelog-date.txt
+</code></pre></div><p>Hapus semua baris yang diawali whitespace (spasi juga tab)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sed -i <span style="color:#e6db74">&#39;/^[ \t]/d&#39;</span> changelog-date.txt
+</code></pre></div><p>Selesai.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-11-menggunakan-ratpoison%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-12-ekstraksi-waktu-changelog-sed%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-11-menggunakan-ratpoison%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-12-ekstraksi-waktu-changelog-sed%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-11-menggunakan-ratpoison%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-12-ekstraksi-waktu-changelog-sed%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-11-menggunakan-ratpoison%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-12-ekstraksi-waktu-changelog-sed%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-11-menggunakan-ratpoison%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-12-ekstraksi-waktu-changelog-sed%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-11-menggunakan-ratpoison%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-12-ekstraksi-waktu-changelog-sed%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -300,13 +303,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Mengetahui kondisi baterai</a>
+      <a href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/">Menggunakan ratpoison</a>
     </nav>
     
   </div>
@@ -315,14 +318,8 @@
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Ekstraksi waktu pada changelog dengan sed</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
@@ -374,6 +371,9 @@
 
 
 
+<script src="https://sasongko.web.id/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
 
 
 </body>

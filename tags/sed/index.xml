@@ -6,7 +6,19 @@
     <description>Recent content in sed on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/sed/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/sed/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ekstraksi waktu pada changelog dengan sed</title>
+      <link>https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/</guid>
+      <description>Ini adalah keisengan di kala WFH alias work from home. Melakukan ekstraksi waktu pada changelog slackware64-current yang terakhir kami update 8 Januari 2021.
+Changelognya terdiri dari 4 bagian:
+ Waktu Packages yang mengalami perubahan (Upgraded, Removed, Added) Keterangan perubahan Pembatas update antarwaktu (+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+)  Akan diambil yang no.1 saja.
+Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.txt.</description>
+    </item>
+    
     <item>
       <title>Mengganti Kata Secara Massal</title>
       <link>https://sasongko.web.id/post/2018-06-19-mengganti-kata-secara-massal/</link>
