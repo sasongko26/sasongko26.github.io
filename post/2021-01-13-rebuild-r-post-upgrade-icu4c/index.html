@@ -253,10 +253,10 @@ The list below shows the packages that contains <span style="color:#e6db74">&#34
 <span style="color:#f92672">[</span> installed <span style="color:#f92672">]</span> - icu4c-68.2-x86_64-1
 
 You can search specific packages using <span style="color:#e6db74">&#34;slackpkg search package&#34;</span>.
-</code></pre></div><p>Command_ tersebut dieksekusi dengan _root privileges_.</p>
+</code></pre></div><p><em>Command</em> tersebut dieksekusi dengan <em>root privileges</em>.</p>
 <p>Ternyata. Versi <em>library</em> 67, tapi versi <em>package</em>-nya 68.2. Ini berarti terjadi karena upgrade <strong>icu4c</strong>. Maka <strong>R</strong>-nya harus <em>rebuild</em>. Di sini kami <em>rebuild</em> menggunakan <strong>sbotools</strong>. Bagi yang ingin menggunakan <strong>sbopkg, sboui, slpkg</strong> atau yang lainnya dipersilahkan.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sboinstall --reinstall R
-</code></pre></div><p>Command_ tersebut dieksekusi dengan _root privileges_.</p>
+</code></pre></div><p><em>Command</em> tersebut dieksekusi dengan <em>root privileges</em>.</p>
 <p>Berhasil. Tetapi ternyata, saat akan menggunakan <strong>tidyverse</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">library</span>(tidyverse)
 Error<span style="color:#f92672">:</span> package or namespace load failed for ‘tidyverse’ in <span style="color:#a6e22e">dyn.load</span>(file, DLLpath <span style="color:#f92672">=</span> DLLpath, <span style="color:#66d9ef">...</span>)<span style="color:#f92672">:</span>
