@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  <title>Rebuild R post-upgrade icu4c &middot; Catatan Sasongko</title>
+  <title>Mengetahui IP lokal dengan nmcli &middot; Catatan Sasongko</title>
 
     
 
@@ -208,7 +208,7 @@
 
 
 <div class="header">
-  <h1>Rebuild R post-upgrade icu4c</h1>
+  <h1>Mengetahui IP lokal dengan nmcli</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -217,7 +217,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>13 Jan 2021</time>
+    <time>15 Jan 2021</time>
   </div>
 
   
@@ -232,7 +232,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
     
   </div>
   
@@ -241,45 +241,39 @@
 </div>
 
 
-  <p>Pagi ini, saat akan mengeksekusi <strong>R</strong>,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ R
-/usr/lib64/R/bin/exec/R: error <span style="color:#66d9ef">while</span> loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory
-</code></pre></div><p>Ternyata <strong>R</strong> nya bermasalah. Di atas disebutkan bahwa <strong>libicuuc.so.67</strong> tidak ditemukan. Dari namanya, bisa ditebak itu adalah <em>shared object/library</em> miliknya <strong>icu4c</strong>. Kita pastikan dulu,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ slackpkg file-search libicuuc.so
-Looking <span style="color:#66d9ef">for</span> libicuuc.so in package list. Please wait... DONE
-
-The list below shows the packages that contains <span style="color:#e6db74">&#34;libicuuc\.so&#34;</span> file.
-
-<span style="color:#f92672">[</span> installed <span style="color:#f92672">]</span> - icu4c-68.2-x86_64-1
-
-You can search specific packages using <span style="color:#e6db74">&#34;slackpkg search package&#34;</span>.
-</code></pre></div><p><em>Command</em> tersebut dieksekusi dengan <em>root privileges</em>.</p>
-<p>Ternyata. Versi <em>library</em> 67, tapi versi <em>package</em>-nya 68.2. Ini berarti terjadi karena upgrade <strong>icu4c</strong>. Maka <strong>R</strong>-nya harus <em>rebuild</em>. Di sini kami <em>rebuild</em> menggunakan <strong>sbotools</strong>. Bagi yang ingin menggunakan <strong>sbopkg, sboui, slpkg</strong> atau yang lainnya dipersilahkan.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sboinstall --reinstall R
-</code></pre></div><p><em>Command</em> tersebut dieksekusi dengan <em>root privileges</em>.</p>
-<p>Berhasil. Tetapi ternyata, saat akan menggunakan <strong>tidyverse</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">library</span>(tidyverse)
-Error<span style="color:#f92672">:</span> package or namespace load failed for â€˜tidyverseâ€™ in <span style="color:#a6e22e">dyn.load</span>(file, DLLpath <span style="color:#f92672">=</span> DLLpath, <span style="color:#66d9ef">...</span>)<span style="color:#f92672">:</span>
- unable to load shared object <span style="color:#e6db74">&#39;/home/sasongko/R/x86_64-slackware-linux-gnu-library/4.0/stringi/libs/stringi.so&#39;</span><span style="color:#f92672">:</span>
-  libicui18n.so.67<span style="color:#f92672">:</span> cannot open shared object file<span style="color:#f92672">:</span> No such file or directory
-</code></pre></div><p>Ternyata <em>package</em> <strong>stringi</strong> juga minta <em>rebuild</em>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">install.packages</span>(<span style="color:#e6db74">&#34;stringi&#34;</span>)
-</code></pre></div><p>Selesai. <strong>R</strong> dan <strong>tidyverse</strong> bisa digunakan kembali.</p>
+  <p>Untuk mengetahui alamat ip lokal tanpa akses <strong>root</strong> dapat menggunakan <strong>nmcli</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ nmcli
+wlan0: connected to Anatomi
+        <span style="color:#e6db74">&#34;Qualcomm Atheros QCA9377&#34;</span>
+        wifi <span style="color:#f92672">(</span>ath10k_pci<span style="color:#f92672">)</span>, CC:B0:DA:B5:3B:75, hw, mtu <span style="color:#ae81ff">1500</span>
+        ip4 default
+        inet4 192.168.120.49/24
+        route4 0.0.0.0/0
+        route4 192.168.120.0/24
+        route4 192.168.120.0/24
+        inet6 fe80::1a37:a13:b117:ff79/64
+        route6 fe80::/64
+        route6 ff00::/8
+</code></pre></div><p>Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah</p>
+<ol>
+<li>ipv4 192.168.120.19</li>
+<li>ipv6 fe80::1a37:a13:b117:ff74</li>
+</ol>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-13-rebuild-r-post-upgrade-icu4c%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-15-ip-lokal-nmcli%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-13-rebuild-r-post-upgrade-icu4c%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-15-ip-lokal-nmcli%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-13-rebuild-r-post-upgrade-icu4c%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-15-ip-lokal-nmcli%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-13-rebuild-r-post-upgrade-icu4c%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-15-ip-lokal-nmcli%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-13-rebuild-r-post-upgrade-icu4c%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-15-ip-lokal-nmcli%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-13-rebuild-r-post-upgrade-icu4c%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-15-ip-lokal-nmcli%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -311,13 +305,13 @@ Error<span style="color:#f92672">:</span> package or namespace load failed for â
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Ekstraksi waktu pada changelog dengan sed</a>
+      <a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Rebuild R post-upgrade icu4c</a>
     </nav>
     
   </div>
@@ -326,14 +320,8 @@ Error<span style="color:#f92672">:</span> package or namespace load failed for â
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/">Mengetahui IP lokal dengan nmcli</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
