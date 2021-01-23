@@ -6,7 +6,19 @@
     <description>Recent content in manajemen file on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/manajemen-file/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/manajemen-file/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Membuat archive tar</title>
+      <link>https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/</guid>
+      <description>Terdapat file sebagai berikut:
+Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Ketujuh file tersebut akan disatukan dalam 1 archive dengan nama file screenshot.tar.gz.
+$ tar cvf screenshot.tar.gz Screen* Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Penjelasan command
+ tar : manajemen archive yang digunakan aalah tar c : wajib dituliskan untuk create atau membuat archive v : opsi untuk verbose, menampilkan list file yang diproses f : wajib dituliskan dalam semua penggunaan tar karena f adalah file, identifier untuk file yang akan diproses screenshot.</description>
+    </item>
+    
     <item>
       <title>Memisahkan halaman PDF</title>
       <link>https://sasongko.web.id/post/2020-06-11-memisahkan-halaman-pdf/</link>
@@ -45,6 +57,28 @@ zip -sf namafile.zip # atau less namafile.zip </description>
       <guid>https://sasongko.web.id/post/2019-12-01-rename-banyak-file-sekaligus/</guid>
       <description>Tak terasa ternyata sudah lebih dari 3 bulan tidak posting. Mengapa? Sibuk? Kesibukan sebenarnya seperti biasa. Tidak ada peningkatan kesibukan secara signifikan. Lalu mengapa? Alasannya simpel. Karena semua kegiatan berkomputer baik-baik saja. Tidak ada masalah. Biasanya saya menulis di sini ketika saya menghadapi masalah terkait penggunaan komputer. Nah, kali ini masalahnya adalah saya menemukan banyak file yang namanya tidak sesuai dengan standar saya.
 Contoh, adik-adik asisten anatomi mengirimkan softcopy materi asistensi.</description>
+    </item>
+    
+    <item>
+      <title>Ekstrak File .tar.gz</title>
+      <link>https://sasongko.web.id/post/2015-04-28-ekstrak-file-tar-gz/</link>
+      <pubDate>Tue, 28 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2015-04-28-ekstrak-file-tar-gz/</guid>
+      <description>Kemarin di grup facebook Ubuntu Indonesia ada yang bertanya yang intinya
+ Bagaimana cara install file .tar.gz?
+ File dengan ekstensi tar.gz adalah file kompresi/arsip. &amp;lsquo;Saudara&amp;rsquo; dari tar.gz yang juga sering dijumpai adalah [zip]({% post_url 2015-05-13-ekstrak-file-zip %}). Atau, bagi yang sebelum memakai linux sudah sangat familiar dengan Windows, tar.gz ini mirip dengan rar.
+Nah, file kompresi ini bukanlah file installer, tetapi bisa jadi mengandung file installer. File installer di linux ada berbagai macam ekstensinya, contoh deb, rpm, tgz, dan sh.</description>
+    </item>
+    
+    <item>
+      <title>Ekstrak File tar.xz</title>
+      <link>https://sasongko.web.id/post/2014-12-30-ekstrak-file-tarxz/</link>
+      <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2014-12-30-ekstrak-file-tarxz/</guid>
+      <description>Berkas atau file dengan ekstensi tar.xz adalah berkas kompresi/arsip. Untuk mengekstraknya mudah.
+$ tar xpf nama_file.tar.xz </description>
     </item>
     
   </channel>
