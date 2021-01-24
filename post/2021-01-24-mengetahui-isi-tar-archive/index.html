@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  <title>Membuat archive tar &middot; Catatan Sasongko</title>
+  <title>Mengetahui isi file tar archive &middot; Catatan Sasongko</title>
 
     
 
@@ -208,7 +208,7 @@
 
 
 <div class="header">
-  <h1>Membuat archive tar</h1>
+  <h1>Mengetahui isi file tar archive</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -217,7 +217,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Jan 2021</time>
+    <time>24 Jan 2021</time>
   </div>
 
   
@@ -241,47 +241,33 @@
 </div>
 
 
-  <p>Terdapat file sebagai berikut:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Screenshot_2020-07-15_10-17-33.png
-Screenshot_2020-08-03_10-31-47.png
-Screenshot_2020-08-04_16-33-18.png
-Screenshot_2020-08-06_08-22-59.png
-Screenshot_2020-08-06_08-31-22.png
-Screenshot_2020-12-04_18-44-18.png
-Screenshot_2021-01-12_01-21-31.png
-</code></pre></div><p>Ketujuh file tersebut akan disatukan dalam 1 <em>archive</em> dengan nama file <em>screenshot.tar.gz</em>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ tar cvf screenshot.tar.gz Screen*
-Screenshot_2020-07-15_10-17-33.png
-Screenshot_2020-08-03_10-31-47.png
-Screenshot_2020-08-04_16-33-18.png
-Screenshot_2020-08-06_08-22-59.png
-Screenshot_2020-08-06_08-31-22.png
-Screenshot_2020-12-04_18-44-18.png
-Screenshot_2021-01-12_01-21-31.png
-</code></pre></div><p>Penjelasan <em>command</em></p>
-<ul>
-<li>tar : manajemen <em>archive</em> yang digunakan aalah <em>tar</em></li>
-<li>c : wajib dituliskan untuk <em>create</em> atau membuat <em>archive</em></li>
-<li>v : opsi untuk <em>verbose</em>, menampilkan list file yang diproses</li>
-<li>f : wajib dituliskan dalam semua penggunaan <em>tar</em> karena f adalah file, identifier untuk file yang akan diproses</li>
-<li>screenshot.tar.gz : nama file <em>archive</em>. Ekstensi bisa .tar, .tar.gz, atau .tar.xz. Ketika ekstensi ini sering dipakai di dunia <em>open source</em>.</li>
-<li>Screen* : file yang akan di-<em>archive</em>. Karena filenya banyak dan mempunyai kemiripan pola maka digunakan <em>regex</em> agar lebih praktis. File ini juga bisa dituliskan satu persatu.</li>
-</ul>
+  <p>Catatan ini merupakan lanjutan dari sebelumnya yang membuat <em>tar archive</em>. Kali ini tentang bagaimana mengetahui apa saja file ada di dalam <em>archive</em> tersebut tanpa harus mengekstrak.</p>
+<p>Contoh, terdapat file screenshot2.tar.xz. Untuk mengetahui apa saja isinya</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ tar tvf screenshot2.tar.xz
+-rw-r--r-- user1/users <span style="color:#ae81ff">580563</span> 2020-07-15 10:17 Screenshot_2020-07-15_10-17-33.png
+-rw-r--r-- user1/users <span style="color:#ae81ff">851743</span> 2020-08-03 10:31 Screenshot_2020-08-03_10-31-47.png
+-rw-r--r-- user1/users   <span style="color:#ae81ff">9958</span> 2020-08-04 16:33 Screenshot_2020-08-04_16-33-18.png
+-rw-r--r-- user1/users <span style="color:#ae81ff">822389</span> 2020-08-06 08:23 Screenshot_2020-08-06_08-22-59.png
+-rw-r--r-- user1/users <span style="color:#ae81ff">737008</span> 2020-08-06 08:31 Screenshot_2020-08-06_08-31-22.png
+-rw-r--r-- user1/users <span style="color:#ae81ff">243660</span> 2020-12-04 18:44 Screenshot_2020-12-04_18-44-18.png
+-rw-r--r-- user1/users <span style="color:#ae81ff">122966</span> 2021-01-12 01:21 Screenshot_2021-01-12_01-21-31.png
+</code></pre></div><p>Dapat diketahui bahwa file screenshot2.tar.xz berisi 7 file png screenshot sebagaimana tersebut di atas.</p>
+<p>Opsi yang menjadi kunci atau khas dari operasi ini adalah t. v opsional. Apabila tanpa v maka akan ditampilkan nama file saja tanpa keterangan <em>permissions, owner, size</em> dan <em>date &amp; time</em></p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-23-membuat-archive-tar%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-24-mengetahui-isi-tar-archive%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-23-membuat-archive-tar%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-24-mengetahui-isi-tar-archive%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-23-membuat-archive-tar%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-24-mengetahui-isi-tar-archive%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-23-membuat-archive-tar%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-24-mengetahui-isi-tar-archive%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-23-membuat-archive-tar%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-24-mengetahui-isi-tar-archive%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-23-membuat-archive-tar%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-24-mengetahui-isi-tar-archive%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -313,13 +299,13 @@ Screenshot_2021-01-12_01-21-31.png
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/">Mengetahui IP lokal dengan nmcli</a>
+      <a href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/">Membuat archive tar</a>
     </nav>
     
   </div>
@@ -328,14 +314,8 @@ Screenshot_2021-01-12_01-21-31.png
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/">Mengetahui isi file tar archive</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
