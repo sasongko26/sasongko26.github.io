@@ -224,6 +224,55 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/">Mengembalikan backlight</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>25 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Upgrade kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. Backlight menjadi tidak berfungsi. Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah xbacklight.
+$ xbacklight No outputs have backlight property Backlight atau brightness 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).
+Kebetulan, salah 1 situs yang sering penulis kunjungi, LinuxQuestions.Org ada thread yang membahas masalah ini.
+Cara yang dipakai di sini adalah dengan membuat /etc/X11/xorg.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/">Mengetahui isi file tar archive</a></h2>
 
     <div class="post-meta">
@@ -654,55 +703,6 @@ $ dmesg -T | head -1 [Fri Dec 25 00:39:42 2020] Linux version 5.10.2 Penjelasan 
   
   <footer>
     <a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/">Start up time kernel 5.10.2</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Dec 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam main tree slackware current. Saat catatan ini dituliskan, sudah &ldquo;mendarat&rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk start up. Yang dimaksud start up di sini adalah kondisi dari eksekusi elilo dan initrd sampai muncul login prompt.
-$ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segment Routing with IPv6 [ 32.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

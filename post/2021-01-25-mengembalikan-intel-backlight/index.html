@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.79.0" />
 
-  <title>Mengetahui isi file tar archive &middot; Catatan Sasongko</title>
+  <title>Mengembalikan backlight &middot; Catatan Sasongko</title>
 
     
 
@@ -208,7 +208,7 @@
 
 
 <div class="header">
-  <h1>Mengetahui isi file tar archive</h1>
+  <h1>Mengembalikan backlight</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -217,7 +217,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Jan 2021</time>
+    <time>25 Jan 2021</time>
   </div>
 
   
@@ -232,7 +232,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>
     
   </div>
   
@@ -241,33 +241,34 @@
 </div>
 
 
-  <p>Catatan ini merupakan lanjutan dari sebelumnya yang membuat <em>tar archive</em>. Kali ini tentang bagaimana mengetahui apa saja file ada di dalam <em>archive</em> tersebut tanpa harus mengekstrak.</p>
-<p>Contoh, terdapat file screenshot2.tar.xz. Untuk mengetahui apa saja isinya</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ tar tvf screenshot2.tar.xz
--rw-r--r-- user1/users <span style="color:#ae81ff">580563</span> 2020-07-15 10:17 Screenshot_2020-07-15_10-17-33.png
--rw-r--r-- user1/users <span style="color:#ae81ff">851743</span> 2020-08-03 10:31 Screenshot_2020-08-03_10-31-47.png
--rw-r--r-- user1/users   <span style="color:#ae81ff">9958</span> 2020-08-04 16:33 Screenshot_2020-08-04_16-33-18.png
--rw-r--r-- user1/users <span style="color:#ae81ff">822389</span> 2020-08-06 08:23 Screenshot_2020-08-06_08-22-59.png
--rw-r--r-- user1/users <span style="color:#ae81ff">737008</span> 2020-08-06 08:31 Screenshot_2020-08-06_08-31-22.png
--rw-r--r-- user1/users <span style="color:#ae81ff">243660</span> 2020-12-04 18:44 Screenshot_2020-12-04_18-44-18.png
--rw-r--r-- user1/users <span style="color:#ae81ff">122966</span> 2021-01-12 01:21 Screenshot_2021-01-12_01-21-31.png
-</code></pre></div><p>Dapat diketahui bahwa file screenshot2.tar.xz berisi 7 file png screenshot sebagaimana tersebut di atas.</p>
-<p>Opsi yang menjadi kunci atau khas dari operasi ini adalah t. v opsional. Apabila tanpa v maka akan ditampilkan nama file saja tanpa keterangan <em>permissions, owner, size</em> dan <em>date &amp; time</em></p>
+  <p><em>Upgrade</em> kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. <em>Backlight</em> menjadi tidak berfungsi.  Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah <code>xbacklight</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ xbacklight
+No outputs have backlight property
+</code></pre></div><p><img src="https://sasongko.web.id/gambar/brightness-100.png" alt="Brightness 100%. Mentok kanan!"></p>
+<p><em>Backlight</em> atau <em>brightness</em> 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).</p>
+<p>Kebetulan, salah 1 situs yang sering penulis kunjungi, <strong>LinuxQuestions.Org</strong> ada <em>thread</em> yang <a href="https://www.linuxquestions.org/questions/slackware-14/intel_backlight-not-working-on-current-4175688981/">membahas masalah ini</a>.</p>
+<p>Cara yang dipakai di sini adalah dengan membuat <code>/etc/X11/xorg.conf.d/20-intel-backlight.conf</code> yang berisi</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Section <span style="color:#e6db74">&#34;Device&#34;</span>
+		Identifier <span style="color:#e6db74">&#34;Intel Graphics&#34;</span>
+		Driver <span style="color:#e6db74">&#34;Intel&#34;</span>
+		Option <span style="color:#e6db74">&#34;Backlight&#34;</span> <span style="color:#e6db74">&#34;intel_backlight&#34;</span>
+EndSection
+</code></pre></div><p>Alhamdulillah <em>solved</em>.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-24-mengetahui-isi-tar-archive%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-25-mengembalikan-intel-backlight%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-24-mengetahui-isi-tar-archive%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-25-mengembalikan-intel-backlight%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-24-mengetahui-isi-tar-archive%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-25-mengembalikan-intel-backlight%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-24-mengetahui-isi-tar-archive%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-25-mengembalikan-intel-backlight%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-24-mengetahui-isi-tar-archive%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-25-mengembalikan-intel-backlight%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-24-mengetahui-isi-tar-archive%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-25-mengembalikan-intel-backlight%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -299,13 +300,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/">Membuat archive tar</a>
+      <a href="https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/">Mengetahui isi file tar archive</a>
     </nav>
     
   </div>
@@ -314,14 +315,8 @@
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/">Mengembalikan backlight</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>

@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengembalikan backlight</title>
+      <link>https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/</guid>
+      <description>Upgrade kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. Backlight menjadi tidak berfungsi. Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah xbacklight.
+$ xbacklight No outputs have backlight property Backlight atau brightness 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).
+Kebetulan, salah 1 situs yang sering penulis kunjungi, LinuxQuestions.Org ada thread yang membahas masalah ini.
+Cara yang dipakai di sini adalah dengan membuat /etc/X11/xorg.</description>
+    </item>
+    
     <item>
       <title>Mengetahui isi file tar archive</title>
       <link>https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/</link>
