@@ -224,6 +224,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/">Mount Partisi Otomatis</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Jul 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Masih melanjutkan catatan yang kemarin tentang pemartisian. Setelah [membuat partisi]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) kemudian [diformat]({% post_url 2015-07-12-memformat-partisi %}), langkah selanjutnya adalah memutuskan apakah partisi itu akan di-mount secara otomatis saat boot atau tidak.
+Nah, karena partisi /dev/sda9 yang bersistem ext4 kemarin akan saya jadikan sebagai tempat source code paket/aplikasi, seperti untuk menyimpan berkas slackbuild, saya putuskan untuk mengaitkannya secara otomatis di /usr/local/src. Caranya adalah dengan menambahkan baris berikut ke /etc/fstab
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-07-12-memformat-partisi/">Memformat Partisi</a></h2>
 
     <div class="post-meta">
@@ -630,53 +677,6 @@ $ ls /var/log/packages | grep nama_paket Contoh, mencari paket yang di nama pake
 $ ls /var/log/packages | grep xfce gtk-xfce-engine-3.0.1-x86_64-1 libxfce4ui-4.10.0-x86_64-2 libxfce4util-4.10.1-x86_64-1 libxfcegui4-4.10.0-x86_64-2 xfce4-clipman-plugin-1.2.3-x86_64-2 xfce4-dev-tools-4.10.0-x86_64-1 xfce4-mixer-4.8.0-x86_64-1 xfce4-notifyd-0.2.4-x86_64-1 xfce4-panel-4.10.1-x86_64-2 xfce4-power-manager-1.2.0-x86_64-2 xfce4-screenshooter-1.8.1-x86_64-2 xfce4-session-4.10.1-x86_64-3 xfce4-settings-4.10.1-x86_64-1 xfce4-systemload-plugin-1.1.1-x86_64-2 xfce4-taskmanager-1.0.0-x86_64-2 xfce4-terminal-0.6.2-x86_64-1 xfce4-volumed-0.1.13-x86_64-1 xfce4-weather-plugin-0.8.3-x86_64-2 Jika tidak ada keluaran berarti paket tersebut belum diinstall.
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-14-jalankan-sudo-tanpa-password/">Jalankan Sudo Tanpa Password</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Idealnya perintah sudo memang memerlukan password/kata sandi karena hakikat sudo itu pengguna &ldquo;meminjam&rdquo; hak super user / root. Tapi, password itu bisa saja kita hilangkan. Maksudnya, tidak perlu menuliskan password, contoh
-$ wvdial 3 bash: wvdial: command not found Baris 2, command not found menunjukkan 2 kemungkinan. Kemungkinan pertama, perintah yang diketikkan memang tidak ada. Kemungkinan kedua, perintah itu memerlukan hak root. Nah perintah [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) ini yang bisa menjalankan adalah root atau sudoers (pengguna yang bisa menjalankan perintah hak root tapi dengan syarat memasukkan passwordnya root.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-14-jalankan-sudo-tanpa-password/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
