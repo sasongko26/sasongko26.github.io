@@ -6,7 +6,18 @@
     <description>Recent content in networking on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengetahui IP lokal dengan nmcli</title>
+      <link>https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/</guid>
+      <description>Untuk mengetahui alamat ip lokal tanpa akses root dapat menggunakan nmcli
+$ nmcli wlan0: connected to Anatomi &amp;#34;Qualcomm Atheros QCA9377&amp;#34; wifi (ath10k_pci), CC:B0:DA:B5:3B:75, hw, mtu 1500 ip4 default inet4 192.168.120.19/24 route4 0.0.0.0/0 route4 192.168.120.0/24 route4 192.168.120.0/24 inet6 fe80::1a37:a13:b117:ff74/64 route6 fe80::/64 route6 ff00::/8 Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah
+ ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74  </description>
+    </item>
+    
     <item>
       <title>NetworkManager device not ready</title>
       <link>https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/</link>
