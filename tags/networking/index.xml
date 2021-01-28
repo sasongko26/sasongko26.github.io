@@ -6,7 +6,17 @@
     <description>Recent content in networking on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pelengkap dnscrypt-proxy</title>
+      <link>https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/</link>
+      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/</guid>
+      <description>Catatan ini merupakan catatan tambahan untuk melengkapi README.Slackware pada skrip dnscrypt-proxy yang ada di SBo. Yang ada di SBo :
+ Membuat grup dnscrypt dan usernya Mengkonfigurasi dns /etc/resolv.conf.head Memasukkan dnscryp-proxy ke /etc/rc.d/rc.{local,shutdown}  Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi maintainer dnscrypt-proxy tidak mengikutsertakan langkah ini. Penulis menggunakan NetworkManager, setelah check &amp;amp; recheck, dnscrypt-proxy tidak bekerja karena file /etc/resolv.conf terkena overwrite oleh NetworkManager. Ini adalah langkah untuk memberikan imunisasi/mencegah overwrite.</description>
+    </item>
+    
     <item>
       <title>Mengetahui IP lokal dengan nmcli</title>
       <link>https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/</link>
