@@ -25,7 +25,7 @@ Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin men
       
       <guid>https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/</guid>
       <description>Catatan ini merupakan catatan tambahan untuk melengkapi README.Slackware pada skrip dnscrypt-proxy yang ada di SBo. Yang ada di SBo :
- Membuat grup dnscrypt dan usernya Mengkonfigurasi dns /etc/resolv.conf.head Memasukkan dnscryp-proxy ke /etc/rc.d/rc.{local,shutdown}  Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi maintainer dnscrypt-proxy tidak mengikutsertakan langkah ini. Penulis menggunakan NetworkManager, setelah check &amp;amp; recheck, dnscrypt-proxy tidak bekerja karena file /etc/resolv.conf terkena overwrite oleh NetworkManager. Ini adalah langkah untuk memberikan imunisasi/mencegah overwrite.</description>
+ Membuat grup dnscrypt dan usernya Mengkonfigurasi dns /etc/resolv.conf.head Memasukkan dnscryp-proxy ke /etc/rc.d/rc.local{,_shutdown}  Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi maintainer dnscrypt-proxy tidak mengikutsertakan langkah ini. Penulis menggunakan NetworkManager, setelah check &amp;amp; recheck, dnscrypt-proxy tidak bekerja karena file /etc/resolv.conf terkena overwrite oleh NetworkManager. Ini adalah langkah untuk memberikan imunisasi/mencegah overwrite.</description>
     </item>
     
     <item>
@@ -2003,6 +2003,17 @@ $ gsettings set org.gnome.desktop.media-handling automount false $ gsettings set
       
       <guid>https://sasongko.web.id/post/2013-11-10-definisi-komputer-forensik/</guid>
       <description>Digital forensik atau Computer forensic adalah serangkaian metodologi yang digunakan dalam melakukan akuisisi (imaging), pengumpulan, analisa, serta presentasi bukti digital. Bukti digital mencakup setiap informasi elektronik yang disimpan atau diolah menggunakan teknologi komputer sehingga dapat digunakan untuk mendukung atau menolak tentang bagaimana sebuah insiden atau tindakan pelanggaran hukum terjadi. Karena keterlibatan proses computer forensic adalah setelah terjadinya suatu insiden maka metodologi yang tepat sangat diperlukan untuk mempercepat proses investigasi serta mendapatkan bukti-bukti digital yang akurat.</description>
+    </item>
+    
+    <item>
+      <title>Menambah file archive tar</title>
+      <link>https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/</guid>
+      <description>Untuk menambahkan file ke dalam tar archive mudah. Gunakan opsi -r atau &amp;ndash;append pada command tar.
+Misalkan, file photo_2020-08-22_19-03-32.jpg yang ada di ~/Documents akan dimasukkan atau ditambahkan ke dalam file archive screenshot.tar.xz
+$ tar rf screenshot.tar.xz photo_2020-08-22_19-03-32.jpg </description>
     </item>
     
   </channel>
