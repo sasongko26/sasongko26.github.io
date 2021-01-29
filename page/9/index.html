@@ -148,6 +148,10 @@
     
 
     
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://youtube.com/user/https://www.youtube.com/channel/UCY4H1n73aQMB4LZjIJvH0_A" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
+    </li>
+    
 
     
 
@@ -221,6 +225,49 @@
 </div>
 
 <div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2017-03-27-disable-commands-history/">Disable Command&#39;s History</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>27 Mar 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, perintah/command yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan command historyatau membaca isi ~/.bash_history. Ini bisa di-disable. Caranya, membuat file di /etc/profile.d/, yang isinya
+export HISTFILE=/dev/null export HISTSIZE=0 
+  </p>
+
+  
+</article>
+
   
     <article>
   <header>
@@ -636,58 +683,6 @@ Berikut adalah script sederhana untuk menampilkan notifikasi saat baterai sedang
   
   <footer>
     <a href="https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/">Enable TLP on i3wm</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>12 Dec 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/power-manager">power manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/i3">i3</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Beberapa hari yang lalu install i3 (i3wm)menggunakan sbopkg. Biasanya, dengan desktop environment lain seperti Mate, baterai bisa bertahan 4 - 6 jam. Namun, dengan i3 belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.
-Cek powertopternyata banyak yang Bad seperti default-nya tanpa TLP. Padahal service TLP saat booting jalan, Tunable di powertophanya 1 yang Bad lainnya Good semua.
-I3 memiliki berkas konfigurasi /etc/i3/config. Konfigurasi itu yang saya gunakan.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
