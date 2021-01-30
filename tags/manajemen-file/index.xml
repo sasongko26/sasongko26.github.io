@@ -6,7 +6,17 @@
     <description>Recent content in manajemen file on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/manajemen-file/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/manajemen-file/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menghapus file dari tar</title>
+      <link>https://sasongko.web.id/post/2021-01-30-menghapus-file-dari-tar/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-01-30-menghapus-file-dari-tar/</guid>
+      <description>Untuk menghapus file Screenshot_2020-08-06_08-31-22.png yang ada dalam screenshot.tar.xz, caranya
+$ tar f screenshot.tar.xz --delete Screenshot\_2020-08-06\_08-31-22.png </description>
+    </item>
+    
     <item>
       <title>Menambah file archive tar</title>
       <link>https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/</link>
@@ -15,7 +25,9 @@
       <guid>https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/</guid>
       <description>Untuk menambahkan file ke dalam tar archive mudah. Gunakan opsi -r atau &amp;ndash;append pada command tar.
 Misalkan, file photo_2020-08-22_19-03-32.jpg yang ada di ~/Documents akan dimasukkan atau ditambahkan ke dalam file archive screenshot.tar.xz
-$ tar rf screenshot.tar.xz photo_2020-08-22_19-03-32.jpg </description>
+$ tar rf screenshot.tar.xz photo_2020-08-22_19-03-32.jpg Atau
+$ tar f screenshot.tar.xz --append photo_2020-08-22_19-03-32.jpg Apabila file photo_2020-08-22_19-03-32.jpg ingin langsung dihapus dari lokasi aslinya setelah ditambahkan ke tar, beri opsi &amp;ndash;remove-files
+$ tar f screenshot.tar.xz --append --remove-files photo_2020-08-22_19-03-32.jpg </description>
     </item>
     
     <item>
