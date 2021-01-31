@@ -228,6 +228,149 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/">Membuat archive tar</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Terdapat file sebagai berikut:
+Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Ketujuh file tersebut akan disatukan dalam 1 archive dengan nama file screenshot.tar.gz.
+$ tar cvf screenshot.tar.gz Screen* Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Penjelasan command
+ tar : manajemen archive yang digunakan aalah tar c : wajib dituliskan untuk create atau membuat archive v : opsi untuk verbose, menampilkan list file yang diproses f : wajib dituliskan dalam semua penggunaan tar karena f adalah file, identifier untuk file yang akan diproses screenshot.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/">Mengetahui IP lokal dengan nmcli</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk mengetahui alamat ip lokal tanpa akses root dapat menggunakan nmcli
+$ nmcli wlan0: connected to Anatomi &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), CC:B0:DA:B5:3B:75, hw, mtu 1500 ip4 default inet4 192.168.120.19/24 route4 0.0.0.0/0 route4 192.168.120.0/24 route4 192.168.120.0/24 inet6 fe80::1a37:a13:b117:ff74/64 route6 fe80::/64 route6 ff00::/8 Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah
+ ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74  
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Rebuild R post-upgrade icu4c</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Pagi ini, saat akan mengeksekusi R,
+$ R /usr/lib64/R/bin/exec/R: error while loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory Ternyata R nya bermasalah. Di atas disebutkan bahwa libicuuc.so.67 tidak ditemukan. Dari namanya, bisa ditebak itu adalah shared object/library miliknya icu4c. Kita pastikan dulu,
+$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE The list below shows the packages that contains &#34;libicuuc\.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Ekstraksi waktu pada changelog dengan sed</a></h2>
 
     <div class="post-meta">
@@ -568,136 +711,6 @@ $ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segmen
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-10-22-akses-whatsapp-web-seamonkey/">Akses WhatsApp Web via Seamonkey</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>22 Oct 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/firefox">firefox</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Beberapa waktu ini saya lebih sering browsing dengan Seamonkey karena lebih ringan dan cepat (penilaian subjektif). Overall lancar jaya aman terkendali. Namun, ada 1 yang tidak bisa dilakukan : akses WhatsApp Web!
-Untuk mengatasinya,
- about:config Muncul peringatan. Klik I accept the risk! Isikan pada Search: general.useragent.compatMode.strict-firefox Ubah valuenya dari false ke true Restart Seamonkey  
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-21-screenshot-via-adb/">Screenshot android dengan adb</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>21 Aug 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di external memory (sdcard) dengan nama file screenshot.png
-adb shell screencap -p /sdcard/screenshot.png 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-15-mengenal-r-home/">Mengenal R_HOME</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Aug 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  R_HOME adalah direktori tempat R diinstall. Maksudnya, pada direktori inilah terdapat file binary dan konfigurasinya. Pada linux khususnya slackware, R_HOME ada di
-/usr/lib{,64}/R # tergantung arsitekturnya apakah 32bit atau 64bit. 
-  </p>
-
-  
-</article>
-
-  
 
   
 
@@ -706,7 +719,7 @@ adb shell screencap -p /sdcard/screenshot.png
   
   <a href="https://sasongko.web.id/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;2 / 19&nbsp;</span>
+  <span>&nbsp;2 / 20&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/3/"><i class="fa fa-chevron-right"></i></a>
   
