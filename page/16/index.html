@@ -228,6 +228,128 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-06-15-cek-paket-terinstall-slackware/">Cek Paket Terinstall di Slackware</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Jun 2015</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk mengetahui apakah suatu paket atau aplikasi telah terpasang di Slackware kita atau belum caranya mudah.
+$ ls /var/log/packages | grep nama_paket Contoh, mencari paket yang di nama paketnya ada kata xfce
+$ ls /var/log/packages | grep xfce gtk-xfce-engine-3.0.1-x86_64-1 libxfce4ui-4.10.0-x86_64-2 libxfce4util-4.10.1-x86_64-1 libxfcegui4-4.10.0-x86_64-2 xfce4-clipman-plugin-1.2.3-x86_64-2 xfce4-dev-tools-4.10.0-x86_64-1 xfce4-mixer-4.8.0-x86_64-1 xfce4-notifyd-0.2.4-x86_64-1 xfce4-panel-4.10.1-x86_64-2 xfce4-power-manager-1.2.0-x86_64-2 xfce4-screenshooter-1.8.1-x86_64-2 xfce4-session-4.10.1-x86_64-3 xfce4-settings-4.10.1-x86_64-1 xfce4-systemload-plugin-1.1.1-x86_64-2 xfce4-taskmanager-1.0.0-x86_64-2 xfce4-terminal-0.6.2-x86_64-1 xfce4-volumed-0.1.13-x86_64-1 xfce4-weather-plugin-0.8.3-x86_64-2 Jika tidak ada keluaran berarti paket tersebut belum diinstall.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2015-06-14-jalankan-sudo-tanpa-password/">Jalankan Sudo Tanpa Password</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 Jun 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Idealnya perintah sudo memang memerlukan password/kata sandi karena hakikat sudo itu pengguna &ldquo;meminjam&rdquo; hak super user / root. Tapi, password itu bisa saja kita hilangkan. Maksudnya, tidak perlu menuliskan password, contoh
+$ wvdial 3 bash: wvdial: command not found Baris 2, command not found menunjukkan 2 kemungkinan. Kemungkinan pertama, perintah yang diketikkan memang tidak ada. Kemungkinan kedua, perintah itu memerlukan hak root. Nah perintah [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) ini yang bisa menjalankan adalah root atau sudoers (pengguna yang bisa menjalankan perintah hak root tapi dengan syarat memasukkan passwordnya root.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-06-14-jalankan-sudo-tanpa-password/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2015-06-06-download-seluruh-website/">Download Seluruh Isi Website</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>09 Jun 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Melanjutkan [catatan yang lalu]({% post_url 2014-03-23-wget-linux-download-manager %}), kali ini adalah penggunaan wget untuk mengunduh/download website secara keseluruhan/rekursif.
+$ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url silahkan diganti dengan alamat websitenya.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-06-09-install-libreoffice-slackbuild/">Install Libre Office di Slackware</a></h2>
 
     <div class="post-meta">
@@ -559,131 +681,6 @@ $ lsusb Bus 001 Device 003: ID 0930:1400 Toshiba Corp. Memory Stick 2GB Bus 001 
   <footer>
     <a href="https://sasongko.web.id/post/2015-05-23-konversi-livedvd-iso/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-05-14-developer-mengajar-5/">Developer Mengajar 5.0</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 May 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/seminar">seminar</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-05-02-kontes-desain-web-kominfo-2015/">Kontes Desain Web Kominfo 2015</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 May 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/seminar">seminar</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Dalam rangka semangat Reformasi Birokrasi dan mengedepankan pelayanan prima kepada publik/masyarakat, Kementerian Komunikasi dan Informatika telah dan terus melakukan berbagai upaya, salah satunya adalah dalam hal pemberian/penyajian informasi kepada publik/masyarakat melalui Website Kominfo. Guna mendukung upaya tersebut lebih baik lagi, Kementerian Komunikasi dan Informatika akan melakukan pembaharuan dan desain kembali Website Kominfo dengan melibatkan peran serta masyarakat melalui Lomba/Kontes Desain Website Kominfo Tahun 2015.
-Hal ini dilakukan tidak hanya untuk memperbaiki tampilan Website Kominfo saja melainkan juga untuk merombak arsitektur Website Kominfo sehingga akan lebih banyak lagi fitur layanan dan informasi publik yang dapat disampaikan/disajikan kepada publik/masyarakat.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-05-02-kontes-desain-web-kominfo-2015/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-05-14-semnas-dampak-hacking-thd-kemunduran-ekonomi/">Seminar Dampak Hacking terhadap Kemunduran Ekonomi</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 May 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/seminar">seminar</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  
-  </p>
-
   
 </article>
 
