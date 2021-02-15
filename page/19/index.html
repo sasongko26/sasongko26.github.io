@@ -228,6 +228,182 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2014-11-26-mencoba-blankon-liveiso/">Booting BlankOn LiveISO</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Nov 2014</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Bagi yang ingin menggunakan BlankOn, ada baiknya mencoba BlankOn dulu tanpa memasangnya. Percobaan ini biasanya disebut dengan istilah live. Umumnya percobaan ini menggunaan sarana atau media berupa DVD sehingga muncullah istilah livedvd, atau flashdisk yang kemudian memunculkan liveusb. Bisakah kita live tanpa dvd maupun usb? Bisa saja, asal kita punya ISO-nya. Kita akan me-live langsung dari komputer atau laptop yang sudah terpasang BlankOn atau distro linux lainnya. Dengan ini kita ga perlu repot membakar ISOnya ke DVD atau membuat liveusb segala.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2014-11-26-mencoba-blankon-liveiso/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/">Hapus Kernel Lama Debian</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>16 Oct 2014</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Setelah upgrade kernel, ada yang kurang sreg. Ternyata kernelnya malah jadi ada 2. ini terlihat di grub
+OK, kernel yang lama (2.6.32-5-686) dihapus saja.
+# apt-get remove linux-image-2.6.32-5-686 kemudian restart.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2014-10-14-konek-internet-recovery/">Konek Internet Recovery Mode</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 Oct 2014</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, saat kita berada dalam mode pemulihan (recovery mode) tidak akan bisa tersambung internet. Untuk menyambungkannya lakukan langkah berikut. Oya kali ini penggunaan dalam virtual box setting jaringan NAT. kemudian Lalu kita cek apakah sudah tersambung dengan melakukan ping ke google Yak, sudah konek! Alhamdulillah&hellip;&hellip;
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/">Konversi VDI ke VMDK</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 Oct 2014</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.
+Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya
+$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% Clone hard disk created in format 'VMDK'. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa Hardisk virtualnya sudah terkonversi.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2014-08-03-dpkg-force-overwrite/">DPKG Force Overwrite</a></h2>
 
     <div class="post-meta">
@@ -484,179 +660,6 @@ Nama paketnya skype-debian. Versinya 4.2.0.13-1. Arsitekturnya, i386 untuk 32 bi
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-05-06-seminar-keamanan-teknologi-informasi/">Seminar Keamanan Teknologi Informasi</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 May 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/seminar">seminar</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-04-26-blokir-situs-porno/">Blokir Situs Porno di BlankOn Linux</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Apr 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  BlankOn adalah salah satu distro linux karya Indonesia yang dibuat tidak dengan main-main. Ya, hanya salah satu satu distro karena ada distro lain seperti IGN. Pengembang BlankOn serius menjalankan misi dan filosofi BlankOn. BlankOn diambil dari kata Blank dan On, mengandung filosofi bahwa pengguna BlankOn diharapkan berubah dari Blank (kosong, belum tahu, belum sadar) menjadi On (tahu dan sadar sepenuhnya). Maksudnya? Pengguna diharapkan sadar akan ke-Indonesia-annya. Bangsa Indonesia sejak dulu kala dikenal sebagai bangsa yang bermartabat, bangsa yang menjunjung tinggi moral.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2014-04-26-blokir-situs-porno/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-04-21-bermain-mario-bros-blankon-linux/">Bermain Super Mario Bros di BlankOn Linux</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>21 Apr 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Masih ingat dengan ini?
-Ya! itu adalah permainan Super Mario Brothers atau yang lebih biasa disebut Mario Bros. Waktu kami kecil dulu, akhir dekade 90an, hobi bermain nintendo, di rumahnya Arip sama Icang, ya main Mario ini sampai kadang lupa waktu. Hehehehe&hellip;.. Nostalgia, kalau pengguna BlankOn ingin memainkannya silahkan.
-{% highlight bash %} $ sudo apt-get install supermario {% endhighlight %}
-Untuk memainkannya klik menu Aplikasi &gt; Permainan &gt; Super Mario Untuk memainkan mario di ubuntu caranya tidak jauh beda.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2014-04-21-bermain-mario-bros-blankon-linux/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-04-17-apt-gantikan-apt-get/">apt Gantikan apt-get</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>17 Apr 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Selain penggunaan Gnome 3.12, BlankOn X Tambora akan memiliki fitur baru yakni penyingkatan perintah apt-get menjadi apt saja. Contoh :
-$ sudo apt-get update menjadi
-$ sudo apt update Tapi, fitur ini baru tersedia untuk Debian Sid dan BlankOn Tambora yang belum rilis final/stable. Sabar&hellip;. Tambora akan rilis tanggal 15 April 2015, insya Allah.
-  </p>
-
-  
-</article>
-
-  
 
   
 
@@ -665,7 +668,7 @@ $ sudo apt update Tapi, fitur ini baru tersedia untuk Debian Sid dan BlankOn Tam
   
   <a href="https://sasongko.web.id/page/18/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;19 / 20&nbsp;</span>
+  <span>&nbsp;19 / 21&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/20/"><i class="fa fa-chevron-right"></i></a>
   

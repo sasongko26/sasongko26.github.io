@@ -228,6 +228,203 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Rebuild R post-upgrade icu4c</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Pagi ini, saat akan mengeksekusi R,
+$ R /usr/lib64/R/bin/exec/R: error while loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory Ternyata R nya bermasalah. Di atas disebutkan bahwa libicuuc.so.67 tidak ditemukan. Dari namanya, bisa ditebak itu adalah shared object/library miliknya icu4c. Kita pastikan dulu,
+$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE The list below shows the packages that contains &#34;libicuuc\.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Ekstraksi waktu pada changelog dengan sed</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sed">sed</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Ini adalah keisengan di kala WFH alias work from home. Melakukan ekstraksi waktu pada changelog slackware64-current yang terakhir kami update 8 Januari 2021.
+Changelognya terdiri dari 4 bagian:
+ Waktu Packages yang mengalami perubahan (Upgraded, Removed, Added, Rebuilt) Keterangan perubahan Pembatas update antarwaktu (+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+)  Akan diambil yang no.1 saja.
+Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/">Menggunakan ratpoison</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/ratpoison">ratpoison</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Ratpoison sesuai namanya benar adalah racun! Mouse-nya terkena racun! Penggunaan mouse menjadi minimal. User banyak menggunakan keyboard.
+Memasuki lingkungan ratpoison user disambut interface hitam (mungkin dengan disertai bayangannya sendiri). Sudut kanan atas muncul ucapan selamat datang Welcome to ratpoison! Hit C - t ? for help.. Bagi yang selalu berpesta dalam gemerlapnya KDE Plasma, Cinnamon, Xfce, Mate, Budgie, dll sangat mungkin merasa njegleg atau keheranan bahkan mungkin bingung atau linglung. Tapi slackers insyaallah tetap tenang-tenang saja, bisa beradaptasi.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Mengetahui kondisi baterai</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/power-manager">power-manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Mengecek kondisi baterai laptop melalui terminal atau command line interface sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara default sudah menyertakan desktop environment seperti xfce, kde, mate, cinnamon, budgie, lumina dan manokwari dengan interface yang cantik dan menarik. DE tersebut sudah mempunyai power manager lengkap dengan applet-nya yang tak pernah bosan nempel di panel.
+Bagaimana kalau &lsquo;hanya&rsquo; menggunakan window manager seperti GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm atau ratpoison yang tidak mempunyai power manager sendiri?
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/">Xfce 4.16 Masuk Current</a></h2>
 
     <div class="post-meta">
@@ -506,194 +703,6 @@ adb shell screencap -p /sdcard/screenshot.png
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-15-mengenal-r-home/">Mengenal R_HOME</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Aug 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  R_HOME adalah direktori tempat R diinstall. Maksudnya, pada direktori inilah terdapat file binary dan konfigurasinya. Pada linux khususnya slackware, R_HOME ada di
-/usr/lib{,64}/R # tergantung arsitekturnya apakah 32bit atau 64bit. 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">NetworkManager device not ready</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Aug 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Baru beberapa hari memakai (lagi) NetworkManager, sudah bermasalah (lagi).
-device not ready begitulah&hellip;.
-Padahal network interface-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai NetworkManager. Solusinya dari berbagai referensi (lupa mencatat linknya)
-echo &#34;managed=true&#34; &gt;&gt; /etc/NetworkManager/NetworkManager.conf Tapi, ternyata ini kemudian munculkan warning di syslog
-Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] config: unknown key &#39;managed&#39; in section [main] of file &#39;/etc/NetworkManager/NetworkManager.conf Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal).
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Bye wicd</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>04 Aug 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan wicd dari repo slackware current.
- extra/wicd/wicd-1.7.4-x86_64-3.txz: Removed.
- This is unmaintained, possibly insecure, and doesn&rsquo;t work with Python versions newer than 2.7.18. NetworkManager is a better choice these days.
-  Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripada NetworkManager. Kenyamanan ini sebenarnya karena saya tidak mau repot, NetworkManager seringkali timbulkan masalah, salah satunya mengatur hostname dan domain.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-06-20-edit-video-ffmpeg-lossless/">Edit video ffmpeg tanpa menurunkan kualitas</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>20 Jun 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Ketika mengedit video menggunakan ffmpeg, filter video ataupun filter yang lebih kompleks seperti menambahkan watermark, tanpa pengaturan tambahan kadang hasilnya mengecewakan. Gambar pada video menjadi pecah. Untuk meminimalisirnya, bisa ditambahkan opsi -q:v 0.
-  </p>
-
-  
-</article>
-
-  
 
   
 
@@ -702,7 +711,7 @@ Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] co
   
   <a href="https://sasongko.web.id/page/2/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;3 / 20&nbsp;</span>
+  <span>&nbsp;3 / 21&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/4/"><i class="fa fa-chevron-right"></i></a>
   

@@ -228,6 +228,188 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-21-menambah-watermark-gambar-video/">Menambah watermark gambar ke video dengan ffmpeg</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>24 May 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Misalkan kita akan memberikan watermark berupa gambar logo.png ke video ramadhan.mkv. Watermark ditempatkan di pojok kiri bawah. Video dengan watermark diberi nama ramadhan-fix.mkv
+ffmpeg -i ramadhan.mkv -i logo.png -filter_complex &#34;overlay=x=0:y=(main_h-overlay-h)&#34; ramadhan-fix.mkv Keterangan opsi dan parameternya
+-filter_complex : menggunakan filter yang kompleks overlay : menambahkan watermark x : posisi pada sumbu x, dihitung dari ujung kiri y : posisi pada sumbu y, dihitung dari ujung atas main_h : tinggi video main_w : lebar video overlay_h : tinggi gambar yang akan dijadikan watermark overlay_w : lebar gambar yang akan dijadikan watermark 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-24-mengubah-resolusi-video-ffmpeg/">Mengubah resolusi video ffmpeg</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>24 May 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Misalkan terdapat video VID20200509135621.mp4, dengan resolusi 3840x2160 SAR 1:1 DAR 16:9. Akan diubah resolusinya menjadi 1920x1080 dengan tetap memperhatikan SAR dan DAR. Video hasil scaling ini diberi nama VID20200509135621-1080p.mkv. Perubahan ini sekaligus konversi ke mkv agar menghemat space.
+ffmpeg -i VID20200509135621.mp4 -vf &#34;scale=1920:1080, setdar=16:9, setsar=1:1&#34; VID20200509135621-1080p.mkv 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Disable tampilan konfigurasi ffmpeg</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 May 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, output ffmpegakan menampilkan built configuration yang digunakan.
+$ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers built with gcc 9.2.0 (GCC) configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-4.2.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack libavutil 56. 31.100 / 56. 31.100 libavcodec 58. 54.100 / 58.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/">Mengenal objek R factor</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>22 May 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Factor adalah representasi data kategorik. Factor bisa dibuat dengan fungsi factor()atau cut(). Saya lebih sering menggunakan cut()karena lebih aplikatif saat akan mengubah skala data dari rasio atau interval ke ordinal.
+Contoh, bmi adalah data body mass index (BMI) atau indeks massa tubuh (IMT). Klasifikasi IMT ada 4 macam, yaitu
+ &lt; 18,5 : underweight 18,5 - 24,99 : normal 25 - 29,99 : overweight &gt; 30 : obese/obesitas Untuk obesitas, masih bisa diklasifikasikan menjadi 3 30 - 34,99 : obese class 1 35 - 39,99 : obese class 2 &gt; 40 : extreme obesity  &gt; bmi &lt;- c(20, 21.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/">Edit volume suara</a></h2>
 
     <div class="post-meta">
@@ -498,200 +680,6 @@ Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini ber
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-04-04-dispersi-data-dengan-r/">Dispersi Data dengan R</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>04 Apr 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Dispersi atau ukuran penyebaran data menunjukkan seberapa bervariasi suatu data. Kali ini data yang digunakan diambil dari dataset ldeaths yang merupakan bagian dari UKLungDeaths. Dataset UKLungDeaths berisi data jumlah kematian akibat penyakit bronchitis, emphysema dan asma di Inggris dalam kurun waktu 1974-1979. Data ini disajikan berdasarkan bulan dan jenis kelamin. Secara total untuk kedua jenis kelamin ada di ldeaths, laki-laki mdeaths dan perempuan fdeaths.
-Nilai minimal min(ldeaths) [1] 1300 Nilai maksimal max(ldeaths) [1] 3891 Range range(ldeaths) [1] 1300 3891 Varians var(ldeaths) [1] 371911.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-04-04-dispersi-data-dengan-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/">Tendensi Sentral dengan R</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>21 Mar 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Data yang digunakan :
-&gt; nilai [1] 25 60 79 32 57 74 52 70 82 36 75 77 81 95 41 65 92 85 55 66 52 10 64 75 78 [26] 25 80 98 81 67 41 71 83 54 64 72 88 62 74 45 60 78 89 76 48 84 84 90 15 79 [51] 35 67 17 82 69 74 63 80 85 61 Mean &gt; mean(nilai) [1] 65.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-03-14-input-data-r/">Input Data R</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Mar 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Input data dalam R sangat mudah dan ada beragam cara, yaitu:
- Menuliskan dalam bentuk syntax. Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100 Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-03-14-input-data-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/">Package bawaan R Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>13 Feb 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Berikut adalah package atau library R yang secara default terinstall di Slackware melalui SBo.
- KernSmooth.Functions for Kernel Smoothing Supporting Wand &amp; Jones (1995) MASS. Support Functions and Datasets for Venables and Ripley&rsquo;s MASS Matrix. Sparse and Dense Matrix Classes and Methods base. The R Base Package boot. Bootstrap Functions (Originally by Angelo Canty for S) class. Functions for Classification cluster. &ldquo;Finding Groups in Data&rdquo;: Cluster Analysis Extended Rousseeuw et al.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
 
   
 
@@ -700,7 +688,7 @@ Nilai minimal min(ldeaths) [1] 1300 Nilai maksimal max(ldeaths) [1] 3891 Range r
   
   <a href="https://sasongko.web.id/page/4/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;5 / 20&nbsp;</span>
+  <span>&nbsp;5 / 21&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/6/"><i class="fa fa-chevron-right"></i></a>
   
