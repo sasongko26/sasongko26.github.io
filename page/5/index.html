@@ -228,6 +228,145 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Menggabungkan video ffmpeg</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 May 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu
+ piknik-1.mkv piknik-2.mkv piknik-3.mkv piknik-4.mkv  Keempat file tersebut berada dalam folder yang sama. Kemudian mereka akan digabungkan menjadi piknik.mkv. Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.
+$ vim list-piknik file &#39;piknik-1.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/">Operasi direktori R</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 May 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Mengetahui working directory Secara default, working directory pada Slackware adalah home directory user atau di mana command Rdijalankan.
+getwd() Mengganti working directory Misal, akan berpindah working directory ke Documents/projectsetwd(&#39;Documents/project&#39;) 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/">Mengetahui volume suara video</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>25 May 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.
+Untuk mengetahui intensitas suara video intro.mkv
+$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &#39;intro.mkv&#39;: Metadata: COMPATIBLE_BRANDS: isommp42 COM.ANDROID.VERSION: 9 MAJOR_BRAND : mp42 MINOR_VERSION : 0 ENCODER : Lavf58.29.100 Duration: 00:00:14.90, start: 0.000000, bitrate: 5559 kb/s Stream #0:0(eng): Video: mpeg4 (Simple Profile), yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 1k tbn, 30 tbc (default) Metadata: HANDLER_NAME : VideoHandle ENCODER : Lavc58.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-05-24-aktivasi-android-gps-adb/">Aktivasi android GPS via adb</a></h2>
 
     <div class="post-meta">
@@ -537,140 +676,6 @@ ffmpeg -i video.mp4 -filter:a &#34;volume=0.5&#34; new.webm Atau, dengan menulis
 convert file-gambar.jpg dokumen.pdf 
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-12-melihat-isi-file-zip/">Melihat isi file zip</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>12 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Menggunakan linux terutama slackware membuat pekerjaan lebih ringan dan efisien. Suatu ketika diberikan sebuah file terkompresi zip yang misterius. Misterius karena ukurannya besar dan konon kata empunya file tersebut ngehang saat akan dibuka di komputer dengan sistem bukan slackware juga bukan linux. Dan ketika dibuka di slackware ketahuanlah nama &ldquo;penduduk&rdquo; zip tersebut.
-zip -sf namafile.zip # atau less namafile.zip 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-05-trimming-video-ffmpeg/">Trimming Video ffmpeg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>05 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan, kita akan mencuplik sebagian (trimming) video video-asli.mp4 dari menit ke 57 lebih 34 detik sampai durasi ke 1 jam 2 menit 5 detik. Fila hasil trimming adalah cuplikan.mp4
-ffmpeg -i video-asli.mp4 -ss 00:57:34 -to 01:02:05 -c copy cuplikan.mp4 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">Mengenal Objek R Vector</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 Apr 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.
-Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.
-Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

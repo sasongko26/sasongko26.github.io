@@ -228,6 +228,151 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/">Upgrade Plasma 5</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Oct 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara resmi, Slackware masih menggunakan KDE 4 yang &ldquo;ketinggalan jaman&rdquo; padahal pengembang KDE telah merilis KDE (sekarang biasa disebut Plasma) 5. Plasma 5 ini masih tetap seperti &ldquo;kakaknya&rdquo; (KDE 4) yang boros memory dibandingkan Xfce. Tapi, masya Allah tampilan lebih keren!
+Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah membuat slackbuild dan binary package-nya yang bisa kita gunakan. Versi terakhir versi Eric saat ini adalah Plasma 5.7.4 sedangkan insya Allah tanggal 4 Oktober 2016 KDE merilis Plasma 5.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Mount qcow2</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Sep 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk mengaitkan/mount berkas qcow2ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
+Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
+modprobe nbd max_part=N max_part=Nisikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2tersebut kalau dijalankan dengan qemuberisi 8 partisi, maka nilai Nadalah 8.
+Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbdyang mengaktifkan koneksi file /mnt/virtual/image/ign11.qcow2ke /dev/nbd0&gt;
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-09-10-nonaktif-delall-slackpkg/">Nonaktifkan Penghapusan Unduhan Slackpkg</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Sep 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackpkg">slackpkg</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, slackpkgakan menghapus semua file yang di- download / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di /etc/slackpkg/slackpkg.confpada baris 77
+DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah onmenjadi off.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/">Cek Harddisk Korup</a></h2>
 
     <div class="post-meta">
@@ -567,153 +712,6 @@ $ virt-manager Traceback (most recent call last): File &#34;/usr/share/virt-mana
   
   <footer>
     <a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackware-142/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/">Upgrade Slackbuilds Slackware 14.2</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>03 Jul 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackbuild">slackbuild</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sbopkg">sbopkg</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Setelah melakukan [ upgrade sistem ke Slackware 14.2]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya upgrade juga paket yang diinstal dari slackbuilds.org.
- Upgrade sbopkg: sbopkg -u Versi sbopkgterbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik D Hasil unduhan : /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Setelah diunduh, upgrade : upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Karena menghasilkan konfigurasi baru, lakukan slackpkg new-configdan pilih overwrite saja. Kemudian update ke repo 14.2 : sbopkgpilih Utilitieslalu Repository. Kemudian pilih SBo (14.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/">Ganti Theme Xfce</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Jun 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/theme">theme</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Bosan dengan tampilan theme yang itu-itu aja? Tenang, theme-nya bisa diganti kok, bahkan diganti agar tampilannya mirip Mac OS X. Sebagai contoh akan kita install theme GlossyP3 yang membuat tampilan menjadi mirip Mac OS X.
-Download terlebih dahulu berkasnya dari sini (pastikan tersambung internet). Berkas dalam bentuk arsip .tar.bz2ekstrak ke direktori /usr/share/themesdengan hak administrator atau root.
-Kemudian ke Settings &mdash;&gt; Appearancepilih GlossyP3Kemudian, meminjam kata Mario Teguh, dan lihat apa yang terjadi.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/">Konek Internet dengan nmcli</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Jun 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Menyambung catatan tentang [hilangnya ikon atau NetworkManager]({% post_url 2015-12-26-ikon-networkmanager-hilang %}). Jika nm-applettidak mempan untuk menampilkan applet NetworkManager, maka kita bisa gunakan nmcli.
-nmcliadalah NetworkManager dengan antarmuka teks (command line interface).
-nmcli Usage: nmcli [OPTIONS] OBJECT { COMMAND | help } OPTIONS -t[erse] terse output -p[retty] pretty output -m[ode] tabular|multiline output mode -c[olors] auto|yes|no whether to use colors in output -f[ields] &lt;field1,field2,...&gt;|all|common specify fields to output -e[scape] yes|no escape columns separators in values -a[sk] ask for missing parameters -s[how-secrets] allow displaying passwords -w[ait] &lt;seconds&gt; set timeout waiting for finishing operations -v[ersion] show program version -h[elp] print this help OBJECT g[eneral] NetworkManager's general status and operations n[etworking] overall networking control r[adio] NetworkManager radio switches c[onnection] NetworkManager's connections d[evice] devices managed by NetworkManager a[gent] NetworkManager secret agent or polkit agent m[onitor] monitor NetworkManager changes Untuk melihat sambungan/koneksi yang telah dibuat dengan NetworkManager gunakan nmcli c.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
