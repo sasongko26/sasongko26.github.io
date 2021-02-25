@@ -228,6 +228,59 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Virt-Manager ImportError: No module named requests</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Jul 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Managertidak bisa dijalankan.
+$ virt-manager Traceback (most recent call last): File &#34;/usr/share/virt-manager/virt-manager&#34;, line 33, in &lt;module&gt; from virtinst import util as util File &#34;/usr/share/virt-manager/virtinst/__init__.py&#34;, line 89, in &lt;module&gt; from virtinst.distroinstaller import DistroInstaller File &#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;, line 23, in &lt;module&gt; from . import urlfetcher File &#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;, line 34, in &lt;module&gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requestsmenunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackware-142/">Upgrade ke Slackware 14.2</a></h2>
 
     <div class="post-meta">
@@ -665,58 +718,6 @@ Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slack
   
   <footer>
     <a href="https://sasongko.web.id/post/2016-04-29-install-tor/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-04-28-nano-file-browser/">Kekuatan Tersembunyi Nano : Menampilkan File Tersembunyi</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>28 Apr 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text editor</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Bertahun-tahun pakai linux, baru sadar ternyata nano punya kekuatan tersembunyi. Bisa menampilkan file maupun folder yang hidden secara otomatis.
-Selama ini, untuk mengetahui apa saja yang hidden dengan mengetikkan di terminal
-ls -a Atau dengan menekan ^Hatau Ctrl Hdi thunar, atau Alt . di dolphin.
-Nah, nano secara default akan menampilkan hidden file saat digunakan untuk mencari file yang akan dibuka/disisipkan.
-Perhatikan bagian bawahnya, ada beberapa opsi yang bisa dilakukan.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-04-28-nano-file-browser/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
