@@ -6,7 +6,17 @@
     <description>Recent content in manajemen file on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/manajemen-file/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/manajemen-file/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menghapus file berdasarkan pencarian</title>
+      <link>https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/</link>
+      <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/</guid>
+      <description>Misalkan akan menghapus semua file berekstensi .rtf di direktori /tmp. Pada direktori /tmp terdapat banyak direktori dan file lainnya. File yang akan dihapus hanya pada direktor induk, tidak termasuk subdirektorinya (maxdepth=1).
+$ find /tmp -maxdepth 1 -name *.rtf -delete </description>
+    </item>
+    
     <item>
       <title>Membuat file csv</title>
       <link>https://sasongko.web.id/post/2021-01-31-membuat-file-csv/</link>

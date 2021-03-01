@@ -6,7 +6,17 @@
     <description>Recent content on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menghapus file berdasarkan pencarian</title>
+      <link>https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/</link>
+      <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/</guid>
+      <description>Misalkan akan menghapus semua file berekstensi .rtf di direktori /tmp. Pada direktori /tmp terdapat banyak direktori dan file lainnya. File yang akan dihapus hanya pada direktor induk, tidak termasuk subdirektorinya (maxdepth=1).
+$ find /tmp -maxdepth 1 -name *.rtf -delete </description>
+    </item>
+    
     <item>
       <title>Mengatur ukuran window gvim</title>
       <link>https://sasongko.web.id/post/2021-02-25-mengatur-ukuran-window-gvim-otomatis/</link>
@@ -40,6 +50,17 @@ slackpkg install httpd Aktivasi apache webserver slackware linux Setelah diinsta
 Untuk meng-set background pada blackbox menggunakan bsetbg
 $ bsetbg nama_file_background Atau, kalau menghendaki background-nya adalah warna (solid color) juga bisa. Contoh, akan mengganti background-nya dengan warna hijau.
 $ bsetbg -solid green </description>
+    </item>
+    
+    <item>
+      <title>Copy paste xterm</title>
+      <link>https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/</link>
+      <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/</guid>
+      <description>xterm adalah X terminal emulator populer legendaris. Penulis masih menggunakannya sebagai terminal utama ketika menggunakan blackbox. Sesekali saat menggunakan xfce atau kde.
+xterm ini khas. Tidak seperti xfce4-terminal atau konsole yang secara default pengguna bisa melakukan copy paste (Copas) dengan mudah. Ctrl Shift C, Ctrl Shift V untuk copas pada terminal emulator lainnya tidak berlaku! Butuh pengaturan khusus untuk melakukannya. Mengatur agar setiap yang diblok akan dimasukkan ke clipboard.
+Untuk bisa melakukan copy:</description>
     </item>
     
     <item>

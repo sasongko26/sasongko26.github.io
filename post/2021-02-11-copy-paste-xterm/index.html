@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.80.0" />
 
-  <title>xauth serverauthXXX does not exist &middot; Catatan Sasongko</title>
+  <title>Copy paste xterm &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>xauth serverauthXXX does not exist</h1>
+  <h1>Copy paste xterm</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Feb 2021</time>
+    <time>11 Feb 2021</time>
   </div>
 
   
@@ -236,9 +236,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
     
   </div>
   
@@ -247,25 +245,28 @@
 </div>
 
 
-  <p>Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-<em>charge</em>. Alhasil laptop mati seketika. Dinyalakan lagi (sambil <em>charging</em> tentunya) gagal masuk ke <strong>X</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">xauth: file /home/xyz/.serverauth.2909 does not exist
-</code></pre></div><p>Solusinya simpel</p>
-<pre><code>$ rm .serverauth*
-</code></pre>
+  <p><strong>xterm</strong> adalah <strong>X terminal emulator</strong> populer legendaris. Penulis masih  menggunakannya sebagai terminal utama ketika menggunakan <strong>blackbox</strong>. Sesekali saat menggunakan <strong>xfce</strong> atau <strong>kde</strong>.</p>
+<p><strong>xterm</strong> ini khas. Tidak seperti <strong>xfce4-terminal</strong> atau <strong>konsole</strong> yang secara <em>default</em> pengguna bisa melakukan <em>copy paste</em> (Copas) dengan mudah. <strong>Ctrl Shift C, Ctrl Shift V</strong> untuk copas pada terminal emulator lainnya tidak berlaku! Butuh pengaturan khusus untuk melakukannya. Mengatur agar setiap yang diblok akan dimasukkan ke <em>clipboard</em>.</p>
+<p>Untuk bisa melakukan <em>copy</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ echo <span style="color:#e6db74">&#34;xterm*selectToClipboard : true&#34;</span> &gt;&gt; ~/.Xresources
+</code></pre></div><p>Karena ~/.Xresources ada perubahan, agar bisa segera diterapkan tanpa <em>reboot</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ xrdb -merge ~/.Xresources
+</code></pre></div><p>Selanjutnya, untuk melakukan <em>copy</em> tinggal blok saja teks yang akan di-<em>copy</em>. Kemudian, <em>paste</em>-nya tekan <strong>Shift Insert</strong></p>
+
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-10-xauth-serverauth-xxx-does-not-exist%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-11-copy-paste-xterm%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-10-xauth-serverauth-xxx-does-not-exist%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-11-copy-paste-xterm%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-10-xauth-serverauth-xxx-does-not-exist%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-11-copy-paste-xterm%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-10-xauth-serverauth-xxx-does-not-exist%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-11-copy-paste-xterm%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-10-xauth-serverauth-xxx-does-not-exist%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-11-copy-paste-xterm%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-10-xauth-serverauth-xxx-does-not-exist%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-11-copy-paste-xterm%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -297,13 +298,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/">nmcli sw disabled</a>
+      <a href="https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/">xauth serverauthXXX does not exist</a>
     </nav>
     
   </div>
@@ -313,13 +314,13 @@
   <div class="pure-u-10-24">
     
     <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/">Copy paste xterm</a>
+      <a href="https://sasongko.web.id/post/2021-02-19-set-background-blackbox/">Set background blackbox</a>
     </nav>
     
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
     
-    <a href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/"><i class="fa fa-chevron-right"></i></a>
+    <a href="https://sasongko.web.id/post/2021-02-19-set-background-blackbox/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
