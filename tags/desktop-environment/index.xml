@@ -6,7 +6,18 @@
     <description>Recent content in desktop environment on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/desktop-environment/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/desktop-environment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menambahkan tanggal toolbar blackbox</title>
+      <link>https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/</link>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/</guid>
+      <description>Masih adakah pengguna linux di Indonesia yang menggunakan blackbox sebagai window manager sehari-hari? Masih, minimal seorang yaitu yang menulis catatan ini. Hehehehe&amp;hellip;.
+Secara default, toolbar blackbox tidak menyertakan tanggal walau menampilkan jam. Jam ditampilkan dalam format 12 jam AM/PM. Untuk menambahkannya, dan menggunakan jam format 24 jam sebagaimana lazimnya di Indonesia, diatur sebagai berikut pada ~/.blackboxrc
+session.screen0.strftimeFormat : %d/%m/%Y %H:%M Untuk menerapkan perubahan tersebut secara langsung, restart blackbox (tidak perlu restart komputer!</description>
+    </item>
+    
     <item>
       <title>Set background blackbox</title>
       <link>https://sasongko.web.id/post/2021-02-19-set-background-blackbox/</link>
