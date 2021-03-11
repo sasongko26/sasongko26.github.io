@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.80.0" />
 
-  <title>Menghapus file berdasarkan pencarian &middot; Catatan Sasongko</title>
+  <title>Mengubah user agent firefox &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Menghapus file berdasarkan pencarian</h1>
+  <h1>Mengubah user agent firefox</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Feb 2021</time>
+    <time>10 Mar 2021</time>
   </div>
 
   
@@ -236,7 +236,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
     
   </div>
   
@@ -245,23 +245,35 @@
 </div>
 
 
-  <p>Misalkan akan menghapus semua file berekstensi <strong>.rtf</strong> di direktori /tmp. Pada direktori /tmp terdapat banyak direktori dan file lainnya. File yang akan dihapus hanya pada direktor induk, tidak termasuk subdirektorinya (maxdepth=1).</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ find /tmp -maxdepth <span style="color:#ae81ff">1</span> -name *.rtf -delete
-</code></pre></div>
+  <h1 id="pengertian-user-agent">Pengertian user agent</h1>
+<p><em>User agent (UA)</em> adalah identitas <em>web browser</em> yang dikirimkan ke website yang diakses. Identitas tersebut antara lain nama <em>web browser</em> dan versinya.</p>
+<h1 id="default-ua-firefox">Default UA firefox</h1>
+<p>Firefox yang saat ini digunakan adalah versi 78.6.1esr. Versi ini memiliki UA <!-- raw HTML omitted -->Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0<!-- raw HTML omitted --></p>
+<h1 id="mengetahui-ua-firefox">Mengetahui UA firefox</h1>
+<p>Pada address bar ketik <strong>about:support</strong>. Perhatikan bagian <strong>User Agent</strong>.</p>
+<h1 id="cara-mengganti-ua">Cara mengganti UA</h1>
+<p>Untuk mengubahnya, contoh kali ini akan diubah dengan UA Chrome pada Mac.</p>
+<ol>
+<li>Buka <strong>about:config</strong></li>
+<li>Muncul <em>warning</em>. Baca baik-baik. Kalau setuju klik <strong>Accept the Risk and Continue</strong></li>
+<li>search <strong>general.useragent.override</strong>, pilih <strong>String</strong>, klik <strong>+</strong></li>
+<li>Tulis <em>value</em>-nya <strong>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36</strong></li>
+</ol>
+
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-26-menghapus-berdasarkan-pencarian%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-10-mengubah-user-agent-firefox%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-26-menghapus-berdasarkan-pencarian%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-10-mengubah-user-agent-firefox%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-26-menghapus-berdasarkan-pencarian%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-10-mengubah-user-agent-firefox%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-26-menghapus-berdasarkan-pencarian%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-10-mengubah-user-agent-firefox%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-26-menghapus-berdasarkan-pencarian%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-10-mengubah-user-agent-firefox%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-26-menghapus-berdasarkan-pencarian%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-10-mengubah-user-agent-firefox%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -293,13 +305,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-02-25-mengatur-ukuran-window-gvim-otomatis/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-02-25-mengatur-ukuran-window-gvim-otomatis/">Mengatur ukuran window gvim</a>
+      <a href="https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/">Menghapus file berdasarkan pencarian</a>
     </nav>
     
   </div>
@@ -308,14 +320,8 @@
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/">Mengubah user agent firefox</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
@@ -367,9 +373,6 @@
 
 
 
-<script src="https://sasongko.web.id/js/math-code.js"></script>
-  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-  
 
 
 </body>
