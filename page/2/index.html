@@ -228,6 +228,99 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/">xauth serverauthXXX does not exist</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Feb 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-charge. Alhasil laptop mati seketika. Dinyalakan lagi (sambil charging tentunya) gagal masuk ke X.
+xauth: file /home/xyz/.serverauth.2909 does not exist Solusinya simpel
+$ rm .serverauth* 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/">nmcli sw disabled</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>09 Feb 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network-manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Beberapa saat yang lalu penulis terkena prank dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan flight mode di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek nmcli
+$ nmcli p2p-dev-wlan0: disconnected &#34;p2p-dev-wlan0&#34; wifi-p2p, sw disabled, hw eth0: unavailable &#34;Realtek RTL810xE&#34; ethernet (r8169), C8:5B:76:66:51:6C, hw, mtu 1500 wlan0: unavailable &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), 8E:58:C9:8B:64:0F, sw disabled, hw, mtu 1500 lo: unmanaged &#34;lo&#34; loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536 Use &#34;nmcli device show&#34; to get complete information about known devices and &#34;nmcli connection show&#34; to get an overview on active connection profiles.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/">Copy paste vim mode visual</a></h2>
 
     <div class="post-meta">
@@ -589,100 +682,6 @@ Apakah python cocok untuk data science? Mengapa? Ya. Karena python open source m
   Secara default video yang ada di youtube dapat di-download secara bebas. Semua orang bisa men-download tanpa harus login. Tetapi, ada kalanya sang pemilik video membatasinya hanya untuk member atau harus login dulu baru bisa donwload.
 Dengan youtube-dl hal ini mudah dilakukan
 $ youtube-dl -u username url Opsi -u diikuti dengan username akun youtube untuk login.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-31-membuat-file-csv/">Membuat file csv</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>31 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  File csv merupakan file yang umum digunakan sebagai file data. Mudah dalam pembuatannya. Begitu juga dengan aksesnya. Bisa dibuat dengan text editor, spreadsheet software maupun statistical software. Pada kesempatan kali ini tidak menggunakan statistical software seperti R.
-Membuat file csv dengan text editor Prinsip pembuatan adalah :
- Antar kolom dipisahkan oleh tanda koma (,) Kolom pertama (umumnya) sebagai header atau nama/judul kolom Antar baris dipisahkan oleh enter Angka dituliskan seperti biasanya Teks/string dituliskan dalam tanda kutip (&quot; atatu &lsquo;)  Contoh, data kasus malaria tahun 2019 terdiri atas 2 kolom, yaitu provinsi dan jumlah.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-01-31-membuat-file-csv/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-30-video-spreadsheet-layout/">(Video) Mengenal spreadsheet layout libre office calc</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Bagaimana spreadsheet layout pada libre office calc? Silahkan simak video berikut ini
   </p>
 
   
