@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.80.0" />
 
-  <title>Menghapus file berdasarkan pencarian &middot; Catatan Sasongko</title>
+  <title>Mount partisi hibernated windows &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Menghapus file berdasarkan pencarian</h1>
+  <h1>Mount partisi hibernated windows</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Feb 2021</time>
+    <time>09 Mar 2021</time>
   </div>
 
   
@@ -245,23 +245,48 @@
 </div>
 
 
-  <p>Misalkan akan menghapus semua file berekstensi <strong>.rtf</strong> di direktori /tmp. Pada direktori /tmp terdapat banyak direktori dan file lainnya. File yang akan dihapus hanya pada direktor induk, tidak termasuk subdirektorinya (maxdepth=1).</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ find /tmp -maxdepth <span style="color:#ae81ff">1</span> -name *.rtf -delete
-</code></pre></div>
+  <p>Lima tahun yang lalu ketika membeli laptop yang saat ini digunakan untuk menulis catatan ini, toko memberikan OS Windows 10 tanpa lisensinya. Penulis tetap mempertahankannya untuk jaga-jaga jika di kemudian hari kepepet sangat membutuhkan Windows.</p>
+<p>Tadi pagi iseng ingin melihat-lihat adakah file di partisi tempat Windows diinstall yang bisa dihapus sehingga storage harddisk lebih lega?</p>
+<p>Partisi Windows teridentifikasi sebagai /dev/sda2. Akan di-<em>mount</em> ke /media/hd0</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ mount /dev/sda2 /media/hd0
+Windows is hibernated, refused to mount.
+Falling back to read-only mount because the NTFS partition is in an
+unsafe state. Please resume and shutdown Windows fully <span style="color:#f92672">(</span>no hibernation
+or fast restarting.<span style="color:#f92672">)</span>
+</code></pre></div><p>What? Windows is hibernate? Seingat penulis selalu tertib dalam menjalankan SOP shutdown (<em>close</em> semua window aplikasi yang terbuka, shutdown melalui menu, tidak ada <em>warning</em> apapun yang muncul di monitor). Jadi ya dianggap baik-baik saja. Ternyata tidak.</p>
+<p>Kemudian coba difixkan</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ntfsfix /dev/sda2
+Mounting volume... Windows is hibernated, refused to mount.
+FAILED
+Attempting to correct errors... 
+Processing $MFT and $MFTMirr...
+Reading $MFT... OK
+Reading $MFTMirr... OK
+Comparing $MFTMirr to $MFT... OK
+Processing of $MFT and $MFTMirr completed successfully.
+Setting required flags on partition... OK
+Going to empty the journal <span style="color:#f92672">(</span>$LogFile<span style="color:#f92672">)</span>... OK
+Windows is hibernated, refused to mount.
+Remount failed: Operation not permitted
+</code></pre></div><p>Masih gagal ternyata. Ok, lanjut.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bash-5.0# ntfs-3g -o remove_hiberfile /dev/sda2 /media/hd0
+bash-5.0# 
+</code></pre></div><p>Alhamdulillah clear. Sudah ter-<em>mount</em> dengan baik.</p>
+
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-26-menghapus-berdasarkan-pencarian%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-09-mount-partisi-hibernated-windows%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-26-menghapus-berdasarkan-pencarian%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-09-mount-partisi-hibernated-windows%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-26-menghapus-berdasarkan-pencarian%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-09-mount-partisi-hibernated-windows%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-26-menghapus-berdasarkan-pencarian%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-09-mount-partisi-hibernated-windows%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-26-menghapus-berdasarkan-pencarian%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-09-mount-partisi-hibernated-windows%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-02-26-menghapus-berdasarkan-pencarian%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-09-mount-partisi-hibernated-windows%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -293,13 +318,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-02-25-mengatur-ukuran-window-gvim-otomatis/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-02-25-mengatur-ukuran-window-gvim-otomatis/">Mengatur ukuran window gvim</a>
+      <a href="https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/">Menghapus file berdasarkan pencarian</a>
     </nav>
     
   </div>
@@ -309,13 +334,13 @@
   <div class="pure-u-10-24">
     
     <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-03-09-mount-partisi-hibernated-windows/">Mount partisi hibernated windows</a>
+      <a href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/">Mengubah user agent firefox</a>
     </nav>
     
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
     
-    <a href="https://sasongko.web.id/post/2021-03-09-mount-partisi-hibernated-windows/"><i class="fa fa-chevron-right"></i></a>
+    <a href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
