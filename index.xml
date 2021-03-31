@@ -6,7 +6,31 @@
     <description>Recent content on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menampilkan data baris terakhir python</title>
+      <link>https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/</guid>
+      <description>Untuk menampilkan data baris pertama dengan python dapat menggunakan fungsi tail() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
+Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
+import pandas as pd data = pd.read\_csv(&amp;#34;Alzheimer\_s\_Disease\_and\_Healthy\_Aging\_Data.csv&amp;#34;) print(data.tail(7)) Output :
+ RowId ... Report 178532 2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA ... NaN 178533 2019~2019~9002~Q41~AGE~AGE_OVERALL~GENDER~MALE ... NaN 178534 2019~2019~9002~Q42~AGE~5064~RACE~HIS ... NaN 178535 2019~2019~9003~Q42~AGE~65PLUS~RACE~ASN ... NaN 178536 2019~2019~9002~Q42~AGE~65PLUS~RACE~HIS ... NaN 178537 2019~2019~9003~Q42~AGE~5064~RACE~BLK .</description>
+    </item>
+    
+    <item>
+      <title>Menampilkan data baris pertama python</title>
+      <link>https://sasongko.web.id/post/2021-03-20-menampilkan-data-baris-pertama-python/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-03-20-menampilkan-data-baris-pertama-python/</guid>
+      <description>Untuk menampilkan data baris pertama dengan python dapat menggunakan fungsi head() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
+Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
+import pandas as pd data = pd.read\_csv(&amp;#34;Alzheimer\_s\_Disease\_and\_Healthy\_Aging\_Data.csv&amp;#34;) print(data.head()) Output :
+ RowId ... Report 0 2016~2016~12~Q27~AGE~AGE_OVERALL~GENDER~MALE ... NaN 1 2015~2015~66~Q43~AGE~5064~GENDER~MALE ... NaN 2 2018~2018~66~Q18~AGE~5064~GENDER~MALE ... NaN 3 2018~2018~66~Q34~AGE~5064~GENDER~FEMALE ... NaN 4 2015~2015~16~Q43~AGE~65PLUS~GENDER~FEMALE ... NaN [5 rows x 39 columns] Dari output tersebut juga dapat diperoleh informasi jumlah kolomnya, yaitu 39 yang tidak semua kolom ditampilkan.</description>
+    </item>
+    
     <item>
       <title>Enumerasi packages terinstall</title>
       <link>https://sasongko.web.id/post/2021-03-19-enumerasi-packages-terinstall/</link>
