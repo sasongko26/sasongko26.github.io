@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.80.0" />
 
-  <title>Menampilkan data baris terakhir python &middot; Catatan Sasongko</title>
+  <title>Mengetahui dimensi dataset python &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Menampilkan data baris terakhir python</h1>
+  <h1>Mengetahui dimensi dataset python</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>21 Mar 2021</time>
+    <time>22 Mar 2021</time>
   </div>
 
   
@@ -247,39 +247,28 @@
 </div>
 
 
-  <p>Untuk menampilkan data baris pertama dengan python dapat menggunakan fungsi tail() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.</p>
-<p>Data diambil dari <a href="https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/">https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/</a></p>
+  <p>Untuk mengetahui dimensi atau jumlah baris dan kolom dataset dapat menggunakan shape dari pandas. Data diambil dari <a href="https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/">https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
 data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read\_csv(<span style="color:#e6db74">&#34;Alzheimer\_s\_Disease\_and\_Healthy\_Aging\_Data.csv&#34;</span>)
-
-<span style="color:#66d9ef">print</span>(data<span style="color:#f92672">.</span>tail(<span style="color:#ae81ff">7</span>))
-</code></pre></div><p>Output :</p>
-<pre><code>                                                 RowId  ...  Report
-178532     2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA  ...     NaN
-178533  2019~2019~9002~Q41~AGE~AGE_OVERALL~GENDER~MALE  ...     NaN
-178534            2019~2019~9002~Q42~AGE~5064~RACE~HIS  ...     NaN
-178535          2019~2019~9003~Q42~AGE~65PLUS~RACE~ASN  ...     NaN
-178536          2019~2019~9002~Q42~AGE~65PLUS~RACE~HIS  ...     NaN
-178537            2019~2019~9003~Q42~AGE~5064~RACE~BLK  ...     NaN
-178538            2019~2019~9004~Q42~AGE~5064~RACE~NAA  ...     NaN
-
-[7 rows x 39 columns]
-</code></pre><p>Dari output tersebut juga dapat diperoleh informasi jumlah baris dan kolomnya yaitu 178538 baris dan 39 kolom.</p>
+<span style="color:#66d9ef">print</span>(data<span style="color:#f92672">.</span>shape)
+</code></pre></div><p>Output:</p>
+<pre><code>(178539, 39)
+</code></pre><p>Dari output tersebut diketahui dataset mempunyai 178539 baris dan 39 kolom.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-21-menampilkan-data-baris-terakhir-python%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-22-mengetahui-dimensi-dataset-python%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-21-menampilkan-data-baris-terakhir-python%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-22-mengetahui-dimensi-dataset-python%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-21-menampilkan-data-baris-terakhir-python%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-22-mengetahui-dimensi-dataset-python%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-21-menampilkan-data-baris-terakhir-python%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-22-mengetahui-dimensi-dataset-python%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-21-menampilkan-data-baris-terakhir-python%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-22-mengetahui-dimensi-dataset-python%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-21-menampilkan-data-baris-terakhir-python%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-22-mengetahui-dimensi-dataset-python%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -311,13 +300,13 @@ data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-03-20-menampilkan-data-baris-pertama-python/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-03-20-menampilkan-data-baris-pertama-python/">Menampilkan data baris pertama python</a>
+      <a href="https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/">Menampilkan data baris terakhir python</a>
     </nav>
     
   </div>
@@ -326,14 +315,8 @@ data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/">Mengetahui dimensi dataset python</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>

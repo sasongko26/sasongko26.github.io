@@ -6,7 +6,18 @@
     <description>Recent content on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengetahui dimensi dataset python</title>
+      <link>https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/</link>
+      <pubDate>Mon, 22 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/</guid>
+      <description>Untuk mengetahui dimensi atau jumlah baris dan kolom dataset dapat menggunakan shape dari pandas. Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
+import pandas as pd data = pd.read\_csv(&amp;#34;Alzheimer\_s\_Disease\_and\_Healthy\_Aging\_Data.csv&amp;#34;) print(data.shape) Output:
+(178539, 39) Dari output tersebut diketahui dataset mempunyai 178539 baris dan 39 kolom.</description>
+    </item>
+    
     <item>
       <title>Menampilkan data baris terakhir python</title>
       <link>https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/</link>
