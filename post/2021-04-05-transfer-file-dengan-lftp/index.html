@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.80.0" />
 
-  <title>Menggunakan wget prefix directory &middot; Catatan Sasongko</title>
+  <title>Transfer file dengan lftp &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Menggunakan wget prefix directory</h1>
+  <h1>Transfer file dengan lftp</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Mar 2021</time>
+    <time>05 Apr 2021</time>
   </div>
 
   
@@ -236,7 +236,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/internet-download-manager">internet-download-manager</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
     
   </div>
   
@@ -245,27 +245,40 @@
 </div>
 
 
-  <p>Secara <em>default</em>, apabila menggunakan <strong>wget</strong>, file di-<em>download</em> ke direktori aktif. Dengan mengaktifkan <em>prefix directory</em> (-P), file tersebut bisa disimpan ke direktori lain.</p>
-<pre><code>$ wget [url] -P [direktori]
-</code></pre><ul>
-<li>[url] : URL / alamat lengkap file yang akan di-<em>download</em></li>
-<li>[direktori] : direktori tujuan</li>
-</ul>
+  <p>Salah 1 akibat <em>Work from Home</em> a.k.a WfH adalah kapasitas <em>storage</em> laptop menjadi penuh. Semakin banyak file, semakin berkurang _free space-. Untuk menyiasatinya, ketika ada kesempatan bekerja di kantor, file-file tersebut ditransfer ke komputer kantor. Karena komputer kantor menggunakan <strong>Windows 7</strong> yang mana saya tidak paham bagaimana cara <em>file sharing</em>-nya saya gunakan ftp. Mungkin karena sudah terlanjur nyaman memakai <strong>slackware</strong>, saya tidak mau ribet pengaturan ftpnya di komputer kantor. Serahkan saja ke bagian IT untuk installnya. Pasrah sakbongkokan. Hahahaha&hellip;.</p>
+<p>Sebelum mulai menggunakan, pastikan <em>service</em> ftp windows berjalan.</p>
+<pre><code>net start ftpsvc
+</code></pre><p>Oiya, <strong><em>Command</em> tersebut dijalankan di windows ya bukan slackware</strong>.
+Kemudian, username komputer adalah akukamukita, dengan IP 192.168.120.47. Ok, login ke ftpnya dulu</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bash-5.1$ lftp akukamukita@192.168.120.47
+Password: 
+lftp akukamukita@192.168.120.47:~&gt; 
+</code></pre></div><p>Siap eksekusi! Karena akan memindahkan semua direktori lengkap dengan yang ada di <em>working directory</em>, gunakan <!-- raw HTML omitted -->mirror -R<!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">lftp akukamukita@192.168.120.47:/&gt; mirror -R
+cd <span style="color:#e6db74">`</span>.<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">[</span>FEAT negotiation...<span style="color:#f92672">]</span>
+</code></pre></div><p>Ups, datang feat negotiation menghadang.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">lftp akukamukita@192.168.120.47:/&gt; set ftp:use-feat false
+</code></pre></div><p>Mari lanjutkan</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">lftp akukamukita@192.168.120.47:/&gt; mirror -R
+Total: <span style="color:#ae81ff">13</span> directories, <span style="color:#ae81ff">20</span> files, <span style="color:#ae81ff">0</span> symlinks                             
+New: <span style="color:#ae81ff">20</span> files, <span style="color:#ae81ff">0</span> symlinks
+<span style="color:#ae81ff">2810640970</span> bytes transferred in <span style="color:#ae81ff">879</span> seconds <span style="color:#f92672">(</span>3.05 MiB/s<span style="color:#f92672">)</span>
+</code></pre></div><p>Alhamdulillah done!</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-23-menggunakan-wget-prefix-directory%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-05-transfer-file-dengan-lftp%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-23-menggunakan-wget-prefix-directory%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-05-transfer-file-dengan-lftp%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-23-menggunakan-wget-prefix-directory%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-05-transfer-file-dengan-lftp%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-23-menggunakan-wget-prefix-directory%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-05-transfer-file-dengan-lftp%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-23-menggunakan-wget-prefix-directory%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-05-transfer-file-dengan-lftp%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-23-menggunakan-wget-prefix-directory%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-05-transfer-file-dengan-lftp%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -297,13 +310,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-03-23-menggunakan-wget-prefix-directory/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/">Mengetahui dimensi dataset python</a>
+      <a href="https://sasongko.web.id/post/2021-03-23-menggunakan-wget-prefix-directory/">Menggunakan wget prefix directory</a>
     </nav>
     
   </div>
@@ -312,14 +325,8 @@
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/">Transfer file dengan lftp</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
