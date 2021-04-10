@@ -6,7 +6,28 @@
     <description>Recent content in Posts on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>sbocheck /usr/sbo/repo exists and is not empty</title>
+      <link>https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/</link>
+      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/</guid>
+      <description>Malam ini, ketika akan update SBo, ternyata tanpa disadari internet disconnect sebelumnya.
+bash-5.1# sbocheck Updating SlackBuilds tree... fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution) Could not sync from git://github.com/Ponce/slackbuilds.git. Setelah internet tidak ada masalah, gantian sbotools-nya yang masalah
+bash-5.1# sbocheck /usr/sbo/repo exists and is not empty. Exiting. Baiklah, local repository-nya minta dikosongkan dulu
+bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree... Cloning into &#39;/usr/sbo/repo&#39;.</description>
+    </item>
+    
+    <item>
+      <title>Jumlah baris dan kolom libreoffice calc</title>
+      <link>https://sasongko.web.id/post/2021-04-07-jumlah-baris-kolom-libreoffice-calc/</link>
+      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-04-07-jumlah-baris-kolom-libreoffice-calc/</guid>
+      <description>Berapa jumlah baris dan kolom yang ada pada worksheet LibreOffice Calc? Jumlah barisnya adalah 1048576. Adapun kolom, tersedia dari A sampai AMJ (1024).</description>
+    </item>
+    
     <item>
       <title>Burn iso ke dvd</title>
       <link>https://sasongko.web.id/post/2021-04-06-burning-iso-dvd/</link>

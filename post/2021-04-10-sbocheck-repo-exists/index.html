@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.82.0" />
 
-  <title>Burn iso ke dvd &middot; Catatan Sasongko</title>
+  <title>sbocheck /usr/sbo/repo exists and is not empty &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Burn iso ke dvd</h1>
+  <h1>sbocheck /usr/sbo/repo exists and is not empty</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Apr 2021</time>
+    <time>10 Apr 2021</time>
   </div>
 
   
@@ -245,23 +245,55 @@
 </div>
 
 
-  <p>Misal, file slackware64-live-current.iso akan di-<em>burn</em> ke DVD. DVD terdeteksi oleh sistem sebagai /dev/sr0. <em>Command</em> dijalankan root.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ growisofs -dvd-compat -Z /dev/sr0<span style="color:#f92672">=</span>slackware64-live-current.iso
-</code></pre></div>
+  <p>Malam ini, ketika akan <em>update</em> SBo, ternyata tanpa disadari internet <em>disconnect</em> sebelumnya.</p>
+<pre><code>bash-5.1# sbocheck
+Updating SlackBuilds tree...
+fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution)
+Could not sync from git://github.com/Ponce/slackbuilds.git.
+</code></pre><p>Setelah internet tidak ada masalah, gantian <strong>sbotools</strong>-nya yang masalah</p>
+<pre><code>bash-5.1# sbocheck
+/usr/sbo/repo exists and is not empty. Exiting.
+</code></pre><p>Baiklah, <em>local repository</em>-nya minta dikosongkan dulu</p>
+<pre><code>bash-5.1# rm -r /usr/sbo/repo
+bash-5.1# sbosnap fetch
+Pulling SlackBuilds tree...
+Cloning into '/usr/sbo/repo'...
+remote: Enumerating objects: 42, done.
+remote: Counting objects: 100% (42/42), done.
+remote: Compressing objects: 100% (42/42), done.
+remote: Total 498277 (delta 8), reused 12 (delta 0), pack-reused 498235
+Receiving objects: 100% (498277/498277), 142.33 MiB | 199.00 KiB/s, done.
+Resolving deltas: 100% (345959/345959), done.
+Updating files: 100% (40245/40245), done.
+</code></pre><p><em>Recheck</em></p>
+<pre><code>bash-5.1# sbocheck
+Updating SlackBuilds tree...
+Updating files: 100% (40245/40245), done.
+HEAD is now at 97e000b8ce 20210410.1 global branch merge.
+Checking for updated SlackBuilds...
+
+telegram 2.7.0                 &lt;  needs updating (2.7.1 from SBo)
+tor-browser 10.0.13            &lt;  needs updating (10.0.15 from SBo)
+xfburn 0.5.5                   &lt;  needs updating (0.6.2 from SBo)
+zoom-linux 5.5.7938.0228       &lt;  needs updating (5.6.13632.0328 from SBo)
+
+A copy of the above result is kept in /var/log/sbocheck.log
+</code></pre><p>Sudah beres.</p>
+
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-06-burning-iso-dvd%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-10-sbocheck-repo-exists%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-06-burning-iso-dvd%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-10-sbocheck-repo-exists%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-06-burning-iso-dvd%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-10-sbocheck-repo-exists%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-06-burning-iso-dvd%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-10-sbocheck-repo-exists%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-06-burning-iso-dvd%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-10-sbocheck-repo-exists%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-06-burning-iso-dvd%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-10-sbocheck-repo-exists%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -293,13 +325,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-04-07-jumlah-baris-kolom-libreoffice-calc/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/">Transfer file dengan lftp</a>
+      <a href="https://sasongko.web.id/post/2021-04-07-jumlah-baris-kolom-libreoffice-calc/">Jumlah baris dan kolom libreoffice calc</a>
     </nav>
     
   </div>
@@ -308,14 +340,8 @@
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-04-07-jumlah-baris-kolom-libreoffice-calc/">Jumlah baris dan kolom libreoffice calc</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2021-04-07-jumlah-baris-kolom-libreoffice-calc/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
@@ -367,9 +393,6 @@
 
 
 
-<script src="https://sasongko.web.id/js/math-code.js"></script>
-  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-  
 
 
 </body>
