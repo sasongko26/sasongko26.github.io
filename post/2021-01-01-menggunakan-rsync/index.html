@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.82.0" />
 
-  <title>Xfce 4.16 Masuk Current &middot; Catatan Sasongko</title>
+  <title>Menggunakan rsync &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Xfce 4.16 Masuk Current</h1>
+  <h1>Menggunakan rsync</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>28 Dec 2020</time>
+    <time>01 Jan 2021</time>
   </div>
 
   
@@ -236,7 +236,9 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/internet-download-manager">internet-download-manager</a>
     
   </div>
   
@@ -245,36 +247,31 @@
 </div>
 
 
-  <p>Pagi ini, Patrick memasukkan <strong>xfce 4.16</strong> ke <em>slackware current main tree</em> tanpa singgah di /testing. <em>Interface</em> <strong>xfce 4.16</strong> lebih cantik dan menarik dibanding sebelumnya. Demikian pula <em>icons</em>-nya.</p>
-<p>Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown <strong>xfce</strong> stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses <em>development</em>.</p>
-<p>Ada beberapa hal yang menjadi catatan buat penulis terkait <strong>xfce 4.16</strong> ini, yaitu</p>
+  <h1 id="kegunaan-rsync">Kegunaan rsync</h1>
+<p><strong>rsync</strong> berguna untuk transfer file secara efisien. Dibandingkan dengan <strong>cp</strong> atau <strong>mv</strong>, <strong>rsync</strong> memiliki keunggulan :</p>
 <ol>
-<li><em>Interface</em> lebih cantik dan menarik</li>
-<li>Penambahan <strong>xfce4-panel-profiles</strong> yang memungkinkan untuk menyimpan profil/konfigurasi panel. Sangat bermanfaat bagi mereka yang suka berganti-ganti tampilan panel, ukuran dan letak panel, serta <em>shortcut</em> apa saja yang berada di panel.</li>
-<li>Perubahan letak tombol <strong>Open</strong> atau <strong>Save</strong> pada <em>dialog box</em> yang sebelumnya di bawah menjadi di atas. Ini memudahkan pengguna. Tidak usah geser <em>mouse</em> terlalu jauh atau repot <strong>tab</strong> berkali-kali.</li>
-<li>Penambahan <strong>libgtop</strong> yang memungkinkan <em>user</em> mengetahui informasi singkat sistem melalui tab <strong>System</strong> pada <strong>About Xfce</strong></li>
+<li>Bebas pilih-pilih file maupun direktori yang akan ditransfer karena ada fitur <em>include</em> dan <em>exclude</em></li>
+<li>Apabila gagal, misalnya karena <em>storage</em> penuh atau &ldquo;kecelakaan&rdquo; salah klik sehingga ter-<em>close</em>, dapat dilanjutkan tanpa mengulang dari awal sehingga waktunya tentu lebih cepat</li>
 </ol>
-<p><img src="https://sasongko.web.id/gambar/about-xfce-4.14.png" alt="about xfce 4.14">
-<img src="https://sasongko.web.id/gambar/about-xfce-4.16.png" alt="about xfce 4.16"></p>
-<ol start="5">
-<li>Tidak adanya lagi transparansi pada Panel 2 (secara default ada di bawah tengah)</li>
-</ol>
-<p>Dan, yang utama adalah, <strong>xfce</strong> tetap menjadi <em>desktop environment</em> yang ringan, cantik dan <em>powerfull</em>.</p>
+<p>Dibandingkan <strong>wget</strong>, <strong>rsync</strong> mendukung penggunaan <em>wildcard</em> dan secara <em>default</em> <strong>rsync</strong> <em>resumeable</em>.</p>
+<p>Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ rsync -arvz --progress /media/hd0/ /media/hd1/
+</code></pre></div><p>Opsi <strong>-arvz</strong> diberikan untuk archive, recursive, verbose dan kompres(z). Sementara <strong>&ndash;progress</strong> untuk menampilkan progress sejauh mana file tersebut ditransfer. Bila asal hanya /media/hd0 (tanpa diakhiri /), maka artinya sama saja dengan tujuannya adalah /media/hd1/hd0/</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-12-28-xfce-4.16-masuk-current%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-01-menggunakan-rsync%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-12-28-xfce-4.16-masuk-current%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-01-menggunakan-rsync%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-12-28-xfce-4.16-masuk-current%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-01-menggunakan-rsync%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-12-28-xfce-4.16-masuk-current%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-01-menggunakan-rsync%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-12-28-xfce-4.16-masuk-current%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-01-menggunakan-rsync%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-12-28-xfce-4.16-masuk-current%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-01-menggunakan-rsync%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -306,13 +303,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Mengetahui kapan komputer dinyalakan</a>
+      <a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/">Xfce 4.16 Masuk Current</a>
     </nav>
     
   </div>
@@ -322,13 +319,13 @@
   <div class="pure-u-10-24">
     
     <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/">Menggunakan rsync</a>
+      <a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Mengetahui kondisi baterai</a>
     </nav>
     
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
     
-    <a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/"><i class="fa fa-chevron-right"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
@@ -380,6 +377,9 @@
 
 
 
+<script src="https://sasongko.web.id/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
 
 
 </body>

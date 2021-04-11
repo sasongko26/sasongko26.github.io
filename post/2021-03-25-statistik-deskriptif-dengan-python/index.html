@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.82.0" />
 
-  <title>Xfce 4.16 Masuk Current &middot; Catatan Sasongko</title>
+  <title>Statistik deskriptif dengan python &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Xfce 4.16 Masuk Current</h1>
+  <h1>Statistik deskriptif dengan python</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>28 Dec 2020</time>
+    <time>25 Mar 2021</time>
   </div>
 
   
@@ -236,7 +236,9 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
     
   </div>
   
@@ -245,36 +247,51 @@
 </div>
 
 
-  <p>Pagi ini, Patrick memasukkan <strong>xfce 4.16</strong> ke <em>slackware current main tree</em> tanpa singgah di /testing. <em>Interface</em> <strong>xfce 4.16</strong> lebih cantik dan menarik dibanding sebelumnya. Demikian pula <em>icons</em>-nya.</p>
-<p>Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown <strong>xfce</strong> stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses <em>development</em>.</p>
-<p>Ada beberapa hal yang menjadi catatan buat penulis terkait <strong>xfce 4.16</strong> ini, yaitu</p>
+  <p>Untuk menampilkan statistik deskriptif suatu data, bisa menggunakan fungsi <strong>describe()</strong> dari <em>library</em> yang dimiliki <strong>python</strong> yaitu <strong>pandas</strong>.</p>
+<p>Berikut ini akan ditampilkan deskripsi data konsumsi alkohol dunia. Sumber data : <a href="https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv">https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</a></p>
+<p>Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel yaitu :</p>
 <ol>
-<li><em>Interface</em> lebih cantik dan menarik</li>
-<li>Penambahan <strong>xfce4-panel-profiles</strong> yang memungkinkan untuk menyimpan profil/konfigurasi panel. Sangat bermanfaat bagi mereka yang suka berganti-ganti tampilan panel, ukuran dan letak panel, serta <em>shortcut</em> apa saja yang berada di panel.</li>
-<li>Perubahan letak tombol <strong>Open</strong> atau <strong>Save</strong> pada <em>dialog box</em> yang sebelumnya di bawah menjadi di atas. Ini memudahkan pengguna. Tidak usah geser <em>mouse</em> terlalu jauh atau repot <strong>tab</strong> berkali-kali.</li>
-<li>Penambahan <strong>libgtop</strong> yang memungkinkan <em>user</em> mengetahui informasi singkat sistem melalui tab <strong>System</strong> pada <strong>About Xfce</strong></li>
+<li>beer_servings (konsumsi bir yang dinyatakan dalam kaleng)</li>
+<li>spirit_servings (konsumsi minuman beralkohol spirit; maaf, variabel ini masih belum penulis pahami sepenuhnya)</li>
+<li>wine_servings (konsumsi anggur yang dinyatakan dalam gelas)</li>
+<li>pure_alcohol (konsumsi alkohol murni yang dinyataksan dalam liter, nama variabel ini sudah penulis singkat)
+Adapun deskripsi yang ditampilkan adalah :</li>
+<li>count (banyaknya data)</li>
+<li>mean (rerata)</li>
+<li>std (standar deviasi)</li>
+<li>min (nilai terendah)</li>
+<li>25%, 50%, 75% (Kuartil 1 - 3)</li>
+<li>max (nilai tertinggi)</li>
 </ol>
-<p><img src="https://sasongko.web.id/gambar/about-xfce-4.14.png" alt="about xfce 4.14">
-<img src="https://sasongko.web.id/gambar/about-xfce-4.16.png" alt="about xfce 4.16"></p>
-<ol start="5">
-<li>Tidak adanya lagi transparansi pada Panel 2 (secara default ada di bawah tengah)</li>
-</ol>
-<p>Dan, yang utama adalah, <strong>xfce</strong> tetap menjadi <em>desktop environment</em> yang ringan, cantik dan <em>powerfull</em>.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/env python3</span>
+<span style="color:#f92672">import</span>
+data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;../dataset/drinks.csv&#34;</span>)
+<span style="color:#66d9ef">print</span>(data<span style="color:#f92672">.</span>describe())
+</code></pre></div><p>Outputnya</p>
+<pre><code>       beer_servings  spirit_servings  wine_servings  pure_alcohol
+count     193.000000       193.000000     193.000000    193.000000
+mean      106.160622        80.994819      49.450777      4.717098
+std       101.143103        88.284312      79.697598      3.773298
+min         0.000000         0.000000       0.000000      0.000000
+25%        20.000000         4.000000       1.000000      1.300000
+50%        76.000000        56.000000       8.000000      4.200000
+75%       188.000000       128.000000      59.000000      7.200000
+max       376.000000       438.000000     370.000000     14.400000
+</code></pre>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-12-28-xfce-4.16-masuk-current%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-25-statistik-deskriptif-dengan-python%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-12-28-xfce-4.16-masuk-current%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-25-statistik-deskriptif-dengan-python%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-12-28-xfce-4.16-masuk-current%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-25-statistik-deskriptif-dengan-python%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-12-28-xfce-4.16-masuk-current%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-25-statistik-deskriptif-dengan-python%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-12-28-xfce-4.16-masuk-current%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-25-statistik-deskriptif-dengan-python%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-12-28-xfce-4.16-masuk-current%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-03-25-statistik-deskriptif-dengan-python%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -306,13 +323,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Mengetahui kapan komputer dinyalakan</a>
+      <a href="https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/">Mengetahui struktur dataset</a>
     </nav>
     
   </div>
@@ -322,13 +339,13 @@
   <div class="pure-u-10-24">
     
     <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/">Menggunakan rsync</a>
+      <a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/">Transfer file dengan lftp</a>
     </nav>
     
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
     
-    <a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/"><i class="fa fa-chevron-right"></i></a>
+    <a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>

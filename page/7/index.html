@@ -228,6 +228,109 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">NetworkManager device not ready</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>07 Aug 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Baru beberapa hari memakai (lagi) NetworkManager, sudah bermasalah (lagi).
+device not ready begitulah&hellip;.
+Padahal network interface-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai NetworkManager. Solusinya dari berbagai referensi (lupa mencatat linknya)
+echo &#34;managed=true&#34; &gt;&gt; /etc/NetworkManager/NetworkManager.conf Tapi, ternyata ini kemudian munculkan warning di syslog
+Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] config: unknown key &#39;managed&#39; in section [main] of file &#39;/etc/NetworkManager/NetworkManager.conf Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal).
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Bye wicd</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Aug 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan wicd dari repo slackware current.
+ extra/wicd/wicd-1.7.4-x86_64-3.txz: Removed.
+ This is unmaintained, possibly insecure, and doesn&rsquo;t work with Python versions newer than 2.7.18. NetworkManager is a better choice these days.
+  Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripada NetworkManager. Kenyamanan ini sebenarnya karena saya tidak mau repot, NetworkManager seringkali timbulkan masalah, salah satunya mengatur hostname dan domain.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-06-20-edit-video-ffmpeg-lossless/">Edit video ffmpeg tanpa menurunkan kualitas</a></h2>
 
     <div class="post-meta">
@@ -581,96 +684,6 @@ ffmpeg -i ramadhan.mkv -i logo.png -filter_complex &#34;overlay=x=0:y=(main_h-ov
 -filter_complex : menggunakan filter yang kompleks overlay : menambahkan watermark x : posisi pada sumbu x, dihitung dari ujung kiri y : posisi pada sumbu y, dihitung dari ujung atas main_h : tinggi video main_w : lebar video overlay_h : tinggi gambar yang akan dijadikan watermark overlay_w : lebar gambar yang akan dijadikan watermark 
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-24-mengubah-resolusi-video-ffmpeg/">Mengubah resolusi video ffmpeg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan terdapat video VID20200509135621.mp4, dengan resolusi 3840x2160 SAR 1:1 DAR 16:9. Akan diubah resolusinya menjadi 1920x1080 dengan tetap memperhatikan SAR dan DAR. Video hasil scaling ini diberi nama VID20200509135621-1080p.mkv. Perubahan ini sekaligus konversi ke mkv agar menghemat space.
-ffmpeg -i VID20200509135621.mp4 -vf &#34;scale=1920:1080, setdar=16:9, setsar=1:1&#34; VID20200509135621-1080p.mkv 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Disable tampilan konfigurasi ffmpeg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, output ffmpegakan menampilkan built configuration yang digunakan.
-$ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers built with gcc 9.2.0 (GCC) configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-4.2.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack libavutil 56. 31.100 / 56. 31.100 libavcodec 58. 54.100 / 58.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
