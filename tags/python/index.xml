@@ -6,7 +6,27 @@
     <description>Recent content in python on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Median data dengan python</title>
+      <link>https://sasongko.web.id/post/2021-03-27-median-data-python/</link>
+      <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-03-27-median-data-python/</guid>
+      <description>Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau median() yang dimiliki pandas.
+#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # median print(&amp;#39;rerata konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].median(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;rerata konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].median()) print(&amp;#39;rerata konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].median(), &amp;#39;gelas&amp;#39;) print(&amp;#39;rerata konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].median(), &amp;#39;liter&amp;#39;) </description>
+    </item>
+    
+    <item>
+      <title>Mean data dengan python</title>
+      <link>https://sasongko.web.id/post/2021-03-26-mean-data-python/</link>
+      <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-03-26-mean-data-python/</guid>
+      <description>Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau mean() yang dimiliki pandas.
+#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # mean print(&amp;#39;rerata konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].mean(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;rerata konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].mean()) print(&amp;#39;rerata konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].mean(), &amp;#39;gelas&amp;#39;) print(&amp;#39;rerata konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].mean(), &amp;#39;liter&amp;#39;) </description>
+    </item>
+    
     <item>
       <title>Statistik deskriptif dengan python</title>
       <link>https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/</link>
