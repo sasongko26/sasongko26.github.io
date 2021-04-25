@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.82.0" />
 
-  <title>sbocheck /usr/sbo/repo exists and is not empty &middot; Catatan Sasongko</title>
+  <title>Membuat data integer acak python &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>sbocheck /usr/sbo/repo exists and is not empty</h1>
+  <h1>Membuat data integer acak python</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Apr 2021</time>
+    <time>11 Apr 2021</time>
   </div>
 
   
@@ -236,7 +236,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
     
   </div>
   
@@ -245,55 +245,40 @@
 </div>
 
 
-  <p>Malam ini, ketika akan <em>update</em> SBo, ternyata tanpa disadari internet <em>disconnect</em> sebelumnya.</p>
-<pre><code>bash-5.1# sbocheck
-Updating SlackBuilds tree...
-fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution)
-Could not sync from git://github.com/Ponce/slackbuilds.git.
-</code></pre><p>Setelah internet tidak ada masalah, gantian <strong>sbotools</strong>-nya yang masalah</p>
-<pre><code>bash-5.1# sbocheck
-/usr/sbo/repo exists and is not empty. Exiting.
-</code></pre><p>Baiklah, <em>local repository</em>-nya minta dikosongkan dulu</p>
-<pre><code>bash-5.1# rm -r /usr/sbo/repo
-bash-5.1# sbosnap fetch
-Pulling SlackBuilds tree...
-Cloning into '/usr/sbo/repo'...
-remote: Enumerating objects: 42, done.
-remote: Counting objects: 100% (42/42), done.
-remote: Compressing objects: 100% (42/42), done.
-remote: Total 498277 (delta 8), reused 12 (delta 0), pack-reused 498235
-Receiving objects: 100% (498277/498277), 142.33 MiB | 199.00 KiB/s, done.
-Resolving deltas: 100% (345959/345959), done.
-Updating files: 100% (40245/40245), done.
-</code></pre><p><em>Recheck</em></p>
-<pre><code>bash-5.1# sbocheck
-Updating SlackBuilds tree...
-Updating files: 100% (40245/40245), done.
-HEAD is now at 97e000b8ce 20210410.1 global branch merge.
-Checking for updated SlackBuilds...
-
-telegram 2.7.0                 &lt;  needs updating (2.7.1 from SBo)
-tor-browser 10.0.13            &lt;  needs updating (10.0.15 from SBo)
-xfburn 0.5.5                   &lt;  needs updating (0.6.2 from SBo)
-zoom-linux 5.5.7938.0228       &lt;  needs updating (5.6.13632.0328 from SBo)
-
-A copy of the above result is kept in /var/log/sbocheck.log
-</code></pre><p>Sudah beres.</p>
-
+  <p>Bingung membuat data? Gampang, <strong>python</strong> dengan <em>library</em> <strong>numpy</strong> punya solusinya!</p>
+<p>Akan dibuat data acak bertipe integer (bilangan bulat). Banyaknya data 200, nilai minimal 145, maksimal 180.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/python3</span>
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(size<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>, low<span style="color:#f92672">=</span><span style="color:#ae81ff">145</span>, high<span style="color:#f92672">=</span><span style="color:#ae81ff">180</span>)
+<span style="color:#66d9ef">print</span>(data)
+</code></pre></div><p>Berikut datanya</p>
+<pre><code>[160 147 160 177 147 149 170 149 166 153 154 156 160 165 161 154 168 173
+ 151 145 158 148 163 178 164 166 159 159 172 147 153 170 174 159 152 170
+ 151 159 168 167 147 156 177 168 176 151 153 146 163 156 149 145 152 173
+ 151 162 165 164 179 173 168 172 158 177 148 177 157 150 145 164 171 166
+ 175 164 159 158 178 173 155 162 178 171 146 145 158 151 150 151 165 166
+ 148 168 159 175 165 173 167 178 150 173 147 161 175 158 150 150 159 168
+ 172 159 160 165 156 150 170 175 171 174 149 175 165 168 155 179 161 162
+ 160 146 151 172 171 179 157 171 170 157 149 147 169 151 172 148 164 169
+ 160 158 168 163 153 154 179 163 174 172 176 166 172 166 173 179 155 158
+ 176 151 152 157 164 175 164 165 179 177 175 164 162 164 172 152 172 154
+ 179 162 171 162 149 149 154 163 168 163 178 179 166 166 167 156 158 155
+ 171 148]
+</code></pre>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-10-sbocheck-repo-exists%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-11-membuat-data-integer-acak-python%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-10-sbocheck-repo-exists%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-11-membuat-data-integer-acak-python%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-10-sbocheck-repo-exists%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-11-membuat-data-integer-acak-python%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-10-sbocheck-repo-exists%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-11-membuat-data-integer-acak-python%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-10-sbocheck-repo-exists%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-11-membuat-data-integer-acak-python%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-10-sbocheck-repo-exists%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-04-11-membuat-data-integer-acak-python%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -325,13 +310,13 @@ A copy of the above result is kept in /var/log/sbocheck.log
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-04-07-jumlah-baris-kolom-libreoffice-calc/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-04-07-jumlah-baris-kolom-libreoffice-calc/">Jumlah baris dan kolom libreoffice calc</a>
+      <a href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/">sbocheck /usr/sbo/repo exists and is not empty</a>
     </nav>
     
   </div>
@@ -341,13 +326,13 @@ A copy of the above result is kept in /var/log/sbocheck.log
   <div class="pure-u-10-24">
     
     <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-04-11-membuat-data-integer-acak-python/">Membuat data integer acak python</a>
+      <a href="https://sasongko.web.id/post/2021-04-12-membuat-data-acak-normal-python/">Membuat data acak berdistribusi normal</a>
     </nav>
     
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
     
-    <a href="https://sasongko.web.id/post/2021-04-11-membuat-data-integer-acak-python/"><i class="fa fa-chevron-right"></i></a>
+    <a href="https://sasongko.web.id/post/2021-04-12-membuat-data-acak-normal-python/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
