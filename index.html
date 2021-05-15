@@ -228,6 +228,52 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/">Memindahkan tombol minimize maximize close window fluxbox</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 May 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default tombol Minimize/Iconify, Maximize dan Close pada window fluxbox terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian
+session.screen0.titlebar.right: Minimize Maximize Close Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian
+session.screen0.titlebar.left: 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-04-30-memformat-dvdrw/">Memformat dvdrw</a></h2>
 
     <div class="post-meta">
@@ -630,57 +676,6 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
 #!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # mean print(&#39;rerata konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].mean(),&#39;kaleng&#39;) print(&#39;rerata konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].mean()) print(&#39;rerata konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].mean(), &#39;gelas&#39;) print(&#39;rerata konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].mean(), &#39;liter&#39;) 
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/">Statistik deskriptif dengan python</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk menampilkan statistik deskriptif suatu data, bisa menggunakan fungsi describe() dari library yang dimiliki python yaitu pandas.
-Berikut ini akan ditampilkan deskripsi data konsumsi alkohol dunia. Sumber data : https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv
-Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel yaitu :
- beer_servings (konsumsi bir yang dinyatakan dalam kaleng) spirit_servings (konsumsi minuman beralkohol spirit; maaf, variabel ini masih belum penulis pahami sepenuhnya) wine_servings (konsumsi anggur yang dinyatakan dalam gelas) pure_alcohol (konsumsi alkohol murni yang dinyataksan dalam liter, nama variabel ini sudah penulis singkat)  Adapun deskripsi yang ditampilkan adalah :
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
