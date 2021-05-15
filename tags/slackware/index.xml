@@ -19,6 +19,16 @@ session.screen0.titlebar.left: </description>
     </item>
     
     <item>
+      <title>Membuat histogram dengan python</title>
+      <link>https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/</guid>
+      <description>Untuk membuat histogram dengan python dibutuhkan library pandas dan matplotlib dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:
+#!/usr/bin/python3 import pandas as pd import matplotlib.pyplot as plt # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # histogram plt.hist(x=&amp;#39;beer_servings&amp;#39;, data=alkohol) plt.xlabel(&amp;#39;Kaleng&amp;#39;) plt.ylabel(&amp;#39;Jumlah&amp;#39;) plt.title(&amp;#39;Konsumsi bir tahun 2010 (kaleng)&amp;#39;) plt.tight_layout() plt.show() Hasilnya:</description>
+    </item>
+    
+    <item>
       <title>Memformat dvdrw</title>
       <link>https://sasongko.web.id/post/2021-04-30-memformat-dvdrw/</link>
       <pubDate>Fri, 30 Apr 2021 00:00:00 +0000</pubDate>

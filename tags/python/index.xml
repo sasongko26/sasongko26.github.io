@@ -6,7 +6,17 @@
     <description>Recent content in python on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Membuat histogram dengan python</title>
+      <link>https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/</guid>
+      <description>Untuk membuat histogram dengan python dibutuhkan library pandas dan matplotlib dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:
+#!/usr/bin/python3 import pandas as pd import matplotlib.pyplot as plt # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # histogram plt.hist(x=&amp;#39;beer_servings&amp;#39;, data=alkohol) plt.xlabel(&amp;#39;Kaleng&amp;#39;) plt.ylabel(&amp;#39;Jumlah&amp;#39;) plt.title(&amp;#39;Konsumsi bir tahun 2010 (kaleng)&amp;#39;) plt.tight_layout() plt.show() Hasilnya:</description>
+    </item>
+    
     <item>
       <title>Membuat data acak berdistribusi normal</title>
       <link>https://sasongko.web.id/post/2021-04-12-membuat-data-acak-normal-python/</link>
