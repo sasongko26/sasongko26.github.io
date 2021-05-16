@@ -254,23 +254,7 @@
 </ol>
 <p>Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari <a href="https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv">https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</a> dengan pengubahan nama variabel menjadi lebih singkat.</p>
 <h1 id="uji-normalitas-dengan-histogram">Uji normalitas dengan histogram</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/python3</span>
-
-<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
-<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
-
-<span style="color:#75715e"># sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</span>
-<span style="color:#75715e"># dengan editing header variabel</span>
-alkohol <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;../dataset/drinks.csv&#34;</span>)
-
-<span style="color:#75715e"># histogram</span>
-<span style="color:#75715e">#plt.hist(x=&#39;beer_servings&#39;, data=alkohol)</span>
-<span style="color:#75715e">#plt.xlabel(&#39;Kaleng&#39;)</span>
-<span style="color:#75715e">#plt.ylabel(&#39;Jumlah&#39;)</span>
-<span style="color:#75715e">#plt.title(&#39;Konsumsi bir tahun 2010 (kaleng)&#39;)</span>
-<span style="color:#75715e">#plt.tight_layout()</span>
-<span style="color:#75715e">#plt.show()</span>
-</code></pre></div><p>Histogramnya</p>
+<p>Histogramnya</p>
 <p><img src="https://sasongko.web.id/gambar/histogram-beer-servings-2010.png" alt=""></p>
 <p>Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.</p>
 <h1 id="uji-kolmogorov-smirnov-dan-shapiro-wilk">Uji Kolmogorov-Smirnov dan Shapiro-Wilk</h1>
