@@ -13,8 +13,9 @@
       <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2021-05-23-aktivasi-fancy-indexing-directory-listing-apache/</guid>
-      <description>Secara default, indexing pada apache hanya menampilkan nama direktori dan file yang berada dalam direktori tersebut dengan format unordered list. Bagi yang menganggap tampilan ini tidak menarik, bisa mengaktofkan fancy indexing dengan cara edit file /etc/httpd/httpd.conf, uncomment baris
-#Include /etc/httpd/extra/httpd-autoindex.conf kemudian restart apache</description>
+      <description>Secara default, indexing pada apache hanya menampilkan nama direktori dan file yang berada dalam direktori tersebut dengan format unordered list. Bagi yang menganggap tampilan ini tidak menarik, bisa mengaktifkan fancy indexing dengan cara edit file /etc/httpd/httpd.conf, uncomment baris
+#Include /etc/httpd/extra/httpd-autoindex.conf kemudian restart apache
+# /etc/rc.d/rc.httpd restart </description>
     </item>
     
     <item>

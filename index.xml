@@ -6,15 +6,26 @@
     <description>Recent content on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengetahui ip aktif sejaringan</title>
+      <link>https://sasongko.web.id/post/2021-05-27-list-ip-aktif-sejaringan/</link>
+      <pubDate>Thu, 27 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-05-27-list-ip-aktif-sejaringan/</guid>
+      <description>Sebelum mengetahui alamat IP aktif dalam 1 jaringan yang sama, tentu saja harus konek atau masuk ke jaringan tersebut dulu. Setelah masuk, cek IP kita sendiri. Karena konek ke wifi maka interface-nya wlan0
+# ip addr show wlan0 3: wlan0: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc noqueue state UP group default qlen 1000 link/ether cc:b0:da:b5:3b:75 brd ff:ff:ff:ff:ff:ff inet 192.168.43.20/24 brd 192.168.43.255 scope global dynamic noprefixroute wlan0 valid_lft 1574sec preferred_lft 1574sec inet6 fe80::7f1b:2f4d:b98e:6500/64 scope link noprefixroute valid_lft forever preferred_lft forever Dari output tersebut tampak bahwa ip lokal kita 192.</description>
+    </item>
+    
     <item>
       <title>Aktivasi fancy indexing directory listing apache</title>
       <link>https://sasongko.web.id/post/2021-05-23-aktivasi-fancy-indexing-directory-listing-apache/</link>
       <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2021-05-23-aktivasi-fancy-indexing-directory-listing-apache/</guid>
-      <description>Secara default, indexing pada apache hanya menampilkan nama direktori dan file yang berada dalam direktori tersebut dengan format unordered list. Bagi yang menganggap tampilan ini tidak menarik, bisa mengaktofkan fancy indexing dengan cara edit file /etc/httpd/httpd.conf, uncomment baris
-#Include /etc/httpd/extra/httpd-autoindex.conf kemudian restart apache</description>
+      <description>Secara default, indexing pada apache hanya menampilkan nama direktori dan file yang berada dalam direktori tersebut dengan format unordered list. Bagi yang menganggap tampilan ini tidak menarik, bisa mengaktifkan fancy indexing dengan cara edit file /etc/httpd/httpd.conf, uncomment baris
+#Include /etc/httpd/extra/httpd-autoindex.conf kemudian restart apache
+# /etc/rc.d/rc.httpd restart </description>
     </item>
     
     <item>

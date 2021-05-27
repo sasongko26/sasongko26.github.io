@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.82.0" />
 
-  <title>Aktivasi fancy indexing directory listing apache &middot; Catatan Sasongko</title>
+  <title>Mengetahui ip aktif sejaringan &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Aktivasi fancy indexing directory listing apache</h1>
+  <h1>Mengetahui ip aktif sejaringan</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>23 May 2021</time>
+    <time>27 May 2021</time>
   </div>
 
   
@@ -236,9 +236,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/cloud">cloud</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
     
   </div>
   
@@ -247,25 +245,31 @@
 </div>
 
 
-  <p>Secara <em>default</em>, <em>indexing</em> pada <strong>apache</strong> hanya menampilkan nama direktori dan file yang berada dalam direktori tersebut dengan format <em>unordered list</em>. Bagi yang menganggap tampilan ini tidak menarik, bisa mengaktifkan <em>fancy indexing</em> dengan cara edit file /etc/httpd/httpd.conf, <em>uncomment</em> baris</p>
-<pre><code>#Include /etc/httpd/extra/httpd-autoindex.conf
-</code></pre><p>kemudian <em>restart</em> <strong>apache</strong></p>
-<pre><code># /etc/rc.d/rc.httpd restart
+  <p>Sebelum mengetahui alamat IP aktif dalam 1 jaringan yang sama, tentu saja harus konek atau masuk ke jaringan tersebut dulu. Setelah masuk, cek IP kita sendiri. Karena konek ke wifi maka <em>interface</em>-nya wlan0</p>
+<pre><code># ip addr show wlan0
+3: wlan0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether cc:b0:da:b5:3b:75 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.43.20/24 brd 192.168.43.255 scope global dynamic noprefixroute wlan0
+       valid_lft 1574sec preferred_lft 1574sec
+    inet6 fe80::7f1b:2f4d:b98e:6500/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+</code></pre><p>Dari <em>output</em> tersebut tampak bahwa ip lokal kita 192.168.43.20 dan <em>range</em> ip 1-255. Maka untu me-<em>list</em> ip sejaringan yang aktif</p>
+<pre><code># nmap -sL 192.168.43.1-255
 </code></pre>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-05-23-aktivasi-fancy-indexing-directory-listing-apache%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-05-27-list-ip-aktif-sejaringan%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-05-23-aktivasi-fancy-indexing-directory-listing-apache%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-05-27-list-ip-aktif-sejaringan%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-05-23-aktivasi-fancy-indexing-directory-listing-apache%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-05-27-list-ip-aktif-sejaringan%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-05-23-aktivasi-fancy-indexing-directory-listing-apache%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-05-27-list-ip-aktif-sejaringan%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-05-23-aktivasi-fancy-indexing-directory-listing-apache%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-05-27-list-ip-aktif-sejaringan%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-05-23-aktivasi-fancy-indexing-directory-listing-apache%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-05-27-list-ip-aktif-sejaringan%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -297,13 +301,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-05-21-menghapus-history-qtav-player/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-05-23-aktivasi-fancy-indexing-directory-listing-apache/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-05-21-menghapus-history-qtav-player/">Menghapus history QtAV Player</a>
+      <a href="https://sasongko.web.id/post/2021-05-23-aktivasi-fancy-indexing-directory-listing-apache/">Aktivasi fancy indexing directory listing apache</a>
     </nav>
     
   </div>
@@ -312,14 +316,8 @@
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-05-27-list-ip-aktif-sejaringan/">Mengetahui ip aktif sejaringan</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2021-05-27-list-ip-aktif-sejaringan/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
