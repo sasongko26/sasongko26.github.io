@@ -253,9 +253,18 @@
        valid_lft 1574sec preferred_lft 1574sec
     inet6 fe80::7f1b:2f4d:b98e:6500/64 scope link noprefixroute 
        valid_lft forever preferred_lft forever
-</code></pre><p>Dari <em>output</em> tersebut tampak bahwa ip lokal kita 192.168.43.20 dan <em>range</em> ip 1-255. Maka untu me-<em>list</em> ip sejaringan yang aktif</p>
-<pre><code># nmap -sL 192.168.43.1-255
-</code></pre>
+</code></pre><p>Atau bisa juga dengan</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nmcli
+</code></pre></div><p>Dari <em>output</em> tersebut tampak bahwa ip lokal kita 192.168.43.20 dan <em>range</em> ip 1-255. Maka untuk me-<em>list</em> ip sejaringan yang aktif</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nmap -sn 192.168.43.1-255
+Starting Nmap 7.91 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2021-05-28 19:36 WIB
+Nmap scan report <span style="color:#66d9ef">for</span> xkariote 192.168.43.1
+Host is up <span style="color:#f92672">(</span>0.098s latency<span style="color:#f92672">)</span>.
+Nmap scan report <span style="color:#66d9ef">for</span>  <span style="color:#f92672">(</span>192.168.43.20<span style="color:#f92672">)</span>
+Host is up <span style="color:#f92672">(</span>0.00033s latency<span style="color:#f92672">)</span>.
+Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">255</span> IP addresses <span style="color:#f92672">(</span><span style="color:#ae81ff">2</span> hosts up<span style="color:#f92672">)</span> scanned in 16.62 seconds
+</code></pre></div><p>Dari <em>output</em> tersebut diketahui bahwa hanya 2 ip atau host yang aktif atau up, yaitu 192.168.43.1 dan 192.168.43.20. Tidak ada yang lain!</p>
+
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
@@ -369,6 +378,9 @@
 
 
 
+<script src="https://sasongko.web.id/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
 
 
 </body>
