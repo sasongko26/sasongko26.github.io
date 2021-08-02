@@ -228,6 +228,54 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-08-01-dolphin-wastebin-reached-maximum-size/">Dolphin the wastebin has reached its maximum size</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Aug 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Efek samping work from home, harddisk laptop lebih cepat penuh. Saat menghapus file-file yang sudah tidak diperlukan, Dolphin mengeluarkan warning
+Job Failed The wastebin has reached its maximum size! Cleanup the wastebin manually Ada 2 alternatif solusi:
+ Sesuai yang ada di warning untuk menghapus file-file di wastebin secara manual. Mengatur ulang wastebin pada Dolphin. Wastebin diatur melalui menu Settings &ndash;&gt; Configure Dolphin klik Wastebin. Di sini kita bisa mengatur apakah file di wastebin akan dihapus secara otomatis setelah tenggat yang ditentukan.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-08-01-dolphin-wastebin-reached-maximum-size/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-06-24-query-sql/">Query SQL</a></h2>
 
     <div class="post-meta">
@@ -317,6 +365,55 @@ Kali ini kita akan ganti xfwm4 dengan marco. Caranya, membuat startup baru beris
 $ /usr/bin/marco --replace 
   </p>
 
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Mariadb error 2002</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Jun 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.
+$ mariadb -u root -p Enter password: ERROR 2002 (HY000): Can&#39;t connect to local server through socket &#39;/var/run/mysql/mysql.sock&#39; (2) Setelah dicek, ternyata service-nya belum jalan karena tidak executable.
+$ ls -l /etc/rc.d|grep -iE &#34;(maria|mysql)&#34; -rw-r--r-- 1 root root 2517 May 2 09:08 rc.mysqld -rw-r--r-- 1 root root 2943 Aug 4 2020 rc.mysqld.orig Mari aktifkan
+# chmod +x /etc/rc.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -595,95 +692,6 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
   <footer>
     <a href="https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/">Membuat histogram dengan python</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 May 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk membuat histogram dengan python dibutuhkan library pandas dan matplotlib dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:
-#!/usr/bin/python3 import pandas as pd import matplotlib.pyplot as plt # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # histogram plt.hist(x=&#39;beer_servings&#39;, data=alkohol) plt.xlabel(&#39;Kaleng&#39;) plt.ylabel(&#39;Jumlah&#39;) plt.title(&#39;Konsumsi bir tahun 2010 (kaleng)&#39;) plt.tight_layout() plt.show() Hasilnya:
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-04-30-memformat-dvdrw/">Memformat dvdrw</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Apr 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Sedang membutuhkan kepingan DVDRW kosong tapi tidak menemukannya. Yang ditemukan DVDRW yang sudah ada isinya tetapi sudah tidak berguna. Baiklah DVDRW nya disuperbersihkan saja alias diformat.
-DVDRW terdeteksi sebagai /dev/sr0
-dvd+rw-format -f /dev/sr0 
-  </p>
-
   
 </article>
 

@@ -20,6 +20,18 @@ Perintah SQL ada 2
     </item>
     
     <item>
+      <title>Mariadb error 2002</title>
+      <link>https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/</guid>
+      <description>Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.
+$ mariadb -u root -p Enter password: ERROR 2002 (HY000): Can&amp;#39;t connect to local server through socket &amp;#39;/var/run/mysql/mysql.sock&amp;#39; (2) Setelah dicek, ternyata service-nya belum jalan karena tidak executable.
+$ ls -l /etc/rc.d|grep -iE &amp;#34;(maria|mysql)&amp;#34; -rw-r--r-- 1 root root 2517 May 2 09:08 rc.mysqld -rw-r--r-- 1 root root 2943 Aug 4 2020 rc.mysqld.orig Mari aktifkan
+# chmod +x /etc/rc.</description>
+    </item>
+    
+    <item>
       <title>Memulai MariaDB</title>
       <link>https://sasongko.web.id/post/2019-03-30-memulai-mariadb/</link>
       <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>

@@ -228,6 +228,95 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2017-08-08-set-clang-as-default-c-compiler/">Mengatur Clang Sebagai C Compiler Utama</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 Aug 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, C Compiler yang digunakan adalah gcc. Namun, apabila diinginkan, bisa dialihkan menggunakan clang. Caranya, buat file di /etc/profile.dmisalnya c-compiler.sh, yang isinya
+export CC=/usr/bin/clang export CXX=/usr/bin/clang++ 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2017-07-31-multi-slackware-elilo/">Multi Slackware dengan elilo</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>31 Jul 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/btrfs">btrfs</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Posting kali ini terinspirasi dari Pak Walesa yang menulis di sini dan ini. Perbedaannya adalah pada boot loader yang digunakan. Saya gunakan elilo. Selain itu, sudah ada existing Slackware64 current dan Slackware64 14.2. Keduanya dengan filesystem ext4. Mau ditambahkan yang stable (Slackware64 14.2 dan Slackware 14.2) tetapi dengan filesystem btrfs. Jadi dual Slackware stable ini akan ditempatkan di dalam partisi yang sama. Sebenarnya tripleboot dengan Windows 10, tetapi Windows 10 sangat jarang dipakai.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-07-31-multi-slackware-elilo/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2017-07-29-menghapus-dengan-pengecualian/">Menghapus dengan Pengecualian</a></h2>
 
     <div class="post-meta">
@@ -595,100 +684,6 @@ Teringat, DVD/USB installer-nya sudah tak ada. Iso-nya pun terhapus. So, what&rs
   <footer>
     <a href="https://sasongko.web.id/post/2017-02-11-install-blankon-debootstrap/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-01-19-install-padre/">Install Padre</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Jan 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Padremerupakan integrated development environment (IDE) untuk bahasa pemrograman perl.
-Padreini belum dimasukkan ke dalam paket resmi Slackware maupun SBo. Sehingga ada 2 kemungkinan cara menginstallnya.
-  Build sendiri dari source
-  Install dari cpan  Cara yang saya gunakan adalah cara kedua, yaitu
-$ cpan -i Padre 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/">Enkripsi File dengan gnupg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Jan 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kriptografi">kriptografi</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupgatau yang biasa disebut dengan gpg.
-$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
-$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi 
-  </p>
-
   
 </article>
 

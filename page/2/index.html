@@ -228,6 +228,95 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/">Membuat histogram dengan python</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 May 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk membuat histogram dengan python dibutuhkan library pandas dan matplotlib dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:
+#!/usr/bin/python3 import pandas as pd import matplotlib.pyplot as plt # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # histogram plt.hist(x=&#39;beer_servings&#39;, data=alkohol) plt.xlabel(&#39;Kaleng&#39;) plt.ylabel(&#39;Jumlah&#39;) plt.title(&#39;Konsumsi bir tahun 2010 (kaleng)&#39;) plt.tight_layout() plt.show() Hasilnya:
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-04-30-memformat-dvdrw/">Memformat dvdrw</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 Apr 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Sedang membutuhkan kepingan DVDRW kosong tapi tidak menemukannya. Yang ditemukan DVDRW yang sudah ada isinya tetapi sudah tidak berguna. Baiklah DVDRW nya disuperbersihkan saja alias diformat.
+DVDRW terdeteksi sebagai /dev/sr0
+dvd+rw-format -f /dev/sr0 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-04-12-membuat-data-acak-normal-python/">Membuat data acak berdistribusi normal</a></h2>
 
     <div class="post-meta">
@@ -586,108 +675,6 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
 #!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # mean print(&#39;rerata konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].mean(),&#39;kaleng&#39;) print(&#39;rerata konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].mean()) print(&#39;rerata konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].mean(), &#39;gelas&#39;) print(&#39;rerata konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].mean(), &#39;liter&#39;) 
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/">Statistik deskriptif dengan python</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk menampilkan statistik deskriptif suatu data, bisa menggunakan fungsi describe() dari library yang dimiliki python yaitu pandas.
-Berikut ini akan ditampilkan deskripsi data konsumsi alkohol dunia. Sumber data : https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv
-Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel yaitu :
- beer_servings (konsumsi bir yang dinyatakan dalam kaleng) spirit_servings (konsumsi minuman beralkohol spirit; maaf, variabel ini masih belum penulis pahami sepenuhnya) wine_servings (konsumsi anggur yang dinyatakan dalam gelas) pure_alcohol (konsumsi alkohol murni yang dinyataksan dalam liter, nama variabel ini sudah penulis singkat)  Adapun deskripsi yang ditampilkan adalah :
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/">Mengetahui struktur dataset</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi info() dari pandas.
-Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-#!/usr/bin/env python3 import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.info()) Outputnya
-&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns): # Column Non-Null Count Dtype  --- ------ -------------- ----- 0 RowId 178539 non-null object 1 YearStart 178539 non-null int64 2 YearEnd 178539 non-null int64 3 LocationAbbr 178539 non-null object 4 LocationDesc 178539 non-null object 5 Datasource 178539 non-null object 6 Class 178539 non-null object 7 Topic 178539 non-null object 8 Question 178539 non-null object 9 Response 0 non-null float64 10 Data_Value_Unit 178539 non-null object 11 DataValueTypeID 178539 non-null object 12 Data_Value_Type 178539 non-null object 13 Data_Value 120885 non-null float64 14 Data_Value_Alt 0 non-null float64 15 Data_Value_Footnote_Symbol 70619 non-null object 16 Data_Value_Footnote 70619 non-null object 17 Low_Confidence_Limit 120750 non-null float64 18 High_Confidence_Limit 120750 non-null float64 19 Sample_Size 0 non-null float64 20 StratificationCategory1 178539 non-null object 21 Stratification1 178539 non-null object 22 StratificationCategory2 178539 non-null object 23 Stratification2 178539 non-null object 24 StratificationCategory3 0 non-null float64 25 Stratification3 0 non-null float64 26 Geolocation 159375 non-null object 27 ClassID 178539 non-null object 28 TopicID 178539 non-null object 29 QuestionID 178539 non-null object 30 ResponseID 0 non-null float64 31 LocationID 178539 non-null int64 32 StratificationCategoryID1 178539 non-null object 33 StratificationID1 178539 non-null object 34 StratificationCategoryID2 178539 non-null object 35 StratificationID2 178539 non-null object 36 StratificationCategoryID3 0 non-null float64 37 StratificationID3 0 non-null float64 38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
