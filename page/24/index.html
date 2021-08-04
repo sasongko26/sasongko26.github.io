@@ -228,6 +228,96 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/">Konversi VDI ke VMDK</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 Oct 2014</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.
+Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya
+$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% Clone hard disk created in format 'VMDK'. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa Hardisk virtualnya sudah terkonversi.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2014-08-03-dpkg-force-overwrite/">DPKG Force Overwrite</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Aug 2014</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Alhamdulillah bertambah lagi 1 pengguna BlankOn, sahabat yang sudah saya anggap seperti saudara sendiri, memberikan kepercayaan kepada BlankOn untuk menjadi sistem operasi utama di laptop pertamanya. Dari 2 distro linux yang saya tawarkan dan telah dicobanya secara live, dia lebih memilih BlankOn 9 daripada Ubuntu 13.04. Pemasangan BlankOn lancar jaya. Karena ISO yang saya punya adalah ISO sesaat setelah rilis (saya unduh tanggal 18 Februari 2014), maka saya merasa wajib untuk memperbaruinya.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2014-08-03-dpkg-force-overwrite/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2014-09-07-video-chatting-dengan-pidgin/">Video Chatting dengan Pidgin</a></h2>
 
     <div class="post-meta">
@@ -566,93 +656,6 @@ Untuk memainkannya klik menu Aplikasi &gt; Permainan &gt; Super Mario Untuk mema
   
   <footer>
     <a href="https://sasongko.web.id/post/2014-04-21-bermain-mario-bros-blankon-linux/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-04-17-apt-gantikan-apt-get/">apt Gantikan apt-get</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>17 Apr 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Selain penggunaan Gnome 3.12, BlankOn X Tambora akan memiliki fitur baru yakni penyingkatan perintah apt-get menjadi apt saja. Contoh :
-$ sudo apt-get update menjadi
-$ sudo apt update Tapi, fitur ini baru tersedia untuk Debian Sid dan BlankOn Tambora yang belum rilis final/stable. Sabar&hellip;. Tambora akan rilis tanggal 15 April 2015, insya Allah.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-04-15-download-iso-blankon-zsync/">Download ISO BlankOn dengan ZSync</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Apr 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Sebagai anggota Quality Assurance (Tim Jaminan Kualitas) BlankOn, kami bertanggung jawab untuk menemukan kutu (bugs) sebanyak-banyaknya. Hampir setiap hari rilis iso baru dan 2 bulan sekali ada rilis kandidat baru, istilahnya sih jahitan.Tiap berkas iso baik itu i386 maupun amd64 berukuran sekitar 1GB. Kalau setiap hari iso tersebut harus diunduh, waaahhhh bakal tekor! :D
-Alhamdulillah iso BlankOn bisa diunduh dengan rsync dan zsync sehingga bisa lebih hemat karena tidak perlu mengunduh semua isi iso tapi hanya perubahannya saja.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2014-04-15-download-iso-blankon-zsync/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
