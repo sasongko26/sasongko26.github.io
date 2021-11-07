@@ -6,7 +6,29 @@
     <description>Recent content on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jalankan QGIS docker</title>
+      <link>https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/</link>
+      <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/</guid>
+      <description>Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.
+Install docker dan docker-cli QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.
+Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.</description>
+    </item>
+    
+    <item>
+      <title>Install Fedora di Slackware</title>
+      <link>https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/</link>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/</guid>
+      <description>Tiba-tiba terlintas keinginan mencoba fedora. Sejak mengenal linux tahun 2005an, saya belum pernah menggunakan fedora. Entah kalau saat itu warnetnya pakai fedora wkwkwkwk. Pertama memakai linux memang di warnet. Saat itu warnetnya menawarkan pakai Windows atau linux, saya pilih linux karena tarifnya 50% lebih murah.
+Kembali ke topik. Berikut akan install fedora secara virtual via lxc.
+$ lxc-create -n fedora -t download Opsi n adalah untuk memberi nama containernya, t template yang digunakan.</description>
+    </item>
+    
     <item>
       <title>Install QGIS via flatpak</title>
       <link>https://sasongko.web.id/post/2021-09-10-install-qgis-via-flatpak/</link>

@@ -228,6 +228,102 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-12-26-mount-iso-image/">Mount ISO Image</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Dec 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Mempunyai berkas citra ISO/ISO image ada manfaatnya. Pertama, sebagai cadangan kalau FD/DVD installernya tidak dapat digunakan. Kedua, untuk melakukan remaster. Bagaimana caranya mengetahui isi dari ISO tersebut? Paket apa saja yang ada di dalamnya? Untuk distro tertentu seperti slackware misalnya, paket yang disertakan bisa dilihat dengan mudah dari ISO tanpa harus membakarnya. Kita mount saja ISOnya.
+Misalkan berkas ISO yang akan di mount adalah slackware64-14.1-install-dvd.iso, dan akan di-mount di /mnt/iso
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-12-26-mount-iso-image/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/">Tidak Ada Ikon NetworkManager di Panel</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Dec 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Iseng-iseng install lagi slackware tapi tanpa paket yang ada di kategori ap atau direktori slackware/ap dan xap (slackware64/xap).
+Efek sampingnya adalah, tidak adanya ikon NetworkManager di panel. Di sini saya gunakan DE XFCE. Sementara itu paket direktori slackware/n semuanya terinstall.
+Install dulu appletnya. Karena saya punya berkas ISOnya maka installnya bisa offline asalkan tahu di mana letak paketnya berada. Setelah mount ISOnya ke /mnt/iso,
+installpkg /mnt/iso/slackware64/xap/network-manager*.txz Ketika memunculkan ikon/applet NetworkManagernya ke panel,
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-12-12-install-bzr/">Install Bazaar</a></h2>
 
     <div class="post-meta">
@@ -606,99 +702,6 @@ cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-d
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-08-17-setting-internet-xl-slackware/">Setting Internet XL Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>17 Aug 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Di [catatan yang lalu]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) telah kami sampaikan cara konek internet di Slackware dengan modem, ppp, dan internet provider atau operator Tri. Kali ini akan kami ganti dengan operator XL.
-Sunting berkas /etc/ppp/options
-# General configuration options for PPPD: lock defaultroute noipdefault modem /dev/ttyUSB0 460800 crtscts # Uncomment the line below for more verbose error reporting: #debug # If you have a default route already, pppd may require the other side # to authenticate itself, which most ISPs will not do.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-08-17-setting-internet-xl-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-08-01-unduh-iso-slackware-current/">Unduh ISO Slackware Current</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Aug 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Slackware adalah distro yang istimewa. Tak seperti distro lainnya yang menyediakan ISO versi terbaru atau current yang masih dalam pengembangan, slackware tidak merilis current ISO secara resmi. Walaupun demikian, ada yang menyediakannya bagi yang berminat, salah satunya bisa didapatkan di repo ftp://ftp.slackware.no.
-Kali ini coba mengunduh slackware current ISO. Pakai rsync saja yang gampang dan bisa dilanjut kalau internetnya putus.
-Sebelumnya cek dulu ISO terbaru
-$ rsync ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/ drwxr-xr-x 4,096 2015/07/28 10:00:29 .
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-08-01-unduh-iso-slackware-current/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
 
   
 
@@ -707,7 +710,7 @@ $ rsync ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/ drwxr-x
   
   <a href="https://sasongko.web.id/page/18/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;19 / 25&nbsp;</span>
+  <span>&nbsp;19 / 26&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/20/"><i class="fa fa-chevron-right"></i></a>
   

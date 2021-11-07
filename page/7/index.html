@@ -228,6 +228,94 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-29-video-mengetahui-versi-libreoffice/">(Video) Mengetahui versi libreoffice</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Bagaimana cara mengetahui versi libre office? Simak video sederhana berikut ini
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/">Menambah file archive tar</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk menambahkan file ke dalam tar archive mudah. Gunakan opsi -r atau &ndash;append pada command tar.
+Misalkan, file photo_2020-08-22_19-03-32.jpg yang ada di ~/Documents akan dimasukkan atau ditambahkan ke dalam file archive screenshot.tar.xz
+$ tar rf screenshot.tar.xz photo_2020-08-22_19-03-32.jpg Atau
+$ tar f screenshot.tar.xz --append photo_2020-08-22_19-03-32.jpg Apabila file photo_2020-08-22_19-03-32.jpg ingin langsung dihapus dari lokasi aslinya setelah ditambahkan ke tar, beri opsi &ndash;remove-files
+$ tar f screenshot.tar.xz --append --remove-files photo_2020-08-22_19-03-32.jpg 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-01-28-video-mengenal-main-window-calc/">(Video) Mengenal main window libreoffice calc</a></h2>
 
     <div class="post-meta">
@@ -603,103 +691,6 @@ $ nmcli wlan0: connected to Anatomi &#34;Qualcomm Atheros QCA9377&#34; wifi (ath
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Rebuild R post-upgrade icu4c</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>13 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Pagi ini, saat akan mengeksekusi R,
-$ R /usr/lib64/R/bin/exec/R: error while loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory Ternyata R nya bermasalah. Di atas disebutkan bahwa libicuuc.so.67 tidak ditemukan. Dari namanya, bisa ditebak itu adalah shared object/library miliknya icu4c. Kita pastikan dulu,
-$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE The list below shows the packages that contains &#34;libicuuc\.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Ekstraksi waktu pada changelog dengan sed</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>12 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sed">sed</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Ini adalah keisengan di kala WFH alias work from home. Melakukan ekstraksi waktu pada changelog slackware64-current yang terakhir kami update 8 Januari 2021.
-Changelognya terdiri dari 4 bagian:
- Waktu Packages yang mengalami perubahan (Upgraded, Removed, Added, Rebuilt) Keterangan perubahan Pembatas update antarwaktu (+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+)  Akan diambil yang no.1 saja.
-Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
 
   
 
@@ -708,7 +699,7 @@ Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus
   
   <a href="https://sasongko.web.id/page/6/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;7 / 25&nbsp;</span>
+  <span>&nbsp;7 / 26&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/8/"><i class="fa fa-chevron-right"></i></a>
   
