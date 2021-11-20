@@ -6,7 +6,20 @@
     <description>Recent content in virtualisasi on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/virtualisasi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/virtualisasi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menghapus docker image</title>
+      <link>https://sasongko.web.id/post/2021-11-14-hapus-docker-image/</link>
+      <pubDate>Sun, 14 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-11-14-hapus-docker-image/</guid>
+      <description>Docker image yang suah tidak digunakan sebaiknya dihapus saja, agar storage lebih longgar. Pastikan docker daemon aktif
+dockerd List docker imagenya
+$ docker images REPOSITORY TAG IMAGE ID CREATED SIZE qgis/qgis release-3_16 ee28ddd8c37a 4 days ago 7.43GB qgis/qgis &amp;lt;none&amp;gt; c84657a1e2f6 3 weeks ago 7.43GB Hapus
+$ docker rmi -f ee28ddd8c37a c84657a1e2f6 Ingin menghapus semua container, image, dll
+$ docker system prune -a WARNING! This will remove: - all stopped containers - all networks not used by at least one container - all dangling images - all dangling build cache Are you sure you want to continue?</description>
+    </item>
+    
     <item>
       <title>Jalankan QGIS docker</title>
       <link>https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/</link>
