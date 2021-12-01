@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta name="description" content="">
   <meta name="generator" content="Hugo 0.82.0" />
 
-  <title>display &middot; Catatan Sasongko</title>
+  <title>Mengetahui lingkungan aktif X11 atau wayland &middot; Catatan Sasongko</title>
 
     
 
@@ -41,9 +41,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
-  
-  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
-    href='https://sasongko.web.id/tags/display/index.xml' />
   
 
   
@@ -116,11 +113,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://sasongko.web.id/tags/display/index.xml'><i
-          class="fas fa-rss"></i>RSS</a>
-    </li>
     
 
     
@@ -220,108 +212,12 @@
 
 
 <div class="header">
-  <h1>display</h1>
+  <h1>Mengetahui lingkungan aktif X11 atau wayland</h1>
+  <h2></h2>
 </div>
-
 <div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/">Memindahkan tombol minimize maximize close window fluxbox</a></h2>
 
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 May 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default tombol Minimize/Iconify, Maximize dan Close pada window fluxbox terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian
-session.screen0.titlebar.right: Minimize Maximize Close Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian
-session.screen0.titlebar.left: 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/">xauth serverauthXXX does not exist</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-charge. Alhasil laptop mati seketika. Dinyalakan lagi (sambil charging tentunya) gagal masuk ke X.
-xauth: file /home/xyz/.serverauth.2909 does not exist Solusinya simpel
-$ rm .serverauth* 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2019-11-30-mengetahui-x11-atau-wayland/">Mengetahui lingkungan aktif X11 atau wayland</a></h2>
-
-    <div class="post-meta">
+  <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
@@ -349,67 +245,103 @@ $ rm .serverauth*
 </div>
 
 
-  </header>
+  <p>Untuk mengetahui sedang aktif di dalam <em>environment</em> <strong>X11</strong> atau <strong>wayland</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo $XDG_SESSION_TYPE
+</code></pre></div>
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2019-11-30-mengetahui-x11-atau-wayland%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2019-11-30-mengetahui-x11-atau-wayland%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2019-11-30-mengetahui-x11-atau-wayland%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2019-11-30-mengetahui-x11-atau-wayland%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2019-11-30-mengetahui-x11-atau-wayland%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2019-11-30-mengetahui-x11-atau-wayland%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
 
-  <p>
-  Untuk mengetahui sedang aktif di dalam environment X11 atau wayland
-$ echo $XDG_SESSION_TYPE 
-  </p>
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
 
   
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-10-set-default-brightness/">Set Default Brightness</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Jul 2016</time>
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://sasongko.web.id/post/2019-08-03-restart-android-via-adb/"><i class="fa fa-chevron-left"></i></a>
+    
   </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
+  <div class="pure-u-10-24">
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>
+    <nav class="prev">
+      <a href="https://sasongko.web.id/post/2019-08-03-restart-android-via-adb/">Restart android via adb</a>
+    </nav>
     
   </div>
-  
-  
-
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://sasongko.web.id/post/2019-12-01-rename-banyak-file-sekaligus/">Rename Banyak File Sekaligus</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://sasongko.web.id/post/2019-12-01-rename-banyak-file-sekaligus/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
 </div>
 
 
-  </header>
-
-  <p>
-  Kecerahan monitor / brightness 100% membuat mata cepat lelah. Apalagi kalau secara default begitu masuk X brightness-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan Computer Vision Syndrome.
-Berapa persen brightness yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur brightness bisa gunakan xbacklight.
-Untuk mengetahui berapa persen brightness yang digunakan saat ini xbacklight. Sedangkan untuk mengubahnya xbacklight -set persen. Contoh akan diatur brightness-nya 15%:
-  </p>
 
   
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-07-10-set-default-brightness/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
 
-  
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'catatansasongko';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 </div>
@@ -435,7 +367,11 @@ Untuk mengetahui berapa persen brightness yang digunakan saat ini xbacklight. Se
 
 
 
+<script src="https://sasongko.web.id/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
 
 
 </body>
 </html>
+
