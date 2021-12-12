@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.82.0" />
 
-  <title>Variabel hash perl &middot; Catatan Sasongko</title>
+  <title>Menambahkan scanner &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Variabel hash perl</h1>
+  <h1>Menambahkan scanner</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>29 Nov 2021</time>
+    <time>10 Dec 2021</time>
   </div>
 
   
@@ -236,7 +236,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>
     
   </div>
   
@@ -245,27 +245,35 @@
 </div>
 
 
-  <p>Jenis variabel ketiga yang dimiliki <strong>perl</strong> adalah <strong>hash</strong>. <strong>Hash</strong> ini merupakan data berpasangan. Penulisan dengan menyertakan tanda %.</p>
-<p>Contoh: akan dideklarasikan data tentang saya, yaitu nama dan distro yang saya gunakan. Nama saya Sasongko, distro Slackware.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl"><span style="color:#66d9ef">my</span> %data <span style="color:#f92672">=</span> (
-	nama <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Sasongko&#34;</span>,
-	distro <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Slackware&#34;</span>,
-	);
-</code></pre></div>
+  <p>Instalasi <em>scanner</em> di linux terutama <strong>slackware</strong> sangat mudah. Biasanya <em>scanner</em> terdeteksi secara otomatis dan langsung bisa dijalankan. Pengaturan hanya dibutuhkan jika <em>scanner</em> tidak terdeteksi.</p>
+<p>Catatan kali ini tentang menambahkan <em>scanner</em> yang tidak terdeteksi secara otomatis. <em>Scanner</em> seperangkat dengan <em>printer</em>, yaitu <strong>Epson L3110</strong>. Printer terdeteksi otomatis dan langsun bisa digunakan, tetapi <em>scanner</em>-nya belum. Software untuk scan seperti xsane atau skanlite salah mendeteksi. Keduanya mendeteksi scanner yang digunakan adalah webcam.</p>
+<p><em>Scanner</em> terhubung melalui usb, sehingga perlu dicek terlebih dahulu apakah usbnya terdeteksi.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ lsusb
+Bus <span style="color:#ae81ff">002</span> Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus <span style="color:#ae81ff">001</span> Device 004: ID 174f:1173 Syntek EasyCamera
+Bus <span style="color:#ae81ff">001</span> Device 003: ID 0cf3:e360 Qualcomm Atheros Communications 
+Bus <span style="color:#ae81ff">001</span> Device 002: ID 0bda:0129 Realtek Semiconductor Corp. RTS5129 Card Reader Controller
+Bus <span style="color:#ae81ff">001</span> Device 005: ID 04b8:1142 Seiko Epson Corp. L3110 Series
+Bus <span style="color:#ae81ff">001</span> Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+</code></pre></div><p>Terdeteksi sebagai 04b8:1142.</p>
+<p>Selanjutnya, tambahkan ID usb tersebut ke dalam file konfigurasi. Karena ini menggunakan epson maka /etc/sane.d/epson.conf.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">usb 0x4b8 0x1142
+</code></pre></div><p>Nah, selanjutnya <em>scanner</em> sudah bisa digunakan.</p>
+
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-11-29-variabel-hash-perl%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-10-install-scanner-linux%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-11-29-variabel-hash-perl%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-10-install-scanner-linux%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-11-29-variabel-hash-perl%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-10-install-scanner-linux%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-11-29-variabel-hash-perl%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-10-install-scanner-linux%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-11-29-variabel-hash-perl%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-10-install-scanner-linux%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-11-29-variabel-hash-perl%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-10-install-scanner-linux%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -297,13 +305,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-11-28-variabel-array-perl/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-11-28-variabel-array-perl/">Variabel array perl</a>
+      <a href="https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/">Variabel hash perl</a>
     </nav>
     
   </div>
@@ -312,14 +320,8 @@
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-12-10-install-scanner-linux/">Menambahkan scanner</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2021-12-10-install-scanner-linux/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
@@ -371,6 +373,9 @@
 
 
 
+<script src="https://sasongko.web.id/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
 
 
 </body>
