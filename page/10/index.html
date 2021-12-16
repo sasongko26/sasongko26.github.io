@@ -228,6 +228,101 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-08-15-mengenal-r-home/">Mengenal R_HOME</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Aug 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  R_HOME adalah direktori tempat R diinstall. Maksudnya, pada direktori inilah terdapat file binary dan konfigurasinya. Pada linux khususnya slackware, R_HOME ada di
+/usr/lib{,64}/R # tergantung arsitekturnya apakah 32bit atau 64bit. 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">NetworkManager device not ready</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>07 Aug 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Baru beberapa hari memakai (lagi) NetworkManager, sudah bermasalah (lagi).
+device not ready begitulah&hellip;.
+Padahal network interface-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai NetworkManager. Solusinya dari berbagai referensi (lupa mencatat linknya)
+echo &#34;managed=true&#34; &gt;&gt; /etc/NetworkManager/NetworkManager.conf Tapi, ternyata ini kemudian munculkan warning di syslog
+Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] config: unknown key &#39;managed&#39; in section [main] of file &#39;/etc/NetworkManager/NetworkManager.conf Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal).
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Bye wicd</a></h2>
 
     <div class="post-meta">
@@ -586,93 +681,6 @@ $ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matrosk
 
   <p>
   Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan adbadb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti angka 3 dengan 0.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-21-menambah-watermark-gambar-video/">Menambah watermark gambar ke video dengan ffmpeg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan kita akan memberikan watermark berupa gambar logo.png ke video ramadhan.mkv. Watermark ditempatkan di pojok kiri bawah. Video dengan watermark diberi nama ramadhan-fix.mkv
-ffmpeg -i ramadhan.mkv -i logo.png -filter_complex &#34;overlay=x=0:y=(main_h-overlay-h)&#34; ramadhan-fix.mkv Keterangan opsi dan parameternya
--filter_complex : menggunakan filter yang kompleks overlay : menambahkan watermark x : posisi pada sumbu x, dihitung dari ujung kiri y : posisi pada sumbu y, dihitung dari ujung atas main_h : tinggi video main_w : lebar video overlay_h : tinggi gambar yang akan dijadikan watermark overlay_w : lebar gambar yang akan dijadikan watermark 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-24-mengubah-resolusi-video-ffmpeg/">Mengubah resolusi video ffmpeg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan terdapat video VID20200509135621.mp4, dengan resolusi 3840x2160 SAR 1:1 DAR 16:9. Akan diubah resolusinya menjadi 1920x1080 dengan tetap memperhatikan SAR dan DAR. Video hasil scaling ini diberi nama VID20200509135621-1080p.mkv. Perubahan ini sekaligus konversi ke mkv agar menghemat space.
-ffmpeg -i VID20200509135621.mp4 -vf &#34;scale=1920:1080, setdar=16:9, setsar=1:1&#34; VID20200509135621-1080p.mkv 
   </p>
 
   
