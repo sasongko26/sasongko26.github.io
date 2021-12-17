@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.82.0" />
 
-  <title>Menambahkan line number kate &middot; Catatan Sasongko</title>
+  <title>Hapus riwayat kfind &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Menambahkan line number kate</h1>
+  <h1>Hapus riwayat kfind</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Dec 2021</time>
+    <time>17 Dec 2021</time>
   </div>
 
   
@@ -236,7 +236,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text-editor</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
     
   </div>
   
@@ -245,22 +245,24 @@
 </div>
 
 
-  <p><strong>Kate</strong> adalah <em>text editor</em> bawaan <strong>KDE Plasma</strong> yang <em>powerfull</em>. Namun, secara default tidak menampilkan <em>line number</em>. Cara untuk menampilkan <em>line number</em> pada <strong>kate</strong> adalah klik menu Settings pada Kate, kemudian klik Configure Kate. Pada bagian Appearance, klik tab Borders, centang Show line numbers. KLik Apply atau Ok untuk menerapkan perubahan pengaturan.</p>
-
+  <p><strong>Kfind</strong> adalah <em>tool</em> pencarian dari KDE Plasma. Bagi pengguna linux yang kurang familiar dengan <em>command line</em> bisa menggunakan <strong>kfind</strong> yang berpenampilan mode grafis.</p>
+<p>Fitur yang sangat bagus dari <strong>kfind</strong> adalah bisa menyimpan hasil pencarian. Namun, catatan kali ini tidak tentang bagaimana cara penggunaan <strong>kfind</strong>. Kali ini justru cara menghapus riwayat pencarian. Riwayat ini ada di file ~/.config/kfindrc pada segmen [History]. Riwayat yang dicatat adalah <em>Patterns</em> dan <em>Directories</em> pencariannya. Sehingga, penghapusan riwayat pencarian dapat dilakukan dengan menghapus ketiganya.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sed -i <span style="color:#e6db74">&#34;/History\|Directories\|Patterns/d&#34;</span> ~/.config/kfindrc
+</code></pre></div>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-14-show-line-number-kate%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-17-hapus-riwayat-kfind%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-14-show-line-number-kate%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-17-hapus-riwayat-kfind%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-14-show-line-number-kate%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-17-hapus-riwayat-kfind%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-14-show-line-number-kate%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-17-hapus-riwayat-kfind%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-14-show-line-number-kate%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-17-hapus-riwayat-kfind%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-14-show-line-number-kate%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-12-17-hapus-riwayat-kfind%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -292,13 +294,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2021-12-10-install-scanner-linux/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2021-12-16-mitigasi-log4shell/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-12-10-install-scanner-linux/">Menambahkan scanner</a>
+      <a href="https://sasongko.web.id/post/2021-12-16-mitigasi-log4shell/">Deteksi log4shell</a>
     </nav>
     
   </div>
@@ -307,14 +309,8 @@
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-12-16-mitigasi-log4shell/">Deteksi log4shell</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2021-12-16-mitigasi-log4shell/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
@@ -366,6 +362,9 @@
 
 
 
+<script src="https://sasongko.web.id/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
 
 
 </body>
