@@ -228,6 +228,56 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-11-14-hapus-docker-image/">Menghapus docker image</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 Nov 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Docker image yang suah tidak digunakan sebaiknya dihapus saja, agar storage lebih longgar. Pastikan docker daemon aktif
+dockerd List docker imagenya
+$ docker images REPOSITORY TAG IMAGE ID CREATED SIZE qgis/qgis release-3_16 ee28ddd8c37a 4 days ago 7.43GB qgis/qgis &lt;none&gt; c84657a1e2f6 3 weeks ago 7.43GB Hapus
+$ docker rmi -f ee28ddd8c37a c84657a1e2f6 Ingin menghapus semua container, image, dll
+$ docker system prune -a WARNING! This will remove: - all stopped containers - all networks not used by at least one container - all dangling images - all dangling build cache Are you sure you want to continue?
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-11-14-hapus-docker-image/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/">Jalankan QGIS docker</a></h2>
 
     <div class="post-meta">
@@ -646,55 +696,6 @@ Mungkin, ketika sedang melakukan maintenance dalam mode tty, tanpa terasa sudah 
 Untuk menghapusnya melalui libreofiice calc tentu saja. Klik Find &amp; Replace. Search for inputkan .* dan Replace with inputkan &amp;. Centang atau piih opsi Regular expressions. Kemudian Replace atau Replace all sesuai kebutuhan.
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Mariadb error 2002</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jun 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.
-$ mariadb -u root -p Enter password: ERROR 2002 (HY000): Can&#39;t connect to local server through socket &#39;/var/run/mysql/mysql.sock&#39; (2) Setelah dicek, ternyata service-nya belum jalan karena tidak executable.
-$ ls -l /etc/rc.d|grep -iE &#34;(maria|mysql)&#34; -rw-r--r-- 1 root root 2517 May 2 09:08 rc.mysqld -rw-r--r-- 1 root root 2943 Aug 4 2020 rc.mysqld.orig Mari aktifkan
-# chmod +x /etc/rc.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
