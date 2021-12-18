@@ -228,6 +228,55 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-04-12-membuat-data-acak-normal-python/">Membuat data acak berdistribusi normal</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Apr 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Catatan sebelumnya tentang bagaimana membuat data secara acak dengan python, kali ini hampir sama. Bedanya, data yang dibuat berasal dari distribusi Gaussian (distribusi normal).
+Akan dibuat data dengan besar sampel 200, mean 165, standar deviasi 12.5.
+#!/usr/bin/python3 import numpy as np sampel = 200 rerata = 165 deviasi = 12.5 data = np.random.normal(rerata, deviasi, sampel) print(data) Hasilnya
+[169.9036172 158.13190825 156.9590178 167.74827264 168.62534857 171.69140206 161.65434678 187.34374928 150.29836841 152.49471216 160.69172875 173.22405024 171.53443046 159.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-04-12-membuat-data-acak-normal-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-04-11-membuat-data-integer-acak-python/">Membuat data integer acak python</a></h2>
 
     <div class="post-meta">
@@ -639,49 +688,6 @@ Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-health
   <footer>
     <a href="https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-23-menggunakan-wget-prefix-directory/">Menggunakan wget prefix directory</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/internet-download-manager">internet-download-manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, apabila menggunakan wget, file di-download ke direktori aktif. Dengan mengaktifkan prefix directory (-P), file tersebut bisa disimpan ke direktori lain.
-$ wget [url] -P [direktori]  [url] : URL / alamat lengkap file yang akan di-download [direktori] : direktori tujuan  
-  </p>
-
   
 </article>
 

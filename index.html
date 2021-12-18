@@ -228,6 +228,57 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-12-18-membuat-coredump/">Membuat dan analisis core dump</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Dec 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/debug">debug</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Suatu program gagal dijalankan. Eksekusi via terminal menunjukkan segmentation fault tanpa keterangan lainnya. Pada situasi inilah core dump diperlukan untuk debugging sehingga diketahui penyebabnya.
+Contoh, geeqie apabila dijalankan di lingkungan wayland berbuah segmentation fault
+$ geeqie Segmentation fault Saatnya membuat core dump
+$ gcore /usr/bin/geeqie Illegal process-id: /usr/bin/geeqie. You can&#39;t do that without a process to debug. The program is not being run. gcore: failed to create core./usr/bin/geeqie Kemudian eksekusi lagi
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-12-18-membuat-coredump/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-12-17-deteksi-os-hacking/">Deteksi Sistem Operasi Target Hacking</a></h2>
 
     <div class="post-meta">
@@ -637,51 +688,6 @@ my $buah = &#34;mangga&#34;;
   <p>
   Untuk mengubah timestamp akses dan modifikasi pada file
 $ touch -t YYYYMMDDHHmm.ss dokumen di mana dokumen adalah filename, waktu yang diinginkan dalam format YYYYMMDDHHmm.ss
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-16-mount-android-storage-linux/">Mount smartphone ke linux</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>16 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Transfer data antara smartphone android dan komputer/pc/laptop linux (dalam contoh ini Slackware) dapat dilakukan dengan mudah. Kemudahan tersebut bahkan dapat dilakukan dengan mode text tanpa grafis.
-Misalkan akan menghubungkan storage yang ada di android smartphone dengan linux. Storage dimount ke direktori mtp. Direktori ini bebas, silahkan pilih sendiri sesuai kebutuhan/keinginan.
-$ jmtpfs mtp Selanjutnya dapat dilakukan transfer file seperti biasa. Jika sudah selesai unmount
-$ fusermount mtp 
   </p>
 
   
