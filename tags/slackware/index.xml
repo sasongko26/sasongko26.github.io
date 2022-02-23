@@ -6,7 +6,39 @@
     <description>Recent content in slackware on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/slackware/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/slackware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menggunakan pipewire</title>
+      <link>https://sasongko.web.id/post/2022-02-19-menggunakan-pipewire/</link>
+      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2022-02-19-menggunakan-pipewire/</guid>
+      <description>Salah satu fitur baru yang dihadirkan Slackware 15.0 adalah masuknya pipewire sebagai alternatif dari pulseaudio. Bagaimana penggunaanya? Silakan simak catatan berikut ini.
+Pertama, edit /etc/pulse/client.conf. Ubah autospawn dari yes menjadi no.
+Hapus /etc/xdg/autostart/pulseaudio.desktop atau rename menjadi file yang &amp;ldquo;tidak penting&amp;rdquo;.
+Rename file berikut menjadi .desktop saja
+ /etc/xdg/autostart/pipewire-media-session.desktop.sample /etc/xdg/autostart/pipewire-pulse.desktop.sample /etc/xdg/autostart/pipewire.desktop  </description>
+    </item>
+    
+    <item>
+      <title>Membuat background transparan krita</title>
+      <link>https://sasongko.web.id/post/2021-12-27-background-transparan-krita/</link>
+      <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-12-27-background-transparan-krita/</guid>
+      <description>Untuk mengubah background gambar menjadi transparan, bisa dilakukan dengan mudah menggunakan krita. Klik menu Filter &amp;ndash;&amp;gt; Colours &amp;ndash;&amp;gt; Colour to Aplha. Color picker pilih warna background yang akan diganti menjadi transparan. Threshold atur 100 atau sesuai kebutuhan. Kemudian Ok.</description>
+    </item>
+    
+    <item>
+      <title>List semua module perl terinstall</title>
+      <link>https://sasongko.web.id/post/2021-12-19-list-module-perl-terinstall/</link>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2021-12-19-list-module-perl-terinstall/</guid>
+      <description>Untuk mengetahui semua modul perl yang terinstall bisa menggunakan instmodsh.
+$ instmodsh Available commands are: l - List all installed modules m &amp;lt;module&amp;gt; - Select a module q - Quit the program cmd? Kemudian pilih l.</description>
+    </item>
+    
     <item>
       <title>Membuat dan analisis core dump</title>
       <link>https://sasongko.web.id/post/2021-12-18-membuat-coredump/</link>

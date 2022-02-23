@@ -228,6 +228,138 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2018-06-12-mengapa-openssl/">Mengapa Enkripsi dengan OpenSSL?</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Jun 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Mengapa saya suka mengenkripsi file dengan openssl? Karena
+ Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&hellip;.  
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2018-05-18-convert-video-mp3/">Convert Video Menjadi MP3</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 May 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Ternyata tidak sulit mengkonversi/convert video menjadi audio, dalam hal ini mp3. Misalkan, akan dikonversi file video Gambang_Semarang.mkv menjadi file Gambang_Semarang.mp3
+ffmpeg -i Gambang_Semarang.mkv -b:a 128K -vn Gambang_Semarang.mp3 (output) dari command tersebut di atas sengaja tidak ditampilkan di sini karena agak panjang.
+Cara ini juga berlaku untuk mengubah file mp4 ke mp3 atau dengan kata lain, sebenarnya mengekstrak audio yang ada di dalam video.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2018-05-08-uninstall-all-perl-modules-manually/">Uninstall Manual Semua Modul Perl</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 May 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Cara uninstall semua modul perl yang dulunya install dari CPAN secara manual :
+rm -r /usr/local/{lib{,64},share}/perl5 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2018-04-23-salah-password-terminal/">Salah Password di Terminal</a></h2>
 
     <div class="post-meta">
@@ -551,153 +683,6 @@ Bagi saya, masuknya libsodiummembawa konsekwensi untuk rebuild dnscrypt-proxyyan
   
   <footer>
     <a href="https://sasongko.web.id/post/2017-12-08-libsodium-masuk-current/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/">Menggunakan Kernel Huge 4.14.0</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>22 Nov 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang bootloop apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. Update terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui rebuilt elilo.
-Setelah upgrade terutama untuk elilojangan lupa menjalankan
-eliloconfig yang secara otomatis juga akan meng- generate elilo.confyang berisi pengaturan boot dengan kernel huge.
-Namun, saya kurang suka dengan cara otomatis ini. Dan saya memilih melakukannya secara manual saja agar lebih fleksibel dalam konfigurasinya.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/">Kernel 4.14.0 Masuk -Current, Beralih ke Kernel Generic</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 Nov 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Setelah 2 minggu, -Current kembali mendapatkan update Jum&rsquo;at kemarin tanggal 17 November 2017. Banyak update, ada yang upgraded, rebuilt, added, dan removed. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.
-Setelah upgrade dan eliloconfigkemudian restart, ternyata muncul masalah! Bootloop! Loading vmlinuz&hellip; langsung reboot. Begitu seterusnya.
-Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk recovery-nya lebih mudah. Boot dari DVD kemudian waktu muncul grubpilih opsi yang intinya detect another operating system (persisnya saya lupa).
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-11-15-mengamankan-file-folder/">Mengamankan File Folder</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Nov 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Salah satu hal yang membuat saya menggunakan linux khususnya Slackware adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan .pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan steganografi tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}) atau [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}).
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2017-11-15-mengamankan-file-folder/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
