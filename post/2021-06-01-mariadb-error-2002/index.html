@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Mariadb error 2002 &middot; Catatan Sasongko</title>
 
@@ -246,15 +246,15 @@
 
 
   <p>Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mariadb -u root -p
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mariadb -u root -p
 Enter password:
 ERROR <span style="color:#ae81ff">2002</span> <span style="color:#f92672">(</span>HY000<span style="color:#f92672">)</span>: Can<span style="color:#e6db74">&#39;t connect to local server through socket &#39;</span>/var/run/mysql/mysql.sock<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">(</span>2<span style="color:#f92672">)</span>
 </code></pre></div><p>Setelah dicek, ternyata <em>service</em>-nya belum jalan karena tidak <em>executable</em>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls -l /etc/rc.d|grep -iE <span style="color:#e6db74">&#34;(maria|mysql)&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls -l /etc/rc.d|grep -iE <span style="color:#e6db74">&#34;(maria|mysql)&#34;</span>
 -rw-r--r-- <span style="color:#ae81ff">1</span> root     root   <span style="color:#ae81ff">2517</span> May  <span style="color:#ae81ff">2</span> 09:08 rc.mysqld
 -rw-r--r-- <span style="color:#ae81ff">1</span> root     root   <span style="color:#ae81ff">2943</span> Aug  <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2020</span> rc.mysqld.orig
 </code></pre></div><p>Mari aktifkan</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># chmod +x /etc/rc.d/rc.mysqld</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># chmod +x /etc/rc.d/rc.mysqld</span>
 <span style="color:#75715e"># /etc/rc.d/rc.mysqld start</span>
 <span style="color:#ae81ff">210530</span> 10:36:21 mysqld_safe Logging to <span style="color:#e6db74">&#39;/var/lib/mysql/bumi.bumi.err&#39;</span>.
 <span style="color:#ae81ff">210530</span> 10:36:21 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql

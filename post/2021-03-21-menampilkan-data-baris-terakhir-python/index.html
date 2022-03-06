@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Menampilkan data baris terakhir python &middot; Catatan Sasongko</title>
 
@@ -249,12 +249,12 @@
 
   <p>Untuk menampilkan data baris terakhir dengan python dapat menggunakan fungsi tail() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.</p>
 <p>Data diambil dari <a href="https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/">https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
 data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;</span>)
 
-<span style="color:#66d9ef">print</span>(data<span style="color:#f92672">.</span>tail(<span style="color:#ae81ff">7</span>))
+print(data<span style="color:#f92672">.</span>tail(<span style="color:#ae81ff">7</span>))
 </code></pre></div><p>Output :</p>
-<pre><code>                                                 RowId  ...  Report
+<pre tabindex="0"><code>                                                 RowId  ...  Report
 178532     2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA  ...     NaN
 178533  2019~2019~9002~Q41~AGE~AGE_OVERALL~GENDER~MALE  ...     NaN
 178534            2019~2019~9002~Q42~AGE~5064~RACE~HIS  ...     NaN

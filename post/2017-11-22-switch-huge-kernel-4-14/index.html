@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Menggunakan Kernel Huge 4.14.0 &middot; Catatan Sasongko</title>
 
@@ -249,10 +249,10 @@
 
   <p>Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang <em>bootloop</em> apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. <em>Update</em> terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui <em>rebuilt</em> <!-- raw HTML omitted -->elilo<!-- raw HTML omitted -->.</p>
 <p>Setelah <em>upgrade</em> terutama untuk <!-- raw HTML omitted -->elilo<!-- raw HTML omitted --> jangan lupa menjalankan</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">eliloconfig
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">eliloconfig
 </code></pre></div><p>yang secara otomatis juga akan meng- <em>generate</em> <!-- raw HTML omitted -->elilo.conf<!-- raw HTML omitted --> yang berisi pengaturan <em>boot</em> dengan kernel huge.</p>
 <p>Namun, saya kurang suka dengan cara otomatis ini. Dan saya memilih melakukannya secara manual saja agar lebih fleksibel dalam konfigurasinya.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp -v /boot/elilo-x86_64.efi /boot/efi/EFI/Slackware/elilo.efi
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp -v /boot/elilo-x86_64.efi /boot/efi/EFI/Slackware/elilo.efi
 </code></pre></div>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

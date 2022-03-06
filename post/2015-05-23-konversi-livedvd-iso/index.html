@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Mengubah LiveDVD Menjadi ISO &middot; Catatan Sasongko</title>
 
@@ -249,7 +249,7 @@
 
   <p>Beberapa waktu lalu lihat DVD BlankOn 8 Rote nganggur di seonggok kumpulan CD/DVD. Enaknya diapain ya itu DVD? Kalau dibiarkan khawatirnya kotor malah ngga bisa digunakan lagi. Ya udah mending dibuat file ISO aja. Kalau dibuat file ISO insya Allah manfaatnya lebih banyak karena tersimpan di hardisk bisa lebih tahan lama daripada dalam bentuk DVD, dan suatu saat nanti kalau dibutuhkan tapi DVDnya ngga bisa dipakai tinggal dibakar aja ISOnya entah itu jadi DVD atau ke flashdisk. Jadi misalnya besok mau install BlankOn Rote ke netbook ga usah download lagi ISOnya cukup jadikan liveUSB aja.</p>
 <p>Caranya?</p>
-<pre><code>$ dd if=/dev/cdrom of=~/rote-i386.iso
+<pre tabindex="0"><code>$ dd if=/dev/cdrom of=~/rote-i386.iso
 </code></pre><p>if adalah input file, di sini /dev/cdrom adalah DVDnya, harap disesuaikan, bisa jadi di komputer Anda berbeda, misalnya /dev/sr0 atau /dev/sr1 atau yang lainnya.</p>
 <p>of adalah file iso yang akan dibuat. Terserah mau diletakkan di mana.</p>
 <p><em>Atau</em>, bagi pengguna KDE bisa menggunakan K3B. Buka K3B melalui menu, pastikan DVD sudah terdeteksi (lihat di sisi kiri, di sini DVDnya berlabel <em>blankon</em>). Klik medium atau DVDnya kemudian klik <em>Copy Medium&hellip;</em></p>

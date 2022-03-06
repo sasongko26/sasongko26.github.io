@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Konek Internet dengan nmcli &middot; Catatan Sasongko</title>
 
@@ -247,7 +247,7 @@
 
   <p>Menyambung catatan tentang [hilangnya ikon atau NetworkManager]({% post_url 2015-12-26-ikon-networkmanager-hilang %}). Jika <!-- raw HTML omitted -->nm-applet<!-- raw HTML omitted --> tidak mempan untuk menampilkan <em>applet NetworkManager</em>, maka kita bisa gunakan <!-- raw HTML omitted -->nmcli<!-- raw HTML omitted -->.</p>
 <p><!-- raw HTML omitted -->nmcli<!-- raw HTML omitted --> adalah <em>NetworkManager</em> dengan antarmuka teks (<em>command line interface</em>).</p>
-<pre><code>nmcli
+<pre tabindex="0"><code>nmcli
 Usage: nmcli [OPTIONS] OBJECT { COMMAND | help }
 
 OPTIONS
@@ -273,7 +273,7 @@ OBJECT
   m[onitor]       monitor NetworkManager changes
 
 </code></pre><p>Untuk melihat sambungan/koneksi yang telah dibuat dengan <em>NetworkManager</em> gunakan <!-- raw HTML omitted -->nmcli c<!-- raw HTML omitted -->. Berikut adalah contoh <em>output</em>-nya</p>
-<pre><code>NAME                        UUID                                  TYPE             DEVICE 
+<pre tabindex="0"><code>NAME                        UUID                                  TYPE             DEVICE 
 3 Monthly Internet Service  72c411c9-a79b-40c3-a5e7-00411fde9b74  gsm              --     
 AndroidAP                   9858bf43-529c-4089-8844-57ed40637de2  802-11-wireless  --     
 Mbah Min                    06d393a3-9494-4434-bf07-62967d43dbe3  802-11-wireless  --     
@@ -281,7 +281,7 @@ Perpus FK                   3b7599a5-7c6c-4797-8809-a866578d0fa6  802-11-wireles
 Star Hotel Semarang         26db7a92-b1d2-4eb3-9b52-f28cda1e6991  802-11-wireless  --     
 </code></pre><p>Dari hasil tersebut tampak ada 6 sambungan. Tapi perlu diketahui, sambungan tersebut tidaklah <em>realtime</em>. Itu adalah daftar semua sambungan yang pernah saya gunakan. 1 melalui <a href="http://www.bhinneka.com/Associate/asc_clicks.aspx?BARef=BATL160601616&amp;BATrcID=linfocatatansas225204&amp;CatID=01j8&amp;Link=http%3a%2f%2fwww.bhinneka.com%2fcategory%2fmodem.aspx&amp;SubID=">modem</a> dan 4 wifi/hotspot.</p>
 <p>Untuk menyambungkan ke internet <!-- raw HTML omitted -->nmcli c up UUID<!-- raw HTML omitted -->. Contoh akan konek internet dengan modem</p>
-<pre><code>nmcli c up 72c411c9-a79b-40c3-a5e7-00411fde9b74
+<pre tabindex="0"><code>nmcli c up 72c411c9-a79b-40c3-a5e7-00411fde9b74
 # atau bisa juga nama devicenya
 nmcli c up '3 Monthly Internet Service'
 </code></pre><p>Sedangkan untuk diskonek <!-- raw HTML omitted -->nmcli c down UUID<!-- raw HTML omitted -->.</p>

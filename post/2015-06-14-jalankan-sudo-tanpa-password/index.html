@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Jalankan Sudo Tanpa Password &middot; Catatan Sasongko</title>
 
@@ -246,20 +246,20 @@
 
 
   <p>Idealnya perintah sudo memang memerlukan password/kata sandi karena hakikat sudo itu pengguna &ldquo;meminjam&rdquo; hak <em>super user / root</em>. Tapi, password itu bisa saja kita hilangkan. Maksudnya, tidak perlu menuliskan password, contoh</p>
-<pre><code>$ wvdial 3
+<pre tabindex="0"><code>$ wvdial 3
 bash: wvdial: command not found
 </code></pre><p>Baris 2, <em>command not found</em> menunjukkan 2 kemungkinan. Kemungkinan pertama, perintah yang diketikkan memang tidak ada. Kemungkinan kedua, perintah itu memerlukan hak <em>root</em>. Nah perintah [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) ini yang bisa menjalankan adalah <em>root</em> atau <em>sudoers</em> (pengguna yang bisa menjalankan perintah hak <em>root</em> tapi dengan syarat memasukkan passwordnya root.</p>
 <p>Wvdial ini kan perintah untuk konek internet via modem, rasanya tidak akan berbahaya kalau tidak dipassword. Caranya, edit /etc/sudoers. Untuk mengeditnya butuh hak root atau sudoers. Tambahkan baris dengan format berikut ke file tersebut.</p>
-<pre><code>pengguna hostname = NOPASSWD: perintah
+<pre tabindex="0"><code>pengguna hostname = NOPASSWD: perintah
 </code></pre><ul>
 <li>pengguna : nama pengguna yang termasuk dalam sudoers</li>
 <li>hostname : nama host</li>
 <li>perintah : ya perintah yang aslinya butuh password saat melakukan sudo yang ingin kita tidak pakai passwordnya</li>
 </ul>
 <p>Contoh</p>
-<pre><code>sasongko laptopku = NOPASSWD: /usr/bin/wvdial
+<pre tabindex="0"><code>sasongko laptopku = NOPASSWD: /usr/bin/wvdial
 </code></pre><p>Nah, untuk selanjutnya, kalau login sebagai sasongko yang termasuk sudoers menjalankan perintah</p>
-<pre><code>$ sudo wvdial 
+<pre tabindex="0"><code>$ sudo wvdial 
 </code></pre><p>maka sasongko tidak akan diminta password dulu langsung jalan aja si wvdial.</p>
 
   

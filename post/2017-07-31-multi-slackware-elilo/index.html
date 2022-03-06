@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Multi Slackware dengan elilo &middot; Catatan Sasongko</title>
 
@@ -249,27 +249,27 @@
 
   <p>Posting kali ini terinspirasi dari Pak Walesa yang menulis <a href="http://walecha.web.id/node/57">di sini</a> dan <a href="http://walecha.web.id/node/58">ini</a>. Perbedaannya adalah pada <em>boot loader</em> yang digunakan. Saya gunakan <!-- raw HTML omitted -->elilo<!-- raw HTML omitted -->. Selain itu, sudah ada <em>existing</em> Slackware64 current dan Slackware64 14.2. Keduanya dengan filesystem ext4. Mau ditambahkan yang stable (Slackware64 14.2 dan Slackware 14.2) tetapi dengan <em>filesystem btrfs</em>. Jadi dual Slackware stable ini akan ditempatkan di dalam partisi yang sama. Sebenarnya <em>tripleboot</em> dengan Windows 10, tetapi Windows 10 sangat jarang dipakai. Jadi abaikan saja Windowsnya.</p>
 <p>Berikut skema partisi harddisk (<em>free space</em>, partisi ext4 Slackware64 14.2 dan partisi Windows 10 diabaikan) :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">HDD
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">HDD
 +---&gt; partisi EFI <span style="color:#f92672">(</span>/dev/sda1<span style="color:#f92672">)</span>
 +---&gt; partisi swap <span style="color:#f92672">(</span>/dev/sda2<span style="color:#f92672">)</span>
 +---&gt; partisi / current format ext4 <span style="color:#f92672">(</span>/dev/sda3<span style="color:#f92672">)</span>
 +---&gt; partisi /home current format ext4 <span style="color:#f92672">(</span>/dev/sda4<span style="color:#f92672">)</span>
 +---&gt; partisi / stable format btrfs <span style="color:#f92672">(</span>/dev/sda8<span style="color:#f92672">)</span>
 </code></pre></div><p>Partisi untuk stable inipun baru saya bikin. Maka perlu diformat dulu</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkfs.btrfs /dev/sda8
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkfs.btrfs /dev/sda8
 </code></pre></div><p>Selanjutnya partisi ini dimount ke <!-- raw HTML omitted -->/mnt/hd<!-- raw HTML omitted --> dan buat subvolume baru (jumlah sesuaikan dengan kebutuhan). Saya buat 2 subvolume yaitu <!-- raw HTML omitted -->stable64<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->stable<!-- raw HTML omitted -->. <!-- raw HTML omitted -->stable64<!-- raw HTML omitted --> untuk diinstall Slackware64 14.2 sedangkan subvolume <!-- raw HTML omitted -->stable<!-- raw HTML omitted --> untuk Slackware 14.2.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mount -t btrfs /dev/sda8 /mnt/hd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mount -t btrfs /dev/sda8 /mnt/hd
 btrfs subvolume create /mnt/hd/stable64
 btrfs subvolume create /mnt/hd/stable
 </code></pre></div><p>Next, install slackware ke partisi btrfs sesuai subvolumenya. Masih punya isonya, jadi langsung dimount saja.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mount slackware64-14.2-install-dvd.iso /mnt/iso
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mount slackware64-14.2-install-dvd.iso /mnt/iso
 installpkg --root /mnt/hd/stable64 /mnt/iso/slackware64/*/*.t?z
 installpkg --root /mnt/hd/stable /mnt/iso/slackware64/*/*.t?z
 </code></pre></div><p><em>Copy</em> kernel stable ke partisi EFI. Yang saya copy kernel hugenya.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp /mnt/hd/stable64/boot/vmlinuz-huge-4.4.14 /boot/efi/EFI/Slackware/stable64-huge
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp /mnt/hd/stable64/boot/vmlinuz-huge-4.4.14 /boot/efi/EFI/Slackware/stable64-huge
 cp /mnt/hd/stable/boot/vmlinuz-huge-4.4.14 /boot/efi/EFI/Slackware/stable-huge
 </code></pre></div><p>Selanjutnya tambahkan ke <!-- raw HTML omitted -->elilo.conf<!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">image<span style="color:#f92672">=</span>stable64-huge
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">image<span style="color:#f92672">=</span>stable64-huge
         label<span style="color:#f92672">=</span><span style="color:#ae81ff">64</span>
         read-only
         append<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;root=/dev/sda8 rootflags=subvol=stable64 vga=normal ro&#34;</span>
@@ -279,7 +279,7 @@ image<span style="color:#f92672">=</span>stable-huge
 	append<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;root=/dev/sda8 rootflags=subvol=stable vga=normal ro&#34;</span>
 </code></pre></div><p>Oh iya, kalau mau <em>dualboot</em> atau <em>multiboot</em> yang semua OSnya adalah Slackware, <strong>jangan lakukan eliloconfig</strong>. Lakukan konfigurasi <!-- raw HTML omitted -->elilo<!-- raw HTML omitted --> secara manual seperti langkah tersebut di atas.</p>
 <p>Isi <!-- raw HTML omitted -->/etc/fstab<!-- raw HTML omitted --> masing-masing stable. Untuk stable64 kira-kira seperti ini</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/dev/sda2        swap             swap        defaults         <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/dev/sda2        swap             swap        defaults         <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>
 /dev/sda8        /                btrfs       defaults,subvol<span style="color:#f92672">=</span>stable64         <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">1</span>
 /dev/sda4        /home            ext4        defaults         <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">2</span>
 /dev/sda1        /boot/efi        vfat        defaults         <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">2</span> 
@@ -289,7 +289,7 @@ devpts           /dev/pts         devpts      gid<span style="color:#f92672">=</
 proc             /proc            proc        defaults         <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>
 tmpfs            /dev/shm         tmpfs       defaults         <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>
 </code></pre></div><p>Sedangkan stable kurang lebih seperti ini</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/dev/sda2        swap             swap        defaults         <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/dev/sda2        swap             swap        defaults         <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>
 /dev/sda8        /                btrfs       defaults,subvol<span style="color:#f92672">=</span>stable         <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">1</span>
 /dev/sda4        /home            ext4        defaults         <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">2</span>
 /dev/sda1        /boot/efi        vfat        defaults         <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">2</span> 

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Mengetahui volume suara video &middot; Catatan Sasongko</title>
 
@@ -247,7 +247,7 @@
 
   <p>Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.</p>
 <p>Untuk mengetahui intensitas suara video intro.mkv</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null
 Input <span style="color:#75715e">#0, matroska,webm, from &#39;intro.mkv&#39;:</span>
   Metadata:
     COMPATIBLE_BRANDS: isommp42

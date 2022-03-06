@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Mengatur DNS Default &middot; Catatan Sasongko</title>
 
@@ -254,9 +254,9 @@
 </ul>
 <p>Kelemahan cara ini setelah dinyalakan kembali maka kembali menggunakan dari operator. Untuk membuatnya menetap kita jadikan sebagai DNS <em>default</em> yang secara otomatis akan digunakan setiap kali konek dengan cara memasukkan DNS tersebut ke berkas <!-- raw HTML omitted -->/etc/dhcpcd.conf<!-- raw HTML omitted --></p>
 <p>Tambahkan</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">static domain_name_servers<span style="color:#f92672">=</span>180.131.144.144 180.131.145.145
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">static domain_name_servers<span style="color:#f92672">=</span>180.131.144.144 180.131.145.145
 </code></pre></div><p>di bawah</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># A list of options to request from the DHCP server.</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># A list of options to request from the DHCP server.</span>
 </code></pre></div><p>Sebenarnya sih bisa ditambah di baris manapun yang masih kosong, tapi biar tetap rapi dan sesuai kategori yang sudah dikelompokkan <em>Slackware</em> ya taruh saja di situ&hellip;.hehehe&hellip;..</p>
 <p>Jangan lupa <em>save</em>.</p>
 

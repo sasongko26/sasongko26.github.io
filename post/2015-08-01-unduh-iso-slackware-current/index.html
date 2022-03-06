@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Unduh ISO Slackware Current &middot; Catatan Sasongko</title>
 
@@ -246,7 +246,7 @@
   <p>Slackware adalah distro yang istimewa. Tak seperti distro lainnya yang menyediakan ISO versi terbaru atau <em>current</em> yang masih dalam pengembangan, slackware tidak merilis <em>current ISO</em> secara resmi. Walaupun demikian, ada yang menyediakannya bagi yang berminat, salah satunya bisa didapatkan di repo <a href="ftp://ftp.slackware.no">ftp://ftp.slackware.no</a>.</p>
 <p>Kali ini coba mengunduh <em>slackware current ISO</em>. Pakai <em>rsync</em> saja yang gampang dan bisa dilanjut kalau internetnya putus.</p>
 <p>Sebelumnya cek dulu ISO terbaru</p>
-<pre><code>$ rsync ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/
+<pre tabindex="0"><code>$ rsync ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/
  
 drwxr-xr-x          4,096 2015/07/28 10:00:29 .
 -rw-r--r--            146 2015/07/28 10:00:29 CHECKSUMS.md5
@@ -257,7 +257,7 @@ drwxr-xr-x          4,096 2015/07/28 10:00:29 .
 -rw-r--r--  2,633,039,872 2015/07/28 10:00:15 slackware64-current-28_Jul_2015-DVD.iso
 </code></pre><p>ISO terbaru tertanggal 28 Juli 2015.</p>
 <p>Selanjutnya lakukan rsync (pastikan berada di direktori di mana file ISOnya disimpan).</p>
-<pre><code>$ rsync -avz --progress --partial ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/slackware64-current-28_Jul_2015-DVD.iso .
+<pre tabindex="0"><code>$ rsync -avz --progress --partial ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/slackware64-current-28_Jul_2015-DVD.iso .
 </code></pre><p>Silahkan tunggu sampai selesai.</p>
 
   

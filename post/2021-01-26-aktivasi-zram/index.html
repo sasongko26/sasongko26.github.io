@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Aktivasi zram &middot; Catatan Sasongko</title>
 
@@ -252,7 +252,7 @@
 <p>Bukankah ada partisi <strong>swap</strong>? Betul, tetapi <strong>swap</strong> menggunakan <em>harddisk</em> sedangkan <strong>zram</strong> memakai RAM. Kecepatan olah data lebih cepat menggunakan RAM.</p>
 <p>Oke, sekarang bagaimana teknisnya?</p>
 <p>Buat file <code>/etc/rc.d/rc.zram</code>. File ini akan dieksekusi segera setelah <em>booting</em>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -r /etc/default/zram <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
   . /etc/default/zram
@@ -366,9 +366,9 @@ f_reset<span style="color:#f92672">()</span> <span style="color:#f92672">{</span
 <span style="color:#66d9ef">esac</span>
 </code></pre></div><p>Di sini, 50% RAM digunakan untuk <strong>zram</strong>. Maka <strong>ZRAMSIZE</strong> 1G.</p>
 <p>Jangan lupa beri hak akses eksekusi. <em>Command</em> dijalankan oleh <strong>root</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ chmod +x /etc/rc.d/rc.zram
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ chmod +x /etc/rc.d/rc.zram
 </code></pre></div><p>Kemudian sertakan ke <code>/etc/rc.d/rc.local</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -x /etc/rc.d/rc.zram <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -x /etc/rc.d/rc.zram <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
 		/etc/rc.d/rc.zram start
 <span style="color:#66d9ef">fi</span>
 </code></pre></div><p>Kemudian pastikan kernel modul <strong>zram</strong> bisa di-<em>load</em>. Secara <em>default</em> modul <strong>zram</strong> bersifat modular yang tidak secara otomatis <em>load</em>. Ada 2 cara</p>
@@ -376,9 +376,9 @@ f_reset<span style="color:#f92672">()</span> <span style="color:#f92672">{</span
 <li>Memasukkan ke dalam <strong>initrd</strong>.
 Penulis terbiasa membuat <strong>initrd</strong> dengan bantuan <strong>mkinird_command_generator</strong>. Di sini ditambahkan <code>-m zram</code>. Sehingga pembuatannya <strong>initrd</strong>-nya (<em>command</em> dijalankan oleh <strong>root</strong>. Ini sangat mungkin berbeda dengan milik pembaca. Berbeda dari sisi versi kernel (opsi -k), partisi root (opsi -r), modul yang di-<em>load</em> dan lokasi <strong>initrd</strong> yang diinginkan. Secara <em>default</em> di  /boot (opsi -o). Tapi penulis di /boot/efi/EFI/Slackware.</li>
 </ol>
-<pre><code>mkinitrd -c -k 5.10.10 -f ext4 -r /dev/sda3 -m xhci-pci:ohci-pci:ehci-pci:xhci-hcd:uhci-hcd:ehci-hcd:hid:usbhid:i2c-hid:hid_generic:hid-asus:hid-cherry:hid-logitech:hid-logitech-dj:hid-logitech-hidpp:hid-lenovo:hid-microsoft:hid_multitouch:jbd2:mbcache:ext4:zram -u -o /boot/initrd.gz
+<pre tabindex="0"><code>mkinitrd -c -k 5.10.10 -f ext4 -r /dev/sda3 -m xhci-pci:ohci-pci:ehci-pci:xhci-hcd:uhci-hcd:ehci-hcd:hid:usbhid:i2c-hid:hid_generic:hid-asus:hid-cherry:hid-logitech:hid-logitech-dj:hid-logitech-hidpp:hid-lenovo:hid-microsoft:hid_multitouch:jbd2:mbcache:ext4:zram -u -o /boot/initrd.gz
 </code></pre><p>Kemudian sertakan <strong>initrd</strong> ke <em>boot loader</em>. Penulis gunakan <em>boot loader</em> <strong>elilo</strong> dengan <strong>kernel generic</strong>, <strong>initrd</strong>-nya <strong>initrd.gz</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">image<span style="color:#f92672">=</span>generic
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">image<span style="color:#f92672">=</span>generic
     label<span style="color:#f92672">=</span>generic
     initrd<span style="color:#f92672">=</span>initrd.gz
     read-only
@@ -387,7 +387,7 @@ Penulis terbiasa membuat <strong>initrd</strong> dengan bantuan <strong>mkinird_
 <li>Menggunakan <strong>modprobe</strong>.
 Modul <strong>zram</strong> di-<em>load</em> belakangan. Pada bagian awal dari <code>/etc/rc.d/rc.zram</code> (bisa tepat di bawah <em>shebang</em>/baris 2) tambahkan</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">modprobe zram
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">modprobe zram
 </code></pre></div><p>Selesai, selamat menikmati.</p>
 <p><img src="https://sasongko.web.id/gambar/htop-with-zram-battery.png" alt=""></p>
 <p>Pada kasus ini, tampak bahwa penggunaan zram 24,8 MB (dengan kompresi), sedangkan apabila tanpa dikompres atau tanpa zram membutuhkan <em>memory</em> 177 MB.</p>

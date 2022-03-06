@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Fix sbotools Perl unescaped left brace in regex is deprecated here &middot; Catatan Sasongko</title>
 
@@ -246,7 +246,7 @@
 
 
   <p>Siang ini, sudah agak lama tidak <em>check update</em> paket-paket dari <a href="http://slackbuilds.org">SBo</a>. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sbocheck <span style="color:#75715e"># command ini dijalankan oleh root</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sbocheck <span style="color:#75715e"># command ini dijalankan oleh root</span>
 Unescaped left brace in regex is deprecated here <span style="color:#f92672">(</span>and will be fatal in Perl 5.32<span style="color:#f92672">)</span>, passed through in regex; marked by &lt;-- HERE in m/<span style="color:#ae81ff">\$</span><span style="color:#f92672">({</span> &lt;-- HERE |<span style="color:#f92672">)[</span>A-Za-z0-9_<span style="color:#f92672">]</span>+<span style="color:#f92672">(}</span>|<span style="color:#f92672">)</span>/ at /usr/share/perl5/SBO/Lib/Build.pm line <span style="color:#ae81ff">244</span>
 </code></pre></div><p>Ada masalah ternyata dan masalahnya di <a href="http://sasongko.web.id/tags/#perl">Perl</a>. Simpel sih solusinya. Buka file <!-- raw HTML omitted -->/usr/share/perl5/SBO/Lib/Build.pm<!-- raw HTML omitted -->, pada <em>line</em> 244 karakter { diganti {</p>
 

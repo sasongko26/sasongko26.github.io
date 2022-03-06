@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Menghapus docker image &middot; Catatan Sasongko</title>
 
@@ -246,16 +246,16 @@
 
 
   <p><em>Docker image</em> yang suah tidak digunakan sebaiknya dihapus saja, agar <em>storage</em> lebih longgar. Pastikan docker daemon aktif</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dockerd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dockerd
 </code></pre></div><p>List docker imagenya</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker images
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker images
 REPOSITORY   TAG            IMAGE ID       CREATED       SIZE
 qgis/qgis    release-3_16   ee28ddd8c37a   <span style="color:#ae81ff">4</span> days ago    7.43GB
 qgis/qgis    &lt;none&gt;         c84657a1e2f6   <span style="color:#ae81ff">3</span> weeks ago   7.43GB
 </code></pre></div><p>Hapus</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker rmi -f ee28ddd8c37a c84657a1e2f6
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker rmi -f ee28ddd8c37a c84657a1e2f6
 </code></pre></div><p>Ingin menghapus semua container, image, dll</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker system prune -a
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker system prune -a
 WARNING! This will remove:
   - all stopped containers
   - all networks not used by at least one container

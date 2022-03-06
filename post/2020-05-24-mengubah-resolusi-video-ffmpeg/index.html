@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Mengubah resolusi video ffmpeg &middot; Catatan Sasongko</title>
 
@@ -246,7 +246,7 @@
 
 
   <p>Misalkan terdapat video VID20200509135621.mp4, dengan resolusi 3840x2160 SAR 1:1 DAR 16:9. Akan diubah resolusinya menjadi 1920x1080 dengan tetap memperhatikan SAR dan DAR. Video hasil <em>scaling</em> ini diberi nama VID20200509135621-1080p.mkv. Perubahan ini sekaligus konversi ke mkv agar menghemat <em>space</em>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ffmpeg -i VID20200509135621.mp4 -vf <span style="color:#e6db74">&#34;scale=1920:1080, setdar=16:9, setsar=1:1&#34;</span> VID20200509135621-1080p.mkv
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ffmpeg -i VID20200509135621.mp4 -vf <span style="color:#e6db74">&#34;scale=1920:1080, setdar=16:9, setsar=1:1&#34;</span> VID20200509135621-1080p.mkv
 </code></pre></div>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Mengetahui kondisi baterai &middot; Catatan Sasongko</title>
 
@@ -252,7 +252,7 @@
   <p>Mengecek kondisi baterai laptop melalui terminal atau <em>command line interface</em> sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara <em>default</em> sudah menyertakan <em>desktop environment</em> seperti <strong>xfce, kde, mate, cinnamon, budgie, lumina</strong> dan <strong>manokwari</strong> dengan <em>interface</em> yang cantik dan menarik. DE tersebut sudah mempunyai <em>power manager</em> lengkap dengan <em>applet</em>-nya yang tak pernah bosan nempel di panel.</p>
 <p>Bagaimana kalau &lsquo;hanya&rsquo; menggunakan <em>window manager</em> seperti <strong>GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm</strong> atau <strong>ratpoison</strong> yang tidak mempunyai <em>power manager</em> sendiri? Melalui terminal lah jawabannya. Di sini digunakan <strong>upower</strong> yang secara default ada di <strong>Slackware</strong></p>
 <p>Pertama cek dulu <em>device</em> yang dipegang <strong>upower</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ upower -e
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ upower -e
 /org/freedesktop/UPower/devices/line_power_ADP0
 /org/freedesktop/UPower/devices/battery_BAT0
 /org/freedesktop/UPower/devices/DisplayDevice
@@ -263,7 +263,7 @@
 <li>DisplayDevice</li>
 </ol>
 <p>Untuk mengecek baterainya gunakan yang ke-2</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ upower -i /org/freedesktop/UPower/devices/battery_BAT0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ upower -i /org/freedesktop/UPower/devices/battery_BAT0
   native-path:          BAT0
   vendor:               CPT-LGS3
   model:                L15C3A03

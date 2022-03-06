@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Operation not possible due to RF-kill &middot; Catatan Sasongko</title>
 
@@ -251,7 +251,7 @@
 
   <p>Pagi ini, <em>refreshing</em> dengan berganti <em>desktop environment (DE)</em> memakai <strong>Window Maker (WM)</strong>. DE yang jarang digunakan karena biasanya memakai <strong>XFCE</strong>. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk <em>tethering</em>. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong <strong>Network Manager</strong> atau <strong>Wicd</strong> aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah <em>root</em>. Di sini <!-- raw HTML omitted -->$<!-- raw HTML omitted --> maksudnya adalah tetap dilakukan oleh <em>root</em>. Untuk memudahkan <em>syntax highlighting</em> karena kalau <em>command</em>-nya ditulis dengan <!-- raw HTML omitted -->#<!-- raw HTML omitted --> akan terbaca sebagai komentar sehingga tidak begitu jelas terbacanya.</p>
 <p>Pertama, cek wifi adapter dan interfacenya. Sebenarnya saya sudah hafal interfacenya wlan0, tapi karena jarang pakai WM ya lakukan &ldquo;prosedur standar&rdquo; untuk memudahkan <em>troubleshoot</em> siapa tahu beda atau ada masalah. Firasat ini ternyata benar.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ iw dev
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ iw dev
 phy#0
 	Interface wlan0
 		ifindex <span style="color:#ae81ff">3</span>
@@ -261,19 +261,19 @@ phy#0
 		txpower 0.00 dBm
 </code></pre></div><p>Ok, masih tetap sama wlan0 dengan <em>device adapter</em> terdaftar sebagai phy#0.</p>
 <p><em>Next</em>, cek <em>wifi</em> statusnya apakah kondisi <em>up</em> atau <em>down</em></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ip link show wlan0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ip link show wlan0
 3: wlan0: &lt;BROADCAST,MULTICAST&gt; mtu <span style="color:#ae81ff">1500</span> qdisc noop state DOWN mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
     link/ether cc:b0:da:b5:yy:xx brd ff:ff:ff:ff:bb:aa
 </code></pre></div><p>Masih <em>down</em>. Ok, kita <em>up</em>-kan.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ip link set wlan0 up
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ip link set wlan0 up
 RTNETLINK answers: Operation not possible due to RF-kill
 </code></pre></div><p>O&rsquo;o&hellip;.</p>
 <p>Ini mengagetkan! Sudah 5 tahun lebih tidak <em>ngutak-atik</em> RF-kill dan selama pakai <strong>Slackware</strong> <em>fine fine</em> aja. FYI, terakhir mengetikkan <em>command</em> <!-- raw HTML omitted -->rfkill<!-- raw HTML omitted --> ya sekitar 5 tahunan yang lalu, saat &ldquo;membelot&rdquo; sejenak memakai <strong>Kali Linux</strong>. Ya, sejenak. Hanya sejenak, tapi persisnya berapa lama mbuh&hellip;.. Yang penting terus tetap <strong>Slackware</strong>.</p>
 <p>Karena kaget, seakan tak percaya, kontan mencari <em>2nd opinion</em> memakai <!-- raw HTML omitted -->ifconfig<!-- raw HTML omitted -->.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ifconfig wlan0 up
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ifconfig wlan0 up
 SIOCSIFFLAGS: Operation not possible due to RF-kill
 </code></pre></div><p>Ternyata sama saja.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rfkill list
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rfkill list
 0: ideapad_wlan: Wireless LAN
 	Soft blocked: yes
 	Hard blocked: no
@@ -288,36 +288,36 @@ SIOCSIFFLAGS: Operation not possible due to RF-kill
 	Hard blocked: no
 </code></pre></div><p>Ternyata terblokir. Entah mengapa dan bagaimana prosesnya bisa terblokir.
 Yo wislah, di-<em>unblock</em> saja.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rfkill unblock <span style="color:#ae81ff">2</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rfkill unblock <span style="color:#ae81ff">2</span>
 </code></pre></div><p>Cek lagi apakah masih terblokir.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rfkill list <span style="color:#ae81ff">2</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rfkill list <span style="color:#ae81ff">2</span>
 2: phy0: Wireless LAN
 	Soft blocked: no
 	Hard blocked: no
 </code></pre></div><p>Selanjutnya, coba <em>up</em>-kan lagi.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ip link set wlan0 up
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ip link set wlan0 up
 $ ip link show wlan0
 3: wlan0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc mq state DOWN mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
     link/ether cc:b0:da:b5:xx:yy brd ff:ff:ff:ff:bb:aa
 </code></pre></div><p>Alhamdulillah sudah ada tanda kehidupan. Sudah <em>up</em> walaupun belum tersambung ke mana pun. tahu darimana?</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ iw wlan0 link
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ iw wlan0 link
 Not connected
 </code></pre></div><p><em>Next</em>, scan apa ada wifi</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ iw wlan0 scan | egrep <span style="color:#e6db74">&#39;(SSID|Authentication)&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ iw wlan0 scan | egrep <span style="color:#e6db74">&#39;(SSID|Authentication)&#39;</span>
 	SSID: EN <span style="color:#ae81ff">262</span> XY
 		 * Authentication suites: PSK
 </code></pre></div><p>Sebenarnya <em>output</em>-nya panjang, tapi berhubung hanya butuh SSID sama autentikasinya ya sudah di egrep aja.</p>
 <p>Dan karena ada passwordnya, perlu diatur terlebih dulu</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vi /etc/wpa_supplicant.conf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vi /etc/wpa_supplicant.conf
 network<span style="color:#f92672">={</span>
     ssid<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;EN 262 XY&#34;</span>
     psk<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;indcncniub&#34;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Coba konekkan</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant.conf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant.conf
 Successfully initialized wpa_supplicant
 </code></pre></div><p>Konfirmasi,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ iw wlan0 link
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ iw wlan0 link
 Connected to 20:5e:f7:cb:jj:hh <span style="color:#f92672">(</span>on wlan0<span style="color:#f92672">)</span>
 	SSID: EN <span style="color:#ae81ff">262</span> XY
 	freq: <span style="color:#ae81ff">2437</span>
@@ -330,9 +330,9 @@ Connected to 20:5e:f7:cb:jj:hh <span style="color:#f92672">(</span>on wlan0<span
 	dtim period:	<span style="color:#ae81ff">3</span>
 	beacon int:	<span style="color:#ae81ff">100</span>
 </code></pre></div><p>Sipp. Konek. Saatnya minta ip.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dhclient wlan0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dhclient wlan0
 </code></pre></div><p>Test koneksi</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ping -c <span style="color:#ae81ff">5</span> google.com
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ping -c <span style="color:#ae81ff">5</span> google.com
 PING google.com <span style="color:#f92672">(</span>172.217.194.100<span style="color:#f92672">)</span> 56<span style="color:#f92672">(</span>84<span style="color:#f92672">)</span> bytes of data.
 <span style="color:#ae81ff">64</span> bytes from 172.217.194.100: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">41</span> time<span style="color:#f92672">=</span>52.5 ms
 <span style="color:#ae81ff">64</span> bytes from 172.217.194.100: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">41</span> time<span style="color:#f92672">=</span><span style="color:#ae81ff">377</span> ms

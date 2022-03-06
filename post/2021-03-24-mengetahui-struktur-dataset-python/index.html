@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Mengetahui struktur dataset &middot; Catatan Sasongko</title>
 
@@ -249,13 +249,13 @@
 
   <p>Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi <strong>info()</strong> dari <strong>pandas</strong>.</p>
 <p>Data diambil dari <a href="https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/">https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/env python3</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/env python3</span>
 
-<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
 data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;</span>)
-<span style="color:#66d9ef">print</span>(data<span style="color:#f92672">.</span>info())
+print(data<span style="color:#f92672">.</span>info())
 </code></pre></div><p>Outputnya</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;class <span style="color:#e6db74">&#39;pandas.core.frame.DataFrame&#39;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;class <span style="color:#e6db74">&#39;pandas.core.frame.DataFrame&#39;</span>&gt;
 RangeIndex: <span style="color:#ae81ff">178539</span> entries, <span style="color:#ae81ff">0</span> to <span style="color:#ae81ff">178538</span>
 Data columns <span style="color:#f92672">(</span>total <span style="color:#ae81ff">39</span> columns<span style="color:#f92672">)</span>:
  <span style="color:#75715e">#   Column                      Non-Null Count   Dtype  </span>

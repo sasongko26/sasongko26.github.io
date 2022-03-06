@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Install libisofs Slackware &middot; Catatan Sasongko</title>
 
@@ -246,16 +246,16 @@
   <p>Libisofs adalah pustaka untuk membuat filesystem ISO-9660.</p>
 <p>Berikut cara install libisofs-1.4.0 di slackware melalui slackbuild. Pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas yang diperlukan.</p>
 <p>Unduh slackbuild libisofs</p>
-<pre><code>$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libisofs.tar.gz
+<pre tabindex="0"><code>$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libisofs.tar.gz
 </code></pre><p>Ekstrak</p>
-<pre><code>$ tar xzf libisofs.tar.gz
+<pre tabindex="0"><code>$ tar xzf libisofs.tar.gz
 </code></pre><p>Terbentuk folder libisofs, pindah direktori ke folder itu kemudain unduh kode sumbernya.</p>
-<pre><code>$ cd libisofs
+<pre tabindex="0"><code>$ cd libisofs
 $ wget http://files.libburnia-project.org/releases/libisofs-1.4.0.tar.gz
 </code></pre><p>Install slackbuildnya</p>
-<pre><code># sh libisofs.SlackBuild
+<pre tabindex="0"><code># sh libisofs.SlackBuild
 </code></pre><p>Install paketnya</p>
-<pre><code># installpkg /tmp/libisofs-1.4.0-x86_64-1_SBo.tgz
+<pre tabindex="0"><code># installpkg /tmp/libisofs-1.4.0-x86_64-1_SBo.tgz
 </code></pre><p>Selesai.</p>
 
   

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>MtpErrorCantOpenDevice &middot; Catatan Sasongko</title>
 
@@ -246,14 +246,14 @@
 
 
   <p>Ketika akan memindahkan data dari HP android ke laptop melalui <!-- raw HTML omitted -->thunar<!-- raw HTML omitted -->, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui <!-- raw HTML omitted -->jmtpfs<!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ jmtpfs
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ jmtpfs
 Device <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>VID<span style="color:#f92672">=</span>0e8d and PID<span style="color:#f92672">=</span>201d<span style="color:#f92672">)</span> is a MediaTek Inc Elephone P8000.
 error returned by libusb_claim_interface<span style="color:#f92672">()</span> <span style="color:#f92672">=</span> -6LIBMTP PANIC: Unable to initialize device
 terminate called after throwing an instance of <span style="color:#e6db74">&#39;MtpErrorCantOpenDevice&#39;</span>
   what<span style="color:#f92672">()</span>:  Can<span style="color:#960050;background-color:#1e0010">&#39;</span>t open device
 Aborted
 </code></pre></div><p>Ada masalah di <!-- raw HTML omitted -->libusb<!-- raw HTML omitted -->. Coba reinstall <!-- raw HTML omitted -->libusb<!-- raw HTML omitted --></p>
-<pre><code># slackpkg reinstall libusb
+<pre tabindex="0"><code># slackpkg reinstall libusb
 </code></pre><p>Alhamdulillah sukses.</p>
 
   

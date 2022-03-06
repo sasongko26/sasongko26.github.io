@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Menambah watermark gambar ke video dengan ffmpeg &middot; Catatan Sasongko</title>
 
@@ -246,9 +246,9 @@
 
 
   <p>Misalkan kita akan memberikan <em>watermark</em> berupa gambar logo.png ke video ramadhan.mkv. <em>Watermark</em> ditempatkan di pojok kiri bawah. Video dengan <em>watermark</em> diberi nama ramadhan-fix.mkv</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ffmpeg -i ramadhan.mkv -i logo.png -filter_complex <span style="color:#e6db74">&#34;overlay=x=0:y=(main_h-overlay-h)&#34;</span> ramadhan-fix.mkv
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ffmpeg -i ramadhan.mkv -i logo.png -filter_complex <span style="color:#e6db74">&#34;overlay=x=0:y=(main_h-overlay-h)&#34;</span> ramadhan-fix.mkv
 </code></pre></div><p>Keterangan opsi dan parameternya</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-filter_complex : menggunakan filter yang kompleks
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-filter_complex : menggunakan filter yang kompleks
 overlay : menambahkan watermark
 x : posisi pada sumbu x, dihitung dari ujung kiri
 y : posisi pada sumbu y, dihitung dari ujung atas

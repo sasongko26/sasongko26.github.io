@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Install Mate Desktop &middot; Catatan Sasongko</title>
 
@@ -250,7 +250,7 @@
   <p>Walaupun <em>desktop environment</em> resmi Slackware adalah KDE dan Xfce, kita tetap bisa menggunakan DE lain, <em>mate</em> contohnya. <em>Mate</em> punya tampilan menarik tapi tetap ringan. Installnya mudah kok, seperti biasa pakai slackbuilds. Pastikan tersambung internet untuk mengunduh berkasnya, oya kita butuh kira-kira 500 MB untuk download <em>mate</em>.</p>
 <p>Pertama, dengan peramban web buka <a href="https://github.com/mateslackbuilds/msb">github mate slackbuilds</a>. Nah, karena di sini menggunakan 14.1 (bukan <em>current</em>) maka pilih <em>branch</em> 14.1-mate-1.10. Setelah itu unduh tarball/zipnya kemudian ekstrak. Atau bisa juga git nya di-<em>clone</em>.</p>
 <p>Selanjutnya, pindah ke direktori root dari msb itu. Kemudian install (dengan <em>root privileges</em>) dependensi yang dibutuhkan (baris 1), install base dari mate itu sendiri (baris 2) dan kalau perlu bisa juga install paket extra (baris 3).</p>
-<pre><code>sh mate-build-deps.sh
+<pre tabindex="0"><code>sh mate-build-deps.sh
 sh mate-build-base.sh
 sh mate-build-extra.sh
 </code></pre><p>Nah, <em>mate</em> sudah terinstall. Jangan lupa untuk [mengaktifkannya]({% post_url 2015-11-06-ganti-de %}).</p>

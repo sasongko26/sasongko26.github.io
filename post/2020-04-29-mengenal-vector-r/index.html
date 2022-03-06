@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Mengenal Objek R Vector &middot; Catatan Sasongko</title>
 
@@ -251,50 +251,50 @@
 <p>Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga <em>boolean (TRUE FALSE)</em>.</p>
 <h1 id="membuat-vector">Membuat vector</h1>
 <p>Misalkan akan dibuat vector x dengan elemen berupa angka 1</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> x <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> x <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
 </code></pre></div><p>Vector kota dengan elemen kata Semarang. Semarang merupakan string, maka penulisannya diapit tanda kutip</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> kota <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;Semarang&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> kota <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;Semarang&#34;</span>
 </code></pre></div><p>Vector cek dengan elemen boolean TRUE</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">cek <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">TRUE</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">cek <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">TRUE</span>
 </code></pre></div><p>Jika vectornya memiliki elemen lebih dari 1, membuatnya dengan <em>function</em> yang bernama <em>combine</em>. <em>Function</em> ini didefinisikan dengan <!-- raw HTML omitted -->c()<!-- raw HTML omitted -->, elemennya dituliskan dalam tanda kurung.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Ali&#34;</span>, <span style="color:#e6db74">&#34;Budi&#34;</span>, <span style="color:#e6db74">&#34;Cici&#34;</span>, <span style="color:#e6db74">&#34;Deni&#34;</span>, <span style="color:#e6db74">&#34;Eka&#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Ali&#34;</span>, <span style="color:#e6db74">&#34;Budi&#34;</span>, <span style="color:#e6db74">&#34;Cici&#34;</span>, <span style="color:#e6db74">&#34;Deni&#34;</span>, <span style="color:#e6db74">&#34;Eka&#34;</span>)
 <span style="color:#f92672">&gt;</span> tinggi_badan <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">155</span>, <span style="color:#ae81ff">178</span>, <span style="color:#ae81ff">163</span>, <span style="color:#ae81ff">158</span>, <span style="color:#ae81ff">142</span>)
 </code></pre></div><h1 id="operasi-vector">Operasi vector</h1>
 <h2 id="menampilkan-vector">menampilkan vector</h2>
 <p>Untuk menampilkan elemen atau isi dari vector cukup tuliskan nama vectornya. Contoh, menampilkan data tinggi badan yang dimasukkan ke dalam vector tinggi_badan</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> tinggi_badan
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> tinggi_badan
 </code></pre></div><p>Angka dalam kurung siku di sebelah kiri pada tiap baris yang ditampilkan menunjukkan indeks/letak data ke berapa. Contoh [1] berarti data tepat di sebelah kanannya adalah data pertama. [20] berarti data tepat di kanannya adalah data ke-20. Begitu seterusnya.</p>
 <h2 id="length">length()</h2>
 <p>Fungsi <!-- raw HTML omitted -->length()<!-- raw HTML omitted --> digunakan untuk mengetahui panjang vector (sebenarnya tidak hanya berlaku untuk vector, tapi juga objek lain seperti factor). Ketika data sudah dipegang, apa yang kemudian dilakukan? Ya, mengecek data. Salah satu pengecekannya adalah apakah data sudah lengkap? Kalau kuesioner yang harus diisi ada 10 item, apakah semua item sudah diisi? Ini contoh penggunaan <!-- raw HTML omitted -->length()<!-- raw HTML omitted --> dalam praktik.</p>
 <p>Contoh, akan dicek berapa banyaknya data tinggi_badan</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">length</span>(tinggi_badan)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">length</span>(tinggi_badan)
 <span style="color:#ae81ff">5</span>
 </code></pre></div><h2 id="indeks">Indeks</h2>
 <p>Indeks menunjukkan letak data tersebut. Penulisannya <!-- raw HTML omitted -->namavector[nomer_indeks]<!-- raw HTML omitted -->. Angka dalam kurung siku adalah nomor indeksnya. Contoh</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Ali&#34;</span>, <span style="color:#e6db74">&#34;Budi&#34;</span>, <span style="color:#e6db74">&#34;Cici&#34;</span>, <span style="color:#e6db74">&#34;Deni&#34;</span>, <span style="color:#e6db74">&#34;Eka&#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Ali&#34;</span>, <span style="color:#e6db74">&#34;Budi&#34;</span>, <span style="color:#e6db74">&#34;Cici&#34;</span>, <span style="color:#e6db74">&#34;Deni&#34;</span>, <span style="color:#e6db74">&#34;Eka&#34;</span>)
 <span style="color:#f92672">&gt;</span> nama[1]
 [1] <span style="color:#e6db74">&#34;Ali&#34;</span>
 <span style="color:#f92672">&gt;</span> nama[5]
 [1] <span style="color:#e6db74">&#34;Eka&#34;</span>
 </code></pre></div><p>Kalau ingin menampilkan pengecualian gunakan indeks negatif. Misalnya, akan menampilkan 4 data pertama, berarti data ke-5 tidak ingin ditampilkan, maka</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama[<span style="color:#ae81ff">-5</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama[<span style="color:#ae81ff">-5</span>]
 [1] <span style="color:#e6db74">&#34;Ali&#34;</span>  <span style="color:#e6db74">&#34;Budi&#34;</span> <span style="color:#e6db74">&#34;Cici&#34;</span> <span style="color:#e6db74">&#34;Deni&#34;</span>
 </code></pre></div><h2 id="_replace_-elemen"><em>replace</em> elemen</h2>
 <p>Apabila ada data yang ternyata tidak sesuai, <em>typo</em> atau salah ketik misalnya, bisa diganti. Misalnya data nama, data ke-5 diganti dari Eka menjadi Erna</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama[5] <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;Erna&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama[5] <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;Erna&#34;</span>
 </code></pre></div><p>Penggantian ini bisa juga lebih dari 1 elemen. Misalkan data ke-4 dan 5 diganti menjadi Dedi dan Ema.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama<span style="color:#a6e22e">[c</span>(<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>)] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Dedi&#34;</span>, <span style="color:#e6db74">&#34;Ema&#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama<span style="color:#a6e22e">[c</span>(<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>)] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Dedi&#34;</span>, <span style="color:#e6db74">&#34;Ema&#34;</span>)
 </code></pre></div><h2 id="menambah-elemen">Menambah elemen</h2>
 <p>Misalkan data nama akan ditambahkan dengan Fahri, Gandi, Hilda, Imam, Joko.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">append</span>(nama,<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Fahri&#34;</span>, <span style="color:#e6db74">&#34;Gandi&#34;</span>, <span style="color:#e6db74">&#34;Hilda&#34;</span>, <span style="color:#e6db74">&#34;Imam&#34;</span>, <span style="color:#e6db74">&#34;Joko&#34;</span>))
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">append</span>(nama,<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Fahri&#34;</span>, <span style="color:#e6db74">&#34;Gandi&#34;</span>, <span style="color:#e6db74">&#34;Hilda&#34;</span>, <span style="color:#e6db74">&#34;Imam&#34;</span>, <span style="color:#e6db74">&#34;Joko&#34;</span>))
 [1] <span style="color:#e6db74">&#34;Ali&#34;</span>   <span style="color:#e6db74">&#34;Budi&#34;</span>  <span style="color:#e6db74">&#34;Cici&#34;</span>  <span style="color:#e6db74">&#34;Dedi&#34;</span>  <span style="color:#e6db74">&#34;Ema&#34;</span>   <span style="color:#e6db74">&#34;Fahri&#34;</span> <span style="color:#e6db74">&#34;Gandi&#34;</span> <span style="color:#e6db74">&#34;Hilda&#34;</span> <span style="color:#e6db74">&#34;Imam&#34;</span> 
 [10] <span style="color:#e6db74">&#34;Joko&#34;</span>
 </code></pre></div><h2 id="menghapus-elemen">Menghapus elemen</h2>
 <p>Misalkan akan dihapus nama Budi yang merupakan elemen ke-2</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama <span style="color:#f92672">&lt;-</span> nama[<span style="color:#ae81ff">-2</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> nama <span style="color:#f92672">&lt;-</span> nama[<span style="color:#ae81ff">-2</span>]
 </code></pre></div><h2 id="operasi-matematika">Operasi matematika</h2>
 <p>Misalkan, untuk keperluan menghitung <em>body mass index</em> atau indeks massa tubuh (IMT). Tinggi badan yang digunakan adalah dalam satuan meter. Sementara data yang masuk dalam centimeter. Akan dibuat variabel baru (berupa vector tentunya) IMT yang diperoleh dari menghitung berat_badan dibagi kuadrat tinggi_badan dalam meter.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">IMT <span style="color:#f92672">&lt;-</span> berat_badan<span style="color:#f92672">/</span>(tinggi_badan<span style="color:#f92672">/</span><span style="color:#ae81ff">100</span>)^2
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">IMT <span style="color:#f92672">&lt;-</span> berat_badan<span style="color:#f92672">/</span>(tinggi_badan<span style="color:#f92672">/</span><span style="color:#ae81ff">100</span>)^2
 </code></pre></div>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

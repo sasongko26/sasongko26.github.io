@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Tidak Ada Ikon NetworkManager di Panel &middot; Catatan Sasongko</title>
 
@@ -248,14 +248,14 @@
   <p>Iseng-iseng install lagi slackware tapi tanpa paket yang ada di kategori <em>ap</em> atau direktori slackware/ap dan <em>xap</em> (slackware64/xap).</p>
 <p>Efek sampingnya adalah, tidak adanya ikon NetworkManager di panel. Di sini saya gunakan DE XFCE. Sementara itu paket direktori slackware/n semuanya terinstall.</p>
 <p>Install dulu appletnya. Karena saya punya berkas ISOnya maka installnya bisa offline asalkan tahu di mana letak paketnya berada. Setelah mount ISOnya ke /mnt/iso,</p>
-<pre><code>installpkg /mnt/iso/slackware64/xap/network-manager*.txz
+<pre tabindex="0"><code>installpkg /mnt/iso/slackware64/xap/network-manager*.txz
 </code></pre><p>Ketika memunculkan ikon/applet NetworkManagernya ke panel,</p>
-<pre><code>$ nm-applet
+<pre tabindex="0"><code>$ nm-applet
 nm-applet: error while loading shared libraries: libsqlite3.so.0: cannot open shared object file: No such file or directory
 </code></pre><p>Libsqlite3.so.0 gagal dibuka karena tidak ada filenya. File ini ada kalau install sqlite3.</p>
-<pre><code>installpkg /mnt/iso/slackware64/ap/sqlite-3*.txz
+<pre tabindex="0"><code>installpkg /mnt/iso/slackware64/ap/sqlite-3*.txz
 </code></pre><p>Setelah paket sqlite3 terinstall yang berarti libsqlite3.so.0 sudah bisa dibuka nm-applet, ternyata masih ada masalah.</p>
-<pre><code>$ nm-applet
+<pre tabindex="0"><code>$ nm-applet
 
 ** (nm-applet:1223): WARNING **: Could not initialize NMClient /org/freedesktop/NetworkManager: The name org.freedesktop.NetworkManager was not provided by any .service files
 ** Message: applet now removed from the notification area
@@ -265,9 +265,9 @@ nm-applet: error while loading shared libraries: libsqlite3.so.0: cannot open sh
 ** (nm-applet:1223): WARNING **: Failed to register as an agent: (2) The name org.freedesktop.NetworkManager was not provided by any .service files
 
 </code></pre><p>NetworkManager tidak berjalan. Maka harus kita jalankan dulu pakai root.</p>
-<pre><code>NetworkManager
+<pre tabindex="0"><code>NetworkManager
 </code></pre><p>Nah, NetworkManager sudah jalan, selanjutnya jalankan nm-applet lagi dan lempar ke <em>background</em> maka ikon NetworkManager muncul di panel.</p>
-<pre><code>$ nm-applet &amp;
+<pre tabindex="0"><code>$ nm-applet &amp;
 </code></pre>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

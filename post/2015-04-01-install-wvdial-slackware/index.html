@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Install WvDial di Slackware &middot; Catatan Sasongko</title>
 
@@ -273,16 +273,16 @@
 </li>
 </ul>
 <p>Kemudian masuk ke /usr/local/src</p>
-<pre><code># cd /usr/local/src
+<pre tabindex="0"><code># cd /usr/local/src
 </code></pre><p>Kemudian salin slackbuild wvstream dan wvdial ke direktori ini (/usr/local/src).</p>
 <p>Yang harus diinstall dahulu adalah wvstreams. Ekstrak slackbuild wvstream</p>
-<pre><code># tar -xzf wvstreams.tar.gz
+<pre tabindex="0"><code># tar -xzf wvstreams.tar.gz
 </code></pre><p>Akan muncul direktori wvstreams pindahlah ke direktori ini. Salin source code wvstreams ke direktori wvstreams kemudian ekstrak di direktori ini</p>
-<pre><code># tar -xzf wvstreams-4.6.1.tar.gz
+<pre tabindex="0"><code># tar -xzf wvstreams-4.6.1.tar.gz
 </code></pre><p>Setelah itu, beri slackbuildnya hak eksekusi dan jalankan slackbuildnya</p>
-<pre><code># chmod +x wvstreams.SlackBuild &amp;&amp; ./wvstream.SlackBuild
+<pre tabindex="0"><code># chmod +x wvstreams.SlackBuild &amp;&amp; ./wvstream.SlackBuild
 </code></pre><p>Kemudian akan terbuat file installer wvstreams-4.6.1-i486-1_SBo.tgz di /tmp. Nama file ini mungkin tidak sama untuk Anda, silahkan disesuaikan, kalau arsitektur komputer yang Anda gunakan 64 bit maka i486 ganti X86_64.</p>
-<pre><code># installpkg /tmp/wvstreams-4.6.1-i486-1_SBo.tgz
+<pre tabindex="0"><code># installpkg /tmp/wvstreams-4.6.1-i486-1_SBo.tgz
 </code></pre><p>Install wvstreams selesai. Sekarang lanjut install wvdial. Caranya sama seperti install wvstreams. Yaitu:</p>
 <!-- raw HTML omitted -->
 <p>Scanning your serial ports for a modem.</p>
@@ -314,7 +314,7 @@ ttyUSB2&lt;*1&gt;: ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0 &ndash; OK</p>
 Modem configuration written to /etc/wvdial.conf.
 ttyUSB0<!-- raw HTML omitted -->: Speed 9600; init &ldquo;ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0&rdquo;
 ttyUSB2<!-- raw HTML omitted -->: Speed 9600; init &ldquo;ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0&rdquo;</p>
-<pre><code>Kemudian kita atur file konfigurasinya di /etc/wvdial.conf
+<pre tabindex="0"><code>Kemudian kita atur file konfigurasinya di /etc/wvdial.conf
 </code></pre><p>[Dialer Defaults]
 Init1 = ATZ
 Init2 = ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0
@@ -331,7 +331,7 @@ Ask Password = 0
 ISDN = 0
 ; Password = <!-- raw HTML omitted -->
 ; Username = <!-- raw HTML omitted --></p>
-<pre><code>Berikut ini adalah konfigurasi wvdial penulis dengan ISP 3 modem Huawei E1550.
+<pre tabindex="0"><code>Berikut ini adalah konfigurasi wvdial penulis dengan ISP 3 modem Huawei E1550.
 </code></pre><p>[Dialer Defaults]
 Init1 = ATZ
 Init2 = ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0
@@ -367,9 +367,9 @@ Password = 3data
 Username = 3data
 New PPPD = yes
 Phone = <em>99</em>**1#</p>
-<pre><code>Untuk menjalankannya
+<pre tabindex="0"><code>Untuk menjalankannya
 </code></pre><h1 id="wvdial-3data">wvdial 3data</h1>
-<pre><code>Nah, kalau keluar output seperti ini berarti sudah ada tanda-tanda konek.
+<pre tabindex="0"><code>Nah, kalau keluar output seperti ini berarti sudah ada tanda-tanda konek.
 </code></pre><p>&ndash;&gt; WvDial: Internet dialer version 1.61
 &ndash;&gt; Initializing modem.
 &ndash;&gt; Sending: ATZ
@@ -398,14 +398,14 @@ CONNECT
 &ndash;&gt; pppd: [08]pk·<code>[17]F p[18]F  --&gt; remote IP address 10.64.64.64 --&gt; pppd: [08]pk·</code>[17]F p[18]F
 &ndash;&gt; primary   DNS address 10.0.27.2
 &ndash;&gt; pppd: [08]pk·<code>[17]F p[18]F  --&gt; secondary DNS address 10.0.28.66 --&gt; pppd: [08]pk·</code>[17]F p[18]F</p>
-<pre><code>Loh kok disebut tanda-tanda konek? Kan di situ udah jelas ada tulisan **CONNECT** ,... ya karena ternyata
+<pre tabindex="0"><code>Loh kok disebut tanda-tanda konek? Kan di situ udah jelas ada tulisan **CONNECT** ,... ya karena ternyata
 </code></pre><h1 id="ping-googlecom">ping google.com</h1>
 <p>ping: unknown host google.com</p>
-<pre><code>buat nge-ping aja gagal apalagi browsing!
+<pre tabindex="0"><code>buat nge-ping aja gagal apalagi browsing!
 
 Oke, kalau terjadi seperti itu, salin aja /etc/ppp/resolv.conf ke /etc/resolv.conf
 </code></pre><h1 id="cp-etcpppresolvconf-etcresolvconf">cp /etc/ppp/resolv.conf /etc/resolv.conf</h1>
-<pre><code>Coba ping lagi
+<pre tabindex="0"><code>Coba ping lagi
 </code></pre><h1 id="ping-googlecom-1">ping google.com</h1>
 <p>PING google.com (114.4.42.88) 56(84) bytes of data.
 64 bytes from 114.4.42.88: icmp_seq=1 ttl=58 time=1018 ms
@@ -413,7 +413,7 @@ Oke, kalau terjadi seperti itu, salin aja /etc/ppp/resolv.conf ke /etc/resolv.co
 64 bytes from 114.4.42.88: icmp_seq=3 ttl=58 time=369 ms
 64 bytes from 114.4.42.88: icmp_seq=4 ttl=58 time=689 ms
 64 bytes from 114.4.42.88: icmp_seq=5 ttl=58 time=371 ms</p>
-<pre><code></code></pre>
+<pre tabindex="0"><code></code></pre>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">

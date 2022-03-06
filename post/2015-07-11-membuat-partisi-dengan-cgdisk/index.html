@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Membuat Partisi dengan cgdisk &middot; Catatan Sasongko</title>
 
@@ -245,7 +245,7 @@
 
   <p><em>Partitioning</em> atau pemartisian atau pembuatan partisi adalah pengetahuan yang harus dimiliki sebelum menginstall linux. Jika harddisk dianalogikan dengan rumah, maka partisi adalah kamar atau ruangan yang ada di dalam rumah itu. Kita bisa mengatur berapa jumlah kamar beserta ukuran dan fungsinya.</p>
 <p>Skema partisi yang digunakan adalah GPT, bukan MBR, jadi pemartisian menggunakan cgdisk saja biar lebih mudah. Selain cgdisk bisa menggunakan gdisk. Sedangkan untuk MBR menggunakan cfdisk atau fdisk. Keempatnya berantarmuka text dan dijalankan oleh root. Oya, untuk antarmuka grafis (GUI) bisa menggunakan gparted.</p>
-<pre><code>cgdisk /dev/sda
+<pre tabindex="0"><code>cgdisk /dev/sda
 </code></pre><p>Perintah cgdisk diikuti dengan disk yang akan dipartisi. Karena ini merupakan hardisk utama maka /dev/sda. Kalau harddisk external atau flashdisk tidak akan dikenal sebagai /dev/sda tetapi bisa jadi /dev/sdb.</p>
 <p>Di hardisk yang saya gunakan ini, sudah ada beberapa partisi untuk berbagai keperluan (di sini dualboot Windows 8.1 dan Slackware 14.1). Mau buat 1 lagi.
 <img src="https://sasongko.web.id/gambar/cgdisk-01.png" alt="">

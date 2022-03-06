@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Pelengkap dnscrypt-proxy &middot; Catatan Sasongko</title>
 
@@ -252,7 +252,7 @@
 <li>Memasukkan <strong>dnscryp-proxy</strong> ke /etc/rc.d/rc.local{,_shutdown}</li>
 </ol>
 <p>Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi <em>maintainer</em> <strong>dnscrypt-proxy</strong> tidak mengikutsertakan langkah ini. Penulis menggunakan <strong>NetworkManager</strong>, setelah <em>check &amp; recheck</em>, <code>dnscrypt-proxy</code> tidak bekerja karena file /etc/resolv.conf terkena <em>overwrite</em> oleh <strong>NetworkManager</strong>. Ini adalah langkah untuk memberikan imunisasi/mencegah <em>overwrite</em>. <em>Command</em> berikut dijalankan dengan <em>root privilege</em></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cp /etc/resolv.conf.head /etc/resolv.conf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cp /etc/resolv.conf.head /etc/resolv.conf
 $ chattr +i /etc/resolv.conf
 </code></pre></div>
   

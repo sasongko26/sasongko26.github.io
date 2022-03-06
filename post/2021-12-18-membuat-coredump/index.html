@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Membuat dan analisis core dump &middot; Catatan Sasongko</title>
 
@@ -249,21 +249,21 @@
 
   <p>Suatu program gagal dijalankan. Eksekusi via terminal menunjukkan <strong>segmentation fault</strong> tanpa keterangan lainnya. Pada situasi inilah <strong>core dump</strong> diperlukan untuk <em>debugging</em> sehingga diketahui penyebabnya.</p>
 <p>Contoh, <strong>geeqie</strong> apabila dijalankan di lingkungan <strong>wayland</strong> berbuah <strong>segmentation fault</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ geeqie
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ geeqie
 Segmentation fault
 </code></pre></div><p>Saatnya membuat core dump</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gcore /usr/bin/geeqie
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gcore /usr/bin/geeqie
 Illegal process-id: /usr/bin/geeqie.
 You can<span style="color:#960050;background-color:#1e0010">&#39;</span>t <span style="color:#66d9ef">do</span> that without a process to debug.
 The program is not being run.
 gcore: failed to create core./usr/bin/geeqie
 </code></pre></div><p>Kemudian eksekusi lagi</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ geeqie
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ geeqie
 Segmentation fault <span style="color:#f92672">(</span>core dumped<span style="color:#f92672">)</span>
 </code></pre></div><p>Core dumped. Filenya <strong>core</strong> ada di <em>current working directory</em>. Apabila masih belum terbentuk, atur <strong>ulimit</strong> menjadi unlimited.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ulimit -c unlimited
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ulimit -c unlimited
 </code></pre></div><p>Selanjutnya core tersebut dapat dianalisis menggunakan <strong>gdb</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gdb /usr/bin/geeqie core
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gdb /usr/bin/geeqie core
 GNU gdb <span style="color:#f92672">(</span>GDB<span style="color:#f92672">)</span> 11.1
 Copyright <span style="color:#f92672">(</span>C<span style="color:#f92672">)</span> <span style="color:#ae81ff">2021</span> Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version <span style="color:#ae81ff">3</span> or later &lt;http://gnu.org/licenses/gpl.html&gt;

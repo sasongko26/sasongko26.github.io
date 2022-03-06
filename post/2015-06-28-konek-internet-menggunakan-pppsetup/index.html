@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Konek Internet Slackware &middot; Catatan Sasongko</title>
 
@@ -251,12 +251,12 @@
 <li>simcard dengan internet service provider 3.</li>
 </ul>
 <p>Cara-cara berikut ini dijalankan oleh root.</p>
-<pre><code>pppsetup
+<pre tabindex="0"><code>pppsetup
 </code></pre><p><img src="https://sasongko.web.id/gambar/pppsetup-01.png" alt=""></p>
 <p>Tekan enter.</p>
 <p><img src="https://sasongko.web.id/gambar/pppsetup-02.png" alt=""></p>
 <p>Isi phone number dengan</p>
-<pre><code>ATDT*99***1#
+<pre tabindex="0"><code>ATDT*99***1#
 </code></pre><p>Kemudian, lokasi modem silahkan lanjutkan dengan memberikan nilai default/biarkan saja, karena nanti akan kita ubah.</p>
 <p><img src="https://sasongko.web.id/gambar/pppsetup-03.png" alt=""></p>
 <p>Baud rate ini kami gunakan 9600</p>
@@ -275,16 +275,16 @@
 <p>Selanjutnya akan tampil hasil pengaturan, silahkan exit.</p>
 <p><img src="https://sasongko.web.id/gambar/pppsetup-11.png" alt=""></p>
 <p>Saatnya melakukan modifikasi.</p>
-<pre><code>nano /etc/ppp/options
+<pre tabindex="0"><code>nano /etc/ppp/options
 </code></pre><p>Ganti</p>
-<pre><code>/dev/modem
+<pre tabindex="0"><code>/dev/modem
 </code></pre><p>dengan</p>
-<pre><code>/dev/ttyUSB0
+<pre tabindex="0"><code>/dev/ttyUSB0
 </code></pre><p>Untuk menyambungkan ke internet</p>
-<pre><code>ppp-go
+<pre tabindex="0"><code>ppp-go
 </code></pre><p><img src="https://sasongko.web.id/gambar/pppsetup-12.png" alt="">
 Sedangkan untuk diskonek</p>
-<pre><code>ppp-off
+<pre tabindex="0"><code>ppp-off
 </code></pre>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

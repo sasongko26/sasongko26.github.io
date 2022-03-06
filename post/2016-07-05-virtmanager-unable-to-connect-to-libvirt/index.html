@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Virtual Manager unable to connect to libvirt &middot; Catatan Sasongko</title>
 
@@ -250,7 +250,7 @@
 
 
   <p>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata <!-- raw HTML omitted -->Virtual Manager<!-- raw HTML omitted --> belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka <em>graphical front-end</em>-nya, tapi ternyata kemudian muncul kotak dialog <!-- raw HTML omitted -->Virtual Machine Manager Connection Failure<!-- raw HTML omitted --> dengan detail sebagai berikut</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Unable to connect to libvirt.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Unable to connect to libvirt.
 
 internal error: Cannot find suitable emulator <span style="color:#66d9ef">for</span> x86_64
 
@@ -267,25 +267,25 @@ Traceback <span style="color:#f92672">(</span>most recent call last<span style="
     <span style="color:#66d9ef">if</span> ret <span style="color:#f92672">==</span> -1: raise libvirtError <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;virConnectGetVersion() failed&#39;</span>, conn<span style="color:#f92672">=</span>self<span style="color:#f92672">)</span>
 libvirtError: internal error: Cannot find suitable emulator <span style="color:#66d9ef">for</span> x86_64
 </code></pre></div><p>Cek <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> apakah masih terinstall atau tidak. Harusnya sih memang terinstall karena saya belum pernah menghapusnya.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls /var/log/packages|grep qemu
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls /var/log/packages|grep qemu
 qemu-2.6.0-x86_64-1_SBo
 </code></pre></div><p>Disebutkan <!-- raw HTML omitted -->Unable to connect to libvirt<!-- raw HTML omitted --> dengan <!-- raw HTML omitted -->Libvirt URI is: qemu:///system<!-- raw HTML omitted -->, dan <!-- raw HTML omitted -->internal error: Cannot find suitable emulator for x86_64<!-- raw HTML omitted -->, padahal terinstall <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> ini kan aneh. Pasti ada masalah dengan <!-- raw HTML omitted -->qemu<!-- raw HTML omitted -->-nya.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ qemu-system-x86_64
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ qemu-system-x86_64
 qemu-system-x86_64: error <span style="color:#66d9ef">while</span> loading shared libraries: libcacard.so.0: cannot open shared object file: No such file or directory
 </code></pre></div><p>Nah, ada titik terang. Masalah dependensi. <!-- raw HTML omitted -->libcacard<!-- raw HTML omitted --> tidak ada, berarti harus diinstall. Tapi installnya dari mana?</p>
 <p>Pertama, asumsikan <!-- raw HTML omitted -->libcacard<!-- raw HTML omitted --> ini paket resmi dari <strong>Slackware</strong>. Cek dengan <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">slackpkg search libcacard
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">slackpkg search libcacard
 
 Looking <span style="color:#66d9ef">for</span> libcacard in package list. Please wait... DONE
 
 No package name matches the pattern.
 </code></pre></div><p>Karena tidak ada, cek <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> karena <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> installnya dari <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sbopkg -g libcacard
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sbopkg -g libcacard
 Searching <span style="color:#66d9ef">for</span> libcacard
 Found the following matches <span style="color:#66d9ef">for</span> libcacard:
 libraries/libcacard
 </code></pre></div><p>OK, ketemu. Ada <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->-nya, install!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sbopkg -i libcacard
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sbopkg -i libcacard
 </code></pre></div><p>install selesai. Konfirmasi <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> dengan <!-- raw HTML omitted -->qemu-system-x86_64<!-- raw HTML omitted --> apakah masih bermasalah. Ternyata ok. Lanjut buka <!-- raw HTML omitted -->virt-manager<!-- raw HTML omitted -->-nya. Ok. Done! Alhamdulillah&hellip;</p>
 
   

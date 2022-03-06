@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Cara Menggunakan gdrv &middot; Catatan Sasongko</title>
 
@@ -248,7 +248,7 @@
 
 
   <p>gdrv adalah salah satu <em>command line interface tool</em> berbasis python untuk <strong>Google Drive</strong>. Cara menginstallnya silahkan buka [catatan ini]({% post_url 2015-07-26-install-gdrv %}). Adapun cara penggunaannya adalah sebagai berikut:</p>
-<pre><code>$ gdrv -h
+<pre tabindex="0"><code>$ gdrv -h
 usage: gdrv [-h] [-v] [-w] [-V]
             {ftp,pull,search,url,push,mkdir,share,trash,list,init} ...
 
@@ -274,7 +274,7 @@ optional arguments:
   -w, --write-config    write a default config
   -V, --version         show version infomation
 </code></pre><p>Pertama, inisiasi dulu,</p>
-<pre><code>$ gdrv init
+<pre tabindex="0"><code>$ gdrv init
 Enter verrification code in url https://www.google.com/device: ZPNG-WBVQ
 Then press any key to continue...
 </code></pre><p>Kemudian akan terbuka peramban web untuk masuk/login ke akun google jika belum masuk. Setelah itu akan muncul laman untuk memasukkan kode verifikasi. Masukkan kode verifikasi tersebut.</p>
@@ -284,25 +284,25 @@ Then press any key to continue...
 <p>Selanjutnya akan muncul konfirmasi dari Google untuk melanjutkan.</p>
 <p><img src="https://sasongko.web.id/gambar/gdrv-return.png" alt=""></p>
 <p>Berikutnya, kembali ke terminal, proses initnya masih menggantung. Untuk melanjutkan atau menyelesaikan inisiasi tekan sembarang tombol. Kemudian muncul output yang menginformasikan username, ID root folder, kapasitas total dan pemakaian, seperti ini.</p>
-<pre><code>Current user name: Sasongko 
+<pre tabindex="0"><code>Current user name: Sasongko 
 Root folder ID: 0ALo7yI_gNQVRUk2ABS
 Total quota (bytes): 16106127360
 Used quota (bytes): 68240901
 </code></pre><p>Untuk menampilkan file apa saja yang ada di akun google drive kita</p>
-<pre><code>$ gdrv list /
+<pre tabindex="0"><code>$ gdrv list /
 </code></pre><p>Untuk membuat direktori atau folder baru</p>
-<pre><code>$ gdrv mkdir /nama_direktori
+<pre tabindex="0"><code>$ gdrv mkdir /nama_direktori
 </code></pre><p>Upload/unggah file ke direktori root dari google drive.</p>
-<pre><code>$ gdrv push nama_file_di_komputer_yang_akan_diupload /
+<pre tabindex="0"><code>$ gdrv push nama_file_di_komputer_yang_akan_diupload /
 </code></pre><p>Download/unduh</p>
-<pre><code>$ gdrv pull /direktori_file/nama_file_yang_akan_didownload
+<pre tabindex="0"><code>$ gdrv pull /direktori_file/nama_file_yang_akan_didownload
 </code></pre><p>Hapus</p>
-<pre><code>$ gdrv trash /file_atau_direktori_yang_akan_dihapus
+<pre tabindex="0"><code>$ gdrv trash /file_atau_direktori_yang_akan_dihapus
 </code></pre><p>Argumen ftp yang interaktif.</p>
-<pre><code>$ gdrv ftp
+<pre tabindex="0"><code>$ gdrv ftp
 gdrv&gt; 
 </code></pre><p>Untuk mengetahui <em>command</em> apa saja yang bisa digunakan melalui mode ftp ini, ketik help</p>
-<pre><code>gdrv&gt; help
+<pre tabindex="0"><code>gdrv&gt; help
 
 Documented commands (type help &lt;topic&gt;):
 ========================================

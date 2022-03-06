@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Cek Harddisk Korup &middot; Catatan Sasongko</title>
 
@@ -246,10 +246,10 @@
 
 
   <p>Sewaktu <em>booting</em>, sekilas membaca <!-- raw HTML omitted -->some data may be corrupt<!-- raw HTML omitted -->. Untuk pesan <em>error</em> komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dmesg | grep -i corrupt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dmesg | grep -i corrupt
 <span style="color:#f92672">[</span>   19.076118<span style="color:#f92672">]</span> FAT-fs <span style="color:#f92672">(</span>sda1<span style="color:#f92672">)</span>: Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
 </code></pre></div><p>Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu <!-- raw HTML omitted -->/dev/sda1<!-- raw HTML omitted -->. Dan direkomendasikan untuk menjalankan <!-- raw HTML omitted -->fsck<!-- raw HTML omitted -->.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fsck /dev/sda1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fsck /dev/sda1
 
 fsck from util-linux 2.27.1
 fsck.fat 3.0.28 <span style="color:#f92672">(</span>2015-05-16<span style="color:#f92672">)</span>
@@ -258,7 +258,7 @@ fsck.fat 3.0.28 <span style="color:#f92672">(</span>2015-05-16<span style="color
 2<span style="color:#f92672">)</span> No action
 ?
 </code></pre></div><p>pilih <!-- raw HTML omitted -->1<!-- raw HTML omitted --> kemudian konfirmasi <!-- raw HTML omitted -->y<!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Perform changes ? <span style="color:#f92672">(</span>y/n<span style="color:#f92672">)</span> y
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Perform changes ? <span style="color:#f92672">(</span>y/n<span style="color:#f92672">)</span> y
 /dev/sda1: <span style="color:#ae81ff">14</span> files, 21473/101590 clusters
 </code></pre></div><p>Ok. Selesai.</p>
 

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Setting Internet XL Slackware &middot; Catatan Sasongko</title>
 
@@ -245,7 +245,7 @@
 
   <p>Di [catatan yang lalu]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) telah kami sampaikan cara konek internet di Slackware dengan modem, ppp, dan internet provider atau operator Tri. Kali ini akan kami ganti dengan operator XL.</p>
 <p>Sunting berkas /etc/ppp/options</p>
-<pre><code># General configuration options for PPPD:
+<pre tabindex="0"><code># General configuration options for PPPD:
 lock
 defaultroute
 noipdefault
@@ -266,7 +266,7 @@ asyncmap 0
 name &quot;3data&quot;
 </code></pre><p>Baris 19, ganti &ldquo;3data&rdquo; dengan &ldquo;internet&rdquo;.</p>
 <p>Kemudian sunting /etc/ppp/pap-secrets</p>
-<pre><code># PAP authentication file: /etc/ppp/pap-secrets
+<pre tabindex="0"><code># PAP authentication file: /etc/ppp/pap-secrets
 # This file should have a permission of 600.
 # ~# chmod 600 /etc/ppp/pap-secrets
 # Username      Server      Password      IP addresses
@@ -280,7 +280,7 @@ name &quot;3data&quot;
 <hr>
 </blockquote>
 <p>Selesai. Silahkan sambungkan internet dengan hak akses root</p>
-<pre><code>ppp-go
+<pre tabindex="0"><code>ppp-go
 </code></pre>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

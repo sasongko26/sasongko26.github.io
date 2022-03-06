@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Konversi VDI ke VMDK &middot; Catatan Sasongko</title>
 
@@ -249,7 +249,7 @@
 
   <p>Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.</p>
 <p>Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya</p>
-<pre><code>$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 
+<pre tabindex="0"><code>$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% 
 Clone hard disk created in format 'VMDK'. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa
 </code></pre><p>Hardisk virtualnya sudah terkonversi.</p>

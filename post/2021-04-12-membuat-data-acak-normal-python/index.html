@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Membuat data acak berdistribusi normal &middot; Catatan Sasongko</title>
 
@@ -247,15 +247,15 @@
 
   <p>Catatan sebelumnya tentang bagaimana membuat data secara acak dengan python, kali ini hampir sama. Bedanya, data yang dibuat berasal dari distribusi Gaussian (distribusi normal).</p>
 <p>Akan dibuat data dengan besar sampel 200, mean 165, standar deviasi 12.5.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/python3</span>
-<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/python3</span>
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
 sampel <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>
 rerata <span style="color:#f92672">=</span> <span style="color:#ae81ff">165</span>
 deviasi <span style="color:#f92672">=</span> <span style="color:#ae81ff">12.5</span>
 data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(rerata, deviasi, sampel)
-<span style="color:#66d9ef">print</span>(data)
+print(data)
 </code></pre></div><p>Hasilnya</p>
-<pre><code>[169.9036172  158.13190825 156.9590178  167.74827264 168.62534857
+<pre tabindex="0"><code>[169.9036172  158.13190825 156.9590178  167.74827264 168.62534857
  171.69140206 161.65434678 187.34374928 150.29836841 152.49471216
  160.69172875 173.22405024 171.53443046 159.89375268 170.59784794
  158.46572357 168.20110897 131.00882242 169.37660362 172.71471591
@@ -296,10 +296,10 @@ data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>
  164.21584719 164.01339793 151.90799391 168.24579668 169.70043163
  164.26476352 170.30071889 162.32963983 172.41727919 156.12259096]
 </code></pre><p>Secara <em>default</em> data yang dihasilkan bertipe <em>float</em>. Apabila menghendaki data integer bisa tambahkan <strong>.astype(int)</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data_int <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(rerata, deviasi, sampel)<span style="color:#f92672">.</span>astype(int)
-<span style="color:#66d9ef">print</span>(data_int)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data_int <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(rerata, deviasi, sampel)<span style="color:#f92672">.</span>astype(int)
+print(data_int)
 </code></pre></div><p>Hasilnya</p>
-<pre><code>[162 155 171 185 143 176 157 158 187 167 179 163 156 173 160 175 151 166
+<pre tabindex="0"><code>[162 155 171 185 143 176 157 158 187 167 179 163 156 173 160 175 151 166
  181 151 171 151 156 159 179 160 159 140 158 147 154 162 175 158 146 168
  160 177 160 157 166 173 151 161 150 170 171 135 170 201 154 177 172 154
  186 172 166 158 163 139 160 160 190 169 138 155 148 178 167 166 160 186

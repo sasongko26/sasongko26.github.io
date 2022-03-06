@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Ekstraksi waktu pada changelog dengan sed &middot; Catatan Sasongko</title>
 
@@ -255,11 +255,11 @@
 </ol>
 <p>Akan diambil yang no.1 saja.</p>
 <p>Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.txt.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sed <span style="color:#e6db74">&#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!d&#39;</span> /var/lib/slackpkg/ChangeLog.txt &gt; changelog-date.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sed <span style="color:#e6db74">&#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!d&#39;</span> /var/lib/slackpkg/ChangeLog.txt &gt; changelog-date.txt
 </code></pre></div><p>Hapus semua baris yang berakhiran dengan tanda titik.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sed -i <span style="color:#e6db74">&#39;/\.$/d&#39;</span> changelog-date.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sed -i <span style="color:#e6db74">&#39;/\.$/d&#39;</span> changelog-date.txt
 </code></pre></div><p>Hapus semua baris yang diawali whitespace (spasi juga tab)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sed -i <span style="color:#e6db74">&#39;/^[ \t]/d&#39;</span> changelog-date.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sed -i <span style="color:#e6db74">&#39;/^[ \t]/d&#39;</span> changelog-date.txt
 </code></pre></div><p>Selesai.</p>
 
   

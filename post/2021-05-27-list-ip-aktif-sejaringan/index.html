@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Mengetahui ip aktif sejaringan &middot; Catatan Sasongko</title>
 
@@ -246,7 +246,7 @@
 
 
   <p>Sebelum mengetahui alamat IP aktif dalam 1 jaringan yang sama, tentu saja harus konek atau masuk ke jaringan tersebut dulu. Setelah masuk, cek IP kita sendiri. Karena konek ke wifi maka <em>interface</em>-nya wlan0</p>
-<pre><code># ip addr show wlan0
+<pre tabindex="0"><code># ip addr show wlan0
 3: wlan0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
     link/ether cc:b0:da:b5:3b:75 brd ff:ff:ff:ff:ff:ff
     inet 192.168.43.20/24 brd 192.168.43.255 scope global dynamic noprefixroute wlan0
@@ -254,9 +254,9 @@
     inet6 fe80::7f1b:2f4d:b98e:6500/64 scope link noprefixroute 
        valid_lft forever preferred_lft forever
 </code></pre><p>Atau bisa juga dengan</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nmcli
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nmcli
 </code></pre></div><p>Dari <em>output</em> tersebut tampak bahwa ip lokal kita 192.168.43.20 dan <em>range</em> ip 1-255. Maka untuk me-<em>list</em> ip sejaringan yang aktif</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nmap -sn 192.168.43.1-255
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nmap -sn 192.168.43.1-255
 Starting Nmap 7.91 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2021-05-28 19:36 WIB
 Nmap scan report <span style="color:#66d9ef">for</span> xkariote 192.168.43.1
 Host is up <span style="color:#f92672">(</span>0.098s latency<span style="color:#f92672">)</span>.

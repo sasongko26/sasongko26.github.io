@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Slackware Current Susah Booting dan Shutdown &middot; Catatan Sasongko</title>
 
@@ -250,7 +250,7 @@
   <p>Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering <em>stuck</em> saat <em>boot</em> dan <em>shutdown</em>.</p>
 <p>Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis <em>ID-Slackware</em>, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.4.1 pun belum ada perubahan berarti.</p>
 <p>Begini hasil dmesg untuk ACPI-nya.</p>
-<pre><code>[    0.000000] BIOS-e820: [mem 0x000000000008f000-0x000000000008ffff] ACPI NVS
+<pre tabindex="0"><code>[    0.000000] BIOS-e820: [mem 0x000000000008f000-0x000000000008ffff] ACPI NVS
 [    0.000000] BIOS-e820: [mem 0x0000000078eb4000-0x00000000793a8fff] ACPI NVS
 [    0.000000] efi:  ACPI=0x79342000  ACPI 2.0=0x79342000  SMBIOS=0xf04d0  MPS=0xfd550 
 [    0.000000] ACPI: Early table checksum verification disabled

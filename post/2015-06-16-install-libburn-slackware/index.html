@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Install libburn Slackware &middot; Catatan Sasongko</title>
 
@@ -246,17 +246,17 @@
   <p>Libburn adalah pustaka (<em>library</em>) untuk menulis ke CD, DVD, dan <em>blueray</em>.</p>
 <p>Berikut langkah-langkah installnya di slackware melalui slackbuild. Adapun versi libburn yang diinstall adalah 1.4.0.</p>
 <p>Pertama, pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh paket. Kemudian unduh slackbuild libburn.</p>
-<pre><code>$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libburn.tar.gz
+<pre tabindex="0"><code>$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libburn.tar.gz
 </code></pre><p>Ekstrak</p>
-<pre><code>$ tar xzf libburn.tar.gz
+<pre tabindex="0"><code>$ tar xzf libburn.tar.gz
 </code></pre><p>Akan terbentuk folder libburn. Pindah direktori ke folder itu.</p>
-<pre><code>$ cd libburn
+<pre tabindex="0"><code>$ cd libburn
 </code></pre><p>Kemudian unduh kode sumber libburn.</p>
-<pre><code>$ wget http://files.libburnia-project.org/releases/libburn-1.4.0.tar.gz
+<pre tabindex="0"><code>$ wget http://files.libburnia-project.org/releases/libburn-1.4.0.tar.gz
 </code></pre><p>Install slackbuildnya</p>
-<pre><code>sh libburn.SlackBuild
+<pre tabindex="0"><code>sh libburn.SlackBuild
 </code></pre><p>Install paketnya</p>
-<pre><code># installpkg /tmp/libburn-1.4.0-x86_64-1_SBo.tgz
+<pre tabindex="0"><code># installpkg /tmp/libburn-1.4.0-x86_64-1_SBo.tgz
 </code></pre>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

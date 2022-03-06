@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>sbocheck /usr/sbo/repo exists and is not empty &middot; Catatan Sasongko</title>
 
@@ -246,15 +246,15 @@
 
 
   <p>Malam ini, ketika akan <em>update</em> SBo, ternyata tanpa disadari internet <em>disconnect</em> sebelumnya.</p>
-<pre><code>bash-5.1# sbocheck
+<pre tabindex="0"><code>bash-5.1# sbocheck
 Updating SlackBuilds tree...
 fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution)
 Could not sync from git://github.com/Ponce/slackbuilds.git.
 </code></pre><p>Setelah internet tidak ada masalah, gantian <strong>sbotools</strong>-nya yang masalah</p>
-<pre><code>bash-5.1# sbocheck
+<pre tabindex="0"><code>bash-5.1# sbocheck
 /usr/sbo/repo exists and is not empty. Exiting.
 </code></pre><p>Baiklah, <em>local repository</em>-nya minta dikosongkan dulu</p>
-<pre><code>bash-5.1# rm -r /usr/sbo/repo
+<pre tabindex="0"><code>bash-5.1# rm -r /usr/sbo/repo
 bash-5.1# sbosnap fetch
 Pulling SlackBuilds tree...
 Cloning into '/usr/sbo/repo'...
@@ -266,7 +266,7 @@ Receiving objects: 100% (498277/498277), 142.33 MiB | 199.00 KiB/s, done.
 Resolving deltas: 100% (345959/345959), done.
 Updating files: 100% (40245/40245), done.
 </code></pre><p><em>Recheck</em></p>
-<pre><code>bash-5.1# sbocheck
+<pre tabindex="0"><code>bash-5.1# sbocheck
 Updating SlackBuilds tree...
 Updating files: 100% (40245/40245), done.
 HEAD is now at 97e000b8ce 20210410.1 global branch merge.

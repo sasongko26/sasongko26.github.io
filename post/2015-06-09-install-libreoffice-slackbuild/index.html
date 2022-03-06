@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.92.2" />
 
   <title>Install Libre Office di Slackware &middot; Catatan Sasongko</title>
 
@@ -248,9 +248,9 @@
   <p>Secara <em>default</em> aplikasi perkantoran yang disediakan <em>Slackware</em> bukan <em>Libre Office</em>. Kalau pada saat instalasi <em>Slackware</em> (yang penulis gunakan arsitektur 64 bit) memilih <em>full install</em> maka aplikasi perkantoran yang terpasang adalah <em>Calligra</em>. Dibandingkan dengan <em>Calligra</em>, saya merasa lebih sreg menggunakan <em>LibreOffice</em> karena kompatibilitasnya yang lebih baik terhadap dokumen yang dibuat dengan <em>Ms Office</em> (harap maklum, masih banyak saudara-saudara kita yang belum bisa <em>move on</em> ke <em>open source</em> dan tidak semua menggunakan <em>Ms Office</em> bajakan).</p>
 <p>Berikut adalah langkah-langkah install <em>Libre Office</em> melalui <em>SlackBuild</em>.</p>
 <p>Pastikan sudah terinstall <em>Java Development Kit</em> (JDK) dan <em>CPAN Archive Zip</em>. Untuk install JDK bisa dilihat [di sini]({% post_url 2015-06-07-install-jdk-slackware %}). Kemudian untuk modul perl CPAN Archive Zip.</p>
-<pre><code># cpan -i Archive::Zip
+<pre tabindex="0"><code># cpan -i Archive::Zip
 </code></pre><p>Setelah dependensinya terinstall, kita install <em>Libre Office</em>-nya melalui <em>SlackBuild</em> aja yang gampang. Oiya di sini pastikan kita memegang <em>root privileges</em>.</p>
-<pre><code>cd /usr/local/src
+<pre tabindex="0"><code>cd /usr/local/src
 wget http://slackbuilds.org/slackbuilds/14.1/office/libreoffice.tar.gz
 tar xzf libreoffice.tar.gz
 cd libreoffice
