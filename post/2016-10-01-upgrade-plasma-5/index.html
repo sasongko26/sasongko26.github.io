@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Upgrade Plasma 5 &middot; Catatan Sasongko</title>
 
@@ -250,21 +250,21 @@
   <p>Secara resmi, <em>Slackware</em> masih menggunakan KDE 4 yang &ldquo;ketinggalan jaman&rdquo; padahal pengembang KDE telah merilis KDE (sekarang biasa disebut <strong>Plasma</strong>) 5. Plasma 5 ini masih tetap seperti &ldquo;kakaknya&rdquo; (KDE 4) yang boros <em>memory</em> dibandingkan <em>Xfce</em>. Tapi, masya Allah tampilan lebih keren!</p>
 <p>Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah membuat <em>slackbuild</em> dan <em>binary package</em>-nya yang bisa kita gunakan. Versi terakhir versi Eric saat ini adalah <strong>Plasma 5.7.4</strong> sedangkan insya Allah tanggal 4 Oktober 2016 KDE merilis Plasma 5.8.0.</p>
 <p>Karena keterbatasan kuota internet (maklum tarif internet di Indonesia masih mahal), saya lebih suka langsung <em>download binary</em> daripada <em>slackbuild</em>. Di sini saya gunakan 14.2  64 bit dan sejak awal tidak meng-<em>install</em> paket dari kelompok <strong>kdei</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsync -rvz --partial --progress --exclude<span style="color:#f92672">=</span>kdei rsync://slackware.uk/people/alien-kde/14.2/5/x86_64/ plasma5/
-</code></pre></div><p>Selama proses <em>install</em> oleh Eric dilarang menjalankan KDE maupun X, dalam artian <em>install</em> dengan <strong>runlevel 3</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">init <span style="color:#ae81ff">3</span>
-</code></pre></div><p><em>Uninstall</em> KDE 4 terlebih dahulu.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">removepkg /var/log/packages/*-4.14.3-* libkscreen kscreen kactivities kde-workspace libmm-qt libnm-qt plasma-nm polkit-kde-agent-1 polkit-kde-kcmodules-1 kdeconnect-kde kdepimlibs
-</code></pre></div><p><em>Install</em> dependensinya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd plasma5
-upgradepkg --reinstall --install-new deps/*.t?z
-</code></pre></div><p><em>Install</em> Plasma 5 beserta aplikasinya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">upgradepkg --reinstall --install-new kde/*/*.t?z
-</code></pre></div><p>Nah, peng-<em>install</em>-an <strong>Plasma 5</strong> ini akan membuat beberapa konfigurasi baru. Silahkan pilih akan di-<em>overwrite, remove</em>, atau <em>ignore</em>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">slackpkg new-config
-</code></pre></div><p>Setelah semua beres, jangan lupa untuk mengubah DE <em>default</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">xwmconfig
-</code></pre></div><p>Pilih <!-- raw HTML omitted -->xinitrc.plasma<!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync -rvz --partial --progress --exclude<span style="color:#f92672">=</span>kdei rsync://slackware.uk/people/alien-kde/14.2/5/x86_64/ plasma5/
+</span></span></code></pre></div><p>Selama proses <em>install</em> oleh Eric dilarang menjalankan KDE maupun X, dalam artian <em>install</em> dengan <strong>runlevel 3</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>init <span style="color:#ae81ff">3</span>
+</span></span></code></pre></div><p><em>Uninstall</em> KDE 4 terlebih dahulu.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>removepkg /var/log/packages/*-4.14.3-* libkscreen kscreen kactivities kde-workspace libmm-qt libnm-qt plasma-nm polkit-kde-agent-1 polkit-kde-kcmodules-1 kdeconnect-kde kdepimlibs
+</span></span></code></pre></div><p><em>Install</em> dependensinya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd plasma5
+</span></span><span style="display:flex;"><span>upgradepkg --reinstall --install-new deps/*.t?z
+</span></span></code></pre></div><p><em>Install</em> Plasma 5 beserta aplikasinya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>upgradepkg --reinstall --install-new kde/*/*.t?z
+</span></span></code></pre></div><p>Nah, peng-<em>install</em>-an <strong>Plasma 5</strong> ini akan membuat beberapa konfigurasi baru. Silahkan pilih akan di-<em>overwrite, remove</em>, atau <em>ignore</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>slackpkg new-config
+</span></span></code></pre></div><p>Setelah semua beres, jangan lupa untuk mengubah DE <em>default</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>xwmconfig
+</span></span></code></pre></div><p>Pilih <!-- raw HTML omitted -->xinitrc.plasma<!-- raw HTML omitted --></p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

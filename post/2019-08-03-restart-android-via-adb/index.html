@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Restart android via adb &middot; Catatan Sasongko</title>
 
@@ -249,14 +249,14 @@
 <p>Tadi malam, HP yang OS android <em>touchscreen</em>-nya tidak ada respon. Di semua bagian layar. Tapi tombol power dan volume masih berfungsi. Begitu juga dengan konektivitas internet maupun telepon. Mau mencoba di-<em>restart</em>, tombol power normal tapi untuk memilih <em>shutdown</em> atau <em>reboot</em> tidak bisa karena <em>tochscreen</em>-nya tidak ada respon. Lepas baterai? Tidak bisa karena baterainya tanam.</p>
 <p>Solusinya? <em>restart</em> via komputer. Pastikan sudah terinstall <em>andorid tools</em> (tersedia di SBo).</p>
 <p>Cek dulu apakah HP nya terdeteksi</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ adb devices
-List of devices attached
-* daemon not running; starting now at tcp:5037
-* daemon started successfully
-9H75BEO7W4UORSKF	device
-</code></pre></div><p>Ok. Lanjut <em>restart</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ adb reboot
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ adb devices
+</span></span><span style="display:flex;"><span>List of devices attached
+</span></span><span style="display:flex;"><span>* daemon not running; starting now at tcp:5037
+</span></span><span style="display:flex;"><span>* daemon started successfully
+</span></span><span style="display:flex;"><span>9H75BEO7W4UORSKF	device
+</span></span></code></pre></div><p>Ok. Lanjut <em>restart</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ adb reboot
+</span></span></code></pre></div>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">

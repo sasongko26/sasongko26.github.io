@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Memformat Partisi &middot; Catatan Sasongko</title>
 
@@ -245,7 +245,7 @@
 
   <p>Melanjutkan catatan [kemarin]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) sekarang partisinya diformat menjadi ext4, format filesystem yang umum digunakan untuk linux dengan kestabilan yang tidak diragukan lagi.</p>
 <p>Partisi yang akan diformat ext4 adalah /dev/sda9 dan akan diberi label sebagai src. Pemformatan ini juga harus dilakukan root.</p>
-<pre tabindex="0"><code># mkfs -t ext4 -L 'src' /dev/sda9
+<pre tabindex="0"><code># mkfs -t ext4 -L &#39;src&#39; /dev/sda9
 mke2fs 1.42.8 (20-Jun-2013)
 Filesystem label=src
 OS type: Linux
@@ -266,7 +266,6 @@ Allocating group tables: done
 Writing inode tables: done                            
 Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done   
-
 </code></pre>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

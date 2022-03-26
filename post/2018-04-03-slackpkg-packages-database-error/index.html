@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Slackpkg packages database error &middot; Catatan Sasongko</title>
 
@@ -247,19 +247,19 @@
 
   <p>Siang ini, <em>upgrade</em> beberapa paket <!-- raw HTML omitted -->SBo<!-- raw HTML omitted -->, salah satunya adalah <!-- raw HTML omitted -->nodejs<!-- raw HTML omitted -->. Tetapi terjadi insiden di sela-sela prosesnya : <em>lowbatt</em> sehingga laptop mati. Kejadian ini awalnya tidak saya ketahui, karena banyak paket yang di-<em>upgrade</em> sehingga lama kemudian saya tinggal mengerjakan pekerjaan yang lain.</p>
 <p>Singkat cerita, saya ingin <em>upgrade</em> paket-paket <em>official</em> melalui <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">slackpkg upgrade-all
-
-FATAL! There is some problem in packages database
-       or maybe an installation or upgrade in progress:
-
-   nodejs-6.11.2-x86_64-1_SBo-upgraded-2018-04-03,11:12:24
-
-       If you <span style="color:#66d9ef">continue</span> you may corrupt packages database.
-       Check or retry later
-</code></pre></div><p>Ternyata tadi <em>upgrade</em> paket dari <!-- raw HTML omitted -->SBo<!-- raw HTML omitted --> belum selesai. Masih memproses <!-- raw HTML omitted -->nodejs<!-- raw HTML omitted -->. Ini terlihat dari <em>output</em> <!-- raw HTML omitted -->slackpkg upgrade-all<!-- raw HTML omitted --> di atas.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>slackpkg upgrade-all
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>FATAL! There is some problem in packages database
+</span></span><span style="display:flex;"><span>       or maybe an installation or upgrade in progress:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   nodejs-6.11.2-x86_64-1_SBo-upgraded-2018-04-03,11:12:24
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>       If you <span style="color:#66d9ef">continue</span> you may corrupt packages database.
+</span></span><span style="display:flex;"><span>       Check or retry later
+</span></span></code></pre></div><p>Ternyata tadi <em>upgrade</em> paket dari <!-- raw HTML omitted -->SBo<!-- raw HTML omitted --> belum selesai. Masih memproses <!-- raw HTML omitted -->nodejs<!-- raw HTML omitted -->. Ini terlihat dari <em>output</em> <!-- raw HTML omitted -->slackpkg upgrade-all<!-- raw HTML omitted --> di atas.</p>
 <p>Yah memang, paket <!-- raw HTML omitted -->nodejs<!-- raw HTML omitted --> belum sempurna ter-<em>upgrade</em>. Padahal <em>compile</em>-nya lama. Apa boleh buat, harus mengikhlaskan untuk menghapus dan <em>reinstall</em> <!-- raw HTML omitted -->nodejs<!-- raw HTML omitted -->-nya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">removepkg nodejs-6.11.2-x86_64-1_SBo-upgraded-2018-04-03,11:12:24
-</code></pre></div><p>Nah, kalau paket yang bermasalah <em>removed</em>, lanjutkan lagi <em>upgrade</em>-nya.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>removepkg nodejs-6.11.2-x86_64-1_SBo-upgraded-2018-04-03,11:12:24
+</span></span></code></pre></div><p>Nah, kalau paket yang bermasalah <em>removed</em>, lanjutkan lagi <em>upgrade</em>-nya.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

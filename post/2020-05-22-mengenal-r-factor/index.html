@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Mengenal objek R factor &middot; Catatan Sasongko</title>
 
@@ -257,18 +257,18 @@ Untuk obesitas, masih bisa diklasifikasikan menjadi 3</li>
 <li>35 - 39,99 : obese class 2</li>
 <li>&gt; 40 : extreme obesity</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#f92672">&gt;</span> bmi <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">21.5</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">25.5</span>, <span style="color:#ae81ff">20.5</span>)
-<span style="color:#f92672">&gt;</span> kategori <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">cut</span>(bmi, breaks<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">18.5</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">40</span>, <span style="color:#66d9ef">Inf</span>), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#39;Underweight&#39;</span>, <span style="color:#e6db74">&#39;Normal&#39;</span>, <span style="color:#e6db74">&#39;Overweight&#39;</span>, <span style="color:#e6db74">&#39;Obese Class 1&#39;</span>, <span style="color:#e6db74">&#39;Obese Class 2&#39;</span>, <span style="color:#e6db74">&#39;Extreme Obesity&#39;</span>)
-<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">View</span>(kategori)
-<span style="color:#ae81ff">1</span> Normal
-<span style="color:#ae81ff">2</span> Normal
-<span style="color:#ae81ff">3</span> Underweight
-<span style="color:#ae81ff">4</span> Normal
-<span style="color:#ae81ff">5</span> Overweight
-<span style="color:#ae81ff">6</span> Overweight
-<span style="color:#ae81ff">7</span> Overweight
-<span style="color:#ae81ff">8</span> Normal
-</code></pre></div><p>kategori pada data di atas, adalah factor yang saya buat dengan 6 level, yaitu Underweight, Normal, Overweight, Obese Class 1, Obese Class 2, Extreme Obesity. Berhubung sumber data kategori berasal dari bmi, maka ketika di-View, yang terlihat hanya kategori Normal, Underweight dan Overweight, menyesuaikan dengan data yang diberikan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> bmi <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">21.5</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">25.5</span>, <span style="color:#ae81ff">20.5</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> kategori <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">cut</span>(bmi, breaks<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">18.5</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">40</span>, <span style="color:#66d9ef">Inf</span>), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#39;Underweight&#39;</span>, <span style="color:#e6db74">&#39;Normal&#39;</span>, <span style="color:#e6db74">&#39;Overweight&#39;</span>, <span style="color:#e6db74">&#39;Obese Class 1&#39;</span>, <span style="color:#e6db74">&#39;Obese Class 2&#39;</span>, <span style="color:#e6db74">&#39;Extreme Obesity&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">View</span>(kategori)
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> Normal
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> Normal
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> Underweight
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span> Normal
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> Overweight
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span> Overweight
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span> Overweight
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span> Normal
+</span></span></code></pre></div><p>kategori pada data di atas, adalah factor yang saya buat dengan 6 level, yaitu Underweight, Normal, Overweight, Obese Class 1, Obese Class 2, Extreme Obesity. Berhubung sumber data kategori berasal dari bmi, maka ketika di-View, yang terlihat hanya kategori Normal, Underweight dan Overweight, menyesuaikan dengan data yang diberikan.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

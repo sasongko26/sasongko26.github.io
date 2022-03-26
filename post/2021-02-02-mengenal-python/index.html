@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Mengenal python &middot; Catatan Sasongko</title>
 
@@ -271,22 +271,22 @@
 <h1 id="bagaimana-memulai-python">Bagaimana memulai python</h1>
 <p>Python adalah bahasa <em>scripting</em>. Secara default menggunakan <em>text based interface</em> atau <em>command line interface</em>. Python memiliki mode interaktif dan mode script. Mode interaktif menuliskan dan menjalankan kode baris-perbaris. Sedangkan mode script menuliskan keseluruhan kode ke dalam file berekstensi <strong>.py</strong> kemudian mengeksusi file tersebut.</p>
 <p>Masuk ke mode interaktif, umumnya dengan menjalankan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ python
-Python 2.7.18 <span style="color:#f92672">(</span>default, Jan <span style="color:#ae81ff">20</span> 2021, 22:57:02<span style="color:#f92672">)</span> 
-<span style="color:#f92672">[</span>GCC 10.2.0<span style="color:#f92672">]</span> on linux2
-Type <span style="color:#e6db74">&#34;help&#34;</span>, <span style="color:#e6db74">&#34;copyright&#34;</span>, <span style="color:#e6db74">&#34;credits&#34;</span> or <span style="color:#e6db74">&#34;license&#34;</span> <span style="color:#66d9ef">for</span> more information.
-&gt;&gt;&gt; 
-</code></pre></div><p><em>Command</em> <strong>python</strong> yang akan dieksekusi dituliskan pada tempat setelah &gt;&gt;&gt;.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ python
+</span></span><span style="display:flex;"><span>Python 2.7.18 <span style="color:#f92672">(</span>default, Jan <span style="color:#ae81ff">20</span> 2021, 22:57:02<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>GCC 10.2.0<span style="color:#f92672">]</span> on linux2
+</span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#34;help&#34;</span>, <span style="color:#e6db74">&#34;copyright&#34;</span>, <span style="color:#e6db74">&#34;credits&#34;</span> or <span style="color:#e6db74">&#34;license&#34;</span> <span style="color:#66d9ef">for</span> more information.
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; 
+</span></span></code></pre></div><p><em>Command</em> <strong>python</strong> yang akan dieksekusi dituliskan pada tempat setelah &gt;&gt;&gt;.
 Pada <strong>slackware</strong>, <em>command</em> tersebut akan menggunakan <strong>python 2</strong>. <strong>Slackware current</strong> secara <em>default</em> memberikan 2 versi <strong>python</strong> yaitu <strong>python 2</strong> dan <strong>python 3</strong>. Untuk menggunakan <strong>python 3</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ python3
-Python 3.9.1 <span style="color:#f92672">(</span>default, Jan <span style="color:#ae81ff">20</span> 2021, 22:58:54<span style="color:#f92672">)</span> 
-<span style="color:#f92672">[</span>GCC 10.2.0<span style="color:#f92672">]</span> on linux
-Type <span style="color:#e6db74">&#34;help&#34;</span>, <span style="color:#e6db74">&#34;copyright&#34;</span>, <span style="color:#e6db74">&#34;credits&#34;</span> or <span style="color:#e6db74">&#34;license&#34;</span> <span style="color:#66d9ef">for</span> more information.
-&gt;&gt;&gt; 
-</code></pre></div><p>Untuk keluar dari mode interaktif tekan <strong>Ctrl D</strong>.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ python3
+</span></span><span style="display:flex;"><span>Python 3.9.1 <span style="color:#f92672">(</span>default, Jan <span style="color:#ae81ff">20</span> 2021, 22:58:54<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>GCC 10.2.0<span style="color:#f92672">]</span> on linux
+</span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#34;help&#34;</span>, <span style="color:#e6db74">&#34;copyright&#34;</span>, <span style="color:#e6db74">&#34;credits&#34;</span> or <span style="color:#e6db74">&#34;license&#34;</span> <span style="color:#66d9ef">for</span> more information.
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; 
+</span></span></code></pre></div><p>Untuk keluar dari mode interaktif tekan <strong>Ctrl D</strong>.
 Masuk ke mode script atau menjalankan script python</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ python namafile.py
-</code></pre></div><h1 id="di-mana-bisa-belajar-python-dari-nol-dengan-mudah">Di mana bisa belajar python dari nol dengan mudah</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ python namafile.py
+</span></span></code></pre></div><h1 id="di-mana-bisa-belajar-python-dari-nol-dengan-mudah">Di mana bisa belajar python dari nol dengan mudah</h1>
 <p>Banyak sumber belajar baik itu berupa <em>ebook</em>, video tutorial, artikel, blog maupun lembaga kursus seperti <a href="https://dqlab.id/signup?referralCode=SASO3950"><strong>dqlab</strong></a>.</p>
 
   

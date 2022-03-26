@@ -26,7 +26,7 @@ Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbdyang
       
       <guid>https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</guid>
       <description>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Managerbelum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failuredengan detail sebagai berikut
-Unable to connect to libvirt. internal error: Cannot find suitable emulator for x86_64 Libvirt URI is: qemu:///system Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 979, in _open_thread self._populate_initial_state() File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 941, in _populate_initial_state logging.</description>
+Unable to connect to libvirt.  internal error: Cannot find suitable emulator for x86_64  Libvirt URI is: qemu:///system  Traceback (most recent call last):  File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 979, in _open_thread  self.</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@ Unable to connect to libvirt. internal error: Cannot find suitable emulator for 
       
       <guid>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</guid>
       <description>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Managertidak bisa dijalankan.
-$ virt-manager Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt; from virtinst import util as util File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt; from virtinst.distroinstaller import DistroInstaller File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt; from . import urlfetcher File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requestsmenunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.</description>
+$ virt-manager Traceback (most recent call last):  File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt;  from virtinst import util as util  File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt;  from virtinst.distroinstaller import DistroInstaller  File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt;  from . import urlfetcher  File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt;  import requests ImportError: No module named requests Ternyata, ada masalah dependensi.</description>
     </item>
     
   </channel>

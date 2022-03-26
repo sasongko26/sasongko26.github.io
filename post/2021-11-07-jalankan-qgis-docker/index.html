@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Jalankan QGIS docker &middot; Catatan Sasongko</title>
 
@@ -252,19 +252,19 @@
 <p>QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.</p>
 <h1 id="install-docker-qgis">Install docker QGIS</h1>
 <p>Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.04 LTS. Yang harus diperhatikan, versi qgis yang digunakan adalah versi 3.16 LTR, sedangkan yang disediakan repo resmi ubuntu 20.04 masihi versi 3.10.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker pull qgis/qgis:release-3_16
-</code></pre></div><h1 id="jalankan-qgis">Jalankan QGIS</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker pull qgis/qgis:release-3_16
+</span></span></code></pre></div><h1 id="jalankan-qgis">Jalankan QGIS</h1>
 <p>Perintah untuk menjalankan qgis dengan docker ternyata panjang. Lebih enak menjadikannya script.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/bin/bash
-</span><span style="color:#75715e"></span>
-xhost +
-docker run --rm --name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;qgis-desktop&#34;</span> -it <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>	-v <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>:/home/<span style="color:#e6db74">${</span>USER<span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>	-v /tmp/.X11-unix:/tmp/.X11-unix <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>	-e DISPLAY<span style="color:#f92672">=</span>$DISPLAY <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>	qgis/qgis:release-3_16 qgis
-xhost -
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>xhost +
+</span></span><span style="display:flex;"><span>docker run --rm --name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;qgis-desktop&#34;</span> -it <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	-v <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>:/home/<span style="color:#e6db74">${</span>USER<span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	-v /tmp/.X11-unix:/tmp/.X11-unix <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	-e DISPLAY<span style="color:#f92672">=</span>$DISPLAY <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	qgis/qgis:release-3_16 qgis
+</span></span><span style="display:flex;"><span>xhost -
+</span></span></code></pre></div>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">

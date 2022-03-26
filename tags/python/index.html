@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>python &middot; Catatan Sasongko</title>
 
@@ -314,7 +314,7 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
 
   <p>
   Untuk membuat histogram dengan python dibutuhkan library pandas dan matplotlib dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:
-#!/usr/bin/python3 import pandas as pd import matplotlib.pyplot as plt # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # histogram plt.hist(x=&#39;beer_servings&#39;, data=alkohol) plt.xlabel(&#39;Kaleng&#39;) plt.ylabel(&#39;Jumlah&#39;) plt.title(&#39;Konsumsi bir tahun 2010 (kaleng)&#39;) plt.tight_layout() plt.show() Hasilnya:
+#!/usr/bin/python3  import pandas as pd import matplotlib.pyplot as plt  # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&#34;../dataset/drinks.csv&#34;)  # histogram plt.hist(x=&#39;beer_servings&#39;, data=alkohol) plt.xlabel(&#39;Kaleng&#39;) plt.ylabel(&#39;Jumlah&#39;) plt.title(&#39;Konsumsi bir tahun 2010 (kaleng)&#39;) plt.tight_layout() plt.show() Hasilnya:
   </p>
 
   
@@ -453,7 +453,7 @@ Akan dibuat data acak bertipe integer (bilangan bulat). Banyaknya data 200, nila
 
   <p>
   Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau median() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # median print(&#39;median konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].median(),&#39;kaleng&#39;) print(&#39;median konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].median()) print(&#39;median konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].median(), &#39;gelas&#39;) print(&#39;median konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].median(), &#39;liter&#39;) 
+#!/usr/bin/env python3  import pandas as pd  # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&#34;../dataset/drinks.csv&#34;)  # median print(&#39;median konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].median(),&#39;kaleng&#39;) print(&#39;median konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].median()) print(&#39;median konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].median(), &#39;gelas&#39;) print(&#39;median konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].median(), &#39;liter&#39;) 
   </p>
 
   
@@ -498,7 +498,7 @@ Akan dibuat data acak bertipe integer (bilangan bulat). Banyaknya data 200, nila
 
   <p>
   Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau mean() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # mean print(&#39;rerata konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].mean(),&#39;kaleng&#39;) print(&#39;rerata konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].mean()) print(&#39;rerata konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].mean(), &#39;gelas&#39;) print(&#39;rerata konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].mean(), &#39;liter&#39;) 
+#!/usr/bin/env python3  import pandas as pd  # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&#34;../dataset/drinks.csv&#34;)  # mean print(&#39;rerata konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].mean(),&#39;kaleng&#39;) print(&#39;rerata konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].mean()) print(&#39;rerata konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].mean(), &#39;gelas&#39;) print(&#39;rerata konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].mean(), &#39;liter&#39;) 
   </p>
 
   
@@ -595,8 +595,8 @@ Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel 
   <p>
   Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi info() dari pandas.
 Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-#!/usr/bin/env python3 import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.info()) Outputnya
-&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns): # Column Non-Null Count Dtype  --- ------ -------------- ----- 0 RowId 178539 non-null object 1 YearStart 178539 non-null int64 2 YearEnd 178539 non-null int64 3 LocationAbbr 178539 non-null object 4 LocationDesc 178539 non-null object 5 Datasource 178539 non-null object 6 Class 178539 non-null object 7 Topic 178539 non-null object 8 Question 178539 non-null object 9 Response 0 non-null float64 10 Data_Value_Unit 178539 non-null object 11 DataValueTypeID 178539 non-null object 12 Data_Value_Type 178539 non-null object 13 Data_Value 120885 non-null float64 14 Data_Value_Alt 0 non-null float64 15 Data_Value_Footnote_Symbol 70619 non-null object 16 Data_Value_Footnote 70619 non-null object 17 Low_Confidence_Limit 120750 non-null float64 18 High_Confidence_Limit 120750 non-null float64 19 Sample_Size 0 non-null float64 20 StratificationCategory1 178539 non-null object 21 Stratification1 178539 non-null object 22 StratificationCategory2 178539 non-null object 23 Stratification2 178539 non-null object 24 StratificationCategory3 0 non-null float64 25 Stratification3 0 non-null float64 26 Geolocation 159375 non-null object 27 ClassID 178539 non-null object 28 TopicID 178539 non-null object 29 QuestionID 178539 non-null object 30 ResponseID 0 non-null float64 31 LocationID 178539 non-null int64 32 StratificationCategoryID1 178539 non-null object 33 StratificationID1 178539 non-null object 34 StratificationCategoryID2 178539 non-null object 35 StratificationID2 178539 non-null object 36 StratificationCategoryID3 0 non-null float64 37 StratificationID3 0 non-null float64 38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.
+#!/usr/bin/env python3  import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.info()) Outputnya
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns):  # Column Non-Null Count Dtype  --- ------ -------------- -----  0 RowId 178539 non-null object  1 YearStart 178539 non-null int64  2 YearEnd 178539 non-null int64  3 LocationAbbr 178539 non-null object  4 LocationDesc 178539 non-null object  5 Datasource 178539 non-null object  6 Class 178539 non-null object  7 Topic 178539 non-null object  8 Question 178539 non-null object  9 Response 0 non-null float64  10 Data_Value_Unit 178539 non-null object  11 DataValueTypeID 178539 non-null object  12 Data_Value_Type 178539 non-null object  13 Data_Value 120885 non-null float64  14 Data_Value_Alt 0 non-null float64  15 Data_Value_Footnote_Symbol 70619 non-null object  16 Data_Value_Footnote 70619 non-null object  17 Low_Confidence_Limit 120750 non-null float64  18 High_Confidence_Limit 120750 non-null float64  19 Sample_Size 0 non-null float64  20 StratificationCategory1 178539 non-null object  21 Stratification1 178539 non-null object  22 StratificationCategory2 178539 non-null object  23 Stratification2 178539 non-null object  24 StratificationCategory3 0 non-null float64  25 Stratification3 0 non-null float64  26 Geolocation 159375 non-null object  27 ClassID 178539 non-null object  28 TopicID 178539 non-null object  29 QuestionID 178539 non-null object  30 ResponseID 0 non-null float64  31 LocationID 178539 non-null int64  32 StratificationCategoryID1 178539 non-null object  33 StratificationID1 178539 non-null object  34 StratificationCategoryID2 178539 non-null object  35 StratificationID2 178539 non-null object  36 StratificationCategoryID3 0 non-null float64  37 StratificationID3 0 non-null float64  38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.
   </p>
 
   
@@ -692,7 +692,7 @@ import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Agin
   <p>
   Untuk menampilkan data baris terakhir dengan python dapat menggunakan fungsi tail() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
 Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.tail(7)) Output :
+import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;)  print(data.tail(7)) Output :
  RowId ... Report 178532 2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA ... NaN 178533 2019~2019~9002~Q41~AGE~AGE_OVERALL~GENDER~MALE ... NaN 178534 2019~2019~9002~Q42~AGE~5064~RACE~HIS ... NaN 178535 2019~2019~9003~Q42~AGE~65PLUS~RACE~ASN ... NaN 178536 2019~2019~9002~Q42~AGE~65PLUS~RACE~HIS ... NaN 178537 2019~2019~9003~Q42~AGE~5064~RACE~BLK .
   </p>
 
@@ -743,7 +743,7 @@ import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Agin
   <p>
   Untuk menampilkan data baris pertama dengan python dapat menggunakan fungsi head() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
 Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.head()) Output :
+import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;)  print(data.head()) Output :
  RowId ... Report 0 2016~2016~12~Q27~AGE~AGE_OVERALL~GENDER~MALE ... NaN 1 2015~2015~66~Q43~AGE~5064~GENDER~MALE ... NaN 2 2018~2018~66~Q18~AGE~5064~GENDER~MALE ... NaN 3 2018~2018~66~Q34~AGE~5064~GENDER~FEMALE ... NaN 4 2015~2015~16~Q43~AGE~65PLUS~GENDER~FEMALE ... NaN [5 rows x 39 columns] Dari output tersebut juga dapat diperoleh informasi jumlah kolomnya, yaitu 39 yang tidak semua kolom ditampilkan.
   </p>
 
@@ -1121,7 +1121,7 @@ Apakah python cocok untuk data science? Mengapa? Ya. Karena python open source m
 
   <p>
   Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Managertidak bisa dijalankan.
-$ virt-manager Traceback (most recent call last): File &#34;/usr/share/virt-manager/virt-manager&#34;, line 33, in &lt;module&gt; from virtinst import util as util File &#34;/usr/share/virt-manager/virtinst/__init__.py&#34;, line 89, in &lt;module&gt; from virtinst.distroinstaller import DistroInstaller File &#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;, line 23, in &lt;module&gt; from . import urlfetcher File &#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;, line 34, in &lt;module&gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requestsmenunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.
+$ virt-manager Traceback (most recent call last):  File &#34;/usr/share/virt-manager/virt-manager&#34;, line 33, in &lt;module&gt;  from virtinst import util as util  File &#34;/usr/share/virt-manager/virtinst/__init__.py&#34;, line 89, in &lt;module&gt;  from virtinst.distroinstaller import DistroInstaller  File &#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;, line 23, in &lt;module&gt;  from . import urlfetcher  File &#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;, line 34, in &lt;module&gt;  import requests ImportError: No module named requests Ternyata, ada masalah dependensi.
   </p>
 
   

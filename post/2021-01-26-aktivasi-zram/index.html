@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Aktivasi zram &middot; Catatan Sasongko</title>
 
@@ -256,143 +256,143 @@
 <p>Bukankah ada partisi <strong>swap</strong>? Betul, tetapi <strong>swap</strong> menggunakan <em>harddisk</em> sedangkan <strong>zram</strong> memakai RAM. Kecepatan olah data lebih cepat menggunakan RAM.</p>
 <p>Oke, sekarang bagaimana teknisnya?</p>
 <p>Buat file <code>/etc/rc.d/rc.zram</code>. File ini akan dieksekusi segera setelah <em>booting</em>. Contohnya adalah seperti di bawah ini, yang saya dapatkan dari repo gitlabnya walecha (Terima kasih Pak Walesa).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -r /etc/default/zram <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-  . /etc/default/zram
-<span style="color:#66d9ef">else</span>
-  <span style="color:#75715e"># See /sys/block/zramX/comp_algo for available compression algorithm</span>
-  ZRAMCOMP<span style="color:#f92672">=</span>zstd
-
-  <span style="color:#75715e"># ZRAM device to use</span>
-  ZRAMDEV<span style="color:#f92672">=</span>/dev/zram0
-  <span style="color:#75715e"># Or if you want to use last available zram device</span>
-  <span style="color:#75715e">#ZRAMDEV=$(/sbin/zramctl -f)</span>
-
-  <span style="color:#75715e"># Set it to fixed value in gigabytes, for example 4GB:</span>
-  ZRAMSIZE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1G&#34;</span>
-  <span style="color:#75715e"># Or calculate by divide total available RAM by DIVNUM. Change it as you wish.</span>
-  <span style="color:#75715e">#DIVNUM=3</span>
-
-  <span style="color:#75715e"># Use higher priority than on-disk swap, priority is a value between -1 and 32767</span>
-  SWAPPRIORITY<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>
-<span style="color:#66d9ef">fi</span>
-
-f_test<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  <span style="color:#75715e"># Disable zswap</span>
-  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>cat /sys/module/zswap/parameters/enabled<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Y&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-    echo <span style="color:#ae81ff">0</span> &gt;/sys/module/zswap/parameters/enabled
-  <span style="color:#66d9ef">fi</span>
-  <span style="color:#66d9ef">if</span> /sbin/swaplabel $ZRAMDEV 2&gt;/dev/null | grep -q <span style="color:#e6db74">&#39;UUID:&#39;</span>; <span style="color:#66d9ef">then</span>
-    <span style="color:#66d9ef">if</span> cat /proc/swaps | grep -q <span style="color:#e6db74">&#34;</span>$ZRAMDEV<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">then</span>
-      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
-    <span style="color:#66d9ef">else</span>
-      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
-    <span style="color:#66d9ef">fi</span>
-  <span style="color:#66d9ef">else</span>
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">2</span>
-  <span style="color:#66d9ef">fi</span>
-<span style="color:#f92672">}</span>
-
-f_create<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  f_test
-  retval<span style="color:#f92672">=</span>$?
-  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $retval -eq <span style="color:#ae81ff">2</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-    echo <span style="color:#e6db74">&#34;Formatting </span>$ZRAMDEV<span style="color:#e6db74">&#34;</span>
-    /sbin/zramctl -a <span style="color:#e6db74">${</span>ZRAMCOMP<span style="color:#e6db74">}</span> -s <span style="color:#e6db74">${</span>ZRAMSIZE<span style="color:#e6db74">}</span> <span style="color:#e6db74">${</span>ZRAMDEV<span style="color:#e6db74">}</span>
-    /sbin/mkswap -f -L ZRAMSWAP <span style="color:#e6db74">${</span>ZRAMDEV<span style="color:#e6db74">}</span> &gt;/dev/null
-  <span style="color:#66d9ef">fi</span>
-<span style="color:#f92672">}</span>
-
-f_start<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  f_test
-  retval<span style="color:#f92672">=</span>$?
-  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $retval -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-    echo <span style="color:#e6db74">&#34;Starting </span>$ZRAMDEV<span style="color:#e6db74">&#34;</span>
-    /sbin/swapon -p <span style="color:#e6db74">${</span>SWAPPRIORITY<span style="color:#e6db74">}</span> <span style="color:#e6db74">${</span>ZRAMDEV<span style="color:#e6db74">}</span>
-  <span style="color:#66d9ef">fi</span>
-<span style="color:#f92672">}</span>
-
-f_stop<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  f_test
-  retval<span style="color:#f92672">=</span>$?
-  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $retval -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-    echo <span style="color:#e6db74">&#34;Stopping </span>$ZRAMDEV<span style="color:#e6db74">&#34;</span>
-    /sbin/swapoff <span style="color:#e6db74">${</span>ZRAMDEV<span style="color:#e6db74">}</span>
-  <span style="color:#66d9ef">fi</span>
-<span style="color:#f92672">}</span>
-
-f_reset<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  f_test
-  retval<span style="color:#f92672">=</span>$?
-  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $retval -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-    echo -n <span style="color:#e6db74">&#34;Resetting </span>$ZRAMDEV<span style="color:#e6db74">&#34;</span>
-    echo <span style="color:#ae81ff">1</span> &gt;/sys/block/<span style="color:#66d9ef">$(</span>basename $ZRAMDEV<span style="color:#66d9ef">)</span>/reset
-  <span style="color:#66d9ef">fi</span>
-<span style="color:#f92672">}</span>
-
-<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> in
-  create<span style="color:#f92672">)</span>
-    f_create
-    ;;
-  start<span style="color:#f92672">)</span>
-    f_create
-    f_start
-    ;;
-  stop<span style="color:#f92672">)</span>
-    f_stop
-    ;;
-  restart<span style="color:#f92672">)</span>
-    f_stop
-    sleep <span style="color:#ae81ff">1</span>
-    f_start
-    ;;
-  reset<span style="color:#f92672">)</span>
-    f_reset
-    ;;
-  forcereset<span style="color:#f92672">)</span>
-    f_stop
-    sleep <span style="color:#ae81ff">1</span>
-    f_reset
-    ;;
-  status<span style="color:#f92672">)</span>
-    f_test
-    retval<span style="color:#f92672">=</span>$?
-    echo -n <span style="color:#e6db74">&#34;Status </span>$ZRAMDEV<span style="color:#e6db74">: &#34;</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $retval -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-      echo <span style="color:#e6db74">&#34;active&#34;</span>
-    <span style="color:#66d9ef">else</span>
-      echo <span style="color:#e6db74">&#34;not active&#34;</span>
-    <span style="color:#66d9ef">fi</span>
-    ;;
-  *<span style="color:#f92672">)</span>
-    echo <span style="color:#e6db74">&#34;</span>$0<span style="color:#e6db74">: create|start|stop|restart|reset|forcereset|status&#34;</span>
-<span style="color:#66d9ef">esac</span>
-</code></pre></div><p>Di sini, 50% RAM digunakan untuk <strong>zram</strong>. Maka <strong>ZRAMSIZE</strong> 1G.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -r /etc/default/zram <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>  . /etc/default/zram
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># See /sys/block/zramX/comp_algo for available compression algorithm</span>
+</span></span><span style="display:flex;"><span>  ZRAMCOMP<span style="color:#f92672">=</span>zstd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># ZRAM device to use</span>
+</span></span><span style="display:flex;"><span>  ZRAMDEV<span style="color:#f92672">=</span>/dev/zram0
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Or if you want to use last available zram device</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#ZRAMDEV=$(/sbin/zramctl -f)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Set it to fixed value in gigabytes, for example 4GB:</span>
+</span></span><span style="display:flex;"><span>  ZRAMSIZE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1G&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Or calculate by divide total available RAM by DIVNUM. Change it as you wish.</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#DIVNUM=3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Use higher priority than on-disk swap, priority is a value between -1 and 32767</span>
+</span></span><span style="display:flex;"><span>  SWAPPRIORITY<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f_test<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Disable zswap</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>cat /sys/module/zswap/parameters/enabled<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Y&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#ae81ff">0</span> &gt;/sys/module/zswap/parameters/enabled
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> /sbin/swaplabel $ZRAMDEV 2&gt;/dev/null | grep -q <span style="color:#e6db74">&#39;UUID:&#39;</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> cat /proc/swaps | grep -q <span style="color:#e6db74">&#34;</span>$ZRAMDEV<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f_create<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  f_test
+</span></span><span style="display:flex;"><span>  retval<span style="color:#f92672">=</span>$?
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $retval -eq <span style="color:#ae81ff">2</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Formatting </span>$ZRAMDEV<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    /sbin/zramctl -a <span style="color:#e6db74">${</span>ZRAMCOMP<span style="color:#e6db74">}</span> -s <span style="color:#e6db74">${</span>ZRAMSIZE<span style="color:#e6db74">}</span> <span style="color:#e6db74">${</span>ZRAMDEV<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>    /sbin/mkswap -f -L ZRAMSWAP <span style="color:#e6db74">${</span>ZRAMDEV<span style="color:#e6db74">}</span> &gt;/dev/null
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f_start<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  f_test
+</span></span><span style="display:flex;"><span>  retval<span style="color:#f92672">=</span>$?
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $retval -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Starting </span>$ZRAMDEV<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    /sbin/swapon -p <span style="color:#e6db74">${</span>SWAPPRIORITY<span style="color:#e6db74">}</span> <span style="color:#e6db74">${</span>ZRAMDEV<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f_stop<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  f_test
+</span></span><span style="display:flex;"><span>  retval<span style="color:#f92672">=</span>$?
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $retval -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Stopping </span>$ZRAMDEV<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    /sbin/swapoff <span style="color:#e6db74">${</span>ZRAMDEV<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f_reset<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  f_test
+</span></span><span style="display:flex;"><span>  retval<span style="color:#f92672">=</span>$?
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $retval -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    echo -n <span style="color:#e6db74">&#34;Resetting </span>$ZRAMDEV<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#ae81ff">1</span> &gt;/sys/block/<span style="color:#66d9ef">$(</span>basename $ZRAMDEV<span style="color:#66d9ef">)</span>/reset
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> in
+</span></span><span style="display:flex;"><span>  create<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    f_create
+</span></span><span style="display:flex;"><span>    ;;
+</span></span><span style="display:flex;"><span>  start<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    f_create
+</span></span><span style="display:flex;"><span>    f_start
+</span></span><span style="display:flex;"><span>    ;;
+</span></span><span style="display:flex;"><span>  stop<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    f_stop
+</span></span><span style="display:flex;"><span>    ;;
+</span></span><span style="display:flex;"><span>  restart<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    f_stop
+</span></span><span style="display:flex;"><span>    sleep <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    f_start
+</span></span><span style="display:flex;"><span>    ;;
+</span></span><span style="display:flex;"><span>  reset<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    f_reset
+</span></span><span style="display:flex;"><span>    ;;
+</span></span><span style="display:flex;"><span>  forcereset<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    f_stop
+</span></span><span style="display:flex;"><span>    sleep <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    f_reset
+</span></span><span style="display:flex;"><span>    ;;
+</span></span><span style="display:flex;"><span>  status<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    f_test
+</span></span><span style="display:flex;"><span>    retval<span style="color:#f92672">=</span>$?
+</span></span><span style="display:flex;"><span>    echo -n <span style="color:#e6db74">&#34;Status </span>$ZRAMDEV<span style="color:#e6db74">: &#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $retval -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>      echo <span style="color:#e6db74">&#34;active&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>      echo <span style="color:#e6db74">&#34;not active&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>    ;;
+</span></span><span style="display:flex;"><span>  *<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;</span>$0<span style="color:#e6db74">: create|start|stop|restart|reset|forcereset|status&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">esac</span>
+</span></span></code></pre></div><p>Di sini, 50% RAM digunakan untuk <strong>zram</strong>. Maka <strong>ZRAMSIZE</strong> 1G.</p>
 <p>Jangan lupa beri hak akses eksekusi. <em>Command</em> dijalankan oleh <strong>root</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ chmod +x /etc/rc.d/rc.zram
-</code></pre></div><p>Kemudian sertakan ke <code>/etc/rc.d/rc.local</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -x /etc/rc.d/rc.zram <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-		/etc/rc.d/rc.zram start
-<span style="color:#66d9ef">fi</span>
-</code></pre></div><p>Kemudian pastikan kernel modul <strong>zram</strong> bisa di-<em>load</em>. Secara <em>default</em> modul <strong>zram</strong> bersifat modular yang tidak secara otomatis <em>load</em>. Ada 2 cara</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ chmod +x /etc/rc.d/rc.zram
+</span></span></code></pre></div><p>Kemudian sertakan ke <code>/etc/rc.d/rc.local</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -x /etc/rc.d/rc.zram <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>		/etc/rc.d/rc.zram start
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span></code></pre></div><p>Kemudian pastikan kernel modul <strong>zram</strong> bisa di-<em>load</em>. Secara <em>default</em> modul <strong>zram</strong> bersifat modular yang tidak secara otomatis <em>load</em>. Ada 2 cara</p>
 <ol>
 <li>Memasukkan ke dalam <strong>initrd</strong>.
 Penulis terbiasa membuat <strong>initrd</strong> dengan bantuan <strong>mkinird_command_generator</strong>. Di sini ditambahkan <code>-m zram</code>. Sehingga pembuatannya <strong>initrd</strong>-nya (<em>command</em> dijalankan oleh <strong>root</strong>. Ini sangat mungkin berbeda dengan milik pembaca. Berbeda dari sisi versi kernel (opsi -k), partisi root (opsi -r), modul yang di-<em>load</em> dan lokasi <strong>initrd</strong> yang diinginkan. Secara <em>default</em> di  /boot (opsi -o). Tapi penulis di /boot/efi/EFI/Slackware.</li>
 </ol>
 <pre tabindex="0"><code>mkinitrd -c -k 5.10.10 -f ext4 -r /dev/sda3 -m xhci-pci:ohci-pci:ehci-pci:xhci-hcd:uhci-hcd:ehci-hcd:hid:usbhid:i2c-hid:hid_generic:hid-asus:hid-cherry:hid-logitech:hid-logitech-dj:hid-logitech-hidpp:hid-lenovo:hid-microsoft:hid_multitouch:jbd2:mbcache:ext4:zram -u -o /boot/initrd.gz
 </code></pre><p>Kemudian sertakan <strong>initrd</strong> ke <em>boot loader</em>. Penulis gunakan <em>boot loader</em> <strong>elilo</strong> dengan <strong>kernel generic</strong>, <strong>initrd</strong>-nya <strong>initrd.gz</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">image<span style="color:#f92672">=</span>generic
-    label<span style="color:#f92672">=</span>generic
-    initrd<span style="color:#f92672">=</span>initrd.gz
-    read-only
-    append<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;root=/dev/sda3 vga=normal ro&#34;</span>
-</code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>image<span style="color:#f92672">=</span>generic
+</span></span><span style="display:flex;"><span>    label<span style="color:#f92672">=</span>generic
+</span></span><span style="display:flex;"><span>    initrd<span style="color:#f92672">=</span>initrd.gz
+</span></span><span style="display:flex;"><span>    read-only
+</span></span><span style="display:flex;"><span>    append<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;root=/dev/sda3 vga=normal ro&#34;</span>
+</span></span></code></pre></div><ol start="2">
 <li>Menggunakan <strong>modprobe</strong>.
 Modul <strong>zram</strong> di-<em>load</em> belakangan. Pada bagian awal dari <code>/etc/rc.d/rc.zram</code> (bisa tepat di bawah <em>shebang</em>/baris 2) tambahkan</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">modprobe zram
-</code></pre></div><p>Selesai, selamat menikmati.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>modprobe zram
+</span></span></code></pre></div><p>Selesai, selamat menikmati.</p>
 <p><img src="https://sasongko.web.id/gambar/htop-with-zram-battery.png" alt=""></p>
 <p>Pada kasus ini, tampak bahwa penggunaan zram 24,8 MB (dengan kompresi), sedangkan apabila tanpa dikompres atau tanpa zram membutuhkan <em>memory</em> 177 MB.</p>
 

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Menambahkan scanner &middot; Catatan Sasongko</title>
 
@@ -248,17 +248,17 @@
   <p>Instalasi <em>scanner</em> di linux terutama <strong>slackware</strong> sangat mudah. Biasanya <em>scanner</em> terdeteksi secara otomatis dan langsung bisa dijalankan. Pengaturan hanya dibutuhkan jika <em>scanner</em> tidak terdeteksi.</p>
 <p>Catatan kali ini tentang menambahkan <em>scanner</em> yang tidak terdeteksi secara otomatis. <em>Scanner</em> seperangkat dengan <em>printer</em>, yaitu <strong>Epson L3110</strong>. Printer terdeteksi otomatis dan langsun bisa digunakan, tetapi <em>scanner</em>-nya belum. Software untuk scan seperti xsane atau skanlite salah mendeteksi. Keduanya mendeteksi scanner yang digunakan adalah webcam.</p>
 <p><em>Scanner</em> terhubung melalui usb, sehingga perlu dicek terlebih dahulu apakah usbnya terdeteksi.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ lsusb
-Bus <span style="color:#ae81ff">002</span> Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
-Bus <span style="color:#ae81ff">001</span> Device 004: ID 174f:1173 Syntek EasyCamera
-Bus <span style="color:#ae81ff">001</span> Device 003: ID 0cf3:e360 Qualcomm Atheros Communications 
-Bus <span style="color:#ae81ff">001</span> Device 002: ID 0bda:0129 Realtek Semiconductor Corp. RTS5129 Card Reader Controller
-Bus <span style="color:#ae81ff">001</span> Device 005: ID 04b8:1142 Seiko Epson Corp. L3110 Series
-Bus <span style="color:#ae81ff">001</span> Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-</code></pre></div><p>Terdeteksi sebagai 04b8:1142.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ lsusb
+</span></span><span style="display:flex;"><span>Bus <span style="color:#ae81ff">002</span> Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+</span></span><span style="display:flex;"><span>Bus <span style="color:#ae81ff">001</span> Device 004: ID 174f:1173 Syntek EasyCamera
+</span></span><span style="display:flex;"><span>Bus <span style="color:#ae81ff">001</span> Device 003: ID 0cf3:e360 Qualcomm Atheros Communications 
+</span></span><span style="display:flex;"><span>Bus <span style="color:#ae81ff">001</span> Device 002: ID 0bda:0129 Realtek Semiconductor Corp. RTS5129 Card Reader Controller
+</span></span><span style="display:flex;"><span>Bus <span style="color:#ae81ff">001</span> Device 005: ID 04b8:1142 Seiko Epson Corp. L3110 Series
+</span></span><span style="display:flex;"><span>Bus <span style="color:#ae81ff">001</span> Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+</span></span></code></pre></div><p>Terdeteksi sebagai 04b8:1142.</p>
 <p>Selanjutnya, tambahkan ID usb tersebut ke dalam file konfigurasi. Karena ini menggunakan epson maka /etc/sane.d/epson.conf.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">usb 0x4b8 0x1142
-</code></pre></div><p>Nah, selanjutnya <em>scanner</em> sudah bisa digunakan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>usb 0x4b8 0x1142
+</span></span></code></pre></div><p>Nah, selanjutnya <em>scanner</em> sudah bisa digunakan.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

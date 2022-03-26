@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Enkripsi File dengan OpenSSL &middot; Catatan Sasongko</title>
 
@@ -251,14 +251,14 @@
 
   <p>Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan <!-- raw HTML omitted -->openssl<!-- raw HTML omitted -->. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).</p>
 <p>Contoh, saya punya file yang perlu diamankan. Katakanlah filenya <!-- raw HTML omitted -->indonesia-raya.odt<!-- raw HTML omitted -->. Saya enkripsi menggunakan <!-- raw HTML omitted -->openssl<!-- raw HTML omitted --> dengan <em>cipher rc4</em>. File hasil enkripsi saya namai <!-- raw HTML omitted -->rahasia.odt<!-- raw HTML omitted --> yang saya taruh di fd dan fd saya <!-- raw HTML omitted -->mount<!-- raw HTML omitted --> di <!-- raw HTML omitted -->/media/hd0<!-- raw HTML omitted -->. Kemudian akan ditanya <em>password</em> enkripsinya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ openssl enc -e -rc4 -in indonesia-raya.odt -out /media/hd0/rahasia.odt
-enter rc4 encryption password:
-Verifying - enter rc4 encryption password:
-</code></pre></div><p><img src="https://sasongko.web.id/gambar/openssl-enkrip-1.png" alt="konten indonesia-raya.odt yang asli belum dienkripsi"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ openssl enc -e -rc4 -in indonesia-raya.odt -out /media/hd0/rahasia.odt
+</span></span><span style="display:flex;"><span>enter rc4 encryption password:
+</span></span><span style="display:flex;"><span>Verifying - enter rc4 encryption password:
+</span></span></code></pre></div><p><img src="https://sasongko.web.id/gambar/openssl-enkrip-1.png" alt="konten indonesia-raya.odt yang asli belum dienkripsi"></p>
 <p><img src="https://sasongko.web.id/gambar/openssl-enkrip-2.png" alt="konten file rahasia.odt hasil enkripsi"></p>
 <p>Untuk mendekrip, tambahkan opsi -d kemudian masukkan <em>password</em>-nya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ openssl enc -d -rc4 -in /media/hd0/rahasia.odt -out indonesia-raya.odt
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ openssl enc -d -rc4 -in /media/hd0/rahasia.odt -out indonesia-raya.odt
+</span></span></code></pre></div>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">

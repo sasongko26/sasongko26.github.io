@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Memformat Flashdisk di LInux &middot; Catatan Sasongko</title>
 
@@ -280,7 +280,7 @@ Password:
 [  843.951737] sd 5:0:0:0: [sdb] Attached SCSI removable disk
 </code></pre><p>Tampak bahwa flashdisk Toshiba itu dianggap oleh sistem sebagai /dev/sdb1.</p>
 <p>Nah, karena flashdisk ini biasanya dibawa kemana-mana, digunakan untuk pertukaran file antar komputer yang mana mayoritas komputer di Indonesia umumnya bersistem Windows, maka flashdisknya diformat FAT32 saja agar tetap terbaca di Windows.</p>
-<pre tabindex="0"><code># mkfs.vfat -F 32 -n &quot;ini punyaku&quot; /dev/sdb1
+<pre tabindex="0"><code># mkfs.vfat -F 32 -n &#34;ini punyaku&#34; /dev/sdb1
 mkfs.fat 3.0.22 (2013-07-19)
 </code></pre><ul>
 <li>mkfs.vfat digunakan untuk membuat file sistem dengan format FAT.</li>

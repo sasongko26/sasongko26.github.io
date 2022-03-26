@@ -60,7 +60,7 @@ my @biodata = ($nama, $jenis_kelamin, $distro, $tahun); </description>
       <guid>https://sasongko.web.id/post/2022-01-01-hapus-baris-dari-awal-sampai-kata-spesifik/</guid>
       <description>Mungkin ini adalah catatan dengan judul terpanjang yang pernah kami tulis. Catatan ini berisi tentang bagaimana cara menghapus baris dari awal sampai dengan baris yang berawalan dengan kata-kata spesifik.
 Contoh, punya file teks lagu.txt berisi sebagai berikut
-kelelawar by koes plus kelelawar sayapnya hitam terbang rendah di tengah malam pagi-pagi mereka pulang di dahan pohon bergelantungan hitam hitam hitam Teks tersebut dihapus sebagian, yaitu mulai baris pertama sampai dengan pagi-pagi. Dengan kata lain hanya tersisa di dahan pohon dst.</description>
+kelelawar by koes plus  kelelawar sayapnya hitam terbang rendah di tengah malam pagi-pagi mereka pulang di dahan pohon bergelantungan hitam hitam hitam Teks tersebut dihapus sebagian, yaitu mulai baris pertama sampai dengan pagi-pagi.</description>
     </item>
     
     <item>
@@ -79,7 +79,7 @@ kelelawar by koes plus kelelawar sayapnya hitam terbang rendah di tengah malam p
       
       <guid>https://sasongko.web.id/post/2021-12-19-list-module-perl-terinstall/</guid>
       <description>Untuk mengetahui semua modul perl yang terinstall bisa menggunakan instmodsh.
-$ instmodsh Available commands are: l - List all installed modules m &amp;lt;module&amp;gt; - Select a module q - Quit the program cmd? Kemudian pilih l.</description>
+$ instmodsh Available commands are:  l - List all installed modules  m &amp;lt;module&amp;gt; - Select a module  q - Quit the program cmd? Kemudian pilih l.</description>
     </item>
     
     <item>
@@ -123,7 +123,7 @@ Fitur yang sangat bagus dari kfind adalah bisa menyimpan hasil pencarian. Namun,
       <guid>https://sasongko.web.id/post/2021-12-16-mitigasi-log4shell/</guid>
       <description>Log4shell menjadi topik yang hangat dibicarakan sepekan ini. Bugs JNDI lookup pada log4j membuat komputer atau pc (terutama server) semakin mudah diambil alih tanpa ijin. Syukur alhamdulillah sudah dirilis versi terbaru untuk menangkalnya, yaitu versi 2.16.0.
 Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagian dari default packages.
-# slackpkg file-search log4j Looking for log4j in package list. Please wait... DONE No packages contains &amp;#34;log4j&amp;#34; file. Tidak ditemukan.</description>
+# slackpkg file-search log4j  Looking for log4j in package list. Please wait... DONE  No packages contains &amp;#34;log4j&amp;#34; file.</description>
     </item>
     
     <item>
@@ -166,7 +166,7 @@ print(scalar(@buah)); </description>
       <guid>https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/</guid>
       <description>Jenis variabel ketiga yang dimiliki perl adalah hash. Hash ini merupakan data berpasangan. Penulisan dengan menyertakan tanda %.
 Contoh: akan dideklarasikan data tentang saya, yaitu nama dan distro yang saya gunakan. Nama saya Sasongko, distro Slackware.
-my %data = ( nama =&amp;gt; &amp;#34;Sasongko&amp;#34;, distro =&amp;gt; &amp;#34;Slackware&amp;#34;, ); </description>
+my %data = ( 	nama =&amp;gt; &amp;#34;Sasongko&amp;#34;, 	distro =&amp;gt; &amp;#34;Slackware&amp;#34;, 	); </description>
     </item>
     
     <item>
@@ -224,7 +224,7 @@ $ fusermount mtp </description>
 dockerd List docker imagenya
 $ docker images REPOSITORY TAG IMAGE ID CREATED SIZE qgis/qgis release-3_16 ee28ddd8c37a 4 days ago 7.43GB qgis/qgis &amp;lt;none&amp;gt; c84657a1e2f6 3 weeks ago 7.43GB Hapus
 $ docker rmi -f ee28ddd8c37a c84657a1e2f6 Ingin menghapus semua container, image, dll
-$ docker system prune -a WARNING! This will remove: - all stopped containers - all networks not used by at least one container - all dangling images - all dangling build cache Are you sure you want to continue?</description>
+$ docker system prune -a WARNING! This will remove:  - all stopped containers  - all networks not used by at least one container  - all dangling images  - all dangling build cache  Are you sure you want to continue?</description>
     </item>
     
     <item>
@@ -407,7 +407,7 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
       
       <guid>https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/</guid>
       <description>Untuk membuat histogram dengan python dibutuhkan library pandas dan matplotlib dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:
-#!/usr/bin/python3 import pandas as pd import matplotlib.pyplot as plt # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # histogram plt.hist(x=&amp;#39;beer_servings&amp;#39;, data=alkohol) plt.xlabel(&amp;#39;Kaleng&amp;#39;) plt.ylabel(&amp;#39;Jumlah&amp;#39;) plt.title(&amp;#39;Konsumsi bir tahun 2010 (kaleng)&amp;#39;) plt.tight_layout() plt.show() Hasilnya:</description>
+#!/usr/bin/python3  import pandas as pd import matplotlib.pyplot as plt  # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;)  # histogram plt.hist(x=&amp;#39;beer_servings&amp;#39;, data=alkohol) plt.xlabel(&amp;#39;Kaleng&amp;#39;) plt.ylabel(&amp;#39;Jumlah&amp;#39;) plt.title(&amp;#39;Konsumsi bir tahun 2010 (kaleng)&amp;#39;) plt.tight_layout() plt.show() Hasilnya:</description>
     </item>
     
     <item>
@@ -454,7 +454,7 @@ Akan dibuat data acak bertipe integer (bilangan bulat). Banyaknya data 200, nila
       <description>Malam ini, ketika akan update SBo, ternyata tanpa disadari internet disconnect sebelumnya.
 bash-5.1# sbocheck Updating SlackBuilds tree... fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution) Could not sync from git://github.com/Ponce/slackbuilds.git. Setelah internet tidak ada masalah, gantian sbotools-nya yang masalah
 bash-5.1# sbocheck /usr/sbo/repo exists and is not empty. Exiting. Baiklah, local repository-nya minta dikosongkan dulu
-bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree... Cloning into &#39;/usr/sbo/repo&#39;.</description>
+bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree... Cloning into &amp;#39;/usr/sbo/repo&amp;#39;.</description>
     </item>
     
     <item>
@@ -492,7 +492,7 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso </description>
       
       <guid>https://sasongko.web.id/post/2021-03-27-median-data-python/</guid>
       <description>Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau median() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # median print(&amp;#39;median konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].median(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;median konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].median()) print(&amp;#39;median konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].median(), &amp;#39;gelas&amp;#39;) print(&amp;#39;median konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].median(), &amp;#39;liter&amp;#39;) </description>
+#!/usr/bin/env python3  import pandas as pd  # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;)  # median print(&amp;#39;median konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].median(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;median konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].median()) print(&amp;#39;median konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].median(), &amp;#39;gelas&amp;#39;) print(&amp;#39;median konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].median(), &amp;#39;liter&amp;#39;) </description>
     </item>
     
     <item>
@@ -502,7 +502,7 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso </description>
       
       <guid>https://sasongko.web.id/post/2021-03-26-mean-data-python/</guid>
       <description>Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau mean() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # mean print(&amp;#39;rerata konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].mean(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;rerata konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].mean()) print(&amp;#39;rerata konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].mean(), &amp;#39;gelas&amp;#39;) print(&amp;#39;rerata konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].mean(), &amp;#39;liter&amp;#39;) </description>
+#!/usr/bin/env python3  import pandas as pd  # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;)  # mean print(&amp;#39;rerata konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].mean(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;rerata konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].mean()) print(&amp;#39;rerata konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].mean(), &amp;#39;gelas&amp;#39;) print(&amp;#39;rerata konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].mean(), &amp;#39;liter&amp;#39;) </description>
     </item>
     
     <item>
@@ -525,8 +525,8 @@ Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel 
       <guid>https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/</guid>
       <description>Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi info() dari pandas.
 Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-#!/usr/bin/env python3 import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.info()) Outputnya
-&amp;lt;class &amp;#39;pandas.core.frame.DataFrame&amp;#39;&amp;gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns): # Column Non-Null Count Dtype  --- ------ -------------- ----- 0 RowId 178539 non-null object 1 YearStart 178539 non-null int64 2 YearEnd 178539 non-null int64 3 LocationAbbr 178539 non-null object 4 LocationDesc 178539 non-null object 5 Datasource 178539 non-null object 6 Class 178539 non-null object 7 Topic 178539 non-null object 8 Question 178539 non-null object 9 Response 0 non-null float64 10 Data_Value_Unit 178539 non-null object 11 DataValueTypeID 178539 non-null object 12 Data_Value_Type 178539 non-null object 13 Data_Value 120885 non-null float64 14 Data_Value_Alt 0 non-null float64 15 Data_Value_Footnote_Symbol 70619 non-null object 16 Data_Value_Footnote 70619 non-null object 17 Low_Confidence_Limit 120750 non-null float64 18 High_Confidence_Limit 120750 non-null float64 19 Sample_Size 0 non-null float64 20 StratificationCategory1 178539 non-null object 21 Stratification1 178539 non-null object 22 StratificationCategory2 178539 non-null object 23 Stratification2 178539 non-null object 24 StratificationCategory3 0 non-null float64 25 Stratification3 0 non-null float64 26 Geolocation 159375 non-null object 27 ClassID 178539 non-null object 28 TopicID 178539 non-null object 29 QuestionID 178539 non-null object 30 ResponseID 0 non-null float64 31 LocationID 178539 non-null int64 32 StratificationCategoryID1 178539 non-null object 33 StratificationID1 178539 non-null object 34 StratificationCategoryID2 178539 non-null object 35 StratificationID2 178539 non-null object 36 StratificationCategoryID3 0 non-null float64 37 StratificationID3 0 non-null float64 38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.</description>
+#!/usr/bin/env python3  import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.info()) Outputnya
+&amp;lt;class &amp;#39;pandas.core.frame.DataFrame&amp;#39;&amp;gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns):  # Column Non-Null Count Dtype  --- ------ -------------- -----  0 RowId 178539 non-null object  1 YearStart 178539 non-null int64  2 YearEnd 178539 non-null int64  3 LocationAbbr 178539 non-null object  4 LocationDesc 178539 non-null object  5 Datasource 178539 non-null object  6 Class 178539 non-null object  7 Topic 178539 non-null object  8 Question 178539 non-null object  9 Response 0 non-null float64  10 Data_Value_Unit 178539 non-null object  11 DataValueTypeID 178539 non-null object  12 Data_Value_Type 178539 non-null object  13 Data_Value 120885 non-null float64  14 Data_Value_Alt 0 non-null float64  15 Data_Value_Footnote_Symbol 70619 non-null object  16 Data_Value_Footnote 70619 non-null object  17 Low_Confidence_Limit 120750 non-null float64  18 High_Confidence_Limit 120750 non-null float64  19 Sample_Size 0 non-null float64  20 StratificationCategory1 178539 non-null object  21 Stratification1 178539 non-null object  22 StratificationCategory2 178539 non-null object  23 Stratification2 178539 non-null object  24 StratificationCategory3 0 non-null float64  25 Stratification3 0 non-null float64  26 Geolocation 159375 non-null object  27 ClassID 178539 non-null object  28 TopicID 178539 non-null object  29 QuestionID 178539 non-null object  30 ResponseID 0 non-null float64  31 LocationID 178539 non-null int64  32 StratificationCategoryID1 178539 non-null object  33 StratificationID1 178539 non-null object  34 StratificationCategoryID2 178539 non-null object  35 StratificationID2 178539 non-null object  36 StratificationCategoryID3 0 non-null float64  37 StratificationID3 0 non-null float64  38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.</description>
     </item>
     
     <item>
@@ -558,7 +558,7 @@ import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_
       <guid>https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/</guid>
       <description>Untuk menampilkan data baris terakhir dengan python dapat menggunakan fungsi tail() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
 Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.tail(7)) Output :
+import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;)  print(data.tail(7)) Output :
  RowId ... Report 178532 2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA ... NaN 178533 2019~2019~9002~Q41~AGE~AGE_OVERALL~GENDER~MALE ... NaN 178534 2019~2019~9002~Q42~AGE~5064~RACE~HIS ... NaN 178535 2019~2019~9003~Q42~AGE~65PLUS~RACE~ASN ... NaN 178536 2019~2019~9002~Q42~AGE~65PLUS~RACE~HIS ... NaN 178537 2019~2019~9003~Q42~AGE~5064~RACE~BLK .</description>
     </item>
     
@@ -570,7 +570,7 @@ import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_
       <guid>https://sasongko.web.id/post/2021-03-20-menampilkan-data-baris-pertama-python/</guid>
       <description>Untuk menampilkan data baris pertama dengan python dapat menggunakan fungsi head() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
 Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.head()) Output :
+import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;)  print(data.head()) Output :
  RowId ... Report 0 2016~2016~12~Q27~AGE~AGE_OVERALL~GENDER~MALE ... NaN 1 2015~2015~66~Q43~AGE~5064~GENDER~MALE ... NaN 2 2018~2018~66~Q18~AGE~5064~GENDER~MALE ... NaN 3 2018~2018~66~Q34~AGE~5064~GENDER~FEMALE ... NaN 4 2015~2015~16~Q43~AGE~65PLUS~GENDER~FEMALE ... NaN [5 rows x 39 columns] Dari output tersebut juga dapat diperoleh informasi jumlah kolomnya, yaitu 39 yang tidak semua kolom ditampilkan.</description>
     </item>
     
@@ -751,7 +751,7 @@ $ rm .serverauth* </description>
       
       <guid>https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/</guid>
       <description>Beberapa saat yang lalu penulis terkena prank dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan flight mode di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek nmcli
-$ nmcli p2p-dev-wlan0: disconnected &amp;#34;p2p-dev-wlan0&amp;#34; wifi-p2p, sw disabled, hw eth0: unavailable &amp;#34;Realtek RTL810xE&amp;#34; ethernet (r8169), C8:5B:76:66:51:6C, hw, mtu 1500 wlan0: unavailable &amp;#34;Qualcomm Atheros QCA9377&amp;#34; wifi (ath10k_pci), 8E:58:C9:8B:64:0F, sw disabled, hw, mtu 1500 lo: unmanaged &amp;#34;lo&amp;#34; loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536 Use &amp;#34;nmcli device show&amp;#34; to get complete information about known devices and &amp;#34;nmcli connection show&amp;#34; to get an overview on active connection profiles.</description>
+$ nmcli p2p-dev-wlan0: disconnected  &amp;#34;p2p-dev-wlan0&amp;#34;  wifi-p2p, sw disabled, hw  eth0: unavailable  &amp;#34;Realtek RTL810xE&amp;#34;  ethernet (r8169), C8:5B:76:66:51:6C, hw, mtu 1500  wlan0: unavailable  &amp;#34;Qualcomm Atheros QCA9377&amp;#34;  wifi (ath10k_pci), 8E:58:C9:8B:64:0F, sw disabled, hw, mtu 1500  lo: unmanaged  &amp;#34;lo&amp;#34;  loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536  Use &amp;#34;nmcli device show&amp;#34; to get complete information about known devices and &amp;#34;nmcli connection show&amp;#34; to get an overview on active connection profiles.</description>
     </item>
     
     <item>
@@ -978,7 +978,7 @@ $ tar cvf screenshot.tar.gz Screen* Screenshot_2020-07-15_10-17-33.png Screensho
       
       <guid>https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/</guid>
       <description>Untuk mengetahui alamat ip lokal tanpa akses root dapat menggunakan nmcli
-$ nmcli wlan0: connected to Anatomi &amp;#34;Qualcomm Atheros QCA9377&amp;#34; wifi (ath10k_pci), CC:B0:DA:B5:3B:75, hw, mtu 1500 ip4 default inet4 192.168.120.19/24 route4 0.0.0.0/0 route4 192.168.120.0/24 route4 192.168.120.0/24 inet6 fe80::1a37:a13:b117:ff74/64 route6 fe80::/64 route6 ff00::/8 Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah
+$ nmcli wlan0: connected to Anatomi  &amp;#34;Qualcomm Atheros QCA9377&amp;#34;  wifi (ath10k_pci), CC:B0:DA:B5:3B:75, hw, mtu 1500  ip4 default  inet4 192.168.120.19/24  route4 0.0.0.0/0  route4 192.168.120.0/24  route4 192.168.120.0/24  inet6 fe80::1a37:a13:b117:ff74/64  route6 fe80::/64  route6 ff00::/8 Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah
  ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74  </description>
     </item>
     
@@ -990,7 +990,7 @@ $ nmcli wlan0: connected to Anatomi &amp;#34;Qualcomm Atheros QCA9377&amp;#34; w
       <guid>https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/</guid>
       <description>Pagi ini, saat akan mengeksekusi R,
 $ R /usr/lib64/R/bin/exec/R: error while loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory Ternyata R nya bermasalah. Di atas disebutkan bahwa libicuuc.so.67 tidak ditemukan. Dari namanya, bisa ditebak itu adalah shared object/library miliknya icu4c. Kita pastikan dulu,
-$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE The list below shows the packages that contains &amp;#34;libicuuc\.</description>
+$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE  The list below shows the packages that contains &amp;#34;libicuuc\.</description>
     </item>
     
     <item>
@@ -1193,7 +1193,7 @@ getwd() Mengganti working directory Misal, akan berpindah working directory ke D
       <guid>https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/</guid>
       <description>Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.
 Untuk mengetahui intensitas suara video intro.mkv
-$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &amp;#39;intro.mkv&amp;#39;: Metadata: COMPATIBLE_BRANDS: isommp42 COM.ANDROID.VERSION: 9 MAJOR_BRAND : mp42 MINOR_VERSION : 0 ENCODER : Lavf58.29.100 Duration: 00:00:14.90, start: 0.000000, bitrate: 5559 kb/s Stream #0:0(eng): Video: mpeg4 (Simple Profile), yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 1k tbn, 30 tbc (default) Metadata: HANDLER_NAME : VideoHandle ENCODER : Lavc58.</description>
+$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &amp;#39;intro.mkv&amp;#39;:  Metadata:  COMPATIBLE_BRANDS: isommp42  COM.ANDROID.VERSION: 9  MAJOR_BRAND : mp42  MINOR_VERSION : 0  ENCODER : Lavf58.</description>
     </item>
     
     <item>
@@ -1233,7 +1233,7 @@ ffmpeg -i VID20200509135621.mp4 -vf &amp;#34;scale=1920:1080, setdar=16:9, setsa
       
       <guid>https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/</guid>
       <description>Secara default, output ffmpegakan menampilkan built configuration yang digunakan.
-$ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers built with gcc 9.2.0 (GCC) configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-4.2.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack libavutil 56. 31.100 / 56. 31.100 libavcodec 58. 54.100 / 58.</description>
+$ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers  built with gcc 9.2.0 (GCC)  configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-4.2.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack  libavutil 56. 31.100 / 56. 31.100  libavcodec 58.</description>
     </item>
     
     <item>
@@ -1374,7 +1374,7 @@ Meskipun bersifat open source, sampai sekarang belum ada sistem operasi open sou
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2020-01-10-mtperrorcantopendevice/</guid>
-      <description>Ketika akan memindahkan data dari HP android ke laptop melalui thunar, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui jmtpfs$ jmtpfs Device 0 (VID=0e8d and PID=201d) is a MediaTek Inc Elephone P8000. error returned by libusb_claim_interface() = -6LIBMTP PANIC: Unable to initialize device terminate called after throwing an instance of &amp;#39;MtpErrorCantOpenDevice&amp;#39; what(): Can&amp;#39;t open device Aborted Ada masalah di libusb. Coba reinstall libusb# slackpkg reinstall libusb Alhamdulillah sukses.</description>
+      <description>Ketika akan memindahkan data dari HP android ke laptop melalui thunar, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui jmtpfs$ jmtpfs Device 0 (VID=0e8d and PID=201d) is a MediaTek Inc Elephone P8000. error returned by libusb_claim_interface() = -6LIBMTP PANIC: Unable to initialize device terminate called after throwing an instance of &amp;#39;MtpErrorCantOpenDevice&amp;#39;  what(): Can&amp;#39;t open device Aborted Ada masalah di libusb. Coba reinstall libusb# slackpkg reinstall libusb Alhamdulillah sukses.</description>
     </item>
     
     <item>
@@ -1643,7 +1643,7 @@ OSM Apakah OSM itu? OpenStreetMap (OSM) adalah salah satu layanan peta digital s
       
       <guid>https://sasongko.web.id/post/2018-04-03-slackpkg-packages-database-error/</guid>
       <description>Siang ini, upgrade beberapa paket SBo, salah satunya adalah nodejs. Tetapi terjadi insiden di sela-sela prosesnya : lowbatt sehingga laptop mati. Kejadian ini awalnya tidak saya ketahui, karena banyak paket yang di-upgrade sehingga lama kemudian saya tinggal mengerjakan pekerjaan yang lain.
-Singkat cerita, saya ingin upgrade paket-paket official melalui slackpkgslackpkg upgrade-all FATAL! There is some problem in packages database or maybe an installation or upgrade in progress: nodejs-6.11.2-x86_64-1_SBo-upgraded-2018-04-03,11:12:24 If you continue you may corrupt packages database.</description>
+Singkat cerita, saya ingin upgrade paket-paket official melalui slackpkgslackpkg upgrade-all  FATAL! There is some problem in packages database  or maybe an installation or upgrade in progress:   nodejs-6.</description>
     </item>
     
     <item>
@@ -1653,7 +1653,7 @@ Singkat cerita, saya ingin upgrade paket-paket official melalui slackpkgslackpkg
       
       <guid>https://sasongko.web.id/post/2018-02-18-rename-network-interface/</guid>
       <description>Entah mengapa tadi kepikiran untuk jalankan ifconfig -a. Ternyata kemudian ada output yang menarik
-eth0: flags=4099&amp;lt;UP,BROADCAST,MULTICAST&amp;gt; mtu 1500 ether c8:5b:76:66:51:6a txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 lo: flags=73&amp;lt;UP,LOOPBACK,RUNNING&amp;gt; mtu 65536 inet 127.0.0.1 netmask 255.0.0.0 inet6 ::1 prefixlen 128 scopeid 0x10&amp;lt;host&amp;gt; loop txqueuelen 1000 (Local Loopback) RX packets 0 bytes 0 (0.</description>
+eth0: flags=4099&amp;lt;UP,BROADCAST,MULTICAST&amp;gt; mtu 1500  ether c8:5b:76:66:51:6a txqueuelen 1000 (Ethernet)  RX packets 0 bytes 0 (0.0 B)  RX errors 0 dropped 0 overruns 0 frame 0  TX packets 0 bytes 0 (0.0 B)  TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0  lo: flags=73&amp;lt;UP,LOOPBACK,RUNNING&amp;gt; mtu 65536  inet 127.0.0.1 netmask 255.</description>
     </item>
     
     <item>
@@ -1734,7 +1734,7 @@ Semua yang ada di folder /tmpakan saya hapus kecuali file yang berekstensi txt. 
       
       <guid>https://sasongko.web.id/post/2017-07-05-akibat-lupa-eliloconfig/</guid>
       <description>Kemarin melihat ChangeLog ada beberapa update yang sebagian di antaranya adalah security fix. Salah satu update adalah kernel. Melakukan upgrade semuanya baik-baik saja dan lanjut shutdown. Siang ini, bootingpun masih fine dan no problem. Begitu juga login. Baru terasa saat ingin masuk desktop malah gagal.
-$ startx xauth: file /home/sasongko/.serverauth.2717 does not exist X.Org X Server 1.19.3 Release Date: 2017-03-15 X Protocol Version 11, Revision 0 Build Operating System: Slackware 14.</description>
+$ startx xauth: file /home/sasongko/.serverauth.2717 does not exist   X.Org X Server 1.19.3 Release Date: 2017-03-15 X Protocol Version 11, Revision 0 Build Operating System: Slackware 14.</description>
     </item>
     
     <item>
@@ -1756,7 +1756,7 @@ $ soffice --headless --nologo --convert-to pdf:writer_pdf_Export --outdir ~/conv
       <guid>https://sasongko.web.id/post/2017-07-04-presentasi-lcd-projector/</guid>
       <description>Tools yang digunakan adalah xrandr. Sebenarnya bisa menggunakan aplikasi GUI yang disediakan desktop environment masing-masing, tapi saya lebih suka menggunakan xrandragar universal bisa digunakan di lingkungan desktop apapun, entah itu Fluxbox, FVWM, TWM, Xfce, KDE, Lumina, LXQt, Mate, Cinnamon, dsb.
 Pertama, identifikasi monitor/screen primer yang aktif tersambung saat ini, jangan sambungkan proyektor dulu
-$ xrandr Screen 0: minimum 8 x 8, current 1366 x 768, maximum 32767 x 32767 eDP1 connected primary 1366x768+0+0 (normal left inverted right x axis y axis) 310mm x 170mm 1366x768 59.</description>
+$ xrandr Screen 0: minimum 8 x 8, current 1366 x 768, maximum 32767 x 32767 eDP1 connected primary 1366x768+0+0 (normal left inverted right x axis y axis) 310mm x 170mm  1366x768 59.</description>
     </item>
     
     <item>
@@ -1944,7 +1944,7 @@ DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya le
       <guid>https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/</guid>
       <description>Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya
 dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck. Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu /dev/sda1. Dan direkomendasikan untuk menjalankan fsck.
-fsck /dev/sda1 fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.</description>
+fsck /dev/sda1  fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.</description>
     </item>
     
     <item>
@@ -1986,7 +1986,7 @@ Untuk mengetahui berapa persen brightness yang digunakan saat ini xbacklight. Se
       
       <guid>https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</guid>
       <description>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Managerbelum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failuredengan detail sebagai berikut
-Unable to connect to libvirt. internal error: Cannot find suitable emulator for x86_64 Libvirt URI is: qemu:///system Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 979, in _open_thread self._populate_initial_state() File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 941, in _populate_initial_state logging.</description>
+Unable to connect to libvirt.  internal error: Cannot find suitable emulator for x86_64  Libvirt URI is: qemu:///system  Traceback (most recent call last):  File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 979, in _open_thread  self.</description>
     </item>
     
     <item>
@@ -1996,7 +1996,7 @@ Unable to connect to libvirt. internal error: Cannot find suitable emulator for 
       
       <guid>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</guid>
       <description>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Managertidak bisa dijalankan.
-$ virt-manager Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt; from virtinst import util as util File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt; from virtinst.distroinstaller import DistroInstaller File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt; from . import urlfetcher File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requestsmenunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.</description>
+$ virt-manager Traceback (most recent call last):  File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt;  from virtinst import util as util  File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt;  from virtinst.distroinstaller import DistroInstaller  File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt;  from . import urlfetcher  File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt;  import requests ImportError: No module named requests Ternyata, ada masalah dependensi.</description>
     </item>
     
     <item>
@@ -2038,7 +2038,7 @@ Kemudian ke Settings &amp;mdash;&amp;gt; Appearancepilih GlossyP3Kemudian, memin
       <guid>https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/</guid>
       <description>Menyambung catatan tentang [hilangnya ikon atau NetworkManager]({% post_url 2015-12-26-ikon-networkmanager-hilang %}). Jika nm-applettidak mempan untuk menampilkan applet NetworkManager, maka kita bisa gunakan nmcli.
 nmcliadalah NetworkManager dengan antarmuka teks (command line interface).
-nmcli Usage: nmcli [OPTIONS] OBJECT { COMMAND | help } OPTIONS -t[erse] terse output -p[retty] pretty output -m[ode] tabular|multiline output mode -c[olors] auto|yes|no whether to use colors in output -f[ields] &amp;lt;field1,field2,...&amp;gt;|all|common specify fields to output -e[scape] yes|no escape columns separators in values -a[sk] ask for missing parameters -s[how-secrets] allow displaying passwords -w[ait] &amp;lt;seconds&amp;gt; set timeout waiting for finishing operations -v[ersion] show program version -h[elp] print this help OBJECT g[eneral] NetworkManager&#39;s general status and operations n[etworking] overall networking control r[adio] NetworkManager radio switches c[onnection] NetworkManager&#39;s connections d[evice] devices managed by NetworkManager a[gent] NetworkManager secret agent or polkit agent m[onitor] monitor NetworkManager changes Untuk melihat sambungan/koneksi yang telah dibuat dengan NetworkManager gunakan nmcli c.</description>
+nmcli Usage: nmcli [OPTIONS] OBJECT { COMMAND | help } OPTIONS -t[erse] terse output -p[retty] pretty output -m[ode] tabular|multiline output mode -c[olors] auto|yes|no whether to use colors in output -f[ields] &amp;lt;field1,field2,...&amp;gt;|all|common specify fields to output -e[scape] yes|no escape columns separators in values -a[sk] ask for missing parameters -s[how-secrets] allow displaying passwords -w[ait] &amp;lt;seconds&amp;gt; set timeout waiting for finishing operations -v[ersion] show program version -h[elp] print this help OBJECT g[eneral] NetworkManager&amp;#39;s general status and operations n[etworking] overall networking control r[adio] NetworkManager radio switches c[onnection] NetworkManager&amp;#39;s connections d[evice] devices managed by NetworkManager a[gent] NetworkManager secret agent or polkit agent m[onitor] monitor NetworkManager changes Untuk melihat sambungan/koneksi yang telah dibuat dengan NetworkManager gunakan nmcli c.</description>
     </item>
     
     <item>
@@ -2344,7 +2344,7 @@ Nah, karena partisi /dev/sda9 yang bersistem ext4 kemarin akan saya jadikan seba
       <guid>https://sasongko.web.id/post/2015-07-12-memformat-partisi/</guid>
       <description>Melanjutkan catatan [kemarin]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) sekarang partisinya diformat menjadi ext4, format filesystem yang umum digunakan untuk linux dengan kestabilan yang tidak diragukan lagi.
 Partisi yang akan diformat ext4 adalah /dev/sda9 dan akan diberi label sebagai src. Pemformatan ini juga harus dilakukan root.
-# mkfs -t ext4 -L &#39;src&#39; /dev/sda9 mke2fs 1.42.8 (20-Jun-2013) Filesystem label=src OS type: Linux Block size=4096 (log=2) Fragment size=4096 (log=2) Stride=0 blocks, Stripe width=0 blocks 871408 inodes, 3482075 blocks 174103 blocks (5.</description>
+# mkfs -t ext4 -L &amp;#39;src&amp;#39; /dev/sda9 mke2fs 1.42.8 (20-Jun-2013) Filesystem label=src OS type: Linux Block size=4096 (log=2) Fragment size=4096 (log=2) Stride=0 blocks, Stripe width=0 blocks 871408 inodes, 3482075 blocks 174103 blocks (5.</description>
     </item>
     
     <item>
@@ -2610,7 +2610,7 @@ $ tar xpf nama_file.tar.xz </description>
       <guid>https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/</guid>
       <description>Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.
 Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya
-$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% Clone hard disk created in format &#39;VMDK&#39;. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa Hardisk virtualnya sudah terkonversi.</description>
+$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% Clone hard disk created in format &amp;#39;VMDK&amp;#39;. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa Hardisk virtualnya sudah terkonversi.</description>
     </item>
     
     <item>
@@ -2621,7 +2621,7 @@ $ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%..
       <guid>https://sasongko.web.id/post/2014-03-24-menggunakan-perintah-echo/</guid>
       <description>Echo merupakan perintah bahasa bash (bahasa yang digunakan terminal) untuk menampilkan output ke monitor.
 $ echo “teks yang diinginkan” teks yang diinginkan Contoh:
-$ echo &amp;quot;halloooo.....&amp;quot; halloooo..... $ echo &amp;quot;BlankOn Linux Indonesia&amp;quot; BlankOn Linux Indonesia </description>
+$ echo &amp;#34;halloooo.....&amp;#34; halloooo..... $ echo &amp;#34;BlankOn Linux Indonesia&amp;#34; BlankOn Linux Indonesia </description>
     </item>
     
     <item>

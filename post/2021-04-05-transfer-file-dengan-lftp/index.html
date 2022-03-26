@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Transfer file dengan lftp &middot; Catatan Sasongko</title>
 
@@ -250,20 +250,20 @@
 <pre tabindex="0"><code>net start ftpsvc
 </code></pre><p>Oiya, <strong><em>Command</em> tersebut dijalankan di windows ya bukan slackware</strong>.
 Kemudian, username komputer adalah akukamukita, dengan IP 192.168.120.47. Ok, login ke ftpnya dulu</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bash-5.1$ lftp akukamukita@192.168.120.47
-Password: 
-lftp akukamukita@192.168.120.47:~&gt; 
-</code></pre></div><p>Siap eksekusi! Karena akan memindahkan semua direktori lengkap dengan yang ada di <em>working directory</em>, gunakan <!-- raw HTML omitted -->mirror -R<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">lftp akukamukita@192.168.120.47:/&gt; mirror -R
-cd <span style="color:#e6db74">`</span>.<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">[</span>FEAT negotiation...<span style="color:#f92672">]</span>
-</code></pre></div><p>Ups, datang feat negotiation menghadang.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">lftp akukamukita@192.168.120.47:/&gt; set ftp:use-feat false
-</code></pre></div><p>Mari lanjutkan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">lftp akukamukita@192.168.120.47:/&gt; mirror -R
-Total: <span style="color:#ae81ff">13</span> directories, <span style="color:#ae81ff">20</span> files, <span style="color:#ae81ff">0</span> symlinks                             
-New: <span style="color:#ae81ff">20</span> files, <span style="color:#ae81ff">0</span> symlinks
-<span style="color:#ae81ff">2810640970</span> bytes transferred in <span style="color:#ae81ff">879</span> seconds <span style="color:#f92672">(</span>3.05 MiB/s<span style="color:#f92672">)</span>
-</code></pre></div><p>Alhamdulillah done!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bash-5.1$ lftp akukamukita@192.168.120.47
+</span></span><span style="display:flex;"><span>Password: 
+</span></span><span style="display:flex;"><span>lftp akukamukita@192.168.120.47:~&gt; 
+</span></span></code></pre></div><p>Siap eksekusi! Karena akan memindahkan semua direktori lengkap dengan yang ada di <em>working directory</em>, gunakan <!-- raw HTML omitted -->mirror -R<!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>lftp akukamukita@192.168.120.47:/&gt; mirror -R
+</span></span><span style="display:flex;"><span>cd <span style="color:#e6db74">`</span>.<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">[</span>FEAT negotiation...<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>Ups, datang feat negotiation menghadang.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>lftp akukamukita@192.168.120.47:/&gt; set ftp:use-feat false
+</span></span></code></pre></div><p>Mari lanjutkan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>lftp akukamukita@192.168.120.47:/&gt; mirror -R
+</span></span><span style="display:flex;"><span>Total: <span style="color:#ae81ff">13</span> directories, <span style="color:#ae81ff">20</span> files, <span style="color:#ae81ff">0</span> symlinks                             
+</span></span><span style="display:flex;"><span>New: <span style="color:#ae81ff">20</span> files, <span style="color:#ae81ff">0</span> symlinks
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2810640970</span> bytes transferred in <span style="color:#ae81ff">879</span> seconds <span style="color:#f92672">(</span>3.05 MiB/s<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Alhamdulillah done!</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

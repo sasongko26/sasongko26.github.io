@@ -37,7 +37,7 @@ I3 memiliki berkas konfigurasi /etc/i3/config. Konfigurasi itu yang saya gunakan
       <guid>https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/</guid>
       <description>Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya
 dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck. Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu /dev/sda1. Dan direkomendasikan untuk menjalankan fsck.
-fsck /dev/sda1 fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.</description>
+fsck /dev/sda1  fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.</description>
     </item>
     
   </channel>

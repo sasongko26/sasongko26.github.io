@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Booting BlankOn LiveISO &middot; Catatan Sasongko</title>
 
@@ -252,8 +252,8 @@ Langkah berikutnya, sunting berkas grub.cfg. Silahkan gunakan teks editor kesaya
 <pre tabindex="0"><code>$ sudo sublime /boot/grub/grub.cfg
 </code></pre><p>Kemudian, cari <code>### END /etc/grub.d/10_linux ###</code>
 Di atas baris tersebut tulis seperti ini:</p>
-<pre tabindex="0"><code>menuentry 'BlankOn Live' { 
-  set isofile='/home/sasongko/Unduhan/suroboyo-desktop-i386.iso' 
+<pre tabindex="0"><code>menuentry &#39;BlankOn Live&#39; { 
+  set isofile=&#39;/home/sasongko/Unduhan/suroboyo-desktop-i386.iso&#39; 
   loopback loop $isofile 
   linux (loop)/boot/vmlinuz boot=live findiso=${isofile} config quiet splash 
   initrd (loop)/boot/initrd.img 

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Konek Internet dengan nmcli &middot; Catatan Sasongko</title>
 
@@ -264,14 +264,13 @@ OPTIONS
   -h[elp]                                    print this help
 
 OBJECT
-  g[eneral]       NetworkManager's general status and operations
+  g[eneral]       NetworkManager&#39;s general status and operations
   n[etworking]    overall networking control
   r[adio]         NetworkManager radio switches
-  c[onnection]    NetworkManager's connections
+  c[onnection]    NetworkManager&#39;s connections
   d[evice]        devices managed by NetworkManager
   a[gent]         NetworkManager secret agent or polkit agent
   m[onitor]       monitor NetworkManager changes
-
 </code></pre><p>Untuk melihat sambungan/koneksi yang telah dibuat dengan <em>NetworkManager</em> gunakan <!-- raw HTML omitted -->nmcli c<!-- raw HTML omitted -->. Berikut adalah contoh <em>output</em>-nya</p>
 <pre tabindex="0"><code>NAME                        UUID                                  TYPE             DEVICE 
 3 Monthly Internet Service  72c411c9-a79b-40c3-a5e7-00411fde9b74  gsm              --     
@@ -283,7 +282,7 @@ Star Hotel Semarang         26db7a92-b1d2-4eb3-9b52-f28cda1e6991  802-11-wireles
 <p>Untuk menyambungkan ke internet <!-- raw HTML omitted -->nmcli c up UUID<!-- raw HTML omitted -->. Contoh akan konek internet dengan modem</p>
 <pre tabindex="0"><code>nmcli c up 72c411c9-a79b-40c3-a5e7-00411fde9b74
 # atau bisa juga nama devicenya
-nmcli c up '3 Monthly Internet Service'
+nmcli c up &#39;3 Monthly Internet Service&#39;
 </code></pre><p>Sedangkan untuk diskonek <!-- raw HTML omitted -->nmcli c down UUID<!-- raw HTML omitted -->.</p>
 
   

@@ -303,7 +303,7 @@ OK, kernel yang lama (2.6.32-5-686) dihapus saja.
       <guid>https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/</guid>
       <description>Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.
 Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya
-$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% Clone hard disk created in format &#39;VMDK&#39;. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa Hardisk virtualnya sudah terkonversi.</description>
+$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% Clone hard disk created in format &amp;#39;VMDK&amp;#39;. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa Hardisk virtualnya sudah terkonversi.</description>
     </item>
     
     <item>
@@ -394,7 +394,7 @@ Alhamdulillah iso BlankOn bisa diunduh dengan rsync dan zsync sehingga bisa lebi
       
       <guid>https://sasongko.web.id/post/2014-04-05-mengetahui-versi-linux-terinstall/</guid>
       <description>Untuk mengetahui linux apa yang terinstall atau terpasang dapat menggunakan perintah
-$ cat /etc/lsb-release DISTRIB_ID=Blankon DISTRIB_RELEASE=9.0 DISTRIB_CODENAME=suroboyo DISTRIB_DESCRIPTION=&amp;quot;BlankOn Suroboyo&amp;quot; atau
+$ cat /etc/lsb-release DISTRIB_ID=Blankon DISTRIB_RELEASE=9.0 DISTRIB_CODENAME=suroboyo DISTRIB_DESCRIPTION=&amp;#34;BlankOn Suroboyo&amp;#34; atau
 $ lsb_release -a No LSB modules are available. Distributor ID:Blankon Description:	BlankOn Suroboyo Release:	9.0 Codename:	suroboyo Dari hasil kedua perintah tersebut tampak distro yang terpasang adalah BlankOn rilis ke-9 dengan nama kode suroboyo.</description>
     </item>
     
@@ -416,7 +416,7 @@ $ date Jum Mar 28 22:15:25 WIB 2014 Dari perintah tersebut tampak bahwa sekarang
       <guid>https://sasongko.web.id/post/2014-03-24-menggunakan-perintah-echo/</guid>
       <description>Echo merupakan perintah bahasa bash (bahasa yang digunakan terminal) untuk menampilkan output ke monitor.
 $ echo “teks yang diinginkan” teks yang diinginkan Contoh:
-$ echo &amp;quot;halloooo.....&amp;quot; halloooo..... $ echo &amp;quot;BlankOn Linux Indonesia&amp;quot; BlankOn Linux Indonesia </description>
+$ echo &amp;#34;halloooo.....&amp;#34; halloooo..... $ echo &amp;#34;BlankOn Linux Indonesia&amp;#34; BlankOn Linux Indonesia </description>
     </item>
     
     <item>

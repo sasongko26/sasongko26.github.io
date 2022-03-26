@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Disable tampilan konfigurasi ffmpeg &middot; Catatan Sasongko</title>
 
@@ -246,27 +246,27 @@
 
 
   <p>Secara <em>default</em>, <em>output</em> <!-- raw HTML omitted -->ffmpeg<!-- raw HTML omitted --> akan menampilkan <em>built configuration</em> yang digunakan.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ffmpeg
-ffmpeg version 4.2.2 Copyright <span style="color:#f92672">(</span>c<span style="color:#f92672">)</span> 2000-2019 the FFmpeg developers
-  built with gcc 9.2.0 <span style="color:#f92672">(</span>GCC<span style="color:#f92672">)</span>
-  configuration: --prefix<span style="color:#f92672">=</span>/usr --libdir<span style="color:#f92672">=</span>/usr/lib64 --shlibdir<span style="color:#f92672">=</span>/usr/lib64 --docdir<span style="color:#f92672">=</span>/usr/doc/ffmpeg-4.2.2/html --mandir<span style="color:#f92672">=</span>/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch<span style="color:#f92672">=</span>x86_64 --disable-encoder<span style="color:#f92672">=</span>aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack
-  libavutil      56. 31.100 / 56. 31.100
-  libavcodec     58. 54.100 / 58. 54.100
-  libavformat    58. 29.100 / 58. 29.100
-  libavdevice    58.  8.100 / 58.  8.100
-  libavfilter     7. 57.100 /  7. 57.100
-  libavresample   4.  0.  <span style="color:#ae81ff">0</span> /  4.  0.  <span style="color:#ae81ff">0</span>
-  libswscale      5.  5.100 /  5.  5.100
-  libswresample   3.  5.100 /  3.  5.100
-  libpostproc    55.  5.100 / 55.  5.100
-Hyper fast Audio and Video encoder
-usage: ffmpeg <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> <span style="color:#f92672">[[</span>infile options<span style="color:#f92672">]</span> -i infile<span style="color:#f92672">]</span>... <span style="color:#f92672">{[</span>outfile options<span style="color:#f92672">]</span> outfile<span style="color:#f92672">}</span>...
-
-Use -h to get full help or, even better, run <span style="color:#e6db74">&#39;man ffmpeg&#39;</span>
-</code></pre></div><p>Menurut saya ini tidak perlu ditampilkan. Berdasarkan pengalaman selama ini menggunakan <!-- raw HTML omitted -->ffmpeg<!-- raw HTML omitted --> baik-baik saja. Informasi tersebut bisa dikatakan mubadzir. Lebih baik tidak ditampilkan. Caranya beri opsi</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-hide_banner
-$ ffmpeg -hide_banner
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ffmpeg
+</span></span><span style="display:flex;"><span>ffmpeg version 4.2.2 Copyright <span style="color:#f92672">(</span>c<span style="color:#f92672">)</span> 2000-2019 the FFmpeg developers
+</span></span><span style="display:flex;"><span>  built with gcc 9.2.0 <span style="color:#f92672">(</span>GCC<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  configuration: --prefix<span style="color:#f92672">=</span>/usr --libdir<span style="color:#f92672">=</span>/usr/lib64 --shlibdir<span style="color:#f92672">=</span>/usr/lib64 --docdir<span style="color:#f92672">=</span>/usr/doc/ffmpeg-4.2.2/html --mandir<span style="color:#f92672">=</span>/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch<span style="color:#f92672">=</span>x86_64 --disable-encoder<span style="color:#f92672">=</span>aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack
+</span></span><span style="display:flex;"><span>  libavutil      56. 31.100 / 56. 31.100
+</span></span><span style="display:flex;"><span>  libavcodec     58. 54.100 / 58. 54.100
+</span></span><span style="display:flex;"><span>  libavformat    58. 29.100 / 58. 29.100
+</span></span><span style="display:flex;"><span>  libavdevice    58.  8.100 / 58.  8.100
+</span></span><span style="display:flex;"><span>  libavfilter     7. 57.100 /  7. 57.100
+</span></span><span style="display:flex;"><span>  libavresample   4.  0.  <span style="color:#ae81ff">0</span> /  4.  0.  <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  libswscale      5.  5.100 /  5.  5.100
+</span></span><span style="display:flex;"><span>  libswresample   3.  5.100 /  3.  5.100
+</span></span><span style="display:flex;"><span>  libpostproc    55.  5.100 / 55.  5.100
+</span></span><span style="display:flex;"><span>Hyper fast Audio and Video encoder
+</span></span><span style="display:flex;"><span>usage: ffmpeg <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> <span style="color:#f92672">[[</span>infile options<span style="color:#f92672">]</span> -i infile<span style="color:#f92672">]</span>... <span style="color:#f92672">{[</span>outfile options<span style="color:#f92672">]</span> outfile<span style="color:#f92672">}</span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Use -h to get full help or, even better, run <span style="color:#e6db74">&#39;man ffmpeg&#39;</span>
+</span></span></code></pre></div><p>Menurut saya ini tidak perlu ditampilkan. Berdasarkan pengalaman selama ini menggunakan <!-- raw HTML omitted -->ffmpeg<!-- raw HTML omitted --> baik-baik saja. Informasi tersebut bisa dikatakan mubadzir. Lebih baik tidak ditampilkan. Caranya beri opsi</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>-hide_banner
+</span></span><span style="display:flex;"><span>$ ffmpeg -hide_banner
+</span></span></code></pre></div>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">

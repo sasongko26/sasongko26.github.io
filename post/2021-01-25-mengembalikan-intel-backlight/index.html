@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Mengembalikan backlight &middot; Catatan Sasongko</title>
 
@@ -246,18 +246,18 @@
 
 
   <p><em>Upgrade</em> kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. <em>Backlight</em> menjadi tidak berfungsi.  Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah <code>xbacklight</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ xbacklight
-No outputs have backlight property
-</code></pre></div><p><img src="https://sasongko.web.id/gambar/brightness-100.png" alt="Brightness 100%. Mentok kanan!"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ xbacklight
+</span></span><span style="display:flex;"><span>No outputs have backlight property
+</span></span></code></pre></div><p><img src="https://sasongko.web.id/gambar/brightness-100.png" alt="Brightness 100%. Mentok kanan!"></p>
 <p><em>Backlight</em> atau <em>brightness</em> 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).</p>
 <p>Kebetulan, salah 1 situs yang sering penulis kunjungi, <strong>LinuxQuestions.Org</strong> ada <em>thread</em> yang <a href="https://www.linuxquestions.org/questions/slackware-14/intel_backlight-not-working-on-current-4175688981/">membahas masalah ini</a>.</p>
 <p>Cara yang dipakai di sini adalah dengan membuat <code>/etc/X11/xorg.conf.d/20-intel-backlight.conf</code> yang berisi</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Section <span style="color:#e6db74">&#34;Device&#34;</span>
-		Identifier <span style="color:#e6db74">&#34;Intel Graphics&#34;</span>
-		Driver <span style="color:#e6db74">&#34;Intel&#34;</span>
-		Option <span style="color:#e6db74">&#34;Backlight&#34;</span> <span style="color:#e6db74">&#34;intel_backlight&#34;</span>
-EndSection
-</code></pre></div><p>Alhamdulillah <em>solved</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Section <span style="color:#e6db74">&#34;Device&#34;</span>
+</span></span><span style="display:flex;"><span>		Identifier <span style="color:#e6db74">&#34;Intel Graphics&#34;</span>
+</span></span><span style="display:flex;"><span>		Driver <span style="color:#e6db74">&#34;Intel&#34;</span>
+</span></span><span style="display:flex;"><span>		Option <span style="color:#e6db74">&#34;Backlight&#34;</span> <span style="color:#e6db74">&#34;intel_backlight&#34;</span>
+</span></span><span style="display:flex;"><span>EndSection
+</span></span></code></pre></div><p>Alhamdulillah <em>solved</em>.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

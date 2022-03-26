@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Pentingnya Shebang &middot; Catatan Sasongko</title>
 
@@ -262,15 +262,15 @@
 <li>Menyertakan interpreternya di awal <em>command</em></li>
 </ul>
 <p>Contoh :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">perl program.pl
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>perl program.pl
+</span></span></code></pre></div><ul>
 <li>Tanpa menuliskan interpreternya</li>
 </ul>
 <p>Contoh :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./program.pl
-</code></pre></div><p>Cara ini mengharuskan programnya (<!-- raw HTML omitted -->program.pl<!-- raw HTML omitted -->) dijadikan <em>executable</em> terlebih dahulu, sehingga bisa dieksekusi/dijalankan tanpa harus menuliskan interpreternya, yaitu dengan cara</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod +x program.pl
-</code></pre></div><h1 id="contoh-kasus">Contoh kasus</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./program.pl
+</span></span></code></pre></div><p>Cara ini mengharuskan programnya (<!-- raw HTML omitted -->program.pl<!-- raw HTML omitted -->) dijadikan <em>executable</em> terlebih dahulu, sehingga bisa dieksekusi/dijalankan tanpa harus menuliskan interpreternya, yaitu dengan cara</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod +x program.pl
+</span></span></code></pre></div><h1 id="contoh-kasus">Contoh kasus</h1>
 <p>Misalnya, ada sebuah program yang filenya bernama <!-- raw HTML omitted -->tes<!-- raw HTML omitted -->, yang isinya</p>
 <pre tabindex="0"><code>$a = 5
 
@@ -279,49 +279,49 @@ print $a
 <ul>
 <li>bash</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bash tes
-tes: line 1: <span style="color:#f92672">=</span>5: command not found
-tes: line 3: print: command not found
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ bash tes
+</span></span><span style="display:flex;"><span>tes: line 1: <span style="color:#f92672">=</span>5: command not found
+</span></span><span style="display:flex;"><span>tes: line 3: print: command not found
+</span></span></code></pre></div><ul>
 <li>csh</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ csh tes
-a: Undefined variable.
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ csh tes
+</span></span><span style="display:flex;"><span>a: Undefined variable.
+</span></span></code></pre></div><ul>
 <li>ksh</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ksh tes
-tes: line 1: <span style="color:#f92672">=</span>5: not found
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ksh tes
+</span></span><span style="display:flex;"><span>tes: line 1: <span style="color:#f92672">=</span>5: not found
+</span></span></code></pre></div><ul>
 <li>zsh</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ zsh tes
-tes:1: <span style="color:#ae81ff">5</span> not found
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ zsh tes
+</span></span><span style="display:flex;"><span>tes:1: <span style="color:#ae81ff">5</span> not found
+</span></span></code></pre></div><ul>
 <li>perl</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ perl tes
-syntax error at tes line 3, near <span style="color:#e6db74">&#34;print&#34;</span>
-Execution of tes aborted due to compilation errors.
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ perl tes
+</span></span><span style="display:flex;"><span>syntax error at tes line 3, near <span style="color:#e6db74">&#34;print&#34;</span>
+</span></span><span style="display:flex;"><span>Execution of tes aborted due to compilation errors.
+</span></span></code></pre></div><ul>
 <li>python</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python tes
-  File <span style="color:#e6db74">&#34;tes&#34;</span>, line <span style="color:#ae81ff">1</span>
-    $a<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
-    ^
-SyntaxError: invalid syntax
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python tes
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;tes&#34;</span>, line <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    $a<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>    ^
+</span></span><span style="display:flex;"><span>SyntaxError: invalid syntax
+</span></span></code></pre></div><ul>
 <li>ruby</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ruby tes
-<span style="color:#ae81ff">5</span>
-</code></pre></div><p>Ternyata ruby!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ruby tes
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>
+</span></span></code></pre></div><p>Ternyata ruby!</p>
 <p>Di sisi lain, mari kita anggap saja tidak mau ambil pusing ini interpreternya apa. Pakai cara kedua.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./tes
-./tes: line 1: <span style="color:#f92672">=</span>5: command not found
-./tes: line 3: print: command not found
-</code></pre></div><p>Waduh&hellip;. error!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ./tes
+</span></span><span style="display:flex;"><span>./tes: line 1: <span style="color:#f92672">=</span>5: command not found
+</span></span><span style="display:flex;"><span>./tes: line 3: print: command not found
+</span></span></code></pre></div><p>Waduh&hellip;. error!</p>
 <p>Nah, tidak menuliskan shebang ternyata bisa menimbulkan masalah. Kalau begini, tentu saja kontraproduktif dengan tujuan dibuatnya program sebagai sarana <em>problem solving</em>/menyelesaikan masalah.</p>
 
   

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Mount qcow2 &middot; Catatan Sasongko</title>
 
@@ -251,42 +251,41 @@
 
   <p>Untuk mengaitkan/<em>mount</em> berkas <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> ternyata tidak bisa langsung di- <em>mount</em> begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses <em>root</em></p>
 <p>Modul kernel NBD aktifkan dulu. Secara <em>default</em> modul NBD nonaktif. Untuk mengaktifkannya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">modprobe nbd max_part<span style="color:#f92672">=</span>N
-</code></pre></div><p><!-- raw HTML omitted -->max_part=N<!-- raw HTML omitted --> isikan jumlah partisi yang ingin ditangani pada <!-- raw HTML omitted -->N<!-- raw HTML omitted -->. Misalnya, <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> tersebut kalau dijalankan dengan <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> berisi 8 partisi, maka nilai <!-- raw HTML omitted -->N<!-- raw HTML omitted --> adalah 8.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modprobe nbd max_part<span style="color:#f92672">=</span>N
+</span></span></code></pre></div><p><!-- raw HTML omitted -->max_part=N<!-- raw HTML omitted --> isikan jumlah partisi yang ingin ditangani pada <!-- raw HTML omitted -->N<!-- raw HTML omitted -->. Misalnya, <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> tersebut kalau dijalankan dengan <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> berisi 8 partisi, maka nilai <!-- raw HTML omitted -->N<!-- raw HTML omitted --> adalah 8.</p>
 <p>Setalah modul NBD aktif, jalankan <!-- raw HTML omitted -->qemu-nbd<!-- raw HTML omitted -->. Di sini akan dijalankan <!-- raw HTML omitted -->qemu-nbd<!-- raw HTML omitted --> yang mengaktifkan koneksi file <!-- raw HTML omitted -->/mnt/virtual/image/ign11.qcow2<!-- raw HTML omitted --> ke <!-- raw HTML omitted -->/dev/nbd0&gt;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">qemu-nbd -c /dev/nbd0 /mnt/virtual/image/ign11.qcow2
-</code></pre></div><p>Berhubung <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> adalah harddisk virtual berisi sistem operasi (di sini isinya <em>IGOS Nusantara 11</em>) maka tidak mungkin hanya terdiri dari 1 partisi. Minimal ada 2 partisi, yaitu <!-- raw HTML omitted -->/<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->/swap<!-- raw HTML omitted -->. Cek, tabel partisinya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fdisk -l /dev/nbd0
-
-Disk /dev/nbd0: <span style="color:#ae81ff">20</span> GiB, <span style="color:#ae81ff">21474836480</span> bytes, <span style="color:#ae81ff">41943040</span> sectors
-Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
-Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
-I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
-Disklabel type: dos
-Disk identifier: 0x4173c32c
-
-Device      Boot   Start      End  Sectors  Size Id Type
-/dev/nbd0p1 *       <span style="color:#ae81ff">2048</span>  <span style="color:#ae81ff">1026047</span>  <span style="color:#ae81ff">1024000</span>  500M <span style="color:#ae81ff">83</span> Linux
-/dev/nbd0p2      <span style="color:#ae81ff">1026048</span> <span style="color:#ae81ff">41943039</span> <span style="color:#ae81ff">40916992</span> 19.5G 8e Linux LVM
-</code></pre></div><p>Nah, ada 2 partisi. Eh, tapi ternyata  tipenya <!-- raw HTML omitted -->LVM<!-- raw HTML omitted -->. Ya sudah, aktifkan saja. <em>Scan</em> dulu</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vgscan
-
-Reading all physical volumes.  This may take a <span style="color:#66d9ef">while</span>...
-  Found volume group <span style="color:#e6db74">&#34;in1-3mm_igos-nusantara&#34;</span> using metadata type lvm2
-
-</code></pre></div><p>Terdeteksi sebagai <!-- raw HTML omitted -->in1-3mm_igos-nusantara<!-- raw HTML omitted -->.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qemu-nbd -c /dev/nbd0 /mnt/virtual/image/ign11.qcow2
+</span></span></code></pre></div><p>Berhubung <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> adalah harddisk virtual berisi sistem operasi (di sini isinya <em>IGOS Nusantara 11</em>) maka tidak mungkin hanya terdiri dari 1 partisi. Minimal ada 2 partisi, yaitu <!-- raw HTML omitted -->/<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->/swap<!-- raw HTML omitted -->. Cek, tabel partisinya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fdisk -l /dev/nbd0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Disk /dev/nbd0: <span style="color:#ae81ff">20</span> GiB, <span style="color:#ae81ff">21474836480</span> bytes, <span style="color:#ae81ff">41943040</span> sectors
+</span></span><span style="display:flex;"><span>Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
+</span></span><span style="display:flex;"><span>Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+</span></span><span style="display:flex;"><span>I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+</span></span><span style="display:flex;"><span>Disklabel type: dos
+</span></span><span style="display:flex;"><span>Disk identifier: 0x4173c32c
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Device      Boot   Start      End  Sectors  Size Id Type
+</span></span><span style="display:flex;"><span>/dev/nbd0p1 *       <span style="color:#ae81ff">2048</span>  <span style="color:#ae81ff">1026047</span>  <span style="color:#ae81ff">1024000</span>  500M <span style="color:#ae81ff">83</span> Linux
+</span></span><span style="display:flex;"><span>/dev/nbd0p2      <span style="color:#ae81ff">1026048</span> <span style="color:#ae81ff">41943039</span> <span style="color:#ae81ff">40916992</span> 19.5G 8e Linux LVM
+</span></span></code></pre></div><p>Nah, ada 2 partisi. Eh, tapi ternyata  tipenya <!-- raw HTML omitted -->LVM<!-- raw HTML omitted -->. Ya sudah, aktifkan saja. <em>Scan</em> dulu</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vgscan
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Reading all physical volumes.  This may take a <span style="color:#66d9ef">while</span>...
+</span></span><span style="display:flex;"><span>  Found volume group <span style="color:#e6db74">&#34;in1-3mm_igos-nusantara&#34;</span> using metadata type lvm2
+</span></span></code></pre></div><p>Terdeteksi sebagai <!-- raw HTML omitted -->in1-3mm_igos-nusantara<!-- raw HTML omitted -->.</p>
 <p>Kemudian aktifkan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vgchange -ay   
-
-   <span style="color:#ae81ff">2</span> logical volume<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> in volume group <span style="color:#e6db74">&#34;in1-3mm_igos-nusantara&#34;</span> now active
-</code></pre></div><p>Ada 2 <em>logical volume</em> atau partisi yang semuanya sudah aktif, Apa sajakah itu?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls /dev/in1-3mm_igos-nusantara
-
-root  swap
-</code></pre></div><p>Ada partisi <!-- raw HTML omitted -->root<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->swap<!-- raw HTML omitted -->.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vgchange -ay   
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">2</span> logical volume<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> in volume group <span style="color:#e6db74">&#34;in1-3mm_igos-nusantara&#34;</span> now active
+</span></span></code></pre></div><p>Ada 2 <em>logical volume</em> atau partisi yang semuanya sudah aktif, Apa sajakah itu?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls /dev/in1-3mm_igos-nusantara
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root  swap
+</span></span></code></pre></div><p>Ada partisi <!-- raw HTML omitted -->root<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->swap<!-- raw HTML omitted -->.</p>
 <p>Misalkan <em>mount</em> partisi <!-- raw HTML omitted -->root<!-- raw HTML omitted -->-nya ke <!-- raw HTML omitted -->/mnt/tmp<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mount /dev/in1-3mm_igos-nusantara/root /mnt/tmp
-</code></pre></div><p>Ok. Selesai. Alhamdulillah.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mount /dev/in1-3mm_igos-nusantara/root /mnt/tmp
+</span></span></code></pre></div><p>Ok. Selesai. Alhamdulillah.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

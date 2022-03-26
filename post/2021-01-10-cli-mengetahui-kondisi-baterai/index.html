@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Mengetahui kondisi baterai &middot; Catatan Sasongko</title>
 
@@ -252,43 +252,43 @@
   <p>Mengecek kondisi baterai laptop melalui terminal atau <em>command line interface</em> sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara <em>default</em> sudah menyertakan <em>desktop environment</em> seperti <strong>xfce, kde, mate, cinnamon, budgie, lumina</strong> dan <strong>manokwari</strong> dengan <em>interface</em> yang cantik dan menarik. DE tersebut sudah mempunyai <em>power manager</em> lengkap dengan <em>applet</em>-nya yang tak pernah bosan nempel di panel.</p>
 <p>Bagaimana kalau &lsquo;hanya&rsquo; menggunakan <em>window manager</em> seperti <strong>GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm</strong> atau <strong>ratpoison</strong> yang tidak mempunyai <em>power manager</em> sendiri? Melalui terminal lah jawabannya. Di sini digunakan <strong>upower</strong> yang secara default ada di <strong>Slackware</strong></p>
 <p>Pertama cek dulu <em>device</em> yang dipegang <strong>upower</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ upower -e
-/org/freedesktop/UPower/devices/line_power_ADP0
-/org/freedesktop/UPower/devices/battery_BAT0
-/org/freedesktop/UPower/devices/DisplayDevice
-</code></pre></div><p>Ada 3 <em>devices</em> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ upower -e
+</span></span><span style="display:flex;"><span>/org/freedesktop/UPower/devices/line_power_ADP0
+</span></span><span style="display:flex;"><span>/org/freedesktop/UPower/devices/battery_BAT0
+</span></span><span style="display:flex;"><span>/org/freedesktop/UPower/devices/DisplayDevice
+</span></span></code></pre></div><p>Ada 3 <em>devices</em> :</p>
 <ol>
 <li>line_power_ADP0</li>
 <li>battery_BAT0</li>
 <li>DisplayDevice</li>
 </ol>
 <p>Untuk mengecek baterainya gunakan yang ke-2</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ upower -i /org/freedesktop/UPower/devices/battery_BAT0
-  native-path:          BAT0
-  vendor:               CPT-LGS3
-  model:                L15C3A03
-  serial:               <span style="color:#ae81ff">5971</span>
-  power supply:         yes
-  updated:              Sun <span style="color:#ae81ff">10</span> Jan <span style="color:#ae81ff">2021</span> 02:36:18 PM WIB <span style="color:#f92672">(</span><span style="color:#ae81ff">37</span> seconds ago<span style="color:#f92672">)</span>
-  has history:          yes
-  has statistics:       yes
-  battery
-    present:             yes
-    rechargeable:        yes
-    state:               discharging
-    warning-level:       none
-    energy:              8.76 Wh
-    energy-empty:        <span style="color:#ae81ff">0</span> Wh
-    energy-full:         8.76 Wh
-    energy-full-design:  23.76 Wh
-    energy-rate:         0.595 W
-    voltage:             12.064 V
-    time to empty:       14.7 hours
-    percentage:          100%
-    capacity:            26.8939%
-    technology:          lithium-ion
-    icon-name:          <span style="color:#e6db74">&#39;battery-full-symbolic&#39;</span>
-</code></pre></div><p>Dari hasil tersebut di atas, terlihat baterai laptop yang digunakan dalam kondisi tidak sehat. Sudah saatnya diperbarui. Kapasitasnya 26,8939% walau terisi penuh 100%. Harap maklum, baterainya <strong>lithium-ion</strong> yang sudah lebih dari 4 tahun.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ upower -i /org/freedesktop/UPower/devices/battery_BAT0
+</span></span><span style="display:flex;"><span>  native-path:          BAT0
+</span></span><span style="display:flex;"><span>  vendor:               CPT-LGS3
+</span></span><span style="display:flex;"><span>  model:                L15C3A03
+</span></span><span style="display:flex;"><span>  serial:               <span style="color:#ae81ff">5971</span>
+</span></span><span style="display:flex;"><span>  power supply:         yes
+</span></span><span style="display:flex;"><span>  updated:              Sun <span style="color:#ae81ff">10</span> Jan <span style="color:#ae81ff">2021</span> 02:36:18 PM WIB <span style="color:#f92672">(</span><span style="color:#ae81ff">37</span> seconds ago<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  has history:          yes
+</span></span><span style="display:flex;"><span>  has statistics:       yes
+</span></span><span style="display:flex;"><span>  battery
+</span></span><span style="display:flex;"><span>    present:             yes
+</span></span><span style="display:flex;"><span>    rechargeable:        yes
+</span></span><span style="display:flex;"><span>    state:               discharging
+</span></span><span style="display:flex;"><span>    warning-level:       none
+</span></span><span style="display:flex;"><span>    energy:              8.76 Wh
+</span></span><span style="display:flex;"><span>    energy-empty:        <span style="color:#ae81ff">0</span> Wh
+</span></span><span style="display:flex;"><span>    energy-full:         8.76 Wh
+</span></span><span style="display:flex;"><span>    energy-full-design:  23.76 Wh
+</span></span><span style="display:flex;"><span>    energy-rate:         0.595 W
+</span></span><span style="display:flex;"><span>    voltage:             12.064 V
+</span></span><span style="display:flex;"><span>    time to empty:       14.7 hours
+</span></span><span style="display:flex;"><span>    percentage:          100%
+</span></span><span style="display:flex;"><span>    capacity:            26.8939%
+</span></span><span style="display:flex;"><span>    technology:          lithium-ion
+</span></span><span style="display:flex;"><span>    icon-name:          <span style="color:#e6db74">&#39;battery-full-symbolic&#39;</span>
+</span></span></code></pre></div><p>Dari hasil tersebut di atas, terlihat baterai laptop yang digunakan dalam kondisi tidak sehat. Sudah saatnya diperbarui. Kapasitasnya 26,8939% walau terisi penuh 100%. Harap maklum, baterainya <strong>lithium-ion</strong> yang sudah lebih dari 4 tahun.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

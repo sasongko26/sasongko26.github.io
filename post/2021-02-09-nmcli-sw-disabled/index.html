@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>nmcli sw disabled &middot; Catatan Sasongko</title>
 
@@ -246,28 +246,28 @@
 
 
   <p>Beberapa saat yang lalu penulis terkena <em>prank</em> dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan <strong>flight mode</strong> di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek <strong>nmcli</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ nmcli
-p2p-dev-wlan0: disconnected
-        <span style="color:#e6db74">&#34;p2p-dev-wlan0&#34;</span>
-        wifi-p2p, sw disabled, hw
-
-eth0: unavailable
-        <span style="color:#e6db74">&#34;Realtek RTL810xE&#34;</span>
-        ethernet <span style="color:#f92672">(</span>r8169<span style="color:#f92672">)</span>, C8:5B:76:66:51:6C, hw, mtu <span style="color:#ae81ff">1500</span>
-
-wlan0: unavailable
-        <span style="color:#e6db74">&#34;Qualcomm Atheros QCA9377&#34;</span>
-        wifi <span style="color:#f92672">(</span>ath10k_pci<span style="color:#f92672">)</span>, 8E:58:C9:8B:64:0F, sw disabled, hw, mtu <span style="color:#ae81ff">1500</span>
-
-lo: unmanaged
-        <span style="color:#e6db74">&#34;lo&#34;</span>
-        loopback <span style="color:#f92672">(</span>unknown<span style="color:#f92672">)</span>, 00:00:00:00:00:00, sw, mtu <span style="color:#ae81ff">65536</span>
-
-Use <span style="color:#e6db74">&#34;nmcli device show&#34;</span> to get complete information about known devices and
-<span style="color:#e6db74">&#34;nmcli connection show&#34;</span> to get an overview on active connection profiles.
-
-Consult nmcli<span style="color:#f92672">(</span>1<span style="color:#f92672">)</span> and nmcli-examples<span style="color:#f92672">(</span>7<span style="color:#f92672">)</span> manual pages <span style="color:#66d9ef">for</span> complete usage details.
-</code></pre></div><p>Ada <em>output</em> yang aneh : <strong>sw disabled</strong>. Penulis baru ingat kalau <strong>flight mode</strong>-nya aktif. Setelah dinonaktifkan, semua kembali normal. <strong>sw disabled</strong> enyah dari <em>Output</em> <strong>nmcli</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ nmcli
+</span></span><span style="display:flex;"><span>p2p-dev-wlan0: disconnected
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;p2p-dev-wlan0&#34;</span>
+</span></span><span style="display:flex;"><span>        wifi-p2p, sw disabled, hw
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>eth0: unavailable
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Realtek RTL810xE&#34;</span>
+</span></span><span style="display:flex;"><span>        ethernet <span style="color:#f92672">(</span>r8169<span style="color:#f92672">)</span>, C8:5B:76:66:51:6C, hw, mtu <span style="color:#ae81ff">1500</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wlan0: unavailable
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Qualcomm Atheros QCA9377&#34;</span>
+</span></span><span style="display:flex;"><span>        wifi <span style="color:#f92672">(</span>ath10k_pci<span style="color:#f92672">)</span>, 8E:58:C9:8B:64:0F, sw disabled, hw, mtu <span style="color:#ae81ff">1500</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lo: unmanaged
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;lo&#34;</span>
+</span></span><span style="display:flex;"><span>        loopback <span style="color:#f92672">(</span>unknown<span style="color:#f92672">)</span>, 00:00:00:00:00:00, sw, mtu <span style="color:#ae81ff">65536</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Use <span style="color:#e6db74">&#34;nmcli device show&#34;</span> to get complete information about known devices and
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;nmcli connection show&#34;</span> to get an overview on active connection profiles.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Consult nmcli<span style="color:#f92672">(</span>1<span style="color:#f92672">)</span> and nmcli-examples<span style="color:#f92672">(</span>7<span style="color:#f92672">)</span> manual pages <span style="color:#66d9ef">for</span> complete usage details.
+</span></span></code></pre></div><p>Ada <em>output</em> yang aneh : <strong>sw disabled</strong>. Penulis baru ingat kalau <strong>flight mode</strong>-nya aktif. Setelah dinonaktifkan, semua kembali normal. <strong>sw disabled</strong> enyah dari <em>Output</em> <strong>nmcli</strong>.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

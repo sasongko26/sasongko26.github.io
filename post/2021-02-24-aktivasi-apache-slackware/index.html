@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.94.2" />
 
   <title>Aktivasi apache webserver slackware &middot; Catatan Sasongko</title>
 
@@ -249,15 +249,15 @@
 
   <h1 id="install-apache-webserver-slackware-linux">Install apache webserver slackware linux</h1>
 <p>Secara <em>default</em>, <strong>apache webserver</strong> sudah ter-<em>install</em> di <strong>slackware</strong>. Namun, jika saat meng-<em>install</em> <strong>slackware</strong> tidak memilih <em>full installation</em>, <strong>apache webserver</strong> dapat di-<em>install</em> dengan mudah, yaitu dengan meng-<em>install</em> <strong>httpd</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">slackpkg install httpd
-</code></pre></div><h1 id="aktivasi-apache-webserver-slackware-linux">Aktivasi apache webserver slackware linux</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>slackpkg install httpd
+</span></span></code></pre></div><h1 id="aktivasi-apache-webserver-slackware-linux">Aktivasi apache webserver slackware linux</h1>
 <p>Setelah diinstall, bisa diaktifkan:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/etc/rc.d/rc.httpd start
-</code></pre></div><p>Untuk menonaktifkan atau mematikan:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/etc/rc.d/rc.httpd stop
-</code></pre></div><p>Untuk <em>restart</em> webserver:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/etc/rc.d/rc.httpd restart
-</code></pre></div><h1 id="mengaktifkan-apache-webserver-otomatis">Mengaktifkan apache webserver otomatis</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd start
+</span></span></code></pre></div><p>Untuk menonaktifkan atau mematikan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd stop
+</span></span></code></pre></div><p>Untuk <em>restart</em> webserver:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd restart
+</span></span></code></pre></div><h1 id="mengaktifkan-apache-webserver-otomatis">Mengaktifkan apache webserver otomatis</h1>
 <p>Untuk dapat <em>running</em> atau mengaktifkan <em>apache</em> secara otomatis setelah <em>booting</em>, pastikan /etc/rc.d/rc.httpd <em>executable</em>.</p>
 
   
