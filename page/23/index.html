@@ -228,6 +228,52 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-07-12-memformat-partisi/">Memformat Partisi</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Jul 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Melanjutkan catatan [kemarin]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) sekarang partisinya diformat menjadi ext4, format filesystem yang umum digunakan untuk linux dengan kestabilan yang tidak diragukan lagi.
+Partisi yang akan diformat ext4 adalah /dev/sda9 dan akan diberi label sebagai src. Pemformatan ini juga harus dilakukan root.
+# mkfs -t ext4 -L &#39;src&#39; /dev/sda9 mke2fs 1.42.8 (20-Jun-2013) Filesystem label=src OS type: Linux Block size=4096 (log=2) Fragment size=4096 (log=2) Stride=0 blocks, Stripe width=0 blocks 871408 inodes, 3482075 blocks 174103 blocks (5.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-07-12-memformat-partisi/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-07-11-membuat-partisi-dengan-cgdisk/">Membuat Partisi dengan cgdisk</a></h2>
 
     <div class="post-meta">
@@ -635,49 +681,6 @@ $ wvdial 3 bash: wvdial: command not found Baris 2, command not found menunjukka
   <footer>
     <a href="https://sasongko.web.id/post/2015-06-14-jalankan-sudo-tanpa-password/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-06-download-seluruh-website/">Download Seluruh Isi Website</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Melanjutkan [catatan yang lalu]({% post_url 2014-03-23-wget-linux-download-manager %}), kali ini adalah penggunaan wget untuk mengunduh/download website secara keseluruhan/rekursif.
-$ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url silahkan diganti dengan alamat websitenya.
-  </p>
-
   
 </article>
 
