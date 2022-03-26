@@ -6,7 +6,19 @@
     <description>Recent content in slackpkg on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/slackpkg/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/slackpkg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Konfigurasi mirror slackware</title>
+      <link>https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/</guid>
+      <description>Slackpkg merupakan salah satu official slackware package manager. Fitur yang dimilikinya antara lain
+ Cek apakah ada update Baca changelog Install, upgrade, reinstall, remove, blacklist packages  Sebelum menggunakannya, pilih dahulu mirror yang akan digunakan
+# vi /etc/slackpkg/mirrors Pada file tersebut sudah tersedia list mirror yang bisa digunakan. Apakah menggunakan current atau stable (saat ini 15.0). Pilih mirrornya dengan cara uncomment baris alamat mirrornya. Contoh
+https://mirrors.slackware.com/slackware/slackware64-15.0/ untuk menggunakan mirror terdekat versi slackware 15.</description>
+    </item>
+    
     <item>
       <title>Slackpkg packages database error</title>
       <link>https://sasongko.web.id/post/2018-04-03-slackpkg-packages-database-error/</link>

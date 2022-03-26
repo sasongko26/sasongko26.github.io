@@ -29,6 +29,18 @@ mount -o uid=1020,gid=120 /dev/sdb1 /media/hd0/ uid dan gid di sini hanya contoh
     </item>
     
     <item>
+      <title>Konfigurasi mirror slackware</title>
+      <link>https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/</guid>
+      <description>Slackpkg merupakan salah satu official slackware package manager. Fitur yang dimilikinya antara lain
+ Cek apakah ada update Baca changelog Install, upgrade, reinstall, remove, blacklist packages  Sebelum menggunakannya, pilih dahulu mirror yang akan digunakan
+# vi /etc/slackpkg/mirrors Pada file tersebut sudah tersedia list mirror yang bisa digunakan. Apakah menggunakan current atau stable (saat ini 15.0). Pilih mirrornya dengan cara uncomment baris alamat mirrornya. Contoh
+https://mirrors.slackware.com/slackware/slackware64-15.0/ untuk menggunakan mirror terdekat versi slackware 15.</description>
+    </item>
+    
+    <item>
       <title>Disable fortune postlogin</title>
       <link>https://sasongko.web.id/post/2022-02-23-disable-fortune-postlogin/</link>
       <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>

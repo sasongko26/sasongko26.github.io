@@ -228,6 +228,54 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/">Menambahkan tanggal toolbar blackbox</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Mar 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Masih adakah pengguna linux di Indonesia yang menggunakan blackbox sebagai window manager sehari-hari? Masih, minimal seorang yaitu yang menulis catatan ini. Hehehehe&hellip;.
+Secara default, toolbar blackbox tidak menyertakan tanggal walau menampilkan jam. Jam ditampilkan dalam format 12 jam AM/PM. Untuk menambahkannya, dan menggunakan jam format 24 jam sebagaimana lazimnya di Indonesia, diatur sebagai berikut pada ~/.blackboxrc
+session.screen0.strftimeFormat : %d/%m/%Y %H:%M Untuk menerapkan perubahan tersebut secara langsung, restart blackbox (tidak perlu restart komputer!
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/">Mengubah user agent firefox</a></h2>
 
     <div class="post-meta">
@@ -638,53 +686,6 @@ xauth: file /home/xyz/.serverauth.2909 does not exist Solusinya simpel
 $ rm .serverauth* 
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/">nmcli sw disabled</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network-manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Beberapa saat yang lalu penulis terkena prank dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan flight mode di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek nmcli
-$ nmcli p2p-dev-wlan0: disconnected  &#34;p2p-dev-wlan0&#34;  wifi-p2p, sw disabled, hw  eth0: unavailable  &#34;Realtek RTL810xE&#34;  ethernet (r8169), C8:5B:76:66:51:6C, hw, mtu 1500  wlan0: unavailable  &#34;Qualcomm Atheros QCA9377&#34;  wifi (ath10k_pci), 8E:58:C9:8B:64:0F, sw disabled, hw, mtu 1500  lo: unmanaged  &#34;lo&#34;  loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536  Use &#34;nmcli device show&#34; to get complete information about known devices and &#34;nmcli connection show&#34; to get an overview on active connection profiles.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
