@@ -236,7 +236,11 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>
     
   </div>
   
@@ -251,7 +255,7 @@
 <p>Solusi itu bernama <strong>zram</strong>. Dengan <strong>zram</strong> sebagian proses di RAM akan dikompres sehingga menghemat RAM. RAM lebih lega. Sisa kapasitas RAM masih bisa digunakan untuk yang lainnya. Misal, tanpa <strong>zram</strong> menjalankan <em>zoom meeting</em> dengan <em>share screen</em> <strong>libreoffice impress</strong> yang berjalan dalam DE <strong>Plasma 5</strong>, terasa agak lambat saat pindah <em>slide</em> presentasi. Dengan <strong>zram</strong> tidak lagi terjadi.</p>
 <p>Bukankah ada partisi <strong>swap</strong>? Betul, tetapi <strong>swap</strong> menggunakan <em>harddisk</em> sedangkan <strong>zram</strong> memakai RAM. Kecepatan olah data lebih cepat menggunakan RAM.</p>
 <p>Oke, sekarang bagaimana teknisnya?</p>
-<p>Buat file <code>/etc/rc.d/rc.zram</code>. File ini akan dieksekusi segera setelah <em>booting</em>.</p>
+<p>Buat file <code>/etc/rc.d/rc.zram</code>. File ini akan dieksekusi segera setelah <em>booting</em>. Contohnya adalah seperti di bawah ini, yang saya dapatkan dari repo gitlabnya walecha (Terima kasih Pak Walesa).</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -r /etc/default/zram <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
