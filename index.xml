@@ -6,7 +6,16 @@
     <description>Recent content on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengubah timeout grub</title>
+      <link>https://sasongko.web.id/post/2022-03-28-mengubah-grub-timeout/</link>
+      <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2022-03-28-mengubah-grub-timeout/</guid>
+      <description>Secara default, timeout grub adalah 10 detik. Menurut penulis, 10 detik ini terlalu lama. Untuk mengubahnya ganti angka 10 ke detik yang diinginkan pada baris dengan GRUB_TIMEOUT pada file /etc/default/grub</description>
+    </item>
+    
     <item>
       <title>Menampilkan status penggunaan zram</title>
       <link>https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/</link>
@@ -72,6 +81,28 @@ Pertama, edit /etc/pulse/client.conf. Ubah autospawn dari yes menjadi no.
 Hapus /etc/xdg/autostart/pulseaudio.desktop atau rename menjadi file yang &amp;ldquo;tidak penting&amp;rdquo;.
 Rename file berikut menjadi .desktop saja
  /etc/xdg/autostart/pipewire-media-session.desktop.sample /etc/xdg/autostart/pipewire-pulse.desktop.sample /etc/xdg/autostart/pipewire.desktop  </description>
+    </item>
+    
+    <item>
+      <title>Penggabungan operator perl</title>
+      <link>https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/</link>
+      <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/</guid>
+      <description>Penggabungan operator yang dimaksudkan di sini adalah menggabungkan = dan operator lainnya seperti penjumlahan, perkalian, pengurangan, dll. Penggabungan ini biasanya digunakan untuk memperbarui nilai suatu variabel. Contoh di sini adalah penggabungan dengan operator penjumlahan.
+Misalkan, terdapat variabel a dengan nilai awal 10. Nilai a kemudian akan diubah dengan cara ditambah 4. Nilai a yang baru ini dituliskan dengan
+a += 4; Sehingga nilai a kemudian berubah dari 10 menjadi 14.</description>
+    </item>
+    
+    <item>
+      <title>Operator aritmatika scalar perl</title>
+      <link>https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/</link>
+      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/</guid>
+      <description>Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.
+Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.
+#!/usr/bin/perl  use strict; use warnings; use feature &amp;#39;say&amp;#39;;  my $a = 2; my $b = 25;  say(&amp;#34;Angka pertama (a) adalah $a&amp;#34;); say(&amp;#34;Angka kedua (b) adalah $b&amp;#34;);  # penjumlahan my $c = $a + $b; say(&amp;#34;a+b = $c&amp;#34;);  # pengurangan my $d = $b - $a; say(&amp;#34;b-a = $d&amp;#34;);  # perkalian my $e = $a * $b; say(&amp;#34;a*b = $e&amp;#34;);  # pembagian my $f = $a / $b; my $g = $b / $a; say(&amp;#34;a/b = $f&amp;#34;); say(&amp;#34;b/a = $g&amp;#34;);  # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(&amp;#34;a^b = $h&amp;#34;); say(&amp;#34;b^a = $i&amp;#34;);  # autoincrement # tanda + di depan say(&amp;#34;Nilai a sebelum autoincrement = $a&amp;#34;); my $j = ++$a; say(&amp;#34;++a = $j&amp;#34;); say(&amp;#34;Nilai a sesudah autoincrement = $a&amp;#34;);  # tanda + di belakang say(&amp;#34;Nilai b sebelum autoincrement $b&amp;#34;); my $k = $b++; say(&amp;#34;$b++ = $k&amp;#34;); say(&amp;#34;Nilai b setelah autoincrement $b&amp;#34;);  # autodecrement # tanda - di depan say(&amp;#34;c = a+b.</description>
     </item>
     
     <item>

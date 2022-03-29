@@ -228,6 +228,154 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2017-12-08-libsodium-masuk-current/">Libsodium Masuk -Current</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 Dec 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Pada hari Rabu 6 Desember 2017 jam 14.13.48 UTC, Patrick Volkerding selaku BDFL Slackware, memberikan update di kanal -current. Salah satunya adalah menambahkan libsodium-1.0.15. Libsodium merupakan library atau pustaka untuk enkripsi, dekripsi, signature (tanda tangan digital), dlsb.
+Bagi saya, masuknya libsodiummembawa konsekwensi untuk rebuild dnscrypt-proxyyang menggunakan libsodium. libsodiumyang sebelumnya adalah versi 1.0.13 dari SBo sedangkan versi baru dari official Slackware 1.0.15. Hal ini diketahui dari gagalnya men-start service dnscrypt-proxy .
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-12-08-libsodium-masuk-current/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/">Menggunakan Kernel Huge 4.14.0</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>22 Nov 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang bootloop apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. Update terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui rebuilt elilo.
+Setelah upgrade terutama untuk elilojangan lupa menjalankan
+eliloconfig yang secara otomatis juga akan meng- generate elilo.confyang berisi pengaturan boot dengan kernel huge.
+Namun, saya kurang suka dengan cara otomatis ini. Dan saya memilih melakukannya secara manual saja agar lebih fleksibel dalam konfigurasinya.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/">Kernel 4.14.0 Masuk -Current, Beralih ke Kernel Generic</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Nov 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Setelah 2 minggu, -Current kembali mendapatkan update Jum&rsquo;at kemarin tanggal 17 November 2017. Banyak update, ada yang upgraded, rebuilt, added, dan removed. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.
+Setelah upgrade dan eliloconfigkemudian restart, ternyata muncul masalah! Bootloop! Loading vmlinuz&hellip; langsung reboot. Begitu seterusnya.
+Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk recovery-nya lebih mudah. Boot dari DVD kemudian waktu muncul grubpilih opsi yang intinya detect another operating system (persisnya saya lupa).
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2017-11-15-mengamankan-file-folder/">Mengamankan File Folder</a></h2>
 
     <div class="post-meta">
@@ -542,146 +690,6 @@ $ xrandr Screen 0: minimum 8 x 8, current 1366 x 768, maximum 32767 x 32767 eDP1
   
   <footer>
     <a href="https://sasongko.web.id/post/2017-07-04-presentasi-lcd-projector/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/">Rilis Lumina 1.3.0</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>02 Jul 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/lumina">lumina</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackbuild">slackbuild</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Di suasana Idul Fitri, 26 Juni 2017, Ken Moore selaku project leader Luminamengumumkan perihal rilisnya Lumina Desktop 1.3.0. Selang 4 hari kemudian dirilis patch yang pertama untuk 1.3.0. Catatan rilis resmi silahkan dibaca di sini.
-Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini tergolong istimewa. Mulai versi 1.3.0 ini luminasemakin powerfull untuk digunakan di Slackware. Sampai dengan versi 1.2.0_p1 (1.2.0 patchset 1), Restartdan Power Offpada menu sama sekali tidak berfungsi.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-03-27-disable-commands-history/">Disable Command&#39;s History</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>27 Mar 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, perintah/command yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan command historyatau membaca isi ~/.bash_history. Ini bisa di-disable. Caranya, membuat file di /etc/profile.d/, yang isinya
-export HISTFILE=/dev/null export HISTSIZE=0 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-03-25-konek-internet-usb-tethering/">Konek Internet USB Tethering</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Mar 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Salah satu keunggulan GNU/Linux terutama Slackware adalah berlakunya banyak jalan menuju Roma. Contohnya untuk konek/menyambung ke internet, ada beberapa cara antara lain :
- nmcli, contohnya [di sini]({% post_url 2016-06-26-konek-inet-nmcli %}) dan [di sini]({% post_url 2016-12-07-nmcli-konek-wifi %}). pppsetup, caranya [seperti ini]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) dan [ini]({% post_url 2015-08-17-setting-internet-xl-slackware %}) [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) wpa_supplicant wicd  Cara lainnya yang saya pakai adalah dengan dhcpcd.
-Misalkan akan menyambungkan internet melalui USB tethering - cara melakukan USB tethering tidak saya bahas,
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2017-03-25-konek-internet-usb-tethering/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
