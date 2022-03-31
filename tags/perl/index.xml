@@ -6,7 +6,17 @@
     <description>Recent content in perl on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/perl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/perl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Operator penggabungan pengulangan string perl</title>
+      <link>https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/</guid>
+      <description>Pada perl, variabel scalar yang berupa string dapat dilakukan penggabungan dan pengulangan. Contoh, terdapat 3 variabel sebagai berikut: $sapa = &amp;ldquo;Hai&amp;hellip;. &amp;quot; $distro = &amp;ldquo;Slackware&amp;rdquo; $penilaian = &amp;ldquo;distro terbaik.&amp;rdquo; Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan &amp;ldquo;.&amp;rdquo;, sedangkan pengulangan dengan &amp;ldquo;x&amp;rdquo;.
+#!/usr/bin/perl  use strict; use warnings; use feature &amp;#34;say&amp;#34;;  my $sapa = &amp;#34;Hai.... &amp;#34;; my $distro = &amp;#34;Slackware &amp;#34;; my $penilaian = &amp;#34;distro terbaik.</description>
+    </item>
+    
     <item>
       <title>Penggabungan operator perl</title>
       <link>https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/</link>
