@@ -227,6 +227,151 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/">Kenggulan elilo dibanding grub</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 Apr 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/grub">grub</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Pascamigrasi dari elilo ke grub ada hal yang dirindukan. Zram dengan komresi zstd. Entah masalahnya di mana, zstd tidak bisa digunakan untuk zram apabila menggunakan grub. Menggunakan elilo aman damai sentosa lanjcar jaya. Padahal kernel dan initrd-nya sama.
+Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-rle. Alhamdulillah. Dengan adanya zram aktivitas komputasi di laptop dengan RAM hanya 2GB masih bisa dijalankan dengan lancar.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2022-03-28-mengubah-grub-timeout/">Mengubah timeout grub</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>28 Mar 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/grub">grub</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, timeout grub adalah 10 detik. Menurut penulis, 10 detik ini terlalu lama. Untuk mengubahnya ganti angka 10 ke detik yang diinginkan pada baris dengan GRUB_TIMEOUT pada file /etc/default/grub
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/">Menampilkan status penggunaan zram</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>27 Mar 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/zram">zram</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/grub">grub</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk menampilkan status penggunaan zram bisa dengan menjalankan
+# zramctl --output-all NAME DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT /dev/zram0  1G 4K 74B lzo-rle 4 0 12K 0B 12K 0B [SWAP] Berikut penjelasan masing-masing kolomnya
+NAME	zram device name DISKSIZE	limit on the uncompressed amount of data DATA	uncompressed size of stored data COMPR	compressed size of stored data ALGORITHM	the selected compression algorithm STREAMS	number of concurrent compress operations ZERO-PAGES	empty pages with no allocated memory TOTAL	all memory including allocator fragmentation and metadata overhead MEM-LIMIT	memory limit used to store compressed data MEM-USED	memory zram have been consumed to store compressed data MIGRATED	number of objects migrated by compaction MOUNTPOINT	where the device is mounted
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-03-26-migrasi-elilo-ke-grub/">Migrasi dari elilo ke grub</a></h2>
 
     <div class="post-meta">
