@@ -228,6 +228,105 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/">Upgrade Slackbuilds Slackware 14.2</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Jul 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackbuild">slackbuild</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sbopkg">sbopkg</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Setelah melakukan [ upgrade sistem ke Slackware 14.2]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya upgrade juga paket yang diinstal dari slackbuilds.org.
+ Upgrade sbopkg: sbopkg -u Versi sbopkgterbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik D Hasil unduhan : /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Setelah diunduh, upgrade : upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Karena menghasilkan konfigurasi baru, lakukan slackpkg new-configdan pilih overwrite saja. Kemudian update ke repo 14.2 : sbopkgpilih Utilitieslalu Repository. Kemudian pilih SBo (14.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/">Ganti Theme Xfce</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 Jun 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/theme">theme</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Bosan dengan tampilan theme yang itu-itu aja? Tenang, theme-nya bisa diganti kok, bahkan diganti agar tampilannya mirip Mac OS X. Sebagai contoh akan kita install theme GlossyP3 yang membuat tampilan menjadi mirip Mac OS X.
+Download terlebih dahulu berkasnya dari sini (pastikan tersambung internet). Berkas dalam bentuk arsip .tar.bz2ekstrak ke direktori /usr/share/themesdengan hak administrator atau root.
+Kemudian ke Settings &mdash;&gt; Appearancepilih GlossyP3Kemudian, meminjam kata Mario Teguh, dan lihat apa yang terjadi.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/">Konek Internet dengan nmcli</a></h2>
 
     <div class="post-meta">
@@ -623,104 +722,6 @@ Dengan akses root copas /lib/modprobe.d/psmouse.confke /etc/modprobe.d. Kemudian
   
   <footer>
     <a href="https://sasongko.web.id/post/2016-02-26-mouse-stuck/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-02-08-slackware-current-hang/">Slackware Current Susah Booting dan Shutdown</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>08 Feb 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering stuck saat boot dan shutdown.
-Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis ID-Slackware, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-02-08-slackware-current-hang/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/">pip InsecurePlatformWarning</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>21 Jan 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Saat melakukan pencarian dengan pip, muncul pesan
-/usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:315: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning. SNIMissingWarning /usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:120: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

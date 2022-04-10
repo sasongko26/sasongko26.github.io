@@ -6,7 +6,18 @@
     <description>Recent content on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pipewire di WindowMaker</title>
+      <link>https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/</link>
+      <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/</guid>
+      <description>Lama tidak menggunakan, hati ini rindu pada WindowMaker. Segera mengalihkan .xinitrc ke xinitrc.wmaker. Beberapa hari kemudian, merasa ada yang janggal. Suasana menjadi sunyi senyap. Tanpa suara. Padahal ketika menggunakan KDE Plasma tidak ada masalah dengan sound system.
+Hati ini baru sadar bahwa sound-nya telah diserahterimakan dari pulseaudio kepada pipewire. Baiklah, mari tambahkan beberapa baris berikut ke ~/GNUstep/Library/WindowMaker/autostart
+#pipewire /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire /usr/bin/pipewire &amp;amp; /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire-pulse /usr/bin/pipewire-pulse &amp;amp; /usr/bin/daemon -frB --pidfiles=~/.</description>
+    </item>
+    
     <item>
       <title>Kenggulan elilo dibanding grub</title>
       <link>https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/</link>
@@ -1566,6 +1577,18 @@ R/ adduser # saya gunakan R/ sebagai pengganti shell prompt untuk root kemudian 
       <description>Apa itu MariaDB MariaDB adalah software untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.
 Install MariaDB Secara default, apabila Slackware diisnntall full system maka MariaDB akan terinstall. Jadi tidak usah repot-repot untuk insytallnya.
 Memulai MariaDB Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. prompt R/menunjukkan dilakukan dengan priviledge rootR/ mysql_install_db R/ chown -R mysql:mysql /var/lib/mysql R/ chmod +x /etc/rc.</description>
+    </item>
+    
+    <item>
+      <title>Perl IDE dengan vim</title>
+      <link>https://sasongko.web.id/post/2019-02-01-perl-ide-vim/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2019-02-01-perl-ide-vim/</guid>
+      <description>Reputasi vim sebagai text editor sudah teruji berpuluh tahun. Ternyata Vim juga memiliki support plugin untuk perl. Hal ini membuat vim bisa dijadikan sebagai integrated development environment (IDE) untuk perl.
+Download plugin-nya kemudian extract
+$ wget https://www.vim.org/scripts/download_script.php?src_id=24473 -O perl-support.zip -O perl-support.zip $ mkdir -p .vim $ unzip perl-support.zip -d .vim Aktifkan
+$ echo &amp;#34;filetype plugin on&amp;#34; &amp;gt;&amp;gt; .vimrc </description>
     </item>
     
     <item>

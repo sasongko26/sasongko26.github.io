@@ -127,6 +127,18 @@ $ perldoc perlintro </description>
     </item>
     
     <item>
+      <title>Perl IDE dengan vim</title>
+      <link>https://sasongko.web.id/post/2019-02-01-perl-ide-vim/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2019-02-01-perl-ide-vim/</guid>
+      <description>Reputasi vim sebagai text editor sudah teruji berpuluh tahun. Ternyata Vim juga memiliki support plugin untuk perl. Hal ini membuat vim bisa dijadikan sebagai integrated development environment (IDE) untuk perl.
+Download plugin-nya kemudian extract
+$ wget https://www.vim.org/scripts/download_script.php?src_id=24473 -O perl-support.zip -O perl-support.zip $ mkdir -p .vim $ unzip perl-support.zip -d .vim Aktifkan
+$ echo &amp;#34;filetype plugin on&amp;#34; &amp;gt;&amp;gt; .vimrc </description>
+    </item>
+    
+    <item>
       <title>Fix sbotools Perl unescaped left brace in regex is deprecated here</title>
       <link>https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/</link>
       <pubDate>Tue, 17 Jul 2018 00:00:00 +0000</pubDate>

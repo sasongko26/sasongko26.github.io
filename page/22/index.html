@@ -228,6 +228,104 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2016-02-08-slackware-current-hang/">Slackware Current Susah Booting dan Shutdown</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 Feb 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering stuck saat boot dan shutdown.
+Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis ID-Slackware, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-02-08-slackware-current-hang/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/">pip InsecurePlatformWarning</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>21 Jan 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Saat melakukan pencarian dengan pip, muncul pesan
+/usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:315: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning. SNIMissingWarning /usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:120: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-12-26-menggunakan-gdrv/">Cara Menggunakan gdrv</a></h2>
 
     <div class="post-meta">
@@ -611,98 +709,6 @@ wget http://www.cgsecurity.org/testdisk-7.0.tar.bz2 tar xjvf testdisk-7.
   <footer>
     <a href="https://sasongko.web.id/post/2015-10-29-install-testdisk/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-10-01-download-video-youtube/">Download Video Youtube</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Oct 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Download video dari Youtube adalah hal yang mudah bagi pengguna Slackware. Paling tidak ada 2 cara. Cara pertama menggunakan peramban web, dan cara kedua menggunakan youtube-dl yang berantar muka teks. Di sini menggunakan cara kedua. Untuk menginstall youtube-dl silahkan [klik di sini]({% post_url 2015-10-01-install-youtubedl %}).
-Cara menggunakannya
-youtube-dl url_video_youtube Contoh, akan URL video yang akan di download adalah https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54.
-youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54 Kalau ada beberapa video yang ingin didownload, masukkan saja URLnya ke satu file, tiap baris 1 URL, kemudian cara downloadnya tambahkan opsi -a
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-10-01-download-video-youtube/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-10-01-install-youtubedl/">Install Youtube Downloader</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Oct 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Siapa bilang pakai Slackware ga bisa download video dari Youtube? Bisa kok pakai youtube-dl.Cara installnya gampang. Pastikan terhubung ke internet untuk mengunduh berkasnya. Dan untuk install butuh hak akses root. Di sini kita pakai cara yang mudah saja, install dari slackbuilds.org.
-cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-dl.tar.gz tar xzf youtube-dl.tar.gz cd youtube-dl wget https://github.com/rg3/youtube-dl/archive/2015.09.22.tar.gz sh youtube-dl.SlackBuild installpkg /tmp/youtube-dl-2015.09.22-x86_64-1_SBo.tgz 
-  </p>
-
   
 </article>
 

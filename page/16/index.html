@@ -228,6 +228,96 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/">Fix sbotools Perl unescaped left brace in regex is deprecated here</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>17 Jul 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Siang ini, sudah agak lama tidak check update paket-paket dari SBo. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.
+$ sbocheck # command ini dijalankan oleh root Unescaped left brace in regex is deprecated here (and will be fatal in Perl 5.32), passed through in regex; marked by &lt;-- HERE in m/\$({ &lt;-- HERE |)[A-Za-z0-9_]+(}|)/ at /usr/share/perl5/SBO/Lib/Build.pm line 244 Ada masalah ternyata dan masalahnya di Perl.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2018-06-23-kosongkan-trash/">Hapus Trash via Command Line</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 Jun 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Iseng-iseng buka hidden folder ada yang menarik. File yang ada di Trash (bisa buka di Thunar dengan path trash:///sama dengan yang ada di ~/.local/share/Trash/files/. Sehingga kalau ingin mengosongkan Trash dan posisi sedang di CLI dan tidak membuka file manager ataupun lagi aras-arasen, sangat bisa.
+rm -rv ~/.local/share/Trash/* 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2018-06-19-mencoba-manokwari/">Mencoba Manokwari</a></h2>
 
     <div class="post-meta">
@@ -593,103 +683,6 @@ Mungkin sebagian ada yang menekan backspaceberkali-kali sampai dirasa cukup. Ya,
 Ya, dengan kombinasi Ctrl + u .
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-04-21-mengubah-nama-jalan-osm/">Mengubah Nama Jalan OSM</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>21 Apr 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/gis">gis</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Ketika [menggunakan OpenStreetMap (OSM)]({% post_url 2018-04-13-cari-lokasi-osm %}) dan menjumpai ada data/informasi yang kita tahu tidak benar, kita diijinkan untuk memperbaikinya. Inilah kelebihan OSM yang bersifat open source.
-Kali ini memperbaiki kesalahan nama jalan. Jalan yang keliru penamaannya adalah Jalan Wonosari IV yang seharusnya Jalan Widosari IV. Jalan ini terletak di sebelah barat laut SMP Negeri 3 Semarang.
-Kesalahan tersebut sudah saya perbaiki, sehingga kalau Pembaca membukanya di OSM peta di atas sudah tidak berlaku.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2018-04-21-mengubah-nama-jalan-osm/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-04-13-cari-lokasi-osm/">Mencari Lokasi dengan OpenStreetMap</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>13 Apr 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/gis">gis</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Dari [catatan sebelumnya]({% post_url 2018-04-12-mengenal-josm %}) diketahui bahwa OSM adalah layanan peta digital. Berikut cara menggunakannya.
-Misalkan, kita akan mencari di mana SMP Negeri 3 Semarang. Pertama, pastikan komputer terhubung ke internet dan buka web OSM. Pada kotak pencarian masukkan tempat yang dicari, (yang saya beri elips merah), dalam contoh ini saya tuliskan smp negeri 3 semarang.
-Apabila ditemukan akan ditampilkan seperti di bawah ini
-Kemudian klik hasil pencarian untuk mengetahui detil lokasi.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2018-04-13-cari-lokasi-osm/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

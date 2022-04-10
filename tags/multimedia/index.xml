@@ -6,7 +6,18 @@
     <description>Recent content in multimedia on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/multimedia/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/multimedia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pipewire di WindowMaker</title>
+      <link>https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/</link>
+      <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/</guid>
+      <description>Lama tidak menggunakan, hati ini rindu pada WindowMaker. Segera mengalihkan .xinitrc ke xinitrc.wmaker. Beberapa hari kemudian, merasa ada yang janggal. Suasana menjadi sunyi senyap. Tanpa suara. Padahal ketika menggunakan KDE Plasma tidak ada masalah dengan sound system.
+Hati ini baru sadar bahwa sound-nya telah diserahterimakan dari pulseaudio kepada pipewire. Baiklah, mari tambahkan beberapa baris berikut ke ~/GNUstep/Library/WindowMaker/autostart
+#pipewire /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire /usr/bin/pipewire &amp;amp; /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire-pulse /usr/bin/pipewire-pulse &amp;amp; /usr/bin/daemon -frB --pidfiles=~/.</description>
+    </item>
+    
     <item>
       <title>Menggunakan pipewire</title>
       <link>https://sasongko.web.id/post/2022-02-19-menggunakan-pipewire/</link>
