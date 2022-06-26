@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.94.2" />
+  <meta name="generator" content="Hugo 0.99.1" />
 
   <title>Catatan Sasongko</title>
 
@@ -225,6 +225,96 @@
 </div>
 
 <div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2022-05-25-mengetahui-spek-ram/">Mengetahui spek RAM</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>25 May 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/"></a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/"></a>&nbsp;&#47;
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Identifikasi RAM yang ada di komputer merupakan hal mutlak untuk penggantian, upgrade ataupun sekedar membersihkan RAM. Informasi awal tentang RAM bisa diperoleh tanpa membongkar komputer ataupun laptop. Hal ini sangat bermanfaat bagi pengguna yang tidak punya keterampilan bongkar pasang komputer. Apalagi kalau masih garansi, kalau dibongkar bukan teknisi service center resminya maka garansinya hangus.
+Untuk mengetahui spek RAM mudah. Bagi slackers (pengguna Slackware) tidak perlu repot menginstall macam-macam. Tool-nya sudah tersedia.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2022-05-25-mengetahui-spek-ram/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2022-04-25-menampilkan-progress-dd/">Menampilkan progress dd</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>25 Apr 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, dd tidak menampilkan progress. Untuk menampilkannya tambahkan
+status=progress 
+  </p>
+
+  
+</article>
+
   
     <article>
   <header>
@@ -604,99 +694,6 @@ https://mirrors.slackware.com/slackware/slackware64-15.0/ untuk menggunakan mirr
 chmod -x /etc/profile.d/bsd-games-login-fortune.*sh 
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-02-19-menggunakan-pipewire/">Menggunakan pipewire</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Feb 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Salah satu fitur baru yang dihadirkan Slackware 15.0 adalah masuknya pipewire sebagai alternatif dari pulseaudio. Bagaimana penggunaanya? Silakan simak catatan berikut ini.
-Pertama, edit /etc/pulse/client.conf. Ubah autospawn dari yes menjadi no.
-Hapus /etc/xdg/autostart/pulseaudio.desktop atau rename menjadi file yang &ldquo;tidak penting&rdquo;.
-Rename file berikut menjadi .desktop saja
- /etc/xdg/autostart/pipewire-media-session.desktop.sample /etc/xdg/autostart/pipewire-pulse.desktop.sample /etc/xdg/autostart/pipewire.desktop  
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/">Operator perbandingan perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Jan 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Operator perbandingan digunakan untuk membandingkan nilai. Data/nilai yang dibandingkan dapat berupa bilangan ataupun string. Namun ada perbedaan notasi.
-Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &lt; $b	| $a lebih kecil dari $b	| |$a &gt; $b	| $a lebih besar dari $b	| |$a &lt;= $b	| $a lebih kecil atau sama dengan $b	| |$a =&gt; $b	| $a lebih besar atau sama dengan $b	| |$a == $b	| $a sama dengan $b	| |$a !
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

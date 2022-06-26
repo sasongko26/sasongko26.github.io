@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.94.2" />
+  <meta name="generator" content="Hugo 0.99.1" />
 
   <title>Catatan Sasongko</title>
 
@@ -225,6 +225,106 @@
 </div>
 
 <div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/">Mengembalikan File yang Terhapus dengan Testdisk</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 Oct 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/recovery file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.
+Sebagai root jalankan
+testdisk kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih No Log karena merasa log ini tidak terlalu penting. Selanjutnya akan terdeteksi media simpan yang terpasang di komputer.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2015-10-29-install-testdisk/">Install Testdisk</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Oct 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Testdisk adalah salah satu aplikasi digital forensik multiplatform. Bisa dijalankan di Windows (NT4, 2000, 2003, XP, Vista dan 7), Linux, FreeBSD, OpenBSD, NetBSD, SunOS, dan MacOS. Adapun kegunaannya untuk mengembalikan partisi yang terhapus beserta file-file yang ada di dalamnya. Informasi lebih lengkap tentang testdisk bisa didapatkan di sini.
+Sebenarnya untuk Slackware sudah ada slackbuild-nya, tapi tidak ada salahnya kalau install dari kode sumber. Penginstallan dijalankan dengan level root.
+wget http://www.cgsecurity.org/testdisk-7.0.tar.bz2 tar xjvf testdisk-7.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-10-29-install-testdisk/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
   
     <article>
   <header>
@@ -591,98 +691,6 @@ easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall de
 wget http://slackbuilds.org/slackbuilds/14.1/libraries/wxPython.tar.gz tar xzf wxPython.tar.gz cd wxPython wget http://downloads.sourceforge.net/wxpython/wxPython-src-2.8.12.1.tar.bz2 sh wxPython.SlackBuild installpkg /tmp/wxPython-2.8.12.1-x86_64-2_SBo.tgz 
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-07-13-install-pip/">Install pip</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>13 Jul 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Pip akan memudahkan kita semua untuk menginstall paket-paket yang terkait dengan python.
-wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py python get-pip.py 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/">Mount Partisi Otomatis</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>13 Jul 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Masih melanjutkan catatan yang kemarin tentang pemartisian. Setelah [membuat partisi]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) kemudian [diformat]({% post_url 2015-07-12-memformat-partisi %}), langkah selanjutnya adalah memutuskan apakah partisi itu akan di-mount secara otomatis saat boot atau tidak.
-Nah, karena partisi /dev/sda9 yang bersistem ext4 kemarin akan saya jadikan sebagai tempat source code paket/aplikasi, seperti untuk menyimpan berkas slackbuild, saya putuskan untuk mengaitkannya secara otomatis di /usr/local/src. Caranya adalah dengan menambahkan baris berikut ke /etc/fstab
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

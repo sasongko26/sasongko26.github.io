@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.94.2" />
+  <meta name="generator" content="Hugo 0.99.1" />
 
   <title>Catatan Sasongko</title>
 
@@ -225,6 +225,93 @@
 </div>
 
 <div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2018-05-08-uninstall-all-perl-modules-manually/">Uninstall Manual Semua Modul Perl</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 May 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Cara uninstall semua modul perl yang dulunya install dari CPAN secara manual :
+rm -r /usr/local/{lib{,64},share}/perl5 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2018-04-23-salah-password-terminal/">Salah Password di Terminal</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 Apr 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Pengguna GNU/Linux mungkin pernah salah menuliskan password saat login melalui terminal. Apa yang dilakukan?
+Mungkin sebagian ada yang menekan backspaceberkali-kali sampai dirasa cukup. Ya, sampai dirasa cukup. Sampai dirasa kursor sudah kembali ke posisi awal penulisan password. Tapi, tahukah kalau ada cara yang lebih smart ?
+Ya, dengan kombinasi Ctrl + u .
+  </p>
+
+  
+</article>
+
   
     <article>
   <header>
@@ -609,93 +696,6 @@ Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk rec
   <footer>
     <a href="https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-11-15-mengamankan-file-folder/">Mengamankan File Folder</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Nov 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Salah satu hal yang membuat saya menggunakan linux khususnya Slackware adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan .pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan steganografi tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}) atau [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}).
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2017-11-15-mengamankan-file-folder/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-08-08-set-clang-as-default-c-compiler/">Mengatur Clang Sebagai C Compiler Utama</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>08 Aug 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, C Compiler yang digunakan adalah gcc. Namun, apabila diinginkan, bisa dialihkan menggunakan clang. Caranya, buat file di /etc/profile.dmisalnya c-compiler.sh, yang isinya
-export CC=/usr/bin/clang export CXX=/usr/bin/clang++ 
-  </p>
-
   
 </article>
 
