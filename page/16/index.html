@@ -228,6 +228,51 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2019-02-01-perl-ide-vim/">Perl IDE dengan vim</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Feb 2019</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Reputasi vim sebagai text editor sudah teruji berpuluh tahun. Ternyata Vim juga memiliki support plugin untuk perl. Hal ini membuat vim bisa dijadikan sebagai integrated development environment (IDE) untuk perl.
+Download plugin-nya kemudian extract
+$ wget https://www.vim.org/scripts/download_script.php?src_id=24473 -O perl-support.zip -O perl-support.zip $ mkdir -p .vim $ unzip perl-support.zip -d .vim Aktifkan
+$ echo &#34;filetype plugin on&#34; &gt;&gt; .vimrc 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/">Hapus Aplikasi yang Diinstall Tanggal Tertentu</a></h2>
 
     <div class="post-meta">
@@ -639,50 +684,6 @@ Contoh, untuk perl :
   <p>
   Mengapa saya suka mengenkripsi file dengan openssl? Karena
  Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&hellip;.  
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-05-18-convert-video-mp3/">Convert Video Menjadi MP3</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 May 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Ternyata tidak sulit mengkonversi/convert video menjadi audio, dalam hal ini mp3. Misalkan, akan dikonversi file video Gambang_Semarang.mkv menjadi file Gambang_Semarang.mp3
-ffmpeg -i Gambang_Semarang.mkv -b:a 128K -vn Gambang_Semarang.mp3 (output) dari command tersebut di atas sengaja tidak ditampilkan di sini karena agak panjang.
-Cara ini juga berlaku untuk mengubah file mp4 ke mp3 atau dengan kata lain, sebenarnya mengekstrak audio yang ada di dalam video.
   </p>
 
   
