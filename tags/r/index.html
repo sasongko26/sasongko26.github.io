@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.99.1" />
+  <meta name="generator" content="Hugo 0.102.3" />
 
   <title>r &middot; Catatan Sasongko</title>
 
@@ -262,7 +262,7 @@
   <p>
   Pagi ini, saat akan mengeksekusi R,
 $ R /usr/lib64/R/bin/exec/R: error while loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory Ternyata R nya bermasalah. Di atas disebutkan bahwa libicuuc.so.67 tidak ditemukan. Dari namanya, bisa ditebak itu adalah shared object/library miliknya icu4c. Kita pastikan dulu,
-$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE  The list below shows the packages that contains &#34;libicuuc\.
+$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE The list below shows the packages that contains &#34;libicuuc\.
   </p>
 
   
@@ -351,8 +351,9 @@ $ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Plea
   </header>
 
   <p>
-  Mengetahui working directory Secara default, working directory pada Slackware adalah home directory user atau di mana command Rdijalankan.
-getwd() Mengganti working directory Misal, akan berpindah working directory ke Documents/projectsetwd(&#39;Documents/project&#39;) 
+  Mengetahui working directory Secara default, working directory pada Slackware adalah home directory user atau di mana command R dijalankan.
+getwd() Mengganti working directory Misal, akan berpindah working directory ke Documents/project
+setwd(&#39;Documents/project&#39;) 
   </p>
 
   
@@ -394,9 +395,9 @@ getwd() Mengganti working directory Misal, akan berpindah working directory ke D
   </header>
 
   <p>
-  Factor adalah representasi data kategorik. Factor bisa dibuat dengan fungsi factor()atau cut(). Saya lebih sering menggunakan cut()karena lebih aplikatif saat akan mengubah skala data dari rasio atau interval ke ordinal.
+  Factor adalah representasi data kategorik. Factor bisa dibuat dengan fungsi factor() atau cut(). Saya lebih sering menggunakan cut() karena lebih aplikatif saat akan mengubah skala data dari rasio atau interval ke ordinal.
 Contoh, bmi adalah data body mass index (BMI) atau indeks massa tubuh (IMT). Klasifikasi IMT ada 4 macam, yaitu
- &lt; 18,5 : underweight 18,5 - 24,99 : normal 25 - 29,99 : overweight &gt; 30 : obese/obesitas Untuk obesitas, masih bisa diklasifikasikan menjadi 3 30 - 34,99 : obese class 1 35 - 39,99 : obese class 2 &gt; 40 : extreme obesity  &gt; bmi &lt;- c(20, 21.
+&lt; 18,5 : underweight 18,5 - 24,99 : normal 25 - 29,99 : overweight &gt; 30 : obese/obesitas Untuk obesitas, masih bisa diklasifikasikan menjadi 3 30 - 34,99 : obese class 1 35 - 39,99 : obese class 2 &gt; 40 : extreme obesity &gt; bmi &lt;- c(20, 21.
   </p>
 
   
@@ -491,7 +492,7 @@ Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini ber
 
   <p>
   JASP, singkatan dari Jeffreys&rsquo;s Amazing Statistic Program, merupakan open source statistics software. Software ini layak dijadikan pilihan utama karena:
- Open source. Karena open source semua orang boleh memakai, melihat source code-nya dan berkontribusi (melaporkan masalah, mengusulkan fitur dan perbaikan). Silahkan menuju ke https://github.com/jasp-stats/jasp-desktop . Pengembangan dinaungi oleh akademisi dari University of Amsterdam, Duke University, University of Southampton, UNiversity of Sussex, University of Missouri, Athens University of Economics dan Business, Missouri State University, University of Groningen, Nyenrode Business University, University of Zurich dan Ludwig-Maximilians-Universität München.
+Open source. Karena open source semua orang boleh memakai, melihat source code-nya dan berkontribusi (melaporkan masalah, mengusulkan fitur dan perbaikan). Silahkan menuju ke https://github.com/jasp-stats/jasp-desktop . Pengembangan dinaungi oleh akademisi dari University of Amsterdam, Duke University, University of Southampton, UNiversity of Sussex, University of Missouri, Athens University of Economics dan Business, Missouri State University, University of Groningen, Nyenrode Business University, University of Zurich dan Ludwig-Maximilians-Universität München.
   </p>
 
   
@@ -638,7 +639,7 @@ Nilai minimal min(ldeaths) [1] 1300 Nilai maksimal max(ldeaths) [1] 3891 Range r
 
   <p>
   Input data dalam R sangat mudah dan ada beragam cara, yaitu:
- Menuliskan dalam bentuk syntax. Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100 Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel.
+Menuliskan dalam bentuk syntax. Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100 Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel.
   </p>
 
   
@@ -685,7 +686,7 @@ Nilai minimal min(ldeaths) [1] 1300 Nilai maksimal max(ldeaths) [1] 3891 Range r
 
   <p>
   Berikut adalah package atau library R yang secara default terinstall di Slackware melalui SBo.
- KernSmooth.Functions for Kernel Smoothing Supporting Wand &amp; Jones (1995) MASS. Support Functions and Datasets for Venables and Ripley&rsquo;s MASS Matrix. Sparse and Dense Matrix Classes and Methods base. The R Base Package boot. Bootstrap Functions (Originally by Angelo Canty for S) class. Functions for Classification cluster. &ldquo;Finding Groups in Data&rdquo;: Cluster Analysis Extended Rousseeuw et al.
+KernSmooth.Functions for Kernel Smoothing Supporting Wand &amp; Jones (1995) MASS. Support Functions and Datasets for Venables and Ripley&rsquo;s MASS Matrix. Sparse and Dense Matrix Classes and Methods base. The R Base Package boot. Bootstrap Functions (Originally by Angelo Canty for S) class. Functions for Classification cluster. &ldquo;Finding Groups in Data&rdquo;: Cluster Analysis Extended Rousseeuw et al. codetools.
   </p>
 
   

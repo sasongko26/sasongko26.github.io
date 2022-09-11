@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.99.1" />
+  <meta name="generator" content="Hugo 0.102.3" />
 
   <title>android &middot; Catatan Sasongko</title>
 
@@ -348,7 +348,8 @@ adb shell screencap -p /sdcard/screenshot.png
   </header>
 
   <p>
-  Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan adbadb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti angka 3 dengan 0.
+  Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan adb
+adb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti angka 3 dengan 0.
   </p>
 
   
@@ -390,7 +391,9 @@ adb shell screencap -p /sdcard/screenshot.png
   </header>
 
   <p>
-  Ketika akan memindahkan data dari HP android ke laptop melalui thunar, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui jmtpfs$ jmtpfs Device 0 (VID=0e8d and PID=201d) is a MediaTek Inc Elephone P8000. error returned by libusb_claim_interface() = -6LIBMTP PANIC: Unable to initialize device terminate called after throwing an instance of &#39;MtpErrorCantOpenDevice&#39;  what(): Can&#39;t open device Aborted Ada masalah di libusb. Coba reinstall libusb# slackpkg reinstall libusb Alhamdulillah sukses.
+  Ketika akan memindahkan data dari HP android ke laptop melalui thunar, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui jmtpfs
+$ jmtpfs Device 0 (VID=0e8d and PID=201d) is a MediaTek Inc Elephone P8000. error returned by libusb_claim_interface() = -6LIBMTP PANIC: Unable to initialize device terminate called after throwing an instance of &#39;MtpErrorCantOpenDevice&#39; what(): Can&#39;t open device Aborted Ada masalah di libusb. Coba reinstall libusb
+# slackpkg reinstall libusb Alhamdulillah sukses.
   </p>
 
   
@@ -485,9 +488,8 @@ Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersed
 
   <p>
   Sebelum berganti ponsel atau HP sangat disarankan untuk mem-back up data-data penting, seperti dokumen, foto, video, maupun chat WhatsApp. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi Slackware.
-Persiapan Slackware Pastikan bisa menjalankan adbyang merupakan bagian dari android tools. Kalau belum bisa install dari SBo
-Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer pakai adbbisa lebih cepat
-Persiapan Android Aktifkan mode USB debugging yang ada di Settings &ndash;&gt; Developer options.
+Persiapan Slackware Pastikan bisa menjalankan adb yang merupakan bagian dari android tools. Kalau belum bisa install dari SBo
+Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer pakai adb bisa lebih cepat
   </p>
 
   
@@ -536,8 +538,10 @@ Persiapan Android Aktifkan mode USB debugging yang ada di Settings &ndash;&gt; D
   Di catatan kemarin sudah saya sampaikan [cara install sbopkg]({% post_url 2016-05-03-install-sbopkg %}), nah sekarang adalah contoh cara menggunakan sbopkg, untuk install Android Tools.
 Jalankan sebagai root
 sbopkg Tersedia pilihan Sync, Changelog, Packages, Updates, Browse, Search, Queue, Utilities, Help.
-Pilih SearchMasukkan kata kuncinya, misalnya androidKemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan OK.
-Keluar beraneka opsi. Alangkah baiknya baca-baca READMEatau Infodulu terutama untuk cek dependensi pada bagian REQUIRESetelah semua dependensi terpenuhi, silahkan lanjut, pilih Processkemudian Installlalu StartProses, download, build dan install dimulai.
+Pilih Search
+Masukkan kata kuncinya, misalnya android
+Kemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan OK.
+Keluar beraneka opsi. Alangkah baiknya baca-baca README atau Info dulu terutama untuk cek dependensi pada bagian REQUIRE
   </p>
 
   
@@ -586,7 +590,7 @@ Keluar beraneka opsi. Alangkah baiknya baca-baca READMEatau Infodulu terutama un
 
   <p>
   GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:
- python-protobuf (&gt;=2.4) python-requests (&gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&gt;=2.8) python 2.5+ java (opsional)  Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
+python-protobuf (&gt;=2.4) python-requests (&gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&gt;=2.8) python 2.5+ java (opsional) Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
 easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).
   </p>
 

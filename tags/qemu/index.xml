@@ -13,10 +13,10 @@
       <pubDate>Sun, 11 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2016-09-11-mount-qcow2/</guid>
-      <description>Untuk mengaitkan/mount berkas qcow2ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
+      <description>Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
 Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
-modprobe nbd max_part=N max_part=Nisikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2tersebut kalau dijalankan dengan qemuberisi 8 partisi, maka nilai Nadalah 8.
-Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbdyang mengaktifkan koneksi file /mnt/virtual/image/ign11.qcow2ke /dev/nbd0&amp;gt;</description>
+modprobe nbd max_part=N max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.
+Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbd yang mengaktifkan koneksi file /mnt/virtual/image/ign11.</description>
     </item>
     
     <item>
@@ -25,8 +25,8 @@ Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbdyang
       <pubDate>Tue, 05 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</guid>
-      <description>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Managerbelum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failuredengan detail sebagai berikut
-Unable to connect to libvirt.  internal error: Cannot find suitable emulator for x86_64  Libvirt URI is: qemu:///system  Traceback (most recent call last):  File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 979, in _open_thread  self.</description>
+      <description>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Manager belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failure dengan detail sebagai berikut
+Unable to connect to libvirt. internal error: Cannot find suitable emulator for x86_64 Libvirt URI is: qemu:///system Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 979, in _open_thread self._populate_initial_state() File &amp;#34;/usr/share/virt-manager/virtManager/connection.</description>
     </item>
     
     <item>
@@ -35,8 +35,8 @@ Unable to connect to libvirt.  internal error: Cannot find suitable emulator for
       <pubDate>Mon, 04 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</guid>
-      <description>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Managertidak bisa dijalankan.
-$ virt-manager Traceback (most recent call last):  File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt;  from virtinst import util as util  File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt;  from virtinst.distroinstaller import DistroInstaller  File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt;  from . import urlfetcher  File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt;  import requests ImportError: No module named requests Ternyata, ada masalah dependensi.</description>
+      <description>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.
+$ virt-manager Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt; from virtinst import util as util File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt; from virtinst.distroinstaller import DistroInstaller File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt; from . import urlfetcher File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.</description>
     </item>
     
   </channel>

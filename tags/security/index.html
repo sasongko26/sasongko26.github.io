@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.99.1" />
+  <meta name="generator" content="Hugo 0.102.3" />
 
   <title>security &middot; Catatan Sasongko</title>
 
@@ -410,7 +410,7 @@ Fitur yang sangat bagus dari kfind adalah bisa menyimpan hasil pencarian. Namun,
   <p>
   Log4shell menjadi topik yang hangat dibicarakan sepekan ini. Bugs JNDI lookup pada log4j membuat komputer atau pc (terutama server) semakin mudah diambil alih tanpa ijin. Syukur alhamdulillah sudah dirilis versi terbaru untuk menangkalnya, yaitu versi 2.16.0.
 Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagian dari default packages.
-# slackpkg file-search log4j  Looking for log4j in package list. Please wait... DONE  No packages contains &#34;log4j&#34; file.
+# slackpkg file-search log4j Looking for log4j in package list. Please wait... DONE No packages contains &#34;log4j&#34; file. Tidak ditemukan.
   </p>
 
   
@@ -549,7 +549,7 @@ $ echo &#34;&#34; &gt; ~/.local/share/recently-used.xbel $ chattr -i ~/.local/sh
 
   <p>
   Mungkin ada yang merasa bosan setiap membuka Chromium muncul kotak dialog Unlock Keyring.
-Itu bisa diatasi, agar tidak muncul lagi. Aktifkan CHROMIUM_FLAGSpada /etc/chromium/00-default.conf.
+Itu bisa diatasi, agar tidak muncul lagi. Aktifkan CHROMIUM_FLAGS pada /etc/chromium/00-default.conf.
 CHROMIUM_FLAGS=&#34;--password-store=basic&#34; 
   </p>
 
@@ -595,7 +595,7 @@ CHROMIUM_FLAGS=&#34;--password-store=basic&#34;
 
   <p>
   Mengapa saya suka mengenkripsi file dengan openssl? Karena
- Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&hellip;.  
+Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&hellip;. 
   </p>
 
   
@@ -638,7 +638,7 @@ CHROMIUM_FLAGS=&#34;--password-store=basic&#34;
 
   <p>
   Pada hari Rabu 6 Desember 2017 jam 14.13.48 UTC, Patrick Volkerding selaku BDFL Slackware, memberikan update di kanal -current. Salah satunya adalah menambahkan libsodium-1.0.15. Libsodium merupakan library atau pustaka untuk enkripsi, dekripsi, signature (tanda tangan digital), dlsb.
-Bagi saya, masuknya libsodiummembawa konsekwensi untuk rebuild dnscrypt-proxyyang menggunakan libsodium. libsodiumyang sebelumnya adalah versi 1.0.13 dari SBo sedangkan versi baru dari official Slackware 1.0.15. Hal ini diketahui dari gagalnya men-start service dnscrypt-proxy .
+Bagi saya, masuknya libsodium membawa konsekwensi untuk rebuild dnscrypt-proxy yang menggunakan libsodium. libsodium yang sebelumnya adalah versi 1.0.13 dari SBo sedangkan versi baru dari official Slackware 1.0.15. Hal ini diketahui dari gagalnya men-start service dnscrypt-proxy .
   </p>
 
   
@@ -684,7 +684,7 @@ Bagi saya, masuknya libsodiummembawa konsekwensi untuk rebuild dnscrypt-proxyyan
   </header>
 
   <p>
-  Salah satu hal yang membuat saya menggunakan linux khususnya Slackware adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan .pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan steganografi tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}) atau [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}).
+  Salah satu hal yang membuat saya menggunakan linux khususnya Slackware adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan . pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan steganografi tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}) atau [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}).
   </p>
 
   
@@ -730,7 +730,7 @@ Bagi saya, masuknya libsodiummembawa konsekwensi untuk rebuild dnscrypt-proxyyan
   </header>
 
   <p>
-  Secara default, perintah/command yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan command historyatau membaca isi ~/.bash_history. Ini bisa di-disable. Caranya, membuat file di /etc/profile.d/, yang isinya
+  Secara default, perintah/command yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan command history atau membaca isi ~/.bash_history. Ini bisa di-disable. Caranya, membuat file di /etc/profile.d/, yang isinya
 export HISTFILE=/dev/null export HISTSIZE=0 
   </p>
 
@@ -777,7 +777,7 @@ export HISTFILE=/dev/null export HISTSIZE=0
   </header>
 
   <p>
-  Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupgatau yang biasa disebut dengan gpg.
+  Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupg atau yang biasa disebut dengan gpg.
 $ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
 $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi 
   </p>
@@ -826,7 +826,7 @@ $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
 
   <p>
   Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
-Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssldengan cipher rc4. File hasil enkripsi saya namai rahasia.odtyang saya taruh di fd dan fd saya mountdi /media/hd0. Kemudian akan ditanya password enkripsinya.
+Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssl dengan cipher rc4. File hasil enkripsi saya namai rahasia.odt yang saya taruh di fd dan fd saya mount di /media/hd0. Kemudian akan ditanya password enkripsinya.
   </p>
 
   

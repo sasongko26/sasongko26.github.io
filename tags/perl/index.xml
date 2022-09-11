@@ -13,9 +13,9 @@
       <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2022-05-28-if-else-perl/</guid>
-      <description>Penyeleksian kondisi di perl dapat menggunakan syntax if&amp;hellip;elsedengan format
-if ( kondisi ) { 	.... 	} else { 	.... 	} Contoh
-#!/usr/bin/perl  use strict; use warnings; use feature &amp;#39;say&amp;#39;;  my $username = &amp;#34;user&amp;#34;; if ( $username eq &amp;#34;nama&amp;#34; ) {  say &amp;#34;Oke&amp;#34;;  } else {  say &amp;#34;Ulangi lagi....&amp;#34;;  } </description>
+      <description>Penyeleksian kondisi di perl dapat menggunakan syntax if&amp;hellip;else dengan format
+if ( kondisi ) { .... } else { .... } Contoh
+#!/usr/bin/perl use strict; use warnings; use feature &amp;#39;say&amp;#39;; my $username = &amp;#34;user&amp;#34;; if ( $username eq &amp;#34;nama&amp;#34; ) { say &amp;#34;Oke&amp;#34;; } else { say &amp;#34;Ulangi lagi....&amp;#34;; } </description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@ Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &amp;lt; $b	| $a lebih
       
       <guid>https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/</guid>
       <description>Pada perl, variabel scalar yang berupa string dapat dilakukan penggabungan dan pengulangan. Contoh, terdapat 3 variabel sebagai berikut: $sapa = &amp;ldquo;Hai&amp;hellip;. &amp;quot; $distro = &amp;ldquo;Slackware&amp;rdquo; $penilaian = &amp;ldquo;distro terbaik.&amp;rdquo; Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan &amp;ldquo;.&amp;rdquo;, sedangkan pengulangan dengan &amp;ldquo;x&amp;rdquo;.
-#!/usr/bin/perl  use strict; use warnings; use feature &amp;#34;say&amp;#34;;  my $sapa = &amp;#34;Hai.... &amp;#34;; my $distro = &amp;#34;Slackware &amp;#34;; my $penilaian = &amp;#34;distro terbaik.</description>
+#!/usr/bin/perl use strict; use warnings; use feature &amp;#34;say&amp;#34;; my $sapa = &amp;#34;Hai.... &amp;#34;; my $distro = &amp;#34;Slackware &amp;#34;; my $penilaian = &amp;#34;distro terbaik.</description>
     </item>
     
     <item>
@@ -57,7 +57,7 @@ a += 4; Sehingga nilai a kemudian berubah dari 10 menjadi 14.</description>
       <guid>https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/</guid>
       <description>Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.
 Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.
-#!/usr/bin/perl  use strict; use warnings; use feature &amp;#39;say&amp;#39;;  my $a = 2; my $b = 25;  say(&amp;#34;Angka pertama (a) adalah $a&amp;#34;); say(&amp;#34;Angka kedua (b) adalah $b&amp;#34;);  # penjumlahan my $c = $a + $b; say(&amp;#34;a+b = $c&amp;#34;);  # pengurangan my $d = $b - $a; say(&amp;#34;b-a = $d&amp;#34;);  # perkalian my $e = $a * $b; say(&amp;#34;a*b = $e&amp;#34;);  # pembagian my $f = $a / $b; my $g = $b / $a; say(&amp;#34;a/b = $f&amp;#34;); say(&amp;#34;b/a = $g&amp;#34;);  # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(&amp;#34;a^b = $h&amp;#34;); say(&amp;#34;b^a = $i&amp;#34;);  # autoincrement # tanda + di depan say(&amp;#34;Nilai a sebelum autoincrement = $a&amp;#34;); my $j = ++$a; say(&amp;#34;++a = $j&amp;#34;); say(&amp;#34;Nilai a sesudah autoincrement = $a&amp;#34;);  # tanda + di belakang say(&amp;#34;Nilai b sebelum autoincrement $b&amp;#34;); my $k = $b++; say(&amp;#34;$b++ = $k&amp;#34;); say(&amp;#34;Nilai b setelah autoincrement $b&amp;#34;);  # autodecrement # tanda - di depan say(&amp;#34;c = a+b.</description>
+#!/usr/bin/perl use strict; use warnings; use feature &amp;#39;say&amp;#39;; my $a = 2; my $b = 25; say(&amp;#34;Angka pertama (a) adalah $a&amp;#34;); say(&amp;#34;Angka kedua (b) adalah $b&amp;#34;); # penjumlahan my $c = $a + $b; say(&amp;#34;a+b = $c&amp;#34;); # pengurangan my $d = $b - $a; say(&amp;#34;b-a = $d&amp;#34;); # perkalian my $e = $a * $b; say(&amp;#34;a*b = $e&amp;#34;); # pembagian my $f = $a / $b; my $g = $b / $a; say(&amp;#34;a/b = $f&amp;#34;); say(&amp;#34;b/a = $g&amp;#34;); # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(&amp;#34;a^b = $h&amp;#34;); say(&amp;#34;b^a = $i&amp;#34;); # autoincrement # tanda + di depan say(&amp;#34;Nilai a sebelum autoincrement = $a&amp;#34;); my $j = ++$a; say(&amp;#34;++a = $j&amp;#34;); say(&amp;#34;Nilai a sesudah autoincrement = $a&amp;#34;); # tanda + di belakang say(&amp;#34;Nilai b sebelum autoincrement $b&amp;#34;); my $k = $b++; say(&amp;#34;$b++ = $k&amp;#34;); say(&amp;#34;Nilai b setelah autoincrement $b&amp;#34;); # autodecrement # tanda - di depan say(&amp;#34;c = a+b.</description>
     </item>
     
     <item>
@@ -78,7 +78,7 @@ my @biodata = ($nama, $jenis_kelamin, $distro, $tahun); </description>
       
       <guid>https://sasongko.web.id/post/2021-12-19-list-module-perl-terinstall/</guid>
       <description>Untuk mengetahui semua modul perl yang terinstall bisa menggunakan instmodsh.
-$ instmodsh Available commands are:  l - List all installed modules  m &amp;lt;module&amp;gt; - Select a module  q - Quit the program cmd? Kemudian pilih l.</description>
+$ instmodsh Available commands are: l - List all installed modules m &amp;lt;module&amp;gt; - Select a module q - Quit the program cmd? Kemudian pilih l.</description>
     </item>
     
     <item>
@@ -101,7 +101,7 @@ print(scalar(@buah)); </description>
       <guid>https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/</guid>
       <description>Jenis variabel ketiga yang dimiliki perl adalah hash. Hash ini merupakan data berpasangan. Penulisan dengan menyertakan tanda %.
 Contoh: akan dideklarasikan data tentang saya, yaitu nama dan distro yang saya gunakan. Nama saya Sasongko, distro Slackware.
-my %data = ( 	nama =&amp;gt; &amp;#34;Sasongko&amp;#34;, 	distro =&amp;gt; &amp;#34;Slackware&amp;#34;, 	); </description>
+my %data = ( nama =&amp;gt; &amp;#34;Sasongko&amp;#34;, distro =&amp;gt; &amp;#34;Slackware&amp;#34;, ); </description>
     </item>
     
     <item>
@@ -187,10 +187,11 @@ rm -r /usr/local/{lib{,64},share}/perl5 </description>
       <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2017-01-19-install-padre/</guid>
-      <description>Padremerupakan integrated development environment (IDE) untuk bahasa pemrograman perl.
-Padreini belum dimasukkan ke dalam paket resmi Slackware maupun SBo. Sehingga ada 2 kemungkinan cara menginstallnya.
-  Build sendiri dari source
-  Install dari cpan  Cara yang saya gunakan adalah cara kedua, yaitu
+      <description>Padre merupakan integrated development environment (IDE) untuk bahasa pemrograman perl.
+Padre ini belum dimasukkan ke dalam paket resmi Slackware maupun SBo. Sehingga ada 2 kemungkinan cara menginstallnya.
+Build sendiri dari source
+Install dari cpan
+Cara yang saya gunakan adalah cara kedua, yaitu
 $ cpan -i Padre </description>
     </item>
     

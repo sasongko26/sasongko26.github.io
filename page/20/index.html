@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.99.1" />
+  <meta name="generator" content="Hugo 0.102.3" />
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,102 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2017-01-01-blankon-wallpapers-slackbuild/">blankon-wallpapers slackbuild</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Jan 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Alhamdulillah, hari ini, 1 Januari 2017, tepat di hari pertama tahun 2017, Tim Pengembang BlankOn secara resmi merilis BlankOn X dengan codename Tambora. Dan di hari ini pula, saya rilis blankon-wallpapers slackbuild secara resmi, walaupun sebenarnya sudah saya taruh di repo github sejak beberapa hari yang lalu.
+Tujuan pembuatan slackbuild ini adalah untuk memasyarakatkan ke-Indonesia-an. BlankOn sebagai salah satu dari beberapa distro GNU/Linux yang dikembangkan oleh rakyat Indonesia tentu memiliki kekhasan bila dibandingkan dengan distro lainnya seperti Debian, Ubuntu, dan Fedora.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-01-01-blankon-wallpapers-slackbuild/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/">Notifikasi Baterai Lemah i3</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>24 Dec 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/i3">i3</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Salah satu keistimewaan i3 atau i3wm adalah belum adanya notifikasi/pemberitahuan saat baterai lemah perlu di-charge. Status baterai sudah ada di bar/panel yang ditampilkan oleh i3status.
+Berikut adalah script sederhana untuk menampilkan notifikasi saat baterai sedang lemah dan tidak sedang di-charge. Jika baterai telah mencapai batas (di sini saya gunakan 5%) maka setiap 30 detik akan tampil notifikasi untuk segera dilakukan charging Wayahe dicas bro&hellip;.!. Dan ketika baterai sudah terisi full 100% tetapi masih dalam kondisi dicas akan tampil notifikasi tiap 30 detik bahwa baterai sudah full.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/">Enable TLP on i3wm</a></h2>
 
     <div class="post-meta">
@@ -265,9 +361,9 @@
   </header>
 
   <p>
-  Beberapa hari yang lalu install i3 (i3wm)menggunakan sbopkg. Biasanya, dengan desktop environment lain seperti Mate, baterai bisa bertahan 4 - 6 jam. Namun, dengan i3 belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.
-Cek powertopternyata banyak yang Bad seperti default-nya tanpa TLP. Padahal service TLP saat booting jalan, Tunable di powertophanya 1 yang Bad lainnya Good semua.
-I3 memiliki berkas konfigurasi /etc/i3/config. Konfigurasi itu yang saya gunakan.
+  Beberapa hari yang lalu install i3 (i3wm) menggunakan sbopkg. Biasanya, dengan desktop environment lain seperti Mate, baterai bisa bertahan 4 - 6 jam. Namun, dengan i3 belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.
+Cek powertop ternyata banyak yang Bad seperti default-nya tanpa TLP. Padahal service TLP saat booting jalan, Tunable di powertop hanya 1 yang Bad lainnya Good semua.
+I3 memiliki berkas konfigurasi /etc/i3/config.
   </p>
 
   
@@ -313,8 +409,8 @@ I3 memiliki berkas konfigurasi /etc/i3/config. Konfigurasi itu yang saya gunakan
   </header>
 
   <p>
-  Di kalangan pengguna GNU/Linux mungkin xtermkurang familiar. Mengingat desktop environment populer seperti GNOME, KDE, Xfce, Matedan LXQttelah mempunyai terminal emulator sendiri. Selain itu, xtermdianggap memiliki keterbatasan. Salah satunya adalah tidak bisa scrolling karena tidak adanya scrollbar.
-xtermmemang lain daripada yang lain. Secara default memang scrollbar itu tidak terlihat, tetapi bisa dimunculkan. Tekan dan tahan Ctrlkemudian tekan dan tahan tombol tengah mouse, pilih Enable Scrollbar. Scrollbar akan tampil di sebelah kiri. Untuk melakukan scrolling bisa menggunakan tombol tengah mouse yang diarahkan ke scrollbar kemudian putar ke atas atau bawah sesuai keinginan.
+  Di kalangan pengguna GNU/Linux mungkin xterm kurang familiar. Mengingat desktop environment populer seperti GNOME, KDE, Xfce, Mate dan LXQt telah mempunyai terminal emulator sendiri. Selain itu, xterm dianggap memiliki keterbatasan. Salah satunya adalah tidak bisa scrolling karena tidak adanya scrollbar.
+xterm memang lain daripada yang lain. Secara default memang scrollbar itu tidak terlihat, tetapi bisa dimunculkan. Tekan dan tahan Ctrl kemudian tekan dan tahan tombol tengah mouse, pilih Enable Scrollbar. Scrollbar akan tampil di sebelah kiri.
   </p>
 
   
@@ -362,8 +458,8 @@ xtermmemang lain daripada yang lain. Secara default memang scrollbar itu tidak t
   </header>
 
   <p>
-  Untuk konek internet baik itu melalui modem, LAN, maupun wifi, pengguna GNU/Linux lebih sering menggunakan network manageryang applet-nya biasanya ada di panel sebelah kanan walau sebenarnya ada cara lain seperti ifconfigdan dhcpcd. Kalau dalam mode grafis sih saya rasa tidak masalah, tapi bagaimana kalau sedang berada dalam mode teks yang jelas tidak terpampang applet network manager-nya? nmcliadalah solusinya.
-Lah, buat apa sih repot-repot mode teks? Jadul, ga modern! Benar. Kalau keperluannya hanya download file berukuran besar, dan dalam waktu bersamaan ada kegiatan lain yang tidak bisa ditinggalkan, beralih ke mode teks bisa dijadikan pilihan, mengingat dalam mode teks aplikasi yang dijalankan tidak sebanyak dalam mode grafis sehingga menghemat memory dan daya.
+  Untuk konek internet baik itu melalui modem, LAN, maupun wifi, pengguna GNU/Linux lebih sering menggunakan network manager yang applet-nya biasanya ada di panel sebelah kanan walau sebenarnya ada cara lain seperti ifconfig dan dhcpcd. Kalau dalam mode grafis sih saya rasa tidak masalah, tapi bagaimana kalau sedang berada dalam mode teks yang jelas tidak terpampang applet network manager-nya? nmcli adalah solusinya.
+Lah, buat apa sih repot-repot mode teks? Jadul, ga modern!
   </p>
 
   
@@ -411,7 +507,7 @@ Lah, buat apa sih repot-repot mode teks? Jadul, ga modern! Benar. Kalau keperlua
   <p>
   Maleo adalah paket khas BlankOn untuk menjalankan aplikasi HTML5. Bagi pengguna Slackware yang berminat silahkan mencoba slackbuild yang saya buat di sini.
 Adapun dependensinya adalah :
- vala libwebp gnome-js-common seed  
+vala libwebp gnome-js-common seed 
   </p>
 
   
@@ -506,10 +602,10 @@ Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah mem
   </header>
 
   <p>
-  Untuk mengaitkan/mount berkas qcow2ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
+  Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
 Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
-modprobe nbd max_part=N max_part=Nisikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2tersebut kalau dijalankan dengan qemuberisi 8 partisi, maka nilai Nadalah 8.
-Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbdyang mengaktifkan koneksi file /mnt/virtual/image/ign11.qcow2ke /dev/nbd0&gt;
+modprobe nbd max_part=N max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.
+Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbd yang mengaktifkan koneksi file /mnt/virtual/image/ign11.
   </p>
 
   
@@ -555,8 +651,8 @@ Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbdyang
   </header>
 
   <p>
-  Secara default, slackpkgakan menghapus semua file yang di- download / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di /etc/slackpkg/slackpkg.confpada baris 77
-DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah onmenjadi off.
+  Secara default, slackpkg akan menghapus semua file yang di- download / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di /etc/slackpkg/slackpkg.conf pada baris 77
+DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah on menjadi off.
   </p>
 
   
@@ -600,110 +696,13 @@ DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya le
   <p>
   Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya
 dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck. Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu /dev/sda1. Dan direkomendasikan untuk menjalankan fsck.
-fsck /dev/sda1  fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.
+fsck /dev/sda1 fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/">Mengatur DNS Default</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Aug 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, DNS atau Domain Name Server yang digunakan adalah DNS dari operator/penyedia layanan internet. Namun sayangnya, operator tertentu kurang baik dalam penapisan/pemblokiran situs-situs negatif sehingga kadang konten-konten pornografi, judi, dan konten lainnya yang tidak sesuai dengan norma kesusilaan dan budaya Indonesia dapat sampai ke hadapan kita. Oleh karena itulah perlu menggunakan DNS lain.
-Penggantian DNS ini ada 2 cara, yaitu manual dan otomatis.
-Cara manual dengan menyunting berkas /etc/resolv.conf. Mengganti nameserver yang ada dengan nameserver yang diinginkan.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/">Terperangkap WindowMaker</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>28 Jul 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/mate">mate</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Mencoba merasakan kejadulan WindowMaker yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama xfce melalui command xwmconfig, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di WindowMaker. Bahkan tidak bisa ganti DE lainnya termasuk KDE dan Mate.
-Tapi kemudian bisa teratasi dengan menghapus .xinitrcdan folder GNUStepyang ada di homedirektori pengguna.
-  </p>
-
   
 </article>
 
@@ -716,7 +715,7 @@ Tapi kemudian bisa teratasi dengan menghapus .xinitrcdan folder GNUStepyang ada 
   
   <a href="https://sasongko.web.id/page/19/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;20 / 29&nbsp;</span>
+  <span>&nbsp;20 / 30&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/21/"><i class="fa fa-chevron-right"></i></a>
   

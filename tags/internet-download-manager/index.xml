@@ -14,7 +14,7 @@
       
       <guid>https://sasongko.web.id/post/2021-03-23-menggunakan-wget-prefix-directory/</guid>
       <description>Secara default, apabila menggunakan wget, file di-download ke direktori aktif. Dengan mengaktifkan prefix directory (-P), file tersebut bisa disimpan ke direktori lain.
-$ wget [url] -P [direktori]  [url] : URL / alamat lengkap file yang akan di-download [direktori] : direktori tujuan  </description>
+$ wget [url] -P [direktori] [url] : URL / alamat lengkap file yang akan di-download [direktori] : direktori tujuan </description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@ $ youtube-dl -u username url Opsi -u diikuti dengan username akun youtube untuk 
       
       <guid>https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/</guid>
       <description>Kegunaan rsync rsync berguna untuk transfer file secara efisien. Dibandingkan dengan cp atau mv, rsync memiliki keunggulan :
- Bebas pilih-pilih file maupun direktori yang akan ditransfer karena ada fitur include dan exclude Apabila gagal, misalnya karena storage penuh atau &amp;ldquo;kecelakaan&amp;rdquo; salah klik sehingga ter-close, dapat dilanjutkan tanpa mengulang dari awal sehingga waktunya tentu lebih cepat  Dibandingkan wget, rsync mendukung penggunaan wildcard dan secara default rsync resumeable.
+Bebas pilih-pilih file maupun direktori yang akan ditransfer karena ada fitur include dan exclude Apabila gagal, misalnya karena storage penuh atau &amp;ldquo;kecelakaan&amp;rdquo; salah klik sehingga ter-close, dapat dilanjutkan tanpa mengulang dari awal sehingga waktunya tentu lebih cepat Dibandingkan wget, rsync mendukung penggunaan wildcard dan secara default rsync resumeable.
 Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1</description>
     </item>
     

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.99.1" />
+  <meta name="generator" content="Hugo 0.102.3" />
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,103 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2017-07-04-presentasi-lcd-projector/">Presentasi dengan LCD Projector</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Jul 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Tools yang digunakan adalah xrandr. Sebenarnya bisa menggunakan aplikasi GUI yang disediakan desktop environment masing-masing, tapi saya lebih suka menggunakan xrandr agar universal bisa digunakan di lingkungan desktop apapun, entah itu Fluxbox, FVWM, TWM, Xfce, KDE, Lumina, LXQt, Mate, Cinnamon, dsb.
+Pertama, identifikasi monitor/screen primer yang aktif tersambung saat ini, jangan sambungkan proyektor dulu
+$ xrandr Screen 0: minimum 8 x 8, current 1366 x 768, maximum 32767 x 32767 eDP1 connected primary 1366x768+0+0 (normal left inverted right x axis y axis) 310mm x 170mm 1366x768 59.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-07-04-presentasi-lcd-projector/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/">Rilis Lumina 1.3.0</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Jul 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/lumina">lumina</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackbuild">slackbuild</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Di suasana Idul Fitri, 26 Juni 2017, Ken Moore selaku project leader Lumina mengumumkan perihal rilisnya Lumina Desktop 1.3.0. Selang 4 hari kemudian dirilis patch yang pertama untuk 1.3.0. Catatan rilis resmi silahkan dibaca di sini.
+Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini tergolong istimewa. Mulai versi 1.3.0 ini lumina semakin powerfull untuk digunakan di Slackware. Sampai dengan versi 1.2.0_p1 (1.2.0 patchset 1), Restart dan Power Off pada menu sama sekali tidak berfungsi.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2017-03-27-disable-commands-history/">Disable Command&#39;s History</a></h2>
 
     <div class="post-meta">
@@ -261,7 +358,7 @@
   </header>
 
   <p>
-  Secara default, perintah/command yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan command historyatau membaca isi ~/.bash_history. Ini bisa di-disable. Caranya, membuat file di /etc/profile.d/, yang isinya
+  Secara default, perintah/command yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan command history atau membaca isi ~/.bash_history. Ini bisa di-disable. Caranya, membuat file di /etc/profile.d/, yang isinya
 export HISTFILE=/dev/null export HISTSIZE=0 
   </p>
 
@@ -303,7 +400,7 @@ export HISTFILE=/dev/null export HISTSIZE=0
 
   <p>
   Salah satu keunggulan GNU/Linux terutama Slackware adalah berlakunya banyak jalan menuju Roma. Contohnya untuk konek/menyambung ke internet, ada beberapa cara antara lain :
- nmcli, contohnya [di sini]({% post_url 2016-06-26-konek-inet-nmcli %}) dan [di sini]({% post_url 2016-12-07-nmcli-konek-wifi %}). pppsetup, caranya [seperti ini]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) dan [ini]({% post_url 2015-08-17-setting-internet-xl-slackware %}) [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) wpa_supplicant wicd  Cara lainnya yang saya pakai adalah dengan dhcpcd.
+nmcli, contohnya [di sini]({% post_url 2016-06-26-konek-inet-nmcli %}) dan [di sini]({% post_url 2016-12-07-nmcli-konek-wifi %}). pppsetup, caranya [seperti ini]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) dan [ini]({% post_url 2015-08-17-setting-internet-xl-slackware %}) [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) wpa_supplicant wicd Cara lainnya yang saya pakai adalah dengan dhcpcd.
 Misalkan akan menyambungkan internet melalui USB tethering - cara melakukan USB tethering tidak saya bahas,
   </p>
 
@@ -397,10 +494,11 @@ Teringat, DVD/USB installer-nya sudah tak ada. Iso-nya pun terhapus. So, what&rs
   </header>
 
   <p>
-  Padremerupakan integrated development environment (IDE) untuk bahasa pemrograman perl.
-Padreini belum dimasukkan ke dalam paket resmi Slackware maupun SBo. Sehingga ada 2 kemungkinan cara menginstallnya.
-  Build sendiri dari source
-  Install dari cpan  Cara yang saya gunakan adalah cara kedua, yaitu
+  Padre merupakan integrated development environment (IDE) untuk bahasa pemrograman perl.
+Padre ini belum dimasukkan ke dalam paket resmi Slackware maupun SBo. Sehingga ada 2 kemungkinan cara menginstallnya.
+Build sendiri dari source
+Install dari cpan
+Cara yang saya gunakan adalah cara kedua, yaitu
 $ cpan -i Padre 
   </p>
 
@@ -447,7 +545,7 @@ $ cpan -i Padre
   </header>
 
   <p>
-  Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupgatau yang biasa disebut dengan gpg.
+  Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupg atau yang biasa disebut dengan gpg.
 $ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
 $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi 
   </p>
@@ -491,7 +589,7 @@ $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
   </header>
 
   <p>
-  Changelog current hari ini 12 Januari 2017 ramai sekali. Upgrade dan rebuilt secara masif seolah menjadi kado tahun baru dari Patrick Volkerding. Dan ternyata berimbas segfault alias Segmentation faultpada qtFMfile manager berbasis Qtyang saya install dari SBo.
+  Changelog current hari ini 12 Januari 2017 ramai sekali. Upgrade dan rebuilt secara masif seolah menjadi kado tahun baru dari Patrick Volkerding. Dan ternyata berimbas segfault alias Segmentation fault pada qtFM file manager berbasis Qt yang saya install dari SBo.
   </p>
 
   
@@ -538,7 +636,7 @@ $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
 
   <p>
   Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
-Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssldengan cipher rc4. File hasil enkripsi saya namai rahasia.odtyang saya taruh di fd dan fd saya mountdi /media/hd0. Kemudian akan ditanya password enkripsinya.
+Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssl dengan cipher rc4. File hasil enkripsi saya namai rahasia.odt yang saya taruh di fd dan fd saya mount di /media/hd0. Kemudian akan ditanya password enkripsinya.
   </p>
 
   
@@ -585,105 +683,9 @@ Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.
 
   <p>
   Alhamdulillah malam ini bisa membuat slackbuild untuk KBBI Qt. Sebenarnya sih sudah sejak kira-kira 2 bulan yang lalu ingin membuat slackbuildnya, baru kesampaian sekarang.
-KBBI Qtadalah aplikasi Kamus Besar Bahasa Indonesia (KBBI) yang dikembangkan oleh komunitas Belajar GNU/Linux Indonesia atau BGLI. Aplikasi ini dibuat dengan bahasa C++ dan framework Qt yang berlisensi GPLv3. Lisensi ini mengijinkan kita semua boleh menggunakan, memodifikasi dan menyebarluaskan aplikasi KBBI Qt.
+KBBI Qt adalah aplikasi Kamus Besar Bahasa Indonesia (KBBI) yang dikembangkan oleh komunitas Belajar GNU/Linux Indonesia atau BGLI. Aplikasi ini dibuat dengan bahasa C++ dan framework Qt yang berlisensi GPLv3. Lisensi ini mengijinkan kita semua boleh menggunakan, memodifikasi dan menyebarluaskan aplikasi KBBI Qt.
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-01-01-blankon-wallpapers-slackbuild/">blankon-wallpapers slackbuild</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jan 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Alhamdulillah, hari ini, 1 Januari 2017, tepat di hari pertama tahun 2017, Tim Pengembang BlankOn secara resmi merilis BlankOn X dengan codename Tambora. Dan di hari ini pula, saya rilis blankon-wallpapers slackbuildsecara resmi, walaupun sebenarnya sudah saya taruh di repo github sejak beberapa hari yang lalu.
-Tujuan pembuatan slackbuild ini adalah untuk memasyarakatkan ke-Indonesia-an. BlankOn sebagai salah satu dari beberapa distro GNU/Linux yang dikembangkan oleh rakyat Indonesia tentu memiliki kekhasan bila dibandingkan dengan distro lainnya seperti Debian, Ubuntu, dan Fedora.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2017-01-01-blankon-wallpapers-slackbuild/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/">Notifikasi Baterai Lemah i3</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Dec 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/i3">i3</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Salah satu keistimewaan i3atau i3wmadalah belum adanya notifikasi/pemberitahuan saat baterai lemah perlu di-charge. Status baterai sudah ada di bar/panel yang ditampilkan oleh i3status.
-Berikut adalah script sederhana untuk menampilkan notifikasi saat baterai sedang lemah dan tidak sedang di-charge. Jika baterai telah mencapai batas (di sini saya gunakan 5%) maka setiap 30 detik akan tampil notifikasi untuk segera dilakukan charging Wayahe dicas bro&hellip;.!. Dan ketika baterai sudah terisi full 100% tetapi masih dalam kondisi dicas akan tampil notifikasi tiap 30 detik bahwa baterai sudah full.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -696,7 +698,7 @@ Berikut adalah script sederhana untuk menampilkan notifikasi saat baterai sedang
   
   <a href="https://sasongko.web.id/page/18/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;19 / 29&nbsp;</span>
+  <span>&nbsp;19 / 30&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/20/"><i class="fa fa-chevron-right"></i></a>
   

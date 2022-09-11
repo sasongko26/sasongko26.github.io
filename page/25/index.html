@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.99.1" />
+  <meta name="generator" content="Hugo 0.102.3" />
 
   <title>Catatan Sasongko</title>
 
@@ -225,6 +225,102 @@
 </div>
 
 <div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/">InstalL Sleuth Kit Slackware</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Jun 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  The Sleuth Kit atau disingkat TSK adalah tools digital forensik yang bersifat open source, multiplatform dan text-mode (command line interface). TSK bisa digunakan untuk melakukan analisis pada barang bukti, atau lebih tepatnya citra disk (raw image). Misalnya untuk mengetahui berkas apa saja yang ada di dalam hardisk dan adakah berkas yang dihapus dari hardisk itu.
+Dependensi:
+autoconf, automake, libtool C/C++ compiler (gcc, gcc++) [JDK (opsional)]({% post_url 2015-06-07-install-jdk-slackware %}) Install cukup mudah, kita akan install langsung TSK dari source code yang ada di github
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2015-06-17-install-xfburn-slackware/">Install Xfburn Slackware</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>17 Jun 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Xfburn adalah aplikasi burning CD/DVD/BD dari XFCE. Versi terbaru saat ini 0.5.4, dengan dependensi:
+Exo-0.10.6 libxfce4util-4.12.1 libisoburn-1.4.0 Tapi untuk memudahkan instalasi, kita gunakan saja yang versi 0.5.2 yang ada slackbuildnya, dependensinya
+[libburn]({% post_url 2015-06-16-install-libburn-slackware %}) [libisofs]({% post_url 2015-06-16-install-libisofs-slackware %}) Untuk menginstall pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas.
+$ wget http://slackbuilds.org/slackbuilds/14.1/system/xfburn.tar.gz Ekstrak kemudian pindah direktori ke folder hasil ekstrak
+$ tar xzf xfburn.tar.gz ; cd xfburn Unduh kode sumber xfburn
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-06-17-install-xfburn-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
   
     <article>
   <header>
@@ -586,105 +682,6 @@ Kemudian pindahkan hasil unduhan ke /usr/local/src dilanjutkan dengan pindah ke 
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-06-sebelum-install-linux/">Hal-hal yang Harus Diketahui Sebelum Menginstall Linux</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Memang sudah seharusnya sebelum menginstall linux kita memiliki beberapa pengetahuan yang memadai. Imam Bukhari mengatakan &ldquo;al ilmu qablal qawl wal amal&rdquo; yang maksudnya sebelum melakukan sesuatu harus dilandasi dengan ilmu/pengetahuan tentang apa yang akan dilakukannya itu. Dan dalam ilmu fiqh / hukum Islam dikenal kaidah &ldquo;al umuru bimaqashidiha&rdquo; yang artinya setiap perkara itu tergantung maksud/niatnya. Kaidah ini diambil dari hadits &ldquo;innamal a&rsquo;malu binniyat&rdquo; segala sesuatu tergantung niatnya.
-Pertama yang harus diketahui adalah niat.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-06-sebelum-install-linux/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-01-operasi-direktori/">Operasi Direktori di Linux</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Operasi direktori/folder adalah suatu hal yang mendasar di linux. Walaupun sekarang banyak desktop environment yang menyebabkan sedikit interaksi dengan terminal langsung karena tinggal klik saja dalam mode grafis (GUI), kami akan tetap sampaikan bagaimana melakukannya dalam mode teks (CLI).
-Mengetahui posisi direktori sekarang Gunakan
-pwd untuk mengetahui saat ini aktif di mana. Contoh
-$ pwd /home/sasongko Tampak bahwa direktori saat ini adalah di /home/sasongko.
-Menampilkan isi direktori ls /direktori Contoh berikut akan menampilkan isi dari direktori /etc
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-01-operasi-direktori/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
 
   
 
@@ -693,7 +690,7 @@ Menampilkan isi direktori ls /direktori Contoh berikut akan menampilkan isi dari
   
   <a href="https://sasongko.web.id/page/24/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;25 / 29&nbsp;</span>
+  <span>&nbsp;25 / 30&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/26/"><i class="fa fa-chevron-right"></i></a>
   

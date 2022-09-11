@@ -6,16 +6,27 @@
     <description>Recent content in slackware on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/slackware/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/slackware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Sound Open Firmware</title>
+      <link>https://sasongko.web.id/post/2022-08-13-install-sof/</link>
+      <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2022-08-13-install-sof/</guid>
+      <description>Langsung saja
+cd /opt git clone https://github.com/thesofproject/sof-bin.git cd sof-bin Masuk ke direktori rilis terbaru, contoh kali ini v2.2
+cd v2.2.x rsync -a sof-v2.2/ /lib/firmware/intel/sof/ rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/ </description>
+    </item>
+    
     <item>
       <title>If else perl</title>
       <link>https://sasongko.web.id/post/2022-05-28-if-else-perl/</link>
       <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2022-05-28-if-else-perl/</guid>
-      <description>Penyeleksian kondisi di perl dapat menggunakan syntax if&amp;hellip;elsedengan format
-if ( kondisi ) { 	.... 	} else { 	.... 	} Contoh
-#!/usr/bin/perl  use strict; use warnings; use feature &amp;#39;say&amp;#39;;  my $username = &amp;#34;user&amp;#34;; if ( $username eq &amp;#34;nama&amp;#34; ) {  say &amp;#34;Oke&amp;#34;;  } else {  say &amp;#34;Ulangi lagi....&amp;#34;;  } </description>
+      <description>Penyeleksian kondisi di perl dapat menggunakan syntax if&amp;hellip;else dengan format
+if ( kondisi ) { .... } else { .... } Contoh
+#!/usr/bin/perl use strict; use warnings; use feature &amp;#39;say&amp;#39;; my $username = &amp;#34;user&amp;#34;; if ( $username eq &amp;#34;nama&amp;#34; ) { say &amp;#34;Oke&amp;#34;; } else { say &amp;#34;Ulangi lagi....&amp;#34;; } </description>
     </item>
     
     <item>
@@ -86,7 +97,7 @@ Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-r
       
       <guid>https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/</guid>
       <description>Untuk menampilkan status penggunaan zram bisa dengan menjalankan
-# zramctl --output-all NAME DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT /dev/zram0  1G 4K 74B lzo-rle 4 0 12K 0B 12K 0B [SWAP] Berikut penjelasan masing-masing kolomnya
+# zramctl --output-all NAME DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT /dev/zram0 1G 4K 74B lzo-rle 4 0 12K 0B 12K 0B [SWAP] Berikut penjelasan masing-masing kolomnya
 NAME	zram device name DISKSIZE	limit on the uncompressed amount of data DATA	uncompressed size of stored data COMPR	compressed size of stored data ALGORITHM	the selected compression algorithm STREAMS	number of concurrent compress operations ZERO-PAGES	empty pages with no allocated memory TOTAL	all memory including allocator fragmentation and metadata overhead MEM-LIMIT	memory limit used to store compressed data MEM-USED	memory zram have been consumed to store compressed data MIGRATED	number of objects migrated by compaction MOUNTPOINT	where the device is mounted</description>
     </item>
     
@@ -118,7 +129,7 @@ mount -o uid=1020,gid=120 /dev/sdb1 /media/hd0/ uid dan gid di sini hanya contoh
       
       <guid>https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/</guid>
       <description>Slackpkg merupakan salah satu official slackware package manager. Fitur yang dimilikinya antara lain
- Cek apakah ada update Baca changelog Install, upgrade, reinstall, remove, blacklist packages  Sebelum menggunakannya, pilih dahulu mirror yang akan digunakan
+Cek apakah ada update Baca changelog Install, upgrade, reinstall, remove, blacklist packages Sebelum menggunakannya, pilih dahulu mirror yang akan digunakan
 # vi /etc/slackpkg/mirrors Pada file tersebut sudah tersedia list mirror yang bisa digunakan. Apakah menggunakan current atau stable (saat ini 15.0). Pilih mirrornya dengan cara uncomment baris alamat mirrornya. Contoh
 https://mirrors.slackware.com/slackware/slackware64-15.0/ untuk menggunakan mirror terdekat versi slackware 15.</description>
     </item>
@@ -143,7 +154,7 @@ chmod -x /etc/profile.d/bsd-games-login-fortune.*sh </description>
 Pertama, edit /etc/pulse/client.conf. Ubah autospawn dari yes menjadi no.
 Hapus /etc/xdg/autostart/pulseaudio.desktop atau rename menjadi file yang &amp;ldquo;tidak penting&amp;rdquo;.
 Rename file berikut menjadi .desktop saja
- /etc/xdg/autostart/pipewire-media-session.desktop.sample /etc/xdg/autostart/pipewire-pulse.desktop.sample /etc/xdg/autostart/pipewire.desktop  </description>
+/etc/xdg/autostart/pipewire-media-session.desktop.sample /etc/xdg/autostart/pipewire-pulse.desktop.sample /etc/xdg/autostart/pipewire.desktop </description>
     </item>
     
     <item>
@@ -163,7 +174,7 @@ Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &amp;lt; $b	| $a lebih
       
       <guid>https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/</guid>
       <description>Pada perl, variabel scalar yang berupa string dapat dilakukan penggabungan dan pengulangan. Contoh, terdapat 3 variabel sebagai berikut: $sapa = &amp;ldquo;Hai&amp;hellip;. &amp;quot; $distro = &amp;ldquo;Slackware&amp;rdquo; $penilaian = &amp;ldquo;distro terbaik.&amp;rdquo; Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan &amp;ldquo;.&amp;rdquo;, sedangkan pengulangan dengan &amp;ldquo;x&amp;rdquo;.
-#!/usr/bin/perl  use strict; use warnings; use feature &amp;#34;say&amp;#34;;  my $sapa = &amp;#34;Hai.... &amp;#34;; my $distro = &amp;#34;Slackware &amp;#34;; my $penilaian = &amp;#34;distro terbaik.</description>
+#!/usr/bin/perl use strict; use warnings; use feature &amp;#34;say&amp;#34;; my $sapa = &amp;#34;Hai.... &amp;#34;; my $distro = &amp;#34;Slackware &amp;#34;; my $penilaian = &amp;#34;distro terbaik.</description>
     </item>
     
     <item>
@@ -185,7 +196,7 @@ a += 4; Sehingga nilai a kemudian berubah dari 10 menjadi 14.</description>
       <guid>https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/</guid>
       <description>Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.
 Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.
-#!/usr/bin/perl  use strict; use warnings; use feature &amp;#39;say&amp;#39;;  my $a = 2; my $b = 25;  say(&amp;#34;Angka pertama (a) adalah $a&amp;#34;); say(&amp;#34;Angka kedua (b) adalah $b&amp;#34;);  # penjumlahan my $c = $a + $b; say(&amp;#34;a+b = $c&amp;#34;);  # pengurangan my $d = $b - $a; say(&amp;#34;b-a = $d&amp;#34;);  # perkalian my $e = $a * $b; say(&amp;#34;a*b = $e&amp;#34;);  # pembagian my $f = $a / $b; my $g = $b / $a; say(&amp;#34;a/b = $f&amp;#34;); say(&amp;#34;b/a = $g&amp;#34;);  # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(&amp;#34;a^b = $h&amp;#34;); say(&amp;#34;b^a = $i&amp;#34;);  # autoincrement # tanda + di depan say(&amp;#34;Nilai a sebelum autoincrement = $a&amp;#34;); my $j = ++$a; say(&amp;#34;++a = $j&amp;#34;); say(&amp;#34;Nilai a sesudah autoincrement = $a&amp;#34;);  # tanda + di belakang say(&amp;#34;Nilai b sebelum autoincrement $b&amp;#34;); my $k = $b++; say(&amp;#34;$b++ = $k&amp;#34;); say(&amp;#34;Nilai b setelah autoincrement $b&amp;#34;);  # autodecrement # tanda - di depan say(&amp;#34;c = a+b.</description>
+#!/usr/bin/perl use strict; use warnings; use feature &amp;#39;say&amp;#39;; my $a = 2; my $b = 25; say(&amp;#34;Angka pertama (a) adalah $a&amp;#34;); say(&amp;#34;Angka kedua (b) adalah $b&amp;#34;); # penjumlahan my $c = $a + $b; say(&amp;#34;a+b = $c&amp;#34;); # pengurangan my $d = $b - $a; say(&amp;#34;b-a = $d&amp;#34;); # perkalian my $e = $a * $b; say(&amp;#34;a*b = $e&amp;#34;); # pembagian my $f = $a / $b; my $g = $b / $a; say(&amp;#34;a/b = $f&amp;#34;); say(&amp;#34;b/a = $g&amp;#34;); # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(&amp;#34;a^b = $h&amp;#34;); say(&amp;#34;b^a = $i&amp;#34;); # autoincrement # tanda + di depan say(&amp;#34;Nilai a sebelum autoincrement = $a&amp;#34;); my $j = ++$a; say(&amp;#34;++a = $j&amp;#34;); say(&amp;#34;Nilai a sesudah autoincrement = $a&amp;#34;); # tanda + di belakang say(&amp;#34;Nilai b sebelum autoincrement $b&amp;#34;); my $k = $b++; say(&amp;#34;$b++ = $k&amp;#34;); say(&amp;#34;Nilai b setelah autoincrement $b&amp;#34;); # autodecrement # tanda - di depan say(&amp;#34;c = a+b.</description>
     </item>
     
     <item>
@@ -207,7 +218,7 @@ my @biodata = ($nama, $jenis_kelamin, $distro, $tahun); </description>
       <guid>https://sasongko.web.id/post/2022-01-01-hapus-baris-dari-awal-sampai-kata-spesifik/</guid>
       <description>Mungkin ini adalah catatan dengan judul terpanjang yang pernah kami tulis. Catatan ini berisi tentang bagaimana cara menghapus baris dari awal sampai dengan baris yang berawalan dengan kata-kata spesifik.
 Contoh, punya file teks lagu.txt berisi sebagai berikut
-kelelawar by koes plus  kelelawar sayapnya hitam terbang rendah di tengah malam pagi-pagi mereka pulang di dahan pohon bergelantungan hitam hitam hitam Teks tersebut dihapus sebagian, yaitu mulai baris pertama sampai dengan pagi-pagi.</description>
+kelelawar by koes plus kelelawar sayapnya hitam terbang rendah di tengah malam pagi-pagi mereka pulang di dahan pohon bergelantungan hitam hitam hitam Teks tersebut dihapus sebagian, yaitu mulai baris pertama sampai dengan pagi-pagi. Dengan kata lain hanya tersisa di dahan pohon dst.</description>
     </item>
     
     <item>
@@ -226,7 +237,7 @@ kelelawar by koes plus  kelelawar sayapnya hitam terbang rendah di tengah malam 
       
       <guid>https://sasongko.web.id/post/2021-12-19-list-module-perl-terinstall/</guid>
       <description>Untuk mengetahui semua modul perl yang terinstall bisa menggunakan instmodsh.
-$ instmodsh Available commands are:  l - List all installed modules  m &amp;lt;module&amp;gt; - Select a module  q - Quit the program cmd? Kemudian pilih l.</description>
+$ instmodsh Available commands are: l - List all installed modules m &amp;lt;module&amp;gt; - Select a module q - Quit the program cmd? Kemudian pilih l.</description>
     </item>
     
     <item>
@@ -270,7 +281,7 @@ Fitur yang sangat bagus dari kfind adalah bisa menyimpan hasil pencarian. Namun,
       <guid>https://sasongko.web.id/post/2021-12-16-mitigasi-log4shell/</guid>
       <description>Log4shell menjadi topik yang hangat dibicarakan sepekan ini. Bugs JNDI lookup pada log4j membuat komputer atau pc (terutama server) semakin mudah diambil alih tanpa ijin. Syukur alhamdulillah sudah dirilis versi terbaru untuk menangkalnya, yaitu versi 2.16.0.
 Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagian dari default packages.
-# slackpkg file-search log4j  Looking for log4j in package list. Please wait... DONE  No packages contains &amp;#34;log4j&amp;#34; file.</description>
+# slackpkg file-search log4j Looking for log4j in package list. Please wait... DONE No packages contains &amp;#34;log4j&amp;#34; file. Tidak ditemukan.</description>
     </item>
     
     <item>
@@ -313,7 +324,7 @@ print(scalar(@buah)); </description>
       <guid>https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/</guid>
       <description>Jenis variabel ketiga yang dimiliki perl adalah hash. Hash ini merupakan data berpasangan. Penulisan dengan menyertakan tanda %.
 Contoh: akan dideklarasikan data tentang saya, yaitu nama dan distro yang saya gunakan. Nama saya Sasongko, distro Slackware.
-my %data = ( 	nama =&amp;gt; &amp;#34;Sasongko&amp;#34;, 	distro =&amp;gt; &amp;#34;Slackware&amp;#34;, 	); </description>
+my %data = ( nama =&amp;gt; &amp;#34;Sasongko&amp;#34;, distro =&amp;gt; &amp;#34;Slackware&amp;#34;, ); </description>
     </item>
     
     <item>
@@ -371,7 +382,7 @@ $ fusermount mtp </description>
 dockerd List docker imagenya
 $ docker images REPOSITORY TAG IMAGE ID CREATED SIZE qgis/qgis release-3_16 ee28ddd8c37a 4 days ago 7.43GB qgis/qgis &amp;lt;none&amp;gt; c84657a1e2f6 3 weeks ago 7.43GB Hapus
 $ docker rmi -f ee28ddd8c37a c84657a1e2f6 Ingin menghapus semua container, image, dll
-$ docker system prune -a WARNING! This will remove:  - all stopped containers  - all networks not used by at least one container  - all dangling images  - all dangling build cache  Are you sure you want to continue?</description>
+$ docker system prune -a WARNING! This will remove: - all stopped containers - all networks not used by at least one container - all dangling images - all dangling build cache Are you sure you want to continue?</description>
     </item>
     
     <item>
@@ -425,7 +436,7 @@ flatpak update </description>
       <guid>https://sasongko.web.id/post/2021-08-01-dolphin-wastebin-reached-maximum-size/</guid>
       <description>Efek samping work from home, harddisk laptop lebih cepat penuh. Saat menghapus file-file yang sudah tidak diperlukan, Dolphin mengeluarkan warning
 Job Failed The wastebin has reached its maximum size! Cleanup the wastebin manually Ada 2 alternatif solusi:
- Sesuai yang ada di warning untuk menghapus file-file di wastebin secara manual. Mengatur ulang wastebin pada Dolphin. Wastebin diatur melalui menu Settings &amp;ndash;&amp;gt; Configure Dolphin klik Wastebin. Di sini kita bisa mengatur apakah file di wastebin akan dihapus secara otomatis setelah tenggat yang ditentukan.</description>
+Sesuai yang ada di warning untuk menghapus file-file di wastebin secara manual. Mengatur ulang wastebin pada Dolphin. Wastebin diatur melalui menu Settings &amp;ndash;&amp;gt; Configure Dolphin klik Wastebin. Di sini kita bisa mengatur apakah file di wastebin akan dihapus secara otomatis setelah tenggat yang ditentukan.</description>
     </item>
     
     <item>
@@ -437,7 +448,7 @@ Job Failed The wastebin has reached its maximum size! Cleanup the wastebin manua
       <description>Relational Database Management System (RDBMS) adalah salah satu sistem database populer. Sistem pengolahan database ini menggunakan bahasa SQL (dibaca sekuel atau es kiu el). Tool yang dapat digunakan antara lain mariadb, mysql, postgresql.
 Pada RDBMS dikenal adanya hirarki atau struktur, yaitu dari tertinggi database yang terdiri atas tabel. Tabel dibentuk oleh kolom dengan data sejumlah barisnya.
 Perintah SQL ada 2
- Data Definition Language (DDL) untuk membuat, menghapus atau modifikasi struktur database Data Manipulation Language (DML) untuk insert data, query, hapus, edit data  QUERY SQL Query adalah pengambilan data dari database.</description>
+Data Definition Language (DDL) untuk membuat, menghapus atau modifikasi struktur database Data Manipulation Language (DML) untuk insert data, query, hapus, edit data QUERY SQL Query adalah pengambilan data dari database.</description>
     </item>
     
     <item>
@@ -511,7 +522,7 @@ $ ls -l /etc/rc.d|grep -iE &amp;#34;(maria|mysql)&amp;#34; -rw-r--r-- 1 root roo
       
       <guid>https://sasongko.web.id/post/2021-05-21-menghapus-history-qtav-player/</guid>
       <description>Untuk menghapus history atau riwayat video yang ditonton dengan QtAV Player ada 2 cara:
- melalui QtAV Player dengan klik History kemudian Clear menghapus file historynya  $ rm ~/.local/share/Player/*.qds Command tersebut juga menghapus riwayat playlist</description>
+melalui QtAV Player dengan klik History kemudian Clear menghapus file historynya $ rm ~/.local/share/Player/*.qds Command tersebut juga menghapus riwayat playlist</description>
     </item>
     
     <item>
@@ -542,7 +553,7 @@ session.screen0.titlebar.left: </description>
       
       <guid>https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/</guid>
       <description>Uji normalitas data dapat dilakukan dengan beberapa cara antara lain
- Visual dengan grafik salah satunya histogram Uji statistik seperti Kolmogorov-Smirnov atau Shapiro-Wilk  Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv dengan pengubahan nama variabel menjadi lebih singkat.
+Visual dengan grafik salah satunya histogram Uji statistik seperti Kolmogorov-Smirnov atau Shapiro-Wilk Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv dengan pengubahan nama variabel menjadi lebih singkat.
 Uji normalitas dengan histogram Histogramnya
 Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.</description>
     </item>
@@ -554,7 +565,7 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
       
       <guid>https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/</guid>
       <description>Untuk membuat histogram dengan python dibutuhkan library pandas dan matplotlib dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:
-#!/usr/bin/python3  import pandas as pd import matplotlib.pyplot as plt  # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;)  # histogram plt.hist(x=&amp;#39;beer_servings&amp;#39;, data=alkohol) plt.xlabel(&amp;#39;Kaleng&amp;#39;) plt.ylabel(&amp;#39;Jumlah&amp;#39;) plt.title(&amp;#39;Konsumsi bir tahun 2010 (kaleng)&amp;#39;) plt.tight_layout() plt.show() Hasilnya:</description>
+#!/usr/bin/python3 import pandas as pd import matplotlib.pyplot as plt # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # histogram plt.hist(x=&amp;#39;beer_servings&amp;#39;, data=alkohol) plt.xlabel(&amp;#39;Kaleng&amp;#39;) plt.ylabel(&amp;#39;Jumlah&amp;#39;) plt.title(&amp;#39;Konsumsi bir tahun 2010 (kaleng)&amp;#39;) plt.tight_layout() plt.show() Hasilnya:</description>
     </item>
     
     <item>
@@ -639,7 +650,7 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso </description>
       
       <guid>https://sasongko.web.id/post/2021-03-27-median-data-python/</guid>
       <description>Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau median() yang dimiliki pandas.
-#!/usr/bin/env python3  import pandas as pd  # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;)  # median print(&amp;#39;median konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].median(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;median konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].median()) print(&amp;#39;median konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].median(), &amp;#39;gelas&amp;#39;) print(&amp;#39;median konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].median(), &amp;#39;liter&amp;#39;) </description>
+#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # median print(&amp;#39;median konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].median(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;median konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].median()) print(&amp;#39;median konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].median(), &amp;#39;gelas&amp;#39;) print(&amp;#39;median konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].median(), &amp;#39;liter&amp;#39;) </description>
     </item>
     
     <item>
@@ -649,7 +660,7 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso </description>
       
       <guid>https://sasongko.web.id/post/2021-03-26-mean-data-python/</guid>
       <description>Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau mean() yang dimiliki pandas.
-#!/usr/bin/env python3  import pandas as pd  # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel  data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;)  # mean print(&amp;#39;rerata konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].mean(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;rerata konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].mean()) print(&amp;#39;rerata konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].mean(), &amp;#39;gelas&amp;#39;) print(&amp;#39;rerata konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].mean(), &amp;#39;liter&amp;#39;) </description>
+#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # mean print(&amp;#39;rerata konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].mean(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;rerata konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].mean()) print(&amp;#39;rerata konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].mean(), &amp;#39;gelas&amp;#39;) print(&amp;#39;rerata konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].mean(), &amp;#39;liter&amp;#39;) </description>
     </item>
     
     <item>
@@ -661,7 +672,7 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso </description>
       <description>Untuk menampilkan statistik deskriptif suatu data, bisa menggunakan fungsi describe() dari library yang dimiliki python yaitu pandas.
 Berikut ini akan ditampilkan deskripsi data konsumsi alkohol dunia. Sumber data : https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv
 Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel yaitu :
- beer_servings (konsumsi bir yang dinyatakan dalam kaleng) spirit_servings (konsumsi minuman beralkohol spirit; maaf, variabel ini masih belum penulis pahami sepenuhnya) wine_servings (konsumsi anggur yang dinyatakan dalam gelas) pure_alcohol (konsumsi alkohol murni yang dinyataksan dalam liter, nama variabel ini sudah penulis singkat)  Adapun deskripsi yang ditampilkan adalah :</description>
+beer_servings (konsumsi bir yang dinyatakan dalam kaleng) spirit_servings (konsumsi minuman beralkohol spirit; maaf, variabel ini masih belum penulis pahami sepenuhnya) wine_servings (konsumsi anggur yang dinyatakan dalam gelas) pure_alcohol (konsumsi alkohol murni yang dinyataksan dalam liter, nama variabel ini sudah penulis singkat) Adapun deskripsi yang ditampilkan adalah :</description>
     </item>
     
     <item>
@@ -672,8 +683,8 @@ Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel 
       <guid>https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/</guid>
       <description>Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi info() dari pandas.
 Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-#!/usr/bin/env python3  import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.info()) Outputnya
-&amp;lt;class &amp;#39;pandas.core.frame.DataFrame&amp;#39;&amp;gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns):  # Column Non-Null Count Dtype  --- ------ -------------- -----  0 RowId 178539 non-null object  1 YearStart 178539 non-null int64  2 YearEnd 178539 non-null int64  3 LocationAbbr 178539 non-null object  4 LocationDesc 178539 non-null object  5 Datasource 178539 non-null object  6 Class 178539 non-null object  7 Topic 178539 non-null object  8 Question 178539 non-null object  9 Response 0 non-null float64  10 Data_Value_Unit 178539 non-null object  11 DataValueTypeID 178539 non-null object  12 Data_Value_Type 178539 non-null object  13 Data_Value 120885 non-null float64  14 Data_Value_Alt 0 non-null float64  15 Data_Value_Footnote_Symbol 70619 non-null object  16 Data_Value_Footnote 70619 non-null object  17 Low_Confidence_Limit 120750 non-null float64  18 High_Confidence_Limit 120750 non-null float64  19 Sample_Size 0 non-null float64  20 StratificationCategory1 178539 non-null object  21 Stratification1 178539 non-null object  22 StratificationCategory2 178539 non-null object  23 Stratification2 178539 non-null object  24 StratificationCategory3 0 non-null float64  25 Stratification3 0 non-null float64  26 Geolocation 159375 non-null object  27 ClassID 178539 non-null object  28 TopicID 178539 non-null object  29 QuestionID 178539 non-null object  30 ResponseID 0 non-null float64  31 LocationID 178539 non-null int64  32 StratificationCategoryID1 178539 non-null object  33 StratificationID1 178539 non-null object  34 StratificationCategoryID2 178539 non-null object  35 StratificationID2 178539 non-null object  36 StratificationCategoryID3 0 non-null float64  37 StratificationID3 0 non-null float64  38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.</description>
+#!/usr/bin/env python3 import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.info()) Outputnya
+&amp;lt;class &amp;#39;pandas.core.frame.DataFrame&amp;#39;&amp;gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns): # Column Non-Null Count Dtype --- ------ -------------- ----- 0 RowId 178539 non-null object 1 YearStart 178539 non-null int64 2 YearEnd 178539 non-null int64 3 LocationAbbr 178539 non-null object 4 LocationDesc 178539 non-null object 5 Datasource 178539 non-null object 6 Class 178539 non-null object 7 Topic 178539 non-null object 8 Question 178539 non-null object 9 Response 0 non-null float64 10 Data_Value_Unit 178539 non-null object 11 DataValueTypeID 178539 non-null object 12 Data_Value_Type 178539 non-null object 13 Data_Value 120885 non-null float64 14 Data_Value_Alt 0 non-null float64 15 Data_Value_Footnote_Symbol 70619 non-null object 16 Data_Value_Footnote 70619 non-null object 17 Low_Confidence_Limit 120750 non-null float64 18 High_Confidence_Limit 120750 non-null float64 19 Sample_Size 0 non-null float64 20 StratificationCategory1 178539 non-null object 21 Stratification1 178539 non-null object 22 StratificationCategory2 178539 non-null object 23 Stratification2 178539 non-null object 24 StratificationCategory3 0 non-null float64 25 Stratification3 0 non-null float64 26 Geolocation 159375 non-null object 27 ClassID 178539 non-null object 28 TopicID 178539 non-null object 29 QuestionID 178539 non-null object 30 ResponseID 0 non-null float64 31 LocationID 178539 non-null int64 32 StratificationCategoryID1 178539 non-null object 33 StratificationID1 178539 non-null object 34 StratificationCategoryID2 178539 non-null object 35 StratificationID2 178539 non-null object 36 StratificationCategoryID3 0 non-null float64 37 StratificationID3 0 non-null float64 38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.</description>
     </item>
     
     <item>
@@ -683,7 +694,7 @@ Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-health
       
       <guid>https://sasongko.web.id/post/2021-03-23-menggunakan-wget-prefix-directory/</guid>
       <description>Secara default, apabila menggunakan wget, file di-download ke direktori aktif. Dengan mengaktifkan prefix directory (-P), file tersebut bisa disimpan ke direktori lain.
-$ wget [url] -P [direktori]  [url] : URL / alamat lengkap file yang akan di-download [direktori] : direktori tujuan  </description>
+$ wget [url] -P [direktori] [url] : URL / alamat lengkap file yang akan di-download [direktori] : direktori tujuan </description>
     </item>
     
     <item>
@@ -705,8 +716,8 @@ import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_
       <guid>https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/</guid>
       <description>Untuk menampilkan data baris terakhir dengan python dapat menggunakan fungsi tail() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
 Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;)  print(data.tail(7)) Output :
- RowId ... Report 178532 2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA ... NaN 178533 2019~2019~9002~Q41~AGE~AGE_OVERALL~GENDER~MALE ... NaN 178534 2019~2019~9002~Q42~AGE~5064~RACE~HIS ... NaN 178535 2019~2019~9003~Q42~AGE~65PLUS~RACE~ASN ... NaN 178536 2019~2019~9002~Q42~AGE~65PLUS~RACE~HIS ... NaN 178537 2019~2019~9003~Q42~AGE~5064~RACE~BLK .</description>
+import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.tail(7)) Output :
+RowId ... Report 178532 2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA ... NaN 178533 2019~2019~9002~Q41~AGE~AGE_OVERALL~GENDER~MALE ... NaN 178534 2019~2019~9002~Q42~AGE~5064~RACE~HIS ... NaN 178535 2019~2019~9003~Q42~AGE~65PLUS~RACE~ASN ... NaN 178536 2019~2019~9002~Q42~AGE~65PLUS~RACE~HIS ... NaN 178537 2019~2019~9003~Q42~AGE~5064~RACE~BLK .</description>
     </item>
     
     <item>
@@ -717,8 +728,8 @@ import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_
       <guid>https://sasongko.web.id/post/2021-03-20-menampilkan-data-baris-pertama-python/</guid>
       <description>Untuk menampilkan data baris pertama dengan python dapat menggunakan fungsi head() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
 Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;)  print(data.head()) Output :
- RowId ... Report 0 2016~2016~12~Q27~AGE~AGE_OVERALL~GENDER~MALE ... NaN 1 2015~2015~66~Q43~AGE~5064~GENDER~MALE ... NaN 2 2018~2018~66~Q18~AGE~5064~GENDER~MALE ... NaN 3 2018~2018~66~Q34~AGE~5064~GENDER~FEMALE ... NaN 4 2015~2015~16~Q43~AGE~65PLUS~GENDER~FEMALE ... NaN [5 rows x 39 columns] Dari output tersebut juga dapat diperoleh informasi jumlah kolomnya, yaitu 39 yang tidak semua kolom ditampilkan.</description>
+import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.head()) Output :
+RowId ... Report 0 2016~2016~12~Q27~AGE~AGE_OVERALL~GENDER~MALE ... NaN 1 2015~2015~66~Q43~AGE~5064~GENDER~MALE ... NaN 2 2018~2018~66~Q18~AGE~5064~GENDER~MALE ... NaN 3 2018~2018~66~Q34~AGE~5064~GENDER~FEMALE ... NaN 4 2015~2015~16~Q43~AGE~65PLUS~GENDER~FEMALE ... NaN [5 rows x 39 columns] Dari output tersebut juga dapat diperoleh informasi jumlah kolomnya, yaitu 39 yang tidak semua kolom ditampilkan.</description>
     </item>
     
     <item>
@@ -768,7 +779,7 @@ import pandas as pd data = pd.read_csv(&amp;#34;data.csv&amp;#34;) </description
       
       <guid>https://sasongko.web.id/post/2021-03-15-library-python-statistika/</guid>
       <description>Beberapa library atau module python yang sering digunakan untuk statistika adalah
- numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis vektor atau matriks pandas: digunakan untuk melakukan pengolahan data tabular matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat digunakan sebagai alat bantu dalam analisa data statsmodels: digunakan untuk melakukan uji hipotesa, eksplorasi data maupun pemodelan statistika scipy: digunakan untuk melakukan uji statistika, juga dapat digunakan untuk melakukan pemodelan statistika  </description>
+numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis vektor atau matriks pandas: digunakan untuk melakukan pengolahan data tabular matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat digunakan sebagai alat bantu dalam analisa data statsmodels: digunakan untuk melakukan uji hipotesa, eksplorasi data maupun pemodelan statistika scipy: digunakan untuk melakukan uji statistika, juga dapat digunakan untuk melakukan pemodelan statistika </description>
     </item>
     
     <item>
@@ -799,7 +810,8 @@ session.screen0.strftimeFormat : %d/%m/%Y %H:%M Untuk menerapkan perubahan terse
       
       <guid>https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/</guid>
       <description>Pengertian user agent User agent (UA) adalah identitas web browser yang dikirimkan ke website yang diakses. Identitas tersebut antara lain nama web browser dan versinya.
-Default UA firefox Firefox yang saat ini digunakan adalah versi 78.6.1esr. Versi ini memiliki UA Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0Mengetahui UA firefox Pada address bar ketik about:support. Perhatikan bagian User Agent.
+Default UA firefox Firefox yang saat ini digunakan adalah versi 78.6.1esr. Versi ini memiliki UA Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Mengetahui UA firefox Pada address bar ketik about:support. Perhatikan bagian User Agent.
 Cara mengganti UA Untuk mengubahnya, contoh kali ini akan diubah dengan UA Chrome pada Mac.</description>
     </item>
     
@@ -898,7 +910,7 @@ $ rm .serverauth* </description>
       
       <guid>https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/</guid>
       <description>Beberapa saat yang lalu penulis terkena prank dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan flight mode di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek nmcli
-$ nmcli p2p-dev-wlan0: disconnected  &amp;#34;p2p-dev-wlan0&amp;#34;  wifi-p2p, sw disabled, hw  eth0: unavailable  &amp;#34;Realtek RTL810xE&amp;#34;  ethernet (r8169), C8:5B:76:66:51:6C, hw, mtu 1500  wlan0: unavailable  &amp;#34;Qualcomm Atheros QCA9377&amp;#34;  wifi (ath10k_pci), 8E:58:C9:8B:64:0F, sw disabled, hw, mtu 1500  lo: unmanaged  &amp;#34;lo&amp;#34;  loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536  Use &amp;#34;nmcli device show&amp;#34; to get complete information about known devices and &amp;#34;nmcli connection show&amp;#34; to get an overview on active connection profiles.</description>
+$ nmcli p2p-dev-wlan0: disconnected &amp;#34;p2p-dev-wlan0&amp;#34; wifi-p2p, sw disabled, hw eth0: unavailable &amp;#34;Realtek RTL810xE&amp;#34; ethernet (r8169), C8:5B:76:66:51:6C, hw, mtu 1500 wlan0: unavailable &amp;#34;Qualcomm Atheros QCA9377&amp;#34; wifi (ath10k_pci), 8E:58:C9:8B:64:0F, sw disabled, hw, mtu 1500 lo: unmanaged &amp;#34;lo&amp;#34; loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536 Use &amp;#34;nmcli device show&amp;#34; to get complete information about known devices and &amp;#34;nmcli connection show&amp;#34; to get an overview on active connection profiles.</description>
     </item>
     
     <item>
@@ -909,7 +921,7 @@ $ nmcli p2p-dev-wlan0: disconnected  &amp;#34;p2p-dev-wlan0&amp;#34;  wifi-p2p, 
       <guid>https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/</guid>
       <description>VIm merupakan text editor legendaris yang sampai saat ini masih memiliki penggemar. Penulis salah satunya. Berbeda dengan text editor lain, vim tidak menampilkan menu untuk copy/cut paste. Namun, itu tidak masalah. Semua bisa diatur. Oya, ini semua berada dalam lingkungan vim dengan mode visual.
 Sebelum melakukan copy paste, tentunya memilih dulu yang akan dicopas.
- Tempatkan kursor di awal text yang akan dicops Tekan v untuk memulai blok Jalankan panah kanan kiri atas bawah untuk memilih blok Tekan y untuk copy (y singkatan dari yank), atau d untuk cut (d singkatan dari delete) Kalau mau mem-paste, tekan p di awal tempat tujuan paste  Nah, selesai.</description>
+Tempatkan kursor di awal text yang akan dicops Tekan v untuk memulai blok Jalankan panah kanan kiri atas bawah untuk memilih blok Tekan y untuk copy (y singkatan dari yank), atau d untuk cut (d singkatan dari delete) Kalau mau mem-paste, tekan p di awal tempat tujuan paste Nah, selesai.</description>
     </item>
     
     <item>
@@ -930,8 +942,8 @@ Baris 2, fungsi print() untuk menampilkan ke layar. sqrt() adalah fungsi untuk m
       
       <guid>https://sasongko.web.id/post/2021-02-05-comments-python/</guid>
       <description>Comments atau komentar adalah sekumpulan teks yang dituliskan dalam program tetapi tidak akan dieksekusi. Ada 2 jenis comments dalam bahasa python, yaitu
- Single line comment. Hanya terdiri dari 1 baris comments. Untuk menuliskannya, beri tanda # di awal comments.  Contoh :
-# ini adalah single line comment Multiline comments. Terdiri dari lebih dari 1 baris. Dibuka dan ditutup dengan &#39;&#39;&#39;  Contoh :
+Single line comment. Hanya terdiri dari 1 baris comments. Untuk menuliskannya, beri tanda # di awal comments. Contoh :
+# ini adalah single line comment Multiline comments. Terdiri dari lebih dari 1 baris. Dibuka dan ditutup dengan &#39;&#39;&#39; Contoh :
 &amp;#39;&amp;#39;&amp;#39; ini adalah program python untuk mengetahui sesuatu &amp;#39;&amp;#39;&amp;#39; </description>
     </item>
     
@@ -942,7 +954,7 @@ Baris 2, fungsi print() untuk menampilkan ke layar. sqrt() adalah fungsi untuk m
       
       <guid>https://sasongko.web.id/post/2021-02-06-tipe-data-python/</guid>
       <description>Python memiliki beberapa tipe data, yaitu :
- None Numeric Boolean Sequence Set Map  Tipe data python none Hanya memiliki 1 nilai yaitu None
+None Numeric Boolean Sequence Set Map Tipe data python none Hanya memiliki 1 nilai yaitu None
 Tipe data numeric Tipe data numeric terdiri atas tipe data integer dan float. Integer merupakan bilangan bulat. Float merupakan bilangan desimal.
 Tipe data boolean Terdiri dari 2 nilai yaitu True dan False
 Tipe data sequence Ada 3 macam yaitu string, list dan tuple
@@ -956,7 +968,7 @@ Tipe data string Data ini diapit oleh &#39; atau &amp;quot;.</description>
       
       <guid>https://sasongko.web.id/post/2021-02-04-penamaan-variabel-python/</guid>
       <description>Dalam bahasa python, ada 4 ketentuan pemberian nama variabel, yaitu :
- Harus dimulai dengan huruf (a-z, A-Z) atau garis bawah underscore (_) dan tidak boleh diawali dengan angka (0-9). Boleh mengandung karakter huruf, angka dan underscore (a-z, A-Z, 0-9, _) Bersifat sensitive case yang mengartikan bahwa variabel Nama, nama dan NAMA adalah variabel yang berbeda Tidak boleh menggunakan reserved words seperti for, while, return  </description>
+Harus dimulai dengan huruf (a-z, A-Z) atau garis bawah underscore (_) dan tidak boleh diawali dengan angka (0-9). Boleh mengandung karakter huruf, angka dan underscore (a-z, A-Z, 0-9, _) Bersifat sensitive case yang mengartikan bahwa variabel Nama, nama dan NAMA adalah variabel yang berbeda Tidak boleh menggunakan reserved words seperti for, while, return </description>
     </item>
     
     <item>
@@ -998,7 +1010,7 @@ $ youtube-dl -u username url Opsi -u diikuti dengan username akun youtube untuk 
       <guid>https://sasongko.web.id/post/2021-01-31-membuat-file-csv/</guid>
       <description>File csv merupakan file yang umum digunakan sebagai file data. Mudah dalam pembuatannya. Begitu juga dengan aksesnya. Bisa dibuat dengan text editor, spreadsheet software maupun statistical software. Pada kesempatan kali ini tidak menggunakan statistical software seperti R.
 Membuat file csv dengan text editor Prinsip pembuatan adalah :
- Antar kolom dipisahkan oleh tanda koma (,) Kolom pertama (umumnya) sebagai header atau nama/judul kolom Antar baris dipisahkan oleh enter Angka dituliskan seperti biasanya Teks/string dituliskan dalam tanda kutip (&amp;quot; atatu &amp;lsquo;)  Contoh, data kasus malaria tahun 2019 terdiri atas 2 kolom, yaitu provinsi dan jumlah.</description>
+Antar kolom dipisahkan oleh tanda koma (,) Kolom pertama (umumnya) sebagai header atau nama/judul kolom Antar baris dipisahkan oleh enter Angka dituliskan seperti biasanya Teks/string dituliskan dalam tanda kutip (&amp;quot; atatu &amp;lsquo;) Contoh, data kasus malaria tahun 2019 terdiri atas 2 kolom, yaitu provinsi dan jumlah.</description>
     </item>
     
     <item>
@@ -1049,7 +1061,7 @@ $ tar f screenshot.tar.xz --append --remove-files photo_2020-08-22_19-03-32.jpg 
       
       <guid>https://sasongko.web.id/post/2021-01-28-video-mengenal-main-window-calc/</guid>
       <description>Libre office calc merupakan aplikasi spreadsheet pengolah data. Pada jendela utama atau main window terdapat beberapa bagian, antara lain
- Name bar Title bar Menu bar Tool bar Namebox Formula bar Sheet tab  Untuk ulasan lebih lengkap bisa disimak video berikut ini</description>
+Name bar Title bar Menu bar Tool bar Namebox Formula bar Sheet tab Untuk ulasan lebih lengkap bisa disimak video berikut ini</description>
     </item>
     
     <item>
@@ -1070,7 +1082,7 @@ Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin men
       
       <guid>https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/</guid>
       <description>Catatan ini merupakan catatan tambahan untuk melengkapi README.Slackware pada skrip dnscrypt-proxy yang ada di SBo. Yang ada di SBo :
- Membuat grup dnscrypt dan usernya Mengkonfigurasi dns /etc/resolv.conf.head Memasukkan dnscryp-proxy ke /etc/rc.d/rc.local{,_shutdown}  Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi maintainer dnscrypt-proxy tidak mengikutsertakan langkah ini. Penulis menggunakan NetworkManager, setelah check &amp;amp; recheck, dnscrypt-proxy tidak bekerja karena file /etc/resolv.conf terkena overwrite oleh NetworkManager. Ini adalah langkah untuk memberikan imunisasi/mencegah overwrite.</description>
+Membuat grup dnscrypt dan usernya Mengkonfigurasi dns /etc/resolv.conf.head Memasukkan dnscryp-proxy ke /etc/rc.d/rc.local{,_shutdown} Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi maintainer dnscrypt-proxy tidak mengikutsertakan langkah ini. Penulis menggunakan NetworkManager, setelah check &amp;amp; recheck, dnscrypt-proxy tidak bekerja karena file /etc/resolv.conf terkena overwrite oleh NetworkManager. Ini adalah langkah untuk memberikan imunisasi/mencegah overwrite.</description>
     </item>
     
     <item>
@@ -1115,7 +1127,7 @@ $ tar tvf screenshot2.tar.xz -rw-r--r-- user1/users 580563 2020-07-15 10:17 Scre
       <description>Terdapat file sebagai berikut:
 Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Ketujuh file tersebut akan disatukan dalam 1 archive dengan nama file screenshot.tar.gz.
 $ tar cvf screenshot.tar.gz Screen* Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Penjelasan command
- tar : manajemen archive yang digunakan aalah tar c : wajib dituliskan untuk create atau membuat archive v : opsi untuk verbose, menampilkan list file yang diproses f : wajib dituliskan dalam semua penggunaan tar karena f adalah file, identifier untuk file yang akan diproses screenshot.</description>
+tar : manajemen archive yang digunakan aalah tar c : wajib dituliskan untuk create atau membuat archive v : opsi untuk verbose, menampilkan list file yang diproses f : wajib dituliskan dalam semua penggunaan tar karena f adalah file, identifier untuk file yang akan diproses screenshot.</description>
     </item>
     
     <item>
@@ -1125,8 +1137,8 @@ $ tar cvf screenshot.tar.gz Screen* Screenshot_2020-07-15_10-17-33.png Screensho
       
       <guid>https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/</guid>
       <description>Untuk mengetahui alamat ip lokal tanpa akses root dapat menggunakan nmcli
-$ nmcli wlan0: connected to Anatomi  &amp;#34;Qualcomm Atheros QCA9377&amp;#34;  wifi (ath10k_pci), CC:B0:DA:B5:3B:75, hw, mtu 1500  ip4 default  inet4 192.168.120.19/24  route4 0.0.0.0/0  route4 192.168.120.0/24  route4 192.168.120.0/24  inet6 fe80::1a37:a13:b117:ff74/64  route6 fe80::/64  route6 ff00::/8 Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah
- ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74  </description>
+$ nmcli wlan0: connected to Anatomi &amp;#34;Qualcomm Atheros QCA9377&amp;#34; wifi (ath10k_pci), CC:B0:DA:B5:3B:75, hw, mtu 1500 ip4 default inet4 192.168.120.19/24 route4 0.0.0.0/0 route4 192.168.120.0/24 route4 192.168.120.0/24 inet6 fe80::1a37:a13:b117:ff74/64 route6 fe80::/64 route6 ff00::/8 Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah
+ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74 </description>
     </item>
     
     <item>
@@ -1137,7 +1149,7 @@ $ nmcli wlan0: connected to Anatomi  &amp;#34;Qualcomm Atheros QCA9377&amp;#34; 
       <guid>https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/</guid>
       <description>Pagi ini, saat akan mengeksekusi R,
 $ R /usr/lib64/R/bin/exec/R: error while loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory Ternyata R nya bermasalah. Di atas disebutkan bahwa libicuuc.so.67 tidak ditemukan. Dari namanya, bisa ditebak itu adalah shared object/library miliknya icu4c. Kita pastikan dulu,
-$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE  The list below shows the packages that contains &amp;#34;libicuuc\.</description>
+$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE The list below shows the packages that contains &amp;#34;libicuuc\.</description>
     </item>
     
     <item>
@@ -1148,8 +1160,9 @@ $ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Plea
       <guid>https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/</guid>
       <description>Ini adalah keisengan di kala WFH alias work from home. Melakukan ekstraksi waktu pada changelog slackware64-current yang terakhir kami update 8 Januari 2021.
 Changelognya terdiri dari 4 bagian:
- Waktu Packages yang mengalami perubahan (Upgraded, Removed, Added, Rebuilt) Keterangan perubahan Pembatas update antarwaktu (+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+)  Akan diambil yang no.1 saja.
-Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.</description>
+Waktu Packages yang mengalami perubahan (Upgraded, Removed, Added, Rebuilt) Keterangan perubahan Pembatas update antarwaktu (+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+) Akan diambil yang no.1 saja.
+Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.txt.
+$ sed &amp;#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!</description>
     </item>
     
     <item>
@@ -1179,7 +1192,7 @@ Bagaimana kalau &amp;lsquo;hanya&amp;rsquo; menggunakan window manager seperti G
       
       <guid>https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/</guid>
       <description>Kegunaan rsync rsync berguna untuk transfer file secara efisien. Dibandingkan dengan cp atau mv, rsync memiliki keunggulan :
- Bebas pilih-pilih file maupun direktori yang akan ditransfer karena ada fitur include dan exclude Apabila gagal, misalnya karena storage penuh atau &amp;ldquo;kecelakaan&amp;rdquo; salah klik sehingga ter-close, dapat dilanjutkan tanpa mengulang dari awal sehingga waktunya tentu lebih cepat  Dibandingkan wget, rsync mendukung penggunaan wildcard dan secara default rsync resumeable.
+Bebas pilih-pilih file maupun direktori yang akan ditransfer karena ada fitur include dan exclude Apabila gagal, misalnya karena storage penuh atau &amp;ldquo;kecelakaan&amp;rdquo; salah klik sehingga ter-close, dapat dilanjutkan tanpa mengulang dari awal sehingga waktunya tentu lebih cepat Dibandingkan wget, rsync mendukung penggunaan wildcard dan secara default rsync resumeable.
 Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1</description>
     </item>
     
@@ -1192,7 +1205,7 @@ Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1</descri
       <description>Pagi ini, Patrick memasukkan xfce 4.16 ke slackware current main tree tanpa singgah di /testing. Interface xfce 4.16 lebih cantik dan menarik dibanding sebelumnya. Demikian pula icons-nya.
 Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown xfce stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses development.
 Ada beberapa hal yang menjadi catatan buat penulis terkait xfce 4.16 ini, yaitu
- Interface lebih cantik dan menarik Penambahan xfce4-panel-profiles yang memungkinkan untuk menyimpan profil/konfigurasi panel.</description>
+Interface lebih cantik dan menarik Penambahan xfce4-panel-profiles yang memungkinkan untuk menyimpan profil/konfigurasi panel.</description>
     </item>
     
     <item>
@@ -1203,7 +1216,7 @@ Ada beberapa hal yang menjadi catatan buat penulis terkait xfce 4.16 ini, yaitu
       <guid>https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</guid>
       <description>Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan dmesg
 $ dmesg -T | head -1 [Fri Dec 25 00:39:42 2020] Linux version 5.10.2 Penjelasan command :
- eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp | adalah pipe, untu menjadikan output dmesg sebagai input untuk head head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya [Fri Dec 25 00:39:42 2020] Linux version 5.</description>
+eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp | adalah pipe, untu menjadikan output dmesg sebagai input untuk head head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya [Fri Dec 25 00:39:42 2020] Linux version 5.</description>
     </item>
     
     <item>
@@ -1223,7 +1236,7 @@ $ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segmen
       
       <guid>https://sasongko.web.id/post/2020-12-20-beralih-hugo/</guid>
       <description>Mengapa beralih dari jekyll ke hugo? Keunggulan hugo :
- Instalnya simpel. Hanya berupa binary. Jekyll butuh banyak dependensi tersedia di SBo lebih memudahkan dalam install, upgrade, remove kalau sudah tidak perlu cari pengalaman baru. selama 3 tahun ini menggunakan jekyll simpel,banyak dokumentasi dan theme yang free. Hugo setelah dicermati memberikan prospek yang tidak kalah bagus dibanding jekyll. Bagus di sini maksudnya adalah tergantung selera penulis. Hehehehe  Sedangkan kelemahan hugo adalah tidak didukung secara resmi oleh Github Page.</description>
+Instalnya simpel. Hanya berupa binary. Jekyll butuh banyak dependensi tersedia di SBo lebih memudahkan dalam install, upgrade, remove kalau sudah tidak perlu cari pengalaman baru. selama 3 tahun ini menggunakan jekyll simpel,banyak dokumentasi dan theme yang free. Hugo setelah dicermati memberikan prospek yang tidak kalah bagus dibanding jekyll. Bagus di sini maksudnya adalah tergantung selera penulis. Hehehehe Sedangkan kelemahan hugo adalah tidak didukung secara resmi oleh Github Page.</description>
     </item>
     
     <item>
@@ -1234,7 +1247,7 @@ $ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segmen
       <guid>https://sasongko.web.id/post/2020-10-22-akses-whatsapp-web-seamonkey/</guid>
       <description>Beberapa waktu ini saya lebih sering browsing dengan Seamonkey karena lebih ringan dan cepat (penilaian subjektif). Overall lancar jaya aman terkendali. Namun, ada 1 yang tidak bisa dilakukan : akses WhatsApp Web!
 Untuk mengatasinya,
- about:config Muncul peringatan. Klik I accept the risk! Isikan pada Search: general.useragent.compatMode.strict-firefox Ubah valuenya dari false ke true Restart Seamonkey  </description>
+about:config Muncul peringatan. Klik I accept the risk! Isikan pada Search: general.useragent.compatMode.strict-firefox Ubah valuenya dari false ke true Restart Seamonkey </description>
     </item>
     
     <item>
@@ -1277,9 +1290,9 @@ Aug 9 12:04:53 localhost NetworkManager[1047]: &amp;lt;warn&amp;gt; [1596949493.
       
       <guid>https://sasongko.web.id/post/2020-08-04-bye-wicd/</guid>
       <description>Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan wicd dari repo slackware current.
- extra/wicd/wicd-1.7.4-x86_64-3.txz: Removed.
- This is unmaintained, possibly insecure, and doesn&amp;rsquo;t work with Python versions newer than 2.7.18. NetworkManager is a better choice these days.
-  Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripada NetworkManager. Kenyamanan ini sebenarnya karena saya tidak mau repot, NetworkManager seringkali timbulkan masalah, salah satunya mengatur hostname dan domain.</description>
+extra/wicd/wicd-1.7.4-x86_64-3.txz: Removed.
+This is unmaintained, possibly insecure, and doesn&amp;rsquo;t work with Python versions newer than 2.7.18. NetworkManager is a better choice these days.
+Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripada NetworkManager. Kenyamanan ini sebenarnya karena saya tidak mau repot, NetworkManager seringkali timbulkan masalah, salah satunya mengatur hostname dan domain. Keduanya saya kosongi. Mengapa?</description>
     </item>
     
     <item>
@@ -1307,8 +1320,8 @@ pdfjam buku.pdf &amp;#39;10-21&amp;#39; </description>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/</guid>
-      <description>Walau sudah ada tools yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan tools bawaan Slackware. Tools yang umum digunakan antara lain fslint, fdupesatau jdupes. Adapun tools yang biasa saya gunakan
- sha512sum awk uniq grep  Misalkan, akan mencari adakah duplikasi file di folder Downloads. Pertama, catat dulu hash-nya. Di sini saya gunakan sha512. Kumpulan sha512 tersebut disatukan dalam file downloads.sha512. File ini terdiri dari 2 kolom.</description>
+      <description>Walau sudah ada tools yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan tools bawaan Slackware. Tools yang umum digunakan antara lain fslint, fdupes atau jdupes. Adapun tools yang biasa saya gunakan
+sha512sum awk uniq grep Misalkan, akan mencari adakah duplikasi file di folder Downloads. Pertama, catat dulu hash-nya. Di sini saya gunakan sha512. Kumpulan sha512 tersebut disatukan dalam file downloads.sha512. File ini terdiri dari 2 kolom. Kolom pertama berisi hash, sedangkan kolom kedua nama filenya.</description>
     </item>
     
     <item>
@@ -1318,7 +1331,7 @@ pdfjam buku.pdf &amp;#39;10-21&amp;#39; </description>
       
       <guid>https://sasongko.web.id/post/2020-05-30-menggabungkan-video/</guid>
       <description>Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu
- piknik-1.mkv piknik-2.mkv piknik-3.mkv piknik-4.mkv  Keempat file tersebut berada dalam folder yang sama. Kemudian mereka akan digabungkan menjadi piknik.mkv. Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.
+piknik-1.mkv piknik-2.mkv piknik-3.mkv piknik-4.mkv Keempat file tersebut berada dalam folder yang sama. Kemudian mereka akan digabungkan menjadi piknik.mkv. Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.
 $ vim list-piknik file &amp;#39;piknik-1.</description>
     </item>
     
@@ -1328,8 +1341,9 @@ $ vim list-piknik file &amp;#39;piknik-1.</description>
       <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/</guid>
-      <description>Mengetahui working directory Secara default, working directory pada Slackware adalah home directory user atau di mana command Rdijalankan.
-getwd() Mengganti working directory Misal, akan berpindah working directory ke Documents/projectsetwd(&amp;#39;Documents/project&amp;#39;) </description>
+      <description>Mengetahui working directory Secara default, working directory pada Slackware adalah home directory user atau di mana command R dijalankan.
+getwd() Mengganti working directory Misal, akan berpindah working directory ke Documents/project
+setwd(&amp;#39;Documents/project&amp;#39;) </description>
     </item>
     
     <item>
@@ -1340,7 +1354,7 @@ getwd() Mengganti working directory Misal, akan berpindah working directory ke D
       <guid>https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/</guid>
       <description>Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.
 Untuk mengetahui intensitas suara video intro.mkv
-$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &amp;#39;intro.mkv&amp;#39;:  Metadata:  COMPATIBLE_BRANDS: isommp42  COM.ANDROID.VERSION: 9  MAJOR_BRAND : mp42  MINOR_VERSION : 0  ENCODER : Lavf58.</description>
+$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &amp;#39;intro.mkv&amp;#39;: Metadata: COMPATIBLE_BRANDS: isommp42 COM.ANDROID.VERSION: 9 MAJOR_BRAND : mp42 MINOR_VERSION : 0 ENCODER : Lavf58.29.100 Duration: 00:00:14.90, start: 0.000000, bitrate: 5559 kb/s Stream #0:0(eng): Video: mpeg4 (Simple Profile), yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 1k tbn, 30 tbc (default) Metadata: HANDLER_NAME : VideoHandle ENCODER : Lavc58.</description>
     </item>
     
     <item>
@@ -1349,7 +1363,8 @@ $ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matrosk
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2020-05-24-aktivasi-android-gps-adb/</guid>
-      <description>Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan adbadb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti angka 3 dengan 0.</description>
+      <description>Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan adb
+adb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti angka 3 dengan 0.</description>
     </item>
     
     <item>
@@ -1379,8 +1394,8 @@ ffmpeg -i VID20200509135621.mp4 -vf &amp;#34;scale=1920:1080, setdar=16:9, setsa
       <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/</guid>
-      <description>Secara default, output ffmpegakan menampilkan built configuration yang digunakan.
-$ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers  built with gcc 9.2.0 (GCC)  configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-4.2.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack  libavutil 56. 31.100 / 56. 31.100  libavcodec 58.</description>
+      <description>Secara default, output ffmpeg akan menampilkan built configuration yang digunakan.
+$ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers built with gcc 9.2.0 (GCC) configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-4.2.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack libavutil 56. 31.100 / 56. 31.100 libavcodec 58. 54.</description>
     </item>
     
     <item>
@@ -1389,9 +1404,9 @@ $ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers  bui
       <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/</guid>
-      <description>Factor adalah representasi data kategorik. Factor bisa dibuat dengan fungsi factor()atau cut(). Saya lebih sering menggunakan cut()karena lebih aplikatif saat akan mengubah skala data dari rasio atau interval ke ordinal.
+      <description>Factor adalah representasi data kategorik. Factor bisa dibuat dengan fungsi factor() atau cut(). Saya lebih sering menggunakan cut() karena lebih aplikatif saat akan mengubah skala data dari rasio atau interval ke ordinal.
 Contoh, bmi adalah data body mass index (BMI) atau indeks massa tubuh (IMT). Klasifikasi IMT ada 4 macam, yaitu
- &amp;lt; 18,5 : underweight 18,5 - 24,99 : normal 25 - 29,99 : overweight &amp;gt; 30 : obese/obesitas Untuk obesitas, masih bisa diklasifikasikan menjadi 3 30 - 34,99 : obese class 1 35 - 39,99 : obese class 2 &amp;gt; 40 : extreme obesity  &amp;gt; bmi &amp;lt;- c(20, 21.</description>
+&amp;lt; 18,5 : underweight 18,5 - 24,99 : normal 25 - 29,99 : overweight &amp;gt; 30 : obese/obesitas Untuk obesitas, masih bisa diklasifikasikan menjadi 3 30 - 34,99 : obese class 1 35 - 39,99 : obese class 2 &amp;gt; 40 : extreme obesity &amp;gt; bmi &amp;lt;- c(20, 21.</description>
     </item>
     
     <item>
@@ -1453,7 +1468,7 @@ Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini ber
       
       <guid>https://sasongko.web.id/post/2020-04-11-install-jasp/</guid>
       <description>JASP, singkatan dari Jeffreys&amp;rsquo;s Amazing Statistic Program, merupakan open source statistics software. Software ini layak dijadikan pilihan utama karena:
- Open source. Karena open source semua orang boleh memakai, melihat source code-nya dan berkontribusi (melaporkan masalah, mengusulkan fitur dan perbaikan). Silahkan menuju ke https://github.com/jasp-stats/jasp-desktop . Pengembangan dinaungi oleh akademisi dari University of Amsterdam, Duke University, University of Southampton, UNiversity of Sussex, University of Missouri, Athens University of Economics dan Business, Missouri State University, University of Groningen, Nyenrode Business University, University of Zurich dan Ludwig-Maximilians-Universität München.</description>
+Open source. Karena open source semua orang boleh memakai, melihat source code-nya dan berkontribusi (melaporkan masalah, mengusulkan fitur dan perbaikan). Silahkan menuju ke https://github.com/jasp-stats/jasp-desktop . Pengembangan dinaungi oleh akademisi dari University of Amsterdam, Duke University, University of Southampton, UNiversity of Sussex, University of Missouri, Athens University of Economics dan Business, Missouri State University, University of Groningen, Nyenrode Business University, University of Zurich dan Ludwig-Maximilians-Universität München.</description>
     </item>
     
     <item>
@@ -1483,7 +1498,7 @@ Nilai minimal min(ldeaths) [1] 1300 Nilai maksimal max(ldeaths) [1] 3891 Range r
       
       <guid>https://sasongko.web.id/post/2020-03-14-input-data-r/</guid>
       <description>Input data dalam R sangat mudah dan ada beragam cara, yaitu:
- Menuliskan dalam bentuk syntax. Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100 Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel.</description>
+Menuliskan dalam bentuk syntax. Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100 Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel.</description>
     </item>
     
     <item>
@@ -1493,7 +1508,7 @@ Nilai minimal min(ldeaths) [1] 1300 Nilai maksimal max(ldeaths) [1] 3891 Range r
       
       <guid>https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/</guid>
       <description>Berikut adalah package atau library R yang secara default terinstall di Slackware melalui SBo.
- KernSmooth.Functions for Kernel Smoothing Supporting Wand &amp;amp; Jones (1995) MASS. Support Functions and Datasets for Venables and Ripley&amp;rsquo;s MASS Matrix. Sparse and Dense Matrix Classes and Methods base. The R Base Package boot. Bootstrap Functions (Originally by Angelo Canty for S) class. Functions for Classification cluster. &amp;ldquo;Finding Groups in Data&amp;rdquo;: Cluster Analysis Extended Rousseeuw et al.</description>
+KernSmooth.Functions for Kernel Smoothing Supporting Wand &amp;amp; Jones (1995) MASS. Support Functions and Datasets for Venables and Ripley&amp;rsquo;s MASS Matrix. Sparse and Dense Matrix Classes and Methods base. The R Base Package boot. Bootstrap Functions (Originally by Angelo Canty for S) class. Functions for Classification cluster. &amp;ldquo;Finding Groups in Data&amp;rdquo;: Cluster Analysis Extended Rousseeuw et al. codetools.</description>
     </item>
     
     <item>
@@ -1512,7 +1527,7 @@ Meskipun bersifat open source, sampai sekarang belum ada sistem operasi open sou
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2020-02-01-fullscreen-firefox/</guid>
-      <description>Terkadang saat browsing perlu fokus sehingga tampilan pun butuh fullscreen. Pada Mozilla Firefox, secara default F11adalah tombol untuk fullscreen dan exit fullscreen. Akan tetapi, hal ini tidak berlaku pada kami, Slackware64 current dengan desktop environment XFCE yang berjalan di laptop Lenovo Ideapad 110-14IBR. Pada perangkat kami ini, F11untuk mengurangi brightness. Maka, untuk fullscreen dan exit-nya kami gunakan Fn F11.</description>
+      <description>Terkadang saat browsing perlu fokus sehingga tampilan pun butuh fullscreen. Pada Mozilla Firefox, secara default F11 adalah tombol untuk fullscreen dan exit fullscreen. Akan tetapi, hal ini tidak berlaku pada kami, Slackware64 current dengan desktop environment XFCE yang berjalan di laptop Lenovo Ideapad 110-14IBR. Pada perangkat kami ini, F11 untuk mengurangi brightness. Maka, untuk fullscreen dan exit-nya kami gunakan Fn F11.</description>
     </item>
     
     <item>
@@ -1521,7 +1536,9 @@ Meskipun bersifat open source, sampai sekarang belum ada sistem operasi open sou
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2020-01-10-mtperrorcantopendevice/</guid>
-      <description>Ketika akan memindahkan data dari HP android ke laptop melalui thunar, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui jmtpfs$ jmtpfs Device 0 (VID=0e8d and PID=201d) is a MediaTek Inc Elephone P8000. error returned by libusb_claim_interface() = -6LIBMTP PANIC: Unable to initialize device terminate called after throwing an instance of &amp;#39;MtpErrorCantOpenDevice&amp;#39;  what(): Can&amp;#39;t open device Aborted Ada masalah di libusb. Coba reinstall libusb# slackpkg reinstall libusb Alhamdulillah sukses.</description>
+      <description>Ketika akan memindahkan data dari HP android ke laptop melalui thunar, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui jmtpfs
+$ jmtpfs Device 0 (VID=0e8d and PID=201d) is a MediaTek Inc Elephone P8000. error returned by libusb_claim_interface() = -6LIBMTP PANIC: Unable to initialize device terminate called after throwing an instance of &amp;#39;MtpErrorCantOpenDevice&amp;#39; what(): Can&amp;#39;t open device Aborted Ada masalah di libusb. Coba reinstall libusb
+# slackpkg reinstall libusb Alhamdulillah sukses.</description>
     </item>
     
     <item>
@@ -1572,9 +1589,8 @@ Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersed
       
       <guid>https://sasongko.web.id/post/2019-06-09-backup-android/</guid>
       <description>Sebelum berganti ponsel atau HP sangat disarankan untuk mem-back up data-data penting, seperti dokumen, foto, video, maupun chat WhatsApp. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi Slackware.
-Persiapan Slackware Pastikan bisa menjalankan adbyang merupakan bagian dari android tools. Kalau belum bisa install dari SBo
-Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer pakai adbbisa lebih cepat
-Persiapan Android Aktifkan mode USB debugging yang ada di Settings &amp;ndash;&amp;gt; Developer options.</description>
+Persiapan Slackware Pastikan bisa menjalankan adb yang merupakan bagian dari android tools. Kalau belum bisa install dari SBo
+Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer pakai adb bisa lebih cepat</description>
     </item>
     
     <item>
@@ -1583,7 +1599,7 @@ Persiapan Android Aktifkan mode USB debugging yang ada di Settings &amp;ndash;&a
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/</guid>
-      <description>Secara default sbopkgtidak menyediakan fitur reverse dependency. Adapun untuk butuh dependency-nya apa saja bisa menggunakan sqg. Bagaimana tahu reverse dependency-nya?
+      <description>Secara default sbopkg tidak menyediakan fitur reverse dependency. Adapun untuk butuh dependency-nya apa saja bisa menggunakan sqg. Bagaimana tahu reverse dependency-nya?
 Ini cara sederhana yang saya gunakan
 grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan cara tersebut bisa diketahui suatu paket/package itu menjadi dependensi dari paket apa. Tapi, salah 1 dari output tersebut tidak lain adalah paket itu sendiri. Dan, package yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah packages tersebut terinstall atau tidak.</description>
     </item>
@@ -1595,7 +1611,7 @@ grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan ca
       
       <guid>https://sasongko.web.id/post/2019-04-19-chromium-disable-unlock-keyring/</guid>
       <description>Mungkin ada yang merasa bosan setiap membuka Chromium muncul kotak dialog Unlock Keyring.
-Itu bisa diatasi, agar tidak muncul lagi. Aktifkan CHROMIUM_FLAGSpada /etc/chromium/00-default.conf.
+Itu bisa diatasi, agar tidak muncul lagi. Aktifkan CHROMIUM_FLAGS pada /etc/chromium/00-default.conf.
 CHROMIUM_FLAGS=&amp;#34;--password-store=basic&amp;#34; </description>
     </item>
     
@@ -1618,7 +1634,8 @@ R/ adduser # saya gunakan R/ sebagai pengganti shell prompt untuk root kemudian 
       <guid>https://sasongko.web.id/post/2019-03-30-memulai-mariadb/</guid>
       <description>Apa itu MariaDB MariaDB adalah software untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.
 Install MariaDB Secara default, apabila Slackware diisnntall full system maka MariaDB akan terinstall. Jadi tidak usah repot-repot untuk insytallnya.
-Memulai MariaDB Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. prompt R/menunjukkan dilakukan dengan priviledge rootR/ mysql_install_db R/ chown -R mysql:mysql /var/lib/mysql R/ chmod +x /etc/rc.</description>
+Memulai MariaDB Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. prompt R/ menunjukkan dilakukan dengan priviledge root
+R/ mysql_install_db R/ chown -R mysql:mysql /var/lib/mysql R/ chmod +x /etc/rc.</description>
     </item>
     
     <item>
@@ -1651,7 +1668,7 @@ kdenlive-nya sukses di-uninstall, tapi bagaimana dengan seabrek dependensinya? H
       <guid>https://sasongko.web.id/post/2018-08-31-bermain-tetris-emacs/</guid>
       <description>Emacs sebagai text editor legendaris mempunyai banyak fitur. Salah satunya adalah tetris. Sebagai penggemar tetris tentunya belum afdhal kalau belum memainkannya.
 Tetris bisa dimainkan dari Emacs pada menu bar klik Tools &amp;gt; Games &amp;gt; Tetris
-Untuk memainkannya tekan tombol Puntuk pause dan melanjutkannya, panah kanan-kiri untuk menggeser, panah bawah untuk mempercepat dan panah atas untuk merotasi atau mengubah bentuk.</description>
+Untuk memainkannya tekan tombol P untuk pause dan melanjutkannya, panah kanan-kiri untuk menggeser, panah bawah untuk mempercepat dan panah atas untuk merotasi atau mengubah bentuk.</description>
     </item>
     
     <item>
@@ -1670,7 +1687,7 @@ $ sbocheck # command ini dijalankan oleh root Unescaped left brace in regex is d
       <pubDate>Sat, 23 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2018-06-23-kosongkan-trash/</guid>
-      <description>Iseng-iseng buka hidden folder ada yang menarik. File yang ada di Trash (bisa buka di Thunar dengan path trash:///sama dengan yang ada di ~/.local/share/Trash/files/. Sehingga kalau ingin mengosongkan Trash dan posisi sedang di CLI dan tidak membuka file manager ataupun lagi aras-arasen, sangat bisa.
+      <description>Iseng-iseng buka hidden folder ada yang menarik. File yang ada di Trash (bisa buka di Thunar dengan path trash:/// sama dengan yang ada di ~/.local/share/Trash/files/. Sehingga kalau ingin mengosongkan Trash dan posisi sedang di CLI dan tidak membuka file manager ataupun lagi aras-arasen, sangat bisa.
 rm -rv ~/.local/share/Trash/* </description>
     </item>
     
@@ -1681,10 +1698,10 @@ rm -rv ~/.local/share/Trash/* </description>
       
       <guid>https://sasongko.web.id/post/2018-06-19-mencoba-manokwari/</guid>
       <description>Beberapa waktu yang lalu mencoba install manokwari dan berhasil dengan beberapa kekurangan.
-Proses install berjalan lancar walau sempat terhambat sebentar. Apalagi kalau bukan karena dependensi. Untuk compile menggunakan mesonyang disediakan Pengembang dan prosesnya lebih cepat. Oiya, ini saya hanya lakukan di slackware64-current.
+Proses install berjalan lancar walau sempat terhambat sebentar. Apalagi kalau bukan karena dependensi. Untuk compile menggunakan meson yang disediakan Pengembang dan prosesnya lebih cepat. Oiya, ini saya hanya lakukan di slackware64-current.
 Tentang dependensi, saya bagi menjadi 3 bagian.
-  Sudah terinstall secara default atau tersedia di official repo Slackware
- meson glib2 gtk+3 atk cairo x11 libnotify    Tersedia di SBo</description>
+Sudah terinstall secara default atau tersedia di official repo Slackware
+meson glib2 gtk+3 atk cairo x11 libnotify Tersedia di SBo</description>
     </item>
     
     <item>
@@ -1726,7 +1743,7 @@ Contoh, untuk perl :
       
       <guid>https://sasongko.web.id/post/2018-06-12-mengapa-openssl/</guid>
       <description>Mengapa saya suka mengenkripsi file dengan openssl? Karena
- Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&amp;hellip;.  </description>
+Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&amp;hellip;. </description>
     </item>
     
     <item>
@@ -1757,7 +1774,7 @@ rm -r /usr/local/{lib{,64},share}/perl5 </description>
       
       <guid>https://sasongko.web.id/post/2018-04-23-salah-password-terminal/</guid>
       <description>Pengguna GNU/Linux mungkin pernah salah menuliskan password saat login melalui terminal. Apa yang dilakukan?
-Mungkin sebagian ada yang menekan backspaceberkali-kali sampai dirasa cukup. Ya, sampai dirasa cukup. Sampai dirasa kursor sudah kembali ke posisi awal penulisan password. Tapi, tahukah kalau ada cara yang lebih smart ?
+Mungkin sebagian ada yang menekan backspace berkali-kali sampai dirasa cukup. Ya, sampai dirasa cukup. Sampai dirasa kursor sudah kembali ke posisi awal penulisan password. Tapi, tahukah kalau ada cara yang lebih smart ?
 Ya, dengan kombinasi Ctrl + u .</description>
     </item>
     
@@ -1792,7 +1809,7 @@ Kemudian klik hasil pencarian untuk mengetahui detil lokasi.</description>
       <guid>https://sasongko.web.id/post/2018-04-12-mengenal-josm/</guid>
       <description>Sebenarnya sudah lama ingin menulis dengan topik Geographical Information System (GIS) tapi baru sempat sekarang.
 OSM Apakah OSM itu? OpenStreetMap (OSM) adalah salah satu layanan peta digital seperti Google Maps dan Here Maps yang dapat diakses melalui https://openstreetmap.org/ . OSM bersifat free &amp;amp; open source sehingga mempersilakan kita untuk berkontribusi secara luas, baik itu menambah/edit data maupun koreksi peta. Mengapa saya lebih suka OSM daripada layanan peta digital lainnya?
- Open source.</description>
+Open source.</description>
     </item>
     
     <item>
@@ -1802,7 +1819,8 @@ OSM Apakah OSM itu? OpenStreetMap (OSM) adalah salah satu layanan peta digital s
       
       <guid>https://sasongko.web.id/post/2018-04-03-slackpkg-packages-database-error/</guid>
       <description>Siang ini, upgrade beberapa paket SBo, salah satunya adalah nodejs. Tetapi terjadi insiden di sela-sela prosesnya : lowbatt sehingga laptop mati. Kejadian ini awalnya tidak saya ketahui, karena banyak paket yang di-upgrade sehingga lama kemudian saya tinggal mengerjakan pekerjaan yang lain.
-Singkat cerita, saya ingin upgrade paket-paket official melalui slackpkgslackpkg upgrade-all  FATAL! There is some problem in packages database  or maybe an installation or upgrade in progress:   nodejs-6.</description>
+Singkat cerita, saya ingin upgrade paket-paket official melalui slackpkg
+slackpkg upgrade-all FATAL! There is some problem in packages database or maybe an installation or upgrade in progress: nodejs-6.11.2-x86_64-1_SBo-upgraded-2018-04-03,11:12:24 If you continue you may corrupt packages database.</description>
     </item>
     
     <item>
@@ -1812,7 +1830,7 @@ Singkat cerita, saya ingin upgrade paket-paket official melalui slackpkgslackpkg
       
       <guid>https://sasongko.web.id/post/2018-02-18-rename-network-interface/</guid>
       <description>Entah mengapa tadi kepikiran untuk jalankan ifconfig -a. Ternyata kemudian ada output yang menarik
-eth0: flags=4099&amp;lt;UP,BROADCAST,MULTICAST&amp;gt; mtu 1500  ether c8:5b:76:66:51:6a txqueuelen 1000 (Ethernet)  RX packets 0 bytes 0 (0.0 B)  RX errors 0 dropped 0 overruns 0 frame 0  TX packets 0 bytes 0 (0.0 B)  TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0  lo: flags=73&amp;lt;UP,LOOPBACK,RUNNING&amp;gt; mtu 65536  inet 127.0.0.1 netmask 255.</description>
+eth0: flags=4099&amp;lt;UP,BROADCAST,MULTICAST&amp;gt; mtu 1500 ether c8:5b:76:66:51:6a txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 lo: flags=73&amp;lt;UP,LOOPBACK,RUNNING&amp;gt; mtu 65536 inet 127.0.0.1 netmask 255.0.0.0 inet6 ::1 prefixlen 128 scopeid 0x10&amp;lt;host&amp;gt; loop txqueuelen 1000 (Local Loopback) RX packets 0 bytes 0 (0.</description>
     </item>
     
     <item>
@@ -1822,7 +1840,7 @@ eth0: flags=4099&amp;lt;UP,BROADCAST,MULTICAST&amp;gt; mtu 1500  ether c8:5b:76:
       
       <guid>https://sasongko.web.id/post/2017-12-08-libsodium-masuk-current/</guid>
       <description>Pada hari Rabu 6 Desember 2017 jam 14.13.48 UTC, Patrick Volkerding selaku BDFL Slackware, memberikan update di kanal -current. Salah satunya adalah menambahkan libsodium-1.0.15. Libsodium merupakan library atau pustaka untuk enkripsi, dekripsi, signature (tanda tangan digital), dlsb.
-Bagi saya, masuknya libsodiummembawa konsekwensi untuk rebuild dnscrypt-proxyyang menggunakan libsodium. libsodiumyang sebelumnya adalah versi 1.0.13 dari SBo sedangkan versi baru dari official Slackware 1.0.15. Hal ini diketahui dari gagalnya men-start service dnscrypt-proxy .</description>
+Bagi saya, masuknya libsodium membawa konsekwensi untuk rebuild dnscrypt-proxy yang menggunakan libsodium. libsodium yang sebelumnya adalah versi 1.0.13 dari SBo sedangkan versi baru dari official Slackware 1.0.15. Hal ini diketahui dari gagalnya men-start service dnscrypt-proxy .</description>
     </item>
     
     <item>
@@ -1832,9 +1850,9 @@ Bagi saya, masuknya libsodiummembawa konsekwensi untuk rebuild dnscrypt-proxyyan
       
       <guid>https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/</guid>
       <description>Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang bootloop apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. Update terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui rebuilt elilo.
-Setelah upgrade terutama untuk elilojangan lupa menjalankan
-eliloconfig yang secara otomatis juga akan meng- generate elilo.confyang berisi pengaturan boot dengan kernel huge.
-Namun, saya kurang suka dengan cara otomatis ini. Dan saya memilih melakukannya secara manual saja agar lebih fleksibel dalam konfigurasinya.</description>
+Setelah upgrade terutama untuk elilo jangan lupa menjalankan
+eliloconfig yang secara otomatis juga akan meng- generate elilo.conf yang berisi pengaturan boot dengan kernel huge.
+Namun, saya kurang suka dengan cara otomatis ini.</description>
     </item>
     
     <item>
@@ -1844,8 +1862,8 @@ Namun, saya kurang suka dengan cara otomatis ini. Dan saya memilih melakukannya 
       
       <guid>https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/</guid>
       <description>Setelah 2 minggu, -Current kembali mendapatkan update Jum&amp;rsquo;at kemarin tanggal 17 November 2017. Banyak update, ada yang upgraded, rebuilt, added, dan removed. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.
-Setelah upgrade dan eliloconfigkemudian restart, ternyata muncul masalah! Bootloop! Loading vmlinuz&amp;hellip; langsung reboot. Begitu seterusnya.
-Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk recovery-nya lebih mudah. Boot dari DVD kemudian waktu muncul grubpilih opsi yang intinya detect another operating system (persisnya saya lupa).</description>
+Setelah upgrade dan eliloconfig kemudian restart, ternyata muncul masalah! Bootloop! Loading vmlinuz&amp;hellip; langsung reboot. Begitu seterusnya.
+Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk recovery-nya lebih mudah. Boot dari DVD kemudian waktu muncul grub pilih opsi yang intinya detect another operating system (persisnya saya lupa).</description>
     </item>
     
     <item>
@@ -1854,7 +1872,7 @@ Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk rec
       <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2017-11-15-mengamankan-file-folder/</guid>
-      <description>Salah satu hal yang membuat saya menggunakan linux khususnya Slackware adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan .pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan steganografi tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}) atau [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}).</description>
+      <description>Salah satu hal yang membuat saya menggunakan linux khususnya Slackware adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan . pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan steganografi tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}) atau [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}).</description>
     </item>
     
     <item>
@@ -1863,7 +1881,7 @@ Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk rec
       <pubDate>Tue, 08 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2017-08-08-set-clang-as-default-c-compiler/</guid>
-      <description>Secara default, C Compiler yang digunakan adalah gcc. Namun, apabila diinginkan, bisa dialihkan menggunakan clang. Caranya, buat file di /etc/profile.dmisalnya c-compiler.sh, yang isinya
+      <description>Secara default, C Compiler yang digunakan adalah gcc. Namun, apabila diinginkan, bisa dialihkan menggunakan clang. Caranya, buat file di /etc/profile.d misalnya c-compiler.sh, yang isinya
 export CC=/usr/bin/clang export CXX=/usr/bin/clang++ </description>
     </item>
     
@@ -1883,7 +1901,7 @@ export CC=/usr/bin/clang export CXX=/usr/bin/clang++ </description>
       
       <guid>https://sasongko.web.id/post/2017-07-29-menghapus-dengan-pengecualian/</guid>
       <description>Sebagai pengguna SBo dan sbopkg, file yang dihasilkan proses build ditaruh di /tmp. Folder ini lama-lama semakin banyak isinya. Padahal filenya bisa dikatakan tidak terpakai. Script masih aman tersimpan rapi di /var/lib/sbopkg. Sedangkan source-nya di /var/cache/sbopkg.
-Semua yang ada di folder /tmpakan saya hapus kecuali file yang berekstensi txt. Saya memang kadang iseng nulis-nulis sesuatu kemudian saya simpan dengan ekstensi txtdan ditaruh di /tmp. File-file ini tidak mau saya hapus, buat dibaca jadi hiburan sendiri kelak bahwa dulu pernah iseng nulis seperti itu&amp;hellip; Hahahaha&amp;hellip;.</description>
+Semua yang ada di folder /tmp akan saya hapus kecuali file yang berekstensi txt. Saya memang kadang iseng nulis-nulis sesuatu kemudian saya simpan dengan ekstensi txt dan ditaruh di /tmp. File-file ini tidak mau saya hapus, buat dibaca jadi hiburan sendiri kelak bahwa dulu pernah iseng nulis seperti itu&amp;hellip; Hahahaha&amp;hellip;.</description>
     </item>
     
     <item>
@@ -1892,8 +1910,8 @@ Semua yang ada di folder /tmpakan saya hapus kecuali file yang berekstensi txt. 
       <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2017-07-05-akibat-lupa-eliloconfig/</guid>
-      <description>Kemarin melihat ChangeLog ada beberapa update yang sebagian di antaranya adalah security fix. Salah satu update adalah kernel. Melakukan upgrade semuanya baik-baik saja dan lanjut shutdown. Siang ini, bootingpun masih fine dan no problem. Begitu juga login. Baru terasa saat ingin masuk desktop malah gagal.
-$ startx xauth: file /home/sasongko/.serverauth.2717 does not exist   X.Org X Server 1.19.3 Release Date: 2017-03-15 X Protocol Version 11, Revision 0 Build Operating System: Slackware 14.</description>
+      <description>Kemarin melihat ChangeLog ada beberapa update yang sebagian di antaranya adalah security fix. Salah satu update adalah kernel. Melakukan upgrade semuanya baik-baik saja dan lanjut shutdown. Siang ini, booting pun masih fine dan no problem. Begitu juga login. Baru terasa saat ingin masuk desktop malah gagal.
+$ startx xauth: file /home/sasongko/.serverauth.2717 does not exist X.Org X Server 1.19.3 Release Date: 2017-03-15 X Protocol Version 11, Revision 0 Build Operating System: Slackware 14.</description>
     </item>
     
     <item>
@@ -1902,9 +1920,9 @@ $ startx xauth: file /home/sasongko/.serverauth.2717 does not exist   X.Org X Se
       <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2017-07-05-convert-word-pdf-massal/</guid>
-      <description>LibreOfficesudah lama mendukung konversi file dari Word/Writer (doc, docx dan odt) ke file pdf. Keunggulannya adalah bisa melakukan konversi secara massal.
-Misalkan, dipunyai 1000 file docxyang tersimpan di ~/Documents. Masing-masing file ini akan dikonversi menjadi pdfdi ~/convert.
-$ soffice --headless --nologo --convert-to pdf:writer_pdf_Export --outdir ~/convert Documents/*.docx Opsi &amp;ndash;headless &amp;ndash;nologodiberikan agar lebih cepat, lebih hemat waktu, karena tidak menampilkan splash screen.</description>
+      <description>LibreOffice sudah lama mendukung konversi file dari Word/Writer (doc, docx dan odt) ke file pdf. Keunggulannya adalah bisa melakukan konversi secara massal.
+Misalkan, dipunyai 1000 file docx yang tersimpan di ~/Documents. Masing-masing file ini akan dikonversi menjadi pdf di ~/convert.
+$ soffice --headless --nologo --convert-to pdf:writer_pdf_Export --outdir ~/convert Documents/*.docx Opsi &amp;ndash;headless &amp;ndash;nologo diberikan agar lebih cepat, lebih hemat waktu, karena tidak menampilkan splash screen.</description>
     </item>
     
     <item>
@@ -1913,9 +1931,9 @@ $ soffice --headless --nologo --convert-to pdf:writer_pdf_Export --outdir ~/conv
       <pubDate>Tue, 04 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2017-07-04-presentasi-lcd-projector/</guid>
-      <description>Tools yang digunakan adalah xrandr. Sebenarnya bisa menggunakan aplikasi GUI yang disediakan desktop environment masing-masing, tapi saya lebih suka menggunakan xrandragar universal bisa digunakan di lingkungan desktop apapun, entah itu Fluxbox, FVWM, TWM, Xfce, KDE, Lumina, LXQt, Mate, Cinnamon, dsb.
+      <description>Tools yang digunakan adalah xrandr. Sebenarnya bisa menggunakan aplikasi GUI yang disediakan desktop environment masing-masing, tapi saya lebih suka menggunakan xrandr agar universal bisa digunakan di lingkungan desktop apapun, entah itu Fluxbox, FVWM, TWM, Xfce, KDE, Lumina, LXQt, Mate, Cinnamon, dsb.
 Pertama, identifikasi monitor/screen primer yang aktif tersambung saat ini, jangan sambungkan proyektor dulu
-$ xrandr Screen 0: minimum 8 x 8, current 1366 x 768, maximum 32767 x 32767 eDP1 connected primary 1366x768+0+0 (normal left inverted right x axis y axis) 310mm x 170mm  1366x768 59.</description>
+$ xrandr Screen 0: minimum 8 x 8, current 1366 x 768, maximum 32767 x 32767 eDP1 connected primary 1366x768+0+0 (normal left inverted right x axis y axis) 310mm x 170mm 1366x768 59.</description>
     </item>
     
     <item>
@@ -1924,8 +1942,8 @@ $ xrandr Screen 0: minimum 8 x 8, current 1366 x 768, maximum 32767 x 32767 eDP1
       <pubDate>Sun, 02 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/</guid>
-      <description>Di suasana Idul Fitri, 26 Juni 2017, Ken Moore selaku project leader Luminamengumumkan perihal rilisnya Lumina Desktop 1.3.0. Selang 4 hari kemudian dirilis patch yang pertama untuk 1.3.0. Catatan rilis resmi silahkan dibaca di sini.
-Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini tergolong istimewa. Mulai versi 1.3.0 ini luminasemakin powerfull untuk digunakan di Slackware. Sampai dengan versi 1.2.0_p1 (1.2.0 patchset 1), Restartdan Power Offpada menu sama sekali tidak berfungsi.</description>
+      <description>Di suasana Idul Fitri, 26 Juni 2017, Ken Moore selaku project leader Lumina mengumumkan perihal rilisnya Lumina Desktop 1.3.0. Selang 4 hari kemudian dirilis patch yang pertama untuk 1.3.0. Catatan rilis resmi silahkan dibaca di sini.
+Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini tergolong istimewa. Mulai versi 1.3.0 ini lumina semakin powerfull untuk digunakan di Slackware. Sampai dengan versi 1.2.0_p1 (1.2.0 patchset 1), Restart dan Power Off pada menu sama sekali tidak berfungsi.</description>
     </item>
     
     <item>
@@ -1934,7 +1952,7 @@ Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini
       <pubDate>Mon, 27 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2017-03-27-disable-commands-history/</guid>
-      <description>Secara default, perintah/command yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan command historyatau membaca isi ~/.bash_history. Ini bisa di-disable. Caranya, membuat file di /etc/profile.d/, yang isinya
+      <description>Secara default, perintah/command yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan command history atau membaca isi ~/.bash_history. Ini bisa di-disable. Caranya, membuat file di /etc/profile.d/, yang isinya
 export HISTFILE=/dev/null export HISTSIZE=0 </description>
     </item>
     
@@ -1945,7 +1963,7 @@ export HISTFILE=/dev/null export HISTSIZE=0 </description>
       
       <guid>https://sasongko.web.id/post/2017-03-25-konek-internet-usb-tethering/</guid>
       <description>Salah satu keunggulan GNU/Linux terutama Slackware adalah berlakunya banyak jalan menuju Roma. Contohnya untuk konek/menyambung ke internet, ada beberapa cara antara lain :
- nmcli, contohnya [di sini]({% post_url 2016-06-26-konek-inet-nmcli %}) dan [di sini]({% post_url 2016-12-07-nmcli-konek-wifi %}). pppsetup, caranya [seperti ini]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) dan [ini]({% post_url 2015-08-17-setting-internet-xl-slackware %}) [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) wpa_supplicant wicd  Cara lainnya yang saya pakai adalah dengan dhcpcd.
+nmcli, contohnya [di sini]({% post_url 2016-06-26-konek-inet-nmcli %}) dan [di sini]({% post_url 2016-12-07-nmcli-konek-wifi %}). pppsetup, caranya [seperti ini]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) dan [ini]({% post_url 2015-08-17-setting-internet-xl-slackware %}) [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) wpa_supplicant wicd Cara lainnya yang saya pakai adalah dengan dhcpcd.
 Misalkan akan menyambungkan internet melalui USB tethering - cara melakukan USB tethering tidak saya bahas,</description>
     </item>
     
@@ -1965,10 +1983,11 @@ Teringat, DVD/USB installer-nya sudah tak ada. Iso-nya pun terhapus. So, what&am
       <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2017-01-19-install-padre/</guid>
-      <description>Padremerupakan integrated development environment (IDE) untuk bahasa pemrograman perl.
-Padreini belum dimasukkan ke dalam paket resmi Slackware maupun SBo. Sehingga ada 2 kemungkinan cara menginstallnya.
-  Build sendiri dari source
-  Install dari cpan  Cara yang saya gunakan adalah cara kedua, yaitu
+      <description>Padre merupakan integrated development environment (IDE) untuk bahasa pemrograman perl.
+Padre ini belum dimasukkan ke dalam paket resmi Slackware maupun SBo. Sehingga ada 2 kemungkinan cara menginstallnya.
+Build sendiri dari source
+Install dari cpan
+Cara yang saya gunakan adalah cara kedua, yaitu
 $ cpan -i Padre </description>
     </item>
     
@@ -1978,7 +1997,7 @@ $ cpan -i Padre </description>
       <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/</guid>
-      <description>Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupgatau yang biasa disebut dengan gpg.
+      <description>Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupg atau yang biasa disebut dengan gpg.
 $ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
 $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi </description>
     </item>
@@ -1989,7 +2008,7 @@ $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi </description>
       <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2017-01-12-qtfm-segfault-pascaupgrade-changelog12jan17/</guid>
-      <description>Changelog current hari ini 12 Januari 2017 ramai sekali. Upgrade dan rebuilt secara masif seolah menjadi kado tahun baru dari Patrick Volkerding. Dan ternyata berimbas segfault alias Segmentation faultpada qtFMfile manager berbasis Qtyang saya install dari SBo.</description>
+      <description>Changelog current hari ini 12 Januari 2017 ramai sekali. Upgrade dan rebuilt secara masif seolah menjadi kado tahun baru dari Patrick Volkerding. Dan ternyata berimbas segfault alias Segmentation fault pada qtFM file manager berbasis Qt yang saya install dari SBo.</description>
     </item>
     
     <item>
@@ -1999,7 +2018,7 @@ $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi </description>
       
       <guid>https://sasongko.web.id/post/2017-01-08-enkripsi-dg-openssl/</guid>
       <description>Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
-Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssldengan cipher rc4. File hasil enkripsi saya namai rahasia.odtyang saya taruh di fd dan fd saya mountdi /media/hd0. Kemudian akan ditanya password enkripsinya.</description>
+Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssl dengan cipher rc4. File hasil enkripsi saya namai rahasia.odt yang saya taruh di fd dan fd saya mount di /media/hd0. Kemudian akan ditanya password enkripsinya.</description>
     </item>
     
     <item>
@@ -2009,7 +2028,7 @@ Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.
       
       <guid>https://sasongko.web.id/post/2017-01-02-kbbi-qt-slackbuild/</guid>
       <description>Alhamdulillah malam ini bisa membuat slackbuild untuk KBBI Qt. Sebenarnya sih sudah sejak kira-kira 2 bulan yang lalu ingin membuat slackbuildnya, baru kesampaian sekarang.
-KBBI Qtadalah aplikasi Kamus Besar Bahasa Indonesia (KBBI) yang dikembangkan oleh komunitas Belajar GNU/Linux Indonesia atau BGLI. Aplikasi ini dibuat dengan bahasa C++ dan framework Qt yang berlisensi GPLv3. Lisensi ini mengijinkan kita semua boleh menggunakan, memodifikasi dan menyebarluaskan aplikasi KBBI Qt.</description>
+KBBI Qt adalah aplikasi Kamus Besar Bahasa Indonesia (KBBI) yang dikembangkan oleh komunitas Belajar GNU/Linux Indonesia atau BGLI. Aplikasi ini dibuat dengan bahasa C++ dan framework Qt yang berlisensi GPLv3. Lisensi ini mengijinkan kita semua boleh menggunakan, memodifikasi dan menyebarluaskan aplikasi KBBI Qt.</description>
     </item>
     
     <item>
@@ -2018,7 +2037,7 @@ KBBI Qtadalah aplikasi Kamus Besar Bahasa Indonesia (KBBI) yang dikembangkan ole
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2017-01-01-blankon-wallpapers-slackbuild/</guid>
-      <description>Alhamdulillah, hari ini, 1 Januari 2017, tepat di hari pertama tahun 2017, Tim Pengembang BlankOn secara resmi merilis BlankOn X dengan codename Tambora. Dan di hari ini pula, saya rilis blankon-wallpapers slackbuildsecara resmi, walaupun sebenarnya sudah saya taruh di repo github sejak beberapa hari yang lalu.
+      <description>Alhamdulillah, hari ini, 1 Januari 2017, tepat di hari pertama tahun 2017, Tim Pengembang BlankOn secara resmi merilis BlankOn X dengan codename Tambora. Dan di hari ini pula, saya rilis blankon-wallpapers slackbuild secara resmi, walaupun sebenarnya sudah saya taruh di repo github sejak beberapa hari yang lalu.
 Tujuan pembuatan slackbuild ini adalah untuk memasyarakatkan ke-Indonesia-an. BlankOn sebagai salah satu dari beberapa distro GNU/Linux yang dikembangkan oleh rakyat Indonesia tentu memiliki kekhasan bila dibandingkan dengan distro lainnya seperti Debian, Ubuntu, dan Fedora.</description>
     </item>
     
@@ -2028,7 +2047,7 @@ Tujuan pembuatan slackbuild ini adalah untuk memasyarakatkan ke-Indonesia-an. Bl
       <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/</guid>
-      <description>Salah satu keistimewaan i3atau i3wmadalah belum adanya notifikasi/pemberitahuan saat baterai lemah perlu di-charge. Status baterai sudah ada di bar/panel yang ditampilkan oleh i3status.
+      <description>Salah satu keistimewaan i3 atau i3wm adalah belum adanya notifikasi/pemberitahuan saat baterai lemah perlu di-charge. Status baterai sudah ada di bar/panel yang ditampilkan oleh i3status.
 Berikut adalah script sederhana untuk menampilkan notifikasi saat baterai sedang lemah dan tidak sedang di-charge. Jika baterai telah mencapai batas (di sini saya gunakan 5%) maka setiap 30 detik akan tampil notifikasi untuk segera dilakukan charging Wayahe dicas bro&amp;hellip;.!. Dan ketika baterai sudah terisi full 100% tetapi masih dalam kondisi dicas akan tampil notifikasi tiap 30 detik bahwa baterai sudah full.</description>
     </item>
     
@@ -2038,8 +2057,8 @@ Berikut adalah script sederhana untuk menampilkan notifikasi saat baterai sedang
       <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2016-12-08-scrolling-xterm/</guid>
-      <description>Di kalangan pengguna GNU/Linux mungkin xtermkurang familiar. Mengingat desktop environment populer seperti GNOME, KDE, Xfce, Matedan LXQttelah mempunyai terminal emulator sendiri. Selain itu, xtermdianggap memiliki keterbatasan. Salah satunya adalah tidak bisa scrolling karena tidak adanya scrollbar.
-xtermmemang lain daripada yang lain. Secara default memang scrollbar itu tidak terlihat, tetapi bisa dimunculkan. Tekan dan tahan Ctrlkemudian tekan dan tahan tombol tengah mouse, pilih Enable Scrollbar. Scrollbar akan tampil di sebelah kiri. Untuk melakukan scrolling bisa menggunakan tombol tengah mouse yang diarahkan ke scrollbar kemudian putar ke atas atau bawah sesuai keinginan.</description>
+      <description>Di kalangan pengguna GNU/Linux mungkin xterm kurang familiar. Mengingat desktop environment populer seperti GNOME, KDE, Xfce, Mate dan LXQt telah mempunyai terminal emulator sendiri. Selain itu, xterm dianggap memiliki keterbatasan. Salah satunya adalah tidak bisa scrolling karena tidak adanya scrollbar.
+xterm memang lain daripada yang lain. Secara default memang scrollbar itu tidak terlihat, tetapi bisa dimunculkan. Tekan dan tahan Ctrl kemudian tekan dan tahan tombol tengah mouse, pilih Enable Scrollbar. Scrollbar akan tampil di sebelah kiri.</description>
     </item>
     
     <item>
@@ -2048,8 +2067,8 @@ xtermmemang lain daripada yang lain. Secara default memang scrollbar itu tidak t
       <pubDate>Wed, 07 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2016-12-07-nmcli-konek-wifi/</guid>
-      <description>Untuk konek internet baik itu melalui modem, LAN, maupun wifi, pengguna GNU/Linux lebih sering menggunakan network manageryang applet-nya biasanya ada di panel sebelah kanan walau sebenarnya ada cara lain seperti ifconfigdan dhcpcd. Kalau dalam mode grafis sih saya rasa tidak masalah, tapi bagaimana kalau sedang berada dalam mode teks yang jelas tidak terpampang applet network manager-nya? nmcliadalah solusinya.
-Lah, buat apa sih repot-repot mode teks? Jadul, ga modern! Benar. Kalau keperluannya hanya download file berukuran besar, dan dalam waktu bersamaan ada kegiatan lain yang tidak bisa ditinggalkan, beralih ke mode teks bisa dijadikan pilihan, mengingat dalam mode teks aplikasi yang dijalankan tidak sebanyak dalam mode grafis sehingga menghemat memory dan daya.</description>
+      <description>Untuk konek internet baik itu melalui modem, LAN, maupun wifi, pengguna GNU/Linux lebih sering menggunakan network manager yang applet-nya biasanya ada di panel sebelah kanan walau sebenarnya ada cara lain seperti ifconfig dan dhcpcd. Kalau dalam mode grafis sih saya rasa tidak masalah, tapi bagaimana kalau sedang berada dalam mode teks yang jelas tidak terpampang applet network manager-nya? nmcli adalah solusinya.
+Lah, buat apa sih repot-repot mode teks? Jadul, ga modern!</description>
     </item>
     
     <item>
@@ -2060,7 +2079,7 @@ Lah, buat apa sih repot-repot mode teks? Jadul, ga modern! Benar. Kalau keperlua
       <guid>https://sasongko.web.id/post/2016-10-29-maleo-slackbuild/</guid>
       <description>Maleo adalah paket khas BlankOn untuk menjalankan aplikasi HTML5. Bagi pengguna Slackware yang berminat silahkan mencoba slackbuild yang saya buat di sini.
 Adapun dependensinya adalah :
- vala libwebp gnome-js-common seed  </description>
+vala libwebp gnome-js-common seed </description>
     </item>
     
     <item>
@@ -2079,10 +2098,10 @@ Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah mem
       <pubDate>Sun, 11 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2016-09-11-mount-qcow2/</guid>
-      <description>Untuk mengaitkan/mount berkas qcow2ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
+      <description>Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
 Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
-modprobe nbd max_part=N max_part=Nisikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2tersebut kalau dijalankan dengan qemuberisi 8 partisi, maka nilai Nadalah 8.
-Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbdyang mengaktifkan koneksi file /mnt/virtual/image/ign11.qcow2ke /dev/nbd0&amp;gt;</description>
+modprobe nbd max_part=N max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.
+Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbd yang mengaktifkan koneksi file /mnt/virtual/image/ign11.</description>
     </item>
     
     <item>
@@ -2091,8 +2110,8 @@ Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbdyang
       <pubDate>Sat, 10 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2016-09-10-nonaktif-delall-slackpkg/</guid>
-      <description>Secara default, slackpkgakan menghapus semua file yang di- download / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di /etc/slackpkg/slackpkg.confpada baris 77
-DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah onmenjadi off.</description>
+      <description>Secara default, slackpkg akan menghapus semua file yang di- download / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di /etc/slackpkg/slackpkg.conf pada baris 77
+DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah on menjadi off.</description>
     </item>
     
     <item>
@@ -2103,7 +2122,7 @@ DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya le
       <guid>https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/</guid>
       <description>Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya
 dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck. Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu /dev/sda1. Dan direkomendasikan untuk menjalankan fsck.
-fsck /dev/sda1  fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.</description>
+fsck /dev/sda1 fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.</description>
     </item>
     
     <item>
@@ -2124,7 +2143,7 @@ Cara manual dengan menyunting berkas /etc/resolv.conf. Mengganti nameserver yang
       
       <guid>https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/</guid>
       <description>Mencoba merasakan kejadulan WindowMaker yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama xfce melalui command xwmconfig, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di WindowMaker. Bahkan tidak bisa ganti DE lainnya termasuk KDE dan Mate.
-Tapi kemudian bisa teratasi dengan menghapus .xinitrcdan folder GNUStepyang ada di homedirektori pengguna.</description>
+Tapi kemudian bisa teratasi dengan menghapus .xinitrc dan folder GNUStep yang ada di home direktori pengguna.</description>
     </item>
     
     <item>
@@ -2144,8 +2163,8 @@ Untuk mengetahui berapa persen brightness yang digunakan saat ini xbacklight. Se
       <pubDate>Tue, 05 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</guid>
-      <description>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Managerbelum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failuredengan detail sebagai berikut
-Unable to connect to libvirt.  internal error: Cannot find suitable emulator for x86_64  Libvirt URI is: qemu:///system  Traceback (most recent call last):  File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 979, in _open_thread  self.</description>
+      <description>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Manager belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failure dengan detail sebagai berikut
+Unable to connect to libvirt. internal error: Cannot find suitable emulator for x86_64 Libvirt URI is: qemu:///system Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 979, in _open_thread self._populate_initial_state() File &amp;#34;/usr/share/virt-manager/virtManager/connection.</description>
     </item>
     
     <item>
@@ -2154,8 +2173,8 @@ Unable to connect to libvirt.  internal error: Cannot find suitable emulator for
       <pubDate>Mon, 04 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</guid>
-      <description>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Managertidak bisa dijalankan.
-$ virt-manager Traceback (most recent call last):  File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt;  from virtinst import util as util  File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt;  from virtinst.distroinstaller import DistroInstaller  File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt;  from . import urlfetcher  File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt;  import requests ImportError: No module named requests Ternyata, ada masalah dependensi.</description>
+      <description>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.
+$ virt-manager Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt; from virtinst import util as util File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt; from virtinst.distroinstaller import DistroInstaller File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt; from . import urlfetcher File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.</description>
     </item>
     
     <item>
@@ -2165,7 +2184,7 @@ $ virt-manager Traceback (most recent call last):  File &amp;#34;/usr/share/virt
       
       <guid>https://sasongko.web.id/post/2016-07-03-upgrade-slackware-142/</guid>
       <description>Sehubungan dengan telah rilisnya Slackware 14.2 maka silahkan melakukan upgrade untuk mendapatkan keamanan yang lebih bagus dan fitur-fitur baru. Saya selama ini melakukan upgrade bertahap demi penghematan kuota internet. Dimulai dengan upgrade ke current karena saat itu versi stable yang baru (14.2) masih dalam proses pengembangan. Upgrade ini menggunakan slackpkg. Dan tentu saja membutuhkan sambungan internet.
- Pilih cermin atau mirror. Dengan menyunting /etc/slackpkg/mirrors, menghilangkan tanda komentar/tanda pagar pada repo yang diinginkan.</description>
+Pilih cermin atau mirror. Dengan menyunting /etc/slackpkg/mirrors, menghilangkan tanda komentar/tanda pagar pada repo yang diinginkan.</description>
     </item>
     
     <item>
@@ -2175,7 +2194,7 @@ $ virt-manager Traceback (most recent call last):  File &amp;#34;/usr/share/virt
       
       <guid>https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/</guid>
       <description>Setelah melakukan [ upgrade sistem ke Slackware 14.2]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya upgrade juga paket yang diinstal dari slackbuilds.org.
- Upgrade sbopkg: sbopkg -u Versi sbopkgterbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik D Hasil unduhan : /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Setelah diunduh, upgrade : upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Karena menghasilkan konfigurasi baru, lakukan slackpkg new-configdan pilih overwrite saja. Kemudian update ke repo 14.2 : sbopkgpilih Utilitieslalu Repository. Kemudian pilih SBo (14.</description>
+Upgrade sbopkg : sbopkg -u Versi sbopkg terbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik D Hasil unduhan : /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Setelah diunduh, upgrade : upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Karena menghasilkan konfigurasi baru, lakukan slackpkg new-config dan pilih overwrite saja. Kemudian update ke repo 14.2 : sbopkg pilih Utilities lalu Repository.</description>
     </item>
     
     <item>
@@ -2185,8 +2204,9 @@ $ virt-manager Traceback (most recent call last):  File &amp;#34;/usr/share/virt
       
       <guid>https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/</guid>
       <description>Bosan dengan tampilan theme yang itu-itu aja? Tenang, theme-nya bisa diganti kok, bahkan diganti agar tampilannya mirip Mac OS X. Sebagai contoh akan kita install theme GlossyP3 yang membuat tampilan menjadi mirip Mac OS X.
-Download terlebih dahulu berkasnya dari sini (pastikan tersambung internet). Berkas dalam bentuk arsip .tar.bz2ekstrak ke direktori /usr/share/themesdengan hak administrator atau root.
-Kemudian ke Settings &amp;mdash;&amp;gt; Appearancepilih GlossyP3Kemudian, meminjam kata Mario Teguh, dan lihat apa yang terjadi.</description>
+Download terlebih dahulu berkasnya dari sini (pastikan tersambung internet). Berkas dalam bentuk arsip .tar.bz2 ekstrak ke direktori /usr/share/themes dengan hak administrator atau root.
+Kemudian ke Settings &amp;mdash;&amp;gt; Appearance pilih GlossyP3
+Kemudian, meminjam kata Mario Teguh, dan lihat apa yang terjadi.</description>
     </item>
     
     <item>
@@ -2195,8 +2215,8 @@ Kemudian ke Settings &amp;mdash;&amp;gt; Appearancepilih GlossyP3Kemudian, memin
       <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/</guid>
-      <description>Menyambung catatan tentang [hilangnya ikon atau NetworkManager]({% post_url 2015-12-26-ikon-networkmanager-hilang %}). Jika nm-applettidak mempan untuk menampilkan applet NetworkManager, maka kita bisa gunakan nmcli.
-nmcliadalah NetworkManager dengan antarmuka teks (command line interface).
+      <description>Menyambung catatan tentang [hilangnya ikon atau NetworkManager]({% post_url 2015-12-26-ikon-networkmanager-hilang %}). Jika nm-applet tidak mempan untuk menampilkan applet NetworkManager, maka kita bisa gunakan nmcli.
+nmcli adalah NetworkManager dengan antarmuka teks (command line interface).
 nmcli Usage: nmcli [OPTIONS] OBJECT { COMMAND | help } OPTIONS -t[erse] terse output -p[retty] pretty output -m[ode] tabular|multiline output mode -c[olors] auto|yes|no whether to use colors in output -f[ields] &amp;lt;field1,field2,...&amp;gt;|all|common specify fields to output -e[scape] yes|no escape columns separators in values -a[sk] ask for missing parameters -s[how-secrets] allow displaying passwords -w[ait] &amp;lt;seconds&amp;gt; set timeout waiting for finishing operations -v[ersion] show program version -h[elp] print this help OBJECT g[eneral] NetworkManager&amp;#39;s general status and operations n[etworking] overall networking control r[adio] NetworkManager radio switches c[onnection] NetworkManager&amp;#39;s connections d[evice] devices managed by NetworkManager a[gent] NetworkManager secret agent or polkit agent m[onitor] monitor NetworkManager changes Untuk melihat sambungan/koneksi yang telah dibuat dengan NetworkManager gunakan nmcli c.</description>
     </item>
     
@@ -2211,9 +2231,9 @@ Kemudian klik gambar kitabnya akan muncul daftar kategori kitabnya.
 Scroll ke bawah pilih فقة شافعي
 Scroll ke bawah dan pilih فتع المعين
 Muncul konfirmasi untuk men- download
-Yesakan melanjutkan dan tunggu sampai selesai
+Yes akan melanjutkan dan tunggu sampai selesai
 Selesai download muncul pemberitahuan
-Klik YesKitab Fathul Muin siap dikaji.</description>
+Klik Yes Kitab Fathul Muin siap dikaji.</description>
     </item>
     
     <item>
@@ -2225,8 +2245,10 @@ Klik YesKitab Fathul Muin siap dikaji.</description>
       <description>Di catatan kemarin sudah saya sampaikan [cara install sbopkg]({% post_url 2016-05-03-install-sbopkg %}), nah sekarang adalah contoh cara menggunakan sbopkg, untuk install Android Tools.
 Jalankan sebagai root
 sbopkg Tersedia pilihan Sync, Changelog, Packages, Updates, Browse, Search, Queue, Utilities, Help.
-Pilih SearchMasukkan kata kuncinya, misalnya androidKemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan OK.
-Keluar beraneka opsi. Alangkah baiknya baca-baca READMEatau Infodulu terutama untuk cek dependensi pada bagian REQUIRESetelah semua dependensi terpenuhi, silahkan lanjut, pilih Processkemudian Installlalu StartProses, download, build dan install dimulai.</description>
+Pilih Search
+Masukkan kata kuncinya, misalnya android
+Kemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan OK.
+Keluar beraneka opsi. Alangkah baiknya baca-baca README atau Info dulu terutama untuk cek dependensi pada bagian REQUIRE</description>
     </item>
     
     <item>
@@ -2269,7 +2291,7 @@ Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slack
       <guid>https://sasongko.web.id/post/2016-04-28-nano-file-browser/</guid>
       <description>Bertahun-tahun pakai linux, baru sadar ternyata nano punya kekuatan tersembunyi. Bisa menampilkan file maupun folder yang hidden secara otomatis.
 Selama ini, untuk mengetahui apa saja yang hidden dengan mengetikkan di terminal
-ls -a Atau dengan menekan ^Hatau Ctrl Hdi thunar, atau Alt . di dolphin.
+ls -a Atau dengan menekan ^H atau Ctrl H di thunar, atau Alt . di dolphin.
 Nah, nano secara default akan menampilkan hidden file saat digunakan untuk mencari file yang akan dibuka/disisipkan.
 Perhatikan bagian bawahnya, ada beberapa opsi yang bisa dilakukan.</description>
     </item>
@@ -2281,7 +2303,7 @@ Perhatikan bagian bawahnya, ada beberapa opsi yang bisa dilakukan.</description>
       
       <guid>https://sasongko.web.id/post/2016-02-26-mouse-stuck/</guid>
       <description>Setelah upgrade current ternyata ada masalah dengan mouse. Mouse mengalami stuck, ga ada respons saat drag, drop, bahkan ga bisa klik baik klik kiri maupun kanan. Dari grup di telegram dapat informasi dari Pak Willy hal serupa juga dialami oleh beberapa slacker yang lainnya. Alhamdulillah masalah ini bisa solved dengan mudahnya di Slackware64 saya.
-Dengan akses root copas /lib/modprobe.d/psmouse.confke /etc/modprobe.d. Kemudian uncomment baris terakhir.
+Dengan akses root copas /lib/modprobe.d/psmouse.conf ke /etc/modprobe.d. Kemudian uncomment baris terakhir.
 ############################################################################## # Do not edit this file; instead, copy it to /etc/modprobe.</description>
     </item>
     
@@ -2461,7 +2483,7 @@ pip install gdrv </description>
       
       <guid>https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/</guid>
       <description>GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:
- python-protobuf (&amp;gt;=2.4) python-requests (&amp;gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&amp;gt;=2.8) python 2.5+ java (opsional)  Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
+python-protobuf (&amp;gt;=2.4) python-requests (&amp;gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&amp;gt;=2.8) python 2.5+ java (opsional) Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
 easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).</description>
     </item>
     
@@ -2524,7 +2546,7 @@ Skema partisi yang digunakan adalah GPT, bukan MBR, jadi pemartisian menggunakan
       <guid>https://sasongko.web.id/post/2015-06-28-konek-internet-menggunakan-pppsetup/</guid>
       <description>Di catatan yang lalu sudah pernah dibahas cara konek internet di Slackware dengan [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}). Sekarang masih tentang cara konek internet melalui modem di Slackware, hanya saja caranya berbeda. Kali ini menggunakan pppsetup yang secara default sudah dimiliki Slackware.
 Perangkat yang kami gunakan:
- laptop Asus X453MA modem USB Huawei E1550 simcard dengan internet service provider 3.  Cara-cara berikut ini dijalankan oleh root.
+laptop Asus X453MA modem USB Huawei E1550 simcard dengan internet service provider 3. Cara-cara berikut ini dijalankan oleh root.
 pppsetup Tekan enter.
 Isi phone number dengan</description>
     </item>
@@ -2549,7 +2571,7 @@ $ sudo apt-get install unrar Sedangkan untuk Slackware install slackbuildnya saj
       <guid>https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/</guid>
       <description>The Sleuth Kit atau disingkat TSK adalah tools digital forensik yang bersifat open source, multiplatform dan text-mode (command line interface). TSK bisa digunakan untuk melakukan analisis pada barang bukti, atau lebih tepatnya citra disk (raw image). Misalnya untuk mengetahui berkas apa saja yang ada di dalam hardisk dan adakah berkas yang dihapus dari hardisk itu.
 Dependensi:
- autoconf, automake, libtool C/C++ compiler (gcc, gcc++) [JDK (opsional)]({% post_url 2015-06-07-install-jdk-slackware %})  Install cukup mudah, kita akan install langsung TSK dari source code yang ada di github</description>
+autoconf, automake, libtool C/C++ compiler (gcc, gcc++) [JDK (opsional)]({% post_url 2015-06-07-install-jdk-slackware %}) Install cukup mudah, kita akan install langsung TSK dari source code yang ada di github</description>
     </item>
     
     <item>
@@ -2559,8 +2581,8 @@ Dependensi:
       
       <guid>https://sasongko.web.id/post/2015-06-17-install-xfburn-slackware/</guid>
       <description>Xfburn adalah aplikasi burning CD/DVD/BD dari XFCE. Versi terbaru saat ini 0.5.4, dengan dependensi:
- Exo-0.10.6 libxfce4util-4.12.1 libisoburn-1.4.0  Tapi untuk memudahkan instalasi, kita gunakan saja yang versi 0.5.2 yang ada slackbuildnya, dependensinya
- [libburn]({% post_url 2015-06-16-install-libburn-slackware %}) [libisofs]({% post_url 2015-06-16-install-libisofs-slackware %})  Untuk menginstall pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas.
+Exo-0.10.6 libxfce4util-4.12.1 libisoburn-1.4.0 Tapi untuk memudahkan instalasi, kita gunakan saja yang versi 0.5.2 yang ada slackbuildnya, dependensinya
+[libburn]({% post_url 2015-06-16-install-libburn-slackware %}) [libisofs]({% post_url 2015-06-16-install-libisofs-slackware %}) Untuk menginstall pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas.
 $ wget http://slackbuilds.org/slackbuilds/14.1/system/xfburn.tar.gz Ekstrak kemudian pindah direktori ke folder hasil ekstrak
 $ tar xzf xfburn.tar.gz ; cd xfburn Unduh kode sumber xfburn</description>
     </item>
@@ -2708,8 +2730,8 @@ Bagaimana ekstrak file zip? $ unzip namafile.zip </description>
       
       <guid>https://sasongko.web.id/post/2015-04-28-ekstrak-file-tar-gz/</guid>
       <description>Kemarin di grup facebook Ubuntu Indonesia ada yang bertanya yang intinya
- Bagaimana cara install file .tar.gz?
- File dengan ekstensi tar.gz adalah file kompresi/arsip. &amp;lsquo;Saudara&amp;rsquo; dari tar.gz yang juga sering dijumpai adalah [zip]({% post_url 2015-05-13-ekstrak-file-zip %}). Atau, bagi yang sebelum memakai linux sudah sangat familiar dengan Windows, tar.gz ini mirip dengan rar.
+Bagaimana cara install file .tar.gz?
+File dengan ekstensi tar.gz adalah file kompresi/arsip. &amp;lsquo;Saudara&amp;rsquo; dari tar.gz yang juga sering dijumpai adalah [zip]({% post_url 2015-05-13-ekstrak-file-zip %}). Atau, bagi yang sebelum memakai linux sudah sangat familiar dengan Windows, tar.gz ini mirip dengan rar.
 Nah, file kompresi ini bukanlah file installer, tetapi bisa jadi mengandung file installer. File installer di linux ada berbagai macam ekstensinya, contoh deb, rpm, tgz, dan sh.</description>
     </item>
     
@@ -2741,14 +2763,17 @@ Nah, file kompresi ini bukanlah file installer, tetapi bisa jadi mengandung file
       <guid>https://sasongko.web.id/post/2015-04-01-install-wvdial-slackware/</guid>
       <description>Agar bisa internetan di Slackware dengan modem tentunya kita harus install dulu paket atau aplikasinya. Aplikasi yang penulis sarankan adalah WvDial. WvDial ini berbasis text/CLI, bisa untuk GSM maupun CDMA. Slackware yang digunakan Slackware 14.1.
 Paket yang dibutuhkan:
-  WvStreams
-  WvDial
-  Kita akan unduh dari sini
+WvStreams
+WvDial
+Kita akan unduh dari sini
 WvStreams :
-  Slackbuild : http://slackbuilds.org/slackbuilds/14.1/libraries/wvstreams.tar.gz
-  Source code : http://wvstreams.googlecode.com/files/wvstreams-4.6.1.tar.gz
-  WvDial :
-  Slackbuild : http://slackbuilds.</description>
+Slackbuild : http://slackbuilds.org/slackbuilds/14.1/libraries/wvstreams.tar.gz
+Source code : http://wvstreams.googlecode.com/files/wvstreams-4.6.1.tar.gz
+WvDial :
+Slackbuild : http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tar.gz
+Source code : http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tar.gz
+Kemudian masuk ke /usr/local/src
+# cd /usr/local/src Kemudian salin slackbuild wvstream dan wvdial ke direktori ini (/usr/local/src).</description>
     </item>
     
     <item>

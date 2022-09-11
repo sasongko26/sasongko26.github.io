@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.99.1" />
+  <meta name="generator" content="Hugo 0.102.3" />
 
   <title>perl &middot; Catatan Sasongko</title>
 
@@ -260,9 +260,9 @@
   </header>
 
   <p>
-  Penyeleksian kondisi di perl dapat menggunakan syntax if&hellip;elsedengan format
-if ( kondisi ) { 	.... 	} else { 	.... 	} Contoh
-#!/usr/bin/perl  use strict; use warnings; use feature &#39;say&#39;;  my $username = &#34;user&#34;; if ( $username eq &#34;nama&#34; ) {  say &#34;Oke&#34;;  } else {  say &#34;Ulangi lagi....&#34;;  } 
+  Penyeleksian kondisi di perl dapat menggunakan syntax if&hellip;else dengan format
+if ( kondisi ) { .... } else { .... } Contoh
+#!/usr/bin/perl use strict; use warnings; use feature &#39;say&#39;; my $username = &#34;user&#34;; if ( $username eq &#34;nama&#34; ) { say &#34;Oke&#34;; } else { say &#34;Ulangi lagi....&#34;; } 
   </p>
 
   
@@ -352,7 +352,7 @@ Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &lt; $b	| $a lebih kec
 
   <p>
   Pada perl, variabel scalar yang berupa string dapat dilakukan penggabungan dan pengulangan. Contoh, terdapat 3 variabel sebagai berikut: $sapa = &ldquo;Hai&hellip;. &quot; $distro = &ldquo;Slackware&rdquo; $penilaian = &ldquo;distro terbaik.&rdquo; Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan &ldquo;.&rdquo;, sedangkan pengulangan dengan &ldquo;x&rdquo;.
-#!/usr/bin/perl  use strict; use warnings; use feature &#34;say&#34;;  my $sapa = &#34;Hai.... &#34;; my $distro = &#34;Slackware &#34;; my $penilaian = &#34;distro terbaik.
+#!/usr/bin/perl use strict; use warnings; use feature &#34;say&#34;; my $sapa = &#34;Hai.... &#34;; my $distro = &#34;Slackware &#34;; my $penilaian = &#34;distro terbaik.
   </p>
 
   
@@ -448,7 +448,7 @@ a += 4; Sehingga nilai a kemudian berubah dari 10 menjadi 14.
   <p>
   Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.
 Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.
-#!/usr/bin/perl  use strict; use warnings; use feature &#39;say&#39;;  my $a = 2; my $b = 25;  say(&#34;Angka pertama (a) adalah $a&#34;); say(&#34;Angka kedua (b) adalah $b&#34;);  # penjumlahan my $c = $a + $b; say(&#34;a+b = $c&#34;);  # pengurangan my $d = $b - $a; say(&#34;b-a = $d&#34;);  # perkalian my $e = $a * $b; say(&#34;a*b = $e&#34;);  # pembagian my $f = $a / $b; my $g = $b / $a; say(&#34;a/b = $f&#34;); say(&#34;b/a = $g&#34;);  # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(&#34;a^b = $h&#34;); say(&#34;b^a = $i&#34;);  # autoincrement # tanda + di depan say(&#34;Nilai a sebelum autoincrement = $a&#34;); my $j = ++$a; say(&#34;++a = $j&#34;); say(&#34;Nilai a sesudah autoincrement = $a&#34;);  # tanda + di belakang say(&#34;Nilai b sebelum autoincrement $b&#34;); my $k = $b++; say(&#34;$b++ = $k&#34;); say(&#34;Nilai b setelah autoincrement $b&#34;);  # autodecrement # tanda - di depan say(&#34;c = a+b.
+#!/usr/bin/perl use strict; use warnings; use feature &#39;say&#39;; my $a = 2; my $b = 25; say(&#34;Angka pertama (a) adalah $a&#34;); say(&#34;Angka kedua (b) adalah $b&#34;); # penjumlahan my $c = $a + $b; say(&#34;a+b = $c&#34;); # pengurangan my $d = $b - $a; say(&#34;b-a = $d&#34;); # perkalian my $e = $a * $b; say(&#34;a*b = $e&#34;); # pembagian my $f = $a / $b; my $g = $b / $a; say(&#34;a/b = $f&#34;); say(&#34;b/a = $g&#34;); # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(&#34;a^b = $h&#34;); say(&#34;b^a = $i&#34;); # autoincrement # tanda + di depan say(&#34;Nilai a sebelum autoincrement = $a&#34;); my $j = ++$a; say(&#34;++a = $j&#34;); say(&#34;Nilai a sesudah autoincrement = $a&#34;); # tanda + di belakang say(&#34;Nilai b sebelum autoincrement $b&#34;); my $k = $b++; say(&#34;$b++ = $k&#34;); say(&#34;Nilai b setelah autoincrement $b&#34;); # autodecrement # tanda - di depan say(&#34;c = a+b.
   </p>
 
   
@@ -539,7 +539,7 @@ my @biodata = ($nama, $jenis_kelamin, $distro, $tahun);
 
   <p>
   Untuk mengetahui semua modul perl yang terinstall bisa menggunakan instmodsh.
-$ instmodsh Available commands are:  l - List all installed modules  m &lt;module&gt; - Select a module  q - Quit the program cmd? Kemudian pilih l.
+$ instmodsh Available commands are: l - List all installed modules m &lt;module&gt; - Select a module q - Quit the program cmd? Kemudian pilih l.
   </p>
 
   
@@ -628,7 +628,7 @@ print(scalar(@buah));
   <p>
   Jenis variabel ketiga yang dimiliki perl adalah hash. Hash ini merupakan data berpasangan. Penulisan dengan menyertakan tanda %.
 Contoh: akan dideklarasikan data tentang saya, yaitu nama dan distro yang saya gunakan. Nama saya Sasongko, distro Slackware.
-my %data = ( 	nama =&gt; &#34;Sasongko&#34;, 	distro =&gt; &#34;Slackware&#34;, 	); 
+my %data = ( nama =&gt; &#34;Sasongko&#34;, distro =&gt; &#34;Slackware&#34;, ); 
   </p>
 
   
@@ -992,10 +992,11 @@ rm -r /usr/local/{lib{,64},share}/perl5
   </header>
 
   <p>
-  Padremerupakan integrated development environment (IDE) untuk bahasa pemrograman perl.
-Padreini belum dimasukkan ke dalam paket resmi Slackware maupun SBo. Sehingga ada 2 kemungkinan cara menginstallnya.
-  Build sendiri dari source
-  Install dari cpan  Cara yang saya gunakan adalah cara kedua, yaitu
+  Padre merupakan integrated development environment (IDE) untuk bahasa pemrograman perl.
+Padre ini belum dimasukkan ke dalam paket resmi Slackware maupun SBo. Sehingga ada 2 kemungkinan cara menginstallnya.
+Build sendiri dari source
+Install dari cpan
+Cara yang saya gunakan adalah cara kedua, yaitu
 $ cpan -i Padre 
   </p>
 

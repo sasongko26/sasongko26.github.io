@@ -6,7 +6,18 @@
     <description>Recent content in multimedia on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/multimedia/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/multimedia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Sound Open Firmware</title>
+      <link>https://sasongko.web.id/post/2022-08-13-install-sof/</link>
+      <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2022-08-13-install-sof/</guid>
+      <description>Langsung saja
+cd /opt git clone https://github.com/thesofproject/sof-bin.git cd sof-bin Masuk ke direktori rilis terbaru, contoh kali ini v2.2
+cd v2.2.x rsync -a sof-v2.2/ /lib/firmware/intel/sof/ rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/ </description>
+    </item>
+    
     <item>
       <title>Pipewire di WindowMaker</title>
       <link>https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/</link>
@@ -28,7 +39,7 @@ Hati ini baru sadar bahwa sound-nya telah diserahterimakan dari pulseaudio kepad
 Pertama, edit /etc/pulse/client.conf. Ubah autospawn dari yes menjadi no.
 Hapus /etc/xdg/autostart/pulseaudio.desktop atau rename menjadi file yang &amp;ldquo;tidak penting&amp;rdquo;.
 Rename file berikut menjadi .desktop saja
- /etc/xdg/autostart/pipewire-media-session.desktop.sample /etc/xdg/autostart/pipewire-pulse.desktop.sample /etc/xdg/autostart/pipewire.desktop  </description>
+/etc/xdg/autostart/pipewire-media-session.desktop.sample /etc/xdg/autostart/pipewire-pulse.desktop.sample /etc/xdg/autostart/pipewire.desktop </description>
     </item>
     
     <item>
@@ -47,7 +58,7 @@ Rename file berikut menjadi .desktop saja
       
       <guid>https://sasongko.web.id/post/2021-05-21-menghapus-history-qtav-player/</guid>
       <description>Untuk menghapus history atau riwayat video yang ditonton dengan QtAV Player ada 2 cara:
- melalui QtAV Player dengan klik History kemudian Clear menghapus file historynya  $ rm ~/.local/share/Player/*.qds Command tersebut juga menghapus riwayat playlist</description>
+melalui QtAV Player dengan klik History kemudian Clear menghapus file historynya $ rm ~/.local/share/Player/*.qds Command tersebut juga menghapus riwayat playlist</description>
     </item>
     
     <item>
@@ -66,7 +77,7 @@ Rename file berikut menjadi .desktop saja
       
       <guid>https://sasongko.web.id/post/2020-05-30-menggabungkan-video/</guid>
       <description>Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu
- piknik-1.mkv piknik-2.mkv piknik-3.mkv piknik-4.mkv  Keempat file tersebut berada dalam folder yang sama. Kemudian mereka akan digabungkan menjadi piknik.mkv. Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.
+piknik-1.mkv piknik-2.mkv piknik-3.mkv piknik-4.mkv Keempat file tersebut berada dalam folder yang sama. Kemudian mereka akan digabungkan menjadi piknik.mkv. Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.
 $ vim list-piknik file &amp;#39;piknik-1.</description>
     </item>
     
@@ -78,7 +89,7 @@ $ vim list-piknik file &amp;#39;piknik-1.</description>
       <guid>https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/</guid>
       <description>Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.
 Untuk mengetahui intensitas suara video intro.mkv
-$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &amp;#39;intro.mkv&amp;#39;:  Metadata:  COMPATIBLE_BRANDS: isommp42  COM.ANDROID.VERSION: 9  MAJOR_BRAND : mp42  MINOR_VERSION : 0  ENCODER : Lavf58.</description>
+$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &amp;#39;intro.mkv&amp;#39;: Metadata: COMPATIBLE_BRANDS: isommp42 COM.ANDROID.VERSION: 9 MAJOR_BRAND : mp42 MINOR_VERSION : 0 ENCODER : Lavf58.29.100 Duration: 00:00:14.90, start: 0.000000, bitrate: 5559 kb/s Stream #0:0(eng): Video: mpeg4 (Simple Profile), yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 1k tbn, 30 tbc (default) Metadata: HANDLER_NAME : VideoHandle ENCODER : Lavc58.</description>
     </item>
     
     <item>
@@ -108,8 +119,8 @@ ffmpeg -i VID20200509135621.mp4 -vf &amp;#34;scale=1920:1080, setdar=16:9, setsa
       <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/</guid>
-      <description>Secara default, output ffmpegakan menampilkan built configuration yang digunakan.
-$ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers  built with gcc 9.2.0 (GCC)  configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-4.2.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack  libavutil 56. 31.100 / 56. 31.100  libavcodec 58.</description>
+      <description>Secara default, output ffmpeg akan menampilkan built configuration yang digunakan.
+$ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers built with gcc 9.2.0 (GCC) configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-4.2.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack libavutil 56. 31.100 / 56. 31.100 libavcodec 58. 54.</description>
     </item>
     
     <item>
