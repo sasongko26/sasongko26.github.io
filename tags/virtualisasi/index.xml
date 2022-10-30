@@ -6,7 +6,18 @@
     <description>Recent content in virtualisasi on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/virtualisasi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/virtualisasi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Virtualbox cannot register existing type NMAgentManagerError</title>
+      <link>https://sasongko.web.id/post/2022-10-30-virtualbox-updater-segfault/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2022-10-30-virtualbox-updater-segfault/</guid>
+      <description>Setelah install virtualbox menggunakan binary .run, ketika dijalankan via terminal mengalami sgfault:
+bash-5.2$ virtualbox (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot register existing type &amp;#39;NMAgentManagerError&amp;#39; (process:7040): GLib-CRITICAL **: 00:53:14.710: g_once_init_leave: assertion &amp;#39;result != 0&amp;#39; failed (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot retrieve class for invalid (unclassed) type &amp;#39;invalid&amp;#39; Segmentation fault Solusinya:
+bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never </description>
+    </item>
+    
     <item>
       <title>Menghapus docker image</title>
       <link>https://sasongko.web.id/post/2021-11-14-hapus-docker-image/</link>
