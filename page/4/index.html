@@ -228,13 +228,13 @@
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-12-16-mitigasi-log4shell/">Deteksi log4shell</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/">Konfigurasi mirror slackware</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>16 Dec 2021</time>
+    <time>01 Mar 2022</time>
   </div>
 
   
@@ -249,7 +249,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackpkg">slackpkg</a>
     
   </div>
   
@@ -261,14 +261,15 @@
   </header>
 
   <p>
-  Log4shell menjadi topik yang hangat dibicarakan sepekan ini. Bugs JNDI lookup pada log4j membuat komputer atau pc (terutama server) semakin mudah diambil alih tanpa ijin. Syukur alhamdulillah sudah dirilis versi terbaru untuk menangkalnya, yaitu versi 2.16.0.
-Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagian dari default packages.
-# slackpkg file-search log4j Looking for log4j in package list. Please wait... DONE No packages contains &#34;log4j&#34; file. Tidak ditemukan.
+  Slackpkg merupakan salah satu official slackware package manager. Fitur yang dimilikinya antara lain
+Cek apakah ada update Baca changelog Install, upgrade, reinstall, remove, blacklist packages Sebelum menggunakannya, pilih dahulu mirror yang akan digunakan
+# vi /etc/slackpkg/mirrors Pada file tersebut sudah tersedia list mirror yang bisa digunakan. Apakah menggunakan current atau stable (saat ini 15.0). Pilih mirrornya dengan cara uncomment baris alamat mirrornya. Contoh
+https://mirrors.slackware.com/slackware/slackware64-15.0/ untuk menggunakan mirror terdekat versi slackware 15.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2021-12-16-mitigasi-log4shell/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -276,13 +277,13 @@ Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagi
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-12-14-show-line-number-kate/">Menambahkan line number kate</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2022-02-23-disable-fortune-postlogin/">Disable fortune postlogin</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Dec 2021</time>
+    <time>23 Feb 2022</time>
   </div>
 
   
@@ -297,7 +298,7 @@ Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagi
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text-editor</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/game">game</a>
     
   </div>
   
@@ -309,7 +310,8 @@ Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagi
   </header>
 
   <p>
-  Kate adalah text editor bawaan KDE Plasma yang powerfull. Namun, secara default tidak menampilkan line number. Cara untuk menampilkan line number pada kate adalah klik menu Settings pada Kate, kemudian klik Configure Kate. Pada bagian Appearance, klik tab Borders, centang Show line numbers. KLik Apply atau Ok untuk menerapkan perubahan pengaturan.
+  Secara default, setelah berhasil login di tty muncul pesan-pesan berupa kata-kata mutiara dari para tokoh. Fortune ini menjadi sepaket dengan bsd-games. Jadi kalau ingin di-disable bisa uninstall bsd-games. Kalau masih butuh bsd-games tinggal jadikan file /etc/profile.d/bsd-games-login-fortune.*sh nonexecutable
+chmod -x /etc/profile.d/bsd-games-login-fortune.*sh 
   </p>
 
   
@@ -318,13 +320,13 @@ Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagi
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-12-10-install-scanner-linux/">Menambahkan scanner</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2023-02-22-aktivasi-runlevel4/">Mengaktifkan runlevel 4</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Dec 2021</time>
+    <time>22 Feb 2022</time>
   </div>
 
   
@@ -339,7 +341,7 @@ Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagi
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/init">init</a>
     
   </div>
   
@@ -351,336 +353,102 @@ Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagi
   </header>
 
   <p>
-  Instalasi scanner di linux terutama slackware sangat mudah. Biasanya scanner terdeteksi secara otomatis dan langsung bisa dijalankan. Pengaturan hanya dibutuhkan jika scanner tidak terdeteksi.
-Catatan kali ini tentang menambahkan scanner yang tidak terdeteksi secara otomatis. Scanner seperangkat dengan printer, yaitu Epson L3110. Printer terdeteksi otomatis dan langsun bisa digunakan, tetapi scanner-nya belum. Software untuk scan seperti xsane atau skanlite salah mendeteksi. Keduanya mendeteksi scanner yang digunakan adalah webcam.
-Scanner terhubung melalui usb, sehingga perlu dicek terlebih dahulu apakah usbnya terdeteksi.
+  Runlevel 4 bisa dikatakan sebagai runlevel multiuser dengan graphical user interface saat loginnya. Secara default, Runlevel slackware adalah 3. Untuk mengubahnya ke 4 edit file /etc/inittab, ganti angka 3 pada baris berikut dengan angka 4
+id:4:initdefault: 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2022-02-19-menggunakan-pipewire/">Menggunakan pipewire</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>19 Feb 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Salah satu fitur baru yang dihadirkan Slackware 15.0 adalah masuknya pipewire sebagai alternatif dari pulseaudio. Bagaimana penggunaanya? Silakan simak catatan berikut ini.
+Pertama, edit /etc/pulse/client.conf. Ubah autospawn dari yes menjadi no.
+Hapus /etc/xdg/autostart/pulseaudio.desktop atau rename menjadi file yang &ldquo;tidak penting&rdquo;.
+Rename file berikut menjadi .desktop saja
+/etc/xdg/autostart/pipewire-media-session.desktop.sample /etc/xdg/autostart/pipewire-pulse.desktop.sample /etc/xdg/autostart/pipewire.desktop 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/">Operator perbandingan perl</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>06 Jan 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Operator perbandingan digunakan untuk membandingkan nilai. Data/nilai yang dibandingkan dapat berupa bilangan ataupun string. Namun ada perbedaan notasi.
+Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &lt; $b	| $a lebih kecil dari $b	| |$a &gt; $b	| $a lebih besar dari $b	| |$a &lt;= $b	| $a lebih kecil atau sama dengan $b	| |$a =&gt; $b	| $a lebih besar atau sama dengan $b	| |$a == $b	| $a sama dengan $b	| |$a !
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2021-12-10-install-scanner-linux/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-30-mengetahui-banyaknya-elemen-array-perl/">Mengetahui banyaknya elemen array perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Array adalah salah satu tipe data pada bahasa pemrograman perl. Tipe data ini berisi data majemuk. Penulisan array menggunakan notasi @.
-Contoh:
-my @buah = (&#34;pepaya&#34;, &#34;manga&#34;, &#34;pisang&#34;, &#34;jambu&#34;, &#34;durian&#34;, &#34;apel&#34;); Untuk mengetahui berapa banyaknya elemen dari array, bisa menggunakan scalar().
-print(scalar(@buah)); 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/">Variabel hash perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Jenis variabel ketiga yang dimiliki perl adalah hash. Hash ini merupakan data berpasangan. Penulisan dengan menyertakan tanda %.
-Contoh: akan dideklarasikan data tentang saya, yaitu nama dan distro yang saya gunakan. Nama saya Sasongko, distro Slackware.
-my %data = ( nama =&gt; &#34;Sasongko&#34;, distro =&gt; &#34;Slackware&#34;, ); 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-28-variabel-array-perl/">Variabel array perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>28 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Melanjutkan catatan sebelumnya tentang variabel yang dimiliki bahasa pemrograman perl. Sebelumnya membahas tentang variabel scalar. Catatan kali ini tentang jenis variabel yang kedua yaitu array.
-Berbeda dengan scalar yang bernilai tunggal, array bernilai majemuk. Array merupakan himpunan. Element array zero indexed, artinya, elemen pertama berindeks 0.
-Pendeklarasian array diserta simbol @.
-Contoh: himpunan nama-nama buah dan daftar nilai
-my @buah = (&#34;pisang&#34;, &#34;mangga&#34;, &#34;jeruk&#34;, &#34;pepaya&#34;); my @daftar_nilai = (80, 100, 76.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-11-28-variabel-array-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-27-variabel-scalar-perl/">Variabel scalar perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>27 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Perl memiliki 3 jenis variabel, yaitu scalar, array dan hash. Scalar adalah variabel dengan nilai tunggal. Penulisan scalar diawali dengan tanda $.Pendeklarasian variabel dengan my. Nilai dari scalar bisa berupa text/string ataupun angka. Contoh: akan dideklarasikan variabel buah. buah ini bernilai &ldquo;mangga&rdquo;.
-my $buah = &#34;mangga&#34;; 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-23-ubah-timestamp/">Mengubah timestamp akses dan modifikasi</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk mengubah timestamp akses dan modifikasi pada file
-$ touch -t YYYYMMDDHHmm.ss dokumen di mana dokumen adalah filename, waktu yang diinginkan dalam format YYYYMMDDHHmm.ss
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-16-mount-android-storage-linux/">Mount smartphone ke linux</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>16 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Transfer data antara smartphone android dan komputer/pc/laptop linux (dalam contoh ini Slackware) dapat dilakukan dengan mudah. Kemudahan tersebut bahkan dapat dilakukan dengan mode text tanpa grafis.
-Misalkan akan menghubungkan storage yang ada di android smartphone dengan linux. Storage dimount ke direktori mtp. Direktori ini bebas, silahkan pilih sendiri sesuai kebutuhan/keinginan.
-$ jmtpfs mtp Selanjutnya dapat dilakukan transfer file seperti biasa. Jika sudah selesai unmount
-$ fusermount mtp 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-14-hapus-docker-image/">Menghapus docker image</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Docker image yang suah tidak digunakan sebaiknya dihapus saja, agar storage lebih longgar. Pastikan docker daemon aktif
-dockerd List docker imagenya
-$ docker images REPOSITORY TAG IMAGE ID CREATED SIZE qgis/qgis release-3_16 ee28ddd8c37a 4 days ago 7.43GB qgis/qgis &lt;none&gt; c84657a1e2f6 3 weeks ago 7.43GB Hapus
-$ docker rmi -f ee28ddd8c37a c84657a1e2f6 Ingin menghapus semua container, image, dll
-$ docker system prune -a WARNING! This will remove: - all stopped containers - all networks not used by at least one container - all dangling images - all dangling build cache Are you sure you want to continue?
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-11-14-hapus-docker-image/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -694,7 +462,7 @@ $ docker system prune -a WARNING! This will remove: - all stopped containers - a
   
   <a href="https://sasongko.web.id/page/3/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;4 / 30&nbsp;</span>
+  <span>&nbsp;4 / 59&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/5/"><i class="fa fa-chevron-right"></i></a>
   

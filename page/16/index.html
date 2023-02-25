@@ -228,13 +228,13 @@
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2019-11-30-mengetahui-x11-atau-wayland/">Mengetahui lingkungan aktif X11 atau wayland</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-03-16-load-csv-python/">Load dataset csv dengan python</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Nov 2019</time>
+    <time>16 Mar 2021</time>
   </div>
 
   
@@ -249,7 +249,9 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
     
   </div>
   
@@ -261,8 +263,8 @@
   </header>
 
   <p>
-  Untuk mengetahui sedang aktif di dalam environment X11 atau wayland
-$ echo $XDG_SESSION_TYPE 
+  Misalkan ada dataset dalam format csv. Data tersebut dapat di-load atau diimpor dengan python dengan library pandas. Berikut script untuk load file data.csv.
+import pandas as pd data = pd.read_csv(&#34;data.csv&#34;) 
   </p>
 
   
@@ -271,13 +273,13 @@ $ echo $XDG_SESSION_TYPE
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2019-08-03-restart-android-via-adb/">Restart android via adb</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-03-15-library-python-statistika/">Library python untuk statistika</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>03 Aug 2019</time>
+    <time>15 Mar 2021</time>
   </div>
 
   
@@ -292,7 +294,9 @@ $ echo $XDG_SESSION_TYPE
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
     
   </div>
   
@@ -304,14 +308,102 @@ $ echo $XDG_SESSION_TYPE
   </header>
 
   <p>
-  Catatan kali ini masih seputar troubleshoot HP android dengan komputer terutama Slackware.
-Tadi malam, HP yang OS android touchscreen-nya tidak ada respon. Di semua bagian layar. Tapi tombol power dan volume masih berfungsi. Begitu juga dengan konektivitas internet maupun telepon. Mau mencoba di-restart, tombol power normal tapi untuk memilih shutdown atau reboot tidak bisa karena tochscreen-nya tidak ada respon. Lepas baterai? Tidak bisa karena baterainya tanam.
-Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersedia di SBo).
+  Beberapa library atau module python yang sering digunakan untuk statistika adalah
+numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis vektor atau matriks pandas: digunakan untuk melakukan pengolahan data tabular matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat digunakan sebagai alat bantu dalam analisa data statsmodels: digunakan untuk melakukan uji hipotesa, eksplorasi data maupun pemodelan statistika scipy: digunakan untuk melakukan uji statistika, juga dapat digunakan untuk melakukan pemodelan statistika 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-03-13-menggabungkan-file-pdf/">Menggabungkan file pdf</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Mar 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Misalkan mempunyai 2 file ebook yaitu ebook1.pdf dan ebook2.pdf. Kedua file ini akan digabung menjadi ebook.pdf. Maka untuk menggabungkannya
+$ pdfunite ebook1.pdf ebook2.pdf ebook.pdf 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/">Menambahkan tanggal toolbar blackbox</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Mar 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Masih adakah pengguna linux di Indonesia yang menggunakan blackbox sebagai window manager sehari-hari? Masih, minimal seorang yaitu yang menulis catatan ini. Hehehehe&hellip;.
+Secara default, toolbar blackbox tidak menyertakan tanggal walau menampilkan jam. Jam ditampilkan dalam format 12 jam AM/PM. Untuk menambahkannya, dan menggunakan jam format 24 jam sebagaimana lazimnya di Indonesia, diatur sebagai berikut pada ~/.blackboxrc
+session.screen0.strftimeFormat : %d/%m/%Y %H:%M Untuk menerapkan perubahan tersebut secara langsung, restart blackbox (tidak perlu restart komputer!
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2019-08-03-restart-android-via-adb/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -319,13 +411,13 @@ Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersed
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2019-06-09-backup-android/">Back Up Data HP Android</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/">Mengubah user agent firefox</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Jun 2019</time>
+    <time>10 Mar 2021</time>
   </div>
 
   
@@ -340,7 +432,7 @@ Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersed
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
     
   </div>
   
@@ -352,340 +444,16 @@ Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersed
   </header>
 
   <p>
-  Sebelum berganti ponsel atau HP sangat disarankan untuk mem-back up data-data penting, seperti dokumen, foto, video, maupun chat WhatsApp. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi Slackware.
-Persiapan Slackware Pastikan bisa menjalankan adb yang merupakan bagian dari android tools. Kalau belum bisa install dari SBo
-Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer pakai adb bisa lebih cepat
+  Pengertian user agent User agent (UA) adalah identitas web browser yang dikirimkan ke website yang diakses. Identitas tersebut antara lain nama web browser dan versinya.
+Default UA firefox Firefox yang saat ini digunakan adalah versi 78.6.1esr. Versi ini memiliki UA Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Mengetahui UA firefox Pada address bar ketik about:support. Perhatikan bagian User Agent.
+Cara mengganti UA Untuk mengubahnya, contoh kali ini akan diubah dengan UA Chrome pada Mac.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2019-06-09-backup-android/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/">Reverse Dependency sbopkg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>20 Apr 2019</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sbopkg">sbopkg</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackbuild">slackbuild</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default sbopkg tidak menyediakan fitur reverse dependency. Adapun untuk butuh dependency-nya apa saja bisa menggunakan sqg. Bagaimana tahu reverse dependency-nya?
-Ini cara sederhana yang saya gunakan
-grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan cara tersebut bisa diketahui suatu paket/package itu menjadi dependensi dari paket apa. Tapi, salah 1 dari output tersebut tidak lain adalah paket itu sendiri. Dan, package yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah packages tersebut terinstall atau tidak.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2019-04-19-chromium-disable-unlock-keyring/">Chromium Disable Unlock Keyring</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Apr 2019</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Mungkin ada yang merasa bosan setiap membuka Chromium muncul kotak dialog Unlock Keyring.
-Itu bisa diatasi, agar tidak muncul lagi. Aktifkan CHROMIUM_FLAGS pada /etc/chromium/00-default.conf.
-CHROMIUM_FLAGS=&#34;--password-store=basic&#34; 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2019-04-01-membuat-user-baru/">Membuat User Baru</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Apr 2019</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-user">manajemen user</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, pascainstalasi Slackware hanya ada 1 user yaitu root. Slackware mempercayakan sepenuhnya apa yang akan dilakukan para penggunanya, karena memang hampir semua pengguna Slackware adalah pengguna yang telah berpengalaman. Namun, tak ada salahnya saya tuliskan di sini bagaimana cara membuat akun user baru di Slackware sebagai pengingat buat saya pribadi maupun pengguna lainnya.
-Command-nya simpel saja
-R/ adduser # saya gunakan R/ sebagai pengganti shell prompt untuk root kemudian isi sesuai petunjuk yang diberikan.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2019-04-01-membuat-user-baru/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2019-03-30-memulai-mariadb/">Memulai MariaDB</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Mar 2019</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Apa itu MariaDB MariaDB adalah software untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.
-Install MariaDB Secara default, apabila Slackware diisnntall full system maka MariaDB akan terinstall. Jadi tidak usah repot-repot untuk insytallnya.
-Memulai MariaDB Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. prompt R/ menunjukkan dilakukan dengan priviledge root
-R/ mysql_install_db R/ chown -R mysql:mysql /var/lib/mysql R/ chmod +x /etc/rc.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2019-03-30-memulai-mariadb/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2019-02-01-perl-ide-vim/">Perl IDE dengan vim</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Feb 2019</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Reputasi vim sebagai text editor sudah teruji berpuluh tahun. Ternyata Vim juga memiliki support plugin untuk perl. Hal ini membuat vim bisa dijadikan sebagai integrated development environment (IDE) untuk perl.
-Download plugin-nya kemudian extract
-$ wget https://www.vim.org/scripts/download_script.php?src_id=24473 -O perl-support.zip -O perl-support.zip $ mkdir -p .vim $ unzip perl-support.zip -d .vim Aktifkan
-$ echo &#34;filetype plugin on&#34; &gt;&gt; .vimrc 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/">Hapus Aplikasi yang Diinstall Tanggal Tertentu</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>08 Dec 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Tiga hari ini mencoba-coba install kdenlive, aplikasi editor video yang konon handal. Sengaja disebut konon karena belum membuktikannya secara langsung. Setelah semua beres diinstall ternyata malah berubah pikiran. Apa perlu saya pakai editor video? Toh selama ini tidak pernah edit video dan pekerjaan sehari-hari juga tidak bersentuhan langsung dengan pembuatan maupun editing video. Jadi hapus sajalah.
-kdenlive-nya sukses di-uninstall, tapi bagaimana dengan seabrek dependensinya? Hapus juga deh! Kalau besok-besok diperlukan tinggal install lagi.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-08-31-bermain-tetris-emacs/">Bermain Tetris dengan Emacs</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>31 Aug 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/game">game</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Emacs sebagai text editor legendaris mempunyai banyak fitur. Salah satunya adalah tetris. Sebagai penggemar tetris tentunya belum afdhal kalau belum memainkannya.
-Tetris bisa dimainkan dari Emacs pada menu bar klik Tools &gt; Games &gt; Tetris
-Untuk memainkannya tekan tombol P untuk pause dan melanjutkannya, panah kanan-kiri untuk menggeser, panah bawah untuk mempercepat dan panah atas untuk merotasi atau mengubah bentuk.
-  </p>
-
   
 </article>
 
@@ -698,7 +466,7 @@ Untuk memainkannya tekan tombol P untuk pause dan melanjutkannya, panah kanan-ki
   
   <a href="https://sasongko.web.id/page/15/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;16 / 30&nbsp;</span>
+  <span>&nbsp;16 / 59&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/17/"><i class="fa fa-chevron-right"></i></a>
   

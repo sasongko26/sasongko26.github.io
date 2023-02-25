@@ -228,13 +228,13 @@
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/">Jalankan QGIS docker</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/">Operator penggabungan pengulangan string perl</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Nov 2021</time>
+    <time>05 Jan 2022</time>
   </div>
 
   
@@ -249,9 +249,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/gis">gis</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
     
   </div>
   
@@ -263,14 +261,13 @@
   </header>
 
   <p>
-  Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.
-Install docker dan docker-cli QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.
-Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.
+  Pada perl, variabel scalar yang berupa string dapat dilakukan penggabungan dan pengulangan. Contoh, terdapat 3 variabel sebagai berikut: $sapa = &ldquo;Hai&hellip;. &quot; $distro = &ldquo;Slackware&rdquo; $penilaian = &ldquo;distro terbaik.&rdquo; Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan &ldquo;.&rdquo;, sedangkan pengulangan dengan &ldquo;x&rdquo;.
+#!/usr/bin/perl use strict; use warnings; use feature &#34;say&#34;; my $sapa = &#34;Hai.... &#34;; my $distro = &#34;Slackware &#34;; my $penilaian = &#34;distro terbaik.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -278,13 +275,13 @@ Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/">Install Fedora di Slackware</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/">Penggabungan operator perl</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Oct 2021</time>
+    <time>04 Jan 2022</time>
   </div>
 
   
@@ -299,7 +296,7 @@ Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
     
   </div>
   
@@ -311,14 +308,14 @@ Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam
   </header>
 
   <p>
-  Tiba-tiba terlintas keinginan mencoba fedora. Sejak mengenal linux tahun 2005an, saya belum pernah menggunakan fedora. Entah kalau saat itu warnetnya pakai fedora wkwkwkwk. Pertama memakai linux memang di warnet. Saat itu warnetnya menawarkan pakai Windows atau linux, saya pilih linux karena tarifnya 50% lebih murah.
-Kembali ke topik. Berikut akan install fedora secara virtual via lxc.
-$ lxc-create -n fedora -t download Opsi n adalah untuk memberi nama containernya, t template yang digunakan.
+  Penggabungan operator yang dimaksudkan di sini adalah menggabungkan = dan operator lainnya seperti penjumlahan, perkalian, pengurangan, dll. Penggabungan ini biasanya digunakan untuk memperbarui nilai suatu variabel. Contoh di sini adalah penggabungan dengan operator penjumlahan.
+Misalkan, terdapat variabel a dengan nilai awal 10. Nilai a kemudian akan diubah dengan cara ditambah 4. Nilai a yang baru ini dituliskan dengan
+a += 4; Sehingga nilai a kemudian berubah dari 10 menjadi 14.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -326,13 +323,13 @@ $ lxc-create -n fedora -t download Opsi n adalah untuk memberi nama containernya
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-09-10-install-qgis-via-flatpak/">Install QGIS via flatpak</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/">Operator aritmatika scalar perl</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Sep 2021</time>
+    <time>03 Jan 2022</time>
   </div>
 
   
@@ -347,7 +344,7 @@ $ lxc-create -n fedora -t download Opsi n adalah untuk memberi nama containernya
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/gis">gis</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
     
   </div>
   
@@ -359,103 +356,14 @@ $ lxc-create -n fedora -t download Opsi n adalah untuk memberi nama containernya
   </header>
 
   <p>
-  QGIS adalah aplikasi sistem informasi geografis populer dan mudah digunakan. QGIS sudah ada di SBo, tetapi build-nya lama. Jadi saya install via flatpak saja.
-flatpak install --from https://flathub.org/repo/appstream/org.qgis.qgis.flatpakref Untuk menjalankannya, bisa klik dari menu atau
-flatpak run org.qgis.qgis Untuk meng-update
-flatpak update 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-08-02-kate-disable-swap/">Kate disable swap</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>02 Aug 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text-editor</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, kate membuat swap file secara otomatis setiap 15 detik. File ini sangat berguna untuk berjaga-jaga apabila sistem mendadak crash, maka file yang disunting dengan kate dapat di-recover. Tapi fitur ini bisa dibuat disable. Caranya klik menu Settings &ndash;&gt; Configure Kate. Pada bagian Open/Save klik tab Advanced. Opsi Swap file pilih Disable kemudian OK.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-08-01-dolphin-wastebin-reached-maximum-size/">Dolphin the wastebin has reached its maximum size</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Aug 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Efek samping work from home, harddisk laptop lebih cepat penuh. Saat menghapus file-file yang sudah tidak diperlukan, Dolphin mengeluarkan warning
-Job Failed The wastebin has reached its maximum size! Cleanup the wastebin manually Ada 2 alternatif solusi:
-Sesuai yang ada di warning untuk menghapus file-file di wastebin secara manual. Mengatur ulang wastebin pada Dolphin. Wastebin diatur melalui menu Settings &ndash;&gt; Configure Dolphin klik Wastebin. Di sini kita bisa mengatur apakah file di wastebin akan dihapus secara otomatis setelah tenggat yang ditentukan.
+  Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.
+Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.
+#!/usr/bin/perl use strict; use warnings; use feature &#39;say&#39;; my $a = 2; my $b = 25; say(&#34;Angka pertama (a) adalah $a&#34;); say(&#34;Angka kedua (b) adalah $b&#34;); # penjumlahan my $c = $a + $b; say(&#34;a+b = $c&#34;); # pengurangan my $d = $b - $a; say(&#34;b-a = $d&#34;); # perkalian my $e = $a * $b; say(&#34;a*b = $e&#34;); # pembagian my $f = $a / $b; my $g = $b / $a; say(&#34;a/b = $f&#34;); say(&#34;b/a = $g&#34;); # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(&#34;a^b = $h&#34;); say(&#34;b^a = $i&#34;); # autoincrement # tanda + di depan say(&#34;Nilai a sebelum autoincrement = $a&#34;); my $j = ++$a; say(&#34;++a = $j&#34;); say(&#34;Nilai a sesudah autoincrement = $a&#34;); # tanda + di belakang say(&#34;Nilai b sebelum autoincrement $b&#34;); my $k = $b++; say(&#34;$b++ = $k&#34;); say(&#34;Nilai b setelah autoincrement $b&#34;); # autodecrement # tanda - di depan say(&#34;c = a+b.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2021-08-01-dolphin-wastebin-reached-maximum-size/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -463,13 +371,13 @@ Sesuai yang ada di warning untuk menghapus file-file di wastebin secara manual. 
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-06-24-query-sql/">Query SQL</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2022-01-02-membuat-array-perl-dari-scalar/">Membuat array perl dari scalar</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Jun 2021</time>
+    <time>02 Jan 2022</time>
   </div>
 
   
@@ -484,7 +392,7 @@ Sesuai yang ada di warning untuk menghapus file-file di wastebin secara manual. 
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
     
   </div>
   
@@ -496,204 +404,58 @@ Sesuai yang ada di warning untuk menghapus file-file di wastebin secara manual. 
   </header>
 
   <p>
-  Relational Database Management System (RDBMS) adalah salah satu sistem database populer. Sistem pengolahan database ini menggunakan bahasa SQL (dibaca sekuel atau es kiu el). Tool yang dapat digunakan antara lain mariadb, mysql, postgresql.
-Pada RDBMS dikenal adanya hirarki atau struktur, yaitu dari tertinggi database yang terdiri atas tabel. Tabel dibentuk oleh kolom dengan data sejumlah barisnya.
-Perintah SQL ada 2
-Data Definition Language (DDL) untuk membuat, menghapus atau modifikasi struktur database Data Manipulation Language (DML) untuk insert data, query, hapus, edit data QUERY SQL Query adalah pengambilan data dari database.
+  Array merupakan variabel pada perl dengan data yang nilainya majemuk. Sedangkan scalar bernilai tunggal. Catatan kali ini tentang bagaimana cara membuat array dari scalar yang tersedia.
+my $nama = &#34;Sasongko&#34;; my $jenis_kelamin = &#34;Laki-laki&#34;; my $distro = &#34;Slackware&#34;; my $tahun = 2021; Keempat scalar tersebut akan disatukan menjadi array @biodata.
+my @biodata = ($nama, $jenis_kelamin, $distro, $tahun); 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2022-01-01-hapus-baris-dari-awal-sampai-kata-spesifik/">Hapus baris dari awal sampai dengan baris dengan kata spesifik</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Jan 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sed">sed</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Mungkin ini adalah catatan dengan judul terpanjang yang pernah kami tulis. Catatan ini berisi tentang bagaimana cara menghapus baris dari awal sampai dengan baris yang berawalan dengan kata-kata spesifik.
+Contoh, punya file teks lagu.txt berisi sebagai berikut
+kelelawar by koes plus kelelawar sayapnya hitam terbang rendah di tengah malam pagi-pagi mereka pulang di dahan pohon bergelantungan hitam hitam hitam Teks tersebut dihapus sebagian, yaitu mulai baris pertama sampai dengan pagi-pagi. Dengan kata lain hanya tersisa di dahan pohon dst.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2021-06-24-query-sql/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-06-23-menyusupkan-mate-ke-xfce/">Menyusupkan mate ke xfce</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Jun 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, window manager yang digunakan xfce adalah xfwm4. Tetapi, ini bisa diganti menjadi window manager lain seperti fluxbox ataupun marco milik mate.
-Kali ini kita akan ganti xfwm4 dengan marco. Caranya, membuat startup baru berisikan command
-$ /usr/bin/marco --replace 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-06-06-redshift-tty/">Eksekusi redshift di tty</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Jun 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/power-manager">power-manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Mode tty di sini maksudnya adalah mode yang hanya ada teks. Mode inilah yang aktif setelah masuk runlevel 3 sebelum masuk ke lingkungan X maupun wayland.
-Mungkin, ketika sedang melakukan maintenance dalam mode tty, tanpa terasa sudah menghabiskan waktu berjam-jam. Daya yang ada, seperti kecerahan layar, bisa terbuang percuma. Apalagi paparan layar yang terlalu cerah dalam durasi lama berpotensi mengganggu kesehatan. Eksekusi redshift di tty adalah solusi yang layak dipertimbangkan. Berikut adalah command-nya
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-06-06-redshift-tty/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-06-02-hapus-awalan-apostrofe-libreoffice-calc/">Hapus awalan apostrofe libreoffice calc</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>02 Jun 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Mengunduh file spreadsheet dari google sheets di setiap selnya yang berisi data angka diawali oleh tanda apostrofe atau kutip tunggal. Tanda ini tidak terlihat langsung. Ketika kita klik selnya dan lihat formula bar, baru tanda ini terlihat.
-Untuk menghapusnya melalui libreofiice calc tentu saja. Klik Find &amp; Replace. Search for inputkan .* dan Replace with inputkan &amp;. Centang atau piih opsi Regular expressions. Kemudian Replace atau Replace all sesuai kebutuhan.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Mariadb error 2002</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jun 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.
-$ mariadb -u root -p Enter password: ERROR 2002 (HY000): Can&#39;t connect to local server through socket &#39;/var/run/mysql/mysql.sock&#39; (2) Setelah dicek, ternyata service-nya belum jalan karena tidak executable.
-$ ls -l /etc/rc.d|grep -iE &#34;(maria|mysql)&#34; -rw-r--r-- 1 root root 2517 May 2 09:08 rc.mysqld -rw-r--r-- 1 root root 2943 Aug 4 2020 rc.mysqld.orig Mari aktifkan
-# chmod +x /etc/rc.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2022-01-01-hapus-baris-dari-awal-sampai-kata-spesifik/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -707,7 +469,7 @@ $ ls -l /etc/rc.d|grep -iE &#34;(maria|mysql)&#34; -rw-r--r-- 1 root root 2517 M
   
   <a href="https://sasongko.web.id/page/4/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;5 / 30&nbsp;</span>
+  <span>&nbsp;5 / 59&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/6/"><i class="fa fa-chevron-right"></i></a>
   

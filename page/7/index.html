@@ -228,13 +228,13 @@
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/">sbocheck /usr/sbo/repo exists and is not empty</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-12-16-mitigasi-log4shell/">Deteksi log4shell</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Apr 2021</time>
+    <time>16 Dec 2021</time>
   </div>
 
   
@@ -249,7 +249,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
     
   </div>
   
@@ -261,15 +261,14 @@
   </header>
 
   <p>
-  Malam ini, ketika akan update SBo, ternyata tanpa disadari internet disconnect sebelumnya.
-bash-5.1# sbocheck Updating SlackBuilds tree... fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution) Could not sync from git://github.com/Ponce/slackbuilds.git. Setelah internet tidak ada masalah, gantian sbotools-nya yang masalah
-bash-5.1# sbocheck /usr/sbo/repo exists and is not empty. Exiting. Baiklah, local repository-nya minta dikosongkan dulu
-bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree... Cloning into &#39;/usr/sbo/repo&#39;.
+  Log4shell menjadi topik yang hangat dibicarakan sepekan ini. Bugs JNDI lookup pada log4j membuat komputer atau pc (terutama server) semakin mudah diambil alih tanpa ijin. Syukur alhamdulillah sudah dirilis versi terbaru untuk menangkalnya, yaitu versi 2.16.0.
+Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagian dari default packages.
+# slackpkg file-search log4j Looking for log4j in package list. Please wait... DONE No packages contains &#34;log4j&#34; file. Tidak ditemukan.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-12-16-mitigasi-log4shell/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -277,13 +276,13 @@ bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree..
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-04-07-jumlah-baris-kolom-libreoffice-calc/">Jumlah baris dan kolom libreoffice calc</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-12-14-show-line-number-kate/">Menambahkan line number kate</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Apr 2021</time>
+    <time>14 Dec 2021</time>
   </div>
 
   
@@ -298,7 +297,7 @@ bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree..
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text-editor</a>
     
   </div>
   
@@ -310,7 +309,7 @@ bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree..
   </header>
 
   <p>
-  Berapa jumlah baris dan kolom yang ada pada worksheet LibreOffice Calc? Jumlah barisnya adalah 1048576. Adapun kolom, tersedia dari A sampai AMJ (1024).
+  Kate adalah text editor bawaan KDE Plasma yang powerfull. Namun, secara default tidak menampilkan line number. Cara untuk menampilkan line number pada kate adalah klik menu Settings pada Kate, kemudian klik Configure Kate. Pada bagian Appearance, klik tab Borders, centang Show line numbers. KLik Apply atau Ok untuk menerapkan perubahan pengaturan.
   </p>
 
   
@@ -319,13 +318,13 @@ bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree..
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-04-06-burning-iso-dvd/">Burn iso ke dvd</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-12-10-install-scanner-linux/">Menambahkan scanner</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Apr 2021</time>
+    <time>10 Dec 2021</time>
   </div>
 
   
@@ -340,7 +339,7 @@ bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree..
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>
     
   </div>
   
@@ -352,55 +351,14 @@ bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree..
   </header>
 
   <p>
-  Misal, file slackware64-live-current.iso akan di-burn ke DVD. DVD terdeteksi oleh sistem sebagai /dev/sr0. Command dijalankan root.
-$ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/">Transfer file dengan lftp</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>05 Apr 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Salah 1 akibat Work from Home a.k.a WfH adalah kapasitas storage laptop menjadi penuh. Semakin banyak file, semakin berkurang free space. Untuk menyiasatinya, ketika ada kesempatan bekerja di kantor, file-file tersebut ditransfer ke komputer kantor. Karena komputer kantor menggunakan Windows 7 yang mana saya tidak paham bagaimana cara file sharing-nya saya gunakan ftp. Mungkin karena sudah terlanjur nyaman memakai slackware, saya tidak mau ribet pengaturan ftpnya di komputer kantor. Serahkan saja ke bagian IT untuk installnya.
+  Instalasi scanner di linux terutama slackware sangat mudah. Biasanya scanner terdeteksi secara otomatis dan langsung bisa dijalankan. Pengaturan hanya dibutuhkan jika scanner tidak terdeteksi.
+Catatan kali ini tentang menambahkan scanner yang tidak terdeteksi secara otomatis. Scanner seperangkat dengan printer, yaitu Epson L3110. Printer terdeteksi otomatis dan langsun bisa digunakan, tetapi scanner-nya belum. Software untuk scan seperti xsane atau skanlite salah mendeteksi. Keduanya mendeteksi scanner yang digunakan adalah webcam.
+Scanner terhubung melalui usb, sehingga perlu dicek terlebih dahulu apakah usbnya terdeteksi.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-12-10-install-scanner-linux/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -408,13 +366,13 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-27-median-data-python/">Median data dengan python</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-11-30-mengetahui-banyaknya-elemen-array-perl/">Mengetahui banyaknya elemen array perl</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>27 Mar 2021</time>
+    <time>30 Nov 2021</time>
   </div>
 
   
@@ -429,9 +387,7 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
     
   </div>
   
@@ -443,8 +399,10 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
   </header>
 
   <p>
-  Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau median() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # median print(&#39;median konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].median(),&#39;kaleng&#39;) print(&#39;median konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].median()) print(&#39;median konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].median(), &#39;gelas&#39;) print(&#39;median konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].median(), &#39;liter&#39;) 
+  Array adalah salah satu tipe data pada bahasa pemrograman perl. Tipe data ini berisi data majemuk. Penulisan array menggunakan notasi @.
+Contoh:
+my @buah = (&#34;pepaya&#34;, &#34;manga&#34;, &#34;pisang&#34;, &#34;jambu&#34;, &#34;durian&#34;, &#34;apel&#34;); Untuk mengetahui berapa banyaknya elemen dari array, bisa menggunakan scalar().
+print(scalar(@buah)); 
   </p>
 
   
@@ -453,13 +411,13 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-26-mean-data-python/">Mean data dengan python</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/">Variabel hash perl</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Mar 2021</time>
+    <time>29 Nov 2021</time>
   </div>
 
   
@@ -474,9 +432,7 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
     
   </div>
   
@@ -488,199 +444,9 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
   </header>
 
   <p>
-  Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau mean() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # mean print(&#39;rerata konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].mean(),&#39;kaleng&#39;) print(&#39;rerata konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].mean()) print(&#39;rerata konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].mean(), &#39;gelas&#39;) print(&#39;rerata konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].mean(), &#39;liter&#39;) 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/">Statistik deskriptif dengan python</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk menampilkan statistik deskriptif suatu data, bisa menggunakan fungsi describe() dari library yang dimiliki python yaitu pandas.
-Berikut ini akan ditampilkan deskripsi data konsumsi alkohol dunia. Sumber data : https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv
-Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel yaitu :
-beer_servings (konsumsi bir yang dinyatakan dalam kaleng) spirit_servings (konsumsi minuman beralkohol spirit; maaf, variabel ini masih belum penulis pahami sepenuhnya) wine_servings (konsumsi anggur yang dinyatakan dalam gelas) pure_alcohol (konsumsi alkohol murni yang dinyataksan dalam liter, nama variabel ini sudah penulis singkat) Adapun deskripsi yang ditampilkan adalah :
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/">Mengetahui struktur dataset</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi info() dari pandas.
-Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-#!/usr/bin/env python3 import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.info()) Outputnya
-&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns): # Column Non-Null Count Dtype --- ------ -------------- ----- 0 RowId 178539 non-null object 1 YearStart 178539 non-null int64 2 YearEnd 178539 non-null int64 3 LocationAbbr 178539 non-null object 4 LocationDesc 178539 non-null object 5 Datasource 178539 non-null object 6 Class 178539 non-null object 7 Topic 178539 non-null object 8 Question 178539 non-null object 9 Response 0 non-null float64 10 Data_Value_Unit 178539 non-null object 11 DataValueTypeID 178539 non-null object 12 Data_Value_Type 178539 non-null object 13 Data_Value 120885 non-null float64 14 Data_Value_Alt 0 non-null float64 15 Data_Value_Footnote_Symbol 70619 non-null object 16 Data_Value_Footnote 70619 non-null object 17 Low_Confidence_Limit 120750 non-null float64 18 High_Confidence_Limit 120750 non-null float64 19 Sample_Size 0 non-null float64 20 StratificationCategory1 178539 non-null object 21 Stratification1 178539 non-null object 22 StratificationCategory2 178539 non-null object 23 Stratification2 178539 non-null object 24 StratificationCategory3 0 non-null float64 25 Stratification3 0 non-null float64 26 Geolocation 159375 non-null object 27 ClassID 178539 non-null object 28 TopicID 178539 non-null object 29 QuestionID 178539 non-null object 30 ResponseID 0 non-null float64 31 LocationID 178539 non-null int64 32 StratificationCategoryID1 178539 non-null object 33 StratificationID1 178539 non-null object 34 StratificationCategoryID2 178539 non-null object 35 StratificationID2 178539 non-null object 36 StratificationCategoryID3 0 non-null float64 37 StratificationID3 0 non-null float64 38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-23-menggunakan-wget-prefix-directory/">Menggunakan wget prefix directory</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/internet-download-manager">internet-download-manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, apabila menggunakan wget, file di-download ke direktori aktif. Dengan mengaktifkan prefix directory (-P), file tersebut bisa disimpan ke direktori lain.
-$ wget [url] -P [direktori] [url] : URL / alamat lengkap file yang akan di-download [direktori] : direktori tujuan 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/">Mengetahui dimensi dataset python</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>22 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk mengetahui dimensi atau jumlah baris dan kolom dataset dapat menggunakan shape dari pandas. Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.shape) Output:
-(178539, 39) Dari output tersebut diketahui dataset mempunyai 178539 baris dan 39 kolom.
+  Jenis variabel ketiga yang dimiliki perl adalah hash. Hash ini merupakan data berpasangan. Penulisan dengan menyertakan tanda %.
+Contoh: akan dideklarasikan data tentang saya, yaitu nama dan distro yang saya gunakan. Nama saya Sasongko, distro Slackware.
+my %data = ( nama =&gt; &#34;Sasongko&#34;, distro =&gt; &#34;Slackware&#34;, ); 
   </p>
 
   
@@ -695,7 +461,7 @@ import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Agin
   
   <a href="https://sasongko.web.id/page/6/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;7 / 30&nbsp;</span>
+  <span>&nbsp;7 / 59&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/8/"><i class="fa fa-chevron-right"></i></a>
   

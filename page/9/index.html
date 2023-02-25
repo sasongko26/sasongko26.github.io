@@ -228,13 +228,200 @@
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-09-mount-partisi-hibernated-windows/">Mount partisi hibernated windows</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/">Jalankan QGIS docker</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Mar 2021</time>
+    <time>07 Nov 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/gis">gis</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.
+Install docker dan docker-cli QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.
+Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/">Install Fedora di Slackware</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>24 Oct 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Tiba-tiba terlintas keinginan mencoba fedora. Sejak mengenal linux tahun 2005an, saya belum pernah menggunakan fedora. Entah kalau saat itu warnetnya pakai fedora wkwkwkwk. Pertama memakai linux memang di warnet. Saat itu warnetnya menawarkan pakai Windows atau linux, saya pilih linux karena tarifnya 50% lebih murah.
+Kembali ke topik. Berikut akan install fedora secara virtual via lxc.
+$ lxc-create -n fedora -t download Opsi n adalah untuk memberi nama containernya, t template yang digunakan.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-09-10-install-qgis-via-flatpak/">Install QGIS via flatpak</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Sep 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/gis">gis</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  QGIS adalah aplikasi sistem informasi geografis populer dan mudah digunakan. QGIS sudah ada di SBo, tetapi build-nya lama. Jadi saya install via flatpak saja.
+flatpak install --from https://flathub.org/repo/appstream/org.qgis.qgis.flatpakref Untuk menjalankannya, bisa klik dari menu atau
+flatpak run org.qgis.qgis Untuk meng-update
+flatpak update 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-08-02-kate-disable-swap/">Kate disable swap</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Aug 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text-editor</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, kate membuat swap file secara otomatis setiap 15 detik. File ini sangat berguna untuk berjaga-jaga apabila sistem mendadak crash, maka file yang disunting dengan kate dapat di-recover. Tapi fitur ini bisa dibuat disable. Caranya klik menu Settings &ndash;&gt; Configure Kate. Pada bagian Open/Save klik tab Advanced. Opsi Swap file pilih Disable kemudian OK.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-08-01-dolphin-wastebin-reached-maximum-size/">Dolphin the wastebin has reached its maximum size</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Aug 2021</time>
   </div>
 
   
@@ -261,429 +448,14 @@
   </header>
 
   <p>
-  Lima tahun yang lalu ketika membeli laptop yang saat ini digunakan untuk menulis catatan ini, toko memberikan OS Windows 10 tanpa lisensinya. Penulis tetap mempertahankannya untuk jaga-jaga jika di kemudian hari kepepet sangat membutuhkan Windows.
-Tadi pagi iseng ingin melihat-lihat adakah file di partisi tempat Windows diinstall yang bisa dihapus sehingga storage harddisk lebih lega?
-Partisi Windows teridentifikasi sebagai /dev/sda2. Akan di-mount ke /media/hd0
-$ mount /dev/sda2 /media/hd0 Windows is hibernated, refused to mount.
+  Efek samping work from home, harddisk laptop lebih cepat penuh. Saat menghapus file-file yang sudah tidak diperlukan, Dolphin mengeluarkan warning
+Job Failed The wastebin has reached its maximum size! Cleanup the wastebin manually Ada 2 alternatif solusi:
+Sesuai yang ada di warning untuk menghapus file-file di wastebin secara manual. Mengatur ulang wastebin pada Dolphin. Wastebin diatur melalui menu Settings &ndash;&gt; Configure Dolphin klik Wastebin. Di sini kita bisa mengatur apakah file di wastebin akan dihapus secara otomatis setelah tenggat yang ditentukan.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2021-03-09-mount-partisi-hibernated-windows/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-08-resize-window-blackbox/">Resize window blackbox</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>08 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk resize atau mengubah ukuran window saat menggunakan blackbox caranya mudah. Arahkan pointer pada ujung kiri bawah atau kanan bawah window sampai tampilan pointer berganti menjadi sudut siku-siku dengan panah ke sudutnya. Kemudia klik dan drag sesuai keinginan seberapa ukuran windownya. Cara lain, adalah dengan mengarahkan menekan Alt klik kanan kemudian ubah ukuran windownya.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/">Menghapus file berdasarkan pencarian</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan akan menghapus semua file berekstensi .rtf di direktori /tmp. Pada direktori /tmp terdapat banyak direktori dan file lainnya. File yang akan dihapus hanya pada direktor induk, tidak termasuk subdirektorinya (maxdepth=1).
-$ find /tmp -maxdepth 1 -name *.rtf -delete 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-25-mengatur-ukuran-window-gvim-otomatis/">Mengatur ukuran window gvim</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text-editor</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  GVIm merupakan text editor legendaris. Simpel dan mudah digunakan adalah alasan utama penulis menyukainya. GVIm juga mudah di-customize. User bebas melakukan modifikasi sesuai kebutuhannya. Salah satu yang penulis butuhkan adalah ketika memulai gvim ukuran window 80x24 (80 kolom, 24 baris). Untuk mewujudkannya, perlu membuat file ~/.gvimrc isinya sebagai berikut:
-set columns=80 set lines=24 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/">Aktivasi apache webserver slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/cloud">cloud</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Install apache webserver slackware linux Secara default, apache webserver sudah ter-install di slackware. Namun, jika saat meng-install slackware tidak memilih full installation, apache webserver dapat di-install dengan mudah, yaitu dengan meng-install httpd.
-slackpkg install httpd Aktivasi apache webserver slackware linux Setelah diinstall, bisa diaktifkan:
-/etc/rc.d/rc.httpd start Untuk menonaktifkan atau mematikan:
-/etc/rc.d/rc.httpd stop Untuk restart webserver:
-/etc/rc.d/rc.httpd restart Mengaktifkan apache webserver otomatis Untuk dapat running atau mengaktifkan apache secara otomatis setelah booting, pastikan /etc/rc.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-19-set-background-blackbox/">Set background blackbox</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Menggunakan blackbox yang &lsquo;hanya&rsquo; window manager tentunya berbeda dengan ketika menggunakan desktop environment (DE) seperti kde atau xfce. Pengaturan background atau wallpaper dalam DE menggunakan tampilan grafis.
-Untuk meng-set background pada blackbox menggunakan bsetbg
-$ bsetbg nama_file_background Atau, kalau menghendaki background-nya adalah warna (solid color) juga bisa. Contoh, akan mengganti background-nya dengan warna hijau.
-$ bsetbg -solid green 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/">Copy paste xterm</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  xterm adalah X terminal emulator populer legendaris. Penulis masih menggunakannya sebagai terminal utama ketika menggunakan blackbox. Sesekali saat menggunakan xfce atau kde.
-xterm ini khas. Tidak seperti xfce4-terminal atau konsole yang secara default pengguna bisa melakukan copy paste (Copas) dengan mudah. Ctrl Shift C, Ctrl Shift V untuk copas pada terminal emulator lainnya tidak berlaku! Butuh pengaturan khusus untuk melakukannya. Mengatur agar setiap yang diblok akan dimasukkan ke clipboard.
-Untuk bisa melakukan copy:
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/">xauth serverauthXXX does not exist</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-charge. Alhasil laptop mati seketika. Dinyalakan lagi (sambil charging tentunya) gagal masuk ke X.
-xauth: file /home/xyz/.serverauth.2909 does not exist Solusinya simpel
-$ rm .serverauth* 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/">nmcli sw disabled</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network-manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Beberapa saat yang lalu penulis terkena prank dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan flight mode di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek nmcli
-$ nmcli p2p-dev-wlan0: disconnected &#34;p2p-dev-wlan0&#34; wifi-p2p, sw disabled, hw eth0: unavailable &#34;Realtek RTL810xE&#34; ethernet (r8169), C8:5B:76:66:51:6C, hw, mtu 1500 wlan0: unavailable &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), 8E:58:C9:8B:64:0F, sw disabled, hw, mtu 1500 lo: unmanaged &#34;lo&#34; loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536 Use &#34;nmcli device show&#34; to get complete information about known devices and &#34;nmcli connection show&#34; to get an overview on active connection profiles.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/">Copy paste vim mode visual</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>08 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text-editor</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  VIm merupakan text editor legendaris yang sampai saat ini masih memiliki penggemar. Penulis salah satunya. Berbeda dengan text editor lain, vim tidak menampilkan menu untuk copy/cut paste. Namun, itu tidak masalah. Semua bisa diatur. Oya, ini semua berada dalam lingkungan vim dengan mode visual.
-Sebelum melakukan copy paste, tentunya memilih dulu yang akan dicopas.
-Tempatkan kursor di awal text yang akan dicops Tekan v untuk memulai blok Jalankan panah kanan kiri atas bawah untuk memilih blok Tekan y untuk copy (y singkatan dari yank), atau d untuk cut (d singkatan dari delete) Kalau mau mem-paste, tekan p di awal tempat tujuan paste Nah, selesai.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-08-01-dolphin-wastebin-reached-maximum-size/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -697,7 +469,7 @@ Tempatkan kursor di awal text yang akan dicops Tekan v untuk memulai blok Jalank
   
   <a href="https://sasongko.web.id/page/8/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;9 / 30&nbsp;</span>
+  <span>&nbsp;9 / 59&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/10/"><i class="fa fa-chevron-right"></i></a>
   

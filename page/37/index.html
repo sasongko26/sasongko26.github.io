@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta name="generator" content="Hugo 0.110.0">
+
+  <title>Catatan Sasongko</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
+    href='https://sasongko.web.id/index.xml' />
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+
+  
+    
+        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
+    
+  
+  
+    
+        <script src="https://sasongko.web.id/js/my.js"></script>
+    
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href='https://sasongko.web.id/index.xml'><i
+          class="fas fa-rss"></i>RSS</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://youtube.com/channel/UCY4H1n73aQMB4LZjIJvH0_A" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Catatan Sasongko</h1>
+  <h2></h2>
+</div>
+
+<div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2017-07-31-multi-slackware-elilo/">Multi Slackware dengan elilo</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>31 Jul 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/btrfs">btrfs</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Posting kali ini terinspirasi dari Pak Walesa yang menulis di sini dan ini. Perbedaannya adalah pada boot loader yang digunakan. Saya gunakan elilo. Selain itu, sudah ada existing Slackware64 current dan Slackware64 14.2. Keduanya dengan filesystem ext4. Mau ditambahkan yang stable (Slackware64 14.2 dan Slackware 14.2) tetapi dengan filesystem btrfs. Jadi dual Slackware stable ini akan ditempatkan di dalam partisi yang sama. Sebenarnya tripleboot dengan Windows 10, tetapi Windows 10 sangat jarang dipakai.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-07-31-multi-slackware-elilo/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2017-07-29-menghapus-dengan-pengecualian/">Menghapus dengan Pengecualian</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Jul 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Sebagai pengguna SBo dan sbopkg, file yang dihasilkan proses build ditaruh di /tmp. Folder ini lama-lama semakin banyak isinya. Padahal filenya bisa dikatakan tidak terpakai. Script masih aman tersimpan rapi di /var/lib/sbopkg. Sedangkan source-nya di /var/cache/sbopkg.
+Semua yang ada di folder /tmp akan saya hapus kecuali file yang berekstensi txt. Saya memang kadang iseng nulis-nulis sesuatu kemudian saya simpan dengan ekstensi txt dan ditaruh di /tmp. File-file ini tidak mau saya hapus, buat dibaca jadi hiburan sendiri kelak bahwa dulu pernah iseng nulis seperti itu&hellip; Hahahaha&hellip;.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-07-29-menghapus-dengan-pengecualian/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2017-07-05-akibat-lupa-eliloconfig/">Akibat Lupa eliloconfig</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 Jul 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Kemarin melihat ChangeLog ada beberapa update yang sebagian di antaranya adalah security fix. Salah satu update adalah kernel. Melakukan upgrade semuanya baik-baik saja dan lanjut shutdown. Siang ini, booting pun masih fine dan no problem. Begitu juga login. Baru terasa saat ingin masuk desktop malah gagal.
+$ startx xauth: file /home/sasongko/.serverauth.2717 does not exist X.Org X Server 1.19.3 Release Date: 2017-03-15 X Protocol Version 11, Revision 0 Build Operating System: Slackware 14.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-07-05-akibat-lupa-eliloconfig/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2017-07-05-convert-word-pdf-massal/">Convert Word ke PDF Secara Massal</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 Jul 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  LibreOffice sudah lama mendukung konversi file dari Word/Writer (doc, docx dan odt) ke file pdf. Keunggulannya adalah bisa melakukan konversi secara massal.
+Misalkan, dipunyai 1000 file docx yang tersimpan di ~/Documents. Masing-masing file ini akan dikonversi menjadi pdf di ~/convert.
+$ soffice --headless --nologo --convert-to pdf:writer_pdf_Export --outdir ~/convert Documents/*.docx Opsi &ndash;headless &ndash;nologo diberikan agar lebih cepat, lebih hemat waktu, karena tidak menampilkan splash screen.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2017-07-04-presentasi-lcd-projector/">Presentasi dengan LCD Projector</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Jul 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Tools yang digunakan adalah xrandr. Sebenarnya bisa menggunakan aplikasi GUI yang disediakan desktop environment masing-masing, tapi saya lebih suka menggunakan xrandr agar universal bisa digunakan di lingkungan desktop apapun, entah itu Fluxbox, FVWM, TWM, Xfce, KDE, Lumina, LXQt, Mate, Cinnamon, dsb.
+Pertama, identifikasi monitor/screen primer yang aktif tersambung saat ini, jangan sambungkan proyektor dulu
+$ xrandr Screen 0: minimum 8 x 8, current 1366 x 768, maximum 32767 x 32767 eDP1 connected primary 1366x768+0+0 (normal left inverted right x axis y axis) 310mm x 170mm 1366x768 59.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-07-04-presentasi-lcd-projector/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+
+  
+
+
+<nav class="pagination" role="pagination">
+  
+  <a href="https://sasongko.web.id/page/36/"><i class="fa fa-chevron-left"></i></a>
+  
+  <span>&nbsp;37 / 59&nbsp;</span>
+  
+  <a href="https://sasongko.web.id/page/38/"><i class="fa fa-chevron-right"></i></a>
+  
+</nav>
+
+
+
+</div>
+
+</div>
+</div>
+<script src="https://sasongko.web.id/js/ui.js"></script>
+<script src="https://sasongko.web.id/js/menus.js"></script>
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49503242-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+

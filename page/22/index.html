@@ -228,13 +228,13 @@
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/">Upgrade Slackbuilds Slackware 14.2</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-01-26-aktivasi-zram/">Aktivasi zram</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>03 Jul 2016</time>
+    <time>26 Jan 2021</time>
   </div>
 
   
@@ -249,256 +249,58 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackbuild">slackbuild</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sbopkg">sbopkg</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Setelah melakukan [ upgrade sistem ke Slackware 14.2]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya upgrade juga paket yang diinstal dari slackbuilds.org.
-Upgrade sbopkg : sbopkg -u Versi sbopkg terbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik D Hasil unduhan : /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Setelah diunduh, upgrade : upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Karena menghasilkan konfigurasi baru, lakukan slackpkg new-config dan pilih overwrite saja. Kemudian update ke repo 14.2 : sbopkg pilih Utilities lalu Repository.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/">Ganti Theme Xfce</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Jun 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/theme">theme</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Bosan dengan tampilan theme yang itu-itu aja? Tenang, theme-nya bisa diganti kok, bahkan diganti agar tampilannya mirip Mac OS X. Sebagai contoh akan kita install theme GlossyP3 yang membuat tampilan menjadi mirip Mac OS X.
-Download terlebih dahulu berkasnya dari sini (pastikan tersambung internet). Berkas dalam bentuk arsip .tar.bz2 ekstrak ke direktori /usr/share/themes dengan hak administrator atau root.
-Kemudian ke Settings &mdash;&gt; Appearance pilih GlossyP3
-Kemudian, meminjam kata Mario Teguh, dan lihat apa yang terjadi.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/">Konek Internet dengan nmcli</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Jun 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Menyambung catatan tentang [hilangnya ikon atau NetworkManager]({% post_url 2015-12-26-ikon-networkmanager-hilang %}). Jika nm-applet tidak mempan untuk menampilkan applet NetworkManager, maka kita bisa gunakan nmcli.
-nmcli adalah NetworkManager dengan antarmuka teks (command line interface).
-nmcli Usage: nmcli [OPTIONS] OBJECT { COMMAND | help } OPTIONS -t[erse] terse output -p[retty] pretty output -m[ode] tabular|multiline output mode -c[olors] auto|yes|no whether to use colors in output -f[ields] &lt;field1,field2,...&gt;|all|common specify fields to output -e[scape] yes|no escape columns separators in values -a[sk] ask for missing parameters -s[how-secrets] allow displaying passwords -w[ait] &lt;seconds&gt; set timeout waiting for finishing operations -v[ersion] show program version -h[elp] print this help OBJECT g[eneral] NetworkManager&#39;s general status and operations n[etworking] overall networking control r[adio] NetworkManager radio switches c[onnection] NetworkManager&#39;s connections d[evice] devices managed by NetworkManager a[gent] NetworkManager secret agent or polkit agent m[onitor] monitor NetworkManager changes Untuk melihat sambungan/koneksi yang telah dibuat dengan NetworkManager gunakan nmcli c.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-05-12-download-fathul-muin-maktabah-elkirtas/">Download Kitab Fathul Muin Maktabah Elkirtas</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>12 May 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elkirtas">elkirtas</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Pertama, buka Maktabah Elkirtasnya dulu dan pastikan tersambung internet.
-Kemudian klik gambar kitabnya akan muncul daftar kategori kitabnya.
-Scroll ke bawah pilih فقة شافعي
-Scroll ke bawah dan pilih فتع المعين
-Muncul konfirmasi untuk men- download
-Yes akan melanjutkan dan tunggu sampai selesai
-Selesai download muncul pemberitahuan
-Klik Yes Kitab Fathul Muin siap dikaji.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-05-07-install-android-tools/">Install Android Tools</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 May 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Di catatan kemarin sudah saya sampaikan [cara install sbopkg]({% post_url 2016-05-03-install-sbopkg %}), nah sekarang adalah contoh cara menggunakan sbopkg, untuk install Android Tools.
-Jalankan sebagai root
-sbopkg Tersedia pilihan Sync, Changelog, Packages, Updates, Browse, Search, Queue, Utilities, Help.
-Pilih Search
-Masukkan kata kuncinya, misalnya android
-Kemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan OK.
-Keluar beraneka opsi. Alangkah baiknya baca-baca README atau Info dulu terutama untuk cek dependensi pada bagian REQUIRE
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-05-07-install-android-tools/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/">[SOLVED] Slackware Current Susah Booting dan Shutdown</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>05 May 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/zram">zram</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.
+Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-26-aktivasi-zram/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/">Mengembalikan backlight</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>25 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>
     
@@ -512,14 +314,15 @@ Keluar beraneka opsi. Alangkah baiknya baca-baca README atau Info dulu terutama 
   </header>
 
   <p>
-  Tiga bulan lalu saya sambat Slackware current [hang]({% post_url 2016-02-08-slackware-current-hang %}) saat booting dan shutdown. Sekarang masalah tersebut teratasi.
-Secara default laptop Asus X453MA diperuntukkan bagi pengguna Microsoft Windows. Hal ini terlihat dari web resminya yang menyediakan driver hanya untuk Windows khususnya Windows 8.1 dan Windows 10. Juga terlihat dari &ldquo;paket bundling&rdquo;-nya yang menyediakan Windows preinstalled.
-Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.1 oleh pihak toko. Awalnya saya pilih kosongan aja sesuai aslinya.
+  Upgrade kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. Backlight menjadi tidak berfungsi. Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah xbacklight.
+$ xbacklight No outputs have backlight property Backlight atau brightness 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).
+Kebetulan, salah 1 situs yang sering penulis kunjungi, LinuxQuestions.Org ada thread yang membahas masalah ini.
+Cara yang dipakai di sini adalah dengan membuat /etc/X11/xorg.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -527,13 +330,13 @@ Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2016-05-03-install-sbopkg/">Install sbopkg</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/">Mengetahui isi file tar archive</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>03 May 2016</time>
+    <time>24 Jan 2021</time>
   </div>
 
   
@@ -548,9 +351,7 @@ Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sbopkg">sbopkg</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackbuild">slackbuild</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
     
   </div>
   
@@ -562,14 +363,14 @@ Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.
   </header>
 
   <p>
-  Adakalanya pengguna Slackware membutuhkan paket/aplikasi di luar yang dirilis secara resmi oleh Slackware tapi tidak mau repot install dari kode sumber (source code). SlackBuilds.org (SBo) inilah yang mewujudkannya. Di SBo tersedia ribuan paket yang dapat dijalankan dengan baik di Slackware.
-Kecuali dalam bentuk web interface SBo juga bisa dinikmati dalam bentuk command line interface yang dinamakan sbopkg. Sbopkg secara default tidak ter-install karena paket ini memang paket third party.
-Untuk install-nya mudah.
+  Catatan ini merupakan lanjutan dari sebelumnya yang membuat tar archive. Kali ini tentang bagaimana mengetahui apa saja file ada di dalam archive tersebut tanpa harus mengekstrak.
+Contoh, terdapat file screenshot2.tar.xz. Untuk mengetahui apa saja isinya
+$ tar tvf screenshot2.tar.xz -rw-r--r-- user1/users 580563 2020-07-15 10:17 Screenshot_2020-07-15_10-17-33.png -rw-r--r-- user1/users 851743 2020-08-03 10:31 Screenshot_2020-08-03_10-31-47.png -rw-r--r-- user1/users 9958 2020-08-04 16:33 Screenshot_2020-08-04_16-33-18.png -rw-r--r-- user1/users 822389 2020-08-06 08:23 Screenshot_2020-08-06_08-22-59.png -rw-r--r-- user1/users 737008 2020-08-06 08:31 Screenshot_2020-08-06_08-31-22.png -rw-r--r-- user1/users 243660 2020-12-04 18:44 Screenshot_2020-12-04_18-44-18.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2016-05-03-install-sbopkg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -577,13 +378,13 @@ Untuk install-nya mudah.
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2016-04-29-install-tor/">Install Tor Browser</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/">Membuat archive tar</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>29 Apr 2016</time>
+    <time>23 Jan 2021</time>
   </div>
 
   
@@ -598,11 +399,7 @@ Untuk install-nya mudah.
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/tor">tor</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/firefox">firefox</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
     
   </div>
   
@@ -614,13 +411,15 @@ Untuk install-nya mudah.
   </header>
 
   <p>
-  Tor Browser adalah peramban web yang sangat memerhatikan privasi. Kita bisa mengakses web secara anonim/ anonymous karena melewati jaringan Tor yang beraneka jalur.
-Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slackware 14.1 download link-nya expired. Tor Stable terbaru adalah versi 5.5.5 dan ini belum tersedia SBo resminya untuk Slackware. Jadi kita akan install mandiri. Tentu saja kita butuh koneksi internet untuk mengunduh berkasnya. Tor tersedia untuk Linux, Windows maupun Mac Os X, baik arsitektur 32 bit maupun 64 bit.
+  Terdapat file sebagai berikut:
+Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Ketujuh file tersebut akan disatukan dalam 1 archive dengan nama file screenshot.tar.gz.
+$ tar cvf screenshot.tar.gz Screen* Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Penjelasan command
+tar : manajemen archive yang digunakan aalah tar c : wajib dituliskan untuk create atau membuat archive v : opsi untuk verbose, menampilkan list file yang diproses f : wajib dituliskan dalam semua penggunaan tar karena f adalah file, identifier untuk file yang akan diproses screenshot.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2016-04-29-install-tor/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -628,13 +427,13 @@ Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slack
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2016-04-28-nano-file-browser/">Kekuatan Tersembunyi Nano : Menampilkan File Tersembunyi</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/">Mengetahui IP lokal dengan nmcli</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>28 Apr 2016</time>
+    <time>15 Jan 2021</time>
   </div>
 
   
@@ -649,63 +448,9 @@ Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slack
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text editor</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Bertahun-tahun pakai linux, baru sadar ternyata nano punya kekuatan tersembunyi. Bisa menampilkan file maupun folder yang hidden secara otomatis.
-Selama ini, untuk mengetahui apa saja yang hidden dengan mengetikkan di terminal
-ls -a Atau dengan menekan ^H atau Ctrl H di thunar, atau Alt . di dolphin.
-Nah, nano secara default akan menampilkan hidden file saat digunakan untuk mencari file yang akan dibuka/disisipkan.
-Perhatikan bagian bawahnya, ada beberapa opsi yang bisa dilakukan.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-04-28-nano-file-browser/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-02-26-mouse-stuck/">Mouse Stuck</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Feb 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/mouse">mouse</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
     
   </div>
   
@@ -717,15 +462,11 @@ Perhatikan bagian bawahnya, ada beberapa opsi yang bisa dilakukan.
   </header>
 
   <p>
-  Setelah upgrade current ternyata ada masalah dengan mouse. Mouse mengalami stuck, ga ada respons saat drag, drop, bahkan ga bisa klik baik klik kiri maupun kanan. Dari grup di telegram dapat informasi dari Pak Willy hal serupa juga dialami oleh beberapa slacker yang lainnya. Alhamdulillah masalah ini bisa solved dengan mudahnya di Slackware64 saya.
-Dengan akses root copas /lib/modprobe.d/psmouse.conf ke /etc/modprobe.d. Kemudian uncomment baris terakhir.
-############################################################################## # Do not edit this file; instead, copy it to /etc/modprobe.
+  Untuk mengetahui alamat ip lokal tanpa akses root dapat menggunakan nmcli
+$ nmcli wlan0: connected to Anatomi &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), CC:B0:DA:B5:3B:75, hw, mtu 1500 ip4 default inet4 192.168.120.19/24 route4 0.0.0.0/0 route4 192.168.120.0/24 route4 192.168.120.0/24 inet6 fe80::1a37:a13:b117:ff74/64 route6 fe80::/64 route6 ff00::/8 Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah
+ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74 
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-02-26-mouse-stuck/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -738,7 +479,7 @@ Dengan akses root copas /lib/modprobe.d/psmouse.conf ke /etc/modprobe.d. Kemudia
   
   <a href="https://sasongko.web.id/page/21/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;22 / 30&nbsp;</span>
+  <span>&nbsp;22 / 59&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/23/"><i class="fa fa-chevron-right"></i></a>
   

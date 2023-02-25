@@ -228,13 +228,13 @@
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-21-screenshot-via-adb/">Screenshot android dengan adb</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/">sbocheck /usr/sbo/repo exists and is not empty</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>21 Aug 2020</time>
+    <time>10 Apr 2021</time>
   </div>
 
   
@@ -249,7 +249,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
     
   </div>
   
@@ -261,104 +261,15 @@
   </header>
 
   <p>
-  Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di external memory (sdcard) dengan nama file screenshot.png
-adb shell screencap -p /sdcard/screenshot.png 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-15-mengenal-r-home/">Mengenal R_HOME</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Aug 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  R_HOME adalah direktori tempat R diinstall. Maksudnya, pada direktori inilah terdapat file binary dan konfigurasinya. Pada linux khususnya slackware, R_HOME ada di
-/usr/lib{,64}/R # tergantung arsitekturnya apakah 32bit atau 64bit. 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">NetworkManager device not ready</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Aug 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Baru beberapa hari memakai (lagi) NetworkManager, sudah bermasalah (lagi).
-device not ready begitulah&hellip;.
-Padahal network interface-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai NetworkManager. Solusinya dari berbagai referensi (lupa mencatat linknya)
-echo &#34;managed=true&#34; &gt;&gt; /etc/NetworkManager/NetworkManager.conf Tapi, ternyata ini kemudian munculkan warning di syslog
-Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] config: unknown key &#39;managed&#39; in section [main] of file &#39;/etc/NetworkManager/NetworkManager.conf Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal).
+  Malam ini, ketika akan update SBo, ternyata tanpa disadari internet disconnect sebelumnya.
+bash-5.1# sbocheck Updating SlackBuilds tree... fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution) Could not sync from git://github.com/Ponce/slackbuilds.git. Setelah internet tidak ada masalah, gantian sbotools-nya yang masalah
+bash-5.1# sbocheck /usr/sbo/repo exists and is not empty. Exiting. Baiklah, local repository-nya minta dikosongkan dulu
+bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree... Cloning into &#39;/usr/sbo/repo&#39;.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -366,13 +277,13 @@ Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] co
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Bye wicd</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-04-07-jumlah-baris-kolom-libreoffice-calc/">Jumlah baris dan kolom libreoffice calc</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>04 Aug 2020</time>
+    <time>07 Apr 2021</time>
   </div>
 
   
@@ -387,9 +298,7 @@ Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] co
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
     
   </div>
   
@@ -401,15 +310,97 @@ Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] co
   </header>
 
   <p>
-  Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan wicd dari repo slackware current.
-extra/wicd/wicd-1.7.4-x86_64-3.txz: Removed.
-This is unmaintained, possibly insecure, and doesn&rsquo;t work with Python versions newer than 2.7.18. NetworkManager is a better choice these days.
-Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripada NetworkManager. Kenyamanan ini sebenarnya karena saya tidak mau repot, NetworkManager seringkali timbulkan masalah, salah satunya mengatur hostname dan domain. Keduanya saya kosongi. Mengapa?
+  Berapa jumlah baris dan kolom yang ada pada worksheet LibreOffice Calc? Jumlah barisnya adalah 1048576. Adapun kolom, tersedia dari A sampai AMJ (1024).
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-04-06-burning-iso-dvd/">Burn iso ke dvd</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>06 Apr 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Misal, file slackware64-live-current.iso akan di-burn ke DVD. DVD terdeteksi oleh sistem sebagai /dev/sr0. Command dijalankan root.
+$ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/">Transfer file dengan lftp</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 Apr 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Salah 1 akibat Work from Home a.k.a WfH adalah kapasitas storage laptop menjadi penuh. Semakin banyak file, semakin berkurang free space. Untuk menyiasatinya, ketika ada kesempatan bekerja di kantor, file-file tersebut ditransfer ke komputer kantor. Karena komputer kantor menggunakan Windows 7 yang mana saya tidak paham bagaimana cara file sharing-nya saya gunakan ftp. Mungkin karena sudah terlanjur nyaman memakai slackware, saya tidak mau ribet pengaturan ftpnya di komputer kantor. Serahkan saja ke bagian IT untuk installnya.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -417,13 +408,13 @@ Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripad
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2020-06-20-edit-video-ffmpeg-lossless/">Edit video ffmpeg tanpa menurunkan kualitas</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-03-27-median-data-python/">Median data dengan python</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>20 Jun 2020</time>
+    <time>27 Mar 2021</time>
   </div>
 
   
@@ -438,7 +429,9 @@ Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripad
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
     
   </div>
   
@@ -450,241 +443,10 @@ Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripad
   </header>
 
   <p>
-  Ketika mengedit video menggunakan ffmpeg, filter video ataupun filter yang lebih kompleks seperti menambahkan watermark, tanpa pengaturan tambahan kadang hasilnya mengecewakan. Gambar pada video menjadi pecah. Untuk meminimalisirnya, bisa ditambahkan opsi -q:v 0.
+  Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau median() yang dimiliki pandas.
+#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # median print(&#39;median konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].median(),&#39;kaleng&#39;) print(&#39;median konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].median()) print(&#39;median konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].median(), &#39;gelas&#39;) print(&#39;median konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].median(), &#39;liter&#39;) 
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-06-11-memisahkan-halaman-pdf/">Memisahkan halaman PDF</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Jun 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Kadang kita perlu mengambil beberapa halaman dari e-book atau sejenisnya yang bertipe pdf. Kita bisa gunakan pdfjam. Misalkan akan mengambil halaman 10-21 dari file buku.pdf.
-pdfjam buku.pdf &#39;10-21&#39; 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/">Deteksi duplikasi file</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jun 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Walau sudah ada tools yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan tools bawaan Slackware. Tools yang umum digunakan antara lain fslint, fdupes atau jdupes. Adapun tools yang biasa saya gunakan
-sha512sum awk uniq grep Misalkan, akan mencari adakah duplikasi file di folder Downloads. Pertama, catat dulu hash-nya. Di sini saya gunakan sha512. Kumpulan sha512 tersebut disatukan dalam file downloads.sha512. File ini terdiri dari 2 kolom. Kolom pertama berisi hash, sedangkan kolom kedua nama filenya.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Menggabungkan video ffmpeg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu
-piknik-1.mkv piknik-2.mkv piknik-3.mkv piknik-4.mkv Keempat file tersebut berada dalam folder yang sama. Kemudian mereka akan digabungkan menjadi piknik.mkv. Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.
-$ vim list-piknik file &#39;piknik-1.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/">Operasi direktori R</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Mengetahui working directory Secara default, working directory pada Slackware adalah home directory user atau di mana command R dijalankan.
-getwd() Mengganti working directory Misal, akan berpindah working directory ke Documents/project
-setwd(&#39;Documents/project&#39;) 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/">Mengetahui volume suara video</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.
-Untuk mengetahui intensitas suara video intro.mkv
-$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &#39;intro.mkv&#39;: Metadata: COMPATIBLE_BRANDS: isommp42 COM.ANDROID.VERSION: 9 MAJOR_BRAND : mp42 MINOR_VERSION : 0 ENCODER : Lavf58.29.100 Duration: 00:00:14.90, start: 0.000000, bitrate: 5559 kb/s Stream #0:0(eng): Video: mpeg4 (Simple Profile), yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 1k tbn, 30 tbc (default) Metadata: HANDLER_NAME : VideoHandle ENCODER : Lavc58.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -697,7 +459,7 @@ $ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matrosk
   
   <a href="https://sasongko.web.id/page/12/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;13 / 30&nbsp;</span>
+  <span>&nbsp;13 / 59&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/14/"><i class="fa fa-chevron-right"></i></a>
   

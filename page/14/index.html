@@ -228,13 +228,13 @@
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-24-aktivasi-android-gps-adb/">Aktivasi android GPS via adb</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-03-26-mean-data-python/">Mean data dengan python</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>24 May 2020</time>
+    <time>26 Mar 2021</time>
   </div>
 
   
@@ -249,7 +249,9 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
     
   </div>
   
@@ -261,8 +263,8 @@
   </header>
 
   <p>
-  Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan adb
-adb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti angka 3 dengan 0.
+  Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau mean() yang dimiliki pandas.
+#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # mean print(&#39;rerata konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].mean(),&#39;kaleng&#39;) print(&#39;rerata konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].mean()) print(&#39;rerata konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].mean(), &#39;gelas&#39;) print(&#39;rerata konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].mean(), &#39;liter&#39;) 
   </p>
 
   
@@ -271,13 +273,13 @@ adb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti a
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-21-menambah-watermark-gambar-video/">Menambah watermark gambar ke video dengan ffmpeg</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/">Statistik deskriptif dengan python</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>24 May 2020</time>
+    <time>25 Mar 2021</time>
   </div>
 
   
@@ -292,7 +294,9 @@ adb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti a
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
     
   </div>
   
@@ -304,100 +308,15 @@ adb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti a
   </header>
 
   <p>
-  Misalkan kita akan memberikan watermark berupa gambar logo.png ke video ramadhan.mkv. Watermark ditempatkan di pojok kiri bawah. Video dengan watermark diberi nama ramadhan-fix.mkv
-ffmpeg -i ramadhan.mkv -i logo.png -filter_complex &#34;overlay=x=0:y=(main_h-overlay-h)&#34; ramadhan-fix.mkv Keterangan opsi dan parameternya
--filter_complex : menggunakan filter yang kompleks overlay : menambahkan watermark x : posisi pada sumbu x, dihitung dari ujung kiri y : posisi pada sumbu y, dihitung dari ujung atas main_h : tinggi video main_w : lebar video overlay_h : tinggi gambar yang akan dijadikan watermark overlay_w : lebar gambar yang akan dijadikan watermark 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-24-mengubah-resolusi-video-ffmpeg/">Mengubah resolusi video ffmpeg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan terdapat video VID20200509135621.mp4, dengan resolusi 3840x2160 SAR 1:1 DAR 16:9. Akan diubah resolusinya menjadi 1920x1080 dengan tetap memperhatikan SAR dan DAR. Video hasil scaling ini diberi nama VID20200509135621-1080p.mkv. Perubahan ini sekaligus konversi ke mkv agar menghemat space.
-ffmpeg -i VID20200509135621.mp4 -vf &#34;scale=1920:1080, setdar=16:9, setsar=1:1&#34; VID20200509135621-1080p.mkv 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Disable tampilan konfigurasi ffmpeg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, output ffmpeg akan menampilkan built configuration yang digunakan.
-$ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers built with gcc 9.2.0 (GCC) configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-4.2.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack libavutil 56. 31.100 / 56. 31.100 libavcodec 58. 54.
+  Untuk menampilkan statistik deskriptif suatu data, bisa menggunakan fungsi describe() dari library yang dimiliki python yaitu pandas.
+Berikut ini akan ditampilkan deskripsi data konsumsi alkohol dunia. Sumber data : https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv
+Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel yaitu :
+beer_servings (konsumsi bir yang dinyatakan dalam kaleng) spirit_servings (konsumsi minuman beralkohol spirit; maaf, variabel ini masih belum penulis pahami sepenuhnya) wine_servings (konsumsi anggur yang dinyatakan dalam gelas) pure_alcohol (konsumsi alkohol murni yang dinyataksan dalam liter, nama variabel ini sudah penulis singkat) Adapun deskripsi yang ditampilkan adalah :
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -405,13 +324,13 @@ $ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers buil
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/">Mengenal objek R factor</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/">Mengetahui struktur dataset</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>22 May 2020</time>
+    <time>24 Mar 2021</time>
   </div>
 
   
@@ -426,7 +345,9 @@ $ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers buil
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
     
   </div>
   
@@ -438,14 +359,15 @@ $ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers buil
   </header>
 
   <p>
-  Factor adalah representasi data kategorik. Factor bisa dibuat dengan fungsi factor() atau cut(). Saya lebih sering menggunakan cut() karena lebih aplikatif saat akan mengubah skala data dari rasio atau interval ke ordinal.
-Contoh, bmi adalah data body mass index (BMI) atau indeks massa tubuh (IMT). Klasifikasi IMT ada 4 macam, yaitu
-&lt; 18,5 : underweight 18,5 - 24,99 : normal 25 - 29,99 : overweight &gt; 30 : obese/obesitas Untuk obesitas, masih bisa diklasifikasikan menjadi 3 30 - 34,99 : obese class 1 35 - 39,99 : obese class 2 &gt; 40 : extreme obesity &gt; bmi &lt;- c(20, 21.
+  Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi info() dari pandas.
+Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
+#!/usr/bin/env python3 import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.info()) Outputnya
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns): # Column Non-Null Count Dtype --- ------ -------------- ----- 0 RowId 178539 non-null object 1 YearStart 178539 non-null int64 2 YearEnd 178539 non-null int64 3 LocationAbbr 178539 non-null object 4 LocationDesc 178539 non-null object 5 Datasource 178539 non-null object 6 Class 178539 non-null object 7 Topic 178539 non-null object 8 Question 178539 non-null object 9 Response 0 non-null float64 10 Data_Value_Unit 178539 non-null object 11 DataValueTypeID 178539 non-null object 12 Data_Value_Type 178539 non-null object 13 Data_Value 120885 non-null float64 14 Data_Value_Alt 0 non-null float64 15 Data_Value_Footnote_Symbol 70619 non-null object 16 Data_Value_Footnote 70619 non-null object 17 Low_Confidence_Limit 120750 non-null float64 18 High_Confidence_Limit 120750 non-null float64 19 Sample_Size 0 non-null float64 20 StratificationCategory1 178539 non-null object 21 Stratification1 178539 non-null object 22 StratificationCategory2 178539 non-null object 23 Stratification2 178539 non-null object 24 StratificationCategory3 0 non-null float64 25 Stratification3 0 non-null float64 26 Geolocation 159375 non-null object 27 ClassID 178539 non-null object 28 TopicID 178539 non-null object 29 QuestionID 178539 non-null object 30 ResponseID 0 non-null float64 31 LocationID 178539 non-null int64 32 StratificationCategoryID1 178539 non-null object 33 StratificationID1 178539 non-null object 34 StratificationCategoryID2 178539 non-null object 35 StratificationID2 178539 non-null object 36 StratificationCategoryID3 0 non-null float64 37 StratificationID3 0 non-null float64 38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -453,13 +375,13 @@ Contoh, bmi adalah data body mass index (BMI) atau indeks massa tubuh (IMT). Kla
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/">Edit volume suara</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-03-23-menggunakan-wget-prefix-directory/">Menggunakan wget prefix directory</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>14 May 2020</time>
+    <time>23 Mar 2021</time>
   </div>
 
   
@@ -474,7 +396,7 @@ Contoh, bmi adalah data body mass index (BMI) atau indeks massa tubuh (IMT). Kla
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/internet-download-manager">internet-download-manager</a>
     
   </div>
   
@@ -486,56 +408,8 @@ Contoh, bmi adalah data body mass index (BMI) atau indeks massa tubuh (IMT). Kla
   </header>
 
   <p>
-  Editing kali ini adalah bagaimana mengubah volume default audio/suara menggunakan ffmpeg. Misal, file yang akan diinput/diedit adalah video.mp4. Karena suaranya terlalu pelan, akan dinaikkan menjadi 5x semula melalui filter audio. File hasil editan diberi nama video-louder.webm.
-ffmpeg -i video.mp4 -filter:a &#34;volume=5&#34; video-louder.webm Apabila suara terlalu nyaring bisa dipelankan. Berikut akan dipelankan menjadi setengahnya dari volume semula dan file baru diberi nama new.webm
-ffmpeg -i video.mp4 -filter:a &#34;volume=0.5&#34; new.webm Atau, dengan menuliskan volume suaranya secara langsung.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-13-convert-jpg-pdf/">Convert jpg ke pdf</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>13 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk menjadikan file jpg ke pdf caranya mudah. Misalkan file-gambar.jpg akan diubah menjadi pdf dengan nama dokumen.pdf
-convert file-gambar.jpg dokumen.pdf 
+  Secara default, apabila menggunakan wget, file di-download ke direktori aktif. Dengan mengaktifkan prefix directory (-P), file tersebut bisa disimpan ke direktori lain.
+$ wget [url] -P [direktori] [url] : URL / alamat lengkap file yang akan di-download [direktori] : direktori tujuan 
   </p>
 
   
@@ -544,13 +418,13 @@ convert file-gambar.jpg dokumen.pdf
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-12-melihat-isi-file-zip/">Melihat isi file zip</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/">Mengetahui dimensi dataset python</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>12 May 2020</time>
+    <time>22 Mar 2021</time>
   </div>
 
   
@@ -565,7 +439,9 @@ convert file-gambar.jpg dokumen.pdf
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
     
   </div>
   
@@ -577,101 +453,11 @@ convert file-gambar.jpg dokumen.pdf
   </header>
 
   <p>
-  Menggunakan linux terutama slackware membuat pekerjaan lebih ringan dan efisien. Suatu ketika diberikan sebuah file terkompresi zip yang misterius. Misterius karena ukurannya besar dan konon kata empunya file tersebut ngehang saat akan dibuka di komputer dengan sistem bukan slackware juga bukan linux. Dan ketika dibuka di slackware ketahuanlah nama &ldquo;penduduk&rdquo; zip tersebut.
-zip -sf namafile.zip # atau less namafile.zip 
+  Untuk mengetahui dimensi atau jumlah baris dan kolom dataset dapat menggunakan shape dari pandas. Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
+import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.shape) Output:
+(178539, 39) Dari output tersebut diketahui dataset mempunyai 178539 baris dan 39 kolom.
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-05-trimming-video-ffmpeg/">Trimming Video ffmpeg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>05 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan, kita akan mencuplik sebagian (trimming) video video-asli.mp4 dari menit ke 57 lebih 34 detik sampai durasi ke 1 jam 2 menit 5 detik. Fila hasil trimming adalah cuplikan.mp4
-ffmpeg -i video-asli.mp4 -ss 00:57:34 -to 01:02:05 -c copy cuplikan.mp4 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">Mengenal Objek R Vector</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 Apr 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.
-Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.
-Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -684,7 +470,7 @@ Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini ber
   
   <a href="https://sasongko.web.id/page/13/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;14 / 30&nbsp;</span>
+  <span>&nbsp;14 / 59&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/15/"><i class="fa fa-chevron-right"></i></a>
   

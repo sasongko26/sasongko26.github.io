@@ -228,13 +228,13 @@
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-06-download-seluruh-website/">Download Seluruh Isi Website</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2020-06-11-memisahkan-halaman-pdf/">Memisahkan halaman PDF</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Jun 2015</time>
+    <time>11 Jun 2020</time>
   </div>
 
   
@@ -249,7 +249,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
     
   </div>
   
@@ -261,8 +261,8 @@
   </header>
 
   <p>
-  Melanjutkan [catatan yang lalu]({% post_url 2014-03-23-wget-linux-download-manager %}), kali ini adalah penggunaan wget untuk mengunduh/download website secara keseluruhan/rekursif.
-$ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url silahkan diganti dengan alamat websitenya.
+  Kadang kita perlu mengambil beberapa halaman dari e-book atau sejenisnya yang bertipe pdf. Kita bisa gunakan pdfjam. Misalkan akan mengambil halaman 10-21 dari file buku.pdf.
+pdfjam buku.pdf &#39;10-21&#39; 
   </p>
 
   
@@ -271,13 +271,13 @@ $ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url sila
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-09-install-libreoffice-slackbuild/">Install Libre Office di Slackware</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/">Deteksi duplikasi file</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Jun 2015</time>
+    <time>01 Jun 2020</time>
   </div>
 
   
@@ -292,7 +292,9 @@ $ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url sila
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
     
   </div>
   
@@ -304,12 +306,13 @@ $ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url sila
   </header>
 
   <p>
-  Secara default aplikasi perkantoran yang disediakan Slackware bukan Libre Office. Kalau pada saat instalasi Slackware (yang penulis gunakan arsitektur 64 bit) memilih full install maka aplikasi perkantoran yang terpasang adalah Calligra. Dibandingkan dengan Calligra, saya merasa lebih sreg menggunakan LibreOffice karena kompatibilitasnya yang lebih baik terhadap dokumen yang dibuat dengan Ms Office (harap maklum, masih banyak saudara-saudara kita yang belum bisa move on ke open source dan tidak semua menggunakan Ms Office bajakan).
+  Walau sudah ada tools yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan tools bawaan Slackware. Tools yang umum digunakan antara lain fslint, fdupes atau jdupes. Adapun tools yang biasa saya gunakan
+sha512sum awk uniq grep Misalkan, akan mencari adakah duplikasi file di folder Downloads. Pertama, catat dulu hash-nya. Di sini saya gunakan sha512. Kumpulan sha512 tersebut disatukan dalam file downloads.sha512. File ini terdiri dari 2 kolom. Kolom pertama berisi hash, sedangkan kolom kedua nama filenya.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2015-06-09-install-libreoffice-slackbuild/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -317,13 +320,13 @@ $ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url sila
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-09-uninstall-calligra/">Uninstall Calligra Office Suite</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Menggabungkan video ffmpeg</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Jun 2015</time>
+    <time>30 May 2020</time>
   </div>
 
   
@@ -338,7 +341,7 @@ $ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url sila
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
     
   </div>
   
@@ -350,13 +353,14 @@ $ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url sila
   </header>
 
   <p>
-  Calligra adalah office suite atau aplikasi perkantoran yang dikembangkan KDE yang dulu bernama KOffice. Kalau memasang KDE secara full kita akan mendapatinya.
-Calligra memang layak digunakan untuk keperluan perkantoran. Performanya dalam mengolah dokumen terbuka (open document format/ODF) cukup bagus. Namun sayangnya, Calligra tidak kompatibel dengan dokumen OOXML (dokumen yang dibuat dengan Microsoft Office). Tak jarang Calligra menjadi hang saat membuka atau mengolah dokumen dengan format docx (Ms Word), xlsx (Ms Excel) dan pptx (Ms PowerPoint).
+  Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu
+piknik-1.mkv piknik-2.mkv piknik-3.mkv piknik-4.mkv Keempat file tersebut berada dalam folder yang sama. Kemudian mereka akan digabungkan menjadi piknik.mkv. Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.
+$ vim list-piknik file &#39;piknik-1.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2015-06-09-uninstall-calligra/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -364,60 +368,13 @@ Calligra memang layak digunakan untuk keperluan perkantoran. Performanya dalam m
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-07-install-jdk-slackware/">Install JDK Slackware</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/">Operasi direktori R</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Java Development Kit atau yang biasa disingkat JDK ini berguna untuk membuat/mengembangkan aplikasi berbasis Java. Selain itu, untuk menginstall dan/atau menjalankan aplikasi tertentu disyaratkan JDK, seperti LibreOffice, Netbeans dan Aptana. Sebelum install kita unduh dulu dari http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html .
-Karena Slackware yang digunakan adalah 64 bit maka pilih untuk yang LInux x64 format rpm.
-Untuk bisa mengunduh harus menyetujui perjanjian lisensi dulu (Accept License Agreement).
-Kemudian pindahkan hasil unduhan ke /usr/local/src dilanjutkan dengan pindah ke direktori /usr/local/src
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-07-install-jdk-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-06-sebelum-install-linux/">Hal-hal yang Harus Diketahui Sebelum Menginstall Linux</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Jun 2015</time>
+    <time>29 May 2020</time>
   </div>
 
   
@@ -432,7 +389,7 @@ Kemudian pindahkan hasil unduhan ke /usr/local/src dilanjutkan dengan pindah ke 
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
     
   </div>
   
@@ -444,27 +401,24 @@ Kemudian pindahkan hasil unduhan ke /usr/local/src dilanjutkan dengan pindah ke 
   </header>
 
   <p>
-  Memang sudah seharusnya sebelum menginstall linux kita memiliki beberapa pengetahuan yang memadai. Imam Bukhari mengatakan &ldquo;al ilmu qablal qawl wal amal&rdquo; yang maksudnya sebelum melakukan sesuatu harus dilandasi dengan ilmu/pengetahuan tentang apa yang akan dilakukannya itu. Dan dalam ilmu fiqh / hukum Islam dikenal kaidah &ldquo;al umuru bimaqashidiha&rdquo; yang artinya setiap perkara itu tergantung maksud/niatnya. Kaidah ini diambil dari hadits &ldquo;innamal a&rsquo;malu binniyat&rdquo; segala sesuatu tergantung niatnya.
-Pertama yang harus diketahui adalah niat.
+  Mengetahui working directory Secara default, working directory pada Slackware adalah home directory user atau di mana command R dijalankan.
+getwd() Mengganti working directory Misal, akan berpindah working directory ke Documents/project
+setwd(&#39;Documents/project&#39;) 
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-06-sebelum-install-linux/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-01-operasi-direktori/">Operasi Direktori di Linux</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/">Mengetahui volume suara video</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jun 2015</time>
+    <time>25 May 2020</time>
   </div>
 
   
@@ -479,9 +433,7 @@ Pertama yang harus diketahui adalah niat.
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
     
   </div>
   
@@ -493,199 +445,14 @@ Pertama yang harus diketahui adalah niat.
   </header>
 
   <p>
-  Operasi direktori/folder adalah suatu hal yang mendasar di linux. Walaupun sekarang banyak desktop environment yang menyebabkan sedikit interaksi dengan terminal langsung karena tinggal klik saja dalam mode grafis (GUI), kami akan tetap sampaikan bagaimana melakukannya dalam mode teks (CLI).
-Mengetahui posisi direktori sekarang Gunakan
-pwd untuk mengetahui saat ini aktif di mana. Contoh
-$ pwd /home/sasongko Tampak bahwa direktori saat ini adalah di /home/sasongko.
-Menampilkan isi direktori ls /direktori Contoh berikut akan menampilkan isi dari direktori /etc
+  Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.
+Untuk mengetahui intensitas suara video intro.mkv
+$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &#39;intro.mkv&#39;: Metadata: COMPATIBLE_BRANDS: isommp42 COM.ANDROID.VERSION: 9 MAJOR_BRAND : mp42 MINOR_VERSION : 0 ENCODER : Lavf58.29.100 Duration: 00:00:14.90, start: 0.000000, bitrate: 5559 kb/s Stream #0:0(eng): Video: mpeg4 (Simple Profile), yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 1k tbn, 30 tbc (default) Metadata: HANDLER_NAME : VideoHandle ENCODER : Lavc58.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2015-06-01-operasi-direktori/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-05-30-memformat-flashdisk-di-linux/">Memformat Flashdisk di LInux</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 May 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Memformat flashdisk di linux adalah hal yang mudah.
-Pertama, pastikan flashdisknya terdeteksi oleh sistem. Pada kesempatan ini merk flashdisknya adalah Toshiba.
-$ lsusb Bus 001 Device 003: ID 0930:1400 Toshiba Corp. Memory Stick 2GB Bus 001 Device 002: ID 04f2:b483 Chicony Electronics Co., Ltd Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub Perhatikan baris 2, flashdisk terdeteksi.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-05-30-memformat-flashdisk-di-linux/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-05-23-konversi-livedvd-iso/">Mengubah LiveDVD Menjadi ISO</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 May 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Beberapa waktu lalu lihat DVD BlankOn 8 Rote nganggur di seonggok kumpulan CD/DVD. Enaknya diapain ya itu DVD? Kalau dibiarkan khawatirnya kotor malah ngga bisa digunakan lagi. Ya udah mending dibuat file ISO aja. Kalau dibuat file ISO insya Allah manfaatnya lebih banyak karena tersimpan di hardisk bisa lebih tahan lama daripada dalam bentuk DVD, dan suatu saat nanti kalau dibutuhkan tapi DVDnya ngga bisa dipakai tinggal dibakar aja ISOnya entah itu jadi DVD atau ke flashdisk.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-05-23-konversi-livedvd-iso/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-05-14-developer-mengajar-5/">Developer Mengajar 5.0</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 May 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/seminar">seminar</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-05-02-kontes-desain-web-kominfo-2015/">Kontes Desain Web Kominfo 2015</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 May 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/seminar">seminar</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Dalam rangka semangat Reformasi Birokrasi dan mengedepankan pelayanan prima kepada publik/masyarakat, Kementerian Komunikasi dan Informatika telah dan terus melakukan berbagai upaya, salah satunya adalah dalam hal pemberian/penyajian informasi kepada publik/masyarakat melalui Website Kominfo. Guna mendukung upaya tersebut lebih baik lagi, Kementerian Komunikasi dan Informatika akan melakukan pembaharuan dan desain kembali Website Kominfo dengan melibatkan peran serta masyarakat melalui Lomba/Kontes Desain Website Kominfo Tahun 2015.
-Hal ini dilakukan tidak hanya untuk memperbaiki tampilan Website Kominfo saja melainkan juga untuk merombak arsitektur Website Kominfo sehingga akan lebih banyak lagi fitur layanan dan informasi publik yang dapat disampaikan/disajikan kepada publik/masyarakat.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-05-02-kontes-desain-web-kominfo-2015/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -699,7 +466,7 @@ Hal ini dilakukan tidak hanya untuk memperbaiki tampilan Website Kominfo saja me
   
   <a href="https://sasongko.web.id/page/25/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;26 / 30&nbsp;</span>
+  <span>&nbsp;26 / 59&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/27/"><i class="fa fa-chevron-right"></i></a>
   

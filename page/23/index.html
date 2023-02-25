@@ -228,13 +228,13 @@
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2016-02-08-slackware-current-hang/">Slackware Current Susah Booting dan Shutdown</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Rebuild R post-upgrade icu4c</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>08 Feb 2016</time>
+    <time>13 Jan 2021</time>
   </div>
 
   
@@ -249,9 +249,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
     
   </div>
   
@@ -263,13 +261,14 @@
   </header>
 
   <p>
-  Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering stuck saat boot dan shutdown.
-Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis ID-Slackware, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.
+  Pagi ini, saat akan mengeksekusi R,
+$ R /usr/lib64/R/bin/exec/R: error while loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory Ternyata R nya bermasalah. Di atas disebutkan bahwa libicuuc.so.67 tidak ditemukan. Dari namanya, bisa ditebak itu adalah shared object/library miliknya icu4c. Kita pastikan dulu,
+$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE The list below shows the packages that contains &#34;libicuuc\.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2016-02-08-slackware-current-hang/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -277,13 +276,13 @@ Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan d
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/">pip InsecurePlatformWarning</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Ekstraksi waktu pada changelog dengan sed</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>21 Jan 2016</time>
+    <time>12 Jan 2021</time>
   </div>
 
   
@@ -298,9 +297,7 @@ Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan d
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sed">sed</a>
     
   </div>
   
@@ -312,13 +309,16 @@ Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan d
   </header>
 
   <p>
-  Saat melakukan pencarian dengan pip, muncul pesan
-/usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:315: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning. SNIMissingWarning /usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:120: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail.
+  Ini adalah keisengan di kala WFH alias work from home. Melakukan ekstraksi waktu pada changelog slackware64-current yang terakhir kami update 8 Januari 2021.
+Changelognya terdiri dari 4 bagian:
+Waktu Packages yang mengalami perubahan (Upgraded, Removed, Added, Rebuilt) Keterangan perubahan Pembatas update antarwaktu (+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+) Akan diambil yang no.1 saja.
+Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.txt.
+$ sed &#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -326,13 +326,13 @@ Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan d
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2015-12-26-menggunakan-gdrv/">Cara Menggunakan gdrv</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/">Menggunakan ratpoison</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Dec 2015</time>
+    <time>11 Jan 2021</time>
   </div>
 
   
@@ -347,9 +347,9 @@ Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan d
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/cloud">cloud</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/ratpoison">ratpoison</a>
     
   </div>
   
@@ -361,13 +361,13 @@ Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan d
   </header>
 
   <p>
-  gdrv adalah salah satu command line interface tool berbasis python untuk Google Drive. Cara menginstallnya silahkan buka [catatan ini]({% post_url 2015-07-26-install-gdrv %}). Adapun cara penggunaannya adalah sebagai berikut:
-$ gdrv -h usage: gdrv [-h] [-v] [-w] [-V] {ftp,pull,search,url,push,mkdir,share,trash,list,init} ... YMK google drive command line tool positional arguments: {ftp,pull,search,url,push,mkdir,share,trash,list,init} drive sub command ftp interactive mode like sftp, lftp pull command pull help search command search help url command url help push command push help mkdir command mkdir help share command share help trash command trash help list command list help init command init help optional arguments: -h, --help show this help message and exit -v, --verbose increse verbosity/logging level -w, --write-config write a default config -V, --version show version infomation Pertama, inisiasi dulu,
+  Ratpoison sesuai namanya benar adalah racun! Mouse-nya terkena racun! Penggunaan mouse menjadi minimal. User banyak menggunakan keyboard.
+Memasuki lingkungan ratpoison user disambut interface hitam (mungkin dengan disertai bayangannya sendiri). Sudut kanan atas muncul ucapan selamat datang Welcome to ratpoison! Hit C - t ? for help.. Bagi yang selalu berpesta dalam gemerlapnya KDE Plasma, Cinnamon, Xfce, Mate, Budgie, dll sangat mungkin merasa njegleg atau keheranan bahkan mungkin bingung atau linglung. Tapi slackers insyaallah tetap tenang-tenang saja, bisa beradaptasi.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2015-12-26-menggunakan-gdrv/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -375,13 +375,13 @@ $ gdrv -h usage: gdrv [-h] [-v] [-w] [-V] {ftp,pull,search,url,push,mkdir,share,
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2015-12-26-mount-iso-image/">Mount ISO Image</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Mengetahui kondisi baterai</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Dec 2015</time>
+    <time>10 Jan 2021</time>
   </div>
 
   
@@ -396,7 +396,11 @@ $ gdrv -h usage: gdrv [-h] [-v] [-w] [-V] {ftp,pull,search,url,push,mkdir,share,
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/power-manager">power-manager</a>
     
   </div>
   
@@ -408,13 +412,13 @@ $ gdrv -h usage: gdrv [-h] [-v] [-w] [-V] {ftp,pull,search,url,push,mkdir,share,
   </header>
 
   <p>
-  Mempunyai berkas citra ISO/ISO image ada manfaatnya. Pertama, sebagai cadangan kalau FD/DVD installernya tidak dapat digunakan. Kedua, untuk melakukan remaster. Bagaimana caranya mengetahui isi dari ISO tersebut? Paket apa saja yang ada di dalamnya? Untuk distro tertentu seperti slackware misalnya, paket yang disertakan bisa dilihat dengan mudah dari ISO tanpa harus membakarnya. Kita mount saja ISOnya.
-Misalkan berkas ISO yang akan di mount adalah slackware64-14.1-install-dvd.iso, dan akan di-mount di /mnt/iso
+  Mengecek kondisi baterai laptop melalui terminal atau command line interface sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara default sudah menyertakan desktop environment seperti xfce, kde, mate, cinnamon, budgie, lumina dan manokwari dengan interface yang cantik dan menarik. DE tersebut sudah mempunyai power manager lengkap dengan applet-nya yang tak pernah bosan nempel di panel.
+Bagaimana kalau &lsquo;hanya&rsquo; menggunakan window manager seperti GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm atau ratpoison yang tidak mempunyai power manager sendiri?
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2015-12-26-mount-iso-image/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -422,13 +426,13 @@ Misalkan berkas ISO yang akan di mount adalah slackware64-14.1-install-dvd.iso, 
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/">Tidak Ada Ikon NetworkManager di Panel</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/">Menggunakan rsync</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Dec 2015</time>
+    <time>01 Jan 2021</time>
   </div>
 
   
@@ -443,7 +447,9 @@ Misalkan berkas ISO yang akan di mount adalah slackware64-14.1-install-dvd.iso, 
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/internet-download-manager">internet-download-manager</a>
     
   </div>
   
@@ -455,259 +461,14 @@ Misalkan berkas ISO yang akan di mount adalah slackware64-14.1-install-dvd.iso, 
   </header>
 
   <p>
-  Iseng-iseng install lagi slackware tapi tanpa paket yang ada di kategori ap atau direktori slackware/ap dan xap (slackware64/xap).
-Efek sampingnya adalah, tidak adanya ikon NetworkManager di panel. Di sini saya gunakan DE XFCE. Sementara itu paket direktori slackware/n semuanya terinstall.
-Install dulu appletnya. Karena saya punya berkas ISOnya maka installnya bisa offline asalkan tahu di mana letak paketnya berada. Setelah mount ISOnya ke /mnt/iso,
-installpkg /mnt/iso/slackware64/xap/network-manager*.txz Ketika memunculkan ikon/applet NetworkManagernya ke panel,
+  Kegunaan rsync rsync berguna untuk transfer file secara efisien. Dibandingkan dengan cp atau mv, rsync memiliki keunggulan :
+Bebas pilih-pilih file maupun direktori yang akan ditransfer karena ada fitur include dan exclude Apabila gagal, misalnya karena storage penuh atau &ldquo;kecelakaan&rdquo; salah klik sehingga ter-close, dapat dilanjutkan tanpa mengulang dari awal sehingga waktunya tentu lebih cepat Dibandingkan wget, rsync mendukung penggunaan wildcard dan secara default rsync resumeable.
+Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-12-12-install-bzr/">Install Bazaar</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>12 Dec 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/control-version-system">control version system</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Bazaar atau disingkat bzr adalah salah 1 jenis control version system seperti git.
-Git secara default sudah terinstall tapi bzr harus diinstal sendiri.
-$ wget http://launchpad.net/bzr/2.6/2.6.0/+download/bzr-2.6.0.tar.gz $ tar xzf bzr-2.6.0.tar.gz $ cd bzr-2.6.0 # python setup.py install 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-11-06-ganti-de/">Ganti Desktop Environment</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Nov 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/mate">mate</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Biar tidak membosankan, kadangkala kita butuh ganti desktop environment (DE). Caranya (root privileges),
-xwmconfig Pilih X Windows (atau DE)-nya. Kemudian Ok atau tekan Enter, Log out dan Log in kembali.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-11-06-install-mate-desktop/">Install Mate Desktop</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Nov 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/mate">mate</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Walaupun desktop environment resmi Slackware adalah KDE dan Xfce, kita tetap bisa menggunakan DE lain, mate contohnya. Mate punya tampilan menarik tapi tetap ringan. Installnya mudah kok, seperti biasa pakai slackbuilds. Pastikan tersambung internet untuk mengunduh berkasnya, oya kita butuh kira-kira 500 MB untuk download mate.
-Pertama, dengan peramban web buka github mate slackbuilds. Nah, karena di sini menggunakan 14.1 (bukan current) maka pilih branch 14.1-mate-1.10. Setelah itu unduh tarball/zipnya kemudian ekstrak.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-11-06-install-mate-desktop/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/">Mengembalikan File yang Terhapus dengan Testdisk</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Oct 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/recovery file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.
-Sebagai root jalankan
-testdisk kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih No Log karena merasa log ini tidak terlalu penting. Selanjutnya akan terdeteksi media simpan yang terpasang di komputer.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-10-29-install-testdisk/">Install Testdisk</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 Oct 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Testdisk adalah salah satu aplikasi digital forensik multiplatform. Bisa dijalankan di Windows (NT4, 2000, 2003, XP, Vista dan 7), Linux, FreeBSD, OpenBSD, NetBSD, SunOS, dan MacOS. Adapun kegunaannya untuk mengembalikan partisi yang terhapus beserta file-file yang ada di dalamnya. Informasi lebih lengkap tentang testdisk bisa didapatkan di sini.
-Sebenarnya untuk Slackware sudah ada slackbuild-nya, tapi tidak ada salahnya kalau install dari kode sumber. Penginstallan dijalankan dengan level root.
-wget http://www.cgsecurity.org/testdisk-7.0.tar.bz2 tar xjvf testdisk-7.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-10-29-install-testdisk/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -721,7 +482,7 @@ wget http://www.cgsecurity.org/testdisk-7.0.tar.bz2 tar xjvf testdisk-7.
   
   <a href="https://sasongko.web.id/page/22/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;23 / 30&nbsp;</span>
+  <span>&nbsp;23 / 59&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/24/"><i class="fa fa-chevron-right"></i></a>
   

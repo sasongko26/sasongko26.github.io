@@ -228,13 +228,13 @@
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/">Upgrade Plasma 5</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-01-29-video-mengetahui-versi-libreoffice/">(Video) Mengetahui versi libreoffice</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Oct 2016</time>
+    <time>29 Jan 2021</time>
   </div>
 
   
@@ -249,9 +249,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
     
   </div>
   
@@ -263,13 +261,145 @@
   </header>
 
   <p>
-  Secara resmi, Slackware masih menggunakan KDE 4 yang &ldquo;ketinggalan jaman&rdquo; padahal pengembang KDE telah merilis KDE (sekarang biasa disebut Plasma) 5. Plasma 5 ini masih tetap seperti &ldquo;kakaknya&rdquo; (KDE 4) yang boros memory dibandingkan Xfce. Tapi, masya Allah tampilan lebih keren!
-Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah membuat slackbuild dan binary package-nya yang bisa kita gunakan. Versi terakhir versi Eric saat ini adalah Plasma 5.7.4 sedangkan insya Allah tanggal 4 Oktober 2016 KDE merilis Plasma 5.
+  Bagaimana cara mengetahui versi libre office? Simak video sederhana berikut ini
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/">Menambah file archive tar</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk menambahkan file ke dalam tar archive mudah. Gunakan opsi -r atau &ndash;append pada command tar.
+Misalkan, file photo_2020-08-22_19-03-32.jpg yang ada di ~/Documents akan dimasukkan atau ditambahkan ke dalam file archive screenshot.tar.xz
+$ tar rf screenshot.tar.xz photo_2020-08-22_19-03-32.jpg Atau
+$ tar f screenshot.tar.xz --append photo_2020-08-22_19-03-32.jpg Apabila file photo_2020-08-22_19-03-32.jpg ingin langsung dihapus dari lokasi aslinya setelah ditambahkan ke tar, beri opsi &ndash;remove-files
+$ tar f screenshot.tar.xz --append --remove-files photo_2020-08-22_19-03-32.jpg 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-28-video-mengenal-main-window-calc/">(Video) Mengenal main window libreoffice calc</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>28 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Libre office calc merupakan aplikasi spreadsheet pengolah data. Pada jendela utama atau main window terdapat beberapa bagian, antara lain
+Name bar Title bar Menu bar Tool bar Namebox Formula bar Sheet tab Untuk ulasan lebih lengkap bisa disimak video berikut ini
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-28-modifikasi-htop/">Modifikasi htop</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>28 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Htop merupakan system monitoring tool yang cukup lengkap, bukan sekedar process viewer yang menampilkan proses apa saja yang berjalan. Dengan htop user dapat melihat running process, mencari process ataupun mengakhirinya.
+Secara default tampilan htop sebagai berikut
+Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin menambahkan persentase baterai dan penggunaan zram. Caranya, tekan F2. Perhatikan kolom paling kanan Available Meters. Letakkan kursor di kolom tersebut, scroll sampai ketemu yang diinginkan.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-28-modifikasi-htop/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -277,13 +407,13 @@ Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah mem
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Mount qcow2</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/">Pelengkap dnscrypt-proxy</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Sep 2016</time>
+    <time>27 Jan 2021</time>
   </div>
 
   
@@ -298,11 +428,7 @@ Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah mem
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
     
   </div>
   
@@ -314,404 +440,13 @@ Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah mem
   </header>
 
   <p>
-  Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
-Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
-modprobe nbd max_part=N max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.
-Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbd yang mengaktifkan koneksi file /mnt/virtual/image/ign11.
+  Catatan ini merupakan catatan tambahan untuk melengkapi README.Slackware pada skrip dnscrypt-proxy yang ada di SBo. Yang ada di SBo :
+Membuat grup dnscrypt dan usernya Mengkonfigurasi dns /etc/resolv.conf.head Memasukkan dnscryp-proxy ke /etc/rc.d/rc.local{,_shutdown} Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi maintainer dnscrypt-proxy tidak mengikutsertakan langkah ini. Penulis menggunakan NetworkManager, setelah check &amp; recheck, dnscrypt-proxy tidak bekerja karena file /etc/resolv.conf terkena overwrite oleh NetworkManager. Ini adalah langkah untuk memberikan imunisasi/mencegah overwrite.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-09-10-nonaktif-delall-slackpkg/">Nonaktifkan Penghapusan Unduhan Slackpkg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Sep 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackpkg">slackpkg</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, slackpkg akan menghapus semua file yang di- download / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di /etc/slackpkg/slackpkg.conf pada baris 77
-DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah on menjadi off.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/">Cek Harddisk Korup</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>17 Aug 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya
-dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck. Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu /dev/sda1. Dan direkomendasikan untuk menjalankan fsck.
-fsck /dev/sda1 fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/">Mengatur DNS Default</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Aug 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, DNS atau Domain Name Server yang digunakan adalah DNS dari operator/penyedia layanan internet. Namun sayangnya, operator tertentu kurang baik dalam penapisan/pemblokiran situs-situs negatif sehingga kadang konten-konten pornografi, judi, dan konten lainnya yang tidak sesuai dengan norma kesusilaan dan budaya Indonesia dapat sampai ke hadapan kita. Oleh karena itulah perlu menggunakan DNS lain.
-Penggantian DNS ini ada 2 cara, yaitu manual dan otomatis.
-Cara manual dengan menyunting berkas /etc/resolv.conf. Mengganti nameserver yang ada dengan nameserver yang diinginkan.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/">Terperangkap WindowMaker</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>28 Jul 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/mate">mate</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Mencoba merasakan kejadulan WindowMaker yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama xfce melalui command xwmconfig, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di WindowMaker. Bahkan tidak bisa ganti DE lainnya termasuk KDE dan Mate.
-Tapi kemudian bisa teratasi dengan menghapus .xinitrc dan folder GNUStep yang ada di home direktori pengguna.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-10-set-default-brightness/">Set Default Brightness</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Jul 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Kecerahan monitor / brightness 100% membuat mata cepat lelah. Apalagi kalau secara default begitu masuk X brightness-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan Computer Vision Syndrome.
-Berapa persen brightness yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur brightness bisa gunakan xbacklight.
-Untuk mengetahui berapa persen brightness yang digunakan saat ini xbacklight. Sedangkan untuk mengubahnya xbacklight -set persen. Contoh akan diatur brightness-nya 15%:
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-07-10-set-default-brightness/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Virtual Manager unable to connect to libvirt</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>05 Jul 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Manager belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failure dengan detail sebagai berikut
-Unable to connect to libvirt. internal error: Cannot find suitable emulator for x86_64 Libvirt URI is: qemu:///system Traceback (most recent call last): File &#34;/usr/share/virt-manager/virtManager/connection.py&#34;, line 979, in _open_thread self._populate_initial_state() File &#34;/usr/share/virt-manager/virtManager/connection.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Virt-Manager ImportError: No module named requests</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>04 Jul 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.
-$ virt-manager Traceback (most recent call last): File &#34;/usr/share/virt-manager/virt-manager&#34;, line 33, in &lt;module&gt; from virtinst import util as util File &#34;/usr/share/virt-manager/virtinst/__init__.py&#34;, line 89, in &lt;module&gt; from virtinst.distroinstaller import DistroInstaller File &#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;, line 23, in &lt;module&gt; from . import urlfetcher File &#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;, line 34, in &lt;module&gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackware-142/">Upgrade ke Slackware 14.2</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>03 Jul 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackpkg">slackpkg</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Sehubungan dengan telah rilisnya Slackware 14.2 maka silahkan melakukan upgrade untuk mendapatkan keamanan yang lebih bagus dan fitur-fitur baru. Saya selama ini melakukan upgrade bertahap demi penghematan kuota internet. Dimulai dengan upgrade ke current karena saat itu versi stable yang baru (14.2) masih dalam proses pengembangan. Upgrade ini menggunakan slackpkg. Dan tentu saja membutuhkan sambungan internet.
-Pilih cermin atau mirror. Dengan menyunting /etc/slackpkg/mirrors, menghilangkan tanda komentar/tanda pagar pada repo yang diinginkan.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackware-142/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -725,7 +460,7 @@ Pilih cermin atau mirror. Dengan menyunting /etc/slackpkg/mirrors, menghilangkan
   
   <a href="https://sasongko.web.id/page/20/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;21 / 30&nbsp;</span>
+  <span>&nbsp;21 / 59&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/22/"><i class="fa fa-chevron-right"></i></a>
   

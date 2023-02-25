@@ -228,13 +228,13 @@
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2015-10-01-download-video-youtube/">Download Video Youtube</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/">Xfce 4.16 Masuk Current</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Oct 2015</time>
+    <time>28 Dec 2020</time>
   </div>
 
   
@@ -249,7 +249,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
     
   </div>
   
@@ -261,15 +261,15 @@
   </header>
 
   <p>
-  Download video dari Youtube adalah hal yang mudah bagi pengguna Slackware. Paling tidak ada 2 cara. Cara pertama menggunakan peramban web, dan cara kedua menggunakan youtube-dl yang berantar muka teks. Di sini menggunakan cara kedua. Untuk menginstall youtube-dl silahkan [klik di sini]({% post_url 2015-10-01-install-youtubedl %}).
-Cara menggunakannya
-youtube-dl url_video_youtube Contoh, akan URL video yang akan di download adalah https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54.
-youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54 Kalau ada beberapa video yang ingin didownload, masukkan saja URLnya ke satu file, tiap baris 1 URL, kemudian cara downloadnya tambahkan opsi -a
+  Pagi ini, Patrick memasukkan xfce 4.16 ke slackware current main tree tanpa singgah di /testing. Interface xfce 4.16 lebih cantik dan menarik dibanding sebelumnya. Demikian pula icons-nya.
+Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown xfce stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses development.
+Ada beberapa hal yang menjadi catatan buat penulis terkait xfce 4.16 ini, yaitu
+Interface lebih cantik dan menarik Penambahan xfce4-panel-profiles yang memungkinkan untuk menyimpan profil/konfigurasi panel.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2015-10-01-download-video-youtube/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -277,13 +277,13 @@ youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2015-10-01-install-youtubedl/">Install Youtube Downloader</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Mengetahui kapan komputer dinyalakan</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Oct 2015</time>
+    <time>25 Dec 2020</time>
   </div>
 
   
@@ -298,7 +298,9 @@ youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>
     
   </div>
   
@@ -310,23 +312,28 @@ youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9
   </header>
 
   <p>
-  Siapa bilang pakai Slackware ga bisa download video dari Youtube? Bisa kok pakai youtube-dl.Cara installnya gampang. Pastikan terhubung ke internet untuk mengunduh berkasnya. Dan untuk install butuh hak akses root. Di sini kita pakai cara yang mudah saja, install dari slackbuilds.org.
-cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-dl.tar.gz tar xzf youtube-dl.tar.gz cd youtube-dl wget https://github.com/rg3/youtube-dl/archive/2015.09.22.tar.gz sh youtube-dl.SlackBuild installpkg /tmp/youtube-dl-2015.09.22-x86_64-1_SBo.tgz 
+  Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan dmesg
+$ dmesg -T | head -1 [Fri Dec 25 00:39:42 2020] Linux version 5.10.2 Penjelasan command :
+eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp | adalah pipe, untu menjadikan output dmesg sebagai input untuk head head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya [Fri Dec 25 00:39:42 2020] Linux version 5.
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2015-09-30-copas-terminal/">Copy Paste di Terminal</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/">Start up time kernel 5.10.2</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Sep 2015</time>
+    <time>24 Dec 2020</time>
   </div>
 
   
@@ -341,9 +348,9 @@ cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-d
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>
     
   </div>
   
@@ -355,22 +362,27 @@ cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-d
   </header>
 
   <p>
-  Bagaimana sih caranya copy paste teks yang ada di Terminal? Untuk copy blok tulisannya kemudian klik kanan pilih Copy, atau setelah diblok tekan Ctrl Shift C. Sedangkan untuk paste ke terminal silahkan klik kanan pilih Paste atau tekan Ctrl Shift V.
+  Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam main tree slackware current. Saat catatan ini dituliskan, sudah &ldquo;mendarat&rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk start up. Yang dimaksud start up di sini adalah kondisi dari eksekusi elilo dan initrd sampai muncul login prompt.
+$ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segment Routing with IPv6 [ 32.
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2015-08-17-setting-internet-xl-slackware/">Setting Internet XL Slackware</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2020-12-20-beralih-hugo/">Beralih ke Hugo</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>17 Aug 2015</time>
+    <time>20 Dec 2020</time>
   </div>
 
   
@@ -395,14 +407,13 @@ cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-d
   </header>
 
   <p>
-  Di [catatan yang lalu]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) telah kami sampaikan cara konek internet di Slackware dengan modem, ppp, dan internet provider atau operator Tri. Kali ini akan kami ganti dengan operator XL.
-Sunting berkas /etc/ppp/options
-# General configuration options for PPPD: lock defaultroute noipdefault modem /dev/ttyUSB0 460800 crtscts # Uncomment the line below for more verbose error reporting: #debug # If you have a default route already, pppd may require the other side # to authenticate itself, which most ISPs will not do.
+  Mengapa beralih dari jekyll ke hugo? Keunggulan hugo :
+Instalnya simpel. Hanya berupa binary. Jekyll butuh banyak dependensi tersedia di SBo lebih memudahkan dalam install, upgrade, remove kalau sudah tidak perlu cari pengalaman baru. selama 3 tahun ini menggunakan jekyll simpel,banyak dokumentasi dan theme yang free. Hugo setelah dicermati memberikan prospek yang tidak kalah bagus dibanding jekyll. Bagus di sini maksudnya adalah tergantung selera penulis. Hehehehe Sedangkan kelemahan hugo adalah tidak didukung secara resmi oleh Github Page.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2015-08-17-setting-internet-xl-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2020-12-20-beralih-hugo/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -410,60 +421,13 @@ Sunting berkas /etc/ppp/options
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2015-08-01-unduh-iso-slackware-current/">Unduh ISO Slackware Current</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2020-10-22-akses-whatsapp-web-seamonkey/">Akses WhatsApp Web via Seamonkey</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Aug 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Slackware adalah distro yang istimewa. Tak seperti distro lainnya yang menyediakan ISO versi terbaru atau current yang masih dalam pengembangan, slackware tidak merilis current ISO secara resmi. Walaupun demikian, ada yang menyediakannya bagi yang berminat, salah satunya bisa didapatkan di repo ftp://ftp.slackware.no.
-Kali ini coba mengunduh slackware current ISO. Pakai rsync saja yang gampang dan bisa dilanjut kalau internetnya putus.
-Sebelumnya cek dulu ISO terbaru
-$ rsync ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/ drwxr-xr-x 4,096 2015/07/28 10:00:29 .
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-08-01-unduh-iso-slackware-current/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-07-26-install-gdrv/">Install gdrv</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Jul 2015</time>
+    <time>22 Oct 2020</time>
   </div>
 
   
@@ -478,11 +442,7 @@ $ rsync ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/ drwxr-x
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/cloud">cloud</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/firefox">firefox</a>
     
   </div>
   
@@ -494,195 +454,11 @@ $ rsync ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/ drwxr-x
   </header>
 
   <p>
-  gdrv adalah command line tool berbasis python untuk Google Drive. Cara menginstallnya
-pip install gdrv 
+  Beberapa waktu ini saya lebih sering browsing dengan Seamonkey karena lebih ringan dan cepat (penilaian subjektif). Overall lancar jaya aman terkendali. Namun, ada 1 yang tidak bisa dilakukan : akses WhatsApp Web!
+Untuk mengatasinya,
+about:config Muncul peringatan. Klik I accept the risk! Isikan pada Search: general.useragent.compatMode.strict-firefox Ubah valuenya dari false ke true Restart Seamonkey 
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/">Install Google Play Downloader</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 Jul 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:
-python-protobuf (&gt;=2.4) python-requests (&gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&gt;=2.8) python 2.5+ java (opsional) Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
-easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-07-18-install-wxpython/">Install wxPython</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 Jul 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  wxPython adalah salah satu toolkit untuk membuat aplikasi grafis dengan python. Untuk menginstallnya mudah, kita install saja slackbuildnya. Pastikan tersambung internet.
-wget http://slackbuilds.org/slackbuilds/14.1/libraries/wxPython.tar.gz tar xzf wxPython.tar.gz cd wxPython wget http://downloads.sourceforge.net/wxpython/wxPython-src-2.8.12.1.tar.bz2 sh wxPython.SlackBuild installpkg /tmp/wxPython-2.8.12.1-x86_64-2_SBo.tgz 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-07-13-install-pip/">Install pip</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>13 Jul 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Pip akan memudahkan kita semua untuk menginstall paket-paket yang terkait dengan python.
-wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py python get-pip.py 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/">Mount Partisi Otomatis</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>13 Jul 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Masih melanjutkan catatan yang kemarin tentang pemartisian. Setelah [membuat partisi]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) kemudian [diformat]({% post_url 2015-07-12-memformat-partisi %}), langkah selanjutnya adalah memutuskan apakah partisi itu akan di-mount secara otomatis saat boot atau tidak.
-Nah, karena partisi /dev/sda9 yang bersistem ext4 kemarin akan saya jadikan sebagai tempat source code paket/aplikasi, seperti untuk menyimpan berkas slackbuild, saya putuskan untuk mengaitkannya secara otomatis di /usr/local/src. Caranya adalah dengan menambahkan baris berikut ke /etc/fstab
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -695,7 +471,7 @@ Nah, karena partisi /dev/sda9 yang bersistem ext4 kemarin akan saya jadikan seba
   
   <a href="https://sasongko.web.id/page/23/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;24 / 30&nbsp;</span>
+  <span>&nbsp;24 / 59&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/25/"><i class="fa fa-chevron-right"></i></a>
   
