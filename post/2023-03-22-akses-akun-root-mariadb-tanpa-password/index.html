@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.110.0">
 
-  <title>Restore rc.local &middot; Catatan Sasongko</title>
+  <title>Akses akun root mariadb tanpa password &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Restore rc.local</h1>
+  <h1>Akses akun root mariadb tanpa password</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Feb 2023</time>
+    <time>22 Mar 2023</time>
   </div>
 
   
@@ -236,7 +236,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/booting">booting</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
     
   </div>
   
@@ -245,26 +245,37 @@
 </div>
 
 
-  <p>Sudah beberapa minggu <strong>kernel</strong> tidak di-<em>upgrade</em>. Akhirnya semalam memutuskan untuk <em>upgrade</em> <strong>kernel</strong> dari 6.1.4 ke 6.1.13. Sebenarnya tidak ada hal khusus yang menjadi alasan pasti mengapa di-<em>upgrade</em>. Tidak ada fitur khusus yang diincar. Namun, selayaknya peningkatan versi, biasanya ada perbaikan <em>bugs</em> ataupun <em>performance improvement</em>, maka tidak masalah juga kalau di-<em>upgrade</em>.</p>
-<p><em>Upgrade</em> kernel sesuai prosedur menggunakan <strong>slackpkg</strong>. Proses berjalan lancar aman terkendali. Baru menyadari ada yang terlupakan, ketika menyalakan kembali laptop: <em>brightness</em>-nya terang sekali! Olala, pengaturan <em>brightness</em> yang semula tersimpan di <strong>/etc/rc.d/rc.local</strong> hilang, karena baru ingat, setelah <em>upgrade</em> kernel, opsi untuk rc.*.new yang dipilih adalah <em>overwrite</em>.</p>
-<p>Alhamdulillah, <strong>slackpkg</strong> bisa meng-<em>handle</em> kasus seperti ini dengan baik. File konfigurasi asli tetap ada, di-<em>back up</em> dengan nama yang sama dengan tambahan akhiran <strong>.new</strong>. Jadi untuk me-<em>restore</em>-nya cukup kembalikan file .new tadi ke semula.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> mv -v /etc/rc.d/rc.local<span style="color:#f92672">{</span>.orig,<span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>renamed <span style="color:#e6db74">&#39;/etc/rc.d/rc.local.orig&#39;</span> -&gt; <span style="color:#e6db74">&#39;/etc/rc.d/rc.local&#39;</span>
-</span></span></code></pre></div>
+  <p>Untuk akses root mariadb biasanya memerlukan password. Tapi sebenarnya root bisa diakses tanpa password. Pertama, hentikan dulu <em>service</em> <strong>mariadb</strong>-nya.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ /etc/rc.d/rc.mysqld stop
+</span></span></code></pre></div><p>Kemudian, restart database server tanpa peduli otentikasinya.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mariadbd-safe --skip-grant-tables --skip-networking &amp;
+</span></span></code></pre></div><p>Nah, akun root <strong>mariadb</strong> sudah bisa diakses tanpa <em>password</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mariadb -u root
+</span></span><span style="display:flex;"><span>Welcome to the MariaDB monitor.  Commands end with ; or <span style="color:#ae81ff">\g</span>.
+</span></span><span style="display:flex;"><span>Your MariaDB connection id is <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>Server version: 10.11.2-MariaDB Source distribution
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Copyright <span style="color:#f92672">(</span>c<span style="color:#f92672">)</span> 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#39;help;&#39;</span> or <span style="color:#e6db74">&#39;\h&#39;</span> <span style="color:#66d9ef">for</span> help. Type <span style="color:#e6db74">&#39;\c&#39;</span> to clear the current input statement.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MariaDB <span style="color:#f92672">[(</span>none<span style="color:#f92672">)]</span>&gt; 
+</span></span></code></pre></div><p>Oiya, 3 <em>command</em> pertama dijalankan dengan <em>privilege</em> <strong>root</strong> yang ada di sistem di mana <strong>mariadb</strong> tersebut diinstall.</p>
+
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-02-26-restore-rc-local%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-03-22-akses-akun-root-mariadb-tanpa-password%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-02-26-restore-rc-local%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-03-22-akses-akun-root-mariadb-tanpa-password%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-02-26-restore-rc-local%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-03-22-akses-akun-root-mariadb-tanpa-password%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-02-26-restore-rc-local%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-03-22-akses-akun-root-mariadb-tanpa-password%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-02-26-restore-rc-local%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-03-22-akses-akun-root-mariadb-tanpa-password%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-02-26-restore-rc-local%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-03-22-akses-akun-root-mariadb-tanpa-password%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -296,13 +307,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2023-01-10-ubah-colorscheme-vim/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2023-02-26-restore-rc-local/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2023-01-10-ubah-colorscheme-vim/">Mengubah colorscheme vim</a>
+      <a href="https://sasongko.web.id/post/2023-02-26-restore-rc-local/">Restore rc.local</a>
     </nav>
     
   </div>
@@ -311,14 +322,8 @@
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/">Akses akun root mariadb tanpa password</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
@@ -370,6 +375,9 @@
 
 
 
+<script src="https://sasongko.web.id/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
 
 
 </body>
