@@ -228,6 +228,58 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">NetworkManager device not ready</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>07 Aug 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Baru beberapa hari memakai (lagi) NetworkManager, sudah bermasalah (lagi).
+device not ready begitulah&hellip;.
+Padahal network interface-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai NetworkManager. Solusinya dari berbagai referensi (lupa mencatat linknya)
+echo &#34;managed=true&#34; &gt;&gt; /etc/NetworkManager/NetworkManager.conf Tapi, ternyata ini kemudian munculkan warning di syslog
+Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] config: unknown key &#39;managed&#39; in section [main] of file &#39;/etc/NetworkManager/NetworkManager.conf Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal).
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Bye wicd</a></h2>
 
     <div class="post-meta">
@@ -406,54 +458,6 @@ sha512sum awk uniq grep Misalkan, akan mencari adakah duplikasi file di folder D
   
   <footer>
     <a href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Menggabungkan video ffmpeg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu
-piknik-1.mkv piknik-2.mkv piknik-3.mkv piknik-4.mkv Keempat file tersebut berada dalam folder yang sama. Kemudian mereka akan digabungkan menjadi piknik.mkv. Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.
-$ vim list-piknik file &#39;piknik-1.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
