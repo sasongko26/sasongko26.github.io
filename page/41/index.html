@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.111.3">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,58 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/">Enable TLP on i3wm</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Dec 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/power-manager">power manager</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/i3">i3</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Beberapa hari yang lalu install i3 (i3wm) menggunakan sbopkg. Biasanya, dengan desktop environment lain seperti Mate, baterai bisa bertahan 4 - 6 jam. Namun, dengan i3 belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.
+Cek powertop ternyata banyak yang Bad seperti default-nya tanpa TLP. Padahal service TLP saat booting jalan, Tunable di powertop hanya 1 yang Bad lainnya Good semua.
+I3 memiliki berkas konfigurasi /etc/i3/config.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2016-12-08-scrolling-xterm/">Scrolling pada XTerm</a></h2>
 
     <div class="post-meta">
@@ -410,59 +462,6 @@ Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah mem
   
   <footer>
     <a href="https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Mount qcow2</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Sep 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
-Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
-modprobe nbd max_part=N max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.
-Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbd yang mengaktifkan koneksi file /mnt/virtual/image/ign11.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

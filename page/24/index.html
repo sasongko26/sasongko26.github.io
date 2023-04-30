@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.111.3">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,56 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Ekstraksi waktu pada changelog dengan sed</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sed">sed</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Ini adalah keisengan di kala WFH alias work from home. Melakukan ekstraksi waktu pada changelog slackware64-current yang terakhir kami update 8 Januari 2021.
+Changelognya terdiri dari 4 bagian:
+Waktu Packages yang mengalami perubahan (Upgraded, Removed, Added, Rebuilt) Keterangan perubahan Pembatas update antarwaktu (+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+) Akan diambil yang no.1 saja.
+Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.txt.
+$ sed &#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/">Menggunakan ratpoison</a></h2>
 
     <div class="post-meta">
@@ -420,56 +470,6 @@ Interface lebih cantik dan menarik Penambahan xfce4-panel-profiles yang memungki
   
   <footer>
     <a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Mengetahui kapan komputer dinyalakan</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Dec 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan dmesg
-$ dmesg -T | head -1 [Fri Dec 25 00:39:42 2020] Linux version 5.10.2 Penjelasan command :
-eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp | adalah pipe, untu menjadikan output dmesg sebagai input untuk head head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya [Fri Dec 25 00:39:42 2020] Linux version 5.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

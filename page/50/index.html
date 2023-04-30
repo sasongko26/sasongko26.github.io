@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.111.3">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,51 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-07-11-membuat-partisi-dengan-cgdisk/">Membuat Partisi dengan cgdisk</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Jul 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Partitioning atau pemartisian atau pembuatan partisi adalah pengetahuan yang harus dimiliki sebelum menginstall linux. Jika harddisk dianalogikan dengan rumah, maka partisi adalah kamar atau ruangan yang ada di dalam rumah itu. Kita bisa mengatur berapa jumlah kamar beserta ukuran dan fungsinya.
+Skema partisi yang digunakan adalah GPT, bukan MBR, jadi pemartisian menggunakan cgdisk saja biar lebih mudah. Selain cgdisk bisa menggunakan gdisk. Sedangkan untuk MBR menggunakan cfdisk atau fdisk. Keempatnya berantarmuka text dan dijalankan oleh root.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-07-11-membuat-partisi-dengan-cgdisk/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-06-28-konek-internet-menggunakan-pppsetup/">Konek Internet Slackware</a></h2>
 
     <div class="post-meta">
@@ -412,57 +457,6 @@ $ tar xzf xfburn.tar.gz ; cd xfburn Unduh kode sumber xfburn
   
   <footer>
     <a href="https://sasongko.web.id/post/2015-06-17-install-xfburn-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-16-install-libburn-slackware/">Install libburn Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>16 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Libburn adalah pustaka (library) untuk menulis ke CD, DVD, dan blueray.
-Berikut langkah-langkah installnya di slackware melalui slackbuild. Adapun versi libburn yang diinstall adalah 1.4.0.
-Pertama, pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh paket. Kemudian unduh slackbuild libburn.
-$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libburn.tar.gz Ekstrak
-$ tar xzf libburn.tar.gz Akan terbentuk folder libburn. Pindah direktori ke folder itu.
-$ cd libburn Kemudian unduh kode sumber libburn.
-$ wget http://files.libburnia-project.org/releases/libburn-1.4.0.tar.gz Install slackbuildnya
-sh libburn.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-16-install-libburn-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
