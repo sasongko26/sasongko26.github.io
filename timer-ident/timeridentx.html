@@ -1,0 +1,92 @@
+<html>
+<head>
+	<title>IDENT ANATOMI | Timer | FK UNIMUS</title>
+</head>
+<body>
+	<script language="JavaScript" type="text/javascript">
+
+<!--
+var sec = 0;
+var min = 0;
+var hour = 0;
+var theResult = "";
+
+function stopwatch(text) {
+   sec++;
+  if (sec == 60) {
+   sec = 0;
+   min = min + 1; 
+   bel();
+  }
+  else {
+   min = min; }
+  if (min == 60) {
+   min = 0; 
+   hour += 1; }
+
+if (sec<=9) { sec = "0" + sec; }
+   document.clock.stwa.value = ((hour<=9) ? ""+hour : hour) + " jam " + ((min<=9) ? "" + min : min) + " menit " + sec + " detik ";
+
+  if (text == "Start") { document.clock.theButton.value = "Stop "; }
+  if (text == "Stop ") { document.clock.theButton.value = "Start"; sec = sec-1; sec--; }
+
+  if (document.clock.theButton.value == "Start") {
+   return true; }
+SD=window.setTimeout("stopwatch();", 1000);
+
+ theResult = document.clock.stwa.value;
+}
+
+function resetIt() {
+  sec = 0;
+  min = 0;
+  hour = 0;
+  if (document.clock.theButton.value == "Stop ") {
+  document.clock.theButton.value = "Start"; }
+  // window.clearTimeout(SD);
+  document.clock.stwa.value = ((hour<=9) ? ""+hour : hour) + " jam " + ((min<=9) ? "" + min : min) + " menit " + sec + " detik ";
+}
+
+function bel(){
+	//alert("On Press of "+melody);
+        //var path = "path\\to\\melody\\"
+        var bele = new Audio("bel/bel2.mp3");
+        bele.play();
+}
+
+</script>
+
+<table style="width:100%" bgcolor="#4EAFC0" align="center" border="0" cellspacing="0">
+	<tr>
+			<td align="center"> <img src="bannerwebfk.png" height="100" /></td>
+	</tr>
+
+	<tr>
+			<td align="center"><font face="verdana, arial, helvetica, sans-serif" size="18"><b>IDENT ANATOMI</b></font>	</td>
+	</tr>
+</table>
+
+<table style="width:100%" bgcolor="#4EAFC0" align="center" border="0" cellspacing="0">
+		<colgroup>
+				<col span="1" style="width:80%"/>
+				<col span="!" style="width:20%"/>
+		</colgroup>
+	<tr>
+			<td align="center"> <img src="denahident.png" width=1024 height=768 /> <br><br><br></td>
+			<td align="center"> 
+					<form name="clock" />
+					<input type="button" size="12" name="stwa" value="0 jam 0 menit 0 detik" style="text-align:center; font-family:arial; font-size:40pt" /> <br>
+					<b>telah terlewati</b> <br> <br> <br>
+					<input type="button" name="theButton" onClick="stopwatch(this.value);" value="Start" style="text-align:center; font-family:arial; font-size:20pt "/> 
+					<input type="button" value="Reset" onClick="resetIt();reset();" style="text-align:center; font-family:arial; font-size:20pt" />
+					<br> <br>
+					 <input type="button" value="Bel !" onClick="bel();" style="text-align:center; font-family:arial; font-size:20pt" />
+
+
+			</td>
+     
+  </tr>
+ </table>
+
+</body>
+</html>
