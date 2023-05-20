@@ -228,6 +228,54 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Rebuild R post-upgrade icu4c</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Pagi ini, saat akan mengeksekusi R,
+$ R /usr/lib64/R/bin/exec/R: error while loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory Ternyata R nya bermasalah. Di atas disebutkan bahwa libicuuc.so.67 tidak ditemukan. Dari namanya, bisa ditebak itu adalah shared object/library miliknya icu4c. Kita pastikan dulu,
+$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE The list below shows the packages that contains &#34;libicuuc\.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Ekstraksi waktu pada changelog dengan sed</a></h2>
 
     <div class="post-meta">
@@ -421,55 +469,6 @@ Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1
   
   <footer>
     <a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/">Xfce 4.16 Masuk Current</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>28 Dec 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Pagi ini, Patrick memasukkan xfce 4.16 ke slackware current main tree tanpa singgah di /testing. Interface xfce 4.16 lebih cantik dan menarik dibanding sebelumnya. Demikian pula icons-nya.
-Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown xfce stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses development.
-Ada beberapa hal yang menjadi catatan buat penulis terkait xfce 4.16 ini, yaitu
-Interface lebih cantik dan menarik Penambahan xfce4-panel-profiles yang memungkinkan untuk menyimpan profil/konfigurasi panel.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
