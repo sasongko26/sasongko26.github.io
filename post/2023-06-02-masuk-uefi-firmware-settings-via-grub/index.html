@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.112.3">
 
-  <title>Deskreen No WiFi and LAN Connection &middot; Catatan Sasongko</title>
+  <title>Masuk UEFI Firmware Settings dari GRUB &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Deskreen No WiFi and LAN Connection</h1>
+  <h1>Masuk UEFI Firmware Settings dari GRUB</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>20 May 2023</time>
+    <time>02 Jun 2023</time>
   </div>
 
   
@@ -236,7 +236,9 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/grub">grub</a>
     
   </div>
   
@@ -245,25 +247,23 @@
 </div>
 
 
-  <p>Buka-buka direktori lama, ternyata ada catatan yang belum dipublikasikan, salah satunya soal <strong>deskreen</strong>. Aplikasi ini kami gunakan untuk <em>share screen</em> ataupun presentasi dari laptop ke TV. Sebenarnya untuk menghubungkan laptop dan TV bisa menggunakan kabel HDMI, tapi karena kabelnya kurang panjang, TVnya banyak dan belum punya <em>HDMI splitter</em> maka terbersitlah untuk presentasi menggunakan jaringan wifi. <em>Duckduckgo</em> memberikan hasil bagaimana cara, salah satunya dengan <strong>deskreen</strong> ini.</p>
-<p>Demi kepraktisan, kami <em>donwload</em> edisi <strong>appimage</strong>. Namun, setelah dieksekusi ada masalah, yaitu muncul <em>error box</em> yang menyatakan bahwa <strong>No WiFi &amp; LAN Connection</strong> padahal koneksi internet sudah berjalan lancar, stabil dan kencang di laptop maupun TV.</p>
-<p>Solusinya, yang kami dapatkan dari <em>github</em> <strong>deskreen</strong> adalah dengan menambahkan <em>path</em> untuk <strong>iproute2</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PATH<span style="color:#f92672">=</span>/usr/sbin ./Deskreen*.AppImage
+  <p>Kadang kita perlu mengubah pengaturan pada UEFI. Pengaturan tersebut misalnya pengaturan waktu, <em>secure boot</em>, urutan <em>boot</em> dan lain sebagainya. Untuk  masuk ke <strong>UEFI Firmaware Settings</strong> bisa dilakukan dari <strong>grub</strong>. Yaitu dengan cara ketika menampilkan <em>bootloader</em>, biasanya ada jeda waktu. Manfaatkan jeda waktu tersebut dengan segera menekan tombol <strong>c</strong> untuk masuk ke <em>grub shell</em>, kemudian pada <em>prompt</em> yang disediakan ketik <strong>fwsetup</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grub&gt; fwsetup
 </span></span></code></pre></div>
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-05-19-deskreen-no-wifi-lan-connection%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-06-02-masuk-uefi-firmware-settings-via-grub%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-05-19-deskreen-no-wifi-lan-connection%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-06-02-masuk-uefi-firmware-settings-via-grub%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-05-19-deskreen-no-wifi-lan-connection%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-06-02-masuk-uefi-firmware-settings-via-grub%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-05-19-deskreen-no-wifi-lan-connection%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-06-02-masuk-uefi-firmware-settings-via-grub%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-05-19-deskreen-no-wifi-lan-connection%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-06-02-masuk-uefi-firmware-settings-via-grub%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-05-19-deskreen-no-wifi-lan-connection%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-06-02-masuk-uefi-firmware-settings-via-grub%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -295,13 +295,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2023-04-29-enable-disable-pipewire-slackware/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2023-05-19-deskreen-no-wifi-lan-connection/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2023-04-29-enable-disable-pipewire-slackware/">Enable Disable Pipewire Slackware</a>
+      <a href="https://sasongko.web.id/post/2023-05-19-deskreen-no-wifi-lan-connection/">Deskreen No WiFi and LAN Connection</a>
     </nav>
     
   </div>
@@ -310,14 +310,8 @@
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2023-06-02-masuk-uefi-firmware-settings-via-grub/">Masuk UEFI Firmware Settings dari GRUB</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2023-06-02-masuk-uefi-firmware-settings-via-grub/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>

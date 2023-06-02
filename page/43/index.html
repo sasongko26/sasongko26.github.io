@@ -228,6 +228,54 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/">Cek Harddisk Korup</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>17 Aug 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya
+dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck. Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu /dev/sda1. Dan direkomendasikan untuk menjalankan fsck.
+fsck /dev/sda1 fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/">Mengatur DNS Default</a></h2>
 
     <div class="post-meta">
@@ -419,59 +467,6 @@ Unable to connect to libvirt. internal error: Cannot find suitable emulator for 
   
   <footer>
     <a href="https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Virt-Manager ImportError: No module named requests</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>04 Jul 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.
-$ virt-manager Traceback (most recent call last): File &#34;/usr/share/virt-manager/virt-manager&#34;, line 33, in &lt;module&gt; from virtinst import util as util File &#34;/usr/share/virt-manager/virtinst/__init__.py&#34;, line 89, in &lt;module&gt; from virtinst.distroinstaller import DistroInstaller File &#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;, line 23, in &lt;module&gt; from . import urlfetcher File &#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;, line 34, in &lt;module&gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
