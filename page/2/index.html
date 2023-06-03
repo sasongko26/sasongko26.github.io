@@ -228,6 +228,55 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/">Akses akun root mariadb tanpa password</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>22 Mar 2023</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk akses root mariadb biasanya memerlukan password. Tapi sebenarnya root bisa diakses tanpa password. Pertama, hentikan dulu service mariadb-nya.
+$ /etc/rc.d/rc.mysqld stop Kemudian, restart database server tanpa peduli otentikasinya.
+$ mariadbd-safe --skip-grant-tables --skip-networking &amp; Nah, akun root mariadb sudah bisa diakses tanpa password
+$ mariadb -u root Welcome to the MariaDB monitor. Commands end with ; or \g. Your MariaDB connection id is 3 Server version: 10.11.2-MariaDB Source distribution Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2023-02-26-restore-rc-local/">Restore rc.local</a></h2>
 
     <div class="post-meta">
@@ -401,51 +450,6 @@ bash-5.2$ virtualbox (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cann
 bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never 
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-02-14-pelayanan-exabytes/">Pelayanan Exabytes</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Aug 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/ngudarasa">ngudarasa</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Catatan kali ini tidak terkait langsung dengan pengalaman penggunaan slackware ataupun open source software lainnya. Sedikit ngudarasa atau berbagi cerita dengan pembaca tentang salah satu registrar &amp; hosting provider. Provider tersebut adalah Exabytes.
-Domain blog ini menuju kadaluwarsa. Sekitar 2 bulan sebelum expired date, Exabytes mengirimkan email sebagai pengingat. Pun H-30. Saya ucapkan terima kasih atas reminder-nya, walaupun sebenarnya tanpa reminder pun saya ingat dan sudah ada rencana kapan memperpanjang domain.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2022-02-14-pelayanan-exabytes/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

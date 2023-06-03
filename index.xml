@@ -6,7 +6,17 @@
     <description>Recent content on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>spdlog build error basic runtime</title>
+      <link>https://sasongko.web.id/post/2022-06-03-spdlog-build-error-basic-runtime/</link>
+      <pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2022-06-03-spdlog-build-error-basic-runtime/</guid>
+      <description>Ketika build spdlog dari SBo ditemukan error
+n file included from /tmp/SBo/spdlog-1.11.0/include/spdlog/spdlog.h:12, from /tmp/SBo/spdlog-1.11.0/include/spdlog/spdlog-inl.h:7, from /tmp/SBo/spdlog-1.11.0/src/spdlog.cpp:8: /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:111: error: ‘basic_runtime’ is not a member of ‘fmt’ 168 | nvertible&amp;lt;T, fmt::basic_string_view&amp;lt;Char&amp;gt;&amp;gt;::value || std::is_same&amp;lt;remove_cvref_t&amp;lt;T&amp;gt;, fmt::basic_runtime&amp;lt;Char&amp;gt;&amp;gt;::value&amp;gt; | ^~~~~~~~~~~~~ /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:111: error: ‘basic_runtime’ is not a member of ‘fmt’ /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:125: error: template argument 2 is invalid 168 | mt::basic_string_view&amp;lt;Char&amp;gt;&amp;gt;::value || std::is_same&amp;lt;remove_cvref_t&amp;lt;T&amp;gt;, fmt::basic_runtime&amp;lt;Char&amp;gt;&amp;gt;::value&amp;gt; | ^~~~ /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:138: error: expected ‘{’ before ‘&amp;gt;’ token 168 | :basic_string_view&amp;lt;Char&amp;gt;&amp;gt;::value || std::is_same&amp;lt;remove_cvref_t&amp;lt;T&amp;gt;, fmt::basic_runtime&amp;lt;Char&amp;gt;&amp;gt;::value&amp;gt; | ^ make[2]: *** [CMakeFiles/spdlog.</description>
+    </item>
+    
     <item>
       <title>Masuk UEFI Firmware Settings dari GRUB</title>
       <link>https://sasongko.web.id/post/2023-06-02-masuk-uefi-firmware-settings-via-grub/</link>
