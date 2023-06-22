@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.112.7">
+  <meta name="generator" content="Hugo 0.113.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,57 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/">Menampilkan data baris terakhir python</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>21 Mar 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk menampilkan data baris terakhir dengan python dapat menggunakan fungsi tail() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
+Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
+import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.tail(7)) Output :
+RowId ... Report 178532 2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA ... NaN 178533 2019~2019~9002~Q41~AGE~AGE_OVERALL~GENDER~MALE ... NaN 178534 2019~2019~9002~Q42~AGE~5064~RACE~HIS ... NaN 178535 2019~2019~9003~Q42~AGE~65PLUS~RACE~ASN ... NaN 178536 2019~2019~9002~Q42~AGE~65PLUS~RACE~HIS ... NaN 178537 2019~2019~9003~Q42~AGE~5064~RACE~BLK .
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-03-20-menampilkan-data-baris-pertama-python/">Menampilkan data baris pertama python</a></h2>
 
     <div class="post-meta">
@@ -408,51 +459,6 @@ $ echo &#34;&#34; &gt; ~/.local/share/recently-used.xbel $ chattr -i ~/.local/sh
   <p>
   Beberapa bulan ini mata menjadi lebih cepat lelah apabila malam-malam berlama-lama menatap monitor. Padahal backlight/brightness sudah diset 15%. Mungkin karena faktor U dan pagi/siang sebelumnya sudah memandangi layar komputer. Maka, jadilah penulis menginstal redshift untuk &ldquo;memerah/kuningkan brightness monitor.
 Redshift tersedia di SBo, sehingga bisa diinstal dengan mudah melalui sbotools, sbopkg, sboui, slpkg, atau yang lainnya.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-16-load-csv-python/">Load dataset csv dengan python</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>16 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan ada dataset dalam format csv. Data tersebut dapat di-load atau diimpor dengan python dengan library pandas. Berikut script untuk load file data.csv.
-import pandas as pd data = pd.read_csv(&#34;data.csv&#34;) 
   </p>
 
   

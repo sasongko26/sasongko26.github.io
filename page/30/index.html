@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.112.7">
+  <meta name="generator" content="Hugo 0.113.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,54 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/">Edit volume suara</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 May 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Editing kali ini adalah bagaimana mengubah volume default audio/suara menggunakan ffmpeg. Misal, file yang akan diinput/diedit adalah video.mp4. Karena suaranya terlalu pelan, akan dinaikkan menjadi 5x semula melalui filter audio. File hasil editan diberi nama video-louder.webm.
+ffmpeg -i video.mp4 -filter:a &#34;volume=5&#34; video-louder.webm Apabila suara terlalu nyaring bisa dipelankan. Berikut akan dipelankan menjadi setengahnya dari volume semula dan file baru diberi nama new.webm
+ffmpeg -i video.mp4 -filter:a &#34;volume=0.5&#34; new.webm Atau, dengan menuliskan volume suaranya secara langsung.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-05-13-convert-jpg-pdf/">Convert jpg ke pdf</a></h2>
 
     <div class="post-meta">
@@ -398,53 +446,6 @@ Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini ber
   
   <footer>
     <a href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-04-11-install-jasp/">Install JASP</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Apr 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  JASP, singkatan dari Jeffreys&rsquo;s Amazing Statistic Program, merupakan open source statistics software. Software ini layak dijadikan pilihan utama karena:
-Open source. Karena open source semua orang boleh memakai, melihat source code-nya dan berkontribusi (melaporkan masalah, mengusulkan fitur dan perbaikan). Silahkan menuju ke https://github.com/jasp-stats/jasp-desktop . Pengembangan dinaungi oleh akademisi dari University of Amsterdam, Duke University, University of Southampton, UNiversity of Sussex, University of Missouri, Athens University of Economics dan Business, Missouri State University, University of Groningen, Nyenrode Business University, University of Zurich dan Ludwig-Maximilians-Universität München.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-04-11-install-jasp/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
