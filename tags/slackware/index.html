@@ -227,6 +227,49 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2023-06-26-membuat-qemu-disk-image/">Membuat qemu disk image</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Jun 2023</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk membuat disk image sebagai storage sistem oprasi yang akan divirtualisasikan dengan qemu, bisa menggunakan command yang mudah. Misalkan nama file adalah slack.img dengan size 100G
+#penggunaan: qemu-img create file_disk_imagenya sizenya $ qemu-img create slack.img 100G 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2023-06-22-convert-dd-to-vdi/">Convert dd ke vdi</a></h2>
 
     <div class="post-meta">
@@ -261,7 +304,7 @@
 
   <p>
   Untuk konversi file dd/img menjadi vdi mudah. Pastikan sudah install virtualbox. Misalkan akan mengubah file1.dd menjadi file2.vdi,
-$ VBoxManage convertdd file1.dd --format VDI file2.vdi 
+$ VBoxManage convertfromraw file1.dd --format VDI file2.vdi 
   </p>
 
   

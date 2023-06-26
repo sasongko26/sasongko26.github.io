@@ -228,6 +228,50 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2022-03-05-mount-media-read-write-mode/">Mount media read write mode</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 Mar 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Mount media (kasus kali ini pada flashdisk) melalui command line secara default membuat ownership filenya menjadi milik root. Hal ini berakibat media tersebut berjalan pada mode read-only. Hanya user setingkat root yang bisa melakukan write on.
+Kasus ini bisa disiasati dengan mendefinisikan id user yang akan melakukan write on.
+mount -o uid=1020,gid=120 /dev/sdb1 /media/hd0/ uid dan gid di sini hanya contoh, silakan disesuaikan.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/">Konfigurasi mirror slackware</a></h2>
 
     <div class="post-meta">
@@ -407,53 +451,6 @@ Rename file berikut menjadi .desktop saja
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/">Operator perbandingan perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Jan 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Operator perbandingan digunakan untuk membandingkan nilai. Data/nilai yang dibandingkan dapat berupa bilangan ataupun string. Namun ada perbedaan notasi.
-Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &lt; $b	| $a lebih kecil dari $b	| |$a &gt; $b	| $a lebih besar dari $b	| |$a &lt;= $b	| $a lebih kecil atau sama dengan $b	| |$a =&gt; $b	| $a lebih besar atau sama dengan $b	| |$a == $b	| $a sama dengan $b	| |$a !
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
 
   
 
@@ -462,7 +459,7 @@ Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &lt; $b	| $a lebih kec
   
   <a href="https://sasongko.web.id/page/5/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;6 / 61&nbsp;</span>
+  <span>&nbsp;6 / 62&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/7/"><i class="fa fa-chevron-right"></i></a>
   

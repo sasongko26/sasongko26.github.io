@@ -228,6 +228,55 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Mariadb error 2002</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Jun 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.
+$ mariadb -u root -p Enter password: ERROR 2002 (HY000): Can&#39;t connect to local server through socket &#39;/var/run/mysql/mysql.sock&#39; (2) Setelah dicek, ternyata service-nya belum jalan karena tidak executable.
+$ ls -l /etc/rc.d|grep -iE &#34;(maria|mysql)&#34; -rw-r--r-- 1 root root 2517 May 2 09:08 rc.mysqld -rw-r--r-- 1 root root 2943 Aug 4 2020 rc.mysqld.orig Mari aktifkan
+# chmod +x /etc/rc.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-05-27-list-ip-aktif-sejaringan/">Mengetahui ip aktif sejaringan</a></h2>
 
     <div class="post-meta">
@@ -407,52 +456,6 @@ $ efibootmgr -t 2
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/">Memindahkan tombol minimize maximize close window fluxbox</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 May 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default tombol Minimize/Iconify, Maximize dan Close pada window fluxbox terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian
-session.screen0.titlebar.right: Minimize Maximize Close Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian
-session.screen0.titlebar.left: 
-  </p>
-
-  
-</article>
-
-  
 
   
 
@@ -461,7 +464,7 @@ session.screen0.titlebar.left:
   
   <a href="https://sasongko.web.id/page/12/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;13 / 61&nbsp;</span>
+  <span>&nbsp;13 / 62&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/14/"><i class="fa fa-chevron-right"></i></a>
   
