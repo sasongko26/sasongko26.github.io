@@ -305,7 +305,7 @@ status=progress
   <p>
   Mount media (kasus kali ini pada flashdisk) melalui command line secara default membuat ownership filenya menjadi milik root. Hal ini berakibat media tersebut berjalan pada mode read-only. Hanya user setingkat root yang bisa melakukan write on.
 Kasus ini bisa disiasati dengan mendefinisikan id user yang akan melakukan write on.
-mount -o uid=1020,gid=120 /dev/sdb1 /media/hd0/ uid dan gid di sini hanya contoh, silakan disesuaikan.
+mount -o rw,uid=1020,gid=120 /dev/sdb1 /media/hd0/ uid dan gid di sini hanya contoh, silakan disesuaikan.
   </p>
 
   

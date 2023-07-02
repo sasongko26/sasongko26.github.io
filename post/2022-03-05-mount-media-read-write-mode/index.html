@@ -247,7 +247,7 @@
 
   <p><em>Mount</em> media (kasus kali ini pada <em>flashdisk</em>)  melalui <em>command line</em> secara default membuat <em>ownership</em> filenya menjadi milik <strong>root</strong>. Hal ini berakibat media tersebut berjalan pada mode <strong>read-only</strong>. Hanya <em>user</em> setingkat <strong>root</strong> yang bisa melakukan <em>write on</em>.</p>
 <p>Kasus ini bisa disiasati dengan mendefinisikan <em>id</em> user yang akan melakukan <em>write on</em>.</p>
-<pre tabindex="0"><code>mount -o uid=1020,gid=120 /dev/sdb1 /media/hd0/
+<pre tabindex="0"><code>mount -o rw,uid=1020,gid=120 /dev/sdb1 /media/hd0/
 </code></pre><p>uid dan gid di sini hanya contoh, silakan disesuaikan.</p>
 
   

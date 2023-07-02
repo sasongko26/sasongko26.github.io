@@ -6,7 +6,17 @@
     <description>Recent content in virtualisasi on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/virtualisasi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/virtualisasi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Guest OS Qemu</title>
+      <link>https://sasongko.web.id/post/2023-06-27-install-guest-os-qemu/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2023-06-27-install-guest-os-qemu/</guid>
+      <description>Akan diinstall sebagai guest os slackware, dengan file iso slackware.iso, disk image slackware.qcow dan virtual RAM 5GB. Maka command yang dijalankan dengan qemu adalah
+$ qemu-system-x86_64 -enable-kvm -m 5120 -cdrom slackware.iso -drive file=slackware.qcow2 -boot d </description>
+    </item>
+    
     <item>
       <title>Membuat qemu disk image</title>
       <link>https://sasongko.web.id/post/2023-06-26-membuat-qemu-disk-image/</link>

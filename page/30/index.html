@@ -228,6 +228,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Disable tampilan konfigurasi ffmpeg</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 May 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, output ffmpeg akan menampilkan built configuration yang digunakan.
+$ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers built with gcc 9.2.0 (GCC) configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-4.2.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack libavutil 56. 31.100 / 56. 31.100 libavcodec 58. 54.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/">Mengenal objek R factor</a></h2>
 
     <div class="post-meta">
@@ -402,49 +449,6 @@ convert file-gambar.jpg dokumen.pdf
   <p>
   Menggunakan linux terutama slackware membuat pekerjaan lebih ringan dan efisien. Suatu ketika diberikan sebuah file terkompresi zip yang misterius. Misterius karena ukurannya besar dan konon kata empunya file tersebut ngehang saat akan dibuka di komputer dengan sistem bukan slackware juga bukan linux. Dan ketika dibuka di slackware ketahuanlah nama &ldquo;penduduk&rdquo; zip tersebut.
 zip -sf namafile.zip # atau less namafile.zip 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-05-trimming-video-ffmpeg/">Trimming Video ffmpeg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>05 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan, kita akan mencuplik sebagian (trimming) video video-asli.mp4 dari menit ke 57 lebih 34 detik sampai durasi ke 1 jam 2 menit 5 detik. Fila hasil trimming adalah cuplikan.mp4
-ffmpeg -i video-asli.mp4 -ss 00:57:34 -to 01:02:05 -c copy cuplikan.mp4 
   </p>
 
   
