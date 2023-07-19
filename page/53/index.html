@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.113.0">
+  <meta name="generator" content="Hugo 0.115.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,57 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-06-16-install-libburn-slackware/">Install libburn Slackware</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>16 Jun 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Libburn adalah pustaka (library) untuk menulis ke CD, DVD, dan blueray.
+Berikut langkah-langkah installnya di slackware melalui slackbuild. Adapun versi libburn yang diinstall adalah 1.4.0.
+Pertama, pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh paket. Kemudian unduh slackbuild libburn.
+$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libburn.tar.gz Ekstrak
+$ tar xzf libburn.tar.gz Akan terbentuk folder libburn. Pindah direktori ke folder itu.
+$ cd libburn Kemudian unduh kode sumber libburn.
+$ wget http://files.libburnia-project.org/releases/libburn-1.4.0.tar.gz Install slackbuildnya
+sh libburn.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-06-16-install-libburn-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-06-16-install-libisofs-slackware/">Install libisofs Slackware</a></h2>
 
     <div class="post-meta">
@@ -391,52 +442,6 @@ $ wvdial 3 bash: wvdial: command not found Baris 2, command not found menunjukka
 $ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url silahkan diganti dengan alamat websitenya.
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-09-install-libreoffice-slackbuild/">Install Libre Office di Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default aplikasi perkantoran yang disediakan Slackware bukan Libre Office. Kalau pada saat instalasi Slackware (yang penulis gunakan arsitektur 64 bit) memilih full install maka aplikasi perkantoran yang terpasang adalah Calligra. Dibandingkan dengan Calligra, saya merasa lebih sreg menggunakan LibreOffice karena kompatibilitasnya yang lebih baik terhadap dokumen yang dibuat dengan Ms Office (harap maklum, masih banyak saudara-saudara kita yang belum bisa move on ke open source dan tidak semua menggunakan Ms Office bajakan).
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-09-install-libreoffice-slackbuild/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

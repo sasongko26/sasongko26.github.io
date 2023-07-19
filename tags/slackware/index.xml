@@ -6,7 +6,16 @@
     <description>Recent content in slackware on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/slackware/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/slackware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menggunakan dhclient untuk NetworkManager</title>
+      <link>https://sasongko.web.id/post/2023-07-19-menggunakan-dhclient-networkmanager/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sasongko.web.id/post/2023-07-19-menggunakan-dhclient-networkmanager/</guid>
+      <description>Ada sedikit masalah ketika menggunakan kernel 6.1.38. Masalah tersebut antara lain tidak stabilnya jaringan internet bila konek via NetworkManager, usb dan bluetooth yang kadang suka diskonek sendiri. Solusi untuk masalah jaringan dan bluetooth tersebut adalah mengganti dhcpcd dengan dhclient pada konfigurasi Network Manager /etc/NetworkManager/conf.d/00-dhcp-client.conf, sesuai masukan dari Pak Walesa.</description>
+    </item>
+    
     <item>
       <title>Memperkecil ukuran file pdf</title>
       <link>https://sasongko.web.id/post/2023-07-09-memperkecil-ukuran-file-pdf/</link>
