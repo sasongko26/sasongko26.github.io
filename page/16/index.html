@@ -228,6 +228,100 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-04-11-membuat-data-integer-acak-python/">Membuat data integer acak python</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Apr 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Bingung membuat data? Gampang, python dengan library numpy punya solusinya!
+Akan dibuat data acak bertipe integer (bilangan bulat). Banyaknya data 200, nilai minimal 145, maksimal 180.
+#!/usr/bin/python3 import numpy as np data = np.random.randint(size=200, low=145, high=180) print(data) Berikut datanya
+[160 147 160 177 147 149 170 149 166 153 154 156 160 165 161 154 168 173 151 145 158 148 163 178 164 166 159 159 172 147 153 170 174 159 152 170 151 159 168 167 147 156 177 168 176 151 153 146 163 156 149 145 152 173 151 162 165 164 179 173 168 172 158 177 148 177 157 150 145 164 171 166 175 164 159 158 178 173 155 162 178 171 146 145 158 151 150 151 165 166 148 168 159 175 165 173 167 178 150 173 147 161 175 158 150 150 159 168 172 159 160 165 156 150 170 175 171 174 149 175 165 168 155 179 161 162 160 146 151 172 171 179 157 171 170 157 149 147 169 151 172 148 164 169 160 158 168 163 153 154 179 163 174 172 176 166 172 166 173 179 155 158 176 151 152 157 164 175 164 165 179 177 175 164 162 164 172 152 172 154 179 162 171 162 149 149 154 163 168 163 178 179 166 166 167 156 158 155 171 148] 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/">sbocheck /usr/sbo/repo exists and is not empty</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Apr 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Malam ini, ketika akan update SBo, ternyata tanpa disadari internet disconnect sebelumnya.
+bash-5.1# sbocheck Updating SlackBuilds tree... fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution) Could not sync from git://github.com/Ponce/slackbuilds.git. Setelah internet tidak ada masalah, gantian sbotools-nya yang masalah
+bash-5.1# sbocheck /usr/sbo/repo exists and is not empty. Exiting. Baiklah, local repository-nya minta dikosongkan dulu
+bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree... Cloning into &#39;/usr/sbo/repo&#39;.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-04-07-jumlah-baris-kolom-libreoffice-calc/">Jumlah baris dan kolom libreoffice calc</a></h2>
 
     <div class="post-meta">
@@ -357,96 +451,6 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-27-median-data-python/">Median data dengan python</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>27 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau median() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # median print(&#39;median konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].median(),&#39;kaleng&#39;) print(&#39;median konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].median()) print(&#39;median konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].median(), &#39;gelas&#39;) print(&#39;median konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].median(), &#39;liter&#39;) 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-26-mean-data-python/">Mean data dengan python</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau mean() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # mean print(&#39;rerata konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].mean(),&#39;kaleng&#39;) print(&#39;rerata konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].mean()) print(&#39;rerata konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].mean(), &#39;gelas&#39;) print(&#39;rerata konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].mean(), &#39;liter&#39;) 
-  </p>
-
-  
-</article>
-
-  
 
   
 
@@ -455,7 +459,7 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
   
   <a href="https://sasongko.web.id/page/15/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;16 / 62&nbsp;</span>
+  <span>&nbsp;16 / 63&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/17/"><i class="fa fa-chevron-right"></i></a>
   

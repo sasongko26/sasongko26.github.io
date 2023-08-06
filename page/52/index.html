@@ -228,6 +228,99 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/">Mount Partisi Otomatis</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Jul 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Masih melanjutkan catatan yang kemarin tentang pemartisian. Setelah [membuat partisi]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) kemudian [diformat]({% post_url 2015-07-12-memformat-partisi %}), langkah selanjutnya adalah memutuskan apakah partisi itu akan di-mount secara otomatis saat boot atau tidak.
+Nah, karena partisi /dev/sda9 yang bersistem ext4 kemarin akan saya jadikan sebagai tempat source code paket/aplikasi, seperti untuk menyimpan berkas slackbuild, saya putuskan untuk mengaitkannya secara otomatis di /usr/local/src. Caranya adalah dengan menambahkan baris berikut ke /etc/fstab
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2015-07-12-memformat-partisi/">Memformat Partisi</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Jul 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Melanjutkan catatan [kemarin]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) sekarang partisinya diformat menjadi ext4, format filesystem yang umum digunakan untuk linux dengan kestabilan yang tidak diragukan lagi.
+Partisi yang akan diformat ext4 adalah /dev/sda9 dan akan diberi label sebagai src. Pemformatan ini juga harus dilakukan root.
+# mkfs -t ext4 -L &#39;src&#39; /dev/sda9 mke2fs 1.42.8 (20-Jun-2013) Filesystem label=src OS type: Linux Block size=4096 (log=2) Fragment size=4096 (log=2) Stride=0 blocks, Stripe width=0 blocks 871408 inodes, 3482075 blocks 174103 blocks (5.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-07-12-memformat-partisi/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-07-11-membuat-partisi-dengan-cgdisk/">Membuat Partisi dengan cgdisk</a></h2>
 
     <div class="post-meta">
@@ -366,102 +459,6 @@ $ sudo apt-get install unrar Sedangkan untuk Slackware install slackbuildnya saj
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/">InstalL Sleuth Kit Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  The Sleuth Kit atau disingkat TSK adalah tools digital forensik yang bersifat open source, multiplatform dan text-mode (command line interface). TSK bisa digunakan untuk melakukan analisis pada barang bukti, atau lebih tepatnya citra disk (raw image). Misalnya untuk mengetahui berkas apa saja yang ada di dalam hardisk dan adakah berkas yang dihapus dari hardisk itu.
-Dependensi:
-autoconf, automake, libtool C/C++ compiler (gcc, gcc++) [JDK (opsional)]({% post_url 2015-06-07-install-jdk-slackware %}) Install cukup mudah, kita akan install langsung TSK dari source code yang ada di github
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-17-install-xfburn-slackware/">Install Xfburn Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>17 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Xfburn adalah aplikasi burning CD/DVD/BD dari XFCE. Versi terbaru saat ini 0.5.4, dengan dependensi:
-Exo-0.10.6 libxfce4util-4.12.1 libisoburn-1.4.0 Tapi untuk memudahkan instalasi, kita gunakan saja yang versi 0.5.2 yang ada slackbuildnya, dependensinya
-[libburn]({% post_url 2015-06-16-install-libburn-slackware %}) [libisofs]({% post_url 2015-06-16-install-libisofs-slackware %}) Untuk menginstall pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas.
-$ wget http://slackbuilds.org/slackbuilds/14.1/system/xfburn.tar.gz Ekstrak kemudian pindah direktori ke folder hasil ekstrak
-$ tar xzf xfburn.tar.gz ; cd xfburn Unduh kode sumber xfburn
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-17-install-xfburn-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
 
   
 
@@ -470,7 +467,7 @@ $ tar xzf xfburn.tar.gz ; cd xfburn Unduh kode sumber xfburn
   
   <a href="https://sasongko.web.id/page/51/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;52 / 62&nbsp;</span>
+  <span>&nbsp;52 / 63&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/53/"><i class="fa fa-chevron-right"></i></a>
   

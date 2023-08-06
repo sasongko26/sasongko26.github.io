@@ -228,6 +228,92 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2023-06-26-membuat-qemu-disk-image/">Membuat qemu disk image</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Jun 2023</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk membuat disk image sebagai storage sistem oprasi yang akan divirtualisasikan dengan qemu, bisa menggunakan command yang mudah. Misalkan nama file adalah slack.img dengan size 100G
+#penggunaan: qemu-img create file_disk_imagenya sizenya $ qemu-img create slack.img 100G 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2023-06-22-convert-dd-to-vdi/">Convert dd ke vdi</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>22 Jun 2023</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk konversi file dd/img menjadi vdi mudah. Pastikan sudah install virtualbox. Misalkan akan mengubah file1.dd menjadi file2.vdi,
+$ VBoxManage convertfromraw file1.dd --format VDI file2.vdi 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-06-10-tiling-window-kde-plasma/">Menggunakan tiling window KDE Plasma</a></h2>
 
     <div class="post-meta">
@@ -358,97 +444,6 @@ grub&gt; fwsetup
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-05-19-deskreen-no-wifi-lan-connection/">Deskreen No WiFi and LAN Connection</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>20 May 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Buka-buka direktori lama, ternyata ada catatan yang belum dipublikasikan, salah satunya soal deskreen. Aplikasi ini kami gunakan untuk share screen ataupun presentasi dari laptop ke TV. Sebenarnya untuk menghubungkan laptop dan TV bisa menggunakan kabel HDMI, tapi karena kabelnya kurang panjang, TVnya banyak dan belum punya HDMI splitter maka terbersitlah untuk presentasi menggunakan jaringan wifi. Duckduckgo memberikan hasil bagaimana cara, salah satunya dengan deskreen ini.
-Demi kepraktisan, kami donwload edisi appimage.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2023-05-19-deskreen-no-wifi-lan-connection/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-04-29-enable-disable-pipewire-slackware/">Enable Disable Pipewire Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 Apr 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Catatan tentang pipewire sebenarnya sudah pernah dituliskan. Tetapi, biar tidak lupa dan lebih mudah mencarinya kala lupa, tidak ada salahnya dibuat catatan tersendiri. Bedanya, ini lebih singkat dan mudah dikerjakan.
-Salah satu keberuntungan slackers adalah Patrick Volkerding menyediakan skrip untuk meng-enable dan disable pipewire. Skrip tersebut adalah
-/usr/sbin/pipewire-enable.sh /usr/sbin/pipewire-disable.sh Silakan dieksekusi sesuai kebutuhan.
-  </p>
-
-  
-</article>
-
-  
 
   
 
@@ -457,7 +452,7 @@ Salah satu keberuntungan slackers adalah Patrick Volkerding menyediakan skrip un
   
   <a href="https://sasongko.web.id/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;2 / 62&nbsp;</span>
+  <span>&nbsp;2 / 63&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/3/"><i class="fa fa-chevron-right"></i></a>
   
