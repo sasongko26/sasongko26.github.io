@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.115.1">
+  <meta name="generator" content="Hugo 0.118.2">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,49 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2019-12-02-perlintro-panduan-pertama-belajar-pemrograman-perl/">perlintro panduan pertama belajar pemrograman perl</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Dec 2019</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Salah satu keunggulan perl dibanding bahasa pemrograman lainnya adalah tersedia dokumentasi atau panduan bagi pemula. Pemula membutuhkan panduan singkat tapi tetap komprehensif dan mudah dipahami. Perl sudah memberikannya. Dokumentasi atau panduan ini bisa diakses secara offline setelah menginstall perl. Namanya adalah perlintro.
+$ perldoc perlintro 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2019-12-01-rename-banyak-file-sekaligus/">Rename Banyak File Sekaligus</a></h2>
 
     <div class="post-meta">
@@ -407,56 +450,6 @@ Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer
   
   <footer>
     <a href="https://sasongko.web.id/post/2019-06-09-backup-android/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/">Reverse Dependency sbopkg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>20 Apr 2019</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sbopkg">sbopkg</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackbuild">slackbuild</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default sbopkg tidak menyediakan fitur reverse dependency. Adapun untuk butuh dependency-nya apa saja bisa menggunakan sqg. Bagaimana tahu reverse dependency-nya?
-Ini cara sederhana yang saya gunakan
-grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan cara tersebut bisa diketahui suatu paket/package itu menjadi dependensi dari paket apa. Tapi, salah 1 dari output tersebut tidak lain adalah paket itu sendiri. Dan, package yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah packages tersebut terinstall atau tidak.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

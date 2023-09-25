@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.115.1">
+  <meta name="generator" content="Hugo 0.118.2">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,56 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/">Reverse Dependency sbopkg</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>20 Apr 2019</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sbopkg">sbopkg</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackbuild">slackbuild</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default sbopkg tidak menyediakan fitur reverse dependency. Adapun untuk butuh dependency-nya apa saja bisa menggunakan sqg. Bagaimana tahu reverse dependency-nya?
+Ini cara sederhana yang saya gunakan
+grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan cara tersebut bisa diketahui suatu paket/package itu menjadi dependensi dari paket apa. Tapi, salah 1 dari output tersebut tidak lain adalah paket itu sendiri. Dan, package yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah packages tersebut terinstall atau tidak.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2019-04-19-chromium-disable-unlock-keyring/">Chromium Disable Unlock Keyring</a></h2>
 
     <div class="post-meta">
@@ -408,51 +458,6 @@ $ wget https://www.vim.org/scripts/download_script.php?src_id=24473 -O perl-supp
 $ echo &#34;filetype plugin on&#34; &gt;&gt; .vimrc 
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/">Hapus Aplikasi yang Diinstall Tanggal Tertentu</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>08 Dec 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Tiga hari ini mencoba-coba install kdenlive, aplikasi editor video yang konon handal. Sengaja disebut konon karena belum membuktikannya secara langsung. Setelah semua beres diinstall ternyata malah berubah pikiran. Apa perlu saya pakai editor video? Toh selama ini tidak pernah edit video dan pekerjaan sehari-hari juga tidak bersentuhan langsung dengan pembuatan maupun editing video. Jadi hapus sajalah.
-kdenlive-nya sukses di-uninstall, tapi bagaimana dengan seabrek dependensinya? Hapus juga deh! Kalau besok-besok diperlukan tinggal install lagi.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

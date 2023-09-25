@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.115.1">
+  <meta name="generator" content="Hugo 0.118.2">
 
   <title>spdlog build error basic runtime &middot; Catatan Sasongko</title>
 
@@ -266,6 +266,8 @@
 </span></span><span style="display:flex;"><span>Failures:
 </span></span><span style="display:flex;"><span>  spdlog: spdlog.SlackBuild <span style="color:#66d9ef">return</span> non-zero
 </span></span></code></pre></div><p>Spdlog ini mempunyai dependensi fmt. Fmt yang tersedia di current versi 10.0.0. Tapi versi ini gagal untuk build spdlog. Maka mt yang ada di current ini dihapus dan ganti dengan yang disediakan SBo (9.1.0).</p>
+<p><strong>Update catatan</strong>:
+spdlog akhirnya berhasil diinstall, setelah update sistem (slacware64-current) 13 September, versi spdlog 1.12.0, dan install dependensi Catch2 versi 3.4.0</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
