@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.118.2">
 
-  <title>Aktifkan Touchpad untuk Klik &middot; Catatan Sasongko</title>
+  <title>Menggunakan wayland &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Aktifkan Touchpad untuk Klik</h1>
+  <h1>Menggunakan wayland</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Sep 2023</time>
+    <time>28 Oct 2023</time>
   </div>
 
   
@@ -236,7 +236,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
     
   </div>
   
@@ -245,23 +245,30 @@
 </div>
 
 
-  <p>Catatan ini sebenarnya sudah ditulis beberapa bulan yang lalu atau bahkan bertahun lalu, tetapi karena kesibukan baru sempat di-<em>commit</em> sekarang. Saat menggunakan <strong>wayland</strong> pertama kalinya, ada masalah. <strong>Touchpad</strong> tidak bisa digunakan untuk klik sebagai ganti klik pada <em>mouse</em>. Ternyata secara <em>default</em> memang demikian. <strong>Keunggulan linux</strong> salah satunya adalah penggunanya <em>bebas melakukan modifikasi</em> sesuai kemampuan dan kebutuhannya.</p>
-<p>Untuk membuat <em>touchpad</em> bisa melakukan tap sebagai klik, masuk ke <strong>Settings</strong> kemudian <em>search</em> <strong>touchpad</strong>. Di sini kami lebih suka menggunakan fitur <em>search</em> karena tidak ingat betul lokasi spesifik pengaturannya. Pada hasil yang muncul, klik <strong>Touchpad</strong>, pada bagian <strong>Tapping</strong> centang <strong>Tap-to-click</strong>.</p>
+  <p><em>Wayland</em> digadang-gadang sebagai suksesor Xorg/X11. GNOME dan Fedora sudah memutuskan tidak lagi menggunakan X11 untuk rilis berikutnya. Proyek-proyek <em>opensource</em> terkait <em>wayland</em> bermunculan.</p>
+<p>Berikut adalah yang kami gunakan ketika berkomputasi dengan <em>wayland</em>:</p>
+<ol>
+<li>Compositor: <em>labwc</em> atau <em>hyprland</em></li>
+<li>Status bar/panel : <em>nwg-panel</em></li>
+<li>Gamma/ninght mode : <em>wlsunset</em></li>
+<li>Screenlocker : <em>swaylock</em> dan <em>swayidle</em></li>
+</ol>
+<p>Bukankah KDE Plasma juga mendukung <em>wayland</em>, mengapa tidak digunakan? Kami lebih suka menggunakan <em>wayland</em> berbasis <em>wlroot</em>, sedangkan KDE Plasma masih berbasis <em>dbus</em>.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-09-25-touchpad-tap-to-click%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-10-28-menggunakan-wayland%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-09-25-touchpad-tap-to-click%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-10-28-menggunakan-wayland%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-09-25-touchpad-tap-to-click%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-10-28-menggunakan-wayland%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-09-25-touchpad-tap-to-click%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-10-28-menggunakan-wayland%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-09-25-touchpad-tap-to-click%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-10-28-menggunakan-wayland%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-09-25-touchpad-tap-to-click%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2023-10-28-menggunakan-wayland%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -293,13 +300,13 @@
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2023-08-06-for-looping-bash/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2023-09-25-touchpad-tap-to-click/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2023-08-06-for-looping-bash/">Pengulangan for pada bash</a>
+      <a href="https://sasongko.web.id/post/2023-09-25-touchpad-tap-to-click/">Aktifkan Touchpad untuk Klik</a>
     </nav>
     
   </div>
@@ -308,14 +315,8 @@
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2023-10-28-menggunakan-wayland/">Menggunakan wayland</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2023-10-28-menggunakan-wayland/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
