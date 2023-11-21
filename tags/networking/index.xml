@@ -6,66 +6,56 @@
     <description>Recent content in networking on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sasongko.web.id/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Deskreen No WiFi and LAN Connection</title>
       <link>https://sasongko.web.id/post/2023-05-19-deskreen-no-wifi-lan-connection/</link>
       <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2023-05-19-deskreen-no-wifi-lan-connection/</guid>
       <description>Buka-buka direktori lama, ternyata ada catatan yang belum dipublikasikan, salah satunya soal deskreen. Aplikasi ini kami gunakan untuk share screen ataupun presentasi dari laptop ke TV. Sebenarnya untuk menghubungkan laptop dan TV bisa menggunakan kabel HDMI, tapi karena kabelnya kurang panjang, TVnya banyak dan belum punya HDMI splitter maka terbersitlah untuk presentasi menggunakan jaringan wifi. Duckduckgo memberikan hasil bagaimana cara, salah satunya dengan deskreen ini.
 Demi kepraktisan, kami donwload edisi appimage.</description>
     </item>
-    
     <item>
       <title>Deteksi Sistem Operasi Target Hacking</title>
       <link>https://sasongko.web.id/post/2021-12-17-deteksi-os-hacking/</link>
       <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-12-17-deteksi-os-hacking/</guid>
       <description>Judul catatan kali ini sedikit berbeda dibanding sebelumnya. Ada hacking-nya. Hehehehe&amp;hellip;. Tapi itu tidak menunjukkan bahwa kemampuan penulis dalam ilmu hacking bagus. Hanya bisa itu tok.
 Information gathering merupakan tahap krusial dalam proses hacking maupun cracking. Salah satu kegiatan information gathering adalah scanning atau deteksi sistem operasi yang digunakan pada target. Deteksi ini perlu karena berbeda sistem operasi mungkin membutuhkan teknik yang berbeda.
 Deteksi menggunakan nmap yang secara default sudah tertanam di slackware.</description>
     </item>
-    
     <item>
       <title>Mengetahui ip aktif sejaringan</title>
       <link>https://sasongko.web.id/post/2021-05-27-list-ip-aktif-sejaringan/</link>
       <pubDate>Thu, 27 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-05-27-list-ip-aktif-sejaringan/</guid>
       <description>Sebelum mengetahui alamat IP aktif dalam 1 jaringan yang sama, tentu saja harus konek atau masuk ke jaringan tersebut dulu. Setelah masuk, cek IP kita sendiri. Karena konek ke wifi maka interface-nya wlan0
 # ip addr show wlan0 3: wlan0: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc noqueue state UP group default qlen 1000 link/ether cc:b0:da:b5:3b:75 brd ff:ff:ff:ff:ff:ff inet 192.168.43.20/24 brd 192.168.43.255 scope global dynamic noprefixroute wlan0 valid_lft 1574sec preferred_lft 1574sec inet6 fe80::7f1b:2f4d:b98e:6500/64 scope link noprefixroute valid_lft forever preferred_lft forever Atau bisa juga dengan</description>
     </item>
-    
     <item>
       <title>Aktivasi fancy indexing directory listing apache</title>
       <link>https://sasongko.web.id/post/2021-05-23-aktivasi-fancy-indexing-directory-listing-apache/</link>
       <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-05-23-aktivasi-fancy-indexing-directory-listing-apache/</guid>
       <description>Secara default, indexing pada apache hanya menampilkan nama direktori dan file yang berada dalam direktori tersebut dengan format unordered list. Bagi yang menganggap tampilan ini tidak menarik, bisa mengaktifkan fancy indexing dengan cara edit file /etc/httpd/httpd.conf, uncomment baris
 #Include /etc/httpd/extra/httpd-autoindex.conf kemudian restart apache
 # /etc/rc.d/rc.httpd restart </description>
     </item>
-    
     <item>
       <title>Mengubah user agent firefox</title>
       <link>https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/</guid>
       <description>Pengertian user agent User agent (UA) adalah identitas web browser yang dikirimkan ke website yang diakses. Identitas tersebut antara lain nama web browser dan versinya.
 Default UA firefox Firefox yang saat ini digunakan adalah versi 78.6.1esr. Versi ini memiliki UA Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
 Mengetahui UA firefox Pada address bar ketik about:support. Perhatikan bagian User Agent.
 Cara mengganti UA Untuk mengubahnya, contoh kali ini akan diubah dengan UA Chrome pada Mac.</description>
     </item>
-    
     <item>
       <title>Aktivasi apache webserver slackware</title>
       <link>https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/</link>
       <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/</guid>
       <description>Install apache webserver slackware linux Secara default, apache webserver sudah ter-install di slackware. Namun, jika saat meng-install slackware tidak memilih full installation, apache webserver dapat di-install dengan mudah, yaitu dengan meng-install httpd.
 slackpkg install httpd Aktivasi apache webserver slackware linux Setelah diinstall, bisa diaktifkan:
@@ -73,33 +63,27 @@ slackpkg install httpd Aktivasi apache webserver slackware linux Setelah diinsta
 /etc/rc.d/rc.httpd stop Untuk restart webserver:
 /etc/rc.d/rc.httpd restart Mengaktifkan apache webserver otomatis Untuk dapat running atau mengaktifkan apache secara otomatis setelah booting, pastikan /etc/rc.</description>
     </item>
-    
     <item>
       <title>Pelengkap dnscrypt-proxy</title>
       <link>https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/</link>
       <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/</guid>
       <description>Catatan ini merupakan catatan tambahan untuk melengkapi README.Slackware pada skrip dnscrypt-proxy yang ada di SBo. Yang ada di SBo :
 Membuat grup dnscrypt dan usernya Mengkonfigurasi dns /etc/resolv.conf.head Memasukkan dnscryp-proxy ke /etc/rc.d/rc.local{,_shutdown} Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi maintainer dnscrypt-proxy tidak mengikutsertakan langkah ini. Penulis menggunakan NetworkManager, setelah check &amp;amp; recheck, dnscrypt-proxy tidak bekerja karena file /etc/resolv.conf terkena overwrite oleh NetworkManager. Ini adalah langkah untuk memberikan imunisasi/mencegah overwrite.</description>
     </item>
-    
     <item>
       <title>Mengetahui IP lokal dengan nmcli</title>
       <link>https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/</link>
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/</guid>
       <description>Untuk mengetahui alamat ip lokal tanpa akses root dapat menggunakan nmcli
 $ nmcli wlan0: connected to Anatomi &amp;#34;Qualcomm Atheros QCA9377&amp;#34; wifi (ath10k_pci), CC:B0:DA:B5:3B:75, hw, mtu 1500 ip4 default inet4 192.168.120.19/24 route4 0.0.0.0/0 route4 192.168.120.0/24 route4 192.168.120.0/24 inet6 fe80::1a37:a13:b117:ff74/64 route6 fe80::/64 route6 ff00::/8 Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah
 ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74 </description>
     </item>
-    
     <item>
       <title>NetworkManager device not ready</title>
       <link>https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/</link>
       <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/</guid>
       <description>Baru beberapa hari memakai (lagi) NetworkManager, sudah bermasalah (lagi).
 device not ready begitulah&amp;hellip;.
@@ -107,37 +91,30 @@ Padahal network interface-nya terdeteksi semua dengan benar seperti biasanya jam
 echo &amp;#34;managed=true&amp;#34; &amp;gt;&amp;gt; /etc/NetworkManager/NetworkManager.conf Tapi, ternyata ini kemudian munculkan warning di syslog
 Aug 9 12:04:53 localhost NetworkManager[1047]: &amp;lt;warn&amp;gt; [1596949493.8398] config: unknown key &amp;#39;managed&amp;#39; in section [main] of file &amp;#39;/etc/NetworkManager/NetworkManager.conf Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal).</description>
     </item>
-    
     <item>
       <title>Bye wicd</title>
       <link>https://sasongko.web.id/post/2020-08-04-bye-wicd/</link>
       <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-08-04-bye-wicd/</guid>
       <description>Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan wicd dari repo slackware current.
 extra/wicd/wicd-1.7.4-x86_64-3.txz: Removed.
 This is unmaintained, possibly insecure, and doesn&amp;rsquo;t work with Python versions newer than 2.7.18. NetworkManager is a better choice these days.
 Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripada NetworkManager. Kenyamanan ini sebenarnya karena saya tidak mau repot, NetworkManager seringkali timbulkan masalah, salah satunya mengatur hostname dan domain. Keduanya saya kosongi. Mengapa?</description>
     </item>
-    
     <item>
       <title>Operation not possible due to RF-kill</title>
       <link>https://sasongko.web.id/post/2018-06-15-operation-not-possible-due-to-rfkill/</link>
       <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2018-06-15-operation-not-possible-due-to-rfkill/</guid>
       <description>Pagi ini, refreshing dengan berganti desktop environment (DE) memakai Window Maker (WM). DE yang jarang digunakan karena biasanya memakai XFCE. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk tethering. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong Network Manager atau Wicd aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah root.</description>
     </item>
-    
     <item>
       <title>Rename Network Interface</title>
       <link>https://sasongko.web.id/post/2018-02-18-rename-network-interface/</link>
       <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2018-02-18-rename-network-interface/</guid>
       <description>Entah mengapa tadi kepikiran untuk jalankan ifconfig -a. Ternyata kemudian ada output yang menarik
 eth0: flags=4099&amp;lt;UP,BROADCAST,MULTICAST&amp;gt; mtu 1500 ether c8:5b:76:66:51:6a txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 lo: flags=73&amp;lt;UP,LOOPBACK,RUNNING&amp;gt; mtu 65536 inet 127.0.0.1 netmask 255.0.0.0 inet6 ::1 prefixlen 128 scopeid 0x10&amp;lt;host&amp;gt; loop txqueuelen 1000 (Local Loopback) RX packets 0 bytes 0 (0.</description>
     </item>
-    
   </channel>
 </rss>

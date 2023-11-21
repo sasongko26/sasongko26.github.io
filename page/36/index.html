@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.118.2">
+  <meta name="generator" content="Hugo 0.120.3">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,55 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2019-03-30-memulai-mariadb/">Memulai MariaDB</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 Mar 2019</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Apa itu MariaDB MariaDB adalah software untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.
+Install MariaDB Secara default, apabila Slackware diisnntall full system maka MariaDB akan terinstall. Jadi tidak usah repot-repot untuk insytallnya.
+Memulai MariaDB Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. prompt R/ menunjukkan dilakukan dengan priviledge root
+R/ mysql_install_db R/ chown -R mysql:mysql /var/lib/mysql R/ chmod +x /etc/rc.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2019-03-30-memulai-mariadb/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2019-02-01-perl-ide-vim/">Perl IDE dengan vim</a></h2>
 
     <div class="post-meta">
@@ -403,49 +452,6 @@ $ sbocheck # command ini dijalankan oleh root Unescaped left brace in regex is d
   <footer>
     <a href="https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-06-23-kosongkan-trash/">Hapus Trash via Command Line</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Jun 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Iseng-iseng buka hidden folder ada yang menarik. File yang ada di Trash (bisa buka di Thunar dengan path trash:/// sama dengan yang ada di ~/.local/share/Trash/files/. Sehingga kalau ingin mengosongkan Trash dan posisi sedang di CLI dan tidak membuka file manager ataupun lagi aras-arasen, sangat bisa.
-rm -rv ~/.local/share/Trash/* 
-  </p>
-
   
 </article>
 

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.118.2">
+  <meta name="generator" content="Hugo 0.120.3">
 
   <title>Rebuild R post-upgrade icu4c &middot; Catatan Sasongko</title>
 
@@ -263,7 +263,7 @@
 </span></span></code></pre></div><p><em>Command</em> tersebut dieksekusi dengan <em>root privileges</em>.</p>
 <p>Berhasil. Tetapi ternyata, saat akan menggunakan <strong>tidyverse</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">library</span>(tidyverse)
-</span></span><span style="display:flex;"><span>Error<span style="color:#f92672">:</span> package or namespace load failed for ‘tidyverse’ in <span style="color:#a6e22e">dyn.load</span>(file, DLLpath <span style="color:#f92672">=</span> DLLpath, <span style="color:#66d9ef">...</span>)<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>Error<span style="color:#f92672">:</span> package or namespace load failed <span style="color:#66d9ef">for</span> ‘tidyverse’ <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">dyn.load</span>(file, DLLpath <span style="color:#f92672">=</span> DLLpath, <span style="color:#66d9ef">...</span>)<span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span> unable to load shared object <span style="color:#e6db74">&#39;/home/sasongko/R/x86_64-slackware-linux-gnu-library/4.0/stringi/libs/stringi.so&#39;</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>  libicui18n.so.67<span style="color:#f92672">:</span> cannot open shared object file<span style="color:#f92672">:</span> No such file or directory
 </span></span></code></pre></div><p>Ternyata <em>package</em> <strong>stringi</strong> juga minta <em>rebuild</em>.</p>

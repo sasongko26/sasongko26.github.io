@@ -6,18 +6,17 @@
     <description>Recent content in debug on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/debug/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sasongko.web.id/tags/debug/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Membuat dan analisis core dump</title>
       <link>https://sasongko.web.id/post/2021-12-18-membuat-coredump/</link>
       <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-12-18-membuat-coredump/</guid>
       <description>Suatu program gagal dijalankan. Eksekusi via terminal menunjukkan segmentation fault tanpa keterangan lainnya. Pada situasi inilah core dump diperlukan untuk debugging sehingga diketahui penyebabnya.
 Contoh, geeqie apabila dijalankan di lingkungan wayland berbuah segmentation fault
 $ geeqie Segmentation fault Saatnya membuat core dump
 $ gcore /usr/bin/geeqie Illegal process-id: /usr/bin/geeqie. You can&amp;#39;t do that without a process to debug. The program is not being run. gcore: failed to create core./usr/bin/geeqie Kemudian eksekusi lagi</description>
     </item>
-    
   </channel>
 </rss>

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.118.2">
+  <meta name="generator" content="Hugo 0.120.3">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,48 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2023-11-20-hapus-spasi-libreoffice-calc/">Hapus spasi libreoffice calc</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>20 Nov 2023</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk menghapus spasi pada libreoffice calc menggunakan fitur Find &amp; Replace. Pada bagian Find isikan \s+ dengan \s adalah regex untuk spasi sedangkan + untuk menerapkan regex ke semua yang ditemukan. Replace kosongkan. Centang RegularExpressions.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2023-10-28-menggunakan-wayland/">Menggunakan wayland</a></h2>
 
     <div class="post-meta">
@@ -263,9 +305,13 @@
   <p>
   Wayland digadang-gadang sebagai suksesor Xorg/X11. GNOME dan Fedora sudah memutuskan tidak lagi menggunakan X11 untuk rilis berikutnya. Proyek-proyek opensource terkait wayland bermunculan.
 Berikut adalah yang kami gunakan ketika berkomputasi dengan wayland:
-Compositor: labwc atau hyprland Status bar/panel : nwg-panel Gamma/ninght mode : wlsunset Screenlocker : swaylock dan swayidle Bukankah KDE Plasma juga mendukung wayland, mengapa tidak digunakan? Kami lebih suka menggunakan wayland berbasis wlroot, sedangkan KDE Plasma masih berbasis dbus.
+Compositor: labwc atau hyprland Status bar/panel : nwg-panel Gamma/night mode : wlsunset Screenlocker : swaylock dan swayidle Bukankah KDE Plasma juga mendukung wayland, mengapa tidak digunakan? Kami lebih suka menggunakan wayland berbasis wlroot, sedangkan KDE Plasma masih berbasis dbus. Mengapa menggunakan wlroot?
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2023-10-28-menggunakan-wayland/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -397,50 +443,6 @@ for i in {1..10} do echo $i done
   <p>
   Salah satu keunggulan linux adalah mudahnya untuk melakukan otomatisasi yang dapat dilakukan dengan mengetikkan sebaris perintah. Sebagai contoh, apabila ingin melakukan pencadangan semua file tanpa melihat struktur direktorinya ke media penyimpanan eksternal bisa mengetikkan
 $ find direktori_asli -iname &#39;*&#39; -exec cp &#39;{}&#39; direktori_cadangan \; Perintah tersebut akan membuat semua file di direktori_asli berpindah ke direktori_cadangan.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-07-19-menggunakan-dhclient-networkmanager/">Menggunakan dhclient untuk NetworkManager</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Jul 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network-manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Ada sedikit masalah ketika menggunakan kernel 6.1.38. Masalah tersebut antara lain tidak stabilnya jaringan internet bila konek via NetworkManager, usb dan bluetooth yang kadang suka diskonek sendiri. Solusi untuk masalah jaringan dan bluetooth tersebut adalah mengganti dhcpcd dengan dhclient pada konfigurasi Network Manager /etc/NetworkManager/conf.d/00-dhcp-client.conf, sesuai masukan dari Pak Walesa.
   </p>
 
   

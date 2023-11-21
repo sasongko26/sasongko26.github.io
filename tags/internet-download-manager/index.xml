@@ -6,50 +6,43 @@
     <description>Recent content in internet download manager on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/internet-download-manager/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sasongko.web.id/tags/internet-download-manager/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Menggunakan wget prefix directory</title>
       <link>https://sasongko.web.id/post/2021-03-23-menggunakan-wget-prefix-directory/</link>
       <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-03-23-menggunakan-wget-prefix-directory/</guid>
       <description>Secara default, apabila menggunakan wget, file di-download ke direktori aktif. Dengan mengaktifkan prefix directory (-P), file tersebut bisa disimpan ke direktori lain.
 $ wget [url] -P [direktori] [url] : URL / alamat lengkap file yang akan di-download [direktori] : direktori tujuan </description>
     </item>
-    
     <item>
       <title>Download video youtube khusus member</title>
       <link>https://sasongko.web.id/post/2021-02-01-download-video-youtube-khusus-member/</link>
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-02-01-download-video-youtube-khusus-member/</guid>
       <description>Secara default video yang ada di youtube dapat di-download secara bebas. Semua orang bisa men-download tanpa harus login. Tetapi, ada kalanya sang pemilik video membatasinya hanya untuk member atau harus login dulu baru bisa donwload.
 Dengan youtube-dl hal ini mudah dilakukan
 $ youtube-dl -u username url Opsi -u diikuti dengan username akun youtube untuk login.</description>
     </item>
-    
     <item>
       <title>Menggunakan rsync</title>
       <link>https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/</guid>
       <description>Kegunaan rsync rsync berguna untuk transfer file secara efisien. Dibandingkan dengan cp atau mv, rsync memiliki keunggulan :
 Bebas pilih-pilih file maupun direktori yang akan ditransfer karena ada fitur include dan exclude Apabila gagal, misalnya karena storage penuh atau &amp;ldquo;kecelakaan&amp;rdquo; salah klik sehingga ter-close, dapat dilanjutkan tanpa mengulang dari awal sehingga waktunya tentu lebih cepat Dibandingkan wget, rsync mendukung penggunaan wildcard dan secara default rsync resumeable.
 Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1</description>
     </item>
-    
     <item>
       <title>Menggunakan WGet Linux Download Manager</title>
       <link>https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/</link>
       <pubDate>Sun, 23 Mar 2014 10:28:12 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/</guid>
       <description>Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume. Cara menggunakannya mudah.
 $ wget [url] untuk mem-pause download tekan Ctrl+C. Dan untuk melanjutkan kembali tambahkan opsi -c.
 $ wget [url] -c Untuk lebih lengkapnya tentang wget ada di manual wget.
 $ wget -h GNU Wget 1.15, adalah sebuah non-interaktif network retriever.</description>
     </item>
-    
   </channel>
 </rss>

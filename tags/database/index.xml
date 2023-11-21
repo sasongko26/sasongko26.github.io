@@ -6,54 +6,47 @@
     <description>Recent content in database on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sasongko.web.id/tags/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Akses akun root mariadb tanpa password</title>
       <link>https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/</link>
       <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/</guid>
       <description>Untuk akses root mariadb biasanya memerlukan password. Tapi sebenarnya root bisa diakses tanpa password. Pertama, hentikan dulu service mariadb-nya.
 $ /etc/rc.d/rc.mysqld stop Kemudian, restart database server tanpa peduli otentikasinya.
 $ mariadbd-safe --skip-grant-tables --skip-networking &amp;amp; Nah, akun root mariadb sudah bisa diakses tanpa password
 $ mariadb -u root Welcome to the MariaDB monitor. Commands end with ; or \g. Your MariaDB connection id is 3 Server version: 10.11.2-MariaDB Source distribution Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.</description>
     </item>
-    
     <item>
       <title>Query SQL</title>
       <link>https://sasongko.web.id/post/2021-06-24-query-sql/</link>
       <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-06-24-query-sql/</guid>
       <description>Relational Database Management System (RDBMS) adalah salah satu sistem database populer. Sistem pengolahan database ini menggunakan bahasa SQL (dibaca sekuel atau es kiu el). Tool yang dapat digunakan antara lain mariadb, mysql, postgresql.
 Pada RDBMS dikenal adanya hirarki atau struktur, yaitu dari tertinggi database yang terdiri atas tabel. Tabel dibentuk oleh kolom dengan data sejumlah barisnya.
 Perintah SQL ada 2
 Data Definition Language (DDL) untuk membuat, menghapus atau modifikasi struktur database Data Manipulation Language (DML) untuk insert data, query, hapus, edit data QUERY SQL Query adalah pengambilan data dari database.</description>
     </item>
-    
     <item>
       <title>Mariadb error 2002</title>
       <link>https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/</guid>
       <description>Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.
 $ mariadb -u root -p Enter password: ERROR 2002 (HY000): Can&amp;#39;t connect to local server through socket &amp;#39;/var/run/mysql/mysql.sock&amp;#39; (2) Setelah dicek, ternyata service-nya belum jalan karena tidak executable.
 $ ls -l /etc/rc.d|grep -iE &amp;#34;(maria|mysql)&amp;#34; -rw-r--r-- 1 root root 2517 May 2 09:08 rc.mysqld -rw-r--r-- 1 root root 2943 Aug 4 2020 rc.mysqld.orig Mari aktifkan
 # chmod +x /etc/rc.</description>
     </item>
-    
     <item>
       <title>Memulai MariaDB</title>
       <link>https://sasongko.web.id/post/2019-03-30-memulai-mariadb/</link>
       <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2019-03-30-memulai-mariadb/</guid>
       <description>Apa itu MariaDB MariaDB adalah software untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.
 Install MariaDB Secara default, apabila Slackware diisnntall full system maka MariaDB akan terinstall. Jadi tidak usah repot-repot untuk insytallnya.
 Memulai MariaDB Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. prompt R/ menunjukkan dilakukan dengan priviledge root
 R/ mysql_install_db R/ chown -R mysql:mysql /var/lib/mysql R/ chmod +x /etc/rc.</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,126 +6,104 @@
     <description>Recent content in desktop environment on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/desktop-environment/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sasongko.web.id/tags/desktop-environment/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Menggunakan wayland</title>
       <link>https://sasongko.web.id/post/2023-10-28-menggunakan-wayland/</link>
       <pubDate>Sat, 28 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2023-10-28-menggunakan-wayland/</guid>
       <description>Wayland digadang-gadang sebagai suksesor Xorg/X11. GNOME dan Fedora sudah memutuskan tidak lagi menggunakan X11 untuk rilis berikutnya. Proyek-proyek opensource terkait wayland bermunculan.
 Berikut adalah yang kami gunakan ketika berkomputasi dengan wayland:
-Compositor: labwc atau hyprland Status bar/panel : nwg-panel Gamma/ninght mode : wlsunset Screenlocker : swaylock dan swayidle Bukankah KDE Plasma juga mendukung wayland, mengapa tidak digunakan? Kami lebih suka menggunakan wayland berbasis wlroot, sedangkan KDE Plasma masih berbasis dbus.</description>
+Compositor: labwc atau hyprland Status bar/panel : nwg-panel Gamma/night mode : wlsunset Screenlocker : swaylock dan swayidle Bukankah KDE Plasma juga mendukung wayland, mengapa tidak digunakan? Kami lebih suka menggunakan wayland berbasis wlroot, sedangkan KDE Plasma masih berbasis dbus. Mengapa menggunakan wlroot?</description>
     </item>
-    
     <item>
       <title>Menggunakan tiling window KDE Plasma</title>
       <link>https://sasongko.web.id/post/2022-06-10-tiling-window-kde-plasma/</link>
       <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2022-06-10-tiling-window-kde-plasma/</guid>
       <description>KDE Plasma semakin seru setelah adanya built in window tiling. Untuk menggunakan, tekan shift sambil drag window ke bilah yang diinginkan. Untuk mengedit layout tiling pastikan Tiling Editor pada pengaturan/setting sudah enable/tercentang.</description>
     </item>
-    
     <item>
       <title>Menyusupkan mate ke xfce</title>
       <link>https://sasongko.web.id/post/2021-06-23-menyusupkan-mate-ke-xfce/</link>
       <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-06-23-menyusupkan-mate-ke-xfce/</guid>
       <description>Secara default, window manager yang digunakan xfce adalah xfwm4. Tetapi, ini bisa diganti menjadi window manager lain seperti fluxbox ataupun marco milik mate.
 Kali ini kita akan ganti xfwm4 dengan marco. Caranya, membuat startup baru berisikan command
 $ /usr/bin/marco --replace </description>
     </item>
-    
     <item>
       <title>Memindahkan tombol minimize maximize close window fluxbox</title>
       <link>https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/</link>
       <pubDate>Sat, 15 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/</guid>
       <description>Secara default tombol Minimize/Iconify, Maximize dan Close pada window fluxbox terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian
 session.screen0.titlebar.right: Minimize Maximize Close Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian
 session.screen0.titlebar.left: </description>
     </item>
-    
     <item>
       <title>Disable recent documents mate</title>
       <link>https://sasongko.web.id/post/2021-03-18-disable-recent-documents-mate/</link>
       <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-03-18-disable-recent-documents-mate/</guid>
       <description>Masalah security saat penggunaan desktop environment mate adalah adanya recent documents pada menu. Ini terletak pada menu di bagian bawah menu Places. Bagi user yang concern dengan privasi dan menghendaki untuk menonaktifkannya alih-alih membersihkannya &amp;ldquo;setiap saat&amp;rdquo;,
 $ echo &amp;#34;&amp;#34; &amp;gt; ~/.local/share/recently-used.xbel $ chattr -i ~/.local/share/recently-used.xbel # dijalankan oleh root </description>
     </item>
-    
     <item>
       <title>Mengatur pencahayaan monitor dengan redshift</title>
       <link>https://sasongko.web.id/post/2021-03-17-layar-merah-kuning-redshift/</link>
       <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-03-17-layar-merah-kuning-redshift/</guid>
       <description>Beberapa bulan ini mata menjadi lebih cepat lelah apabila malam-malam berlama-lama menatap monitor. Padahal backlight/brightness sudah diset 15%. Mungkin karena faktor U dan pagi/siang sebelumnya sudah memandangi layar komputer. Maka, jadilah penulis menginstal redshift untuk &amp;ldquo;memerah/kuningkan brightness monitor.
 Redshift tersedia di SBo, sehingga bisa diinstal dengan mudah melalui sbotools, sbopkg, sboui, slpkg, atau yang lainnya.</description>
     </item>
-    
     <item>
       <title>Menambahkan tanggal toolbar blackbox</title>
       <link>https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/</link>
       <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/</guid>
       <description>Masih adakah pengguna linux di Indonesia yang menggunakan blackbox sebagai window manager sehari-hari? Masih, minimal seorang yaitu yang menulis catatan ini. Hehehehe&amp;hellip;.
 Secara default, toolbar blackbox tidak menyertakan tanggal walau menampilkan jam. Jam ditampilkan dalam format 12 jam AM/PM. Untuk menambahkannya, dan menggunakan jam format 24 jam sebagaimana lazimnya di Indonesia, diatur sebagai berikut pada ~/.blackboxrc
 session.screen0.strftimeFormat : %d/%m/%Y %H:%M Untuk menerapkan perubahan tersebut secara langsung, restart blackbox (tidak perlu restart komputer!</description>
     </item>
-    
     <item>
       <title>Resize window blackbox</title>
       <link>https://sasongko.web.id/post/2021-03-08-resize-window-blackbox/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-03-08-resize-window-blackbox/</guid>
       <description>Untuk resize atau mengubah ukuran window saat menggunakan blackbox caranya mudah. Arahkan pointer pada ujung kiri bawah atau kanan bawah window sampai tampilan pointer berganti menjadi sudut siku-siku dengan panah ke sudutnya. Kemudia klik dan drag sesuai keinginan seberapa ukuran windownya. Cara lain, adalah dengan mengarahkan menekan Alt klik kanan kemudian ubah ukuran windownya.</description>
     </item>
-    
     <item>
       <title>Set background blackbox</title>
       <link>https://sasongko.web.id/post/2021-02-19-set-background-blackbox/</link>
       <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-02-19-set-background-blackbox/</guid>
       <description>Menggunakan blackbox yang &amp;lsquo;hanya&amp;rsquo; window manager tentunya berbeda dengan ketika menggunakan desktop environment (DE) seperti kde atau xfce. Pengaturan background atau wallpaper dalam DE menggunakan tampilan grafis.
 Untuk meng-set background pada blackbox menggunakan bsetbg
 $ bsetbg nama_file_background Atau, kalau menghendaki background-nya adalah warna (solid color) juga bisa. Contoh, akan mengganti background-nya dengan warna hijau.
 $ bsetbg -solid green </description>
     </item>
-    
     <item>
       <title>xauth serverauthXXX does not exist</title>
       <link>https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/</link>
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/</guid>
       <description>Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-charge. Alhasil laptop mati seketika. Dinyalakan lagi (sambil charging tentunya) gagal masuk ke X.
 xauth: file /home/xyz/.serverauth.2909 does not exist Solusinya simpel
 $ rm .serverauth* </description>
     </item>
-    
     <item>
       <title>Fullscreen Mozilla Firefox</title>
       <link>https://sasongko.web.id/post/2020-02-01-fullscreen-firefox/</link>
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-02-01-fullscreen-firefox/</guid>
       <description>Terkadang saat browsing perlu fokus sehingga tampilan pun butuh fullscreen. Pada Mozilla Firefox, secara default F11 adalah tombol untuk fullscreen dan exit fullscreen. Akan tetapi, hal ini tidak berlaku pada kami, Slackware64 current dengan desktop environment XFCE yang berjalan di laptop Lenovo Ideapad 110-14IBR. Pada perangkat kami ini, F11 untuk mengurangi brightness. Maka, untuk fullscreen dan exit-nya kami gunakan Fn F11.</description>
     </item>
-    
     <item>
       <title>Mencoba Manokwari</title>
       <link>https://sasongko.web.id/post/2018-06-19-mencoba-manokwari/</link>
       <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2018-06-19-mencoba-manokwari/</guid>
       <description>Beberapa waktu yang lalu mencoba install manokwari dan berhasil dengan beberapa kekurangan.
 Proses install berjalan lancar walau sempat terhambat sebentar. Apalagi kalau bukan karena dependensi. Untuk compile menggunakan meson yang disediakan Pengembang dan prosesnya lebih cepat. Oiya, ini saya hanya lakukan di slackware64-current.
@@ -133,75 +111,60 @@ Tentang dependensi, saya bagi menjadi 3 bagian.
 Sudah terinstall secara default atau tersedia di official repo Slackware
 meson glib2 gtk+3 atk cairo x11 libnotify Tersedia di SBo</description>
     </item>
-    
     <item>
       <title>Operation not possible due to RF-kill</title>
       <link>https://sasongko.web.id/post/2018-06-15-operation-not-possible-due-to-rfkill/</link>
       <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2018-06-15-operation-not-possible-due-to-rfkill/</guid>
       <description>Pagi ini, refreshing dengan berganti desktop environment (DE) memakai Window Maker (WM). DE yang jarang digunakan karena biasanya memakai XFCE. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk tethering. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong Network Manager atau Wicd aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah root.</description>
     </item>
-    
     <item>
       <title>Rilis Lumina 1.3.0</title>
       <link>https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/</link>
       <pubDate>Sun, 02 Jul 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/</guid>
       <description>Di suasana Idul Fitri, 26 Juni 2017, Ken Moore selaku project leader Lumina mengumumkan perihal rilisnya Lumina Desktop 1.3.0. Selang 4 hari kemudian dirilis patch yang pertama untuk 1.3.0. Catatan rilis resmi silahkan dibaca di sini.
 Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini tergolong istimewa. Mulai versi 1.3.0 ini lumina semakin powerfull untuk digunakan di Slackware. Sampai dengan versi 1.2.0_p1 (1.2.0 patchset 1), Restart dan Power Off pada menu sama sekali tidak berfungsi.</description>
     </item>
-    
     <item>
       <title>Upgrade Plasma 5</title>
       <link>https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/</link>
       <pubDate>Sat, 01 Oct 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/</guid>
       <description>Secara resmi, Slackware masih menggunakan KDE 4 yang &amp;ldquo;ketinggalan jaman&amp;rdquo; padahal pengembang KDE telah merilis KDE (sekarang biasa disebut Plasma) 5. Plasma 5 ini masih tetap seperti &amp;ldquo;kakaknya&amp;rdquo; (KDE 4) yang boros memory dibandingkan Xfce. Tapi, masya Allah tampilan lebih keren!
 Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah membuat slackbuild dan binary package-nya yang bisa kita gunakan. Versi terakhir versi Eric saat ini adalah Plasma 5.7.4 sedangkan insya Allah tanggal 4 Oktober 2016 KDE merilis Plasma 5.</description>
     </item>
-    
     <item>
       <title>Terperangkap WindowMaker</title>
       <link>https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/</link>
       <pubDate>Thu, 28 Jul 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/</guid>
       <description>Mencoba merasakan kejadulan WindowMaker yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama xfce melalui command xwmconfig, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di WindowMaker. Bahkan tidak bisa ganti DE lainnya termasuk KDE dan Mate.
 Tapi kemudian bisa teratasi dengan menghapus .xinitrc dan folder GNUStep yang ada di home direktori pengguna.</description>
     </item>
-    
     <item>
       <title>Ganti Desktop Environment</title>
       <link>https://sasongko.web.id/post/2015-11-06-ganti-de/</link>
       <pubDate>Fri, 06 Nov 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2015-11-06-ganti-de/</guid>
       <description>Biar tidak membosankan, kadangkala kita butuh ganti desktop environment (DE). Caranya (root privileges),
 xwmconfig Pilih X Windows (atau DE)-nya. Kemudian Ok atau tekan Enter, Log out dan Log in kembali.</description>
     </item>
-    
     <item>
       <title>Install Mate Desktop</title>
       <link>https://sasongko.web.id/post/2015-11-06-install-mate-desktop/</link>
       <pubDate>Fri, 06 Nov 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2015-11-06-install-mate-desktop/</guid>
       <description>Walaupun desktop environment resmi Slackware adalah KDE dan Xfce, kita tetap bisa menggunakan DE lain, mate contohnya. Mate punya tampilan menarik tapi tetap ringan. Installnya mudah kok, seperti biasa pakai slackbuilds. Pastikan tersambung internet untuk mengunduh berkasnya, oya kita butuh kira-kira 500 MB untuk download mate.
 Pertama, dengan peramban web buka github mate slackbuilds. Nah, karena di sini menggunakan 14.1 (bukan current) maka pilih branch 14.1-mate-1.10. Setelah itu unduh tarball/zipnya kemudian ekstrak.</description>
     </item>
-    
     <item>
       <title>Hapus KDE Slackware</title>
       <link>https://sasongko.web.id/post/2015-04-25-hapus-kde-slackware/</link>
       <pubDate>Sat, 25 Apr 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2015-04-25-hapus-kde-slackware/</guid>
       <description>Kalau kita install Slackware secara full, maka desktop environment yang terinstall adalah KDE. Bagi beberapa pengguna mungkin KDE menimbulkan masalah karena pemakaian RAM dan CPU Usage yang notabene tinggi daripada DE yang lain. BIsakah KDE dihapus? Bisa
 # slackpkg remove kde kemudian pilih paket apa saja yang akan dihapus dengan memberi tanda silang (x). Untuk memberi atau menghapus tanda x tekan spasi. Kalau sudah silahkan tekan Ok dan menunggu beberapa saat sampai uninstall KDE nya selesai.</description>
     </item>
-    
   </channel>
 </rss>

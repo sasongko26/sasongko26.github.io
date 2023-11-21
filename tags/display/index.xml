@@ -6,60 +6,51 @@
     <description>Recent content in display on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/display/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sasongko.web.id/tags/display/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mengatur brightness</title>
       <link>https://sasongko.web.id/post/2022-11-16-mengatur-brightness/</link>
       <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2022-11-16-mengatur-brightness/</guid>
       <description>Pengaturan brightness bisa dilakukan dengan melakukan assign nilai pada
 /sys/class/backlight/intel_backlight/brightness Adapun nilai maksimal yang bisa diset ada di
 /sys/class/backlight/intel_backlight/max_brightness Oiya, di atas menggunakan graphics intel jadi intel_backlight.</description>
     </item>
-    
     <item>
       <title>Memindahkan tombol minimize maximize close window fluxbox</title>
       <link>https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/</link>
       <pubDate>Sat, 15 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/</guid>
       <description>Secara default tombol Minimize/Iconify, Maximize dan Close pada window fluxbox terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian
 session.screen0.titlebar.right: Minimize Maximize Close Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian
 session.screen0.titlebar.left: </description>
     </item>
-    
     <item>
       <title>xauth serverauthXXX does not exist</title>
       <link>https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/</link>
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/</guid>
       <description>Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-charge. Alhasil laptop mati seketika. Dinyalakan lagi (sambil charging tentunya) gagal masuk ke X.
 xauth: file /home/xyz/.serverauth.2909 does not exist Solusinya simpel
 $ rm .serverauth* </description>
     </item>
-    
     <item>
       <title>Mengetahui lingkungan aktif X11 atau wayland</title>
       <link>https://sasongko.web.id/post/2019-11-30-mengetahui-x11-atau-wayland/</link>
       <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2019-11-30-mengetahui-x11-atau-wayland/</guid>
       <description>Untuk mengetahui sedang aktif di dalam environment X11 atau wayland
 $ echo $XDG_SESSION_TYPE </description>
     </item>
-    
     <item>
       <title>Set Default Brightness</title>
       <link>https://sasongko.web.id/post/2016-07-10-set-default-brightness/</link>
       <pubDate>Sun, 10 Jul 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2016-07-10-set-default-brightness/</guid>
       <description>Kecerahan monitor / brightness 100% membuat mata cepat lelah. Apalagi kalau secara default begitu masuk X brightness-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan Computer Vision Syndrome.
 Berapa persen brightness yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur brightness bisa gunakan xbacklight.
 Untuk mengetahui berapa persen brightness yang digunakan saat ini xbacklight. Sedangkan untuk mengubahnya xbacklight -set persen. Contoh akan diatur brightness-nya 15%:</description>
     </item>
-    
   </channel>
 </rss>

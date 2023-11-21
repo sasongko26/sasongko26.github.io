@@ -6,109 +6,91 @@
     <description>Recent content in perl on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/perl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sasongko.web.id/tags/perl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>If else perl</title>
       <link>https://sasongko.web.id/post/2022-05-28-if-else-perl/</link>
       <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2022-05-28-if-else-perl/</guid>
       <description>Penyeleksian kondisi di perl dapat menggunakan syntax if&amp;hellip;else dengan format
 if ( kondisi ) { .... } else { .... } Contoh
 #!/usr/bin/perl use strict; use warnings; use feature &amp;#39;say&amp;#39;; my $username = &amp;#34;user&amp;#34;; if ( $username eq &amp;#34;nama&amp;#34; ) { say &amp;#34;Oke&amp;#34;; } else { say &amp;#34;Ulangi lagi....&amp;#34;; } </description>
     </item>
-    
     <item>
       <title>Operator perbandingan perl</title>
       <link>https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/</link>
       <pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/</guid>
       <description>Operator perbandingan digunakan untuk membandingkan nilai. Data/nilai yang dibandingkan dapat berupa bilangan ataupun string. Namun ada perbedaan notasi.
 Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &amp;lt; $b	| $a lebih kecil dari $b	| |$a &amp;gt; $b	| $a lebih besar dari $b	| |$a &amp;lt;= $b	| $a lebih kecil atau sama dengan $b	| |$a =&amp;gt; $b	| $a lebih besar atau sama dengan $b	| |$a == $b	| $a sama dengan $b	| |$a !</description>
     </item>
-    
     <item>
       <title>Operator penggabungan pengulangan string perl</title>
       <link>https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/</link>
       <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/</guid>
       <description>Pada perl, variabel scalar yang berupa string dapat dilakukan penggabungan dan pengulangan. Contoh, terdapat 3 variabel sebagai berikut: $sapa = &amp;ldquo;Hai&amp;hellip;. &amp;quot; $distro = &amp;ldquo;Slackware&amp;rdquo; $penilaian = &amp;ldquo;distro terbaik.&amp;rdquo; Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan &amp;ldquo;.&amp;rdquo;, sedangkan pengulangan dengan &amp;ldquo;x&amp;rdquo;.
 #!/usr/bin/perl use strict; use warnings; use feature &amp;#34;say&amp;#34;; my $sapa = &amp;#34;Hai.... &amp;#34;; my $distro = &amp;#34;Slackware &amp;#34;; my $penilaian = &amp;#34;distro terbaik.</description>
     </item>
-    
     <item>
       <title>Penggabungan operator perl</title>
       <link>https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/</link>
       <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/</guid>
       <description>Penggabungan operator yang dimaksudkan di sini adalah menggabungkan = dan operator lainnya seperti penjumlahan, perkalian, pengurangan, dll. Penggabungan ini biasanya digunakan untuk memperbarui nilai suatu variabel. Contoh di sini adalah penggabungan dengan operator penjumlahan.
 Misalkan, terdapat variabel a dengan nilai awal 10. Nilai a kemudian akan diubah dengan cara ditambah 4. Nilai a yang baru ini dituliskan dengan
 a += 4; Sehingga nilai a kemudian berubah dari 10 menjadi 14.</description>
     </item>
-    
     <item>
       <title>Operator aritmatika scalar perl</title>
       <link>https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/</link>
       <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/</guid>
       <description>Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.
 Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.
 #!/usr/bin/perl use strict; use warnings; use feature &amp;#39;say&amp;#39;; my $a = 2; my $b = 25; say(&amp;#34;Angka pertama (a) adalah $a&amp;#34;); say(&amp;#34;Angka kedua (b) adalah $b&amp;#34;); # penjumlahan my $c = $a + $b; say(&amp;#34;a+b = $c&amp;#34;); # pengurangan my $d = $b - $a; say(&amp;#34;b-a = $d&amp;#34;); # perkalian my $e = $a * $b; say(&amp;#34;a*b = $e&amp;#34;); # pembagian my $f = $a / $b; my $g = $b / $a; say(&amp;#34;a/b = $f&amp;#34;); say(&amp;#34;b/a = $g&amp;#34;); # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(&amp;#34;a^b = $h&amp;#34;); say(&amp;#34;b^a = $i&amp;#34;); # autoincrement # tanda + di depan say(&amp;#34;Nilai a sebelum autoincrement = $a&amp;#34;); my $j = ++$a; say(&amp;#34;++a = $j&amp;#34;); say(&amp;#34;Nilai a sesudah autoincrement = $a&amp;#34;); # tanda + di belakang say(&amp;#34;Nilai b sebelum autoincrement $b&amp;#34;); my $k = $b++; say(&amp;#34;$b++ = $k&amp;#34;); say(&amp;#34;Nilai b setelah autoincrement $b&amp;#34;); # autodecrement # tanda - di depan say(&amp;#34;c = a+b.</description>
     </item>
-    
     <item>
       <title>Membuat array perl dari scalar</title>
       <link>https://sasongko.web.id/post/2022-01-02-membuat-array-perl-dari-scalar/</link>
       <pubDate>Sun, 02 Jan 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2022-01-02-membuat-array-perl-dari-scalar/</guid>
       <description>Array merupakan variabel pada perl dengan data yang nilainya majemuk. Sedangkan scalar bernilai tunggal. Catatan kali ini tentang bagaimana cara membuat array dari scalar yang tersedia.
 my $nama = &amp;#34;Sasongko&amp;#34;; my $jenis_kelamin = &amp;#34;Laki-laki&amp;#34;; my $distro = &amp;#34;Slackware&amp;#34;; my $tahun = 2021; Keempat scalar tersebut akan disatukan menjadi array @biodata.
 my @biodata = ($nama, $jenis_kelamin, $distro, $tahun); </description>
     </item>
-    
     <item>
       <title>List semua module perl terinstall</title>
       <link>https://sasongko.web.id/post/2021-12-19-list-module-perl-terinstall/</link>
       <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-12-19-list-module-perl-terinstall/</guid>
       <description>Untuk mengetahui semua modul perl yang terinstall bisa menggunakan instmodsh.
 $ instmodsh Available commands are: l - List all installed modules m &amp;lt;module&amp;gt; - Select a module q - Quit the program cmd? Kemudian pilih l.</description>
     </item>
-    
     <item>
       <title>Mengetahui banyaknya elemen array perl</title>
       <link>https://sasongko.web.id/post/2021-11-30-mengetahui-banyaknya-elemen-array-perl/</link>
       <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-11-30-mengetahui-banyaknya-elemen-array-perl/</guid>
       <description>Array adalah salah satu tipe data pada bahasa pemrograman perl. Tipe data ini berisi data majemuk. Penulisan array menggunakan notasi @.
 Contoh:
 my @buah = (&amp;#34;pepaya&amp;#34;, &amp;#34;manga&amp;#34;, &amp;#34;pisang&amp;#34;, &amp;#34;jambu&amp;#34;, &amp;#34;durian&amp;#34;, &amp;#34;apel&amp;#34;); Untuk mengetahui berapa banyaknya elemen dari array, bisa menggunakan scalar().
 print(scalar(@buah)); </description>
     </item>
-    
     <item>
       <title>Variabel hash perl</title>
       <link>https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/</link>
       <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/</guid>
       <description>Jenis variabel ketiga yang dimiliki perl adalah hash. Hash ini merupakan data berpasangan. Penulisan dengan menyertakan tanda %.
 Contoh: akan dideklarasikan data tentang saya, yaitu nama dan distro yang saya gunakan. Nama saya Sasongko, distro Slackware.
 my %data = ( nama =&amp;gt; &amp;#34;Sasongko&amp;#34;, distro =&amp;gt; &amp;#34;Slackware&amp;#34;, ); </description>
     </item>
-    
     <item>
       <title>Variabel array perl</title>
       <link>https://sasongko.web.id/post/2021-11-28-variabel-array-perl/</link>
       <pubDate>Sun, 28 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-11-28-variabel-array-perl/</guid>
       <description>Melanjutkan catatan sebelumnya tentang variabel yang dimiliki bahasa pemrograman perl. Sebelumnya membahas tentang variabel scalar. Catatan kali ini tentang jenis variabel yang kedua yaitu array.
 Berbeda dengan scalar yang bernilai tunggal, array bernilai majemuk. Array merupakan himpunan. Element array zero indexed, artinya, elemen pertama berindeks 0.
@@ -116,76 +98,62 @@ Pendeklarasian array diserta simbol @.
 Contoh: himpunan nama-nama buah dan daftar nilai
 my @buah = (&amp;#34;pisang&amp;#34;, &amp;#34;mangga&amp;#34;, &amp;#34;jeruk&amp;#34;, &amp;#34;pepaya&amp;#34;); my @daftar_nilai = (80, 100, 76.</description>
     </item>
-    
     <item>
       <title>Variabel scalar perl</title>
       <link>https://sasongko.web.id/post/2021-11-27-variabel-scalar-perl/</link>
       <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-11-27-variabel-scalar-perl/</guid>
       <description>Perl memiliki 3 jenis variabel, yaitu scalar, array dan hash. Scalar adalah variabel dengan nilai tunggal. Penulisan scalar diawali dengan tanda $.Pendeklarasian variabel dengan my. Nilai dari scalar bisa berupa text/string ataupun angka. Contoh: akan dideklarasikan variabel buah. buah ini bernilai &amp;ldquo;mangga&amp;rdquo;.
 my $buah = &amp;#34;mangga&amp;#34;; </description>
     </item>
-    
     <item>
       <title>perlintro panduan pertama belajar pemrograman perl</title>
       <link>https://sasongko.web.id/post/2019-12-02-perlintro-panduan-pertama-belajar-pemrograman-perl/</link>
       <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2019-12-02-perlintro-panduan-pertama-belajar-pemrograman-perl/</guid>
       <description>Salah satu keunggulan perl dibanding bahasa pemrograman lainnya adalah tersedia dokumentasi atau panduan bagi pemula. Pemula membutuhkan panduan singkat tapi tetap komprehensif dan mudah dipahami. Perl sudah memberikannya. Dokumentasi atau panduan ini bisa diakses secara offline setelah menginstall perl. Namanya adalah perlintro.
 $ perldoc perlintro </description>
     </item>
-    
     <item>
       <title>Perl IDE dengan vim</title>
       <link>https://sasongko.web.id/post/2019-02-01-perl-ide-vim/</link>
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2019-02-01-perl-ide-vim/</guid>
       <description>Reputasi vim sebagai text editor sudah teruji berpuluh tahun. Ternyata Vim juga memiliki support plugin untuk perl. Hal ini membuat vim bisa dijadikan sebagai integrated development environment (IDE) untuk perl.
 Download plugin-nya kemudian extract
 $ wget https://www.vim.org/scripts/download_script.php?src_id=24473 -O perl-support.zip -O perl-support.zip $ mkdir -p .vim $ unzip perl-support.zip -d .vim Aktifkan
 $ echo &amp;#34;filetype plugin on&amp;#34; &amp;gt;&amp;gt; .vimrc </description>
     </item>
-    
     <item>
       <title>Fix sbotools Perl unescaped left brace in regex is deprecated here</title>
       <link>https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/</link>
       <pubDate>Tue, 17 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/</guid>
       <description>Siang ini, sudah agak lama tidak check update paket-paket dari SBo. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.
 $ sbocheck # command ini dijalankan oleh root Unescaped left brace in regex is deprecated here (and will be fatal in Perl 5.32), passed through in regex; marked by &amp;lt;-- HERE in m/\$({ &amp;lt;-- HERE |)[A-Za-z0-9_]+(}|)/ at /usr/share/perl5/SBO/Lib/Build.pm line 244 Ada masalah ternyata dan masalahnya di Perl.</description>
     </item>
-    
     <item>
       <title>Pentingnya Shebang</title>
       <link>https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/</link>
       <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/</guid>
       <description>Shebang itu apa? Pengguna linux, BSD, ataupun mac yang terbiasa melihat source code sangat mungkin sudah tidak asing lagi dengan shebang. Ada yang menyebut shebang sebagai sh bang, shabang, hashbang, hashpling, dan poundbang. Shebang ini dituliskan di baris pertama, yakni diawali dengan #!.
 Contoh, untuk perl :
 #!/usr/bin/perl atau
 #!/usr/bin/env perl Sebagai pengguna linux khususnya Slackware, user akan merasakan betapa pentingnya shebang ini. Kepentingannya terkait fungsi shebang itu sendiri dan bagaimana user menjalankannya.</description>
     </item>
-    
     <item>
       <title>Uninstall Manual Semua Modul Perl</title>
       <link>https://sasongko.web.id/post/2018-05-08-uninstall-all-perl-modules-manually/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2018-05-08-uninstall-all-perl-modules-manually/</guid>
       <description>Cara uninstall semua modul perl yang dulunya install dari CPAN secara manual :
 rm -r /usr/local/{lib{,64},share}/perl5 </description>
     </item>
-    
     <item>
       <title>Install Padre</title>
       <link>https://sasongko.web.id/post/2017-01-19-install-padre/</link>
       <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2017-01-19-install-padre/</guid>
       <description>Padre merupakan integrated development environment (IDE) untuk bahasa pemrograman perl.
 Padre ini belum dimasukkan ke dalam paket resmi Slackware maupun SBo. Sehingga ada 2 kemungkinan cara menginstallnya.
@@ -194,6 +162,5 @@ Install dari cpan
 Cara yang saya gunakan adalah cara kedua, yaitu
 $ cpan -i Padre </description>
     </item>
-    
   </channel>
 </rss>

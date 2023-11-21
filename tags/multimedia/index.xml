@@ -6,45 +6,39 @@
     <description>Recent content in multimedia on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/multimedia/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sasongko.web.id/tags/multimedia/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enable Disable Pipewire Slackware</title>
       <link>https://sasongko.web.id/post/2023-04-29-enable-disable-pipewire-slackware/</link>
       <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2023-04-29-enable-disable-pipewire-slackware/</guid>
       <description>Catatan tentang pipewire sebenarnya sudah pernah dituliskan. Tetapi, biar tidak lupa dan lebih mudah mencarinya kala lupa, tidak ada salahnya dibuat catatan tersendiri. Bedanya, ini lebih singkat dan mudah dikerjakan.
 Salah satu keberuntungan slackers adalah Patrick Volkerding menyediakan skrip untuk meng-enable dan disable pipewire. Skrip tersebut adalah
 /usr/sbin/pipewire-enable.sh /usr/sbin/pipewire-disable.sh Silakan dieksekusi sesuai kebutuhan.</description>
     </item>
-    
     <item>
       <title>Install Sound Open Firmware</title>
       <link>https://sasongko.web.id/post/2022-08-13-install-sof/</link>
       <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2022-08-13-install-sof/</guid>
       <description>Langsung saja
 cd /opt git clone https://github.com/thesofproject/sof-bin.git cd sof-bin Masuk ke direktori rilis terbaru, contoh kali ini v2.2
 cd v2.2.x rsync -a sof-v2.2/ /lib/firmware/intel/sof/ rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/ </description>
     </item>
-    
     <item>
       <title>Pipewire di WindowMaker</title>
       <link>https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/</link>
       <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/</guid>
       <description>Lama tidak menggunakan, hati ini rindu pada WindowMaker. Segera mengalihkan .xinitrc ke xinitrc.wmaker. Beberapa hari kemudian, merasa ada yang janggal. Suasana menjadi sunyi senyap. Tanpa suara. Padahal ketika menggunakan KDE Plasma tidak ada masalah dengan sound system.
 Hati ini baru sadar bahwa sound-nya telah diserahterimakan dari pulseaudio kepada pipewire. Baiklah, mari tambahkan beberapa baris berikut ke ~/GNUstep/Library/WindowMaker/autostart
 #pipewire /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire /usr/bin/pipewire &amp;amp; /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire-pulse /usr/bin/pipewire-pulse &amp;amp; /usr/bin/daemon -frB --pidfiles=~/.</description>
     </item>
-    
     <item>
       <title>Menggunakan pipewire</title>
       <link>https://sasongko.web.id/post/2022-02-19-menggunakan-pipewire/</link>
       <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2022-02-19-menggunakan-pipewire/</guid>
       <description>Salah satu fitur baru yang dihadirkan Slackware 15.0 adalah masuknya pipewire sebagai alternatif dari pulseaudio. Bagaimana penggunaanya? Silakan simak catatan berikut ini.
 Pertama, edit /etc/pulse/client.conf. Ubah autospawn dari yes menjadi no.
@@ -52,130 +46,105 @@ Hapus /etc/xdg/autostart/pulseaudio.desktop atau rename menjadi file yang &amp;l
 Rename file berikut menjadi .desktop saja
 /etc/xdg/autostart/pipewire-media-session.desktop.sample /etc/xdg/autostart/pipewire-pulse.desktop.sample /etc/xdg/autostart/pipewire.desktop </description>
     </item>
-    
     <item>
       <title>Membuat background transparan krita</title>
       <link>https://sasongko.web.id/post/2021-12-27-background-transparan-krita/</link>
       <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-12-27-background-transparan-krita/</guid>
       <description>Untuk mengubah background gambar menjadi transparan, bisa dilakukan dengan mudah menggunakan krita. Klik menu Filter &amp;ndash;&amp;gt; Colours &amp;ndash;&amp;gt; Colour to Aplha. Color picker pilih warna background yang akan diganti menjadi transparan. Threshold atur 100 atau sesuai kebutuhan. Kemudian Ok.</description>
     </item>
-    
     <item>
       <title>Menghapus history QtAV Player</title>
       <link>https://sasongko.web.id/post/2021-05-21-menghapus-history-qtav-player/</link>
       <pubDate>Fri, 21 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-05-21-menghapus-history-qtav-player/</guid>
       <description>Untuk menghapus history atau riwayat video yang ditonton dengan QtAV Player ada 2 cara:
 melalui QtAV Player dengan klik History kemudian Clear menghapus file historynya $ rm ~/.local/share/Player/*.qds Command tersebut juga menghapus riwayat playlist</description>
     </item>
-    
     <item>
       <title>Edit video ffmpeg tanpa menurunkan kualitas</title>
       <link>https://sasongko.web.id/post/2020-06-20-edit-video-ffmpeg-lossless/</link>
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-06-20-edit-video-ffmpeg-lossless/</guid>
       <description>Ketika mengedit video menggunakan ffmpeg, filter video ataupun filter yang lebih kompleks seperti menambahkan watermark, tanpa pengaturan tambahan kadang hasilnya mengecewakan. Gambar pada video menjadi pecah. Untuk meminimalisirnya, bisa ditambahkan opsi -q:v 0.</description>
     </item>
-    
     <item>
       <title>Menggabungkan video ffmpeg</title>
       <link>https://sasongko.web.id/post/2020-05-30-menggabungkan-video/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-05-30-menggabungkan-video/</guid>
       <description>Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu
 piknik-1.mkv piknik-2.mkv piknik-3.mkv piknik-4.mkv Keempat file tersebut berada dalam folder yang sama. Kemudian mereka akan digabungkan menjadi piknik.mkv. Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.
 $ vim list-piknik file &amp;#39;piknik-1.</description>
     </item>
-    
     <item>
       <title>Mengetahui volume suara video</title>
       <link>https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/</link>
       <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/</guid>
       <description>Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.
 Untuk mengetahui intensitas suara video intro.mkv
 $ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &amp;#39;intro.mkv&amp;#39;: Metadata: COMPATIBLE_BRANDS: isommp42 COM.ANDROID.VERSION: 9 MAJOR_BRAND : mp42 MINOR_VERSION : 0 ENCODER : Lavf58.29.100 Duration: 00:00:14.90, start: 0.000000, bitrate: 5559 kb/s Stream #0:0(eng): Video: mpeg4 (Simple Profile), yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 1k tbn, 30 tbc (default) Metadata: HANDLER_NAME : VideoHandle ENCODER : Lavc58.</description>
     </item>
-    
     <item>
       <title>Menambah watermark gambar ke video dengan ffmpeg</title>
       <link>https://sasongko.web.id/post/2020-05-21-menambah-watermark-gambar-video/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-05-21-menambah-watermark-gambar-video/</guid>
       <description>Misalkan kita akan memberikan watermark berupa gambar logo.png ke video ramadhan.mkv. Watermark ditempatkan di pojok kiri bawah. Video dengan watermark diberi nama ramadhan-fix.mkv
 ffmpeg -i ramadhan.mkv -i logo.png -filter_complex &amp;#34;overlay=x=0:y=(main_h-overlay-h)&amp;#34; ramadhan-fix.mkv Keterangan opsi dan parameternya
 -filter_complex : menggunakan filter yang kompleks overlay : menambahkan watermark x : posisi pada sumbu x, dihitung dari ujung kiri y : posisi pada sumbu y, dihitung dari ujung atas main_h : tinggi video main_w : lebar video overlay_h : tinggi gambar yang akan dijadikan watermark overlay_w : lebar gambar yang akan dijadikan watermark </description>
     </item>
-    
     <item>
       <title>Mengubah resolusi video ffmpeg</title>
       <link>https://sasongko.web.id/post/2020-05-24-mengubah-resolusi-video-ffmpeg/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-05-24-mengubah-resolusi-video-ffmpeg/</guid>
       <description>Misalkan terdapat video VID20200509135621.mp4, dengan resolusi 3840x2160 SAR 1:1 DAR 16:9. Akan diubah resolusinya menjadi 1920x1080 dengan tetap memperhatikan SAR dan DAR. Video hasil scaling ini diberi nama VID20200509135621-1080p.mkv. Perubahan ini sekaligus konversi ke mkv agar menghemat space.
 ffmpeg -i VID20200509135621.mp4 -vf &amp;#34;scale=1920:1080, setdar=16:9, setsar=1:1&amp;#34; VID20200509135621-1080p.mkv </description>
     </item>
-    
     <item>
       <title>Disable tampilan konfigurasi ffmpeg</title>
       <link>https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/</link>
       <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/</guid>
       <description>Secara default, output ffmpeg akan menampilkan built configuration yang digunakan.
 $ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers built with gcc 9.2.0 (GCC) configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-4.2.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack libavutil 56. 31.100 / 56. 31.100 libavcodec 58. 54.</description>
     </item>
-    
     <item>
       <title>Edit volume suara</title>
       <link>https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/</link>
       <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/</guid>
       <description>Editing kali ini adalah bagaimana mengubah volume default audio/suara menggunakan ffmpeg. Misal, file yang akan diinput/diedit adalah video.mp4. Karena suaranya terlalu pelan, akan dinaikkan menjadi 5x semula melalui filter audio. File hasil editan diberi nama video-louder.webm.
 ffmpeg -i video.mp4 -filter:a &amp;#34;volume=5&amp;#34; video-louder.webm Apabila suara terlalu nyaring bisa dipelankan. Berikut akan dipelankan menjadi setengahnya dari volume semula dan file baru diberi nama new.webm
 ffmpeg -i video.mp4 -filter:a &amp;#34;volume=0.5&amp;#34; new.webm Atau, dengan menuliskan volume suaranya secara langsung.</description>
     </item>
-    
     <item>
       <title>Trimming Video ffmpeg</title>
       <link>https://sasongko.web.id/post/2020-05-05-trimming-video-ffmpeg/</link>
       <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-05-05-trimming-video-ffmpeg/</guid>
       <description>Misalkan, kita akan mencuplik sebagian (trimming) video video-asli.mp4 dari menit ke 57 lebih 34 detik sampai durasi ke 1 jam 2 menit 5 detik. Fila hasil trimming adalah cuplikan.mp4
 ffmpeg -i video-asli.mp4 -ss 00:57:34 -to 01:02:05 -c copy cuplikan.mp4 </description>
     </item>
-    
     <item>
       <title>Download Video Youtube</title>
       <link>https://sasongko.web.id/post/2015-10-01-download-video-youtube/</link>
       <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2015-10-01-download-video-youtube/</guid>
       <description>Download video dari Youtube adalah hal yang mudah bagi pengguna Slackware. Paling tidak ada 2 cara. Cara pertama menggunakan peramban web, dan cara kedua menggunakan youtube-dl yang berantar muka teks. Di sini menggunakan cara kedua. Untuk menginstall youtube-dl silahkan [klik di sini]({% post_url 2015-10-01-install-youtubedl %}).
 Cara menggunakannya
 youtube-dl url_video_youtube Contoh, akan URL video yang akan di download adalah https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;amp;index=1&amp;amp;list=PLB9F411241A111B54.
 youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;amp;index=1&amp;amp;list=PLB9F411241A111B54 Kalau ada beberapa video yang ingin didownload, masukkan saja URLnya ke satu file, tiap baris 1 URL, kemudian cara downloadnya tambahkan opsi -a</description>
     </item>
-    
     <item>
       <title>Install Youtube Downloader</title>
       <link>https://sasongko.web.id/post/2015-10-01-install-youtubedl/</link>
       <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2015-10-01-install-youtubedl/</guid>
       <description>Siapa bilang pakai Slackware ga bisa download video dari Youtube? Bisa kok pakai youtube-dl.Cara installnya gampang. Pastikan terhubung ke internet untuk mengunduh berkasnya. Dan untuk install butuh hak akses root. Di sini kita pakai cara yang mudah saja, install dari slackbuilds.org.
 cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-dl.tar.gz tar xzf youtube-dl.tar.gz cd youtube-dl wget https://github.com/rg3/youtube-dl/archive/2015.09.22.tar.gz sh youtube-dl.SlackBuild installpkg /tmp/youtube-dl-2015.09.22-x86_64-1_SBo.tgz </description>
     </item>
-    
   </channel>
 </rss>

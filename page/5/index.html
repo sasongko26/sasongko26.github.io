@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.118.2">
+  <meta name="generator" content="Hugo 0.120.3">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,50 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2022-10-30-virtualbox-updater-segfault/">Virtualbox cannot register existing type NMAgentManagerError</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 Oct 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Setelah install virtualbox menggunakan binary .run, ketika dijalankan via terminal mengalami sgfault:
+bash-5.2$ virtualbox (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot register existing type &#39;NMAgentManagerError&#39; (process:7040): GLib-CRITICAL **: 00:53:14.710: g_once_init_leave: assertion &#39;result != 0&#39; failed (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot retrieve class for invalid (unclassed) type &#39;invalid&#39; Segmentation fault Solusinya:
+bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-02-14-pelayanan-exabytes/">Pelayanan Exabytes</a></h2>
 
     <div class="post-meta">
@@ -404,53 +448,6 @@ slackpkg update Khusus untuk versi packages, menyamakan versi terinstall dengan 
   
   <footer>
     <a href="https://sasongko.web.id/post/2022-05-26-sinkronisasi-official-repo/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-05-25-mengetahui-spek-ram/">Mengetahui spek RAM</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 May 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Identifikasi RAM yang ada di komputer merupakan hal mutlak untuk penggantian, upgrade ataupun sekedar membersihkan RAM. Informasi awal tentang RAM bisa diperoleh tanpa membongkar komputer ataupun laptop. Hal ini sangat bermanfaat bagi pengguna yang tidak punya keterampilan bongkar pasang komputer. Apalagi kalau masih garansi, kalau dibongkar bukan teknisi service center resminya maka garansinya hangus.
-Untuk mengetahui spek RAM mudah. Bagi slackers (pengguna Slackware) tidak perlu repot menginstall macam-macam. Tool-nya sudah tersedia.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2022-05-25-mengetahui-spek-ram/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.118.2">
+  <meta name="generator" content="Hugo 0.120.3">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,52 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2022-03-28-mengubah-grub-timeout/">Mengubah timeout grub</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>28 Mar 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/grub">grub</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, timeout grub adalah 10 detik. Menurut penulis, 10 detik ini terlalu lama. Untuk mengubahnya ganti angka 10 ke detik yang diinginkan pada baris dengan GRUB_TIMEOUT pada file /etc/default/grub
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/">Menampilkan status penggunaan zram</a></h2>
 
     <div class="post-meta">
@@ -420,49 +466,6 @@ https://mirrors.slackware.com/slackware/slackware64-15.0/ untuk menggunakan mirr
   <footer>
     <a href="https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-02-23-disable-fortune-postlogin/">Disable fortune postlogin</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Feb 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/game">game</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, setelah berhasil login di tty muncul pesan-pesan berupa kata-kata mutiara dari para tokoh. Fortune ini menjadi sepaket dengan bsd-games. Jadi kalau ingin di-disable bisa uninstall bsd-games. Kalau masih butuh bsd-games tinggal jadikan file /etc/profile.d/bsd-games-login-fortune.*sh nonexecutable
-chmod -x /etc/profile.d/bsd-games-login-fortune.*sh 
-  </p>
-
   
 </article>
 

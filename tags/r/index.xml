@@ -6,120 +6,99 @@
     <description>Recent content in r on Catatan Sasongko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sasongko.web.id/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sasongko.web.id/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rebuild R post-upgrade icu4c</title>
       <link>https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/</link>
       <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/</guid>
       <description>Pagi ini, saat akan mengeksekusi R,
 $ R /usr/lib64/R/bin/exec/R: error while loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory Ternyata R nya bermasalah. Di atas disebutkan bahwa libicuuc.so.67 tidak ditemukan. Dari namanya, bisa ditebak itu adalah shared object/library miliknya icu4c. Kita pastikan dulu,
 $ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE The list below shows the packages that contains &amp;#34;libicuuc\.</description>
     </item>
-    
     <item>
       <title>Mengenal R_HOME</title>
       <link>https://sasongko.web.id/post/2020-08-15-mengenal-r-home/</link>
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-08-15-mengenal-r-home/</guid>
       <description>R_HOME adalah direktori tempat R diinstall. Maksudnya, pada direktori inilah terdapat file binary dan konfigurasinya. Pada linux khususnya slackware, R_HOME ada di
 /usr/lib{,64}/R # tergantung arsitekturnya apakah 32bit atau 64bit. </description>
     </item>
-    
     <item>
       <title>Operasi direktori R</title>
       <link>https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/</link>
       <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/</guid>
       <description>Mengetahui working directory Secara default, working directory pada Slackware adalah home directory user atau di mana command R dijalankan.
 getwd() Mengganti working directory Misal, akan berpindah working directory ke Documents/project
 setwd(&amp;#39;Documents/project&amp;#39;) </description>
     </item>
-    
     <item>
       <title>Mengenal objek R factor</title>
       <link>https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/</link>
       <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/</guid>
       <description>Factor adalah representasi data kategorik. Factor bisa dibuat dengan fungsi factor() atau cut(). Saya lebih sering menggunakan cut() karena lebih aplikatif saat akan mengubah skala data dari rasio atau interval ke ordinal.
 Contoh, bmi adalah data body mass index (BMI) atau indeks massa tubuh (IMT). Klasifikasi IMT ada 4 macam, yaitu
 &amp;lt; 18,5 : underweight 18,5 - 24,99 : normal 25 - 29,99 : overweight &amp;gt; 30 : obese/obesitas Untuk obesitas, masih bisa diklasifikasikan menjadi 3 30 - 34,99 : obese class 1 35 - 39,99 : obese class 2 &amp;gt; 40 : extreme obesity &amp;gt; bmi &amp;lt;- c(20, 21.</description>
     </item>
-    
     <item>
       <title>Mengenal Objek R Vector</title>
       <link>https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/</guid>
       <description>Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.
 Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.
 Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).</description>
     </item>
-    
     <item>
       <title>Install JASP</title>
       <link>https://sasongko.web.id/post/2020-04-11-install-jasp/</link>
       <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-04-11-install-jasp/</guid>
       <description>JASP, singkatan dari Jeffreys&amp;rsquo;s Amazing Statistic Program, merupakan open source statistics software. Software ini layak dijadikan pilihan utama karena:
 Open source. Karena open source semua orang boleh memakai, melihat source code-nya dan berkontribusi (melaporkan masalah, mengusulkan fitur dan perbaikan). Silahkan menuju ke https://github.com/jasp-stats/jasp-desktop . Pengembangan dinaungi oleh akademisi dari University of Amsterdam, Duke University, University of Southampton, UNiversity of Sussex, University of Missouri, Athens University of Economics dan Business, Missouri State University, University of Groningen, Nyenrode Business University, University of Zurich dan Ludwig-Maximilians-Universität München.</description>
     </item>
-    
     <item>
       <title>Dispersi Data dengan R</title>
       <link>https://sasongko.web.id/post/2020-04-04-dispersi-data-dengan-r/</link>
       <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-04-04-dispersi-data-dengan-r/</guid>
       <description>Dispersi atau ukuran penyebaran data menunjukkan seberapa bervariasi suatu data. Kali ini data yang digunakan diambil dari dataset ldeaths yang merupakan bagian dari UKLungDeaths. Dataset UKLungDeaths berisi data jumlah kematian akibat penyakit bronchitis, emphysema dan asma di Inggris dalam kurun waktu 1974-1979. Data ini disajikan berdasarkan bulan dan jenis kelamin. Secara total untuk kedua jenis kelamin ada di ldeaths, laki-laki mdeaths dan perempuan fdeaths.
 Nilai minimal min(ldeaths) [1] 1300 Nilai maksimal max(ldeaths) [1] 3891 Range range(ldeaths) [1] 1300 3891 Varians var(ldeaths) [1] 371911.</description>
     </item>
-    
     <item>
       <title>Tendensi Sentral dengan R</title>
       <link>https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/</guid>
       <description>Data yang digunakan :
 &amp;gt; nilai [1] 25 60 79 32 57 74 52 70 82 36 75 77 81 95 41 65 92 85 55 66 52 10 64 75 78 [26] 25 80 98 81 67 41 71 83 54 64 72 88 62 74 45 60 78 89 76 48 84 84 90 15 79 [51] 35 67 17 82 69 74 63 80 85 61 Mean &amp;gt; mean(nilai) [1] 65.</description>
     </item>
-    
     <item>
       <title>Input Data R</title>
       <link>https://sasongko.web.id/post/2020-03-14-input-data-r/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-03-14-input-data-r/</guid>
       <description>Input data dalam R sangat mudah dan ada beragam cara, yaitu:
 Menuliskan dalam bentuk syntax. Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100 Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel.</description>
     </item>
-    
     <item>
       <title>Package bawaan R Slackware</title>
       <link>https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/</link>
       <pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/</guid>
       <description>Berikut adalah package atau library R yang secara default terinstall di Slackware melalui SBo.
 KernSmooth.Functions for Kernel Smoothing Supporting Wand &amp;amp; Jones (1995) MASS. Support Functions and Datasets for Venables and Ripley&amp;rsquo;s MASS Matrix. Sparse and Dense Matrix Classes and Methods base. The R Base Package boot. Bootstrap Functions (Originally by Angelo Canty for S) class. Functions for Classification cluster. &amp;ldquo;Finding Groups in Data&amp;rdquo;: Cluster Analysis Extended Rousseeuw et al. codetools.</description>
     </item>
-    
     <item>
       <title>Mengenal R</title>
       <link>https://sasongko.web.id/post/2020-02-10-mengenal-r/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://sasongko.web.id/post/2020-02-10-mengenal-r/</guid>
       <description>R adalah salah satu bahasa pemrograman yang banyak digunakan dan bersifat open source. R bisa dikatakan sebagai bahasa pemrograman spesialis data. Tidak mengherankan kalau R digunakan untuk keperluan handling data seperti statistik, data mining, data science dan machine learning.
 Meskipun bersifat open source, sampai sekarang belum ada sistem operasi open source yang memasukkan R secara default terinstall dalam sistemnya. Namun demikian beberapa distro linux menyertakan R ke dalam repo resmi. Distro tersebut antara lain Debian, OpenSUSE dan Ubuntu.</description>
     </item>
-    
   </channel>
 </rss>

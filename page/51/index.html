@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.118.2">
+  <meta name="generator" content="Hugo 0.120.3">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,49 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-10-01-install-youtubedl/">Install Youtube Downloader</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Oct 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Siapa bilang pakai Slackware ga bisa download video dari Youtube? Bisa kok pakai youtube-dl.Cara installnya gampang. Pastikan terhubung ke internet untuk mengunduh berkasnya. Dan untuk install butuh hak akses root. Di sini kita pakai cara yang mudah saja, install dari slackbuilds.org.
+cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-dl.tar.gz tar xzf youtube-dl.tar.gz cd youtube-dl wget https://github.com/rg3/youtube-dl/archive/2015.09.22.tar.gz sh youtube-dl.SlackBuild installpkg /tmp/youtube-dl-2015.09.22-x86_64-1_SBo.tgz 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-09-30-copas-terminal/">Copy Paste di Terminal</a></h2>
 
     <div class="post-meta">
@@ -406,56 +449,6 @@ $ rsync ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/ drwxr-x
 pip install gdrv 
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/">Install Google Play Downloader</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 Jul 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:
-python-protobuf (&gt;=2.4) python-requests (&gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&gt;=2.8) python 2.5+ java (opsional) Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
-easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
