@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.120.3">
+  <meta name="generator" content="Hugo 0.121.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,54 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/">Enkripsi File dengan gnupg</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 Jan 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kriptografi">kriptografi</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupg atau yang biasa disebut dengan gpg.
+$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
+$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2017-01-12-qtfm-segfault-pascaupgrade-changelog12jan17/">qtFM Segmentation Fault Pascaupgrade</a></h2>
 
     <div class="post-meta">
@@ -404,55 +452,6 @@ Tujuan pembuatan slackbuild ini adalah untuk memasyarakatkan ke-Indonesia-an. Bl
   
   <footer>
     <a href="https://sasongko.web.id/post/2017-01-01-blankon-wallpapers-slackbuild/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/">Notifikasi Baterai Lemah i3</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Dec 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/i3">i3</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Salah satu keistimewaan i3 atau i3wm adalah belum adanya notifikasi/pemberitahuan saat baterai lemah perlu di-charge. Status baterai sudah ada di bar/panel yang ditampilkan oleh i3status.
-Berikut adalah script sederhana untuk menampilkan notifikasi saat baterai sedang lemah dan tidak sedang di-charge. Jika baterai telah mencapai batas (di sini saya gunakan 5%) maka setiap 30 detik akan tampil notifikasi untuk segera dilakukan charging Wayahe dicas bro&hellip;.!. Dan ketika baterai sudah terisi full 100% tetapi masih dalam kondisi dicas akan tampil notifikasi tiap 30 detik bahwa baterai sudah full.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

@@ -13,77 +13,63 @@
       <link>https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</link>
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</guid>
-      <description>Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan dmesg
-$ dmesg -T | head -1 [Fri Dec 25 00:39:42 2020] Linux version 5.10.2 Penjelasan command :
-eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp | adalah pipe, untu menjadikan output dmesg sebagai input untuk head head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya [Fri Dec 25 00:39:42 2020] Linux version 5.</description>
+      <description>Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan dmesg&#xA;$ dmesg -T | head -1 [Fri Dec 25 00:39:42 2020] Linux version 5.10.2 Penjelasan command :&#xA;eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp | adalah pipe, untu menjadikan output dmesg sebagai input untuk head head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya [Fri Dec 25 00:39:42 2020] Linux version 5.</description>
     </item>
     <item>
       <title>Start up time kernel 5.10.2</title>
       <link>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</link>
       <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</guid>
-      <description>Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam main tree slackware current. Saat catatan ini dituliskan, sudah &amp;ldquo;mendarat&amp;rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk start up. Yang dimaksud start up di sini adalah kondisi dari eksekusi elilo dan initrd sampai muncul login prompt.
-$ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segment Routing with IPv6 [ 32.</description>
+      <description>Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam main tree slackware current. Saat catatan ini dituliskan, sudah &amp;ldquo;mendarat&amp;rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk start up. Yang dimaksud start up di sini adalah kondisi dari eksekusi elilo dan initrd sampai muncul login prompt.&#xA;$ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segment Routing with IPv6 [ 32.</description>
     </item>
     <item>
       <title>Deteksi duplikasi file</title>
       <link>https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/</guid>
-      <description>Walau sudah ada tools yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan tools bawaan Slackware. Tools yang umum digunakan antara lain fslint, fdupes atau jdupes. Adapun tools yang biasa saya gunakan
-sha512sum awk uniq grep Misalkan, akan mencari adakah duplikasi file di folder Downloads. Pertama, catat dulu hash-nya. Di sini saya gunakan sha512. Kumpulan sha512 tersebut disatukan dalam file downloads.sha512. File ini terdiri dari 2 kolom. Kolom pertama berisi hash, sedangkan kolom kedua nama filenya.</description>
+      <description>Walau sudah ada tools yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan tools bawaan Slackware. Tools yang umum digunakan antara lain fslint, fdupes atau jdupes. Adapun tools yang biasa saya gunakan&#xA;sha512sum awk uniq grep Misalkan, akan mencari adakah duplikasi file di folder Downloads. Pertama, catat dulu hash-nya. Di sini saya gunakan sha512. Kumpulan sha512 tersebut disatukan dalam file downloads.sha512. File ini terdiri dari 2 kolom. Kolom pertama berisi hash, sedangkan kolom kedua nama filenya.</description>
     </item>
     <item>
       <title>Mengapa Enkripsi dengan OpenSSL?</title>
       <link>https://sasongko.web.id/post/2018-06-12-mengapa-openssl/</link>
       <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2018-06-12-mengapa-openssl/</guid>
-      <description>Mengapa saya suka mengenkripsi file dengan openssl? Karena
-Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&amp;hellip;. </description>
+      <description>Mengapa saya suka mengenkripsi file dengan openssl? Karena&#xA;Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&amp;hellip;. </description>
     </item>
     <item>
       <title>Enkripsi File dengan gnupg</title>
       <link>https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/</link>
       <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/</guid>
-      <description>Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupg atau yang biasa disebut dengan gpg.
-$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
-$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi </description>
+      <description>Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupg atau yang biasa disebut dengan gpg.&#xA;$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi&#xA;$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi </description>
     </item>
     <item>
       <title>Enkripsi File dengan OpenSSL</title>
       <link>https://sasongko.web.id/post/2017-01-08-enkripsi-dg-openssl/</link>
       <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2017-01-08-enkripsi-dg-openssl/</guid>
-      <description>Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
-Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssl dengan cipher rc4. File hasil enkripsi saya namai rahasia.odt yang saya taruh di fd dan fd saya mount di /media/hd0. Kemudian akan ditanya password enkripsinya.</description>
+      <description>Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).&#xA;Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssl dengan cipher rc4. File hasil enkripsi saya namai rahasia.odt yang saya taruh di fd dan fd saya mount di /media/hd0. Kemudian akan ditanya password enkripsinya.</description>
     </item>
     <item>
       <title>Mengembalikan File yang Terhapus dengan Testdisk</title>
       <link>https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/</link>
       <pubDate>Fri, 30 Oct 2015 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/</guid>
-      <description>Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/recovery file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.
-Sebagai root jalankan
-testdisk kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih No Log karena merasa log ini tidak terlalu penting. Selanjutnya akan terdeteksi media simpan yang terpasang di komputer.</description>
+      <description>Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/recovery file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.&#xA;Sebagai root jalankan&#xA;testdisk kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih No Log karena merasa log ini tidak terlalu penting. Selanjutnya akan terdeteksi media simpan yang terpasang di komputer.</description>
     </item>
     <item>
       <title>Install Testdisk</title>
       <link>https://sasongko.web.id/post/2015-10-29-install-testdisk/</link>
       <pubDate>Thu, 29 Oct 2015 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2015-10-29-install-testdisk/</guid>
-      <description>Testdisk adalah salah satu aplikasi digital forensik multiplatform. Bisa dijalankan di Windows (NT4, 2000, 2003, XP, Vista dan 7), Linux, FreeBSD, OpenBSD, NetBSD, SunOS, dan MacOS. Adapun kegunaannya untuk mengembalikan partisi yang terhapus beserta file-file yang ada di dalamnya. Informasi lebih lengkap tentang testdisk bisa didapatkan di sini.
-Sebenarnya untuk Slackware sudah ada slackbuild-nya, tapi tidak ada salahnya kalau install dari kode sumber. Penginstallan dijalankan dengan level root.
-wget http://www.cgsecurity.org/testdisk-7.0.tar.bz2 tar xjvf testdisk-7.</description>
+      <description>Testdisk adalah salah satu aplikasi digital forensik multiplatform. Bisa dijalankan di Windows (NT4, 2000, 2003, XP, Vista dan 7), Linux, FreeBSD, OpenBSD, NetBSD, SunOS, dan MacOS. Adapun kegunaannya untuk mengembalikan partisi yang terhapus beserta file-file yang ada di dalamnya. Informasi lebih lengkap tentang testdisk bisa didapatkan di sini.&#xA;Sebenarnya untuk Slackware sudah ada slackbuild-nya, tapi tidak ada salahnya kalau install dari kode sumber. Penginstallan dijalankan dengan level root.&#xA;wget http://www.cgsecurity.org/testdisk-7.0.tar.bz2 tar xjvf testdisk-7.</description>
     </item>
     <item>
       <title>InstalL Sleuth Kit Slackware</title>
       <link>https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/</link>
       <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/</guid>
-      <description>The Sleuth Kit atau disingkat TSK adalah tools digital forensik yang bersifat open source, multiplatform dan text-mode (command line interface). TSK bisa digunakan untuk melakukan analisis pada barang bukti, atau lebih tepatnya citra disk (raw image). Misalnya untuk mengetahui berkas apa saja yang ada di dalam hardisk dan adakah berkas yang dihapus dari hardisk itu.
-Dependensi:
-autoconf, automake, libtool C/C++ compiler (gcc, gcc++) [JDK (opsional)]({% post_url 2015-06-07-install-jdk-slackware %}) Install cukup mudah, kita akan install langsung TSK dari source code yang ada di github</description>
+      <description>The Sleuth Kit atau disingkat TSK adalah tools digital forensik yang bersifat open source, multiplatform dan text-mode (command line interface). TSK bisa digunakan untuk melakukan analisis pada barang bukti, atau lebih tepatnya citra disk (raw image). Misalnya untuk mengetahui berkas apa saja yang ada di dalam hardisk dan adakah berkas yang dihapus dari hardisk itu.&#xA;Dependensi:&#xA;autoconf, automake, libtool C/C++ compiler (gcc, gcc++) [JDK (opsional)]({% post_url 2015-06-07-install-jdk-slackware %}) Install cukup mudah, kita akan install langsung TSK dari source code yang ada di github</description>
     </item>
     <item>
       <title>Mengubah LiveDVD Menjadi ISO</title>
@@ -97,9 +83,7 @@ autoconf, automake, libtool C/C++ compiler (gcc, gcc++) [JDK (opsional)]({% post
       <link>https://sasongko.web.id/post/2014-06-24-penipuan-atas-nama-toyota/</link>
       <pubDate>Tue, 24 Jun 2014 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2014-06-24-penipuan-atas-nama-toyota/</guid>
-      <description>Kemarin penulis mendapat email, “Tantangan Buat Para Blogger SEO” yang isinya Tapi, karena curiga ini penipuan, penulis cek di website resmi Toyota ternyata tidak ada informasi kompetisi atau lomba menulis tersebut. Kemudian penulis tanyakan ke Customer Support Toyota via email
-mendapatkan balasan
-Jadi, mari kita berinternet secara sehat, tidak melakukan penipuan dan waspada terhadap penipuan.</description>
+      <description>Kemarin penulis mendapat email, “Tantangan Buat Para Blogger SEO” yang isinya Tapi, karena curiga ini penipuan, penulis cek di website resmi Toyota ternyata tidak ada informasi kompetisi atau lomba menulis tersebut. Kemudian penulis tanyakan ke Customer Support Toyota via email&#xA;mendapatkan balasan&#xA;Jadi, mari kita berinternet secara sehat, tidak melakukan penipuan dan waspada terhadap penipuan.</description>
     </item>
     <item>
       <title>Definisi Komputer Forensik</title>

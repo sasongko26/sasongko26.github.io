@@ -13,35 +13,28 @@
       <link>https://sasongko.web.id/post/2022-05-25-mengetahui-spek-ram/</link>
       <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-05-25-mengetahui-spek-ram/</guid>
-      <description>Identifikasi RAM yang ada di komputer merupakan hal mutlak untuk penggantian, upgrade ataupun sekedar membersihkan RAM. Informasi awal tentang RAM bisa diperoleh tanpa membongkar komputer ataupun laptop. Hal ini sangat bermanfaat bagi pengguna yang tidak punya keterampilan bongkar pasang komputer. Apalagi kalau masih garansi, kalau dibongkar bukan teknisi service center resminya maka garansinya hangus.
-Untuk mengetahui spek RAM mudah. Bagi slackers (pengguna Slackware) tidak perlu repot menginstall macam-macam. Tool-nya sudah tersedia.</description>
+      <description>Identifikasi RAM yang ada di komputer merupakan hal mutlak untuk penggantian, upgrade ataupun sekedar membersihkan RAM. Informasi awal tentang RAM bisa diperoleh tanpa membongkar komputer ataupun laptop. Hal ini sangat bermanfaat bagi pengguna yang tidak punya keterampilan bongkar pasang komputer. Apalagi kalau masih garansi, kalau dibongkar bukan teknisi service center resminya maka garansinya hangus.&#xA;Untuk mengetahui spek RAM mudah. Bagi slackers (pengguna Slackware) tidak perlu repot menginstall macam-macam. Tool-nya sudah tersedia.</description>
     </item>
     <item>
       <title>Menambahkan scanner</title>
       <link>https://sasongko.web.id/post/2021-12-10-install-scanner-linux/</link>
       <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-12-10-install-scanner-linux/</guid>
-      <description>Instalasi scanner di linux terutama slackware sangat mudah. Biasanya scanner terdeteksi secara otomatis dan langsung bisa dijalankan. Pengaturan hanya dibutuhkan jika scanner tidak terdeteksi.
-Catatan kali ini tentang menambahkan scanner yang tidak terdeteksi secara otomatis. Scanner seperangkat dengan printer, yaitu Epson L3110. Printer terdeteksi otomatis dan langsun bisa digunakan, tetapi scanner-nya belum. Software untuk scan seperti xsane atau skanlite salah mendeteksi. Keduanya mendeteksi scanner yang digunakan adalah webcam.
-Scanner terhubung melalui usb, sehingga perlu dicek terlebih dahulu apakah usbnya terdeteksi.</description>
+      <description>Instalasi scanner di linux terutama slackware sangat mudah. Biasanya scanner terdeteksi secara otomatis dan langsung bisa dijalankan. Pengaturan hanya dibutuhkan jika scanner tidak terdeteksi.&#xA;Catatan kali ini tentang menambahkan scanner yang tidak terdeteksi secara otomatis. Scanner seperangkat dengan printer, yaitu Epson L3110. Printer terdeteksi otomatis dan langsun bisa digunakan, tetapi scanner-nya belum. Software untuk scan seperti xsane atau skanlite salah mendeteksi. Keduanya mendeteksi scanner yang digunakan adalah webcam.&#xA;Scanner terhubung melalui usb, sehingga perlu dicek terlebih dahulu apakah usbnya terdeteksi.</description>
     </item>
     <item>
       <title>Enable TLP on i3wm</title>
       <link>https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/</link>
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/</guid>
-      <description>Beberapa hari yang lalu install i3 (i3wm) menggunakan sbopkg. Biasanya, dengan desktop environment lain seperti Mate, baterai bisa bertahan 4 - 6 jam. Namun, dengan i3 belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.
-Cek powertop ternyata banyak yang Bad seperti default-nya tanpa TLP. Padahal service TLP saat booting jalan, Tunable di powertop hanya 1 yang Bad lainnya Good semua.
-I3 memiliki berkas konfigurasi /etc/i3/config.</description>
+      <description>Beberapa hari yang lalu install i3 (i3wm) menggunakan sbopkg. Biasanya, dengan desktop environment lain seperti Mate, baterai bisa bertahan 4 - 6 jam. Namun, dengan i3 belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.&#xA;Cek powertop ternyata banyak yang Bad seperti default-nya tanpa TLP. Padahal service TLP saat booting jalan, Tunable di powertop hanya 1 yang Bad lainnya Good semua.&#xA;I3 memiliki berkas konfigurasi /etc/i3/config.</description>
     </item>
     <item>
       <title>Cek Harddisk Korup</title>
       <link>https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/</link>
       <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/</guid>
-      <description>Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya
-dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck. Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu /dev/sda1. Dan direkomendasikan untuk menjalankan fsck.
-fsck /dev/sda1 fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.</description>
+      <description>Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya&#xA;dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck. Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu /dev/sda1. Dan direkomendasikan untuk menjalankan fsck.&#xA;fsck /dev/sda1 fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.</description>
     </item>
   </channel>
 </rss>

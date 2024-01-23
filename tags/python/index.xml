@@ -13,215 +13,168 @@
       <link>https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/</link>
       <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/</guid>
-      <description>Uji normalitas data dapat dilakukan dengan beberapa cara antara lain
-Visual dengan grafik salah satunya histogram Uji statistik seperti Kolmogorov-Smirnov atau Shapiro-Wilk Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv dengan pengubahan nama variabel menjadi lebih singkat.
-Uji normalitas dengan histogram Histogramnya
-Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.</description>
+      <description>Uji normalitas data dapat dilakukan dengan beberapa cara antara lain&#xA;Visual dengan grafik salah satunya histogram Uji statistik seperti Kolmogorov-Smirnov atau Shapiro-Wilk Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv dengan pengubahan nama variabel menjadi lebih singkat.&#xA;Uji normalitas dengan histogram Histogramnya&#xA;Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.</description>
     </item>
     <item>
       <title>Membuat histogram dengan python</title>
       <link>https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/</link>
       <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/</guid>
-      <description>Untuk membuat histogram dengan python dibutuhkan library pandas dan matplotlib dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:
-#!/usr/bin/python3 import pandas as pd import matplotlib.pyplot as plt # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # histogram plt.hist(x=&amp;#39;beer_servings&amp;#39;, data=alkohol) plt.xlabel(&amp;#39;Kaleng&amp;#39;) plt.ylabel(&amp;#39;Jumlah&amp;#39;) plt.title(&amp;#39;Konsumsi bir tahun 2010 (kaleng)&amp;#39;) plt.tight_layout() plt.show() Hasilnya:</description>
+      <description>Untuk membuat histogram dengan python dibutuhkan library pandas dan matplotlib dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:&#xA;#!/usr/bin/python3 import pandas as pd import matplotlib.pyplot as plt # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # histogram plt.hist(x=&amp;#39;beer_servings&amp;#39;, data=alkohol) plt.xlabel(&amp;#39;Kaleng&amp;#39;) plt.ylabel(&amp;#39;Jumlah&amp;#39;) plt.title(&amp;#39;Konsumsi bir tahun 2010 (kaleng)&amp;#39;) plt.tight_layout() plt.show() Hasilnya:</description>
     </item>
     <item>
       <title>Membuat data acak berdistribusi normal</title>
       <link>https://sasongko.web.id/post/2021-04-12-membuat-data-acak-normal-python/</link>
       <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-04-12-membuat-data-acak-normal-python/</guid>
-      <description>Catatan sebelumnya tentang bagaimana membuat data secara acak dengan python, kali ini hampir sama. Bedanya, data yang dibuat berasal dari distribusi Gaussian (distribusi normal).
-Akan dibuat data dengan besar sampel 200, mean 165, standar deviasi 12.5.
-#!/usr/bin/python3 import numpy as np sampel = 200 rerata = 165 deviasi = 12.5 data = np.random.normal(rerata, deviasi, sampel) print(data) Hasilnya
-[169.9036172 158.13190825 156.9590178 167.74827264 168.62534857 171.69140206 161.65434678 187.34374928 150.29836841 152.49471216 160.69172875 173.22405024 171.53443046 159.</description>
+      <description>Catatan sebelumnya tentang bagaimana membuat data secara acak dengan python, kali ini hampir sama. Bedanya, data yang dibuat berasal dari distribusi Gaussian (distribusi normal).&#xA;Akan dibuat data dengan besar sampel 200, mean 165, standar deviasi 12.5.&#xA;#!/usr/bin/python3 import numpy as np sampel = 200 rerata = 165 deviasi = 12.5 data = np.random.normal(rerata, deviasi, sampel) print(data) Hasilnya&#xA;[169.9036172 158.13190825 156.9590178 167.74827264 168.62534857 171.69140206 161.65434678 187.34374928 150.29836841 152.49471216 160.69172875 173.22405024 171.53443046 159.</description>
     </item>
     <item>
       <title>Membuat data integer acak python</title>
       <link>https://sasongko.web.id/post/2021-04-11-membuat-data-integer-acak-python/</link>
       <pubDate>Sun, 11 Apr 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-04-11-membuat-data-integer-acak-python/</guid>
-      <description>Bingung membuat data? Gampang, python dengan library numpy punya solusinya!
-Akan dibuat data acak bertipe integer (bilangan bulat). Banyaknya data 200, nilai minimal 145, maksimal 180.
-#!/usr/bin/python3 import numpy as np data = np.random.randint(size=200, low=145, high=180) print(data) Berikut datanya
-[160 147 160 177 147 149 170 149 166 153 154 156 160 165 161 154 168 173 151 145 158 148 163 178 164 166 159 159 172 147 153 170 174 159 152 170 151 159 168 167 147 156 177 168 176 151 153 146 163 156 149 145 152 173 151 162 165 164 179 173 168 172 158 177 148 177 157 150 145 164 171 166 175 164 159 158 178 173 155 162 178 171 146 145 158 151 150 151 165 166 148 168 159 175 165 173 167 178 150 173 147 161 175 158 150 150 159 168 172 159 160 165 156 150 170 175 171 174 149 175 165 168 155 179 161 162 160 146 151 172 171 179 157 171 170 157 149 147 169 151 172 148 164 169 160 158 168 163 153 154 179 163 174 172 176 166 172 166 173 179 155 158 176 151 152 157 164 175 164 165 179 177 175 164 162 164 172 152 172 154 179 162 171 162 149 149 154 163 168 163 178 179 166 166 167 156 158 155 171 148] </description>
+      <description>Bingung membuat data? Gampang, python dengan library numpy punya solusinya!&#xA;Akan dibuat data acak bertipe integer (bilangan bulat). Banyaknya data 200, nilai minimal 145, maksimal 180.&#xA;#!/usr/bin/python3 import numpy as np data = np.random.randint(size=200, low=145, high=180) print(data) Berikut datanya&#xA;[160 147 160 177 147 149 170 149 166 153 154 156 160 165 161 154 168 173 151 145 158 148 163 178 164 166 159 159 172 147 153 170 174 159 152 170 151 159 168 167 147 156 177 168 176 151 153 146 163 156 149 145 152 173 151 162 165 164 179 173 168 172 158 177 148 177 157 150 145 164 171 166 175 164 159 158 178 173 155 162 178 171 146 145 158 151 150 151 165 166 148 168 159 175 165 173 167 178 150 173 147 161 175 158 150 150 159 168 172 159 160 165 156 150 170 175 171 174 149 175 165 168 155 179 161 162 160 146 151 172 171 179 157 171 170 157 149 147 169 151 172 148 164 169 160 158 168 163 153 154 179 163 174 172 176 166 172 166 173 179 155 158 176 151 152 157 164 175 164 165 179 177 175 164 162 164 172 152 172 154 179 162 171 162 149 149 154 163 168 163 178 179 166 166 167 156 158 155 171 148] </description>
     </item>
     <item>
       <title>Median data dengan python</title>
       <link>https://sasongko.web.id/post/2021-03-27-median-data-python/</link>
       <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-03-27-median-data-python/</guid>
-      <description>Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau median() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # median print(&amp;#39;median konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].median(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;median konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].median()) print(&amp;#39;median konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].median(), &amp;#39;gelas&amp;#39;) print(&amp;#39;median konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].median(), &amp;#39;liter&amp;#39;) </description>
+      <description>Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau median() yang dimiliki pandas.&#xA;#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # median print(&amp;#39;median konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].median(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;median konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].median()) print(&amp;#39;median konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].median(), &amp;#39;gelas&amp;#39;) print(&amp;#39;median konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].median(), &amp;#39;liter&amp;#39;) </description>
     </item>
     <item>
       <title>Mean data dengan python</title>
       <link>https://sasongko.web.id/post/2021-03-26-mean-data-python/</link>
       <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-03-26-mean-data-python/</guid>
-      <description>Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau mean() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # mean print(&amp;#39;rerata konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].mean(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;rerata konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].mean()) print(&amp;#39;rerata konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].mean(), &amp;#39;gelas&amp;#39;) print(&amp;#39;rerata konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].mean(), &amp;#39;liter&amp;#39;) </description>
+      <description>Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau mean() yang dimiliki pandas.&#xA;#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&amp;#34;../dataset/drinks.csv&amp;#34;) # mean print(&amp;#39;rerata konsumsi bir adalah &amp;#39;,data[&amp;#39;beer_servings&amp;#39;].mean(),&amp;#39;kaleng&amp;#39;) print(&amp;#39;rerata konsumsi spirit adalah &amp;#39;, data[&amp;#39;spirit_servings&amp;#39;].mean()) print(&amp;#39;rerata konsumsi anggur adalah &amp;#39;, data[&amp;#39;wine_servings&amp;#39;].mean(), &amp;#39;gelas&amp;#39;) print(&amp;#39;rerata konsumsi alkohol murni adalah &amp;#39;, data[&amp;#39;pure_alcohol&amp;#39;].mean(), &amp;#39;liter&amp;#39;) </description>
     </item>
     <item>
       <title>Statistik deskriptif dengan python</title>
       <link>https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/</link>
       <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/</guid>
-      <description>Untuk menampilkan statistik deskriptif suatu data, bisa menggunakan fungsi describe() dari library yang dimiliki python yaitu pandas.
-Berikut ini akan ditampilkan deskripsi data konsumsi alkohol dunia. Sumber data : https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv
-Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel yaitu :
-beer_servings (konsumsi bir yang dinyatakan dalam kaleng) spirit_servings (konsumsi minuman beralkohol spirit; maaf, variabel ini masih belum penulis pahami sepenuhnya) wine_servings (konsumsi anggur yang dinyatakan dalam gelas) pure_alcohol (konsumsi alkohol murni yang dinyataksan dalam liter, nama variabel ini sudah penulis singkat) Adapun deskripsi yang ditampilkan adalah :</description>
+      <description>Untuk menampilkan statistik deskriptif suatu data, bisa menggunakan fungsi describe() dari library yang dimiliki python yaitu pandas.&#xA;Berikut ini akan ditampilkan deskripsi data konsumsi alkohol dunia. Sumber data : https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv&#xA;Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel yaitu :&#xA;beer_servings (konsumsi bir yang dinyatakan dalam kaleng) spirit_servings (konsumsi minuman beralkohol spirit; maaf, variabel ini masih belum penulis pahami sepenuhnya) wine_servings (konsumsi anggur yang dinyatakan dalam gelas) pure_alcohol (konsumsi alkohol murni yang dinyataksan dalam liter, nama variabel ini sudah penulis singkat) Adapun deskripsi yang ditampilkan adalah :</description>
     </item>
     <item>
       <title>Mengetahui struktur dataset</title>
       <link>https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/</link>
       <pubDate>Wed, 24 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/</guid>
-      <description>Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi info() dari pandas.
-Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-#!/usr/bin/env python3 import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.info()) Outputnya
-&amp;lt;class &amp;#39;pandas.core.frame.DataFrame&amp;#39;&amp;gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns): # Column Non-Null Count Dtype --- ------ -------------- ----- 0 RowId 178539 non-null object 1 YearStart 178539 non-null int64 2 YearEnd 178539 non-null int64 3 LocationAbbr 178539 non-null object 4 LocationDesc 178539 non-null object 5 Datasource 178539 non-null object 6 Class 178539 non-null object 7 Topic 178539 non-null object 8 Question 178539 non-null object 9 Response 0 non-null float64 10 Data_Value_Unit 178539 non-null object 11 DataValueTypeID 178539 non-null object 12 Data_Value_Type 178539 non-null object 13 Data_Value 120885 non-null float64 14 Data_Value_Alt 0 non-null float64 15 Data_Value_Footnote_Symbol 70619 non-null object 16 Data_Value_Footnote 70619 non-null object 17 Low_Confidence_Limit 120750 non-null float64 18 High_Confidence_Limit 120750 non-null float64 19 Sample_Size 0 non-null float64 20 StratificationCategory1 178539 non-null object 21 Stratification1 178539 non-null object 22 StratificationCategory2 178539 non-null object 23 Stratification2 178539 non-null object 24 StratificationCategory3 0 non-null float64 25 Stratification3 0 non-null float64 26 Geolocation 159375 non-null object 27 ClassID 178539 non-null object 28 TopicID 178539 non-null object 29 QuestionID 178539 non-null object 30 ResponseID 0 non-null float64 31 LocationID 178539 non-null int64 32 StratificationCategoryID1 178539 non-null object 33 StratificationID1 178539 non-null object 34 StratificationCategoryID2 178539 non-null object 35 StratificationID2 178539 non-null object 36 StratificationCategoryID3 0 non-null float64 37 StratificationID3 0 non-null float64 38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.</description>
+      <description>Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi info() dari pandas.&#xA;Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/&#xA;#!/usr/bin/env python3 import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.info()) Outputnya&#xA;&amp;lt;class &amp;#39;pandas.core.frame.DataFrame&amp;#39;&amp;gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns): # Column Non-Null Count Dtype --- ------ -------------- ----- 0 RowId 178539 non-null object 1 YearStart 178539 non-null int64 2 YearEnd 178539 non-null int64 3 LocationAbbr 178539 non-null object 4 LocationDesc 178539 non-null object 5 Datasource 178539 non-null object 6 Class 178539 non-null object 7 Topic 178539 non-null object 8 Question 178539 non-null object 9 Response 0 non-null float64 10 Data_Value_Unit 178539 non-null object 11 DataValueTypeID 178539 non-null object 12 Data_Value_Type 178539 non-null object 13 Data_Value 120885 non-null float64 14 Data_Value_Alt 0 non-null float64 15 Data_Value_Footnote_Symbol 70619 non-null object 16 Data_Value_Footnote 70619 non-null object 17 Low_Confidence_Limit 120750 non-null float64 18 High_Confidence_Limit 120750 non-null float64 19 Sample_Size 0 non-null float64 20 StratificationCategory1 178539 non-null object 21 Stratification1 178539 non-null object 22 StratificationCategory2 178539 non-null object 23 Stratification2 178539 non-null object 24 StratificationCategory3 0 non-null float64 25 Stratification3 0 non-null float64 26 Geolocation 159375 non-null object 27 ClassID 178539 non-null object 28 TopicID 178539 non-null object 29 QuestionID 178539 non-null object 30 ResponseID 0 non-null float64 31 LocationID 178539 non-null int64 32 StratificationCategoryID1 178539 non-null object 33 StratificationID1 178539 non-null object 34 StratificationCategoryID2 178539 non-null object 35 StratificationID2 178539 non-null object 36 StratificationCategoryID3 0 non-null float64 37 StratificationID3 0 non-null float64 38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.</description>
     </item>
     <item>
       <title>Mengetahui dimensi dataset python</title>
       <link>https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/</link>
       <pubDate>Mon, 22 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/</guid>
-      <description>Untuk mengetahui dimensi atau jumlah baris dan kolom dataset dapat menggunakan shape dari pandas. Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.shape) Output:
-(178539, 39) Dari output tersebut diketahui dataset mempunyai 178539 baris dan 39 kolom.</description>
+      <description>Untuk mengetahui dimensi atau jumlah baris dan kolom dataset dapat menggunakan shape dari pandas. Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/&#xA;import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.shape) Output:&#xA;(178539, 39) Dari output tersebut diketahui dataset mempunyai 178539 baris dan 39 kolom.</description>
     </item>
     <item>
       <title>Menampilkan data baris terakhir python</title>
       <link>https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/</link>
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/</guid>
-      <description>Untuk menampilkan data baris terakhir dengan python dapat menggunakan fungsi tail() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
-Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.tail(7)) Output :
-RowId ... Report 178532 2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA ... NaN 178533 2019~2019~9002~Q41~AGE~AGE_OVERALL~GENDER~MALE ... NaN 178534 2019~2019~9002~Q42~AGE~5064~RACE~HIS ... NaN 178535 2019~2019~9003~Q42~AGE~65PLUS~RACE~ASN ... NaN 178536 2019~2019~9002~Q42~AGE~65PLUS~RACE~HIS ... NaN 178537 2019~2019~9003~Q42~AGE~5064~RACE~BLK .</description>
+      <description>Untuk menampilkan data baris terakhir dengan python dapat menggunakan fungsi tail() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.&#xA;Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/&#xA;import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.tail(7)) Output :&#xA;RowId ... Report 178532 2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA ... NaN 178533 2019~2019~9002~Q41~AGE~AGE_OVERALL~GENDER~MALE ... NaN 178534 2019~2019~9002~Q42~AGE~5064~RACE~HIS ... NaN 178535 2019~2019~9003~Q42~AGE~65PLUS~RACE~ASN ... NaN 178536 2019~2019~9002~Q42~AGE~65PLUS~RACE~HIS ... NaN 178537 2019~2019~9003~Q42~AGE~5064~RACE~BLK .</description>
     </item>
     <item>
       <title>Menampilkan data baris pertama python</title>
       <link>https://sasongko.web.id/post/2021-03-20-menampilkan-data-baris-pertama-python/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-03-20-menampilkan-data-baris-pertama-python/</guid>
-      <description>Untuk menampilkan data baris pertama dengan python dapat menggunakan fungsi head() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
-Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.head()) Output :
-RowId ... Report 0 2016~2016~12~Q27~AGE~AGE_OVERALL~GENDER~MALE ... NaN 1 2015~2015~66~Q43~AGE~5064~GENDER~MALE ... NaN 2 2018~2018~66~Q18~AGE~5064~GENDER~MALE ... NaN 3 2018~2018~66~Q34~AGE~5064~GENDER~FEMALE ... NaN 4 2015~2015~16~Q43~AGE~65PLUS~GENDER~FEMALE ... NaN [5 rows x 39 columns] Dari output tersebut juga dapat diperoleh informasi jumlah kolomnya, yaitu 39 yang tidak semua kolom ditampilkan.</description>
+      <description>Untuk menampilkan data baris pertama dengan python dapat menggunakan fungsi head() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.&#xA;Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/&#xA;import pandas as pd data = pd.read_csv(&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;) print(data.head()) Output :&#xA;RowId ... Report 0 2016~2016~12~Q27~AGE~AGE_OVERALL~GENDER~MALE ... NaN 1 2015~2015~66~Q43~AGE~5064~GENDER~MALE ... NaN 2 2018~2018~66~Q18~AGE~5064~GENDER~MALE ... NaN 3 2018~2018~66~Q34~AGE~5064~GENDER~FEMALE ... NaN 4 2015~2015~16~Q43~AGE~65PLUS~GENDER~FEMALE ... NaN [5 rows x 39 columns] Dari output tersebut juga dapat diperoleh informasi jumlah kolomnya, yaitu 39 yang tidak semua kolom ditampilkan.</description>
     </item>
     <item>
       <title>Load dataset csv dengan python</title>
       <link>https://sasongko.web.id/post/2021-03-16-load-csv-python/</link>
       <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-03-16-load-csv-python/</guid>
-      <description>Misalkan ada dataset dalam format csv. Data tersebut dapat di-load atau diimpor dengan python dengan library pandas. Berikut script untuk load file data.csv.
-import pandas as pd data = pd.read_csv(&amp;#34;data.csv&amp;#34;) </description>
+      <description>Misalkan ada dataset dalam format csv. Data tersebut dapat di-load atau diimpor dengan python dengan library pandas. Berikut script untuk load file data.csv.&#xA;import pandas as pd data = pd.read_csv(&amp;#34;data.csv&amp;#34;) </description>
     </item>
     <item>
       <title>Library python untuk statistika</title>
       <link>https://sasongko.web.id/post/2021-03-15-library-python-statistika/</link>
       <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-03-15-library-python-statistika/</guid>
-      <description>Beberapa library atau module python yang sering digunakan untuk statistika adalah
-numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis vektor atau matriks pandas: digunakan untuk melakukan pengolahan data tabular matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat digunakan sebagai alat bantu dalam analisa data statsmodels: digunakan untuk melakukan uji hipotesa, eksplorasi data maupun pemodelan statistika scipy: digunakan untuk melakukan uji statistika, juga dapat digunakan untuk melakukan pemodelan statistika </description>
+      <description>Beberapa library atau module python yang sering digunakan untuk statistika adalah&#xA;numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis vektor atau matriks pandas: digunakan untuk melakukan pengolahan data tabular matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat digunakan sebagai alat bantu dalam analisa data statsmodels: digunakan untuk melakukan uji hipotesa, eksplorasi data maupun pemodelan statistika scipy: digunakan untuk melakukan uji statistika, juga dapat digunakan untuk melakukan pemodelan statistika </description>
     </item>
     <item>
       <title>Impor library python</title>
       <link>https://sasongko.web.id/post/2021-02-07-impor-library-python/</link>
       <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-02-07-impor-library-python/</guid>
-      <description>Dengan adanya library, programmer python dimudahkan. Lebih efisien. Contoh : untuk mencari nilai akar kuadrat, tidak perlu menuliskan bertele-tele menuliskan rumus. Tinggal impor dan gunakan fungsi yang ada saja Misalkan akan mencari nilai akar kuadrat dari 100.
-import math print(math.sqrt(100)) Baris 1, deklarasi untuk mengimpor library. Nama library-nya math.
-Baris 2, fungsi print() untuk menampilkan ke layar. sqrt() adalah fungsi untuk mencari nilai akar kuadrat. Karena fungsi ini ada di library atau modul math, maka dituliskan juga librarynya.</description>
+      <description>Dengan adanya library, programmer python dimudahkan. Lebih efisien. Contoh : untuk mencari nilai akar kuadrat, tidak perlu menuliskan bertele-tele menuliskan rumus. Tinggal impor dan gunakan fungsi yang ada saja Misalkan akan mencari nilai akar kuadrat dari 100.&#xA;import math print(math.sqrt(100)) Baris 1, deklarasi untuk mengimpor library. Nama library-nya math.&#xA;Baris 2, fungsi print() untuk menampilkan ke layar. sqrt() adalah fungsi untuk mencari nilai akar kuadrat. Karena fungsi ini ada di library atau modul math, maka dituliskan juga librarynya.</description>
     </item>
     <item>
       <title>Comments python</title>
       <link>https://sasongko.web.id/post/2021-02-05-comments-python/</link>
       <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-02-05-comments-python/</guid>
-      <description>Comments atau komentar adalah sekumpulan teks yang dituliskan dalam program tetapi tidak akan dieksekusi. Ada 2 jenis comments dalam bahasa python, yaitu
-Single line comment. Hanya terdiri dari 1 baris comments. Untuk menuliskannya, beri tanda # di awal comments. Contoh :
-# ini adalah single line comment Multiline comments. Terdiri dari lebih dari 1 baris. Dibuka dan ditutup dengan &#39;&#39;&#39; Contoh :
-&amp;#39;&amp;#39;&amp;#39; ini adalah program python untuk mengetahui sesuatu &amp;#39;&amp;#39;&amp;#39; </description>
+      <description>Comments atau komentar adalah sekumpulan teks yang dituliskan dalam program tetapi tidak akan dieksekusi. Ada 2 jenis comments dalam bahasa python, yaitu&#xA;Single line comment. Hanya terdiri dari 1 baris comments. Untuk menuliskannya, beri tanda # di awal comments. Contoh :&#xA;# ini adalah single line comment Multiline comments. Terdiri dari lebih dari 1 baris. Dibuka dan ditutup dengan &#39;&#39;&#39; Contoh :&#xA;&amp;#39;&amp;#39;&amp;#39; ini adalah program python untuk mengetahui sesuatu &amp;#39;&amp;#39;&amp;#39; </description>
     </item>
     <item>
       <title>Tipe data python</title>
       <link>https://sasongko.web.id/post/2021-02-06-tipe-data-python/</link>
       <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-02-06-tipe-data-python/</guid>
-      <description>Python memiliki beberapa tipe data, yaitu :
-None Numeric Boolean Sequence Set Map Tipe data python none Hanya memiliki 1 nilai yaitu None
-Tipe data numeric Tipe data numeric terdiri atas tipe data integer dan float. Integer merupakan bilangan bulat. Float merupakan bilangan desimal.
-Tipe data boolean Terdiri dari 2 nilai yaitu True dan False
-Tipe data sequence Ada 3 macam yaitu string, list dan tuple
-Tipe data string Data ini diapit oleh &#39; atau &amp;quot;.</description>
+      <description>Python memiliki beberapa tipe data, yaitu :&#xA;None Numeric Boolean Sequence Set Map Tipe data python none Hanya memiliki 1 nilai yaitu None&#xA;Tipe data numeric Tipe data numeric terdiri atas tipe data integer dan float. Integer merupakan bilangan bulat. Float merupakan bilangan desimal.&#xA;Tipe data boolean Terdiri dari 2 nilai yaitu True dan False&#xA;Tipe data sequence Ada 3 macam yaitu string, list dan tuple&#xA;Tipe data string Data ini diapit oleh &#39; atau &amp;quot;.</description>
     </item>
     <item>
       <title>Penamaan variabel python</title>
       <link>https://sasongko.web.id/post/2021-02-04-penamaan-variabel-python/</link>
       <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-02-04-penamaan-variabel-python/</guid>
-      <description>Dalam bahasa python, ada 4 ketentuan pemberian nama variabel, yaitu :
-Harus dimulai dengan huruf (a-z, A-Z) atau garis bawah underscore (_) dan tidak boleh diawali dengan angka (0-9). Boleh mengandung karakter huruf, angka dan underscore (a-z, A-Z, 0-9, _) Bersifat sensitive case yang mengartikan bahwa variabel Nama, nama dan NAMA adalah variabel yang berbeda Tidak boleh menggunakan reserved words seperti for, while, return </description>
+      <description>Dalam bahasa python, ada 4 ketentuan pemberian nama variabel, yaitu :&#xA;Harus dimulai dengan huruf (a-z, A-Z) atau garis bawah underscore (_) dan tidak boleh diawali dengan angka (0-9). Boleh mengandung karakter huruf, angka dan underscore (a-z, A-Z, 0-9, _) Bersifat sensitive case yang mengartikan bahwa variabel Nama, nama dan NAMA adalah variabel yang berbeda Tidak boleh menggunakan reserved words seperti for, while, return </description>
     </item>
     <item>
       <title>Mengenal python</title>
       <link>https://sasongko.web.id/post/2021-02-02-mengenal-python/</link>
       <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-02-02-mengenal-python/</guid>
-      <description>Apa itu python Python adalah bahasa pemrograman yang diciptakan oleh Guido van Rossum. Python bersifat open source sehingga semua orang boleh menggunakan dan mengembangkannya. Bahasa pemrograman satu ini tidak spesifik untuk keperluan tertentu, tetapi umum. Python bisa digunakan untuk membuat aplikasi desktop, database, web, data science, machine learning, dll.
-Apakah python cocok untuk data science? Mengapa? Ya. Karena python open source maka semua orang boleh mengembangkannya, termasuk untuk keperluan data science.</description>
+      <description>Apa itu python Python adalah bahasa pemrograman yang diciptakan oleh Guido van Rossum. Python bersifat open source sehingga semua orang boleh menggunakan dan mengembangkannya. Bahasa pemrograman satu ini tidak spesifik untuk keperluan tertentu, tetapi umum. Python bisa digunakan untuk membuat aplikasi desktop, database, web, data science, machine learning, dll.&#xA;Apakah python cocok untuk data science? Mengapa? Ya. Karena python open source maka semua orang boleh mengembangkannya, termasuk untuk keperluan data science.</description>
     </item>
     <item>
       <title>Virt-Manager ImportError: No module named requests</title>
       <link>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</link>
       <pubDate>Mon, 04 Jul 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</guid>
-      <description>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.
-$ virt-manager Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt; from virtinst import util as util File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt; from virtinst.distroinstaller import DistroInstaller File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt; from . import urlfetcher File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.</description>
+      <description>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.&#xA;$ virt-manager Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt; from virtinst import util as util File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt; from virtinst.distroinstaller import DistroInstaller File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt; from . import urlfetcher File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.</description>
     </item>
     <item>
       <title>pip InsecurePlatformWarning</title>
       <link>https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/</link>
       <pubDate>Thu, 21 Jan 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/</guid>
-      <description>Saat melakukan pencarian dengan pip, muncul pesan
-/usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:315: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning. SNIMissingWarning /usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:120: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail.</description>
+      <description>Saat melakukan pencarian dengan pip, muncul pesan&#xA;/usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:315: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning. SNIMissingWarning /usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:120: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail.</description>
     </item>
     <item>
       <title>Install gdrv</title>
       <link>https://sasongko.web.id/post/2015-07-26-install-gdrv/</link>
       <pubDate>Sun, 26 Jul 2015 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2015-07-26-install-gdrv/</guid>
-      <description>gdrv adalah command line tool berbasis python untuk Google Drive. Cara menginstallnya
-pip install gdrv </description>
+      <description>gdrv adalah command line tool berbasis python untuk Google Drive. Cara menginstallnya&#xA;pip install gdrv </description>
     </item>
     <item>
       <title>Install Google Play Downloader</title>
       <link>https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/</link>
       <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/</guid>
-      <description>GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:
-python-protobuf (&amp;gt;=2.4) python-requests (&amp;gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&amp;gt;=2.8) python 2.5+ java (opsional) Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
-easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).</description>
+      <description>GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:&#xA;python-protobuf (&amp;gt;=2.4) python-requests (&amp;gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&amp;gt;=2.8) python 2.5+ java (opsional) Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).&#xA;easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).</description>
     </item>
     <item>
       <title>Install wxPython</title>
       <link>https://sasongko.web.id/post/2015-07-18-install-wxpython/</link>
       <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2015-07-18-install-wxpython/</guid>
-      <description>wxPython adalah salah satu toolkit untuk membuat aplikasi grafis dengan python. Untuk menginstallnya mudah, kita install saja slackbuildnya. Pastikan tersambung internet.
-wget http://slackbuilds.org/slackbuilds/14.1/libraries/wxPython.tar.gz tar xzf wxPython.tar.gz cd wxPython wget http://downloads.sourceforge.net/wxpython/wxPython-src-2.8.12.1.tar.bz2 sh wxPython.SlackBuild installpkg /tmp/wxPython-2.8.12.1-x86_64-2_SBo.tgz </description>
+      <description>wxPython adalah salah satu toolkit untuk membuat aplikasi grafis dengan python. Untuk menginstallnya mudah, kita install saja slackbuildnya. Pastikan tersambung internet.&#xA;wget http://slackbuilds.org/slackbuilds/14.1/libraries/wxPython.tar.gz tar xzf wxPython.tar.gz cd wxPython wget http://downloads.sourceforge.net/wxpython/wxPython-src-2.8.12.1.tar.bz2 sh wxPython.SlackBuild installpkg /tmp/wxPython-2.8.12.1-x86_64-2_SBo.tgz </description>
     </item>
     <item>
       <title>Install pip</title>
       <link>https://sasongko.web.id/post/2015-07-13-install-pip/</link>
       <pubDate>Mon, 13 Jul 2015 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2015-07-13-install-pip/</guid>
-      <description>Pip akan memudahkan kita semua untuk menginstall paket-paket yang terkait dengan python.
-wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py python get-pip.py </description>
+      <description>Pip akan memudahkan kita semua untuk menginstall paket-paket yang terkait dengan python.&#xA;wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py python get-pip.py </description>
     </item>
   </channel>
 </rss>

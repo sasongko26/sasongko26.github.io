@@ -13,97 +13,77 @@
       <link>https://sasongko.web.id/post/2023-06-27-install-guest-os-qemu/</link>
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2023-06-27-install-guest-os-qemu/</guid>
-      <description>Akan diinstall sebagai guest os slackware, dengan file iso slackware.iso, disk image slackware.qcow dan virtual RAM 5GB. Maka command yang dijalankan dengan qemu adalah
-$ qemu-system-x86_64 -enable-kvm -m 5120 -cdrom slackware.iso -drive file=slackware.qcow2 -boot d </description>
+      <description>Akan diinstall sebagai guest os slackware, dengan file iso slackware.iso, disk image slackware.qcow dan virtual RAM 5GB. Maka command yang dijalankan dengan qemu adalah&#xA;$ qemu-system-x86_64 -enable-kvm -m 5120 -cdrom slackware.iso -drive file=slackware.qcow2 -boot d </description>
     </item>
     <item>
       <title>Membuat qemu disk image</title>
       <link>https://sasongko.web.id/post/2023-06-26-membuat-qemu-disk-image/</link>
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2023-06-26-membuat-qemu-disk-image/</guid>
-      <description>Untuk membuat disk image sebagai storage sistem oprasi yang akan divirtualisasikan dengan qemu, bisa menggunakan command yang mudah. Misalkan nama file adalah slack.img dengan size 100G
-#penggunaan: qemu-img create file_disk_imagenya sizenya $ qemu-img create slack.img 100G </description>
+      <description>Untuk membuat disk image sebagai storage sistem oprasi yang akan divirtualisasikan dengan qemu, bisa menggunakan command yang mudah. Misalkan nama file adalah slack.img dengan size 100G&#xA;#penggunaan: qemu-img create file_disk_imagenya sizenya $ qemu-img create slack.img 100G </description>
     </item>
     <item>
       <title>Convert dd ke vdi</title>
       <link>https://sasongko.web.id/post/2023-06-22-convert-dd-to-vdi/</link>
       <pubDate>Thu, 22 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2023-06-22-convert-dd-to-vdi/</guid>
-      <description>Untuk konversi file dd/img menjadi vdi mudah. Pastikan sudah install virtualbox. Misalkan akan mengubah file1.dd menjadi file2.vdi,
-$ VBoxManage convertfromraw file1.dd --format VDI file2.vdi </description>
+      <description>Untuk konversi file dd/img menjadi vdi mudah. Pastikan sudah install virtualbox. Misalkan akan mengubah file1.dd menjadi file2.vdi,&#xA;$ VBoxManage convertfromraw file1.dd --format VDI file2.vdi </description>
     </item>
     <item>
       <title>Virtualbox cannot register existing type NMAgentManagerError</title>
       <link>https://sasongko.web.id/post/2022-10-30-virtualbox-updater-segfault/</link>
       <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-10-30-virtualbox-updater-segfault/</guid>
-      <description>Setelah install virtualbox menggunakan binary .run, ketika dijalankan via terminal mengalami sgfault:
-bash-5.2$ virtualbox (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot register existing type &amp;#39;NMAgentManagerError&amp;#39; (process:7040): GLib-CRITICAL **: 00:53:14.710: g_once_init_leave: assertion &amp;#39;result != 0&amp;#39; failed (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot retrieve class for invalid (unclassed) type &amp;#39;invalid&amp;#39; Segmentation fault Solusinya:
-bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never </description>
+      <description>Setelah install virtualbox menggunakan binary .run, ketika dijalankan via terminal mengalami sgfault:&#xA;bash-5.2$ virtualbox (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot register existing type &amp;#39;NMAgentManagerError&amp;#39; (process:7040): GLib-CRITICAL **: 00:53:14.710: g_once_init_leave: assertion &amp;#39;result != 0&amp;#39; failed (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot retrieve class for invalid (unclassed) type &amp;#39;invalid&amp;#39; Segmentation fault Solusinya:&#xA;bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never </description>
     </item>
     <item>
       <title>Menghapus docker image</title>
       <link>https://sasongko.web.id/post/2021-11-14-hapus-docker-image/</link>
       <pubDate>Sun, 14 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-11-14-hapus-docker-image/</guid>
-      <description>Docker image yang suah tidak digunakan sebaiknya dihapus saja, agar storage lebih longgar. Pastikan docker daemon aktif
-dockerd List docker imagenya
-$ docker images REPOSITORY TAG IMAGE ID CREATED SIZE qgis/qgis release-3_16 ee28ddd8c37a 4 days ago 7.43GB qgis/qgis &amp;lt;none&amp;gt; c84657a1e2f6 3 weeks ago 7.43GB Hapus
-$ docker rmi -f ee28ddd8c37a c84657a1e2f6 Ingin menghapus semua container, image, dll
-$ docker system prune -a WARNING! This will remove: - all stopped containers - all networks not used by at least one container - all dangling images - all dangling build cache Are you sure you want to continue?</description>
+      <description>Docker image yang suah tidak digunakan sebaiknya dihapus saja, agar storage lebih longgar. Pastikan docker daemon aktif&#xA;dockerd List docker imagenya&#xA;$ docker images REPOSITORY TAG IMAGE ID CREATED SIZE qgis/qgis release-3_16 ee28ddd8c37a 4 days ago 7.43GB qgis/qgis &amp;lt;none&amp;gt; c84657a1e2f6 3 weeks ago 7.43GB Hapus&#xA;$ docker rmi -f ee28ddd8c37a c84657a1e2f6 Ingin menghapus semua container, image, dll&#xA;$ docker system prune -a WARNING! This will remove: - all stopped containers - all networks not used by at least one container - all dangling images - all dangling build cache Are you sure you want to continue?</description>
     </item>
     <item>
       <title>Jalankan QGIS docker</title>
       <link>https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/</link>
       <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/</guid>
-      <description>Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.
-Install docker dan docker-cli QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.
-Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.</description>
+      <description>Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.&#xA;Install docker dan docker-cli QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.&#xA;Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.</description>
     </item>
     <item>
       <title>Install Fedora di Slackware</title>
       <link>https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/</link>
       <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/</guid>
-      <description>Tiba-tiba terlintas keinginan mencoba fedora. Sejak mengenal linux tahun 2005an, saya belum pernah menggunakan fedora. Entah kalau saat itu warnetnya pakai fedora wkwkwkwk. Pertama memakai linux memang di warnet. Saat itu warnetnya menawarkan pakai Windows atau linux, saya pilih linux karena tarifnya 50% lebih murah.
-Kembali ke topik. Berikut akan install fedora secara virtual via lxc.
-$ lxc-create -n fedora -t download Opsi n adalah untuk memberi nama containernya, t template yang digunakan.</description>
+      <description>Tiba-tiba terlintas keinginan mencoba fedora. Sejak mengenal linux tahun 2005an, saya belum pernah menggunakan fedora. Entah kalau saat itu warnetnya pakai fedora wkwkwkwk. Pertama memakai linux memang di warnet. Saat itu warnetnya menawarkan pakai Windows atau linux, saya pilih linux karena tarifnya 50% lebih murah.&#xA;Kembali ke topik. Berikut akan install fedora secara virtual via lxc.&#xA;$ lxc-create -n fedora -t download Opsi n adalah untuk memberi nama containernya, t template yang digunakan.</description>
     </item>
     <item>
       <title>Mount qcow2</title>
       <link>https://sasongko.web.id/post/2016-09-11-mount-qcow2/</link>
       <pubDate>Sun, 11 Sep 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-09-11-mount-qcow2/</guid>
-      <description>Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
-Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
-modprobe nbd max_part=N max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.
-Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbd yang mengaktifkan koneksi file /mnt/virtual/image/ign11.</description>
+      <description>Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root&#xA;Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya&#xA;modprobe nbd max_part=N max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.&#xA;Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbd yang mengaktifkan koneksi file /mnt/virtual/image/ign11.</description>
     </item>
     <item>
       <title>Virtual Manager unable to connect to libvirt</title>
       <link>https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</link>
       <pubDate>Tue, 05 Jul 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</guid>
-      <description>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Manager belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failure dengan detail sebagai berikut
-Unable to connect to libvirt. internal error: Cannot find suitable emulator for x86_64 Libvirt URI is: qemu:///system Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 979, in _open_thread self._populate_initial_state() File &amp;#34;/usr/share/virt-manager/virtManager/connection.</description>
+      <description>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Manager belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failure dengan detail sebagai berikut&#xA;Unable to connect to libvirt. internal error: Cannot find suitable emulator for x86_64 Libvirt URI is: qemu:///system Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virtManager/connection.py&amp;#34;, line 979, in _open_thread self._populate_initial_state() File &amp;#34;/usr/share/virt-manager/virtManager/connection.</description>
     </item>
     <item>
       <title>Virt-Manager ImportError: No module named requests</title>
       <link>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</link>
       <pubDate>Mon, 04 Jul 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</guid>
-      <description>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.
-$ virt-manager Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt; from virtinst import util as util File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt; from virtinst.distroinstaller import DistroInstaller File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt; from . import urlfetcher File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.</description>
+      <description>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.&#xA;$ virt-manager Traceback (most recent call last): File &amp;#34;/usr/share/virt-manager/virt-manager&amp;#34;, line 33, in &amp;lt;module&amp;gt; from virtinst import util as util File &amp;#34;/usr/share/virt-manager/virtinst/__init__.py&amp;#34;, line 89, in &amp;lt;module&amp;gt; from virtinst.distroinstaller import DistroInstaller File &amp;#34;/usr/share/virt-manager/virtinst/distroinstaller.py&amp;#34;, line 23, in &amp;lt;module&amp;gt; from . import urlfetcher File &amp;#34;/usr/share/virt-manager/virtinst/urlfetcher.py&amp;#34;, line 34, in &amp;lt;module&amp;gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.</description>
     </item>
     <item>
       <title>Konversi VDI ke VMDK</title>
       <link>https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/</link>
       <pubDate>Tue, 14 Oct 2014 09:43:09 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/</guid>
-      <description>Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.
-Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya
-$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% Clone hard disk created in format &amp;#39;VMDK&amp;#39;. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa Hardisk virtualnya sudah terkonversi.</description>
+      <description>Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.&#xA;Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya&#xA;$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% Clone hard disk created in format &amp;#39;VMDK&amp;#39;. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa Hardisk virtualnya sudah terkonversi.</description>
     </item>
   </channel>
 </rss>

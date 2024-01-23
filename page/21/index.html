@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.120.3">
+  <meta name="generator" content="Hugo 0.121.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,55 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-03-09-mount-partisi-hibernated-windows/">Mount partisi hibernated windows</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>09 Mar 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Lima tahun yang lalu ketika membeli laptop yang saat ini digunakan untuk menulis catatan ini, toko memberikan OS Windows 10 tanpa lisensinya. Penulis tetap mempertahankannya untuk jaga-jaga jika di kemudian hari kepepet sangat membutuhkan Windows.
+Tadi pagi iseng ingin melihat-lihat adakah file di partisi tempat Windows diinstall yang bisa dihapus sehingga storage harddisk lebih lega?
+Partisi Windows teridentifikasi sebagai /dev/sda2. Akan di-mount ke /media/hd0
+$ mount /dev/sda2 /media/hd0 Windows is hibernated, refused to mount.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-03-09-mount-partisi-hibernated-windows/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-03-08-resize-window-blackbox/">Resize window blackbox</a></h2>
 
     <div class="post-meta">
@@ -402,51 +451,6 @@ slackpkg install httpd Aktivasi apache webserver slackware linux Setelah diinsta
   <footer>
     <a href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-19-set-background-blackbox/">Set background blackbox</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Menggunakan blackbox yang &lsquo;hanya&rsquo; window manager tentunya berbeda dengan ketika menggunakan desktop environment (DE) seperti kde atau xfce. Pengaturan background atau wallpaper dalam DE menggunakan tampilan grafis.
-Untuk meng-set background pada blackbox menggunakan bsetbg
-$ bsetbg nama_file_background Atau, kalau menghendaki background-nya adalah warna (solid color) juga bisa. Contoh, akan mengganti background-nya dengan warna hijau.
-$ bsetbg -solid green 
-  </p>
-
   
 </article>
 

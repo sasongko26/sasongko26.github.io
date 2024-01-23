@@ -20,17 +20,14 @@
       <link>https://sasongko.web.id/post/2022-08-13-install-sof/</link>
       <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-08-13-install-sof/</guid>
-      <description>Langsung saja
-cd /opt git clone https://github.com/thesofproject/sof-bin.git cd sof-bin Masuk ke direktori rilis terbaru, contoh kali ini v2.2
-cd v2.2.x rsync -a sof-v2.2/ /lib/firmware/intel/sof/ rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/ </description>
+      <description>Langsung saja&#xA;cd /opt git clone https://github.com/thesofproject/sof-bin.git cd sof-bin Masuk ke direktori rilis terbaru, contoh kali ini v2.2&#xA;cd v2.2.x rsync -a sof-v2.2/ /lib/firmware/intel/sof/ rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/ </description>
     </item>
     <item>
       <title>Kenggulan elilo dibanding grub</title>
       <link>https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/</link>
       <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/</guid>
-      <description>Pascamigrasi dari elilo ke grub ada hal yang dirindukan. Zram dengan komresi zstd. Entah masalahnya di mana, zstd tidak bisa digunakan untuk zram apabila menggunakan grub. Menggunakan elilo aman damai sentosa lanjcar jaya. Padahal kernel dan initrd-nya sama.
-Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-rle. Alhamdulillah. Dengan adanya zram aktivitas komputasi di laptop dengan RAM hanya 2GB masih bisa dijalankan dengan lancar.</description>
+      <description>Pascamigrasi dari elilo ke grub ada hal yang dirindukan. Zram dengan komresi zstd. Entah masalahnya di mana, zstd tidak bisa digunakan untuk zram apabila menggunakan grub. Menggunakan elilo aman damai sentosa lanjcar jaya. Padahal kernel dan initrd-nya sama.&#xA;Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-rle. Alhamdulillah. Dengan adanya zram aktivitas komputasi di laptop dengan RAM hanya 2GB masih bisa dijalankan dengan lancar.</description>
     </item>
     <item>
       <title>Mengubah timeout grub</title>
@@ -44,123 +41,98 @@ Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-r
       <link>https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/</link>
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/</guid>
-      <description>Untuk menampilkan status penggunaan zram bisa dengan menjalankan
-# zramctl --output-all NAME DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT /dev/zram0 1G 4K 74B lzo-rle 4 0 12K 0B 12K 0B [SWAP] Berikut penjelasan masing-masing kolomnya
-NAME	zram device name DISKSIZE	limit on the uncompressed amount of data DATA	uncompressed size of stored data COMPR	compressed size of stored data ALGORITHM	the selected compression algorithm STREAMS	number of concurrent compress operations ZERO-PAGES	empty pages with no allocated memory TOTAL	all memory including allocator fragmentation and metadata overhead MEM-LIMIT	memory limit used to store compressed data MEM-USED	memory zram have been consumed to store compressed data MIGRATED	number of objects migrated by compaction MOUNTPOINT	where the device is mounted</description>
+      <description>Untuk menampilkan status penggunaan zram bisa dengan menjalankan&#xA;# zramctl --output-all NAME DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT /dev/zram0 1G 4K 74B lzo-rle 4 0 12K 0B 12K 0B [SWAP] Berikut penjelasan masing-masing kolomnya&#xA;NAME&#x9;zram device name DISKSIZE&#x9;limit on the uncompressed amount of data DATA&#x9;uncompressed size of stored data COMPR&#x9;compressed size of stored data ALGORITHM&#x9;the selected compression algorithm STREAMS&#x9;number of concurrent compress operations ZERO-PAGES&#x9;empty pages with no allocated memory TOTAL&#x9;all memory including allocator fragmentation and metadata overhead MEM-LIMIT&#x9;memory limit used to store compressed data MEM-USED&#x9;memory zram have been consumed to store compressed data MIGRATED&#x9;number of objects migrated by compaction MOUNTPOINT&#x9;where the device is mounted</description>
     </item>
     <item>
       <title>Migrasi dari elilo ke grub</title>
       <link>https://sasongko.web.id/post/2022-03-26-migrasi-elilo-ke-grub/</link>
       <pubDate>Sat, 26 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-03-26-migrasi-elilo-ke-grub/</guid>
-      <description>Aktif di-maintain pengembang merupakan salah satu kriteria preferensi software yang penulis gunakan. elilo sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. Slackware adalah distro yang masih bertahan menyediakan elilo. Terima kasih PV.
-Sejak pertama menggunakan slackware dengan sistem UEFI sekitar 2016, elilo penulis jadikan pilihan utama boot loader. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini elilo sudah tidak dikembangkan developer aslinya. Mengangkat grub sebagai suksesor elilo bukanlah hal buruk.</description>
+      <description>Aktif di-maintain pengembang merupakan salah satu kriteria preferensi software yang penulis gunakan. elilo sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. Slackware adalah distro yang masih bertahan menyediakan elilo. Terima kasih PV.&#xA;Sejak pertama menggunakan slackware dengan sistem UEFI sekitar 2016, elilo penulis jadikan pilihan utama boot loader. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini elilo sudah tidak dikembangkan developer aslinya. Mengangkat grub sebagai suksesor elilo bukanlah hal buruk.</description>
     </item>
     <item>
       <title>Modifikasi htop</title>
       <link>https://sasongko.web.id/post/2021-01-28-modifikasi-htop/</link>
       <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-01-28-modifikasi-htop/</guid>
-      <description>Htop merupakan system monitoring tool yang cukup lengkap, bukan sekedar process viewer yang menampilkan proses apa saja yang berjalan. Dengan htop user dapat melihat running process, mencari process ataupun mengakhirinya.
-Secara default tampilan htop sebagai berikut
-Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin menambahkan persentase baterai dan penggunaan zram. Caranya, tekan F2. Perhatikan kolom paling kanan Available Meters. Letakkan kursor di kolom tersebut, scroll sampai ketemu yang diinginkan.</description>
+      <description>Htop merupakan system monitoring tool yang cukup lengkap, bukan sekedar process viewer yang menampilkan proses apa saja yang berjalan. Dengan htop user dapat melihat running process, mencari process ataupun mengakhirinya.&#xA;Secara default tampilan htop sebagai berikut&#xA;Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin menambahkan persentase baterai dan penggunaan zram. Caranya, tekan F2. Perhatikan kolom paling kanan Available Meters. Letakkan kursor di kolom tersebut, scroll sampai ketemu yang diinginkan.</description>
     </item>
     <item>
       <title>Aktivasi zram</title>
       <link>https://sasongko.web.id/post/2021-01-26-aktivasi-zram/</link>
       <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-01-26-aktivasi-zram/</guid>
-      <description>Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.
-Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan.</description>
+      <description>Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.&#xA;Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan.</description>
     </item>
     <item>
       <title>Mengembalikan backlight</title>
       <link>https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/</link>
       <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/</guid>
-      <description>Upgrade kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. Backlight menjadi tidak berfungsi. Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah xbacklight.
-$ xbacklight No outputs have backlight property Backlight atau brightness 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).
-Kebetulan, salah 1 situs yang sering penulis kunjungi, LinuxQuestions.Org ada thread yang membahas masalah ini.
-Cara yang dipakai di sini adalah dengan membuat /etc/X11/xorg.</description>
+      <description>Upgrade kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. Backlight menjadi tidak berfungsi. Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah xbacklight.&#xA;$ xbacklight No outputs have backlight property Backlight atau brightness 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).&#xA;Kebetulan, salah 1 situs yang sering penulis kunjungi, LinuxQuestions.Org ada thread yang membahas masalah ini.&#xA;Cara yang dipakai di sini adalah dengan membuat /etc/X11/xorg.</description>
     </item>
     <item>
       <title>Mengetahui kapan komputer dinyalakan</title>
       <link>https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</link>
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</guid>
-      <description>Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan dmesg
-$ dmesg -T | head -1 [Fri Dec 25 00:39:42 2020] Linux version 5.10.2 Penjelasan command :
-eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp | adalah pipe, untu menjadikan output dmesg sebagai input untuk head head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya [Fri Dec 25 00:39:42 2020] Linux version 5.</description>
+      <description>Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan dmesg&#xA;$ dmesg -T | head -1 [Fri Dec 25 00:39:42 2020] Linux version 5.10.2 Penjelasan command :&#xA;eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp | adalah pipe, untu menjadikan output dmesg sebagai input untuk head head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya [Fri Dec 25 00:39:42 2020] Linux version 5.</description>
     </item>
     <item>
       <title>Start up time kernel 5.10.2</title>
       <link>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</link>
       <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</guid>
-      <description>Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam main tree slackware current. Saat catatan ini dituliskan, sudah &amp;ldquo;mendarat&amp;rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk start up. Yang dimaksud start up di sini adalah kondisi dari eksekusi elilo dan initrd sampai muncul login prompt.
-$ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segment Routing with IPv6 [ 32.</description>
+      <description>Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam main tree slackware current. Saat catatan ini dituliskan, sudah &amp;ldquo;mendarat&amp;rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk start up. Yang dimaksud start up di sini adalah kondisi dari eksekusi elilo dan initrd sampai muncul login prompt.&#xA;$ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segment Routing with IPv6 [ 32.</description>
     </item>
     <item>
       <title>Menggunakan Kernel Huge 4.14.0</title>
       <link>https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/</link>
       <pubDate>Wed, 22 Nov 2017 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/</guid>
-      <description>Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang bootloop apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. Update terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui rebuilt elilo.
-Setelah upgrade terutama untuk elilo jangan lupa menjalankan
-eliloconfig yang secara otomatis juga akan meng- generate elilo.conf yang berisi pengaturan boot dengan kernel huge.
-Namun, saya kurang suka dengan cara otomatis ini.</description>
+      <description>Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang bootloop apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. Update terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui rebuilt elilo.&#xA;Setelah upgrade terutama untuk elilo jangan lupa menjalankan&#xA;eliloconfig yang secara otomatis juga akan meng- generate elilo.conf yang berisi pengaturan boot dengan kernel huge.&#xA;Namun, saya kurang suka dengan cara otomatis ini.</description>
     </item>
     <item>
       <title>Kernel 4.14.0 Masuk -Current, Beralih ke Kernel Generic</title>
       <link>https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/</link>
       <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/</guid>
-      <description>Setelah 2 minggu, -Current kembali mendapatkan update Jum&amp;rsquo;at kemarin tanggal 17 November 2017. Banyak update, ada yang upgraded, rebuilt, added, dan removed. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.
-Setelah upgrade dan eliloconfig kemudian restart, ternyata muncul masalah! Bootloop! Loading vmlinuz&amp;hellip; langsung reboot. Begitu seterusnya.
-Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk recovery-nya lebih mudah. Boot dari DVD kemudian waktu muncul grub pilih opsi yang intinya detect another operating system (persisnya saya lupa).</description>
+      <description>Setelah 2 minggu, -Current kembali mendapatkan update Jum&amp;rsquo;at kemarin tanggal 17 November 2017. Banyak update, ada yang upgraded, rebuilt, added, dan removed. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.&#xA;Setelah upgrade dan eliloconfig kemudian restart, ternyata muncul masalah! Bootloop! Loading vmlinuz&amp;hellip; langsung reboot. Begitu seterusnya.&#xA;Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk recovery-nya lebih mudah. Boot dari DVD kemudian waktu muncul grub pilih opsi yang intinya detect another operating system (persisnya saya lupa).</description>
     </item>
     <item>
       <title>Akibat Lupa eliloconfig</title>
       <link>https://sasongko.web.id/post/2017-07-05-akibat-lupa-eliloconfig/</link>
       <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2017-07-05-akibat-lupa-eliloconfig/</guid>
-      <description>Kemarin melihat ChangeLog ada beberapa update yang sebagian di antaranya adalah security fix. Salah satu update adalah kernel. Melakukan upgrade semuanya baik-baik saja dan lanjut shutdown. Siang ini, booting pun masih fine dan no problem. Begitu juga login. Baru terasa saat ingin masuk desktop malah gagal.
-$ startx xauth: file /home/sasongko/.serverauth.2717 does not exist X.Org X Server 1.19.3 Release Date: 2017-03-15 X Protocol Version 11, Revision 0 Build Operating System: Slackware 14.</description>
+      <description>Kemarin melihat ChangeLog ada beberapa update yang sebagian di antaranya adalah security fix. Salah satu update adalah kernel. Melakukan upgrade semuanya baik-baik saja dan lanjut shutdown. Siang ini, booting pun masih fine dan no problem. Begitu juga login. Baru terasa saat ingin masuk desktop malah gagal.&#xA;$ startx xauth: file /home/sasongko/.serverauth.2717 does not exist X.Org X Server 1.19.3 Release Date: 2017-03-15 X Protocol Version 11, Revision 0 Build Operating System: Slackware 14.</description>
     </item>
     <item>
       <title>[SOLVED] Slackware Current Susah Booting dan Shutdown</title>
       <link>https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/</link>
       <pubDate>Thu, 05 May 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/</guid>
-      <description>Tiga bulan lalu saya sambat Slackware current [hang]({% post_url 2016-02-08-slackware-current-hang %}) saat booting dan shutdown. Sekarang masalah tersebut teratasi.
-Secara default laptop Asus X453MA diperuntukkan bagi pengguna Microsoft Windows. Hal ini terlihat dari web resminya yang menyediakan driver hanya untuk Windows khususnya Windows 8.1 dan Windows 10. Juga terlihat dari &amp;ldquo;paket bundling&amp;rdquo;-nya yang menyediakan Windows preinstalled.
-Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.1 oleh pihak toko. Awalnya saya pilih kosongan aja sesuai aslinya.</description>
+      <description>Tiga bulan lalu saya sambat Slackware current [hang]({% post_url 2016-02-08-slackware-current-hang %}) saat booting dan shutdown. Sekarang masalah tersebut teratasi.&#xA;Secara default laptop Asus X453MA diperuntukkan bagi pengguna Microsoft Windows. Hal ini terlihat dari web resminya yang menyediakan driver hanya untuk Windows khususnya Windows 8.1 dan Windows 10. Juga terlihat dari &amp;ldquo;paket bundling&amp;rdquo;-nya yang menyediakan Windows preinstalled.&#xA;Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.1 oleh pihak toko. Awalnya saya pilih kosongan aja sesuai aslinya.</description>
     </item>
     <item>
       <title>Mouse Stuck</title>
       <link>https://sasongko.web.id/post/2016-02-26-mouse-stuck/</link>
       <pubDate>Fri, 26 Feb 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-02-26-mouse-stuck/</guid>
-      <description>Setelah upgrade current ternyata ada masalah dengan mouse. Mouse mengalami stuck, ga ada respons saat drag, drop, bahkan ga bisa klik baik klik kiri maupun kanan. Dari grup di telegram dapat informasi dari Pak Willy hal serupa juga dialami oleh beberapa slacker yang lainnya. Alhamdulillah masalah ini bisa solved dengan mudahnya di Slackware64 saya.
-Dengan akses root copas /lib/modprobe.d/psmouse.conf ke /etc/modprobe.d. Kemudian uncomment baris terakhir.
-############################################################################## # Do not edit this file; instead, copy it to /etc/modprobe.</description>
+      <description>Setelah upgrade current ternyata ada masalah dengan mouse. Mouse mengalami stuck, ga ada respons saat drag, drop, bahkan ga bisa klik baik klik kiri maupun kanan. Dari grup di telegram dapat informasi dari Pak Willy hal serupa juga dialami oleh beberapa slacker yang lainnya. Alhamdulillah masalah ini bisa solved dengan mudahnya di Slackware64 saya.&#xA;Dengan akses root copas /lib/modprobe.d/psmouse.conf ke /etc/modprobe.d. Kemudian uncomment baris terakhir.&#xA;############################################################################## # Do not edit this file; instead, copy it to /etc/modprobe.</description>
     </item>
     <item>
       <title>Slackware Current Susah Booting dan Shutdown</title>
       <link>https://sasongko.web.id/post/2016-02-08-slackware-current-hang/</link>
       <pubDate>Mon, 08 Feb 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-02-08-slackware-current-hang/</guid>
-      <description>Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering stuck saat boot dan shutdown.
-Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis ID-Slackware, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.</description>
+      <description>Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering stuck saat boot dan shutdown.&#xA;Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis ID-Slackware, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.</description>
     </item>
     <item>
       <title>Hapus Kernel Lama Debian</title>
       <link>https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/</link>
       <pubDate>Thu, 16 Oct 2014 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/</guid>
-      <description>Setelah upgrade kernel, ada yang kurang sreg. Ternyata kernelnya malah jadi ada 2. ini terlihat di grub
-OK, kernel yang lama (2.6.32-5-686) dihapus saja.
-# apt-get remove linux-image-2.6.32-5-686 kemudian restart.</description>
+      <description>Setelah upgrade kernel, ada yang kurang sreg. Ternyata kernelnya malah jadi ada 2. ini terlihat di grub&#xA;OK, kernel yang lama (2.6.32-5-686) dihapus saja.&#xA;# apt-get remove linux-image-2.6.32-5-686 kemudian restart.</description>
     </item>
   </channel>
 </rss>

@@ -13,43 +13,35 @@
       <link>https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/</guid>
-      <description>Secara default sbopkg tidak menyediakan fitur reverse dependency. Adapun untuk butuh dependency-nya apa saja bisa menggunakan sqg. Bagaimana tahu reverse dependency-nya?
-Ini cara sederhana yang saya gunakan
-grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan cara tersebut bisa diketahui suatu paket/package itu menjadi dependensi dari paket apa. Tapi, salah 1 dari output tersebut tidak lain adalah paket itu sendiri. Dan, package yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah packages tersebut terinstall atau tidak.</description>
+      <description>Secara default sbopkg tidak menyediakan fitur reverse dependency. Adapun untuk butuh dependency-nya apa saja bisa menggunakan sqg. Bagaimana tahu reverse dependency-nya?&#xA;Ini cara sederhana yang saya gunakan&#xA;grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan cara tersebut bisa diketahui suatu paket/package itu menjadi dependensi dari paket apa. Tapi, salah 1 dari output tersebut tidak lain adalah paket itu sendiri. Dan, package yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah packages tersebut terinstall atau tidak.</description>
     </item>
     <item>
       <title>Rilis Lumina 1.3.0</title>
       <link>https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/</link>
       <pubDate>Sun, 02 Jul 2017 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/</guid>
-      <description>Di suasana Idul Fitri, 26 Juni 2017, Ken Moore selaku project leader Lumina mengumumkan perihal rilisnya Lumina Desktop 1.3.0. Selang 4 hari kemudian dirilis patch yang pertama untuk 1.3.0. Catatan rilis resmi silahkan dibaca di sini.
-Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini tergolong istimewa. Mulai versi 1.3.0 ini lumina semakin powerfull untuk digunakan di Slackware. Sampai dengan versi 1.2.0_p1 (1.2.0 patchset 1), Restart dan Power Off pada menu sama sekali tidak berfungsi.</description>
+      <description>Di suasana Idul Fitri, 26 Juni 2017, Ken Moore selaku project leader Lumina mengumumkan perihal rilisnya Lumina Desktop 1.3.0. Selang 4 hari kemudian dirilis patch yang pertama untuk 1.3.0. Catatan rilis resmi silahkan dibaca di sini.&#xA;Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini tergolong istimewa. Mulai versi 1.3.0 ini lumina semakin powerfull untuk digunakan di Slackware. Sampai dengan versi 1.2.0_p1 (1.2.0 patchset 1), Restart dan Power Off pada menu sama sekali tidak berfungsi.</description>
     </item>
     <item>
       <title>Maleo Slackbuild</title>
       <link>https://sasongko.web.id/post/2016-10-29-maleo-slackbuild/</link>
       <pubDate>Sat, 29 Oct 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-10-29-maleo-slackbuild/</guid>
-      <description>Maleo adalah paket khas BlankOn untuk menjalankan aplikasi HTML5. Bagi pengguna Slackware yang berminat silahkan mencoba slackbuild yang saya buat di sini.
-Adapun dependensinya adalah :
-vala libwebp gnome-js-common seed </description>
+      <description>Maleo adalah paket khas BlankOn untuk menjalankan aplikasi HTML5. Bagi pengguna Slackware yang berminat silahkan mencoba slackbuild yang saya buat di sini.&#xA;Adapun dependensinya adalah :&#xA;vala libwebp gnome-js-common seed </description>
     </item>
     <item>
       <title>Upgrade Slackbuilds Slackware 14.2</title>
       <link>https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/</link>
       <pubDate>Sun, 03 Jul 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/</guid>
-      <description>Setelah melakukan [ upgrade sistem ke Slackware 14.2]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya upgrade juga paket yang diinstal dari slackbuilds.org.
-Upgrade sbopkg : sbopkg -u Versi sbopkg terbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik D Hasil unduhan : /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Setelah diunduh, upgrade : upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Karena menghasilkan konfigurasi baru, lakukan slackpkg new-config dan pilih overwrite saja. Kemudian update ke repo 14.2 : sbopkg pilih Utilities lalu Repository.</description>
+      <description>Setelah melakukan [ upgrade sistem ke Slackware 14.2]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya upgrade juga paket yang diinstal dari slackbuilds.org.&#xA;Upgrade sbopkg : sbopkg -u Versi sbopkg terbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik D Hasil unduhan : /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Setelah diunduh, upgrade : upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Karena menghasilkan konfigurasi baru, lakukan slackpkg new-config dan pilih overwrite saja. Kemudian update ke repo 14.2 : sbopkg pilih Utilities lalu Repository.</description>
     </item>
     <item>
       <title>Install sbopkg</title>
       <link>https://sasongko.web.id/post/2016-05-03-install-sbopkg/</link>
       <pubDate>Tue, 03 May 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-05-03-install-sbopkg/</guid>
-      <description>Adakalanya pengguna Slackware membutuhkan paket/aplikasi di luar yang dirilis secara resmi oleh Slackware tapi tidak mau repot install dari kode sumber (source code). SlackBuilds.org (SBo) inilah yang mewujudkannya. Di SBo tersedia ribuan paket yang dapat dijalankan dengan baik di Slackware.
-Kecuali dalam bentuk web interface SBo juga bisa dinikmati dalam bentuk command line interface yang dinamakan sbopkg. Sbopkg secara default tidak ter-install karena paket ini memang paket third party.
-Untuk install-nya mudah.</description>
+      <description>Adakalanya pengguna Slackware membutuhkan paket/aplikasi di luar yang dirilis secara resmi oleh Slackware tapi tidak mau repot install dari kode sumber (source code). SlackBuilds.org (SBo) inilah yang mewujudkannya. Di SBo tersedia ribuan paket yang dapat dijalankan dengan baik di Slackware.&#xA;Kecuali dalam bentuk web interface SBo juga bisa dinikmati dalam bentuk command line interface yang dinamakan sbopkg. Sbopkg secara default tidak ter-install karena paket ini memang paket third party.&#xA;Untuk install-nya mudah.</description>
     </item>
   </channel>
 </rss>

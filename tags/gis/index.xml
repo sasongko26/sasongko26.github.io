@@ -13,47 +13,35 @@
       <link>https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/</link>
       <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/</guid>
-      <description>Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.
-Install docker dan docker-cli QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.
-Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.</description>
+      <description>Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.&#xA;Install docker dan docker-cli QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.&#xA;Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.</description>
     </item>
     <item>
       <title>Install QGIS via flatpak</title>
       <link>https://sasongko.web.id/post/2021-09-10-install-qgis-via-flatpak/</link>
       <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-09-10-install-qgis-via-flatpak/</guid>
-      <description>QGIS adalah aplikasi sistem informasi geografis populer dan mudah digunakan. QGIS sudah ada di SBo, tetapi build-nya lama. Jadi saya install via flatpak saja.
-flatpak install --from https://flathub.org/repo/appstream/org.qgis.qgis.flatpakref Untuk menjalankannya, bisa klik dari menu atau
-flatpak run org.qgis.qgis Untuk meng-update
-flatpak update </description>
+      <description>QGIS adalah aplikasi sistem informasi geografis populer dan mudah digunakan. QGIS sudah ada di SBo, tetapi build-nya lama. Jadi saya install via flatpak saja.&#xA;flatpak install --from https://flathub.org/repo/appstream/org.qgis.qgis.flatpakref Untuk menjalankannya, bisa klik dari menu atau&#xA;flatpak run org.qgis.qgis Untuk meng-update&#xA;flatpak update </description>
     </item>
     <item>
       <title>Mengubah Nama Jalan OSM</title>
       <link>https://sasongko.web.id/post/2018-04-21-mengubah-nama-jalan-osm/</link>
       <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2018-04-21-mengubah-nama-jalan-osm/</guid>
-      <description>Ketika [menggunakan OpenStreetMap (OSM)]({% post_url 2018-04-13-cari-lokasi-osm %}) dan menjumpai ada data/informasi yang kita tahu tidak benar, kita diijinkan untuk memperbaikinya. Inilah kelebihan OSM yang bersifat open source.
-Kali ini memperbaiki kesalahan nama jalan. Jalan yang keliru penamaannya adalah Jalan Wonosari IV yang seharusnya Jalan Widosari IV. Jalan ini terletak di sebelah barat laut SMP Negeri 3 Semarang.
-Kesalahan tersebut sudah saya perbaiki, sehingga kalau Pembaca membukanya di OSM peta di atas sudah tidak berlaku.</description>
+      <description>Ketika [menggunakan OpenStreetMap (OSM)]({% post_url 2018-04-13-cari-lokasi-osm %}) dan menjumpai ada data/informasi yang kita tahu tidak benar, kita diijinkan untuk memperbaikinya. Inilah kelebihan OSM yang bersifat open source.&#xA;Kali ini memperbaiki kesalahan nama jalan. Jalan yang keliru penamaannya adalah Jalan Wonosari IV yang seharusnya Jalan Widosari IV. Jalan ini terletak di sebelah barat laut SMP Negeri 3 Semarang.&#xA;Kesalahan tersebut sudah saya perbaiki, sehingga kalau Pembaca membukanya di OSM peta di atas sudah tidak berlaku.</description>
     </item>
     <item>
       <title>Mencari Lokasi dengan OpenStreetMap</title>
       <link>https://sasongko.web.id/post/2018-04-13-cari-lokasi-osm/</link>
       <pubDate>Fri, 13 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2018-04-13-cari-lokasi-osm/</guid>
-      <description>Dari [catatan sebelumnya]({% post_url 2018-04-12-mengenal-josm %}) diketahui bahwa OSM adalah layanan peta digital. Berikut cara menggunakannya.
-Misalkan, kita akan mencari di mana SMP Negeri 3 Semarang. Pertama, pastikan komputer terhubung ke internet dan buka web OSM. Pada kotak pencarian masukkan tempat yang dicari, (yang saya beri elips merah), dalam contoh ini saya tuliskan smp negeri 3 semarang.
-Apabila ditemukan akan ditampilkan seperti di bawah ini
-Kemudian klik hasil pencarian untuk mengetahui detil lokasi.</description>
+      <description>Dari [catatan sebelumnya]({% post_url 2018-04-12-mengenal-josm %}) diketahui bahwa OSM adalah layanan peta digital. Berikut cara menggunakannya.&#xA;Misalkan, kita akan mencari di mana SMP Negeri 3 Semarang. Pertama, pastikan komputer terhubung ke internet dan buka web OSM. Pada kotak pencarian masukkan tempat yang dicari, (yang saya beri elips merah), dalam contoh ini saya tuliskan smp negeri 3 semarang.&#xA;Apabila ditemukan akan ditampilkan seperti di bawah ini&#xA;Kemudian klik hasil pencarian untuk mengetahui detil lokasi.</description>
     </item>
     <item>
       <title>Mengenal JOSM dan OpenStreetMap</title>
       <link>https://sasongko.web.id/post/2018-04-12-mengenal-josm/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2018-04-12-mengenal-josm/</guid>
-      <description>Sebenarnya sudah lama ingin menulis dengan topik Geographical Information System (GIS) tapi baru sempat sekarang.
-OSM Apakah OSM itu? OpenStreetMap (OSM) adalah salah satu layanan peta digital seperti Google Maps dan Here Maps yang dapat diakses melalui https://openstreetmap.org/ . OSM bersifat free &amp;amp; open source sehingga mempersilakan kita untuk berkontribusi secara luas, baik itu menambah/edit data maupun koreksi peta. Mengapa saya lebih suka OSM daripada layanan peta digital lainnya?
-Open source.</description>
+      <description>Sebenarnya sudah lama ingin menulis dengan topik Geographical Information System (GIS) tapi baru sempat sekarang.&#xA;OSM Apakah OSM itu? OpenStreetMap (OSM) adalah salah satu layanan peta digital seperti Google Maps dan Here Maps yang dapat diakses melalui https://openstreetmap.org/ . OSM bersifat free &amp;amp; open source sehingga mempersilakan kita untuk berkontribusi secara luas, baik itu menambah/edit data maupun koreksi peta. Mengapa saya lebih suka OSM daripada layanan peta digital lainnya?&#xA;Open source.</description>
     </item>
   </channel>
 </rss>

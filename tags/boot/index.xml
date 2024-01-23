@@ -13,16 +13,14 @@
       <link>https://sasongko.web.id/post/2023-06-02-masuk-uefi-firmware-settings-via-grub/</link>
       <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2023-06-02-masuk-uefi-firmware-settings-via-grub/</guid>
-      <description>Kadang kita perlu mengubah pengaturan pada UEFI. Pengaturan tersebut misalnya pengaturan waktu, secure boot, urutan boot dan lain sebagainya. Untuk masuk ke UEFI Firmware Settings bisa dilakukan dari grub. Yaitu dengan cara ketika menampilkan bootloader, biasanya ada jeda waktu. Manfaatkan jeda waktu tersebut dengan segera menekan tombol c untuk masuk ke grub shell, kemudian pada prompt yang disediakan ketik fwsetup.
-grub&amp;gt; fwsetup </description>
+      <description>Kadang kita perlu mengubah pengaturan pada UEFI. Pengaturan tersebut misalnya pengaturan waktu, secure boot, urutan boot dan lain sebagainya. Untuk masuk ke UEFI Firmware Settings bisa dilakukan dari grub. Yaitu dengan cara ketika menampilkan bootloader, biasanya ada jeda waktu. Manfaatkan jeda waktu tersebut dengan segera menekan tombol c untuk masuk ke grub shell, kemudian pada prompt yang disediakan ketik fwsetup.&#xA;grub&amp;gt; fwsetup </description>
     </item>
     <item>
       <title>Kenggulan elilo dibanding grub</title>
       <link>https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/</link>
       <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/</guid>
-      <description>Pascamigrasi dari elilo ke grub ada hal yang dirindukan. Zram dengan komresi zstd. Entah masalahnya di mana, zstd tidak bisa digunakan untuk zram apabila menggunakan grub. Menggunakan elilo aman damai sentosa lanjcar jaya. Padahal kernel dan initrd-nya sama.
-Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-rle. Alhamdulillah. Dengan adanya zram aktivitas komputasi di laptop dengan RAM hanya 2GB masih bisa dijalankan dengan lancar.</description>
+      <description>Pascamigrasi dari elilo ke grub ada hal yang dirindukan. Zram dengan komresi zstd. Entah masalahnya di mana, zstd tidak bisa digunakan untuk zram apabila menggunakan grub. Menggunakan elilo aman damai sentosa lanjcar jaya. Padahal kernel dan initrd-nya sama.&#xA;Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-rle. Alhamdulillah. Dengan adanya zram aktivitas komputasi di laptop dengan RAM hanya 2GB masih bisa dijalankan dengan lancar.</description>
     </item>
     <item>
       <title>Mengubah timeout grub</title>
@@ -36,59 +34,49 @@ Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-r
       <link>https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/</link>
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/</guid>
-      <description>Untuk menampilkan status penggunaan zram bisa dengan menjalankan
-# zramctl --output-all NAME DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT /dev/zram0 1G 4K 74B lzo-rle 4 0 12K 0B 12K 0B [SWAP] Berikut penjelasan masing-masing kolomnya
-NAME	zram device name DISKSIZE	limit on the uncompressed amount of data DATA	uncompressed size of stored data COMPR	compressed size of stored data ALGORITHM	the selected compression algorithm STREAMS	number of concurrent compress operations ZERO-PAGES	empty pages with no allocated memory TOTAL	all memory including allocator fragmentation and metadata overhead MEM-LIMIT	memory limit used to store compressed data MEM-USED	memory zram have been consumed to store compressed data MIGRATED	number of objects migrated by compaction MOUNTPOINT	where the device is mounted</description>
+      <description>Untuk menampilkan status penggunaan zram bisa dengan menjalankan&#xA;# zramctl --output-all NAME DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT /dev/zram0 1G 4K 74B lzo-rle 4 0 12K 0B 12K 0B [SWAP] Berikut penjelasan masing-masing kolomnya&#xA;NAME&#x9;zram device name DISKSIZE&#x9;limit on the uncompressed amount of data DATA&#x9;uncompressed size of stored data COMPR&#x9;compressed size of stored data ALGORITHM&#x9;the selected compression algorithm STREAMS&#x9;number of concurrent compress operations ZERO-PAGES&#x9;empty pages with no allocated memory TOTAL&#x9;all memory including allocator fragmentation and metadata overhead MEM-LIMIT&#x9;memory limit used to store compressed data MEM-USED&#x9;memory zram have been consumed to store compressed data MIGRATED&#x9;number of objects migrated by compaction MOUNTPOINT&#x9;where the device is mounted</description>
     </item>
     <item>
       <title>Migrasi dari elilo ke grub</title>
       <link>https://sasongko.web.id/post/2022-03-26-migrasi-elilo-ke-grub/</link>
       <pubDate>Sat, 26 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-03-26-migrasi-elilo-ke-grub/</guid>
-      <description>Aktif di-maintain pengembang merupakan salah satu kriteria preferensi software yang penulis gunakan. elilo sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. Slackware adalah distro yang masih bertahan menyediakan elilo. Terima kasih PV.
-Sejak pertama menggunakan slackware dengan sistem UEFI sekitar 2016, elilo penulis jadikan pilihan utama boot loader. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini elilo sudah tidak dikembangkan developer aslinya. Mengangkat grub sebagai suksesor elilo bukanlah hal buruk.</description>
+      <description>Aktif di-maintain pengembang merupakan salah satu kriteria preferensi software yang penulis gunakan. elilo sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. Slackware adalah distro yang masih bertahan menyediakan elilo. Terima kasih PV.&#xA;Sejak pertama menggunakan slackware dengan sistem UEFI sekitar 2016, elilo penulis jadikan pilihan utama boot loader. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini elilo sudah tidak dikembangkan developer aslinya. Mengangkat grub sebagai suksesor elilo bukanlah hal buruk.</description>
     </item>
     <item>
       <title>Mengubah boot timeout efibootmgr</title>
       <link>https://sasongko.web.id/post/2021-05-17-mengubah-boot-timeout-efibootmgr/</link>
       <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-05-17-mengubah-boot-timeout-efibootmgr/</guid>
-      <description>Untuk mengubah boot timeout efibootmgr menjadi 2 detik:
-$ efibootmgr -t 2 </description>
+      <description>Untuk mengubah boot timeout efibootmgr menjadi 2 detik:&#xA;$ efibootmgr -t 2 </description>
     </item>
     <item>
       <title>Aktivasi zram</title>
       <link>https://sasongko.web.id/post/2021-01-26-aktivasi-zram/</link>
       <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-01-26-aktivasi-zram/</guid>
-      <description>Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.
-Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan.</description>
+      <description>Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.&#xA;Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan.</description>
     </item>
     <item>
       <title>[SOLVED] Slackware Current Susah Booting dan Shutdown</title>
       <link>https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/</link>
       <pubDate>Thu, 05 May 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/</guid>
-      <description>Tiga bulan lalu saya sambat Slackware current [hang]({% post_url 2016-02-08-slackware-current-hang %}) saat booting dan shutdown. Sekarang masalah tersebut teratasi.
-Secara default laptop Asus X453MA diperuntukkan bagi pengguna Microsoft Windows. Hal ini terlihat dari web resminya yang menyediakan driver hanya untuk Windows khususnya Windows 8.1 dan Windows 10. Juga terlihat dari &amp;ldquo;paket bundling&amp;rdquo;-nya yang menyediakan Windows preinstalled.
-Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.1 oleh pihak toko. Awalnya saya pilih kosongan aja sesuai aslinya.</description>
+      <description>Tiga bulan lalu saya sambat Slackware current [hang]({% post_url 2016-02-08-slackware-current-hang %}) saat booting dan shutdown. Sekarang masalah tersebut teratasi.&#xA;Secara default laptop Asus X453MA diperuntukkan bagi pengguna Microsoft Windows. Hal ini terlihat dari web resminya yang menyediakan driver hanya untuk Windows khususnya Windows 8.1 dan Windows 10. Juga terlihat dari &amp;ldquo;paket bundling&amp;rdquo;-nya yang menyediakan Windows preinstalled.&#xA;Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.1 oleh pihak toko. Awalnya saya pilih kosongan aja sesuai aslinya.</description>
     </item>
     <item>
       <title>Mouse Stuck</title>
       <link>https://sasongko.web.id/post/2016-02-26-mouse-stuck/</link>
       <pubDate>Fri, 26 Feb 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-02-26-mouse-stuck/</guid>
-      <description>Setelah upgrade current ternyata ada masalah dengan mouse. Mouse mengalami stuck, ga ada respons saat drag, drop, bahkan ga bisa klik baik klik kiri maupun kanan. Dari grup di telegram dapat informasi dari Pak Willy hal serupa juga dialami oleh beberapa slacker yang lainnya. Alhamdulillah masalah ini bisa solved dengan mudahnya di Slackware64 saya.
-Dengan akses root copas /lib/modprobe.d/psmouse.conf ke /etc/modprobe.d. Kemudian uncomment baris terakhir.
-############################################################################## # Do not edit this file; instead, copy it to /etc/modprobe.</description>
+      <description>Setelah upgrade current ternyata ada masalah dengan mouse. Mouse mengalami stuck, ga ada respons saat drag, drop, bahkan ga bisa klik baik klik kiri maupun kanan. Dari grup di telegram dapat informasi dari Pak Willy hal serupa juga dialami oleh beberapa slacker yang lainnya. Alhamdulillah masalah ini bisa solved dengan mudahnya di Slackware64 saya.&#xA;Dengan akses root copas /lib/modprobe.d/psmouse.conf ke /etc/modprobe.d. Kemudian uncomment baris terakhir.&#xA;############################################################################## # Do not edit this file; instead, copy it to /etc/modprobe.</description>
     </item>
     <item>
       <title>Slackware Current Susah Booting dan Shutdown</title>
       <link>https://sasongko.web.id/post/2016-02-08-slackware-current-hang/</link>
       <pubDate>Mon, 08 Feb 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-02-08-slackware-current-hang/</guid>
-      <description>Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering stuck saat boot dan shutdown.
-Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis ID-Slackware, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.</description>
+      <description>Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering stuck saat boot dan shutdown.&#xA;Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis ID-Slackware, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.</description>
     </item>
   </channel>
 </rss>
