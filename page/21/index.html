@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.121.2">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,99 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-03-13-menggabungkan-file-pdf/">Menggabungkan file pdf</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Mar 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Misalkan mempunyai 2 file ebook yaitu ebook1.pdf dan ebook2.pdf. Kedua file ini akan digabung menjadi ebook.pdf. Maka untuk menggabungkannya
+$ pdfunite ebook1.pdf ebook2.pdf ebook.pdf 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/">Menambahkan tanggal toolbar blackbox</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Mar 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Masih adakah pengguna linux di Indonesia yang menggunakan blackbox sebagai window manager sehari-hari? Masih, minimal seorang yaitu yang menulis catatan ini. Hehehehe&hellip;.
+Secara default, toolbar blackbox tidak menyertakan tanggal walau menampilkan jam. Jam ditampilkan dalam format 12 jam AM/PM. Untuk menambahkannya, dan menggunakan jam format 24 jam sebagaimana lazimnya di Indonesia, diatur sebagai berikut pada ~/.blackboxrc
+session.screen0.strftimeFormat : %d/%m/%Y %H:%M Untuk menerapkan perubahan tersebut secara langsung, restart blackbox (tidak perlu restart komputer!
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/">Mengubah user agent firefox</a></h2>
 
     <div class="post-meta">
@@ -360,92 +453,6 @@ $ mount /dev/sda2 /media/hd0 Windows is hibernated, refused to mount.
 
   <p>
   Untuk resize atau mengubah ukuran window saat menggunakan blackbox caranya mudah. Arahkan pointer pada ujung kiri bawah atau kanan bawah window sampai tampilan pointer berganti menjadi sudut siku-siku dengan panah ke sudutnya. Kemudia klik dan drag sesuai keinginan seberapa ukuran windownya. Cara lain, adalah dengan mengarahkan menekan Alt klik kanan kemudian ubah ukuran windownya.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/">Menghapus file berdasarkan pencarian</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan akan menghapus semua file berekstensi .rtf di direktori /tmp. Pada direktori /tmp terdapat banyak direktori dan file lainnya. File yang akan dihapus hanya pada direktor induk, tidak termasuk subdirektorinya (maxdepth=1).
-$ find /tmp -maxdepth 1 -name *.rtf -delete 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-25-mengatur-ukuran-window-gvim-otomatis/">Mengatur ukuran window gvim</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text-editor</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  GVIm merupakan text editor legendaris. Simpel dan mudah digunakan adalah alasan utama penulis menyukainya. GVIm juga mudah di-customize. User bebas melakukan modifikasi sesuai kebutuhannya. Salah satu yang penulis butuhkan adalah ketika memulai gvim ukuran window 80x24 (80 kolom, 24 baris). Untuk mewujudkannya, perlu membuat file ~/.gvimrc isinya sebagai berikut:
-set columns=80 set lines=24 
   </p>
 
   

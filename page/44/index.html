@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.121.2">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,100 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2017-01-08-enkripsi-dg-openssl/">Enkripsi File dengan OpenSSL</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 Jan 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kriptografi">kriptografi</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
+Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssl dengan cipher rc4. File hasil enkripsi saya namai rahasia.odt yang saya taruh di fd dan fd saya mount di /media/hd0. Kemudian akan ditanya password enkripsinya.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-01-08-enkripsi-dg-openssl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2017-01-02-kbbi-qt-slackbuild/">KBBI Qt SlackBuild</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Jan 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kamus">kamus</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Alhamdulillah malam ini bisa membuat slackbuild untuk KBBI Qt. Sebenarnya sih sudah sejak kira-kira 2 bulan yang lalu ingin membuat slackbuildnya, baru kesampaian sekarang.
+KBBI Qt adalah aplikasi Kamus Besar Bahasa Indonesia (KBBI) yang dikembangkan oleh komunitas Belajar GNU/Linux Indonesia atau BGLI. Aplikasi ini dibuat dengan bahasa C++ dan framework Qt yang berlisensi GPLv3. Lisensi ini mengijinkan kita semua boleh menggunakan, memodifikasi dan menyebarluaskan aplikasi KBBI Qt.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2017-01-01-blankon-wallpapers-slackbuild/">blankon-wallpapers slackbuild</a></h2>
 
     <div class="post-meta">
@@ -369,102 +463,6 @@ I3 memiliki berkas konfigurasi /etc/i3/config.
   
   <footer>
     <a href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-12-08-scrolling-xterm/">Scrolling pada XTerm</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>08 Dec 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Di kalangan pengguna GNU/Linux mungkin xterm kurang familiar. Mengingat desktop environment populer seperti GNOME, KDE, Xfce, Mate dan LXQt telah mempunyai terminal emulator sendiri. Selain itu, xterm dianggap memiliki keterbatasan. Salah satunya adalah tidak bisa scrolling karena tidak adanya scrollbar.
-xterm memang lain daripada yang lain. Secara default memang scrollbar itu tidak terlihat, tetapi bisa dimunculkan. Tekan dan tahan Ctrl kemudian tekan dan tahan tombol tengah mouse, pilih Enable Scrollbar. Scrollbar akan tampil di sebelah kiri.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-12-08-scrolling-xterm/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-12-07-nmcli-konek-wifi/">nmcli untuk konek wifi</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Dec 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk konek internet baik itu melalui modem, LAN, maupun wifi, pengguna GNU/Linux lebih sering menggunakan network manager yang applet-nya biasanya ada di panel sebelah kanan walau sebenarnya ada cara lain seperti ifconfig dan dhcpcd. Kalau dalam mode grafis sih saya rasa tidak masalah, tapi bagaimana kalau sedang berada dalam mode teks yang jelas tidak terpampang applet network manager-nya? nmcli adalah solusinya.
-Lah, buat apa sih repot-repot mode teks? Jadul, ga modern!
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-12-07-nmcli-konek-wifi/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

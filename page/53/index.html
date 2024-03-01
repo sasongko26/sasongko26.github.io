@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.121.2">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,94 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-07-18-install-wxpython/">Install wxPython</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Jul 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  wxPython adalah salah satu toolkit untuk membuat aplikasi grafis dengan python. Untuk menginstallnya mudah, kita install saja slackbuildnya. Pastikan tersambung internet.
+wget http://slackbuilds.org/slackbuilds/14.1/libraries/wxPython.tar.gz tar xzf wxPython.tar.gz cd wxPython wget http://downloads.sourceforge.net/wxpython/wxPython-src-2.8.12.1.tar.bz2 sh wxPython.SlackBuild installpkg /tmp/wxPython-2.8.12.1-x86_64-2_SBo.tgz 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2015-07-13-install-pip/">Install pip</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Jul 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Pip akan memudahkan kita semua untuk menginstall paket-paket yang terkait dengan python.
+wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py python get-pip.py 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/">Mount Partisi Otomatis</a></h2>
 
     <div class="post-meta">
@@ -359,101 +447,6 @@ Skema partisi yang digunakan adalah GPT, bukan MBR, jadi pemartisian menggunakan
   
   <footer>
     <a href="https://sasongko.web.id/post/2015-07-11-membuat-partisi-dengan-cgdisk/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-28-konek-internet-menggunakan-pppsetup/">Konek Internet Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>28 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Di catatan yang lalu sudah pernah dibahas cara konek internet di Slackware dengan [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}). Sekarang masih tentang cara konek internet melalui modem di Slackware, hanya saja caranya berbeda. Kali ini menggunakan pppsetup yang secara default sudah dimiliki Slackware.
-Perangkat yang kami gunakan:
-laptop Asus X453MA modem USB Huawei E1550 simcard dengan internet service provider 3. Cara-cara berikut ini dijalankan oleh root.
-pppsetup Tekan enter.
-Isi phone number dengan
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-28-konek-internet-menggunakan-pppsetup/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-25-install-unrar/">Install Unrar</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Di antara file kompresi/arsip yang ada, kompresi yang tidak saya utamakan adalah rar. Simpel sih alasannya, karena secara default baik BlankOn maupun Slackware tidak meng-embed ekstraktornya :D. Harus install dulu. Pastikan tersambung internet untuk mengunduh berkas.
-Untuk BlankOn bisa install dari repo.
-$ sudo apt-get install unrar Sedangkan untuk Slackware install slackbuildnya saja.
-# cd /usr/local/src # wget http://slackbuilds.org/slackbuilds/14.1/system/unrar.tar.gz # tar xzf unrar.tgr.gz # cd unrar # wget http://www.rarlab.com/rar/unrarsrc-5.2.6.tar.gz # sh unrar.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-25-install-unrar/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

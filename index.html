@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.121.2">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,104 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/">Mengatasi Audio Tanpa Suara ES8336</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Feb 2024</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi
+Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz Memory: 11,5 GiB of RAM Graphics Processor: Mesa Intel® UHD Graphics 600 dengan audio awalnya berupa dummy output alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.
+$ aplay -l **** List of PLAYBACK Hardware Devices **** card 0: sofessx8336 [sof-essx8336], device 0: ES8336 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 5: HDMI 1 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 6: HDMI 2 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 7: HDMI 3 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2024-01-20-variabel-rust/">Variabel rust</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>20 Jan 2024</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/rust">rust</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Rust mempunyai cara tersendiri untuk mendeklarasikan variabel, yaitu dengan diawali let. Kemudian, nama variabel dituliskan dengan huruf kecil semua dengan separator pemisah antarkata adalah underscore (_). Contoh nama, kota_kelahiran, hasil_kali, dll.
+Misalkan data kota kelahiran, akan kita deklarasikan sebagai kota_kelahiran
+fn main(){ let kota_kelahiran = &#34;Jayapura&#34;; } Untuk menampilkan variabel tersebut, misalkan dengan macro println!() maka harus dengan formatted print yang mengandung string literal. String literal yang dimaksud adalah &quot;{}&quot;,
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2024-01-20-variabel-rust/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2024-01-15-sintaks-komentar-rust/">Sintaks komentar rust</a></h2>
 
     <div class="post-meta">
@@ -360,96 +458,6 @@ Compositor: labwc atau hyprland Status bar/panel : nwg-panel Gamma/night mode : 
   <footer>
     <a href="https://sasongko.web.id/post/2023-10-28-menggunakan-wayland/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-09-25-touchpad-tap-to-click/">Aktifkan Touchpad untuk Klik</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Sep 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Catatan ini sebenarnya sudah ditulis beberapa bulan yang lalu atau bahkan bertahun lalu, tetapi karena kesibukan baru sempat di-commit sekarang. Saat menggunakan wayland pertama kalinya, ada masalah. Touchpad tidak bisa digunakan untuk klik sebagai ganti klik pada mouse. Ternyata secara default memang demikian. Keunggulan linux salah satunya adalah penggunanya bebas melakukan modifikasi sesuai kemampuan dan kebutuhannya.
-Untuk membuat touchpad bisa melakukan tap sebagai klik, masuk ke Settings kemudian search touchpad. Di sini kami lebih suka menggunakan fitur search karena tidak ingat betul lokasi spesifik pengaturannya.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2023-09-25-touchpad-tap-to-click/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-08-06-for-looping-bash/">Pengulangan for pada bash</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Aug 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/bash">bash</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Bash memiliki beberapa cara untuk melakukan pengulangan (looping). Salah satunya adalah dengan for. Contoh berikut akan menampilkan angka 1 sampai dengan 10.
-for i in {1..10} do echo $i done 
-  </p>
-
   
 </article>
 

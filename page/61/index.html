@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.121.2">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,96 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/">Konversi VDI ke VMDK</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 Oct 2014</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.
+Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya
+$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% Clone hard disk created in format &#39;VMDK&#39;. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa Hardisk virtualnya sudah terkonversi.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2014-08-03-dpkg-force-overwrite/">DPKG Force Overwrite</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Aug 2014</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Alhamdulillah bertambah lagi 1 pengguna BlankOn, sahabat yang sudah saya anggap seperti saudara sendiri, memberikan kepercayaan kepada BlankOn untuk menjadi sistem operasi utama di laptop pertamanya. Dari 2 distro linux yang saya tawarkan dan telah dicobanya secara live, dia lebih memilih BlankOn 9 daripada Ubuntu 13.04. Pemasangan BlankOn lancar jaya. Karena ISO yang saya punya adalah ISO sesaat setelah rilis (saya unduh tanggal 18 Februari 2014), maka saya merasa wajib untuk memperbaruinya.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2014-08-03-dpkg-force-overwrite/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2014-09-07-video-chatting-dengan-pidgin/">Video Chatting dengan Pidgin</a></h2>
 
     <div class="post-meta">
@@ -345,95 +435,6 @@ $ gsettings set org.gnome.gedit.preferences.editor tabs-size 4
   Kemarin penulis mendapat email, “Tantangan Buat Para Blogger SEO” yang isinya Tapi, karena curiga ini penipuan, penulis cek di website resmi Toyota ternyata tidak ada informasi kompetisi atau lomba menulis tersebut. Kemudian penulis tanyakan ke Customer Support Toyota via email
 mendapatkan balasan
 Jadi, mari kita berinternet secara sehat, tidak melakukan penipuan dan waspada terhadap penipuan.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-06-23-mengenal-berkas-deb/">Mengenal Berkas .deb</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Jun 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  File atau berkas berekstensi deb adalah file paket installer debian dan turunannya. File deb adalah sejenis dengan file rpm pada keluarga redhat. Tatanama file deb
-Contoh, penulis punya file skype-debian_4.2.0.13-1_i386.deb. Tatanama ini ada 3 informasi penting yang masing-masing dipisahkan tanda underscore.
-skype-debian_4.2.0.13-1_i386.deb
-Nama paketnya skype-debian. Versinya 4.2.0.13-1. Arsitekturnya, i386 untuk 32 bit atau amd64 untuk 64 bit. Menampilkan informasi file deb Untuk mengetahui seluk beluk file deb gunakan dpkg -I
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2014-06-23-mengenal-berkas-deb/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-06-02-seminar-blankon-jaringan/">Seminar BlankOn &amp; Jaringan</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>02 Jun 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/seminar">seminar</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  
   </p>
 
   

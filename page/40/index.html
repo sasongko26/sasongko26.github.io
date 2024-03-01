@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.121.2">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,102 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2018-04-12-mengenal-josm/">Mengenal JOSM dan OpenStreetMap</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Apr 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/gis">gis</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Sebenarnya sudah lama ingin menulis dengan topik Geographical Information System (GIS) tapi baru sempat sekarang.
+OSM Apakah OSM itu? OpenStreetMap (OSM) adalah salah satu layanan peta digital seperti Google Maps dan Here Maps yang dapat diakses melalui https://openstreetmap.org/ . OSM bersifat free &amp; open source sehingga mempersilakan kita untuk berkontribusi secara luas, baik itu menambah/edit data maupun koreksi peta. Mengapa saya lebih suka OSM daripada layanan peta digital lainnya?
+Open source.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2018-04-12-mengenal-josm/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2018-04-03-slackpkg-packages-database-error/">Slackpkg packages database error</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Apr 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackpkg">slackpkg</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Siang ini, upgrade beberapa paket SBo, salah satunya adalah nodejs. Tetapi terjadi insiden di sela-sela prosesnya : lowbatt sehingga laptop mati. Kejadian ini awalnya tidak saya ketahui, karena banyak paket yang di-upgrade sehingga lama kemudian saya tinggal mengerjakan pekerjaan yang lain.
+Singkat cerita, saya ingin upgrade paket-paket official melalui slackpkg
+slackpkg upgrade-all FATAL! There is some problem in packages database or maybe an installation or upgrade in progress: nodejs-6.11.2-x86_64-1_SBo-upgraded-2018-04-03,11:12:24 If you continue you may corrupt packages database.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2018-04-03-slackpkg-packages-database-error/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2018-02-18-rename-network-interface/">Rename Network Interface</a></h2>
 
     <div class="post-meta">
@@ -366,102 +462,6 @@ Namun, saya kurang suka dengan cara otomatis ini.
   
   <footer>
     <a href="https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/">Kernel 4.14.0 Masuk -Current, Beralih ke Kernel Generic</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 Nov 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Setelah 2 minggu, -Current kembali mendapatkan update Jum&rsquo;at kemarin tanggal 17 November 2017. Banyak update, ada yang upgraded, rebuilt, added, dan removed. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.
-Setelah upgrade dan eliloconfig kemudian restart, ternyata muncul masalah! Bootloop! Loading vmlinuz&hellip; langsung reboot. Begitu seterusnya.
-Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk recovery-nya lebih mudah. Boot dari DVD kemudian waktu muncul grub pilih opsi yang intinya detect another operating system (persisnya saya lupa).
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-11-15-mengamankan-file-folder/">Mengamankan File Folder</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Nov 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Salah satu hal yang membuat saya menggunakan linux khususnya Slackware adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan . pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan steganografi tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}) atau [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}).
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2017-11-15-mengamankan-file-folder/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

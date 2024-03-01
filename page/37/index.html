@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.121.2">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,96 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2019-02-01-perl-ide-vim/">Perl IDE dengan vim</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Feb 2019</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Reputasi vim sebagai text editor sudah teruji berpuluh tahun. Ternyata Vim juga memiliki support plugin untuk perl. Hal ini membuat vim bisa dijadikan sebagai integrated development environment (IDE) untuk perl.
+Download plugin-nya kemudian extract
+$ wget https://www.vim.org/scripts/download_script.php?src_id=24473 -O perl-support.zip -O perl-support.zip $ mkdir -p .vim $ unzip perl-support.zip -d .vim Aktifkan
+$ echo &#34;filetype plugin on&#34; &gt;&gt; .vimrc 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/">Hapus Aplikasi yang Diinstall Tanggal Tertentu</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 Dec 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Tiga hari ini mencoba-coba install kdenlive, aplikasi editor video yang konon handal. Sengaja disebut konon karena belum membuktikannya secara langsung. Setelah semua beres diinstall ternyata malah berubah pikiran. Apa perlu saya pakai editor video? Toh selama ini tidak pernah edit video dan pekerjaan sehari-hari juga tidak bersentuhan langsung dengan pembuatan maupun editing video. Jadi hapus sajalah.
+kdenlive-nya sukses di-uninstall, tapi bagaimana dengan seabrek dependensinya? Hapus juga deh! Kalau besok-besok diperlukan tinggal install lagi.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2018-08-31-bermain-tetris-emacs/">Bermain Tetris dengan Emacs</a></h2>
 
     <div class="post-meta">
@@ -354,100 +444,6 @@ $ sbocheck # command ini dijalankan oleh root Unescaped left brace in regex is d
   <p>
   Iseng-iseng buka hidden folder ada yang menarik. File yang ada di Trash (bisa buka di Thunar dengan path trash:/// sama dengan yang ada di ~/.local/share/Trash/files/. Sehingga kalau ingin mengosongkan Trash dan posisi sedang di CLI dan tidak membuka file manager ataupun lagi aras-arasen, sangat bisa.
 rm -rv ~/.local/share/Trash/* 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-06-19-mencoba-manokwari/">Mencoba Manokwari</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Jun 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Beberapa waktu yang lalu mencoba install manokwari dan berhasil dengan beberapa kekurangan.
-Proses install berjalan lancar walau sempat terhambat sebentar. Apalagi kalau bukan karena dependensi. Untuk compile menggunakan meson yang disediakan Pengembang dan prosesnya lebih cepat. Oiya, ini saya hanya lakukan di slackware64-current.
-Tentang dependensi, saya bagi menjadi 3 bagian.
-Sudah terinstall secara default atau tersedia di official repo Slackware
-meson glib2 gtk+3 atk cairo x11 libnotify Tersedia di SBo
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2018-06-19-mencoba-manokwari/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-06-19-mengganti-kata-secara-massal/">Mengganti Kata Secara Massal</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Jun 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sed">sed</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Dulu, saat masih menggunakan BlankOn, ternyata pada beberapa postingan di blog ini ada ketidakseragaman, yaitu tag blankOn dan blankon yang sebenarnya secara esensial sama saja.
-Sekarang sudah diperbaiki. Kata &ldquo;blankOn&rdquo; yang ada di tiap file diganti &ldquo;blankon&rdquo;. Penggantian ini secara massal saja biar lebih praktis. Filenya di direktori _posts.
-sed -i &#39;s/blankOn/blankon/g&#39; _posts/*.md 
   </p>
 
   

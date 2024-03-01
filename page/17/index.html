@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.121.2">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,99 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-04-30-memformat-dvdrw/">Memformat dvdrw</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 Apr 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Sedang membutuhkan kepingan DVDRW kosong tapi tidak menemukannya. Yang ditemukan DVDRW yang sudah ada isinya tetapi sudah tidak berguna. Baiklah DVDRW nya disuperbersihkan saja alias diformat.
+DVDRW terdeteksi sebagai /dev/sr0
+dvd+rw-format -f /dev/sr0 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-04-12-membuat-data-acak-normal-python/">Membuat data acak berdistribusi normal</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Apr 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Catatan sebelumnya tentang bagaimana membuat data secara acak dengan python, kali ini hampir sama. Bedanya, data yang dibuat berasal dari distribusi Gaussian (distribusi normal).
+Akan dibuat data dengan besar sampel 200, mean 165, standar deviasi 12.5.
+#!/usr/bin/python3 import numpy as np sampel = 200 rerata = 165 deviasi = 12.5 data = np.random.normal(rerata, deviasi, sampel) print(data) Hasilnya
+[169.9036172 158.13190825 156.9590178 167.74827264 168.62534857 171.69140206 161.65434678 187.34374928 150.29836841 152.49471216 160.69172875 173.22405024 171.53443046 159.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-04-12-membuat-data-acak-normal-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-04-11-membuat-data-integer-acak-python/">Membuat data integer acak python</a></h2>
 
     <div class="post-meta">
@@ -358,95 +451,6 @@ bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree..
   Berapa jumlah baris dan kolom yang ada pada worksheet LibreOffice Calc? Jumlah barisnya adalah 1048576. Adapun kolom, tersedia dari A sampai AMJ (1024).
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-04-06-burning-iso-dvd/">Burn iso ke dvd</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Apr 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misal, file slackware64-live-current.iso akan di-burn ke DVD. DVD terdeteksi oleh sistem sebagai /dev/sr0. Command dijalankan root.
-$ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/">Transfer file dengan lftp</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>05 Apr 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Salah 1 akibat Work from Home a.k.a WfH adalah kapasitas storage laptop menjadi penuh. Semakin banyak file, semakin berkurang free space. Untuk menyiasatinya, ketika ada kesempatan bekerja di kantor, file-file tersebut ditransfer ke komputer kantor. Karena komputer kantor menggunakan Windows 7 yang mana saya tidak paham bagaimana cara file sharing-nya saya gunakan ftp. Mungkin karena sudah terlanjur nyaman memakai slackware, saya tidak mau ribet pengaturan ftpnya di komputer kantor. Serahkan saja ke bagian IT untuk installnya.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
