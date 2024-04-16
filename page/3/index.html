@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.121.2">
+  <meta name="generator" content="Hugo 0.123.8">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,54 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2023-07-09-memperkecil-ukuran-file-pdf/">Memperkecil ukuran file pdf</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>09 Jul 2023</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Untuk memperkecil ukuran file pdf bisa mengeksekusi
+$ ps2pdf filelama.pdf filebaru.pdf Command tersebut akan membuat ukuran filebaru.pdf merupakan filelama.pdf dengan ukuran lebih kecil. Ada opsi yang bisa diberikan yang tentunya dapat digunakan sesuai kebutuhan
+-dPDFSETTINGS=/screen untuk mendapatkan ukuran yang jauh lebih kecil dengan kualitas 72 dpi. -dPDFSETTINGS=/ebooks untuk mendapatkan ukuran lebih kecil dengan kualitas 150 dpi. -dPDFSETTINGS=/prepress untuk kualitas 300 dpi. -dPDFSETTINGS=/printer untuk kualitas printer (300 dpi). -dPDFSETTINGS=/default untuk berbagai keperluan tapi kadang ukurannya tidak beda teralu jauh dengan aslinya.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2023-07-09-memperkecil-ukuran-file-pdf/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2023-06-27-install-guest-os-qemu/">Install Guest OS Qemu</a></h2>
 
     <div class="post-meta">
@@ -393,51 +441,6 @@ $ VBoxManage convertfromraw file1.dd --format VDI file2.vdi
   KDE Plasma semakin seru setelah adanya built in window tiling. Untuk menggunakan, tekan shift sambil drag window ke bilah yang diinginkan. Untuk mengedit layout tiling pastikan Tiling Editor pada pengaturan/setting sudah enable/tercentang.
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-06-03-spdlog-build-error-basic-runtime/">spdlog build error basic runtime</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>03 Jun 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Ketika build spdlog dari SBo ditemukan error
-n file included from /tmp/SBo/spdlog-1.11.0/include/spdlog/spdlog.h:12, from /tmp/SBo/spdlog-1.11.0/include/spdlog/spdlog-inl.h:7, from /tmp/SBo/spdlog-1.11.0/src/spdlog.cpp:8: /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:111: error: ‘basic_runtime’ is not a member of ‘fmt’ 168 | nvertible&lt;T, fmt::basic_string_view&lt;Char&gt;&gt;::value || std::is_same&lt;remove_cvref_t&lt;T&gt;, fmt::basic_runtime&lt;Char&gt;&gt;::value&gt; | ^~~~~~~~~~~~~ /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:111: error: ‘basic_runtime’ is not a member of ‘fmt’ /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:125: error: template argument 2 is invalid 168 | mt::basic_string_view&lt;Char&gt;&gt;::value || std::is_same&lt;remove_cvref_t&lt;T&gt;, fmt::basic_runtime&lt;Char&gt;&gt;::value&gt; | ^~~~ /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:138: error: expected ‘{’ before ‘&gt;’ token 168 | :basic_string_view&lt;Char&gt;&gt;::value || std::is_same&lt;remove_cvref_t&lt;T&gt;, fmt::basic_runtime&lt;Char&gt;&gt;::value&gt; | ^ make[2]: *** [CMakeFiles/spdlog.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2022-06-03-spdlog-build-error-basic-runtime/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
