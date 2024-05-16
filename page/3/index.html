@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.123.8">
+  <meta name="generator" content="Hugo 0.125.7">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,49 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2023-08-03-mencari-menyalin-file/">Mencari file dan menyalinnya</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Aug 2023</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Salah satu keunggulan linux adalah mudahnya untuk melakukan otomatisasi yang dapat dilakukan dengan mengetikkan sebaris perintah. Sebagai contoh, apabila ingin melakukan pencadangan semua file tanpa melihat struktur direktorinya ke media penyimpanan eksternal bisa mengetikkan
+$ find direktori_asli -iname &#39;*&#39; -exec cp &#39;{}&#39; direktori_cadangan \; Perintah tersebut akan membuat semua file di direktori_asli berpindah ke direktori_cadangan.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2023-07-19-menggunakan-dhclient-networkmanager/">Menggunakan dhclient untuk NetworkManager</a></h2>
 
     <div class="post-meta">
@@ -404,49 +447,6 @@ $ qemu-system-x86_64 -enable-kvm -m 5120 -cdrom slackware.iso -drive file=slackw
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-06-22-convert-dd-to-vdi/">Convert dd ke vdi</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>22 Jun 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk konversi file dd/img menjadi vdi mudah. Pastikan sudah install virtualbox. Misalkan akan mengubah file1.dd menjadi file2.vdi,
-$ VBoxManage convertfromraw file1.dd --format VDI file2.vdi 
-  </p>
-
-  
-</article>
-
-  
 
   
 
@@ -455,7 +455,7 @@ $ VBoxManage convertfromraw file1.dd --format VDI file2.vdi
   
   <a href="https://sasongko.web.id/page/2/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;3 / 64&nbsp;</span>
+  <span>&nbsp;3 / 65&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/4/"><i class="fa fa-chevron-right"></i></a>
   

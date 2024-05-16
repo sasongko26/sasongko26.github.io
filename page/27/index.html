@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.123.8">
+  <meta name="generator" content="Hugo 0.125.7">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/">Pelengkap dnscrypt-proxy</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>27 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Catatan ini merupakan catatan tambahan untuk melengkapi README.Slackware pada skrip dnscrypt-proxy yang ada di SBo. Yang ada di SBo :
+Membuat grup dnscrypt dan usernya Mengkonfigurasi dns /etc/resolv.conf.head Memasukkan dnscryp-proxy ke /etc/rc.d/rc.local{,_shutdown} Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi maintainer dnscrypt-proxy tidak mengikutsertakan langkah ini. Penulis menggunakan NetworkManager, setelah check &amp; recheck, dnscrypt-proxy tidak bekerja karena file /etc/resolv.conf terkena overwrite oleh NetworkManager. Ini adalah langkah untuk memberikan imunisasi/mencegah overwrite.
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-01-26-aktivasi-zram/">Aktivasi zram</a></h2>
 
     <div class="post-meta">
@@ -425,52 +472,6 @@ tar : manajemen archive yang digunakan aalah tar c : wajib dituliskan untuk crea
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/">Mengetahui IP lokal dengan nmcli</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk mengetahui alamat ip lokal tanpa akses root dapat menggunakan nmcli
-$ nmcli wlan0: connected to Anatomi &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), CC:B0:DA:B5:3B:75, hw, mtu 1500 ip4 default inet4 192.168.120.19/24 route4 0.0.0.0/0 route4 192.168.120.0/24 route4 192.168.120.0/24 inet6 fe80::1a37:a13:b117:ff74/64 route6 fe80::/64 route6 ff00::/8 Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah
-ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74 
-  </p>
-
-  
-</article>
-
-  
 
   
 
@@ -479,7 +480,7 @@ ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74
   
   <a href="https://sasongko.web.id/page/26/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;27 / 64&nbsp;</span>
+  <span>&nbsp;27 / 65&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/28/"><i class="fa fa-chevron-right"></i></a>
   

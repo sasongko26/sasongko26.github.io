@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.123.8">
+  <meta name="generator" content="Hugo 0.125.7">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,52 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/">Memindahkan tombol minimize maximize close window fluxbox</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 May 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  Secara default tombol Minimize/Iconify, Maximize dan Close pada window fluxbox terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian
+session.screen0.titlebar.right: Minimize Maximize Close Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian
+session.screen0.titlebar.left: 
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/">Uji normalitas dengan python</a></h2>
 
     <div class="post-meta">
@@ -415,51 +461,6 @@ Akan dibuat data dengan besar sampel 200, mean 165, standar deviasi 12.5.
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-04-11-membuat-data-integer-acak-python/">Membuat data integer acak python</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Apr 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Bingung membuat data? Gampang, python dengan library numpy punya solusinya!
-Akan dibuat data acak bertipe integer (bilangan bulat). Banyaknya data 200, nilai minimal 145, maksimal 180.
-#!/usr/bin/python3 import numpy as np data = np.random.randint(size=200, low=145, high=180) print(data) Berikut datanya
-[160 147 160 177 147 149 170 149 166 153 154 156 160 165 161 154 168 173 151 145 158 148 163 178 164 166 159 159 172 147 153 170 174 159 152 170 151 159 168 167 147 156 177 168 176 151 153 146 163 156 149 145 152 173 151 162 165 164 179 173 168 172 158 177 148 177 157 150 145 164 171 166 175 164 159 158 178 173 155 162 178 171 146 145 158 151 150 151 165 166 148 168 159 175 165 173 167 178 150 173 147 161 175 158 150 150 159 168 172 159 160 165 156 150 170 175 171 174 149 175 165 168 155 179 161 162 160 146 151 172 171 179 157 171 170 157 149 147 169 151 172 148 164 169 160 158 168 163 153 154 179 163 174 172 176 166 172 166 173 179 155 158 176 151 152 157 164 175 164 165 179 177 175 164 162 164 172 152 172 154 179 162 171 162 149 149 154 163 168 163 178 179 166 166 167 156 158 155 171 148] 
-  </p>
-
-  
-</article>
-
-  
 
   
 
@@ -468,7 +469,7 @@ Akan dibuat data acak bertipe integer (bilangan bulat). Banyaknya data 200, nila
   
   <a href="https://sasongko.web.id/page/16/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;17 / 64&nbsp;</span>
+  <span>&nbsp;17 / 65&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/18/"><i class="fa fa-chevron-right"></i></a>
   
