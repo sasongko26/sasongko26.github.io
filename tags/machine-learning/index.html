@@ -7,7 +7,7 @@
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
   <meta name="generator" content="Hugo 0.125.7">
 
-  <title>Catatan Sasongko</title>
+  <title>Machine Learning &middot; Catatan Sasongko</title>
 
     
 
@@ -43,7 +43,7 @@
  
   
   <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
-    href='https://sasongko.web.id/index.xml' />
+    href='https://sasongko.web.id/tags/machine-learning/index.xml' />
   
 
   
@@ -118,7 +118,7 @@
 
     
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://sasongko.web.id/index.xml'><i
+      <a class="pure-menu-link" href='https://sasongko.web.id/tags/machine-learning/index.xml'><i
           class="fas fa-rss"></i>RSS</a>
     </li>
     
@@ -220,21 +220,20 @@
 
 
 <div class="header">
-  <h1>Catatan Sasongko</h1>
-  <h2></h2>
+  <h1>Machine Learning</h1>
 </div>
 
 <div class="content">
   
     <article>
   <header>
-    <h2><a href="https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/">Menggunakan WGet Linux Download Manager</a></h2>
+    <h2><a href="https://sasongko.web.id/post/2024-05-20-klasifikasi-decision-tree-sklearn/">Klasifikasi decision tree dengan sklearn</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Mar 2014</time>
+    <time>20 May 2024</time>
   </div>
 
   
@@ -249,11 +248,9 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/internet-download-manager">internet download manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/machine-learning">machine learning</a>
     
   </div>
   
@@ -265,125 +262,18 @@
   </header>
 
   <p>
-  Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume. Cara menggunakannya mudah.
-$ wget [url] untuk mem-pause download tekan Ctrl+C. Dan untuk melanjutkan kembali tambahkan opsi -c.
-$ wget [url] -c Untuk lebih lengkapnya tentang wget ada di manual wget.
-$ wget -h GNU Wget 1.15, adalah sebuah non-interaktif network retriever.
+  Machine learning belakangan ini semakin populer. Salah satu yang bisa dilakukan dengan machine learning adalah klasifikasi. Ada beberapa metode klasifikasi. Kali ini akan melakukan klasifikasi dengan cara decision tree supervised learning.
+Skenario klasifikasi yang akan kita lakukan adalah menentukan jenis (label) bunga iris berdasarkan kriteria (atribut) yang diberikan. Jenis bunga irisnya adalah iris setosa, iris versicolor dan iris virginica. Adapun kriterianya berdasarkan panjang sepal, lebar sepal, panjang petal dan lebar petal.
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2024-05-20-klasifikasi-decision-tree-sklearn/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-03-01-disable-automount/">Disable Automount BlankOn 9 Suroboyo</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Mar 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Walaupun diturunkan dari debian, BlankOn Suroboyo berbeda dengan debian karena pada Suroboyo secara default akan secara otomatis membuka media simpan (flashdisk misalnya) setelah media disambungkan ke komputer/laptop. Fitur ini dinamakan automount-open media yang agak mirip dengan autorun pada windows. Beberapa orang mungkin merasa terganggu dan ingin mematikan. Atau sebaliknya, pengguna debian justru ingin mengaktifkan fitur ini. Bagaimana cara mengaturnya?
-$ gsettings set org.gnome.desktop.media-handling automount false $ gsettings set org.gnome.desktop.media-handling automount-open false Atau untuk tampilan grafisnya gunakan dconf-editor / penyunting dconf yang mana harus install dulu, sedangkan debian tidak usah karena dconf-editor sudah terpasang.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2014-03-01-disable-automount/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2013-11-10-definisi-komputer-forensik/">Definisi Komputer Forensik</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Nov 2013</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Digital forensik atau Computer forensic adalah serangkaian metodologi yang digunakan dalam melakukan akuisisi (imaging), pengumpulan, analisa, serta presentasi bukti digital. Bukti digital mencakup setiap informasi elektronik yang disimpan atau diolah menggunakan teknologi komputer sehingga dapat digunakan untuk mendukung atau menolak tentang bagaimana sebuah insiden atau tindakan pelanggaran hukum terjadi. Karena keterlibatan proses computer forensic adalah setelah terjadinya suatu insiden maka metodologi yang tepat sangat diperlukan untuk mempercepat proses investigasi serta mendapatkan bukti-bukti digital yang akurat.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2013-11-10-definisi-komputer-forensik/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-
-  
-
-
-<nav class="pagination" role="pagination">
-  
-  <a href="https://sasongko.web.id/page/64/"><i class="fa fa-chevron-left"></i></a>
-  
-  <span>&nbsp;65 / 65&nbsp;</span>
-  
-  <i class="fa fa-chevron-right"></i>
-  
-</nav>
-
-
-
 </div>
 
 </div>
@@ -413,4 +303,3 @@ $ gsettings set org.gnome.desktop.media-handling automount false $ gsettings set
 
 </body>
 </html>
-
