@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.125.7">
+  <meta name="generator" content="Hugo 0.128.2">
 
   <title>Office &middot; Catatan Sasongko</title>
 
@@ -655,7 +655,7 @@ convert file-gambar.jpg dokumen.pdf
 
   <p>
   LibreOffice sudah lama mendukung konversi file dari Word/Writer (doc, docx dan odt) ke file pdf. Keunggulannya adalah bisa melakukan konversi secara massal.
-Misalkan, dipunyai 1000 file docx yang tersimpan di ~/Documents. Masing-masing file ini akan dikonversi menjadi pdf di ~/convert.
+Misalkan, dipunyai 1000 file docx yang tersimpan di /Documents. Masing-masing file ini akan dikonversi menjadi pdf di /convert.
 $ soffice --headless --nologo --convert-to pdf:writer_pdf_Export --outdir ~/convert Documents/*.docx Opsi &ndash;headless &ndash;nologo diberikan agar lebih cepat, lebih hemat waktu, karena tidak menampilkan splash screen.
   </p>
 
