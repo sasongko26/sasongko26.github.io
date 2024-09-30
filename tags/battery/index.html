@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Battery &middot; Catatan Sasongko</title>
 
@@ -264,8 +264,8 @@
   </header>
 
   <p>
-  Mode tty di sini maksudnya adalah mode yang hanya ada teks. Mode inilah yang aktif setelah masuk runlevel 3 sebelum masuk ke lingkungan X maupun wayland.
-Mungkin, ketika sedang melakukan maintenance dalam mode tty, tanpa terasa sudah menghabiskan waktu berjam-jam. Daya yang ada, seperti kecerahan layar, bisa terbuang percuma. Apalagi paparan layar yang terlalu cerah dalam durasi lama berpotensi mengganggu kesehatan. Eksekusi redshift di tty adalah solusi yang layak dipertimbangkan. Berikut adalah command-nya
+  <p>Mode <strong>tty</strong> di sini maksudnya adalah mode yang hanya ada teks. Mode inilah yang aktif setelah masuk <em>runlevel</em> 3 sebelum masuk ke lingkungan <strong>X</strong> maupun <strong>wayland</strong>.</p>
+<p>Mungkin, ketika sedang melakukan <em>maintenance</em> dalam mode tty, tanpa terasa sudah menghabiskan waktu berjam-jam. Daya yang ada, seperti kecerahan layar, bisa terbuang percuma. Apalagi paparan layar yang terlalu cerah dalam durasi lama berpotensi mengganggu kesehatan. Eksekusi <strong>redshift</strong> di tty adalah solusi yang layak dipertimbangkan. Berikut adalah <em>command</em>-nya</p>
   </p>
 
   
@@ -315,8 +315,8 @@ Mungkin, ketika sedang melakukan maintenance dalam mode tty, tanpa terasa sudah 
   </header>
 
   <p>
-  Beberapa bulan ini mata menjadi lebih cepat lelah apabila malam-malam berlama-lama menatap monitor. Padahal backlight/brightness sudah diset 15%. Mungkin karena faktor U dan pagi/siang sebelumnya sudah memandangi layar komputer. Maka, jadilah penulis menginstal redshift untuk &ldquo;memerah/kuningkan brightness monitor.
-Redshift tersedia di SBo, sehingga bisa diinstal dengan mudah melalui sbotools, sbopkg, sboui, slpkg, atau yang lainnya.
+  <p>Beberapa bulan ini mata menjadi lebih cepat lelah apabila malam-malam berlama-lama menatap monitor. Padahal <em>backlight/brightness</em> sudah diset 15%. Mungkin karena faktor U dan pagi/siang sebelumnya sudah memandangi layar komputer. Maka, jadilah penulis menginstal <strong>redshift</strong> untuk &ldquo;memerah/kuningkan <em>brightness</em> monitor.</p>
+<p><strong>Redshift</strong> tersedia di SBo, sehingga bisa diinstal dengan mudah melalui <em>sbotools, sbopkg, sboui, slpkg,</em> atau yang lainnya.</p>
   </p>
 
   
@@ -362,8 +362,8 @@ Redshift tersedia di SBo, sehingga bisa diinstal dengan mudah melalui sbotools, 
   </header>
 
   <p>
-  Mengecek kondisi baterai laptop melalui terminal atau command line interface sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara default sudah menyertakan desktop environment seperti xfce, kde, mate, cinnamon, budgie, lumina dan manokwari dengan interface yang cantik dan menarik. DE tersebut sudah mempunyai power manager lengkap dengan applet-nya yang tak pernah bosan nempel di panel.
-Bagaimana kalau &lsquo;hanya&rsquo; menggunakan window manager seperti GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm atau ratpoison yang tidak mempunyai power manager sendiri?
+  <p>Mengecek kondisi baterai laptop melalui terminal atau <em>command line interface</em> sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara <em>default</em> sudah menyertakan <em>desktop environment</em> seperti <strong>xfce, kde, mate, cinnamon, budgie, lumina</strong> dan <strong>manokwari</strong> dengan <em>interface</em> yang cantik dan menarik. DE tersebut sudah mempunyai <em>power manager</em> lengkap dengan <em>applet</em>-nya yang tak pernah bosan nempel di panel.</p>
+<p>Bagaimana kalau &lsquo;hanya&rsquo; menggunakan <em>window manager</em> seperti <strong>GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm</strong> atau <strong>ratpoison</strong> yang tidak mempunyai <em>power manager</em> sendiri? Melalui terminal lah jawabannya. Di sini digunakan <strong>upower</strong> yang secara default ada di <strong>Slackware</strong></p>
   </p>
 
   
@@ -411,8 +411,8 @@ Bagaimana kalau &lsquo;hanya&rsquo; menggunakan window manager seperti GNUStep W
   </header>
 
   <p>
-  Salah satu keistimewaan i3 atau i3wm adalah belum adanya notifikasi/pemberitahuan saat baterai lemah perlu di-charge. Status baterai sudah ada di bar/panel yang ditampilkan oleh i3status.
-Berikut adalah script sederhana untuk menampilkan notifikasi saat baterai sedang lemah dan tidak sedang di-charge. Jika baterai telah mencapai batas (di sini saya gunakan 5%) maka setiap 30 detik akan tampil notifikasi untuk segera dilakukan charging Wayahe dicas bro&hellip;.!. Dan ketika baterai sudah terisi full 100% tetapi masih dalam kondisi dicas akan tampil notifikasi tiap 30 detik bahwa baterai sudah full.
+  <p>Salah satu keistimewaan <!-- raw HTML omitted -->i3<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->i3wm<!-- raw HTML omitted --> adalah belum adanya notifikasi/pemberitahuan saat baterai lemah perlu di-<em>charge</em>. Status baterai sudah ada di bar/panel yang ditampilkan oleh <!-- raw HTML omitted -->i3status<!-- raw HTML omitted -->.</p>
+<p>Berikut adalah <em>script</em> sederhana untuk menampilkan notifikasi saat baterai sedang lemah dan tidak sedang di-<em>charge</em>. Jika baterai telah mencapai batas (di sini saya gunakan 5%) maka setiap 30 detik akan tampil notifikasi untuk segera dilakukan <em>charging</em> <!-- raw HTML omitted -->Wayahe dicas bro&hellip;.!<!-- raw HTML omitted -->. Dan ketika baterai sudah terisi full 100% tetapi masih dalam kondisi dicas akan tampil notifikasi tiap 30 detik bahwa baterai sudah full.</p>
   </p>
 
   
@@ -462,9 +462,8 @@ Berikut adalah script sederhana untuk menampilkan notifikasi saat baterai sedang
   </header>
 
   <p>
-  Beberapa hari yang lalu install i3 (i3wm) menggunakan sbopkg. Biasanya, dengan desktop environment lain seperti Mate, baterai bisa bertahan 4 - 6 jam. Namun, dengan i3 belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.
-Cek powertop ternyata banyak yang Bad seperti default-nya tanpa TLP. Padahal service TLP saat booting jalan, Tunable di powertop hanya 1 yang Bad lainnya Good semua.
-I3 memiliki berkas konfigurasi /etc/i3/config.
+  <p>Beberapa hari yang lalu install <!-- raw HTML omitted -->i3 (i3wm)<!-- raw HTML omitted --> menggunakan <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->. Biasanya, dengan <em>desktop environment</em> lain seperti <em>Mate</em>, baterai bisa bertahan 4 - 6 jam. Namun, dengan <em>i3</em> belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.</p>
+<p>Cek <!-- raw HTML omitted -->powertop<!-- raw HTML omitted --> ternyata banyak yang <strong>Bad</strong> seperti <em>default</em>-nya tanpa TLP. Padahal <em>service</em> TLP saat <em>booting</em> jalan, <em>Tunable</em> di <!-- raw HTML omitted -->powertop<!-- raw HTML omitted --> hanya 1 yang <strong>Bad</strong> lainnya <strong>Good</strong> semua.</p>
   </p>
 
   

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/">Mengenal objek R factor</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>22 May 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Factor adalah representasi data kategorik. Factor bisa dibuat dengan fungsi <!-- raw HTML omitted -->factor()<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->cut()<!-- raw HTML omitted -->. Saya lebih sering menggunakan <!-- raw HTML omitted -->cut()<!-- raw HTML omitted --> karena lebih aplikatif saat akan mengubah skala data dari rasio atau interval ke ordinal.</p>
+<p>Contoh, bmi adalah data <em>body mass index</em> (BMI) atau indeks massa tubuh (IMT). Klasifikasi IMT ada 4 macam, yaitu</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/">Edit volume suara</a></h2>
 
     <div class="post-meta">
@@ -261,9 +308,11 @@
   </header>
 
   <p>
-  Editing kali ini adalah bagaimana mengubah volume default audio/suara menggunakan ffmpeg. Misal, file yang akan diinput/diedit adalah video.mp4. Karena suaranya terlalu pelan, akan dinaikkan menjadi 5x semula melalui filter audio. File hasil editan diberi nama video-louder.webm.
-ffmpeg -i video.mp4 -filter:a &#34;volume=5&#34; video-louder.webm Apabila suara terlalu nyaring bisa dipelankan. Berikut akan dipelankan menjadi setengahnya dari volume semula dan file baru diberi nama new.webm
-ffmpeg -i video.mp4 -filter:a &#34;volume=0.5&#34; new.webm Atau, dengan menuliskan volume suaranya secara langsung.
+  <p><em>Editing</em> kali ini adalah bagaimana mengubah volume default audio/suara menggunakan <strong>ffmpeg</strong>. Misal, file yang akan diinput/diedit adalah video.mp4. Karena suaranya terlalu pelan, akan dinaikkan menjadi 5x semula melalui filter audio. File hasil editan diberi nama video-louder.webm.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i video.mp4 -filter:a <span style="color:#e6db74">&#34;volume=5&#34;</span> video-louder.webm
+</span></span></code></pre></div><p>Apabila suara terlalu nyaring bisa dipelankan. Berikut akan dipelankan menjadi setengahnya dari volume semula dan file baru diberi nama new.webm</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i video.mp4 -filter:a <span style="color:#e6db74">&#34;volume=0.5&#34;</span> new.webm
+</span></span></code></pre></div><p>Atau, dengan menuliskan volume suaranya secara langsung. Default aslinya 256. Misalkan akan dinaikkan menjadi 300 kemudian disimpan sebagai anyar.mkv</p>
   </p>
 
   
@@ -309,8 +358,9 @@ ffmpeg -i video.mp4 -filter:a &#34;volume=0.5&#34; new.webm Atau, dengan menulis
   </header>
 
   <p>
-  Untuk menjadikan file jpg ke pdf caranya mudah. Misalkan file-gambar.jpg akan diubah menjadi pdf dengan nama dokumen.pdf
-convert file-gambar.jpg dokumen.pdf 
+  <p>Untuk menjadikan file jpg ke pdf caranya mudah. Misalkan file-gambar.jpg akan diubah menjadi pdf dengan nama dokumen.pdf</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>convert file-gambar.jpg dokumen.pdf
+</span></span></code></pre></div>
   </p>
 
   
@@ -352,8 +402,11 @@ convert file-gambar.jpg dokumen.pdf
   </header>
 
   <p>
-  Menggunakan linux terutama slackware membuat pekerjaan lebih ringan dan efisien. Suatu ketika diberikan sebuah file terkompresi zip yang misterius. Misterius karena ukurannya besar dan konon kata empunya file tersebut ngehang saat akan dibuka di komputer dengan sistem bukan slackware juga bukan linux. Dan ketika dibuka di slackware ketahuanlah nama &ldquo;penduduk&rdquo; zip tersebut.
-zip -sf namafile.zip # atau less namafile.zip 
+  <p>Menggunakan linux terutama <strong>slackware</strong> membuat pekerjaan lebih ringan dan efisien. Suatu ketika diberikan sebuah file terkompresi zip yang misterius. Misterius karena ukurannya besar dan konon kata empunya file tersebut <em>ngehang</em> saat akan dibuka di komputer dengan sistem <strong>bukan slackware</strong> juga <strong>bukan linux</strong>. Dan ketika dibuka di <strong>slackware</strong> ketahuanlah nama &ldquo;penduduk&rdquo; zip tersebut.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zip -sf namafile.zip
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># atau</span>
+</span></span><span style="display:flex;"><span>less namafile.zip
+</span></span></code></pre></div>
   </p>
 
   
@@ -395,58 +448,11 @@ zip -sf namafile.zip # atau less namafile.zip
   </header>
 
   <p>
-  Misalkan, kita akan mencuplik sebagian (trimming) video video-asli.mp4 dari menit ke 57 lebih 34 detik sampai durasi ke 1 jam 2 menit 5 detik. Fila hasil trimming adalah cuplikan.mp4
-ffmpeg -i video-asli.mp4 -ss 00:57:34 -to 01:02:05 -c copy cuplikan.mp4 
+  <p>Misalkan, kita akan mencuplik sebagian (<em>trimming</em>) video video-asli.mp4 dari menit ke 57 lebih 34 detik sampai durasi ke 1 jam 2 menit 5 detik. Fila hasil <em>trimming</em> adalah cuplikan.mp4</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i video-asli.mp4 -ss 00:57:34 -to 01:02:05 -c copy cuplikan.mp4
+</span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">Mengenal Objek R Vector</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 Apr 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.
-Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.
-Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -459,7 +465,7 @@ Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini ber
   
   <a href="https://sasongko.web.id/page/33/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;34 / 65&nbsp;</span>
+  <span>&nbsp;34 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/35/"><i class="fa fa-chevron-right"></i></a>
   

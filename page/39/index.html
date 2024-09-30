@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,51 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2018-08-31-bermain-tetris-emacs/">Bermain Tetris dengan Emacs</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>31 Aug 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/game">game</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p><em>Emacs</em> sebagai <em>text editor</em> legendaris mempunyai banyak fitur. Salah satunya adalah <strong>tetris</strong>. Sebagai penggemar tetris tentunya belum afdhal kalau belum memainkannya.</p>
+<p><strong>Tetris</strong> bisa dimainkan dari <strong>Emacs</strong> pada <em>menu bar</em> klik <em>Tools</em> &gt; <em>Games</em> &gt; <em>Tetris</em></p>
+<p><img src="https://sasongko.web.id/gambar/tetris-emacs.png" alt=""></p>
+<p>Untuk memainkannya tekan tombol <!-- raw HTML omitted -->P<!-- raw HTML omitted --> untuk <em>pause</em> dan melanjutkannya, panah kanan-kiri untuk menggeser, panah bawah untuk mempercepat dan panah atas untuk merotasi atau mengubah bentuk.</p>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/">Fix sbotools Perl unescaped left brace in regex is deprecated here</a></h2>
 
     <div class="post-meta">
@@ -261,8 +306,10 @@
   </header>
 
   <p>
-  Siang ini, sudah agak lama tidak check update paket-paket dari SBo. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.
-$ sbocheck # command ini dijalankan oleh root Unescaped left brace in regex is deprecated here (and will be fatal in Perl 5.32), passed through in regex; marked by &lt;-- HERE in m/\$({ &lt;-- HERE |)[A-Za-z0-9_]+(}|)/ at /usr/share/perl5/SBO/Lib/Build.pm line 244 Ada masalah ternyata dan masalahnya di Perl.
+  <p>Siang ini, sudah agak lama tidak <em>check update</em> paket-paket dari <a href="http://slackbuilds.org">SBo</a>. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sbocheck <span style="color:#75715e"># command ini dijalankan oleh root</span>
+</span></span><span style="display:flex;"><span>Unescaped left brace in regex is deprecated here <span style="color:#f92672">(</span>and will be fatal in Perl 5.32<span style="color:#f92672">)</span>, passed through in regex; marked by &lt;-- HERE in m/<span style="color:#ae81ff">\$</span><span style="color:#f92672">({</span> &lt;-- HERE |<span style="color:#f92672">)[</span>A-Za-z0-9_<span style="color:#f92672">]</span>+<span style="color:#f92672">(}</span>|<span style="color:#f92672">)</span>/ at /usr/share/perl5/SBO/Lib/Build.pm line <span style="color:#ae81ff">244</span>
+</span></span></code></pre></div><p>Ada masalah ternyata dan masalahnya di <a href="http://sasongko.web.id/tags/#perl">Perl</a>. Simpel sih solusinya. Buka file <!-- raw HTML omitted -->/usr/share/perl5/SBO/Lib/Build.pm<!-- raw HTML omitted -->, pada <em>line</em> 244 karakter { diganti {</p>
   </p>
 
   
@@ -308,8 +355,9 @@ $ sbocheck # command ini dijalankan oleh root Unescaped left brace in regex is d
   </header>
 
   <p>
-  Iseng-iseng buka hidden folder ada yang menarik. File yang ada di Trash (bisa buka di Thunar dengan path trash:/// sama dengan yang ada di ~/.local/share/Trash/files/. Sehingga kalau ingin mengosongkan Trash dan posisi sedang di CLI dan tidak membuka file manager ataupun lagi aras-arasen, sangat bisa.
-rm -rv ~/.local/share/Trash/* 
+  <p>Iseng-iseng buka <em>hidden folder</em> ada yang menarik. File yang ada di <strong>Trash</strong> (bisa buka di <strong>Thunar</strong> dengan path <!-- raw HTML omitted -->trash:///<!-- raw HTML omitted --> sama dengan yang ada di <!-- raw HTML omitted -->~/.local/share/Trash/files/<!-- raw HTML omitted -->. Sehingga kalau ingin mengosongkan <strong>Trash</strong> dan posisi sedang di CLI dan tidak membuka <strong>file manager</strong> ataupun lagi <em>aras-arasen</em>, sangat bisa.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -rv ~/.local/share/Trash/*
+</span></span></code></pre></div>
   </p>
 
   
@@ -351,11 +399,24 @@ rm -rv ~/.local/share/Trash/*
   </header>
 
   <p>
-  Beberapa waktu yang lalu mencoba install manokwari dan berhasil dengan beberapa kekurangan.
-Proses install berjalan lancar walau sempat terhambat sebentar. Apalagi kalau bukan karena dependensi. Untuk compile menggunakan meson yang disediakan Pengembang dan prosesnya lebih cepat. Oiya, ini saya hanya lakukan di slackware64-current.
-Tentang dependensi, saya bagi menjadi 3 bagian.
-Sudah terinstall secara default atau tersedia di official repo Slackware
-meson glib2 gtk+3 atk cairo x11 libnotify Tersedia di SBo
+  <p>Beberapa waktu yang lalu mencoba install <a href="http://manokwari.blankonlinux.or.id"><strong>manokwari</strong></a> dan berhasil dengan beberapa kekurangan.</p>
+<p>Proses install berjalan lancar walau sempat terhambat sebentar. Apalagi kalau bukan karena dependensi. Untuk <em>compile</em> menggunakan <!-- raw HTML omitted -->meson<!-- raw HTML omitted --> yang disediakan Pengembang dan prosesnya lebih cepat. Oiya, ini saya hanya lakukan di slackware64-current.</p>
+<p>Tentang dependensi, saya bagi menjadi 3 bagian.</p>
+<ol>
+<li>
+<p>Sudah terinstall secara default atau tersedia di <em>official repo</em> Slackware</p>
+<ul>
+<li>meson</li>
+<li>glib2</li>
+<li>gtk+3</li>
+<li>atk</li>
+<li>cairo</li>
+<li>x11</li>
+<li>libnotify</li>
+</ul>
+</li>
+<li>
+<p>Tersedia di SBo</p>
   </p>
 
   
@@ -401,62 +462,12 @@ meson glib2 gtk+3 atk cairo x11 libnotify Tersedia di SBo
   </header>
 
   <p>
-  Dulu, saat masih menggunakan BlankOn, ternyata pada beberapa postingan di blog ini ada ketidakseragaman, yaitu tag blankOn dan blankon yang sebenarnya secara esensial sama saja.
-Sekarang sudah diperbaiki. Kata &ldquo;blankOn&rdquo; yang ada di tiap file diganti &ldquo;blankon&rdquo;. Penggantian ini secara massal saja biar lebih praktis. Filenya di direktori _posts.
-sed -i &#39;s/blankOn/blankon/g&#39; _posts/*.md 
+  <p>Dulu, saat masih menggunakan BlankOn, ternyata pada beberapa postingan di blog ini ada ketidakseragaman, yaitu tag <strong>blankOn</strong> dan <strong>blankon</strong> yang sebenarnya secara esensial sama saja.</p>
+<p>Sekarang sudah diperbaiki. Kata &ldquo;blankOn&rdquo; yang ada di tiap file diganti &ldquo;blankon&rdquo;. Penggantian ini secara massal saja biar lebih praktis. Filenya di direktori _posts.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;s/blankOn/blankon/g&#39;</span> _posts/*.md
+</span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/">Pentingnya Shebang</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 Jun 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Shebang itu apa? Pengguna linux, BSD, ataupun mac yang terbiasa melihat source code sangat mungkin sudah tidak asing lagi dengan shebang. Ada yang menyebut shebang sebagai sh bang, shabang, hashbang, hashpling, dan poundbang. Shebang ini dituliskan di baris pertama, yakni diawali dengan #!.
-Contoh, untuk perl :
-#!/usr/bin/perl atau
-#!/usr/bin/env perl Sebagai pengguna linux khususnya Slackware, user akan merasakan betapa pentingnya shebang ini. Kepentingannya terkait fungsi shebang itu sendiri dan bagaimana user menjalankannya.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -469,7 +480,7 @@ Contoh, untuk perl :
   
   <a href="https://sasongko.web.id/page/38/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;39 / 65&nbsp;</span>
+  <span>&nbsp;39 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/40/"><i class="fa fa-chevron-right"></i></a>
   

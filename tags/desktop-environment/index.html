@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Desktop-Environment &middot; Catatan Sasongko</title>
 
@@ -260,9 +260,15 @@
   </header>
 
   <p>
-  Wayland digadang-gadang sebagai suksesor Xorg/X11. GNOME dan Fedora sudah memutuskan tidak lagi menggunakan X11 untuk rilis berikutnya. Proyek-proyek opensource terkait wayland bermunculan.
-Berikut adalah yang kami gunakan ketika berkomputasi dengan wayland:
-Compositor: labwc atau hyprland Status bar/panel : nwg-panel Gamma/night mode : wlsunset Screenlocker : swaylock dan swayidle Bukankah KDE Plasma juga mendukung wayland, mengapa tidak digunakan? Kami lebih suka menggunakan wayland berbasis wlroot, sedangkan KDE Plasma masih berbasis dbus. Mengapa menggunakan wlroot?
+  <p><em>Wayland</em> digadang-gadang sebagai suksesor Xorg/X11. <strong>GNOME</strong> dan <strong>Fedora</strong> sudah memutuskan tidak lagi menggunakan X11 untuk rilis berikutnya. Proyek-proyek <em>opensource</em> terkait <em>wayland</em> bermunculan.</p>
+<p>Berikut adalah yang kami gunakan ketika berkomputasi dengan <em>wayland</em>:</p>
+<ol>
+<li>Compositor: <em>labwc</em> atau <em>hyprland</em></li>
+<li>Status bar/panel : <em>nwg-panel</em></li>
+<li>Gamma/night mode : <em>wlsunset</em></li>
+<li>Screenlocker : <em>swaylock</em> dan <em>swayidle</em></li>
+</ol>
+<p>Bukankah KDE Plasma juga mendukung <em>wayland</em>, mengapa tidak digunakan? Kami lebih suka menggunakan <em>wayland</em> berbasis <em>wlroot</em>, sedangkan KDE Plasma masih berbasis <em>dbus</em>. Mengapa menggunakan <em>wlroot</em>? Ya karena sedang menginginkannya saja.</p>
   </p>
 
   
@@ -308,7 +314,7 @@ Compositor: labwc atau hyprland Status bar/panel : nwg-panel Gamma/night mode : 
   </header>
 
   <p>
-  KDE Plasma semakin seru setelah adanya built in window tiling. Untuk menggunakan, tekan shift sambil drag window ke bilah yang diinginkan. Untuk mengedit layout tiling pastikan Tiling Editor pada pengaturan/setting sudah enable/tercentang.
+  <p>KDE Plasma semakin seru setelah adanya <em>built in window tiling</em>. Untuk menggunakan, tekan shift sambil <em>drag</em> <em>window</em> ke bilah yang diinginkan. Untuk mengedit layout tiling pastikan <em>Tiling Editor</em> pada pengaturan/setting sudah <em>enable</em>/tercentang.</p>
   </p>
 
   
@@ -352,9 +358,10 @@ Compositor: labwc atau hyprland Status bar/panel : nwg-panel Gamma/night mode : 
   </header>
 
   <p>
-  Secara default, window manager yang digunakan xfce adalah xfwm4. Tetapi, ini bisa diganti menjadi window manager lain seperti fluxbox ataupun marco milik mate.
-Kali ini kita akan ganti xfwm4 dengan marco. Caranya, membuat startup baru berisikan command
-$ /usr/bin/marco --replace 
+  <p>Secara <em>default, window manager</em> yang digunakan xfce adalah xfwm4. Tetapi, ini bisa diganti menjadi <em>window manager</em> lain seperti <strong>fluxbox</strong> ataupun <strong>marco</strong> milik <strong>mate</strong>.</p>
+<p>Kali ini kita akan ganti <strong>xfwm4</strong> dengan <strong>marco</strong>. Caranya, membuat <strong>startup</strong> baru berisikan <em>command</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ /usr/bin/marco --replace
+</span></span></code></pre></div>
   </p>
 
   
@@ -398,9 +405,11 @@ $ /usr/bin/marco --replace
   </header>
 
   <p>
-  Secara default tombol Minimize/Iconify, Maximize dan Close pada window fluxbox terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian
-session.screen0.titlebar.right: Minimize Maximize Close Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian
-session.screen0.titlebar.left: 
+  <p>Secara <em>default</em> tombol Minimize/Iconify, Maximize dan Close pada window <strong>fluxbox</strong> terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>session.screen0.titlebar.right: Minimize Maximize Close
+</span></span></code></pre></div><p>Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>session.screen0.titlebar.left:
+</span></span></code></pre></div>
   </p>
 
   
@@ -446,8 +455,10 @@ session.screen0.titlebar.left:
   </header>
 
   <p>
-  Masalah security saat penggunaan desktop environment mate adalah adanya recent documents pada menu. Ini terletak pada menu di bagian bawah menu Places. Bagi user yang concern dengan privasi dan menghendaki untuk menonaktifkannya alih-alih membersihkannya &ldquo;setiap saat&rdquo;,
-$ echo &#34;&#34; &gt; ~/.local/share/recently-used.xbel $ chattr -i ~/.local/share/recently-used.xbel # dijalankan oleh root 
+  <p>Masalah <em>security</em> saat penggunaan <em>desktop environment</em> <strong>mate</strong> adalah adanya <strong>recent documents</strong> pada menu. Ini terletak pada menu di bagian bawah menu <strong>Places</strong>. Bagi <em>user</em> yang <em>concern</em> dengan privasi dan menghendaki untuk menonaktifkannya alih-alih membersihkannya &ldquo;setiap saat&rdquo;,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;&#34;</span> &gt; ~/.local/share/recently-used.xbel 
+</span></span><span style="display:flex;"><span>$ chattr -i ~/.local/share/recently-used.xbel <span style="color:#75715e"># dijalankan oleh root</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -493,8 +504,8 @@ $ echo &#34;&#34; &gt; ~/.local/share/recently-used.xbel $ chattr -i ~/.local/sh
   </header>
 
   <p>
-  Beberapa bulan ini mata menjadi lebih cepat lelah apabila malam-malam berlama-lama menatap monitor. Padahal backlight/brightness sudah diset 15%. Mungkin karena faktor U dan pagi/siang sebelumnya sudah memandangi layar komputer. Maka, jadilah penulis menginstal redshift untuk &ldquo;memerah/kuningkan brightness monitor.
-Redshift tersedia di SBo, sehingga bisa diinstal dengan mudah melalui sbotools, sbopkg, sboui, slpkg, atau yang lainnya.
+  <p>Beberapa bulan ini mata menjadi lebih cepat lelah apabila malam-malam berlama-lama menatap monitor. Padahal <em>backlight/brightness</em> sudah diset 15%. Mungkin karena faktor U dan pagi/siang sebelumnya sudah memandangi layar komputer. Maka, jadilah penulis menginstal <strong>redshift</strong> untuk &ldquo;memerah/kuningkan <em>brightness</em> monitor.</p>
+<p><strong>Redshift</strong> tersedia di SBo, sehingga bisa diinstal dengan mudah melalui <em>sbotools, sbopkg, sboui, slpkg,</em> atau yang lainnya.</p>
   </p>
 
   
@@ -536,9 +547,10 @@ Redshift tersedia di SBo, sehingga bisa diinstal dengan mudah melalui sbotools, 
   </header>
 
   <p>
-  Masih adakah pengguna linux di Indonesia yang menggunakan blackbox sebagai window manager sehari-hari? Masih, minimal seorang yaitu yang menulis catatan ini. Hehehehe&hellip;.
-Secara default, toolbar blackbox tidak menyertakan tanggal walau menampilkan jam. Jam ditampilkan dalam format 12 jam AM/PM. Untuk menambahkannya, dan menggunakan jam format 24 jam sebagaimana lazimnya di Indonesia, diatur sebagai berikut pada ~/.blackboxrc
-session.screen0.strftimeFormat : %d/%m/%Y %H:%M Untuk menerapkan perubahan tersebut secara langsung, restart blackbox (tidak perlu restart komputer!
+  <p>Masih adakah pengguna linux di Indonesia yang menggunakan <strong>blackbox</strong> sebagai <strong>window manager</strong> sehari-hari? Masih, minimal seorang yaitu yang menulis catatan ini. Hehehehe&hellip;.</p>
+<p>Secara <em>default, toolbar</em> <strong>blackbox</strong> tidak menyertakan tanggal walau menampilkan jam. Jam ditampilkan dalam format 12 jam AM/PM. Untuk menambahkannya, dan menggunakan jam format 24 jam sebagaimana lazimnya di Indonesia, diatur sebagai berikut pada ~/.blackboxrc</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>session.screen0.strftimeFormat : %d/%m/%Y %H:%M
+</span></span></code></pre></div><p>Untuk menerapkan perubahan tersebut secara langsung, restart <strong>blackbox</strong> (tidak perlu restart komputer!)</p>
   </p>
 
   
@@ -584,7 +596,7 @@ session.screen0.strftimeFormat : %d/%m/%Y %H:%M Untuk menerapkan perubahan terse
   </header>
 
   <p>
-  Untuk resize atau mengubah ukuran window saat menggunakan blackbox caranya mudah. Arahkan pointer pada ujung kiri bawah atau kanan bawah window sampai tampilan pointer berganti menjadi sudut siku-siku dengan panah ke sudutnya. Kemudia klik dan drag sesuai keinginan seberapa ukuran windownya. Cara lain, adalah dengan mengarahkan menekan Alt klik kanan kemudian ubah ukuran windownya.
+  <p>Untuk resize atau mengubah ukuran window saat menggunakan <strong>blackbox</strong> caranya mudah. Arahkan pointer pada ujung kiri bawah atau kanan bawah window sampai tampilan pointer berganti menjadi sudut siku-siku dengan panah ke sudutnya. Kemudia klik dan <em>drag</em> sesuai keinginan seberapa ukuran windownya. Cara lain, adalah dengan mengarahkan menekan <strong>Alt</strong> klik kanan kemudian ubah ukuran windownya.</p>
   </p>
 
   
@@ -626,10 +638,12 @@ session.screen0.strftimeFormat : %d/%m/%Y %H:%M Untuk menerapkan perubahan terse
   </header>
 
   <p>
-  Menggunakan blackbox yang &lsquo;hanya&rsquo; window manager tentunya berbeda dengan ketika menggunakan desktop environment (DE) seperti kde atau xfce. Pengaturan background atau wallpaper dalam DE menggunakan tampilan grafis.
-Untuk meng-set background pada blackbox menggunakan bsetbg
-$ bsetbg nama_file_background Atau, kalau menghendaki background-nya adalah warna (solid color) juga bisa. Contoh, akan mengganti background-nya dengan warna hijau.
-$ bsetbg -solid green 
+  <p>Menggunakan <strong>blackbox</strong> yang &lsquo;hanya&rsquo; <strong>window manager</strong> tentunya berbeda dengan ketika menggunakan <strong>desktop environment</strong> (DE) seperti <strong>kde</strong> atau <strong>xfce</strong>. Pengaturan <em>background</em> atau <em>wallpaper</em> dalam DE menggunakan tampilan grafis.</p>
+<p>Untuk meng-<em>set background</em> pada <strong>blackbox</strong> menggunakan <strong>bsetbg</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ bsetbg nama_file_background
+</span></span></code></pre></div><p>Atau, kalau menghendaki <em>background</em>-nya adalah warna (solid color) juga bisa. Contoh, akan mengganti <em>background</em>-nya dengan warna hijau.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ bsetbg -solid green
+</span></span></code></pre></div>
   </p>
 
   
@@ -673,9 +687,11 @@ $ bsetbg -solid green
   </header>
 
   <p>
-  Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-charge. Alhasil laptop mati seketika. Dinyalakan lagi (sambil charging tentunya) gagal masuk ke X.
-xauth: file /home/xyz/.serverauth.2909 does not exist Solusinya simpel
-$ rm .serverauth* 
+  <p>Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-<em>charge</em>. Alhasil laptop mati seketika. Dinyalakan lagi (sambil <em>charging</em> tentunya) gagal masuk ke <strong>X</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>xauth: file /home/xyz/.serverauth.2909 does not exist
+</span></span></code></pre></div><p>Solusinya simpel</p>
+<pre tabindex="0"><code>$ rm .serverauth*
+</code></pre>
   </p>
 
   
@@ -721,9 +737,13 @@ $ rm .serverauth*
   </header>
 
   <p>
-  Terkadang saat browsing perlu fokus sehingga tampilan pun butuh fullscreen. Pada Mozilla Firefox, secara default F11 adalah tombol untuk fullscreen dan exit fullscreen. Akan tetapi, hal ini tidak berlaku pada kami, Slackware64 current dengan desktop environment XFCE yang berjalan di laptop Lenovo Ideapad 110-14IBR. Pada perangkat kami ini, F11 untuk mengurangi brightness. Maka, untuk fullscreen dan exit-nya kami gunakan Fn F11.
+  <p>Terkadang saat <em>browsing</em> perlu fokus sehingga tampilan pun butuh <em>fullscreen</em>. Pada <em>Mozilla Firefox</em>, secara <em>default</em> <!-- raw HTML omitted -->F11<!-- raw HTML omitted --> adalah tombol untuk <em>fullscreen</em> dan <em>exit fullscreen</em>. Akan tetapi, hal ini tidak berlaku pada kami, <strong>Slackware64 current</strong> dengan <em>desktop environment</em>  XFCE  yang berjalan di laptop Lenovo Ideapad 110-14IBR. Pada perangkat kami ini, <!-- raw HTML omitted -->F11<!-- raw HTML omitted --> untuk mengurangi <em>brightness</em>. Maka, untuk <em>fullscreen</em> dan <em>exit</em>-nya kami gunakan <!-- raw HTML omitted -->Fn F11<!-- raw HTML omitted -->.</p>
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-02-01-fullscreen-firefox/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -763,11 +783,24 @@ $ rm .serverauth*
   </header>
 
   <p>
-  Beberapa waktu yang lalu mencoba install manokwari dan berhasil dengan beberapa kekurangan.
-Proses install berjalan lancar walau sempat terhambat sebentar. Apalagi kalau bukan karena dependensi. Untuk compile menggunakan meson yang disediakan Pengembang dan prosesnya lebih cepat. Oiya, ini saya hanya lakukan di slackware64-current.
-Tentang dependensi, saya bagi menjadi 3 bagian.
-Sudah terinstall secara default atau tersedia di official repo Slackware
-meson glib2 gtk+3 atk cairo x11 libnotify Tersedia di SBo
+  <p>Beberapa waktu yang lalu mencoba install <a href="http://manokwari.blankonlinux.or.id"><strong>manokwari</strong></a> dan berhasil dengan beberapa kekurangan.</p>
+<p>Proses install berjalan lancar walau sempat terhambat sebentar. Apalagi kalau bukan karena dependensi. Untuk <em>compile</em> menggunakan <!-- raw HTML omitted -->meson<!-- raw HTML omitted --> yang disediakan Pengembang dan prosesnya lebih cepat. Oiya, ini saya hanya lakukan di slackware64-current.</p>
+<p>Tentang dependensi, saya bagi menjadi 3 bagian.</p>
+<ol>
+<li>
+<p>Sudah terinstall secara default atau tersedia di <em>official repo</em> Slackware</p>
+<ul>
+<li>meson</li>
+<li>glib2</li>
+<li>gtk+3</li>
+<li>atk</li>
+<li>cairo</li>
+<li>x11</li>
+<li>libnotify</li>
+</ul>
+</li>
+<li>
+<p>Tersedia di SBo</p>
   </p>
 
   
@@ -817,7 +850,7 @@ meson glib2 gtk+3 atk cairo x11 libnotify Tersedia di SBo
   </header>
 
   <p>
-  Pagi ini, refreshing dengan berganti desktop environment (DE) memakai Window Maker (WM). DE yang jarang digunakan karena biasanya memakai XFCE. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk tethering. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong Network Manager atau Wicd aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah root.
+  <p>Pagi ini, <em>refreshing</em> dengan berganti <em>desktop environment (DE)</em> memakai <strong>Window Maker (WM)</strong>. DE yang jarang digunakan karena biasanya memakai <strong>XFCE</strong>. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk <em>tethering</em>. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong <strong>Network Manager</strong> atau <strong>Wicd</strong> aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah <em>root</em>. Di sini <!-- raw HTML omitted -->$<!-- raw HTML omitted --> maksudnya adalah tetap dilakukan oleh <em>root</em>. Untuk memudahkan <em>syntax highlighting</em> karena kalau <em>command</em>-nya ditulis dengan <!-- raw HTML omitted -->#<!-- raw HTML omitted --> akan terbaca sebagai komentar sehingga tidak begitu jelas terbacanya.</p>
   </p>
 
   
@@ -867,8 +900,8 @@ meson glib2 gtk+3 atk cairo x11 libnotify Tersedia di SBo
   </header>
 
   <p>
-  Di suasana Idul Fitri, 26 Juni 2017, Ken Moore selaku project leader Lumina mengumumkan perihal rilisnya Lumina Desktop 1.3.0. Selang 4 hari kemudian dirilis patch yang pertama untuk 1.3.0. Catatan rilis resmi silahkan dibaca di sini.
-Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini tergolong istimewa. Mulai versi 1.3.0 ini lumina semakin powerfull untuk digunakan di Slackware. Sampai dengan versi 1.2.0_p1 (1.2.0 patchset 1), Restart dan Power Off pada menu sama sekali tidak berfungsi.
+  <p>Di suasana Idul Fitri, 26 Juni 2017, Ken Moore selaku <em>project leader</em> <!-- raw HTML omitted -->Lumina<!-- raw HTML omitted --> mengumumkan perihal rilisnya <strong>Lumina Desktop 1.3.0</strong>. Selang 4 hari kemudian dirilis <em>patch</em> yang pertama untuk 1.3.0. Catatan rilis resmi silahkan dibaca <a href="https://lumina-desktop.org/version-1-3-0-released/">di sini</a>.</p>
+<p>Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini tergolong istimewa. Mulai versi 1.3.0 ini <!-- raw HTML omitted -->lumina<!-- raw HTML omitted --> semakin powerfull untuk digunakan di <!-- raw HTML omitted -->Slackware<!-- raw HTML omitted -->. Sampai dengan versi 1.2.0_p1 (1.2.0 patchset 1), <!-- raw HTML omitted -->Restart<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->Power Off<!-- raw HTML omitted --> pada menu sama sekali tidak berfungsi. Namun mulai 1.3.0 <!-- raw HTML omitted -->reboot<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->shutdown<!-- raw HTML omitted --> sudah bisa dijalankan melalui menu.</p>
   </p>
 
   
@@ -916,8 +949,8 @@ Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini
   </header>
 
   <p>
-  Secara resmi, Slackware masih menggunakan KDE 4 yang &ldquo;ketinggalan jaman&rdquo; padahal pengembang KDE telah merilis KDE (sekarang biasa disebut Plasma) 5. Plasma 5 ini masih tetap seperti &ldquo;kakaknya&rdquo; (KDE 4) yang boros memory dibandingkan Xfce. Tapi, masya Allah tampilan lebih keren!
-Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah membuat slackbuild dan binary package-nya yang bisa kita gunakan. Versi terakhir versi Eric saat ini adalah Plasma 5.7.4 sedangkan insya Allah tanggal 4 Oktober 2016 KDE merilis Plasma 5.
+  <p>Secara resmi, <em>Slackware</em> masih menggunakan KDE 4 yang &ldquo;ketinggalan jaman&rdquo; padahal pengembang KDE telah merilis KDE (sekarang biasa disebut <strong>Plasma</strong>) 5. Plasma 5 ini masih tetap seperti &ldquo;kakaknya&rdquo; (KDE 4) yang boros <em>memory</em> dibandingkan <em>Xfce</em>. Tapi, masya Allah tampilan lebih keren!</p>
+<p>Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah membuat <em>slackbuild</em> dan <em>binary package</em>-nya yang bisa kita gunakan. Versi terakhir versi Eric saat ini adalah <strong>Plasma 5.7.4</strong> sedangkan insya Allah tanggal 4 Oktober 2016 KDE merilis Plasma 5.8.0.</p>
   </p>
 
   
@@ -969,10 +1002,14 @@ Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah mem
   </header>
 
   <p>
-  Mencoba merasakan kejadulan WindowMaker yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama xfce melalui command xwmconfig, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di WindowMaker. Bahkan tidak bisa ganti DE lainnya termasuk KDE dan Mate.
-Tapi kemudian bisa teratasi dengan menghapus .xinitrc dan folder GNUStep yang ada di home direktori pengguna.
+  <p>Mencoba merasakan kejadulan <em>WindowMaker</em> yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama <em>xfce</em> melalui <em>command</em> <!-- raw HTML omitted -->xwmconfig<!-- raw HTML omitted -->, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di <em>WindowMaker</em>. Bahkan tidak bisa ganti DE lainnya termasuk <em>KDE</em> dan <em>Mate</em>.</p>
+<p>Tapi kemudian bisa teratasi dengan menghapus <!-- raw HTML omitted -->.xinitrc<!-- raw HTML omitted --> dan folder <!-- raw HTML omitted -->GNUStep<!-- raw HTML omitted --> yang ada di <!-- raw HTML omitted -->home<!-- raw HTML omitted --> direktori pengguna.</p>
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -1018,8 +1055,10 @@ Tapi kemudian bisa teratasi dengan menghapus .xinitrc dan folder GNUStep yang ad
   </header>
 
   <p>
-  Biar tidak membosankan, kadangkala kita butuh ganti desktop environment (DE). Caranya (root privileges),
-xwmconfig Pilih X Windows (atau DE)-nya. Kemudian Ok atau tekan Enter, Log out dan Log in kembali.
+  <p>Biar tidak membosankan, kadangkala kita butuh ganti <em>desktop environment</em> (DE). Caranya (<em>root privileges</em>),</p>
+<pre tabindex="0"><code>xwmconfig
+</code></pre><p>Pilih <em>X Windows</em> (atau DE)-nya. Kemudian Ok atau tekan <em>Enter</em>, <em>Log out</em> dan <em>Log in</em> kembali.</p>
+<p><img src="https://sasongko.web.id/gambar/xwmconfig.png" alt=""></p>
   </p>
 
   
@@ -1063,8 +1102,8 @@ xwmconfig Pilih X Windows (atau DE)-nya. Kemudian Ok atau tekan Enter, Log out d
   </header>
 
   <p>
-  Walaupun desktop environment resmi Slackware adalah KDE dan Xfce, kita tetap bisa menggunakan DE lain, mate contohnya. Mate punya tampilan menarik tapi tetap ringan. Installnya mudah kok, seperti biasa pakai slackbuilds. Pastikan tersambung internet untuk mengunduh berkasnya, oya kita butuh kira-kira 500 MB untuk download mate.
-Pertama, dengan peramban web buka github mate slackbuilds. Nah, karena di sini menggunakan 14.1 (bukan current) maka pilih branch 14.1-mate-1.10. Setelah itu unduh tarball/zipnya kemudian ekstrak.
+  <p>Walaupun <em>desktop environment</em> resmi Slackware adalah KDE dan Xfce, kita tetap bisa menggunakan DE lain, <em>mate</em> contohnya. <em>Mate</em> punya tampilan menarik tapi tetap ringan. Installnya mudah kok, seperti biasa pakai slackbuilds. Pastikan tersambung internet untuk mengunduh berkasnya, oya kita butuh kira-kira 500 MB untuk download <em>mate</em>.</p>
+<p>Pertama, dengan peramban web buka <a href="https://github.com/mateslackbuilds/msb">github mate slackbuilds</a>. Nah, karena di sini menggunakan 14.1 (bukan <em>current</em>) maka pilih <em>branch</em> 14.1-mate-1.10. Setelah itu unduh tarball/zipnya kemudian ekstrak. Atau bisa juga git nya di-<em>clone</em>.</p>
   </p>
 
   
@@ -1112,8 +1151,9 @@ Pertama, dengan peramban web buka github mate slackbuilds. Nah, karena di sini m
   </header>
 
   <p>
-  Kalau kita install Slackware secara full, maka desktop environment yang terinstall adalah KDE. Bagi beberapa pengguna mungkin KDE menimbulkan masalah karena pemakaian RAM dan CPU Usage yang notabene tinggi daripada DE yang lain. BIsakah KDE dihapus? Bisa
-# slackpkg remove kde kemudian pilih paket apa saja yang akan dihapus dengan memberi tanda silang (x). Untuk memberi atau menghapus tanda x tekan spasi. Kalau sudah silahkan tekan Ok dan menunggu beberapa saat sampai uninstall KDE nya selesai.
+  <p>Kalau kita install <em>Slackware</em> secara full, maka <em>desktop environment</em> yang terinstall adalah <em>KDE</em>. Bagi beberapa pengguna mungkin KDE menimbulkan masalah karena pemakaian RAM dan CPU Usage yang notabene tinggi daripada DE yang lain. BIsakah KDE dihapus? Bisa</p>
+<pre tabindex="0"><code># slackpkg remove kde
+</code></pre><p>kemudian pilih paket apa saja yang akan dihapus dengan memberi tanda silang (x). Untuk memberi atau menghapus tanda x tekan spasi. Kalau sudah silahkan tekan Ok dan menunggu beberapa saat sampai uninstall KDE nya selesai.</p>
   </p>
 
   

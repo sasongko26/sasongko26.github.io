@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Security &middot; Catatan Sasongko</title>
 
@@ -262,10 +262,17 @@
   </header>
 
   <p>
-  Suatu program gagal dijalankan. Eksekusi via terminal menunjukkan segmentation fault tanpa keterangan lainnya. Pada situasi inilah core dump diperlukan untuk debugging sehingga diketahui penyebabnya.
-Contoh, geeqie apabila dijalankan di lingkungan wayland berbuah segmentation fault
-$ geeqie Segmentation fault Saatnya membuat core dump
-$ gcore /usr/bin/geeqie Illegal process-id: /usr/bin/geeqie. You can&#39;t do that without a process to debug. The program is not being run. gcore: failed to create core./usr/bin/geeqie Kemudian eksekusi lagi
+  <p>Suatu program gagal dijalankan. Eksekusi via terminal menunjukkan <strong>segmentation fault</strong> tanpa keterangan lainnya. Pada situasi inilah <strong>core dump</strong> diperlukan untuk <em>debugging</em> sehingga diketahui penyebabnya.</p>
+<p>Contoh, <strong>geeqie</strong> apabila dijalankan di lingkungan <strong>wayland</strong> berbuah <strong>segmentation fault</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ geeqie
+</span></span><span style="display:flex;"><span>Segmentation fault
+</span></span></code></pre></div><p>Saatnya membuat core dump</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gcore /usr/bin/geeqie
+</span></span><span style="display:flex;"><span>Illegal process-id: /usr/bin/geeqie.
+</span></span><span style="display:flex;"><span>You can<span style="color:#960050;background-color:#1e0010">&#39;</span>t <span style="color:#66d9ef">do</span> that without a process to debug.
+</span></span><span style="display:flex;"><span>The program is not being run.
+</span></span><span style="display:flex;"><span>gcore: failed to create core./usr/bin/geeqie
+</span></span></code></pre></div><p>Kemudian eksekusi lagi</p>
   </p>
 
   
@@ -313,9 +320,9 @@ $ gcore /usr/bin/geeqie Illegal process-id: /usr/bin/geeqie. You can&#39;t do th
   </header>
 
   <p>
-  Judul catatan kali ini sedikit berbeda dibanding sebelumnya. Ada hacking-nya. Hehehehe&hellip;. Tapi itu tidak menunjukkan bahwa kemampuan penulis dalam ilmu hacking bagus. Hanya bisa itu tok.
-Information gathering merupakan tahap krusial dalam proses hacking maupun cracking. Salah satu kegiatan information gathering adalah scanning atau deteksi sistem operasi yang digunakan pada target. Deteksi ini perlu karena berbeda sistem operasi mungkin membutuhkan teknik yang berbeda.
-Deteksi menggunakan nmap yang secara default sudah tertanam di slackware.
+  <p>Judul catatan kali ini sedikit berbeda dibanding sebelumnya. Ada <strong>hacking</strong>-nya. Hehehehe&hellip;. Tapi itu tidak menunjukkan bahwa kemampuan penulis dalam ilmu <strong>hacking</strong> bagus. Hanya bisa itu tok.</p>
+<p><em>Information gathering</em> merupakan tahap krusial dalam proses <strong>hacking</strong> maupun <strong>cracking</strong>. Salah satu kegiatan <em>information gathering</em> adalah <em>scanning</em> atau deteksi sistem operasi yang digunakan pada target. Deteksi ini perlu karena berbeda sistem operasi mungkin membutuhkan teknik yang berbeda.</p>
+<p>Deteksi menggunakan <strong>nmap</strong> yang secara <em>default</em> sudah tertanam di <strong>slackware</strong>. Kasus kali ini alamat target adalah 192.168.106.250. Hasil <em>scanning</em> menunjukkan beberapa informasi, antara lain sistem operasi, port yang terbuka dan webserver yang digunakan.</p>
   </p>
 
   
@@ -361,8 +368,8 @@ Deteksi menggunakan nmap yang secara default sudah tertanam di slackware.
   </header>
 
   <p>
-  Kfind adalah tool pencarian dari KDE Plasma. Bagi pengguna linux yang kurang familiar dengan command line bisa menggunakan kfind yang berpenampilan mode grafis.
-Fitur yang sangat bagus dari kfind adalah bisa menyimpan hasil pencarian. Namun, catatan kali ini tidak tentang bagaimana cara penggunaan kfind. Kali ini justru cara menghapus riwayat pencarian. Riwayat ini ada di file ~/.config/kfindrc pada segmen [History]. Riwayat yang dicatat adalah Patterns dan Directories pencariannya. Sehingga, penghapusan riwayat pencarian dapat dilakukan dengan menghapus ketiganya.
+  <p><strong>Kfind</strong> adalah <em>tool</em> pencarian dari KDE Plasma. Bagi pengguna linux yang kurang familiar dengan <em>command line</em> bisa menggunakan <strong>kfind</strong> yang berpenampilan mode grafis.</p>
+<p>Fitur yang sangat bagus dari <strong>kfind</strong> adalah bisa menyimpan hasil pencarian. Namun, catatan kali ini tidak tentang bagaimana cara penggunaan <strong>kfind</strong>. Kali ini justru cara menghapus riwayat pencarian. Riwayat ini ada di file ~/.config/kfindrc pada segmen [History]. Riwayat yang dicatat adalah <em>Patterns</em> dan <em>Directories</em> pencariannya. Sehingga, penghapusan riwayat pencarian dapat dilakukan dengan menghapus ketiganya.</p>
   </p>
 
   
@@ -408,9 +415,14 @@ Fitur yang sangat bagus dari kfind adalah bisa menyimpan hasil pencarian. Namun,
   </header>
 
   <p>
-  Log4shell menjadi topik yang hangat dibicarakan sepekan ini. Bugs JNDI lookup pada log4j membuat komputer atau pc (terutama server) semakin mudah diambil alih tanpa ijin. Syukur alhamdulillah sudah dirilis versi terbaru untuk menangkalnya, yaitu versi 2.16.0.
-Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagian dari default packages.
-# slackpkg file-search log4j Looking for log4j in package list. Please wait... DONE No packages contains &#34;log4j&#34; file. Tidak ditemukan.
+  <p><strong>Log4shell</strong> menjadi topik yang hangat dibicarakan sepekan ini. <em>Bugs</em> <strong>JNDI lookup</strong> pada <strong>log4j</strong> membuat komputer atau pc (terutama server) semakin mudah diambil alih tanpa ijin. Syukur alhamdulillah sudah dirilis versi terbaru untuk menangkalnya, yaitu versi 2.16.0.</p>
+<p>Bagaimana dengan <strong>slackware</strong>? Mari kita cek apakah <strong>log4j</strong> ini tersedia sebagai bagian dari <em>default packages</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># slackpkg file-search log4j</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Looking <span style="color:#66d9ef">for</span> log4j in package list. Please wait... DONE
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>No packages contains <span style="color:#e6db74">&#34;log4j&#34;</span> file.
+</span></span></code></pre></div><p>Tidak ditemukan. Aman!</p>
   </p>
 
   
@@ -458,8 +470,9 @@ Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagi
   </header>
 
   <p>
-  Untuk mengubah timestamp akses dan modifikasi pada file
-$ touch -t YYYYMMDDHHmm.ss dokumen di mana dokumen adalah filename, waktu yang diinginkan dalam format YYYYMMDDHHmm.ss
+  <p>Untuk mengubah <em>timestamp</em> akses dan modifikasi pada file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ touch -t YYYYMMDDHHmm.ss dokumen
+</span></span></code></pre></div><p>di mana dokumen adalah <em>filename</em>, waktu yang diinginkan dalam format YYYYMMDDHHmm.ss</p>
   </p>
 
   
@@ -505,8 +518,10 @@ $ touch -t YYYYMMDDHHmm.ss dokumen di mana dokumen adalah filename, waktu yang d
   </header>
 
   <p>
-  Masalah security saat penggunaan desktop environment mate adalah adanya recent documents pada menu. Ini terletak pada menu di bagian bawah menu Places. Bagi user yang concern dengan privasi dan menghendaki untuk menonaktifkannya alih-alih membersihkannya &ldquo;setiap saat&rdquo;,
-$ echo &#34;&#34; &gt; ~/.local/share/recently-used.xbel $ chattr -i ~/.local/share/recently-used.xbel # dijalankan oleh root 
+  <p>Masalah <em>security</em> saat penggunaan <em>desktop environment</em> <strong>mate</strong> adalah adanya <strong>recent documents</strong> pada menu. Ini terletak pada menu di bagian bawah menu <strong>Places</strong>. Bagi <em>user</em> yang <em>concern</em> dengan privasi dan menghendaki untuk menonaktifkannya alih-alih membersihkannya &ldquo;setiap saat&rdquo;,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;&#34;</span> &gt; ~/.local/share/recently-used.xbel 
+</span></span><span style="display:flex;"><span>$ chattr -i ~/.local/share/recently-used.xbel <span style="color:#75715e"># dijalankan oleh root</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -548,9 +563,11 @@ $ echo &#34;&#34; &gt; ~/.local/share/recently-used.xbel $ chattr -i ~/.local/sh
   </header>
 
   <p>
-  Mungkin ada yang merasa bosan setiap membuka Chromium muncul kotak dialog Unlock Keyring.
-Itu bisa diatasi, agar tidak muncul lagi. Aktifkan CHROMIUM_FLAGS pada /etc/chromium/00-default.conf.
-CHROMIUM_FLAGS=&#34;--password-store=basic&#34; 
+  <p>Mungkin ada yang merasa bosan setiap membuka <strong>Chromium</strong> muncul kotak dialog <em>Unlock Keyring</em>.</p>
+<p><img src="https://sasongko.web.id/gambar/chromium-unlock-keyring.png" alt=""></p>
+<p>Itu bisa diatasi, agar tidak muncul lagi. Aktifkan <!-- raw HTML omitted -->CHROMIUM_FLAGS<!-- raw HTML omitted --> pada <!-- raw HTML omitted -->/etc/chromium/00-default.conf<!-- raw HTML omitted -->.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CHROMIUM_FLAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--password-store=basic&#34;</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -594,8 +611,13 @@ CHROMIUM_FLAGS=&#34;--password-store=basic&#34;
   </header>
 
   <p>
-  Mengapa saya suka mengenkripsi file dengan openssl? Karena
-Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&hellip;. 
+  <p>Mengapa saya suka mengenkripsi file dengan <!-- raw HTML omitted -->openssl<!-- raw HTML omitted -->? Karena</p>
+<ol>
+<li>Tersedia sebagai <em>official package</em> <strong>Slackware</strong> sehingga sangat mudah untuk <em>install/remove/upgrade</em></li>
+<li>Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis <em>cipher</em> enkripsi yang digunakan dan <em>password</em>-nya</li>
+<li>Mudah digunakan</li>
+<li>Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&hellip;.</li>
+</ol>
   </p>
 
   
@@ -637,8 +659,8 @@ Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/
   </header>
 
   <p>
-  Pada hari Rabu 6 Desember 2017 jam 14.13.48 UTC, Patrick Volkerding selaku BDFL Slackware, memberikan update di kanal -current. Salah satunya adalah menambahkan libsodium-1.0.15. Libsodium merupakan library atau pustaka untuk enkripsi, dekripsi, signature (tanda tangan digital), dlsb.
-Bagi saya, masuknya libsodium membawa konsekwensi untuk rebuild dnscrypt-proxy yang menggunakan libsodium. libsodium yang sebelumnya adalah versi 1.0.13 dari SBo sedangkan versi baru dari official Slackware 1.0.15. Hal ini diketahui dari gagalnya men-start service dnscrypt-proxy .
+  <p>Pada hari Rabu 6 Desember 2017 jam 14.13.48 UTC, Patrick Volkerding selaku BDFL <strong>Slackware</strong>, memberikan <em>update</em> di kanal <!-- raw HTML omitted -->-current<!-- raw HTML omitted -->. Salah satunya adalah menambahkan <!-- raw HTML omitted -->libsodium-1.0.15<!-- raw HTML omitted -->. Libsodium merupakan <em>library</em> atau pustaka untuk enkripsi, dekripsi, <em>signature</em> (tanda tangan digital), dlsb.</p>
+<p>Bagi saya, masuknya <!-- raw HTML omitted -->libsodium<!-- raw HTML omitted --> membawa konsekwensi untuk <em>rebuild</em> <!-- raw HTML omitted -->dnscrypt-proxy<!-- raw HTML omitted --> yang menggunakan <!-- raw HTML omitted -->libsodium<!-- raw HTML omitted -->. <!-- raw HTML omitted -->libsodium<!-- raw HTML omitted --> yang sebelumnya adalah versi 1.0.13 dari <a href="http://slackbuilds.org/repository/14.2/libraries/libsodium/">SBo</a> sedangkan versi baru dari <em>official</em> <strong>Slackware</strong> 1.0.15. Hal ini diketahui dari gagalnya men-<em>start service</em> <!-- raw HTML omitted -->dnscrypt-proxy <!-- raw HTML omitted -->.</p>
   </p>
 
   
@@ -684,7 +706,7 @@ Bagi saya, masuknya libsodium membawa konsekwensi untuk rebuild dnscrypt-proxy y
   </header>
 
   <p>
-  Salah satu hal yang membuat saya menggunakan linux khususnya Slackware adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan . pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan steganografi tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}) atau [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}).
+  <p>Salah satu hal yang membuat saya menggunakan linux khususnya <em>Slackware</em> adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan <!-- raw HTML omitted -->.<!-- raw HTML omitted --> pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan <em>steganografi</em> tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [<!-- raw HTML omitted -->gpg<!-- raw HTML omitted -->]({% post_url 2017-01-14-enkripsi-dg-gpg %})  atau [<!-- raw HTML omitted -->openssl<!-- raw HTML omitted -->]({% post_url 2017-01-08-enkripsi-dg-openssl %}).</p>
   </p>
 
   
@@ -730,8 +752,10 @@ Bagi saya, masuknya libsodium membawa konsekwensi untuk rebuild dnscrypt-proxy y
   </header>
 
   <p>
-  Secara default, perintah/command yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan command history atau membaca isi ~/.bash_history. Ini bisa di-disable. Caranya, membuat file di /etc/profile.d/, yang isinya
-export HISTFILE=/dev/null export HISTSIZE=0 
+  <p>Secara <em>default</em>, perintah/<em>command</em> yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan <em>command</em> <!-- raw HTML omitted -->history<!-- raw HTML omitted --> atau membaca isi <!-- raw HTML omitted -->~/.bash_history<!-- raw HTML omitted -->. Ini bisa di-<em>disable</em>. Caranya, membuat file di <!-- raw HTML omitted -->/etc/profile.d/<!-- raw HTML omitted -->, yang isinya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>export HISTFILE<span style="color:#f92672">=</span>/dev/null
+</span></span><span style="display:flex;"><span>export HISTSIZE<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -777,9 +801,11 @@ export HISTFILE=/dev/null export HISTSIZE=0
   </header>
 
   <p>
-  Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupg atau yang biasa disebut dengan gpg.
-$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
-$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi 
+  <p>Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan <!-- raw HTML omitted -->gnupg<!-- raw HTML omitted --> atau yang biasa disebut dengan <!-- raw HTML omitted -->gpg<!-- raw HTML omitted -->.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi
+</span></span></code></pre></div><p>Sedangkan untuk dekripsi</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
+</span></span></code></pre></div>
   </p>
 
   
@@ -825,8 +851,8 @@ $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
   </header>
 
   <p>
-  Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
-Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssl dengan cipher rc4. File hasil enkripsi saya namai rahasia.odt yang saya taruh di fd dan fd saya mount di /media/hd0. Kemudian akan ditanya password enkripsinya.
+  <p>Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan <!-- raw HTML omitted -->openssl<!-- raw HTML omitted -->. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).</p>
+<p>Contoh, saya punya file yang perlu diamankan. Katakanlah filenya <!-- raw HTML omitted -->indonesia-raya.odt<!-- raw HTML omitted -->. Saya enkripsi menggunakan <!-- raw HTML omitted -->openssl<!-- raw HTML omitted --> dengan <em>cipher rc4</em>. File hasil enkripsi saya namai <!-- raw HTML omitted -->rahasia.odt<!-- raw HTML omitted --> yang saya taruh di fd dan fd saya <!-- raw HTML omitted -->mount<!-- raw HTML omitted --> di <!-- raw HTML omitted -->/media/hd0<!-- raw HTML omitted -->. Kemudian akan ditanya <em>password</em> enkripsinya.</p>
   </p>
 
   

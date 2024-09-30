@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,59 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/">Mengubah user agent firefox</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Mar 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <h1 id="pengertian-user-agent">Pengertian user agent</h1>
+<p><em>User agent (UA)</em> adalah identitas <em>web browser</em> yang dikirimkan ke website yang diakses. Identitas tersebut antara lain nama <em>web browser</em> dan versinya.</p>
+<h1 id="default-ua-firefox">Default UA firefox</h1>
+<p>Firefox yang saat ini digunakan adalah versi 78.6.1esr. Versi ini memiliki UA <!-- raw HTML omitted -->Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0<!-- raw HTML omitted --></p>
+<h1 id="mengetahui-ua-firefox">Mengetahui UA firefox</h1>
+<p>Pada address bar ketik <strong>about:support</strong>. Perhatikan bagian <strong>User Agent</strong>.</p>
+<h1 id="cara-mengganti-ua">Cara mengganti UA</h1>
+<p>Untuk mengubahnya, contoh kali ini akan diubah dengan UA Chrome pada Mac.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-03-09-mount-partisi-hibernated-windows/">Mount partisi hibernated windows</a></h2>
 
     <div class="post-meta">
@@ -261,10 +314,15 @@
   </header>
 
   <p>
-  Lima tahun yang lalu ketika membeli laptop yang saat ini digunakan untuk menulis catatan ini, toko memberikan OS Windows 10 tanpa lisensinya. Penulis tetap mempertahankannya untuk jaga-jaga jika di kemudian hari kepepet sangat membutuhkan Windows.
-Tadi pagi iseng ingin melihat-lihat adakah file di partisi tempat Windows diinstall yang bisa dihapus sehingga storage harddisk lebih lega?
-Partisi Windows teridentifikasi sebagai /dev/sda2. Akan di-mount ke /media/hd0
-$ mount /dev/sda2 /media/hd0 Windows is hibernated, refused to mount.
+  <p>Lima tahun yang lalu ketika membeli laptop yang saat ini digunakan untuk menulis catatan ini, toko memberikan OS Windows 10 tanpa lisensinya. Penulis tetap mempertahankannya untuk jaga-jaga jika di kemudian hari kepepet sangat membutuhkan Windows.</p>
+<p>Tadi pagi iseng ingin melihat-lihat adakah file di partisi tempat Windows diinstall yang bisa dihapus sehingga storage harddisk lebih lega?</p>
+<p>Partisi Windows teridentifikasi sebagai /dev/sda2. Akan di-<em>mount</em> ke /media/hd0</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ mount /dev/sda2 /media/hd0
+</span></span><span style="display:flex;"><span>Windows is hibernated, refused to mount.
+</span></span><span style="display:flex;"><span>Falling back to read-only mount because the NTFS partition is in an
+</span></span><span style="display:flex;"><span>unsafe state. Please resume and shutdown Windows fully <span style="color:#f92672">(</span>no hibernation
+</span></span><span style="display:flex;"><span>or fast restarting.<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>What? Windows is hibernate? Seingat penulis selalu tertib dalam menjalankan SOP shutdown (<em>close</em> semua window aplikasi yang terbuka, shutdown melalui menu, tidak ada <em>warning</em> apapun yang muncul di monitor). Jadi ya dianggap baik-baik saja. Ternyata tidak.</p>
   </p>
 
   
@@ -310,7 +368,7 @@ $ mount /dev/sda2 /media/hd0 Windows is hibernated, refused to mount.
   </header>
 
   <p>
-  Untuk resize atau mengubah ukuran window saat menggunakan blackbox caranya mudah. Arahkan pointer pada ujung kiri bawah atau kanan bawah window sampai tampilan pointer berganti menjadi sudut siku-siku dengan panah ke sudutnya. Kemudia klik dan drag sesuai keinginan seberapa ukuran windownya. Cara lain, adalah dengan mengarahkan menekan Alt klik kanan kemudian ubah ukuran windownya.
+  <p>Untuk resize atau mengubah ukuran window saat menggunakan <strong>blackbox</strong> caranya mudah. Arahkan pointer pada ujung kiri bawah atau kanan bawah window sampai tampilan pointer berganti menjadi sudut siku-siku dengan panah ke sudutnya. Kemudia klik dan <em>drag</em> sesuai keinginan seberapa ukuran windownya. Cara lain, adalah dengan mengarahkan menekan <strong>Alt</strong> klik kanan kemudian ubah ukuran windownya.</p>
   </p>
 
   
@@ -352,8 +410,9 @@ $ mount /dev/sda2 /media/hd0 Windows is hibernated, refused to mount.
   </header>
 
   <p>
-  Misalkan akan menghapus semua file berekstensi .rtf di direktori /tmp. Pada direktori /tmp terdapat banyak direktori dan file lainnya. File yang akan dihapus hanya pada direktor induk, tidak termasuk subdirektorinya (maxdepth=1).
-$ find /tmp -maxdepth 1 -name *.rtf -delete 
+  <p>Misalkan akan menghapus semua file berekstensi <strong>.rtf</strong> di direktori /tmp. Pada direktori /tmp terdapat banyak direktori dan file lainnya. File yang akan dihapus hanya pada direktor induk, tidak termasuk subdirektorinya (maxdepth=1).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ find /tmp -maxdepth <span style="color:#ae81ff">1</span> -name *.rtf -delete
+</span></span></code></pre></div>
   </p>
 
   
@@ -395,62 +454,12 @@ $ find /tmp -maxdepth 1 -name *.rtf -delete
   </header>
 
   <p>
-  GVIm merupakan text editor legendaris. Simpel dan mudah digunakan adalah alasan utama penulis menyukainya. GVIm juga mudah di-customize. User bebas melakukan modifikasi sesuai kebutuhannya. Salah satu yang penulis butuhkan adalah ketika memulai gvim ukuran window 80x24 (80 kolom, 24 baris). Untuk mewujudkannya, perlu membuat file ~/.gvimrc isinya sebagai berikut:
-set columns=80 set lines=24 
+  <p><strong>GVIm</strong> merupakan <em>text editor</em> legendaris. Simpel dan mudah digunakan adalah alasan utama penulis menyukainya. <strong>GVIm</strong> juga mudah di-<em>customize</em>. <em>User</em> bebas melakukan modifikasi sesuai kebutuhannya. Salah satu yang penulis butuhkan adalah ketika memulai gvim ukuran <em>window</em> 80x24 (80 kolom, 24 baris). Untuk mewujudkannya, perlu membuat file <strong>~/.gvimrc</strong> isinya sebagai berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>set columns<span style="color:#f92672">=</span><span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>set lines<span style="color:#f92672">=</span><span style="color:#ae81ff">24</span>
+</span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/">Aktivasi apache webserver slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/cloud">cloud</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Install apache webserver slackware linux Secara default, apache webserver sudah ter-install di slackware. Namun, jika saat meng-install slackware tidak memilih full installation, apache webserver dapat di-install dengan mudah, yaitu dengan meng-install httpd.
-slackpkg install httpd Aktivasi apache webserver slackware linux Setelah diinstall, bisa diaktifkan:
-/etc/rc.d/rc.httpd start Untuk menonaktifkan atau mematikan:
-/etc/rc.d/rc.httpd stop Untuk restart webserver:
-/etc/rc.d/rc.httpd restart Mengaktifkan apache webserver otomatis Untuk dapat running atau mengaktifkan apache secara otomatis setelah booting, pastikan /etc/rc.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -463,7 +472,7 @@ slackpkg install httpd Aktivasi apache webserver slackware linux Setelah diinsta
   
   <a href="https://sasongko.web.id/page/22/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;23 / 65&nbsp;</span>
+  <span>&nbsp;23 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/24/"><i class="fa fa-chevron-right"></i></a>
   

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,51 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2022-03-05-mount-media-read-write-mode/">Mount media read write mode</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 Mar 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p><em>Mount</em> media (kasus kali ini pada <em>flashdisk</em>)  melalui <em>command line</em> secara default membuat <em>ownership</em> filenya menjadi milik <strong>root</strong>. Hal ini berakibat media tersebut berjalan pada mode <strong>read-only</strong>. Hanya <em>user</em> setingkat <strong>root</strong> yang bisa melakukan <em>write on</em>.</p>
+<p>Kasus ini bisa disiasati dengan mendefinisikan <em>id</em> user yang akan melakukan <em>write on</em>.</p>
+<pre tabindex="0"><code>mount -o rw,uid=1020,gid=120 /dev/sdb1 /media/hd0/
+</code></pre><p>uid dan gid di sini hanya contoh, silakan disesuaikan.</p>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/">Konfigurasi mirror slackware</a></h2>
 
     <div class="post-meta">
@@ -261,10 +306,17 @@
   </header>
 
   <p>
-  Slackpkg merupakan salah satu official slackware package manager. Fitur yang dimilikinya antara lain
-Cek apakah ada update Baca changelog Install, upgrade, reinstall, remove, blacklist packages Sebelum menggunakannya, pilih dahulu mirror yang akan digunakan
-# vi /etc/slackpkg/mirrors Pada file tersebut sudah tersedia list mirror yang bisa digunakan. Apakah menggunakan current atau stable (saat ini 15.0). Pilih mirrornya dengan cara uncomment baris alamat mirrornya. Contoh
-https://mirrors.slackware.com/slackware/slackware64-15.0/ untuk menggunakan mirror terdekat versi slackware 15.
+  <p><strong>Slackpkg</strong> merupakan salah satu <strong>official slackware package manager</strong>. Fitur yang dimilikinya antara lain</p>
+<ol>
+<li>Cek apakah ada update</li>
+<li>Baca changelog</li>
+<li>Install, upgrade, reinstall, remove, blacklist packages</li>
+</ol>
+<p>Sebelum menggunakannya, pilih dahulu <em>mirror</em> yang akan digunakan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># vi /etc/slackpkg/mirrors</span>
+</span></span></code></pre></div><p>Pada file tersebut sudah tersedia list mirror yang bisa digunakan. Apakah menggunakan <strong>current</strong> atau <strong>stable</strong> (saat ini 15.0). Pilih mirrornya dengan cara <em>uncomment</em> baris alamat mirrornya. Contoh</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>https://mirrors.slackware.com/slackware/slackware64-15.0/
+</span></span></code></pre></div><p>untuk menggunakan mirror terdekat versi <strong>slackware 15.0</strong></p>
   </p>
 
   
@@ -310,8 +362,9 @@ https://mirrors.slackware.com/slackware/slackware64-15.0/ untuk menggunakan mirr
   </header>
 
   <p>
-  Secara default, setelah berhasil login di tty muncul pesan-pesan berupa kata-kata mutiara dari para tokoh. Fortune ini menjadi sepaket dengan bsd-games. Jadi kalau ingin di-disable bisa uninstall bsd-games. Kalau masih butuh bsd-games tinggal jadikan file /etc/profile.d/bsd-games-login-fortune.*sh nonexecutable
-chmod -x /etc/profile.d/bsd-games-login-fortune.*sh 
+  <p>Secara <em>default</em>, setelah berhasil <em>login</em> di <strong>tty</strong> muncul pesan-pesan berupa kata-kata mutiara dari para tokoh. <strong>Fortune</strong> ini menjadi sepaket dengan <strong>bsd-games</strong>. Jadi kalau ingin di-<em>disable</em> bisa uninstall <strong>bsd-games</strong>. Kalau masih butuh <strong>bsd-games</strong> tinggal jadikan file /etc/profile.d/bsd-games-login-fortune.*sh <em>nonexecutable</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>chmod -x /etc/profile.d/bsd-games-login-fortune.*sh
+</span></span></code></pre></div>
   </p>
 
   
@@ -353,8 +406,9 @@ chmod -x /etc/profile.d/bsd-games-login-fortune.*sh
   </header>
 
   <p>
-  Runlevel 4 bisa dikatakan sebagai runlevel multiuser dengan graphical user interface saat loginnya. Secara default, Runlevel slackware adalah 3. Untuk mengubahnya ke 4 edit file /etc/inittab, ganti angka 3 pada baris berikut dengan angka 4
-id:4:initdefault: 
+  <p><em>Runlevel 4</em> bisa dikatakan sebagai runlevel multiuser dengan <em>graphical user interface</em> saat loginnya. Secara <em>default</em>, <em>Runlevel</em> <strong>slackware</strong> adalah 3. Untuk mengubahnya ke 4 edit file /etc/inittab, ganti angka 3 pada baris berikut dengan angka 4</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>id:4:initdefault:
+</span></span></code></pre></div>
   </p>
 
   
@@ -396,60 +450,17 @@ id:4:initdefault:
   </header>
 
   <p>
-  Salah satu fitur baru yang dihadirkan Slackware 15.0 adalah masuknya pipewire sebagai alternatif dari pulseaudio. Bagaimana penggunaanya? Silakan simak catatan berikut ini.
-Pertama, edit /etc/pulse/client.conf. Ubah autospawn dari yes menjadi no.
-Hapus /etc/xdg/autostart/pulseaudio.desktop atau rename menjadi file yang &ldquo;tidak penting&rdquo;.
-Rename file berikut menjadi .desktop saja
-/etc/xdg/autostart/pipewire-media-session.desktop.sample /etc/xdg/autostart/pipewire-pulse.desktop.sample /etc/xdg/autostart/pipewire.desktop 
+  <p>Salah satu fitur baru yang dihadirkan <strong>Slackware 15.0</strong> adalah masuknya <strong>pipewire</strong> sebagai alternatif dari <strong>pulseaudio</strong>. Bagaimana penggunaanya? Silakan simak catatan berikut ini.</p>
+<p>Pertama, edit /etc/pulse/client.conf. Ubah autospawn dari yes menjadi no.</p>
+<p>Hapus /etc/xdg/autostart/pulseaudio.desktop atau rename menjadi file yang &ldquo;tidak penting&rdquo;.</p>
+<p>Rename file berikut menjadi .desktop saja</p>
+<ol>
+<li>/etc/xdg/autostart/pipewire-media-session.desktop.sample</li>
+<li>/etc/xdg/autostart/pipewire-pulse.desktop.sample</li>
+<li>/etc/xdg/autostart/pipewire.desktop</li>
+</ol>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/">Operator perbandingan perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Jan 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Operator perbandingan digunakan untuk membandingkan nilai. Data/nilai yang dibandingkan dapat berupa bilangan ataupun string. Namun ada perbedaan notasi.
-Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &lt; $b	| $a lebih kecil dari $b	| |$a &gt; $b	| $a lebih besar dari $b	| |$a &lt;= $b	| $a lebih kecil atau sama dengan $b	| |$a =&gt; $b	| $a lebih besar atau sama dengan $b	| |$a == $b	| $a sama dengan $b	| |$a !
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -462,7 +473,7 @@ Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &lt; $b	| $a lebih kec
   
   <a href="https://sasongko.web.id/page/9/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;10 / 65&nbsp;</span>
+  <span>&nbsp;10 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/11/"><i class="fa fa-chevron-right"></i></a>
   

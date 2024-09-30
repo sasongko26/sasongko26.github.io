@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Sbopkg &middot; Catatan Sasongko</title>
 
@@ -262,9 +262,10 @@
   </header>
 
   <p>
-  Secara default sbopkg tidak menyediakan fitur reverse dependency. Adapun untuk butuh dependency-nya apa saja bisa menggunakan sqg. Bagaimana tahu reverse dependency-nya?
-Ini cara sederhana yang saya gunakan
-grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan cara tersebut bisa diketahui suatu paket/package itu menjadi dependensi dari paket apa. Tapi, salah 1 dari output tersebut tidak lain adalah paket itu sendiri. Dan, package yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah packages tersebut terinstall atau tidak.
+  <p>Secara <em>default</em> <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> tidak menyediakan fitur <strong>reverse dependency</strong>. Adapun untuk butuh <em>dependency</em>-nya apa saja bisa menggunakan <!-- raw HTML omitted -->sqg<!-- raw HTML omitted -->. Bagaimana tahu <em>reverse dependency</em>-nya?</p>
+<p>Ini cara sederhana yang saya gunakan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket
+</span></span></code></pre></div><p>Dengan cara tersebut bisa diketahui suatu paket/<em>package</em> itu menjadi dependensi dari paket apa. Tapi, salah 1 dari <em>output</em> tersebut tidak lain adalah paket itu sendiri. Dan, <em>package</em> yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah <em>packages</em> tersebut terinstall atau tidak.</p>
   </p>
 
   
@@ -312,14 +313,29 @@ grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan ca
   </header>
 
   <p>
-  Setelah melakukan [ upgrade sistem ke Slackware 14.2]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya upgrade juga paket yang diinstal dari slackbuilds.org.
-Upgrade sbopkg : sbopkg -u Versi sbopkg terbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik D Hasil unduhan : /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Setelah diunduh, upgrade : upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Karena menghasilkan konfigurasi baru, lakukan slackpkg new-config dan pilih overwrite saja. Kemudian update ke repo 14.2 : sbopkg pilih Utilities lalu Repository.
+  <p>Setelah melakukan [ <em>upgrade</em> sistem ke <em>Slackware 14.2</em>]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya <em>upgrade</em> juga paket yang diinstal dari slackbuilds.org.</p>
+<ol>
+<li><em>Upgrade</em> <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> : <!-- raw HTML omitted -->sbopkg -u<!-- raw HTML omitted --></li>
+<li>Versi <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> terbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik <!-- raw HTML omitted -->D<!-- raw HTML omitted --></li>
+<li>Hasil unduhan : <!-- raw HTML omitted -->/tmp/sbopkg-0.38.0-noarch-1_wsr.tgz<!-- raw HTML omitted --></li>
+<li>Setelah diunduh, <em>upgrade</em> : <!-- raw HTML omitted -->upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz<!-- raw HTML omitted --></li>
+<li>Karena menghasilkan konfigurasi baru, lakukan <!-- raw HTML omitted -->slackpkg new-config<!-- raw HTML omitted --> dan pilih overwrite saja.</li>
+<li>Kemudian <em>update</em> ke repo 14.2 : <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> pilih <!-- raw HTML omitted -->Utilities<!-- raw HTML omitted --> lalu <!-- raw HTML omitted -->Repository<!-- raw HTML omitted -->. Kemudian pilih <!-- raw HTML omitted -->SBo (14.2)<!-- raw HTML omitted --></li>
+<li>Muncul konfirmasi, apakah akan membuat baru, pilih <!-- raw HTML omitted -->C<!-- raw HTML omitted --> untuk <!-- raw HTML omitted -->Create<!-- raw HTML omitted -->.</li>
+<li>Kemudian <!-- raw HTML omitted -->Back<!-- raw HTML omitted --> ke awal <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->, pilih <!-- raw HTML omitted -->Sync<!-- raw HTML omitted --> untuk <em>update</em> repo.</li>
+<li>Setelah <em>sync</em>-nya selesai, pilih <!-- raw HTML omitted -->EXIT<!-- raw HTML omitted --> kembali ke awal <!-- raw HTML omitted -->sbopk<!-- raw HTML omitted --></li>
+<li>Kemudian pilih <!-- raw HTML omitted -->Updates<!-- raw HTML omitted --> untuk mengecek paket apa saja yang bisa di-<em>upgrade</em>.</li>
+<li><!-- raw HTML omitted -->EXIT<!-- raw HTML omitted --> keluar konfirmasi apakah paket-paket tersebut akan dimasukkan ke dalam <!-- raw HTML omitted -->queue<!-- raw HTML omitted --> untuk bisa diinstall kemudian.<!-- raw HTML omitted -->YES<!-- raw HTML omitted --> untuk memasukkannya.</li>
+<li>Kembali di awal <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->. Pilih <!-- raw HTML omitted -->Queue<!-- raw HTML omitted --></li>
+<li>PIlih <!-- raw HTML omitted -->Process<!-- raw HTML omitted --> akan muncul daftar paket langkah no.11</li>
+<li>Silahkan pilih paketnya kemudian <!-- raw HTML omitted -->OK<!-- raw HTML omitted --> Kemudian <!-- raw HTML omitted -->Install<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->OK<!-- raw HTML omitted --></li>
+<li>Tunggu sampai selesai.</li>
+<li>Keluar dialog apakah akan menghapus yang ada di <!-- raw HTML omitted -->queue<!-- raw HTML omitted -->. Pilih <!-- raw HTML omitted -->Clear<!-- raw HTML omitted --> untuk menghapus. Kemudian keluar info bahwa queue sudah dihapus, keudian <!-- raw HTML omitted -->OK<!-- raw HTML omitted --></li>
+<li>Kembali ke <!-- raw HTML omitted -->Queue Menu<!-- raw HTML omitted --> pilih <!-- raw HTML omitted -->Back<!-- raw HTML omitted --></li>
+<li>Kembali ke awal <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->, karena sudah selesai, silahkan <!-- raw HTML omitted -->Exit<!-- raw HTML omitted --></li>
+</ol>
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -361,9 +377,9 @@ Upgrade sbopkg : sbopkg -u Versi sbopkg terbaru adalah 0.38.0 sedangkan yang ter
   </header>
 
   <p>
-  Adakalanya pengguna Slackware membutuhkan paket/aplikasi di luar yang dirilis secara resmi oleh Slackware tapi tidak mau repot install dari kode sumber (source code). SlackBuilds.org (SBo) inilah yang mewujudkannya. Di SBo tersedia ribuan paket yang dapat dijalankan dengan baik di Slackware.
-Kecuali dalam bentuk web interface SBo juga bisa dinikmati dalam bentuk command line interface yang dinamakan sbopkg. Sbopkg secara default tidak ter-install karena paket ini memang paket third party.
-Untuk install-nya mudah.
+  <p>Adakalanya pengguna <strong>Slackware</strong> membutuhkan paket/aplikasi di luar yang dirilis secara resmi oleh <strong>Slackware</strong> tapi tidak mau repot <em>install</em> dari kode sumber (<em>source code</em>). <a href="http://slackbuilds.org"><strong>SlackBuilds.org (SBo)</strong></a> inilah yang mewujudkannya. Di SBo tersedia ribuan paket yang dapat dijalankan dengan baik di <strong>Slackware</strong>.</p>
+<p>Kecuali dalam bentuk <em>web interface</em> SBo juga bisa dinikmati dalam bentuk <em>command line interface</em> yang dinamakan <strong>sbopkg</strong>. Sbopkg secara <em>default</em> tidak ter-<em>install</em> karena paket ini memang paket <em>third party</em>.</p>
+<p>Untuk <em>install</em>-nya mudah. Tersedia kode sumber maupun paket binernya. Biar lebih praktis <em>install</em> dari binernya saja. Pastikan tersambung internet untuk mengunduh.</p>
   </p>
 
   

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-02-03-mengubah-colorscheme-kdevelop/">Mengubah color scheme kdevelop</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Feb 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p><strong>Kdevelop</strong> merupakan <em>integrated development environment (IDE) default</em> dari <strong>KDE</strong> yang merupakan salah satu official packages dari Slackware. Kdevelop mendukung berbagai bahasa pemrograman, yaitu <strong>C, C++, python, javascript</strong> dan <strong>PHP</strong>.</p>
+<p>Secara <em>default, color scheme</em> yang diaktifkan <strong>kdevelop</strong> bernuansa terang. Ada sebagian pengguna yang lebih menyukai nuansa gelap. Caranya, klik <strong>Settings</strong> - <strong>Color Scheme</strong>, lalu pilih <em>color scheme</em> yang diinginkan. <a href="https://youtu.be/UeMhgHHnnuo">Video berikut ini</a>  menunjukkan mudahnya mengubah <em>color scheme</em>-nya dari <strong>Default</strong> menjadi <strong>Breeze High Contrast</strong></p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-02-03-mengubah-colorscheme-kdevelop/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-02-02-mengenal-python/">Mengenal python</a></h2>
 
     <div class="post-meta">
@@ -261,8 +308,10 @@
   </header>
 
   <p>
-  Apa itu python Python adalah bahasa pemrograman yang diciptakan oleh Guido van Rossum. Python bersifat open source sehingga semua orang boleh menggunakan dan mengembangkannya. Bahasa pemrograman satu ini tidak spesifik untuk keperluan tertentu, tetapi umum. Python bisa digunakan untuk membuat aplikasi desktop, database, web, data science, machine learning, dll.
-Apakah python cocok untuk data science? Mengapa? Ya. Karena python open source maka semua orang boleh mengembangkannya, termasuk untuk keperluan data science.
+  <h1 id="apa-itu-python">Apa itu python</h1>
+<p>Python adalah bahasa pemrograman yang diciptakan oleh Guido van Rossum. Python bersifat <em>open source</em> sehingga semua orang boleh menggunakan dan mengembangkannya. Bahasa pemrograman satu ini tidak spesifik untuk keperluan tertentu, tetapi umum. Python bisa digunakan untuk membuat aplikasi desktop, database, web, <em>data science, machine learning</em>, dll.</p>
+<h1 id="apakah-python-cocok-untuk-data-science-mengapa">Apakah python cocok untuk data science? Mengapa?</h1>
+<p>Ya. Karena python <em>open source</em> maka semua orang boleh mengembangkannya, termasuk untuk keperluan <em>data science</em>. Contohnya adalah pembuatan <em>library</em> <strong>numpy, scipy, pandas, scikit-learn, matplotlib, seaborn</strong>, dll.</p>
   </p>
 
   
@@ -308,9 +357,10 @@ Apakah python cocok untuk data science? Mengapa? Ya. Karena python open source m
   </header>
 
   <p>
-  Secara default video yang ada di youtube dapat di-download secara bebas. Semua orang bisa men-download tanpa harus login. Tetapi, ada kalanya sang pemilik video membatasinya hanya untuk member atau harus login dulu baru bisa donwload.
-Dengan youtube-dl hal ini mudah dilakukan
-$ youtube-dl -u username url Opsi -u diikuti dengan username akun youtube untuk login.
+  <p>Secara <em>default</em> video yang ada di <strong>youtube</strong> dapat di-<em>download</em> secara bebas. Semua orang bisa men-<em>download</em> tanpa harus login. Tetapi, ada kalanya sang pemilik video membatasinya hanya untuk <em>member</em> atau harus login dulu baru bisa <em>donwload</em>.</p>
+<p>Dengan <strong>youtube-dl</strong> hal ini mudah dilakukan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ youtube-dl -u username url
+</span></span></code></pre></div><p>Opsi -u diikuti dengan <strong>username</strong> akun <em>youtube</em> untuk login.</p>
   </p>
 
   
@@ -356,9 +406,17 @@ $ youtube-dl -u username url Opsi -u diikuti dengan username akun youtube untuk 
   </header>
 
   <p>
-  File csv merupakan file yang umum digunakan sebagai file data. Mudah dalam pembuatannya. Begitu juga dengan aksesnya. Bisa dibuat dengan text editor, spreadsheet software maupun statistical software. Pada kesempatan kali ini tidak menggunakan statistical software seperti R.
-Membuat file csv dengan text editor Prinsip pembuatan adalah :
-Antar kolom dipisahkan oleh tanda koma (,) Kolom pertama (umumnya) sebagai header atau nama/judul kolom Antar baris dipisahkan oleh enter Angka dituliskan seperti biasanya Teks/string dituliskan dalam tanda kutip (&quot; atatu &lsquo;) Contoh, data kasus malaria tahun 2019 terdiri atas 2 kolom, yaitu provinsi dan jumlah.
+  <p>File <strong>csv</strong> merupakan file yang umum digunakan sebagai file data. Mudah dalam pembuatannya. Begitu juga dengan aksesnya. Bisa dibuat dengan <em>text editor, spreadsheet software</em> maupun <em>statistical software</em>. Pada kesempatan kali ini tidak menggunakan <em>statistical software</em> seperti <strong>R</strong>.</p>
+<h1 id="membuat-file-csv-dengan-_text-editor_">Membuat file csv dengan <em>text editor</em></h1>
+<p>Prinsip pembuatan adalah :</p>
+<ol>
+<li>Antar kolom dipisahkan oleh tanda koma (,)</li>
+<li>Kolom pertama (umumnya) sebagai <em>header</em> atau nama/judul kolom</li>
+<li>Antar baris dipisahkan oleh enter</li>
+<li>Angka dituliskan seperti biasanya</li>
+<li>Teks/<em>string</em> dituliskan dalam tanda kutip (&quot; atatu &lsquo;)</li>
+</ol>
+<p>Contoh, data kasus malaria tahun 2019 terdiri atas 2 kolom, yaitu provinsi dan jumlah.</p>
   </p>
 
   
@@ -404,50 +462,7 @@ Antar kolom dipisahkan oleh tanda koma (,) Kolom pertama (umumnya) sebagai heade
   </header>
 
   <p>
-  Bagaimana spreadsheet layout pada libre office calc? Silahkan simak video berikut ini
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-30-menghapus-file-dari-tar/">Menghapus file dari tar</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk menghapus file Screenshot_2020-08-06_08-31-22.png yang ada dalam screenshot.tar.xz, caranya
-$ tar f screenshot.tar.xz --delete Screenshot_2020-08-06_08-31-22.png 
+  <p>Bagaimana <em>spreadsheet layout</em> pada <strong>libre office calc</strong>? Silahkan simak <a href="https://www.youtube.com/watch?v=Br5ORIOUIkM">video berikut ini</a></p>
   </p>
 
   
@@ -462,7 +477,7 @@ $ tar f screenshot.tar.xz --delete Screenshot_2020-08-06_08-31-22.png
   
   <a href="https://sasongko.web.id/page/25/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;26 / 65&nbsp;</span>
+  <span>&nbsp;26 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/27/"><i class="fa fa-chevron-right"></i></a>
   

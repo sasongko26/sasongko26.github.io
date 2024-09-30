@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Mate &middot; Catatan Sasongko</title>
 
@@ -264,8 +264,10 @@
   </header>
 
   <p>
-  Masalah security saat penggunaan desktop environment mate adalah adanya recent documents pada menu. Ini terletak pada menu di bagian bawah menu Places. Bagi user yang concern dengan privasi dan menghendaki untuk menonaktifkannya alih-alih membersihkannya &ldquo;setiap saat&rdquo;,
-$ echo &#34;&#34; &gt; ~/.local/share/recently-used.xbel $ chattr -i ~/.local/share/recently-used.xbel # dijalankan oleh root 
+  <p>Masalah <em>security</em> saat penggunaan <em>desktop environment</em> <strong>mate</strong> adalah adanya <strong>recent documents</strong> pada menu. Ini terletak pada menu di bagian bawah menu <strong>Places</strong>. Bagi <em>user</em> yang <em>concern</em> dengan privasi dan menghendaki untuk menonaktifkannya alih-alih membersihkannya &ldquo;setiap saat&rdquo;,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;&#34;</span> &gt; ~/.local/share/recently-used.xbel 
+</span></span><span style="display:flex;"><span>$ chattr -i ~/.local/share/recently-used.xbel <span style="color:#75715e"># dijalankan oleh root</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -313,10 +315,14 @@ $ echo &#34;&#34; &gt; ~/.local/share/recently-used.xbel $ chattr -i ~/.local/sh
   </header>
 
   <p>
-  Mencoba merasakan kejadulan WindowMaker yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama xfce melalui command xwmconfig, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di WindowMaker. Bahkan tidak bisa ganti DE lainnya termasuk KDE dan Mate.
-Tapi kemudian bisa teratasi dengan menghapus .xinitrc dan folder GNUStep yang ada di home direktori pengguna.
+  <p>Mencoba merasakan kejadulan <em>WindowMaker</em> yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama <em>xfce</em> melalui <em>command</em> <!-- raw HTML omitted -->xwmconfig<!-- raw HTML omitted -->, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di <em>WindowMaker</em>. Bahkan tidak bisa ganti DE lainnya termasuk <em>KDE</em> dan <em>Mate</em>.</p>
+<p>Tapi kemudian bisa teratasi dengan menghapus <!-- raw HTML omitted -->.xinitrc<!-- raw HTML omitted --> dan folder <!-- raw HTML omitted -->GNUStep<!-- raw HTML omitted --> yang ada di <!-- raw HTML omitted -->home<!-- raw HTML omitted --> direktori pengguna.</p>
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -362,8 +368,10 @@ Tapi kemudian bisa teratasi dengan menghapus .xinitrc dan folder GNUStep yang ad
   </header>
 
   <p>
-  Biar tidak membosankan, kadangkala kita butuh ganti desktop environment (DE). Caranya (root privileges),
-xwmconfig Pilih X Windows (atau DE)-nya. Kemudian Ok atau tekan Enter, Log out dan Log in kembali.
+  <p>Biar tidak membosankan, kadangkala kita butuh ganti <em>desktop environment</em> (DE). Caranya (<em>root privileges</em>),</p>
+<pre tabindex="0"><code>xwmconfig
+</code></pre><p>Pilih <em>X Windows</em> (atau DE)-nya. Kemudian Ok atau tekan <em>Enter</em>, <em>Log out</em> dan <em>Log in</em> kembali.</p>
+<p><img src="https://sasongko.web.id/gambar/xwmconfig.png" alt=""></p>
   </p>
 
   
@@ -407,8 +415,8 @@ xwmconfig Pilih X Windows (atau DE)-nya. Kemudian Ok atau tekan Enter, Log out d
   </header>
 
   <p>
-  Walaupun desktop environment resmi Slackware adalah KDE dan Xfce, kita tetap bisa menggunakan DE lain, mate contohnya. Mate punya tampilan menarik tapi tetap ringan. Installnya mudah kok, seperti biasa pakai slackbuilds. Pastikan tersambung internet untuk mengunduh berkasnya, oya kita butuh kira-kira 500 MB untuk download mate.
-Pertama, dengan peramban web buka github mate slackbuilds. Nah, karena di sini menggunakan 14.1 (bukan current) maka pilih branch 14.1-mate-1.10. Setelah itu unduh tarball/zipnya kemudian ekstrak.
+  <p>Walaupun <em>desktop environment</em> resmi Slackware adalah KDE dan Xfce, kita tetap bisa menggunakan DE lain, <em>mate</em> contohnya. <em>Mate</em> punya tampilan menarik tapi tetap ringan. Installnya mudah kok, seperti biasa pakai slackbuilds. Pastikan tersambung internet untuk mengunduh berkasnya, oya kita butuh kira-kira 500 MB untuk download <em>mate</em>.</p>
+<p>Pertama, dengan peramban web buka <a href="https://github.com/mateslackbuilds/msb">github mate slackbuilds</a>. Nah, karena di sini menggunakan 14.1 (bukan <em>current</em>) maka pilih <em>branch</em> 14.1-mate-1.10. Setelah itu unduh tarball/zipnya kemudian ekstrak. Atau bisa juga git nya di-<em>clone</em>.</p>
   </p>
 
   

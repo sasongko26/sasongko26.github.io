@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,59 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/">InstalL Sleuth Kit Slackware</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Jun 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p><a href="https://github.com/sleuthkit">The Sleuth Kit</a> atau disingkat TSK adalah tools digital forensik yang bersifat open source, multiplatform dan text-mode (command line interface). TSK bisa digunakan untuk melakukan analisis pada barang bukti, atau lebih tepatnya citra disk (raw image). Misalnya untuk mengetahui berkas apa saja yang ada di dalam hardisk dan adakah berkas yang dihapus dari hardisk itu.</p>
+<p>Dependensi:</p>
+<ul>
+<li>autoconf, automake, libtool</li>
+<li>C/C++ compiler (gcc, gcc++)</li>
+<li>[JDK (opsional)]({% post_url 2015-06-07-install-jdk-slackware %})</li>
+</ul>
+<p>Install cukup mudah, kita akan install langsung TSK dari source code yang ada di github</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-06-17-install-xfburn-slackware/">Install Xfburn Slackware</a></h2>
 
     <div class="post-meta">
@@ -259,11 +312,22 @@
   </header>
 
   <p>
-  Xfburn adalah aplikasi burning CD/DVD/BD dari XFCE. Versi terbaru saat ini 0.5.4, dengan dependensi:
-Exo-0.10.6 libxfce4util-4.12.1 libisoburn-1.4.0 Tapi untuk memudahkan instalasi, kita gunakan saja yang versi 0.5.2 yang ada slackbuildnya, dependensinya
-[libburn]({% post_url 2015-06-16-install-libburn-slackware %}) [libisofs]({% post_url 2015-06-16-install-libisofs-slackware %}) Untuk menginstall pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas.
-$ wget http://slackbuilds.org/slackbuilds/14.1/system/xfburn.tar.gz Ekstrak kemudian pindah direktori ke folder hasil ekstrak
-$ tar xzf xfburn.tar.gz ; cd xfburn Unduh kode sumber xfburn
+  <p>Xfburn adalah aplikasi <em>burning</em> CD/DVD/BD dari XFCE. Versi terbaru saat ini 0.5.4, dengan dependensi:</p>
+<ul>
+<li>Exo-0.10.6</li>
+<li>libxfce4util-4.12.1</li>
+<li>libisoburn-1.4.0</li>
+</ul>
+<p>Tapi untuk memudahkan instalasi, kita gunakan saja yang versi 0.5.2 yang ada slackbuildnya, dependensinya</p>
+<ul>
+<li>[libburn]({% post_url 2015-06-16-install-libburn-slackware %})</li>
+<li>[libisofs]({% post_url 2015-06-16-install-libisofs-slackware %})</li>
+</ul>
+<p>Untuk menginstall pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas.</p>
+<pre tabindex="0"><code>$ wget http://slackbuilds.org/slackbuilds/14.1/system/xfburn.tar.gz
+</code></pre><p>Ekstrak kemudian pindah direktori ke folder hasil ekstrak</p>
+<pre tabindex="0"><code>$ tar xzf xfburn.tar.gz ; cd xfburn
+</code></pre><p>Unduh kode sumber xfburn</p>
   </p>
 
   
@@ -307,20 +371,23 @@ $ tar xzf xfburn.tar.gz ; cd xfburn Unduh kode sumber xfburn
   </header>
 
   <p>
-  Libburn adalah pustaka (library) untuk menulis ke CD, DVD, dan blueray.
-Berikut langkah-langkah installnya di slackware melalui slackbuild. Adapun versi libburn yang diinstall adalah 1.4.0.
-Pertama, pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh paket. Kemudian unduh slackbuild libburn.
-$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libburn.tar.gz Ekstrak
-$ tar xzf libburn.tar.gz Akan terbentuk folder libburn. Pindah direktori ke folder itu.
-$ cd libburn Kemudian unduh kode sumber libburn.
-$ wget http://files.libburnia-project.org/releases/libburn-1.4.0.tar.gz Install slackbuildnya
-sh libburn.
+  <p>Libburn adalah pustaka (<em>library</em>) untuk menulis ke CD, DVD, dan <em>blueray</em>.</p>
+<p>Berikut langkah-langkah installnya di slackware melalui slackbuild. Adapun versi libburn yang diinstall adalah 1.4.0.</p>
+<p>Pertama, pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh paket. Kemudian unduh slackbuild libburn.</p>
+<pre tabindex="0"><code>$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libburn.tar.gz
+</code></pre><p>Ekstrak</p>
+<pre tabindex="0"><code>$ tar xzf libburn.tar.gz
+</code></pre><p>Akan terbentuk folder libburn. Pindah direktori ke folder itu.</p>
+<pre tabindex="0"><code>$ cd libburn
+</code></pre><p>Kemudian unduh kode sumber libburn.</p>
+<pre tabindex="0"><code>$ wget http://files.libburnia-project.org/releases/libburn-1.4.0.tar.gz
+</code></pre><p>Install slackbuildnya</p>
+<pre tabindex="0"><code>sh libburn.SlackBuild
+</code></pre><p>Install paketnya</p>
+<pre tabindex="0"><code># installpkg /tmp/libburn-1.4.0-x86_64-1_SBo.tgz
+</code></pre>
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-16-install-libburn-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -358,14 +425,20 @@ sh libburn.
   </header>
 
   <p>
-  Libisofs adalah pustaka untuk membuat filesystem ISO-9660.
-Berikut cara install libisofs-1.4.0 di slackware melalui slackbuild. Pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas yang diperlukan.
-Unduh slackbuild libisofs
-$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libisofs.tar.gz Ekstrak
-$ tar xzf libisofs.tar.gz Terbentuk folder libisofs, pindah direktori ke folder itu kemudain unduh kode sumbernya.
-$ cd libisofs $ wget http://files.libburnia-project.org/releases/libisofs-1.4.0.tar.gz Install slackbuildnya
-# sh libisofs.SlackBuild Install paketnya
-# installpkg /tmp/libisofs-1.4.0-x86_64-1_SBo.tgz Selesai.
+  <p>Libisofs adalah pustaka untuk membuat filesystem ISO-9660.</p>
+<p>Berikut cara install libisofs-1.4.0 di slackware melalui slackbuild. Pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas yang diperlukan.</p>
+<p>Unduh slackbuild libisofs</p>
+<pre tabindex="0"><code>$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libisofs.tar.gz
+</code></pre><p>Ekstrak</p>
+<pre tabindex="0"><code>$ tar xzf libisofs.tar.gz
+</code></pre><p>Terbentuk folder libisofs, pindah direktori ke folder itu kemudain unduh kode sumbernya.</p>
+<pre tabindex="0"><code>$ cd libisofs
+$ wget http://files.libburnia-project.org/releases/libisofs-1.4.0.tar.gz
+</code></pre><p>Install slackbuildnya</p>
+<pre tabindex="0"><code># sh libisofs.SlackBuild
+</code></pre><p>Install paketnya</p>
+<pre tabindex="0"><code># installpkg /tmp/libisofs-1.4.0-x86_64-1_SBo.tgz
+</code></pre><p>Selesai.</p>
   </p>
 
   
@@ -395,58 +468,31 @@ $ cd libisofs $ wget http://files.libburnia-project.org/releases/libisofs-1.4.0.
   </header>
 
   <p>
-  Untuk mengetahui apakah suatu paket atau aplikasi telah terpasang di Slackware kita atau belum caranya mudah.
-$ ls /var/log/packages | grep nama_paket Contoh, mencari paket yang di nama paketnya ada kata xfce
-$ ls /var/log/packages | grep xfce gtk-xfce-engine-3.0.1-x86_64-1 libxfce4ui-4.10.0-x86_64-2 libxfce4util-4.10.1-x86_64-1 libxfcegui4-4.10.0-x86_64-2 xfce4-clipman-plugin-1.2.3-x86_64-2 xfce4-dev-tools-4.10.0-x86_64-1 xfce4-mixer-4.8.0-x86_64-1 xfce4-notifyd-0.2.4-x86_64-1 xfce4-panel-4.10.1-x86_64-2 xfce4-power-manager-1.2.0-x86_64-2 xfce4-screenshooter-1.8.1-x86_64-2 xfce4-session-4.10.1-x86_64-3 xfce4-settings-4.10.1-x86_64-1 xfce4-systemload-plugin-1.1.1-x86_64-2 xfce4-taskmanager-1.0.0-x86_64-2 xfce4-terminal-0.6.2-x86_64-1 xfce4-volumed-0.1.13-x86_64-1 xfce4-weather-plugin-0.8.3-x86_64-2 Jika tidak ada keluaran berarti paket tersebut belum diinstall.
+  <p>Untuk mengetahui apakah suatu paket atau aplikasi telah terpasang di Slackware kita atau belum caranya mudah.</p>
+<pre tabindex="0"><code>$ ls /var/log/packages | grep nama_paket
+</code></pre><p>Contoh, mencari paket yang di nama paketnya ada kata <em>xfce</em></p>
+<pre tabindex="0"><code>$ ls /var/log/packages | grep xfce
+gtk-xfce-engine-3.0.1-x86_64-1
+libxfce4ui-4.10.0-x86_64-2
+libxfce4util-4.10.1-x86_64-1
+libxfcegui4-4.10.0-x86_64-2
+xfce4-clipman-plugin-1.2.3-x86_64-2
+xfce4-dev-tools-4.10.0-x86_64-1
+xfce4-mixer-4.8.0-x86_64-1
+xfce4-notifyd-0.2.4-x86_64-1
+xfce4-panel-4.10.1-x86_64-2
+xfce4-power-manager-1.2.0-x86_64-2
+xfce4-screenshooter-1.8.1-x86_64-2
+xfce4-session-4.10.1-x86_64-3
+xfce4-settings-4.10.1-x86_64-1
+xfce4-systemload-plugin-1.1.1-x86_64-2
+xfce4-taskmanager-1.0.0-x86_64-2
+xfce4-terminal-0.6.2-x86_64-1
+xfce4-volumed-0.1.13-x86_64-1
+xfce4-weather-plugin-0.8.3-x86_64-2
+</code></pre><p>Jika tidak ada keluaran berarti paket tersebut belum diinstall.</p>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-14-jalankan-sudo-tanpa-password/">Jalankan Sudo Tanpa Password</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Idealnya perintah sudo memang memerlukan password/kata sandi karena hakikat sudo itu pengguna &ldquo;meminjam&rdquo; hak super user / root. Tapi, password itu bisa saja kita hilangkan. Maksudnya, tidak perlu menuliskan password, contoh
-$ wvdial 3 bash: wvdial: command not found Baris 2, command not found menunjukkan 2 kemungkinan. Kemungkinan pertama, perintah yang diketikkan memang tidak ada. Kemungkinan kedua, perintah itu memerlukan hak root. Nah perintah [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) ini yang bisa menjalankan adalah root atau sudoers (pengguna yang bisa menjalankan perintah hak root tapi dengan syarat memasukkan passwordnya root.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-14-jalankan-sudo-tanpa-password/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -459,7 +505,7 @@ $ wvdial 3 bash: wvdial: command not found Baris 2, command not found menunjukka
   
   <a href="https://sasongko.web.id/page/55/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;56 / 65&nbsp;</span>
+  <span>&nbsp;56 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/57/"><i class="fa fa-chevron-right"></i></a>
   

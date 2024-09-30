@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Networking &middot; Catatan Sasongko</title>
 
@@ -260,8 +260,8 @@
   </header>
 
   <p>
-  Buka-buka direktori lama, ternyata ada catatan yang belum dipublikasikan, salah satunya soal deskreen. Aplikasi ini kami gunakan untuk share screen ataupun presentasi dari laptop ke TV. Sebenarnya untuk menghubungkan laptop dan TV bisa menggunakan kabel HDMI, tapi karena kabelnya kurang panjang, TVnya banyak dan belum punya HDMI splitter maka terbersitlah untuk presentasi menggunakan jaringan wifi. Duckduckgo memberikan hasil bagaimana cara, salah satunya dengan deskreen ini.
-Demi kepraktisan, kami donwload edisi appimage.
+  <p>Buka-buka direktori lama, ternyata ada catatan yang belum dipublikasikan, salah satunya soal <strong>deskreen</strong>. Aplikasi ini kami gunakan untuk <em>share screen</em> ataupun presentasi dari laptop ke TV. Sebenarnya untuk menghubungkan laptop dan TV bisa menggunakan kabel HDMI, tapi karena kabelnya kurang panjang, TVnya banyak dan belum punya <em>HDMI splitter</em> maka terbersitlah untuk presentasi menggunakan jaringan wifi. <em>Duckduckgo</em> memberikan hasil bagaimana cara, salah satunya dengan <strong>deskreen</strong> ini.</p>
+<p>Demi kepraktisan, kami <em>donwload</em> edisi <strong>appimage</strong>. Namun, setelah dieksekusi ada masalah, yaitu muncul <em>error box</em> yang menyatakan bahwa <strong>No WiFi &amp; LAN Connection</strong> padahal koneksi internet sudah berjalan lancar, stabil dan kencang di laptop maupun TV.</p>
   </p>
 
   
@@ -309,9 +309,9 @@ Demi kepraktisan, kami donwload edisi appimage.
   </header>
 
   <p>
-  Judul catatan kali ini sedikit berbeda dibanding sebelumnya. Ada hacking-nya. Hehehehe&hellip;. Tapi itu tidak menunjukkan bahwa kemampuan penulis dalam ilmu hacking bagus. Hanya bisa itu tok.
-Information gathering merupakan tahap krusial dalam proses hacking maupun cracking. Salah satu kegiatan information gathering adalah scanning atau deteksi sistem operasi yang digunakan pada target. Deteksi ini perlu karena berbeda sistem operasi mungkin membutuhkan teknik yang berbeda.
-Deteksi menggunakan nmap yang secara default sudah tertanam di slackware.
+  <p>Judul catatan kali ini sedikit berbeda dibanding sebelumnya. Ada <strong>hacking</strong>-nya. Hehehehe&hellip;. Tapi itu tidak menunjukkan bahwa kemampuan penulis dalam ilmu <strong>hacking</strong> bagus. Hanya bisa itu tok.</p>
+<p><em>Information gathering</em> merupakan tahap krusial dalam proses <strong>hacking</strong> maupun <strong>cracking</strong>. Salah satu kegiatan <em>information gathering</em> adalah <em>scanning</em> atau deteksi sistem operasi yang digunakan pada target. Deteksi ini perlu karena berbeda sistem operasi mungkin membutuhkan teknik yang berbeda.</p>
+<p>Deteksi menggunakan <strong>nmap</strong> yang secara <em>default</em> sudah tertanam di <strong>slackware</strong>. Kasus kali ini alamat target adalah 192.168.106.250. Hasil <em>scanning</em> menunjukkan beberapa informasi, antara lain sistem operasi, port yang terbuka dan webserver yang digunakan.</p>
   </p>
 
   
@@ -357,8 +357,15 @@ Deteksi menggunakan nmap yang secara default sudah tertanam di slackware.
   </header>
 
   <p>
-  Sebelum mengetahui alamat IP aktif dalam 1 jaringan yang sama, tentu saja harus konek atau masuk ke jaringan tersebut dulu. Setelah masuk, cek IP kita sendiri. Karena konek ke wifi maka interface-nya wlan0
-# ip addr show wlan0 3: wlan0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000 link/ether cc:b0:da:b5:3b:75 brd ff:ff:ff:ff:ff:ff inet 192.168.43.20/24 brd 192.168.43.255 scope global dynamic noprefixroute wlan0 valid_lft 1574sec preferred_lft 1574sec inet6 fe80::7f1b:2f4d:b98e:6500/64 scope link noprefixroute valid_lft forever preferred_lft forever Atau bisa juga dengan
+  <p>Sebelum mengetahui alamat IP aktif dalam 1 jaringan yang sama, tentu saja harus konek atau masuk ke jaringan tersebut dulu. Setelah masuk, cek IP kita sendiri. Karena konek ke wifi maka <em>interface</em>-nya wlan0</p>
+<pre tabindex="0"><code># ip addr show wlan0
+3: wlan0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether cc:b0:da:b5:3b:75 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.43.20/24 brd 192.168.43.255 scope global dynamic noprefixroute wlan0
+       valid_lft 1574sec preferred_lft 1574sec
+    inet6 fe80::7f1b:2f4d:b98e:6500/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+</code></pre><p>Atau bisa juga dengan</p>
   </p>
 
   
@@ -406,9 +413,11 @@ Deteksi menggunakan nmap yang secara default sudah tertanam di slackware.
   </header>
 
   <p>
-  Secara default, indexing pada apache hanya menampilkan nama direktori dan file yang berada dalam direktori tersebut dengan format unordered list. Bagi yang menganggap tampilan ini tidak menarik, bisa mengaktifkan fancy indexing dengan cara edit file /etc/httpd/httpd.conf, uncomment baris
-#Include /etc/httpd/extra/httpd-autoindex.conf kemudian restart apache
-# /etc/rc.d/rc.httpd restart 
+  <p>Secara <em>default</em>, <em>indexing</em> pada <strong>apache</strong> hanya menampilkan nama direktori dan file yang berada dalam direktori tersebut dengan format <em>unordered list</em>. Bagi yang menganggap tampilan ini tidak menarik, bisa mengaktifkan <em>fancy indexing</em> dengan cara edit file /etc/httpd/httpd.conf, <em>uncomment</em> baris</p>
+<pre tabindex="0"><code>#Include /etc/httpd/extra/httpd-autoindex.conf
+</code></pre><p>kemudian <em>restart</em> <strong>apache</strong></p>
+<pre tabindex="0"><code># /etc/rc.d/rc.httpd restart
+</code></pre>
   </p>
 
   
@@ -450,10 +459,14 @@ Deteksi menggunakan nmap yang secara default sudah tertanam di slackware.
   </header>
 
   <p>
-  Pengertian user agent User agent (UA) adalah identitas web browser yang dikirimkan ke website yang diakses. Identitas tersebut antara lain nama web browser dan versinya.
-Default UA firefox Firefox yang saat ini digunakan adalah versi 78.6.1esr. Versi ini memiliki UA Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
-Mengetahui UA firefox Pada address bar ketik about:support. Perhatikan bagian User Agent.
-Cara mengganti UA Untuk mengubahnya, contoh kali ini akan diubah dengan UA Chrome pada Mac.
+  <h1 id="pengertian-user-agent">Pengertian user agent</h1>
+<p><em>User agent (UA)</em> adalah identitas <em>web browser</em> yang dikirimkan ke website yang diakses. Identitas tersebut antara lain nama <em>web browser</em> dan versinya.</p>
+<h1 id="default-ua-firefox">Default UA firefox</h1>
+<p>Firefox yang saat ini digunakan adalah versi 78.6.1esr. Versi ini memiliki UA <!-- raw HTML omitted -->Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0<!-- raw HTML omitted --></p>
+<h1 id="mengetahui-ua-firefox">Mengetahui UA firefox</h1>
+<p>Pada address bar ketik <strong>about:support</strong>. Perhatikan bagian <strong>User Agent</strong>.</p>
+<h1 id="cara-mengganti-ua">Cara mengganti UA</h1>
+<p>Untuk mengubahnya, contoh kali ini akan diubah dengan UA Chrome pada Mac.</p>
   </p>
 
   
@@ -501,11 +514,18 @@ Cara mengganti UA Untuk mengubahnya, contoh kali ini akan diubah dengan UA Chrom
   </header>
 
   <p>
-  Install apache webserver slackware linux Secara default, apache webserver sudah ter-install di slackware. Namun, jika saat meng-install slackware tidak memilih full installation, apache webserver dapat di-install dengan mudah, yaitu dengan meng-install httpd.
-slackpkg install httpd Aktivasi apache webserver slackware linux Setelah diinstall, bisa diaktifkan:
-/etc/rc.d/rc.httpd start Untuk menonaktifkan atau mematikan:
-/etc/rc.d/rc.httpd stop Untuk restart webserver:
-/etc/rc.d/rc.httpd restart Mengaktifkan apache webserver otomatis Untuk dapat running atau mengaktifkan apache secara otomatis setelah booting, pastikan /etc/rc.
+  <h1 id="install-apache-webserver-slackware-linux">Install apache webserver slackware linux</h1>
+<p>Secara <em>default</em>, <strong>apache webserver</strong> sudah ter-<em>install</em> di <strong>slackware</strong>. Namun, jika saat meng-<em>install</em> <strong>slackware</strong> tidak memilih <em>full installation</em>, <strong>apache webserver</strong> dapat di-<em>install</em> dengan mudah, yaitu dengan meng-<em>install</em> <strong>httpd</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>slackpkg install httpd
+</span></span></code></pre></div><h1 id="aktivasi-apache-webserver-slackware-linux">Aktivasi apache webserver slackware linux</h1>
+<p>Setelah diinstall, bisa diaktifkan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd start
+</span></span></code></pre></div><p>Untuk menonaktifkan atau mematikan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd stop
+</span></span></code></pre></div><p>Untuk <em>restart</em> webserver:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd restart
+</span></span></code></pre></div><h1 id="mengaktifkan-apache-webserver-otomatis">Mengaktifkan apache webserver otomatis</h1>
+<p>Untuk dapat <em>running</em> atau mengaktifkan <em>apache</em> secara otomatis setelah <em>booting</em>, pastikan /etc/rc.d/rc.httpd <em>executable</em>.</p>
   </p>
 
   
@@ -551,8 +571,13 @@ slackpkg install httpd Aktivasi apache webserver slackware linux Setelah diinsta
   </header>
 
   <p>
-  Catatan ini merupakan catatan tambahan untuk melengkapi README.Slackware pada skrip dnscrypt-proxy yang ada di SBo. Yang ada di SBo :
-Membuat grup dnscrypt dan usernya Mengkonfigurasi dns /etc/resolv.conf.head Memasukkan dnscryp-proxy ke /etc/rc.d/rc.local{,_shutdown} Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi maintainer dnscrypt-proxy tidak mengikutsertakan langkah ini. Penulis menggunakan NetworkManager, setelah check &amp; recheck, dnscrypt-proxy tidak bekerja karena file /etc/resolv.conf terkena overwrite oleh NetworkManager. Ini adalah langkah untuk memberikan imunisasi/mencegah overwrite.
+  <p>Catatan ini merupakan catatan tambahan untuk melengkapi <strong>README.Slackware</strong> pada skrip <strong>dnscrypt-proxy</strong> yang ada di SBo. Yang ada di SBo :</p>
+<ol>
+<li>Membuat grup <strong>dnscrypt</strong> dan usernya</li>
+<li>Mengkonfigurasi dns <strong>/etc/resolv.conf.head</strong></li>
+<li>Memasukkan <strong>dnscryp-proxy</strong> ke /etc/rc.d/rc.local{,_shutdown}</li>
+</ol>
+<p>Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi <em>maintainer</em> <strong>dnscrypt-proxy</strong> tidak mengikutsertakan langkah ini. Penulis menggunakan <strong>NetworkManager</strong>, setelah <em>check &amp; recheck</em>, <code>dnscrypt-proxy</code> tidak bekerja karena file /etc/resolv.conf terkena <em>overwrite</em> oleh <strong>NetworkManager</strong>. Ini adalah langkah untuk memberikan imunisasi/mencegah <em>overwrite</em>. <em>Command</em> berikut dijalankan dengan <em>root privilege</em></p>
   </p>
 
   
@@ -600,9 +625,24 @@ Membuat grup dnscrypt dan usernya Mengkonfigurasi dns /etc/resolv.conf.head Mema
   </header>
 
   <p>
-  Untuk mengetahui alamat ip lokal tanpa akses root dapat menggunakan nmcli
-$ nmcli wlan0: connected to Anatomi &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), CC:B0:DA:B5:3B:75, hw, mtu 1500 ip4 default inet4 192.168.120.19/24 route4 0.0.0.0/0 route4 192.168.120.0/24 route4 192.168.120.0/24 inet6 fe80::1a37:a13:b117:ff74/64 route6 fe80::/64 route6 ff00::/8 Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah
-ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74 
+  <p>Untuk mengetahui alamat ip lokal tanpa akses <strong>root</strong> dapat menggunakan <strong>nmcli</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ nmcli
+</span></span><span style="display:flex;"><span>wlan0: connected to Anatomi
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Qualcomm Atheros QCA9377&#34;</span>
+</span></span><span style="display:flex;"><span>        wifi <span style="color:#f92672">(</span>ath10k_pci<span style="color:#f92672">)</span>, CC:B0:DA:B5:3B:75, hw, mtu <span style="color:#ae81ff">1500</span>
+</span></span><span style="display:flex;"><span>        ip4 default
+</span></span><span style="display:flex;"><span>        inet4 192.168.120.19/24
+</span></span><span style="display:flex;"><span>        route4 0.0.0.0/0
+</span></span><span style="display:flex;"><span>        route4 192.168.120.0/24
+</span></span><span style="display:flex;"><span>        route4 192.168.120.0/24
+</span></span><span style="display:flex;"><span>        inet6 fe80::1a37:a13:b117:ff74/64
+</span></span><span style="display:flex;"><span>        route6 fe80::/64
+</span></span><span style="display:flex;"><span>        route6 ff00::/8
+</span></span></code></pre></div><p>Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah</p>
+<ol>
+<li>ipv4 192.168.120.19</li>
+<li>ipv6 fe80::1a37:a13:b117:ff74</li>
+</ol>
   </p>
 
   
@@ -646,11 +686,16 @@ ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74
   </header>
 
   <p>
-  Baru beberapa hari memakai (lagi) NetworkManager, sudah bermasalah (lagi).
-device not ready begitulah&hellip;.
-Padahal network interface-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai NetworkManager. Solusinya dari berbagai referensi (lupa mencatat linknya)
-echo &#34;managed=true&#34; &gt;&gt; /etc/NetworkManager/NetworkManager.conf Tapi, ternyata ini kemudian munculkan warning di syslog
-Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] config: unknown key &#39;managed&#39; in section [main] of file &#39;/etc/NetworkManager/NetworkManager.conf Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal).
+  <p>Baru beberapa hari memakai (lagi) <strong>NetworkManager</strong>, sudah bermasalah (lagi).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>device not ready
+</span></span></code></pre></div><p><img src="https://sasongko.web.id/gambar/networkmanager-device-not-ready.png" alt=""></p>
+<p>begitulah&hellip;.</p>
+<p>Padahal <em>network interface</em>-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai <strong>NetworkManager</strong>.
+Solusinya dari berbagai referensi (lupa mencatat linknya)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;managed=true&#34;</span> &gt;&gt; /etc/NetworkManager/NetworkManager.conf
+</span></span></code></pre></div><p>Tapi, ternyata ini kemudian munculkan <em>warning</em> di <strong>syslog</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Aug  <span style="color:#ae81ff">9</span> 12:04:53 localhost NetworkManager<span style="color:#f92672">[</span>1047<span style="color:#f92672">]</span>: &lt;warn&gt;  <span style="color:#f92672">[</span>1596949493.8398<span style="color:#f92672">]</span> config: unknown key <span style="color:#e6db74">&#39;managed&#39;</span> in section <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> of file <span style="color:#960050;background-color:#1e0010">&#39;</span>/etc/NetworkManager/NetworkManager.conf
+</span></span></code></pre></div><p>Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal). Sampai sekarang belum terjadi lagi (dan semoga tidak akan terjadi lagi. Saya lelah dengan kerewelan <strong>NetworkManager</strong>).</p>
   </p>
 
   
@@ -698,10 +743,15 @@ Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] co
   </header>
 
   <p>
-  Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan wicd dari repo slackware current.
-extra/wicd/wicd-1.7.4-x86_64-3.txz: Removed.
-This is unmaintained, possibly insecure, and doesn&rsquo;t work with Python versions newer than 2.7.18. NetworkManager is a better choice these days.
-Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripada NetworkManager. Kenyamanan ini sebenarnya karena saya tidak mau repot, NetworkManager seringkali timbulkan masalah, salah satunya mengatur hostname dan domain. Keduanya saya kosongi. Mengapa?
+  <p>Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan <strong>wicd</strong> dari repo <strong>slackware current</strong>.</p>
+<blockquote>
+<p>extra/wicd/wicd-1.7.4-x86_64-3.txz:  Removed.</p>
+<blockquote>
+<p>This is unmaintained, possibly insecure, and doesn&rsquo;t work with Python
+versions newer than 2.7.18. NetworkManager is a better choice these days.</p>
+</blockquote>
+</blockquote>
+<p>Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan <strong>wicd</strong> daripada <strong>NetworkManager</strong>. Kenyamanan ini sebenarnya karena saya tidak mau repot, <strong>NetworkManager</strong> seringkali timbulkan masalah, salah satunya mengatur <em>hostname</em> dan domain. Keduanya saya kosongi. Mengapa? Saya belum kepikiran nama apa yang cocok. Hehehe&hellip;&hellip;</p>
   </p>
 
   
@@ -751,7 +801,7 @@ Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripad
   </header>
 
   <p>
-  Pagi ini, refreshing dengan berganti desktop environment (DE) memakai Window Maker (WM). DE yang jarang digunakan karena biasanya memakai XFCE. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk tethering. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong Network Manager atau Wicd aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah root.
+  <p>Pagi ini, <em>refreshing</em> dengan berganti <em>desktop environment (DE)</em> memakai <strong>Window Maker (WM)</strong>. DE yang jarang digunakan karena biasanya memakai <strong>XFCE</strong>. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk <em>tethering</em>. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong <strong>Network Manager</strong> atau <strong>Wicd</strong> aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah <em>root</em>. Di sini <!-- raw HTML omitted -->$<!-- raw HTML omitted --> maksudnya adalah tetap dilakukan oleh <em>root</em>. Untuk memudahkan <em>syntax highlighting</em> karena kalau <em>command</em>-nya ditulis dengan <!-- raw HTML omitted -->#<!-- raw HTML omitted --> akan terbaca sebagai komentar sehingga tidak begitu jelas terbacanya.</p>
   </p>
 
   
@@ -797,8 +847,30 @@ Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripad
   </header>
 
   <p>
-  Entah mengapa tadi kepikiran untuk jalankan ifconfig -a. Ternyata kemudian ada output yang menarik
-eth0: flags=4099&lt;UP,BROADCAST,MULTICAST&gt; mtu 1500 ether c8:5b:76:66:51:6a txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt; mtu 65536 inet 127.0.0.1 netmask 255.0.0.0 inet6 ::1 prefixlen 128 scopeid 0x10&lt;host&gt; loop txqueuelen 1000 (Local Loopback) RX packets 0 bytes 0 (0.
+  <p>Entah mengapa tadi kepikiran untuk jalankan <!-- raw HTML omitted -->ifconfig -a<!-- raw HTML omitted -->. Ternyata kemudian ada <em>output</em> yang menarik</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eth0: flags<span style="color:#f92672">=</span>4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu <span style="color:#ae81ff">1500</span>
+</span></span><span style="display:flex;"><span>        ether c8:5b:76:66:51:6a  txqueuelen <span style="color:#ae81ff">1000</span>  <span style="color:#f92672">(</span>Ethernet<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        TX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lo: flags<span style="color:#f92672">=</span>73&lt;UP,LOOPBACK,RUNNING&gt;  mtu <span style="color:#ae81ff">65536</span>
+</span></span><span style="display:flex;"><span>        inet 127.0.0.1  netmask 255.0.0.0
+</span></span><span style="display:flex;"><span>        inet6 ::1  prefixlen <span style="color:#ae81ff">128</span>  scopeid 0x10&lt;host&gt;
+</span></span><span style="display:flex;"><span>        loop  txqueuelen <span style="color:#ae81ff">1000</span>  <span style="color:#f92672">(</span>Local Loopback<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        TX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wlan1: flags<span style="color:#f92672">=</span>4098&lt;BROADCAST,MULTICAST&gt;  mtu <span style="color:#ae81ff">1500</span>
+</span></span><span style="display:flex;"><span>        ether ca:b0:da:b5:3d:75  txqueuelen <span style="color:#ae81ff">1000</span>  <span style="color:#f92672">(</span>Ethernet<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        TX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
+</span></span></code></pre></div><p>Menariknya adalah angka index <em>interface</em>-nya. Semua 0 kecuali <!-- raw HTML omitted -->wlan<!-- raw HTML omitted --> yang 1 sendiri. Sebenarnya <em>no problem</em> sih, cuma ga sedap dipandang aja. Kalau indexnya kompak 0 kan cakep. Hahahaha&hellip;..</p>
   </p>
 
   

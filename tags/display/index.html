@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Display &middot; Catatan Sasongko</title>
 
@@ -260,9 +260,12 @@
   </header>
 
   <p>
-  Seamonkey adalah salah satu web browser yang secara default terinstall di slackware. Ketika login menggunakan SDDM dan mengaktifkan lingkungan native wayland, seamonkey tidak bisa dijalankan.
-$ seamonkey Error: cannot open display: :1 Solusinya
-$ GDK_BACKEND=x11 seamonkey 
+  <p><strong>Seamonkey</strong> adalah salah satu <em>web browser</em> yang secara default terinstall di <strong>slackware</strong>. Ketika login menggunakan <strong>SDDM</strong> dan mengaktifkan lingkungan <em>native wayland</em>, <strong>seamonkey</strong> tidak bisa dijalankan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ seamonkey
+</span></span><span style="display:flex;"><span>Error: cannot open display: :1
+</span></span></code></pre></div><p>Solusinya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ GDK_BACKEND<span style="color:#f92672">=</span>x11 seamonkey
+</span></span></code></pre></div>
   </p>
 
   
@@ -304,9 +307,11 @@ $ GDK_BACKEND=x11 seamonkey
   </header>
 
   <p>
-  Pengaturan brightness bisa dilakukan dengan melakukan assign nilai pada
-/sys/class/backlight/intel_backlight/brightness Adapun nilai maksimal yang bisa diset ada di
-/sys/class/backlight/intel_backlight/max_brightness Oiya, di atas menggunakan graphics intel jadi intel_backlight.
+  <p>Pengaturan <em>brightness</em> bisa dilakukan dengan melakukan <em>assign</em> nilai pada</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/sys/class/backlight/intel_backlight/brightness
+</span></span></code></pre></div><p>Adapun nilai maksimal yang bisa diset ada di</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/sys/class/backlight/intel_backlight/max_brightness
+</span></span></code></pre></div><p>Oiya, di atas menggunakan <em>graphics</em> <strong>intel</strong> jadi <em>intel_backlight</em>.</p>
   </p>
 
   
@@ -350,9 +355,11 @@ $ GDK_BACKEND=x11 seamonkey
   </header>
 
   <p>
-  Secara default tombol Minimize/Iconify, Maximize dan Close pada window fluxbox terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian
-session.screen0.titlebar.right: Minimize Maximize Close Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian
-session.screen0.titlebar.left: 
+  <p>Secara <em>default</em> tombol Minimize/Iconify, Maximize dan Close pada window <strong>fluxbox</strong> terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>session.screen0.titlebar.right: Minimize Maximize Close
+</span></span></code></pre></div><p>Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>session.screen0.titlebar.left:
+</span></span></code></pre></div>
   </p>
 
   
@@ -396,9 +403,11 @@ session.screen0.titlebar.left:
   </header>
 
   <p>
-  Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-charge. Alhasil laptop mati seketika. Dinyalakan lagi (sambil charging tentunya) gagal masuk ke X.
-xauth: file /home/xyz/.serverauth.2909 does not exist Solusinya simpel
-$ rm .serverauth* 
+  <p>Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-<em>charge</em>. Alhasil laptop mati seketika. Dinyalakan lagi (sambil <em>charging</em> tentunya) gagal masuk ke <strong>X</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>xauth: file /home/xyz/.serverauth.2909 does not exist
+</span></span></code></pre></div><p>Solusinya simpel</p>
+<pre tabindex="0"><code>$ rm .serverauth*
+</code></pre>
   </p>
 
   
@@ -440,8 +449,9 @@ $ rm .serverauth*
   </header>
 
   <p>
-  Untuk mengetahui sedang aktif di dalam environment X11 atau wayland
-$ echo $XDG_SESSION_TYPE 
+  <p>Untuk mengetahui sedang aktif di dalam <em>environment</em> <strong>X11</strong> atau <strong>wayland</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ echo $XDG_SESSION_TYPE
+</span></span></code></pre></div>
   </p>
 
   
@@ -485,9 +495,9 @@ $ echo $XDG_SESSION_TYPE
   </header>
 
   <p>
-  Kecerahan monitor / brightness 100% membuat mata cepat lelah. Apalagi kalau secara default begitu masuk X brightness-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan Computer Vision Syndrome.
-Berapa persen brightness yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur brightness bisa gunakan xbacklight.
-Untuk mengetahui berapa persen brightness yang digunakan saat ini xbacklight. Sedangkan untuk mengubahnya xbacklight -set persen. Contoh akan diatur brightness-nya 15%:
+  <p>Kecerahan monitor / <em>brightness</em> 100% membuat mata cepat lelah. Apalagi kalau secara <em>default</em> begitu masuk X <em>brightness</em>-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan <em>Computer Vision Syndrome</em>.</p>
+<p>Berapa persen <em>brightness</em> yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur <em>brightness</em> bisa gunakan <!-- raw HTML omitted -->xbacklight<!-- raw HTML omitted -->.</p>
+<p>Untuk mengetahui berapa persen <em>brightness</em> yang digunakan saat ini <!-- raw HTML omitted -->xbacklight<!-- raw HTML omitted -->. Sedangkan untuk mengubahnya <!-- raw HTML omitted -->xbacklight -set persen<!-- raw HTML omitted -->. Contoh akan diatur <em>brightness</em>-nya 15%:</p>
   </p>
 
   

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,61 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/">Menggunakan rsync</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/internet-download-manager">internet-download-manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <h1 id="kegunaan-rsync">Kegunaan rsync</h1>
+<p><strong>rsync</strong> berguna untuk transfer file secara efisien. Dibandingkan dengan <strong>cp</strong> atau <strong>mv</strong>, <strong>rsync</strong> memiliki keunggulan :</p>
+<ol>
+<li>Bebas pilih-pilih file maupun direktori yang akan ditransfer karena ada fitur <em>include</em> dan <em>exclude</em></li>
+<li>Apabila gagal, misalnya karena <em>storage</em> penuh atau &ldquo;kecelakaan&rdquo; salah klik sehingga ter-<em>close</em>, dapat dilanjutkan tanpa mengulang dari awal sehingga waktunya tentu lebih cepat</li>
+</ol>
+<p>Dibandingkan <strong>wget</strong>, <strong>rsync</strong> mendukung penggunaan <em>wildcard</em> dan secara <em>default</em> <strong>rsync</strong> <em>resumeable</em>.</p>
+<p>Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/">Xfce 4.16 Masuk Current</a></h2>
 
     <div class="post-meta">
@@ -261,10 +316,17 @@
   </header>
 
   <p>
-  Pagi ini, Patrick memasukkan xfce 4.16 ke slackware current main tree tanpa singgah di /testing. Interface xfce 4.16 lebih cantik dan menarik dibanding sebelumnya. Demikian pula icons-nya.
-Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown xfce stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses development.
-Ada beberapa hal yang menjadi catatan buat penulis terkait xfce 4.16 ini, yaitu
-Interface lebih cantik dan menarik Penambahan xfce4-panel-profiles yang memungkinkan untuk menyimpan profil/konfigurasi panel.
+  <p>Pagi ini, Patrick memasukkan <strong>xfce 4.16</strong> ke <em>slackware current main tree</em> tanpa singgah di /testing. <em>Interface</em> <strong>xfce 4.16</strong> lebih cantik dan menarik dibanding sebelumnya. Demikian pula <em>icons</em>-nya.</p>
+<p>Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown <strong>xfce</strong> stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses <em>development</em>.</p>
+<p>Ada beberapa hal yang menjadi catatan buat penulis terkait <strong>xfce 4.16</strong> ini, yaitu</p>
+<ol>
+<li><em>Interface</em> lebih cantik dan menarik</li>
+<li>Penambahan <strong>xfce4-panel-profiles</strong> yang memungkinkan untuk menyimpan profil/konfigurasi panel. Sangat bermanfaat bagi mereka yang suka berganti-ganti tampilan panel, ukuran dan letak panel, serta <em>shortcut</em> apa saja yang berada di panel.</li>
+<li>Perubahan letak tombol <strong>Open</strong> atau <strong>Save</strong> pada <em>dialog box</em> yang sebelumnya di bawah menjadi di atas. Ini memudahkan pengguna. Tidak usah geser <em>mouse</em> terlalu jauh atau repot <strong>tab</strong> berkali-kali.</li>
+<li>Penambahan <strong>libgtop</strong> yang memungkinkan <em>user</em> mengetahui informasi singkat sistem melalui tab <strong>System</strong> pada <strong>About Xfce</strong></li>
+</ol>
+<p><img src="https://sasongko.web.id/gambar/about-xfce-4.14.png" alt="about xfce 4.14">
+<img src="https://sasongko.web.id/gambar/about-xfce-4.16.png" alt="about xfce 4.16"></p>
   </p>
 
   
@@ -312,9 +374,18 @@ Interface lebih cantik dan menarik Penambahan xfce4-panel-profiles yang memungki
   </header>
 
   <p>
-  Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan dmesg
-$ dmesg -T | head -1 [Fri Dec 25 00:39:42 2020] Linux version 5.10.2 Penjelasan command :
-eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp | adalah pipe, untu menjadikan output dmesg sebagai input untuk head head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya [Fri Dec 25 00:39:42 2020] Linux version 5.
+  <p>Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan <strong>dmesg</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ dmesg -T | head -1 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Fri Dec <span style="color:#ae81ff">25</span> 00:39:42 2020<span style="color:#f92672">]</span> Linux version 5.10.2 
+</span></span></code></pre></div><p>Penjelasan command :</p>
+<ol>
+<li>eksekusi sebagai root</li>
+<li>opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp</li>
+<li>| adalah pipe, untu menjadikan output dmesg sebagai input untuk head</li>
+<li>head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya</li>
+<li>[Fri Dec 25 00:39:42 2020] Linux version 5.10.2 # baris 1 yang kami tuliskan hanya sampai sini</li>
+</ol>
+<p>Dari <em>output</em> tersebut tampak bahwa komputer dinyalakan pada hari Jum&rsquo;at, 25 Desember 2020 sekitar jam 00.39.</p>
   </p>
 
   
@@ -362,8 +433,13 @@ eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg 
   </header>
 
   <p>
-  Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam main tree slackware current. Saat catatan ini dituliskan, sudah &ldquo;mendarat&rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk start up. Yang dimaksud start up di sini adalah kondisi dari eksekusi elilo dan initrd sampai muncul login prompt.
-$ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segment Routing with IPv6 [ 32.
+  <p>Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam <em>main tree</em> <strong>slackware current</strong>. Saat catatan ini dituliskan, sudah &ldquo;mendarat&rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk <em>start up</em>. Yang dimaksud <em>start up</em> di sini adalah kondisi dari eksekusi <strong>elilo</strong> dan <strong>initrd</strong> sampai muncul <em>login prompt</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ dmesg | tail -5
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   20.687205<span style="color:#f92672">]</span> Segment Routing with IPv6
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   20.687213<span style="color:#f92672">]</span> RPL Segment Routing with IPv6
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   32.472700<span style="color:#f92672">]</span> RTL8208 Fast Ethernet r8169-300:00: attached PHY driver <span style="color:#f92672">[</span>RTL8208 Fast Ethernet<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>mii_bus:phy_addr<span style="color:#f92672">=</span>r8169-300:00, irq<span style="color:#f92672">=</span>IGNORE<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   32.750379<span style="color:#f92672">]</span> r8169 0000:03:00.0 eth0: Link is Down
+</span></span></code></pre></div><p>Penjelasan <em>command</em></p>
   </p>
 
   
@@ -407,58 +483,20 @@ $ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segmen
   </header>
 
   <p>
-  Mengapa beralih dari jekyll ke hugo? Keunggulan hugo :
-Instalnya simpel. Hanya berupa binary. Jekyll butuh banyak dependensi tersedia di SBo lebih memudahkan dalam install, upgrade, remove kalau sudah tidak perlu cari pengalaman baru. selama 3 tahun ini menggunakan jekyll simpel,banyak dokumentasi dan theme yang free. Hugo setelah dicermati memberikan prospek yang tidak kalah bagus dibanding jekyll. Bagus di sini maksudnya adalah tergantung selera penulis. Hehehehe Sedangkan kelemahan hugo adalah tidak didukung secara resmi oleh Github Page.
+  <p>Mengapa beralih dari <strong>jekyll</strong> ke <strong>hugo</strong>?
+Keunggulan <strong>hugo</strong> :</p>
+<ol>
+<li>Instalnya simpel. Hanya berupa binary. <strong>Jekyll</strong> butuh banyak dependensi</li>
+<li>tersedia di <strong>SBo</strong> lebih memudahkan dalam <em>install, upgrade, remove</em> kalau sudah tidak perlu</li>
+<li>cari pengalaman baru. selama 3 tahun ini menggunakan <strong>jekyll</strong> simpel,banyak dokumentasi dan <em>theme</em> yang <em>free</em>. <strong>Hugo</strong> setelah dicermati memberikan prospek yang tidak kalah bagus dibanding <strong>jekyll</strong>. Bagus di sini maksudnya adalah tergantung selera penulis. Hehehehe</li>
+</ol>
+<p>Sedangkan kelemahan <strong>hugo</strong> adalah tidak  didukung secara resmi oleh <strong>Github Page</strong>. Namun, tetap bisa menggunakan <em>hosting</em> <strong>github page</strong>. Begini proses migrasinya.</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2020-12-20-beralih-hugo/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-10-22-akses-whatsapp-web-seamonkey/">Akses WhatsApp Web via Seamonkey</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>22 Oct 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/firefox">firefox</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Beberapa waktu ini saya lebih sering browsing dengan Seamonkey karena lebih ringan dan cepat (penilaian subjektif). Overall lancar jaya aman terkendali. Namun, ada 1 yang tidak bisa dilakukan : akses WhatsApp Web!
-Untuk mengatasinya,
-about:config Muncul peringatan. Klik I accept the risk! Isikan pada Search: general.useragent.compatMode.strict-firefox Ubah valuenya dari false ke true Restart Seamonkey 
-  </p>
-
   
 </article>
 
@@ -471,7 +509,7 @@ about:config Muncul peringatan. Klik I accept the risk! Isikan pada Search: gene
   
   <a href="https://sasongko.web.id/page/29/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;30 / 65&nbsp;</span>
+  <span>&nbsp;30 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/31/"><i class="fa fa-chevron-right"></i></a>
   

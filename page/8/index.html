@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,67 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2022-05-28-if-else-perl/">If else perl</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>28 May 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Penyeleksian kondisi di <strong>perl</strong> dapat menggunakan <em>syntax</em> <!-- raw HTML omitted -->if&hellip;else<!-- raw HTML omitted --> dengan format</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ( kondisi ) {
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">....</span>
+</span></span><span style="display:flex;"><span>	} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">....</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><p>Contoh</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#39;say&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;user&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ( $username <span style="color:#f92672">eq</span> <span style="color:#e6db74">&#34;nama&#34;</span> ) {
+</span></span><span style="display:flex;"><span>    say <span style="color:#e6db74">&#34;Oke&#34;</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    say <span style="color:#e6db74">&#34;Ulangi lagi....&#34;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-05-26-sinkronisasi-official-repo/">Sinkronisasi official repo slackware</a></h2>
 
     <div class="post-meta">
@@ -261,9 +322,10 @@
   </header>
 
   <p>
-  Package management atas packages yang ada di official repo pda slackware dapat dilakukan dengan dengan slackpkg. Sinkronisasi perlu dilakukan agar packages yang diinstall merupakan versi terbaru sesuai yang disediakan di repo. Sinkronisasi ini meliputi 2 kegiatan, yaitu sinkronisasi database packages dan versi packages.
-Sinkronisasi database packages meliputi list apa saja file yang ada di repo, checksum, dll. Dilakukan dengan
-slackpkg update Khusus untuk versi packages, menyamakan versi terinstall dengan versi repo untuk semua packages
+  <p><em>Package management</em> atas <em>packages</em> yang ada di <em>official repo</em> pda <strong>slackware</strong> dapat dilakukan dengan dengan <strong>slackpkg</strong>. Sinkronisasi perlu dilakukan agar <em>packages</em> yang diinstall merupakan versi terbaru sesuai yang disediakan di repo. Sinkronisasi ini meliputi 2 kegiatan, yaitu sinkronisasi <em>database packages</em> dan versi <em>packages</em>.</p>
+<p>Sinkronisasi <em>database packages</em> meliputi <em>list</em> apa saja file yang ada di repo, checksum, dll. Dilakukan dengan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>slackpkg update
+</span></span></code></pre></div><p>Khusus untuk versi <em>packages</em>, menyamakan versi terinstall dengan versi repo untuk semua <em>packages</em></p>
   </p>
 
   
@@ -309,8 +371,8 @@ slackpkg update Khusus untuk versi packages, menyamakan versi terinstall dengan 
   </header>
 
   <p>
-  Identifikasi RAM yang ada di komputer merupakan hal mutlak untuk penggantian, upgrade ataupun sekedar membersihkan RAM. Informasi awal tentang RAM bisa diperoleh tanpa membongkar komputer ataupun laptop. Hal ini sangat bermanfaat bagi pengguna yang tidak punya keterampilan bongkar pasang komputer. Apalagi kalau masih garansi, kalau dibongkar bukan teknisi service center resminya maka garansinya hangus.
-Untuk mengetahui spek RAM mudah. Bagi slackers (pengguna Slackware) tidak perlu repot menginstall macam-macam. Tool-nya sudah tersedia.
+  <p>Identifikasi RAM yang ada di komputer merupakan hal mutlak untuk penggantian, upgrade ataupun sekedar membersihkan RAM. Informasi awal tentang RAM bisa diperoleh tanpa membongkar komputer ataupun laptop. Hal ini sangat bermanfaat bagi pengguna yang tidak punya keterampilan bongkar pasang komputer. Apalagi kalau masih garansi, kalau dibongkar bukan teknisi <em>service center</em> resminya maka garansinya hangus.</p>
+<p>Untuk mengetahui spek RAM mudah. Bagi <strong>slackers</strong> (pengguna <strong>Slackware</strong>) tidak perlu repot menginstall macam-macam. <em>Tool</em>-nya sudah tersedia.</p>
   </p>
 
   
@@ -356,10 +418,13 @@ Untuk mengetahui spek RAM mudah. Bagi slackers (pengguna Slackware) tidak perlu 
   </header>
 
   <p>
-  PSPP merupakan software statistika yang open source, ringan tetapi sangat fungsional dan powerful. Ringan karena installer-nya hanya beberapa MB. Jauh lebih kecil daripada software sejenis yang proprietary. Fungsional dan powerful karena berbagai analisis dapat dilakukan dengan PSPP.
-PSPP bisa dijalankan dengan tampilan text ataupun grafis. Uktuk memulai pspp tampilan text
-$ pspp PSPP&gt; Untuk membuka file, pada PSPP prompt
-PSPP&gt; get file=&#39;tulis-nama-filenya yang berekstensi sav&#39;. Bagian dalam tanda kutip adalah file yang akan dibuka.
+  <p>PSPP merupakan <em>software</em> statistika yang <em>open source</em>, ringan tetapi sangat fungsional dan <em>powerful</em>. Ringan karena <em>installer</em>-nya hanya beberapa MB. Jauh lebih kecil daripada <em>software</em> sejenis yang <em>proprietary</em>. Fungsional dan <em>powerful</em> karena berbagai analisis dapat dilakukan dengan PSPP.</p>
+<p>PSPP bisa dijalankan dengan tampilan <em>text</em> ataupun grafis. Uktuk memulai pspp tampilan <em>text</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pspp
+</span></span><span style="display:flex;"><span>PSPP&gt;
+</span></span></code></pre></div><p>Untuk membuka file, pada <em>PSPP prompt</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PSPP&gt; get file<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tulis-nama-filenya yang berekstensi sav&#39;</span>.
+</span></span></code></pre></div><p>Bagian dalam tanda kutip adalah file yang akan dibuka.</p>
   </p>
 
   
@@ -405,58 +470,11 @@ PSPP&gt; get file=&#39;tulis-nama-filenya yang berekstensi sav&#39;. Bagian dala
   </header>
 
   <p>
-  Secara default, dd tidak menampilkan progress. Untuk menampilkannya tambahkan
-status=progress 
+  <p>Secara default, <strong>dd</strong> tidak menampilkan progress. Untuk menampilkannya tambahkan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>status<span style="color:#f92672">=</span>progress
+</span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/">Pipewire di WindowMaker</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Apr 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Lama tidak menggunakan, hati ini rindu pada WindowMaker. Segera mengalihkan .xinitrc ke xinitrc.wmaker. Beberapa hari kemudian, merasa ada yang janggal. Suasana menjadi sunyi senyap. Tanpa suara. Padahal ketika menggunakan KDE Plasma tidak ada masalah dengan sound system.
-Hati ini baru sadar bahwa sound-nya telah diserahterimakan dari pulseaudio kepada pipewire. Baiklah, mari tambahkan beberapa baris berikut ke ~/GNUstep/Library/WindowMaker/autostart
-#pipewire /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire /usr/bin/pipewire &amp; /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire-pulse /usr/bin/pipewire-pulse &amp; /usr/bin/daemon -frB --pidfiles=~/.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -469,7 +487,7 @@ Hati ini baru sadar bahwa sound-nya telah diserahterimakan dari pulseaudio kepad
   
   <a href="https://sasongko.web.id/page/7/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;8 / 65&nbsp;</span>
+  <span>&nbsp;8 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/9/"><i class="fa fa-chevron-right"></i></a>
   

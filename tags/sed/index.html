@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Sed &middot; Catatan Sasongko</title>
 
@@ -260,9 +260,19 @@
   </header>
 
   <p>
-  Mungkin ini adalah catatan dengan judul terpanjang yang pernah kami tulis. Catatan ini berisi tentang bagaimana cara menghapus baris dari awal sampai dengan baris yang berawalan dengan kata-kata spesifik.
-Contoh, punya file teks lagu.txt berisi sebagai berikut
-kelelawar by koes plus kelelawar sayapnya hitam terbang rendah di tengah malam pagi-pagi mereka pulang di dahan pohon bergelantungan hitam hitam hitam Teks tersebut dihapus sebagian, yaitu mulai baris pertama sampai dengan pagi-pagi. Dengan kata lain hanya tersisa di dahan pohon dst.
+  <p>Mungkin ini adalah catatan dengan judul terpanjang yang pernah kami tulis. Catatan ini berisi tentang bagaimana cara menghapus baris dari awal sampai dengan baris yang berawalan dengan kata-kata spesifik.</p>
+<p>Contoh, punya file teks lagu.txt berisi sebagai berikut</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>kelelawar
+</span></span><span style="display:flex;"><span>by koes plus
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>kelelawar sayapnya hitam
+</span></span><span style="display:flex;"><span>terbang rendah di tengah malam
+</span></span><span style="display:flex;"><span>pagi-pagi mereka pulang
+</span></span><span style="display:flex;"><span>di dahan pohon bergelantungan
+</span></span><span style="display:flex;"><span>hitam
+</span></span><span style="display:flex;"><span>hitam
+</span></span><span style="display:flex;"><span>hitam
+</span></span></code></pre></div><p>Teks tersebut dihapus sebagian, yaitu mulai baris pertama sampai dengan pagi-pagi. Dengan kata lain hanya tersisa di dahan pohon dst.</p>
   </p>
 
   
@@ -308,11 +318,18 @@ kelelawar by koes plus kelelawar sayapnya hitam terbang rendah di tengah malam p
   </header>
 
   <p>
-  Ini adalah keisengan di kala WFH alias work from home. Melakukan ekstraksi waktu pada changelog slackware64-current yang terakhir kami update 8 Januari 2021.
-Changelognya terdiri dari 4 bagian:
-Waktu Packages yang mengalami perubahan (Upgraded, Removed, Added, Rebuilt) Keterangan perubahan Pembatas update antarwaktu (+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+) Akan diambil yang no.1 saja.
-Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.txt.
-$ sed &#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!
+  <p>Ini adalah keisengan di kala WFH alias <em>work from home</em>. Melakukan ekstraksi waktu pada <em>changelog</em> <strong>slackware64-current</strong> yang terakhir kami update 8 Januari 2021.</p>
+<p>Changelognya terdiri dari 4 bagian:</p>
+<ol>
+<li>Waktu</li>
+<li><em>Packages</em> yang mengalami perubahan (<em>Upgraded, Removed, Added, Rebuilt</em>)</li>
+<li>Keterangan perubahan</li>
+<li>Pembatas <em>update</em> antarwaktu (+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+)</li>
+</ol>
+<p>Akan diambil yang no.1 saja.</p>
+<p>Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.txt.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ sed <span style="color:#e6db74">&#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!d&#39;</span> /var/lib/slackpkg/ChangeLog.txt &gt; changelog-date.txt
+</span></span></code></pre></div><p>Hapus semua baris yang berakhiran dengan tanda titik.</p>
   </p>
 
   
@@ -358,9 +375,10 @@ $ sed &#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!
   </header>
 
   <p>
-  Dulu, saat masih menggunakan BlankOn, ternyata pada beberapa postingan di blog ini ada ketidakseragaman, yaitu tag blankOn dan blankon yang sebenarnya secara esensial sama saja.
-Sekarang sudah diperbaiki. Kata &ldquo;blankOn&rdquo; yang ada di tiap file diganti &ldquo;blankon&rdquo;. Penggantian ini secara massal saja biar lebih praktis. Filenya di direktori _posts.
-sed -i &#39;s/blankOn/blankon/g&#39; _posts/*.md 
+  <p>Dulu, saat masih menggunakan BlankOn, ternyata pada beberapa postingan di blog ini ada ketidakseragaman, yaitu tag <strong>blankOn</strong> dan <strong>blankon</strong> yang sebenarnya secara esensial sama saja.</p>
+<p>Sekarang sudah diperbaiki. Kata &ldquo;blankOn&rdquo; yang ada di tiap file diganti &ldquo;blankon&rdquo;. Penggantian ini secara massal saja biar lebih praktis. Filenya di direktori _posts.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;s/blankOn/blankon/g&#39;</span> _posts/*.md
+</span></span></code></pre></div>
   </p>
 
   

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,62 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-10-22-akses-whatsapp-web-seamonkey/">Akses WhatsApp Web via Seamonkey</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>22 Oct 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/firefox">firefox</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Beberapa waktu ini saya lebih sering <em>browsing</em> dengan <strong>Seamonkey</strong> karena lebih ringan dan cepat (penilaian subjektif). <em>Overall</em> lancar jaya aman terkendali. Namun, ada 1 yang tidak bisa dilakukan : akses <strong>WhatsApp Web</strong>!</p>
+<p><img src="https://sasongko.web.id/gambar/seamonkey-gagal-buka-wa-web.png" alt="WhatsApp Web tidak bisa diakses dengan Seamonkey"></p>
+<p>Untuk mengatasinya,</p>
+<ol>
+<li><!-- raw HTML omitted -->about:config<!-- raw HTML omitted --></li>
+<li>Muncul peringatan. Klik <strong>I accept the risk!</strong></li>
+<li>Isikan pada <em>Search:</em> <!-- raw HTML omitted -->general.useragent.compatMode.strict-firefox<!-- raw HTML omitted --></li>
+<li>Ubah valuenya dari false ke true</li>
+<li>Restart Seamonkey</li>
+</ol>
+<p><img src="https://sasongko.web.id/gambar/seamonkey-bisa-buka-wa-web.png" alt="WhatsApp Web sudah bisa diakses dengan Seamonkey"></p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-10-22-akses-whatsapp-web-seamonkey/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-08-21-screenshot-via-adb/">Screenshot android dengan adb</a></h2>
 
     <div class="post-meta">
@@ -261,8 +317,9 @@
   </header>
 
   <p>
-  Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di external memory (sdcard) dengan nama file screenshot.png
-adb shell screencap -p /sdcard/screenshot.png 
+  <p>Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di <em>external memory</em> (sdcard) dengan nama file screenshot.png</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell screencap -p /sdcard/screenshot.png
+</span></span></code></pre></div>
   </p>
 
   
@@ -304,8 +361,10 @@ adb shell screencap -p /sdcard/screenshot.png
   </header>
 
   <p>
-  R_HOME adalah direktori tempat R diinstall. Maksudnya, pada direktori inilah terdapat file binary dan konfigurasinya. Pada linux khususnya slackware, R_HOME ada di
-/usr/lib{,64}/R # tergantung arsitekturnya apakah 32bit atau 64bit. 
+  <p>R_HOME adalah direktori tempat R diinstall. Maksudnya, pada direktori inilah terdapat file <em>binary</em> dan konfigurasinya. Pada linux khususnya <strong>slackware</strong>, R_HOME ada di</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/usr/lib<span style="color:#f92672">{</span>,64<span style="color:#f92672">}</span>/R
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># tergantung arsitekturnya apakah 32bit atau 64bit.</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -349,11 +408,16 @@ adb shell screencap -p /sdcard/screenshot.png
   </header>
 
   <p>
-  Baru beberapa hari memakai (lagi) NetworkManager, sudah bermasalah (lagi).
-device not ready begitulah&hellip;.
-Padahal network interface-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai NetworkManager. Solusinya dari berbagai referensi (lupa mencatat linknya)
-echo &#34;managed=true&#34; &gt;&gt; /etc/NetworkManager/NetworkManager.conf Tapi, ternyata ini kemudian munculkan warning di syslog
-Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] config: unknown key &#39;managed&#39; in section [main] of file &#39;/etc/NetworkManager/NetworkManager.conf Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal).
+  <p>Baru beberapa hari memakai (lagi) <strong>NetworkManager</strong>, sudah bermasalah (lagi).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>device not ready
+</span></span></code></pre></div><p><img src="https://sasongko.web.id/gambar/networkmanager-device-not-ready.png" alt=""></p>
+<p>begitulah&hellip;.</p>
+<p>Padahal <em>network interface</em>-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai <strong>NetworkManager</strong>.
+Solusinya dari berbagai referensi (lupa mencatat linknya)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;managed=true&#34;</span> &gt;&gt; /etc/NetworkManager/NetworkManager.conf
+</span></span></code></pre></div><p>Tapi, ternyata ini kemudian munculkan <em>warning</em> di <strong>syslog</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Aug  <span style="color:#ae81ff">9</span> 12:04:53 localhost NetworkManager<span style="color:#f92672">[</span>1047<span style="color:#f92672">]</span>: &lt;warn&gt;  <span style="color:#f92672">[</span>1596949493.8398<span style="color:#f92672">]</span> config: unknown key <span style="color:#e6db74">&#39;managed&#39;</span> in section <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> of file <span style="color:#960050;background-color:#1e0010">&#39;</span>/etc/NetworkManager/NetworkManager.conf
+</span></span></code></pre></div><p>Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal). Sampai sekarang belum terjadi lagi (dan semoga tidak akan terjadi lagi. Saya lelah dengan kerewelan <strong>NetworkManager</strong>).</p>
   </p>
 
   
@@ -401,58 +465,21 @@ Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] co
   </header>
 
   <p>
-  Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan wicd dari repo slackware current.
-extra/wicd/wicd-1.7.4-x86_64-3.txz: Removed.
-This is unmaintained, possibly insecure, and doesn&rsquo;t work with Python versions newer than 2.7.18. NetworkManager is a better choice these days.
-Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripada NetworkManager. Kenyamanan ini sebenarnya karena saya tidak mau repot, NetworkManager seringkali timbulkan masalah, salah satunya mengatur hostname dan domain. Keduanya saya kosongi. Mengapa?
+  <p>Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan <strong>wicd</strong> dari repo <strong>slackware current</strong>.</p>
+<blockquote>
+<p>extra/wicd/wicd-1.7.4-x86_64-3.txz:  Removed.</p>
+<blockquote>
+<p>This is unmaintained, possibly insecure, and doesn&rsquo;t work with Python
+versions newer than 2.7.18. NetworkManager is a better choice these days.</p>
+</blockquote>
+</blockquote>
+<p>Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan <strong>wicd</strong> daripada <strong>NetworkManager</strong>. Kenyamanan ini sebenarnya karena saya tidak mau repot, <strong>NetworkManager</strong> seringkali timbulkan masalah, salah satunya mengatur <em>hostname</em> dan domain. Keduanya saya kosongi. Mengapa? Saya belum kepikiran nama apa yang cocok. Hehehe&hellip;&hellip;</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-06-20-edit-video-ffmpeg-lossless/">Edit video ffmpeg tanpa menurunkan kualitas</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>20 Jun 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Ketika mengedit video menggunakan ffmpeg, filter video ataupun filter yang lebih kompleks seperti menambahkan watermark, tanpa pengaturan tambahan kadang hasilnya mengecewakan. Gambar pada video menjadi pecah. Untuk meminimalisirnya, bisa ditambahkan opsi -q:v 0.
-  </p>
-
   
 </article>
 
@@ -465,7 +492,7 @@ Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripad
   
   <a href="https://sasongko.web.id/page/30/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;31 / 65&nbsp;</span>
+  <span>&nbsp;31 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/32/"><i class="fa fa-chevron-right"></i></a>
   

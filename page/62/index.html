@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,50 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2014-11-26-mencoba-blankon-liveiso/">Booting BlankOn LiveISO</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Nov 2014</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Bagi yang ingin menggunakan BlankOn, ada baiknya mencoba BlankOn dulu tanpa memasangnya. Percobaan ini biasanya disebut dengan istilah live. Umumnya percobaan ini menggunaan sarana atau media berupa DVD sehingga muncullah istilah livedvd, atau flashdisk yang kemudian memunculkan liveusb. Bisakah kita live tanpa dvd maupun usb? Bisa saja, asal kita punya ISO-nya. Kita akan me-live langsung dari komputer atau laptop yang sudah terpasang BlankOn atau distro linux lainnya. Dengan ini kita ga perlu repot membakar ISOnya ke DVD atau membuat liveusb segala. Cukup boot ISOnya.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2014-11-26-mencoba-blankon-liveiso/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/">Hapus Kernel Lama Debian</a></h2>
 
     <div class="post-meta">
@@ -261,9 +305,12 @@
   </header>
 
   <p>
-  Setelah upgrade kernel, ada yang kurang sreg. Ternyata kernelnya malah jadi ada 2. ini terlihat di grub
-OK, kernel yang lama (2.6.32-5-686) dihapus saja.
-# apt-get remove linux-image-2.6.32-5-686 kemudian restart.
+  <p>Setelah upgrade kernel, ada yang kurang sreg. Ternyata kernelnya malah jadi ada 2. ini terlihat di grub</p>
+<p><img src="https://sasongko.web.id/gambar/hapus-kernel-1.png" alt=""></p>
+<p>OK, kernel yang lama (2.6.32-5-686) dihapus saja.</p>
+<pre tabindex="0"><code># apt-get remove linux-image-2.6.32-5-686
+</code></pre><p>kemudian restart.</p>
+<p><img src="https://sasongko.web.id/gambar/hapus-kernel-2.png" alt=""></p>
   </p>
 
   
@@ -305,7 +352,13 @@ OK, kernel yang lama (2.6.32-5-686) dihapus saja.
   </header>
 
   <p>
-  Secara default, saat kita berada dalam mode pemulihan (recovery mode) tidak akan bisa tersambung internet. Untuk menyambungkannya lakukan langkah berikut. Oya kali ini penggunaan dalam virtual box setting jaringan NAT. kemudian Lalu kita cek apakah sudah tersambung dengan melakukan ping ke google Yak, sudah konek! Alhamdulillah&hellip;&hellip;
+  <p>Secara default, saat kita berada dalam mode pemulihan (recovery mode) tidak akan bisa tersambung  internet. Untuk menyambungkannya lakukan langkah berikut. Oya kali ini penggunaan dalam virtual box setting jaringan NAT.
+<img src="https://sasongko.web.id/gambar/konek-internet-recovery-1.png" alt="">
+kemudian
+<img src="https://sasongko.web.id/gambar/konek-internet-recovery-2.png" alt="">
+Lalu kita cek apakah sudah tersambung dengan melakukan ping ke google
+<img src="https://sasongko.web.id/gambar/konek-internet-recovery-3.png" alt="">
+Yak, sudah konek! Alhamdulillah&hellip;&hellip;</p>
   </p>
 
   
@@ -349,9 +402,12 @@ OK, kernel yang lama (2.6.32-5-686) dihapus saja.
   </header>
 
   <p>
-  Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.
-Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya
-$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% Clone hard disk created in format &#39;VMDK&#39;. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa Hardisk virtualnya sudah terkonversi.
+  <p>Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.</p>
+<p>Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya</p>
+<pre tabindex="0"><code>$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% 
+Clone hard disk created in format &#39;VMDK&#39;. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa
+</code></pre><p>Hardisk virtualnya sudah terkonversi.</p>
   </p>
 
   
@@ -391,53 +447,15 @@ $ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%..
   </header>
 
   <p>
-  Alhamdulillah bertambah lagi 1 pengguna BlankOn, sahabat yang sudah saya anggap seperti saudara sendiri, memberikan kepercayaan kepada BlankOn untuk menjadi sistem operasi utama di laptop pertamanya. Dari 2 distro linux yang saya tawarkan dan telah dicobanya secara live, dia lebih memilih BlankOn 9 daripada Ubuntu 13.04. Pemasangan BlankOn lancar jaya. Karena ISO yang saya punya adalah ISO sesaat setelah rilis (saya unduh tanggal 18 Februari 2014), maka saya merasa wajib untuk memperbaruinya.
+  <p>Alhamdulillah bertambah lagi 1 pengguna BlankOn, sahabat yang sudah saya anggap seperti saudara sendiri, memberikan kepercayaan kepada BlankOn untuk menjadi sistem operasi utama di laptop pertamanya. Dari 2 distro linux yang saya tawarkan dan telah dicobanya secara live, dia lebih memilih BlankOn 9 daripada Ubuntu 13.04.
+Pemasangan BlankOn lancar jaya. Karena ISO yang saya punya adalah ISO sesaat setelah rilis (saya unduh tanggal 18 Februari 2014), maka saya merasa wajib untuk memperbaruinya. <em>Upgrade</em> tidak masalah, walau sebenarnya ada kendala koneksi yang kebetulan meng-keong.
+Pemasangan virtualbox inilah masalahnya. Pemasangan menemui <em>unmet dependency</em>.</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2014-08-03-dpkg-force-overwrite/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-09-07-video-chatting-dengan-pidgin/">Video Chatting dengan Pidgin</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Jul 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  BlankOn telah menyediakan aplikasi Pidgin untuk instant messaging atau chatting. Pidgin bisa digunakan untuk ngobrol di IRC, YM, dll. Bagaimana caranya? Video karya Pak Sokhibi ini akan menunjukkan caranya chattingan IRC dengan Pidgin. Maaf, peramban web Anda tidak mendukung video ini. 
-  </p>
-
   
 </article>
 
@@ -450,7 +468,7 @@ $ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%..
   
   <a href="https://sasongko.web.id/page/61/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;62 / 65&nbsp;</span>
+  <span>&nbsp;62 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/63/"><i class="fa fa-chevron-right"></i></a>
   

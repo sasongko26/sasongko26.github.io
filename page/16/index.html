@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,61 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-08-01-dolphin-wastebin-reached-maximum-size/">Dolphin the wastebin has reached its maximum size</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Aug 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Efek samping <em>work from home, harddisk</em> laptop lebih cepat penuh. Saat menghapus file-file yang sudah tidak diperlukan, <strong>Dolphin</strong> mengeluarkan <em>warning</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Job Failed
+</span></span><span style="display:flex;"><span>The wastebin has reached its maximum size!
+</span></span><span style="display:flex;"><span>Cleanup the wastebin manually
+</span></span></code></pre></div><p>Ada 2 alternatif solusi:</p>
+<ol>
+<li>Sesuai yang ada di <em>warning</em> untuk menghapus file-file di <strong>wastebin</strong> secara manual.</li>
+<li>Mengatur ulang <strong>wastebin</strong> pada <strong>Dolphin</strong>. <strong>Wastebin</strong> diatur melalui menu <strong>Settings &ndash;&gt; Configure Dolphin</strong> klik <strong>Wastebin</strong>. Di sini kita bisa mengatur apakah file di <strong>wastebin</strong> akan dihapus secara otomatis setelah tenggat yang ditentukan. Kemudian bisa diatur pula limit kapasitas <strong>wastebin</strong>. Lalu, apakah yang akan dilakukan <strong>Dolphin</strong> ketika <strong>wastebin</strong> sudah penuh, apakah hanya memunculkan <em>warning</em>, menghapus file paling lawas atau menghapus file paling besar <em>size</em>-nya.</li>
+</ol>
+<p>Silakan dipilih sesuai kebutuhan.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-08-01-dolphin-wastebin-reached-maximum-size/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-06-24-query-sql/">Query SQL</a></h2>
 
     <div class="post-meta">
@@ -261,10 +316,15 @@
   </header>
 
   <p>
-  Relational Database Management System (RDBMS) adalah salah satu sistem database populer. Sistem pengolahan database ini menggunakan bahasa SQL (dibaca sekuel atau es kiu el). Tool yang dapat digunakan antara lain mariadb, mysql, postgresql.
-Pada RDBMS dikenal adanya hirarki atau struktur, yaitu dari tertinggi database yang terdiri atas tabel. Tabel dibentuk oleh kolom dengan data sejumlah barisnya.
-Perintah SQL ada 2
-Data Definition Language (DDL) untuk membuat, menghapus atau modifikasi struktur database Data Manipulation Language (DML) untuk insert data, query, hapus, edit data QUERY SQL Query adalah pengambilan data dari database.
+  <p><em>Relational Database Management System (RDBMS)</em> adalah salah satu sistem database populer. Sistem pengolahan database ini menggunakan bahasa <strong>SQL</strong> (dibaca sekuel atau es kiu el). <em>Tool</em> yang dapat digunakan antara lain <strong>mariadb, mysql, postgresql</strong>.</p>
+<p>Pada RDBMS dikenal adanya hirarki atau struktur, yaitu dari tertinggi <strong>database</strong> yang terdiri atas <strong>tabel</strong>. Tabel dibentuk oleh <strong>kolom</strong> dengan data sejumlah barisnya.</p>
+<p>Perintah SQL ada 2</p>
+<ol>
+<li><em>Data Definition Language (DDL)</em> untuk membuat, menghapus atau modifikasi struktur database</li>
+<li><em>Data Manipulation Language (DML)</em> untuk insert data, query, hapus, edit data</li>
+</ol>
+<h1 id="query-sql">QUERY SQL</h1>
+<p>Query adalah pengambilan data dari database. Menggunakan perintah <strong>SELECT</strong>.</p>
   </p>
 
   
@@ -312,9 +372,10 @@ Data Definition Language (DDL) untuk membuat, menghapus atau modifikasi struktur
   </header>
 
   <p>
-  Secara default, window manager yang digunakan xfce adalah xfwm4. Tetapi, ini bisa diganti menjadi window manager lain seperti fluxbox ataupun marco milik mate.
-Kali ini kita akan ganti xfwm4 dengan marco. Caranya, membuat startup baru berisikan command
-$ /usr/bin/marco --replace 
+  <p>Secara <em>default, window manager</em> yang digunakan xfce adalah xfwm4. Tetapi, ini bisa diganti menjadi <em>window manager</em> lain seperti <strong>fluxbox</strong> ataupun <strong>marco</strong> milik <strong>mate</strong>.</p>
+<p>Kali ini kita akan ganti <strong>xfwm4</strong> dengan <strong>marco</strong>. Caranya, membuat <strong>startup</strong> baru berisikan <em>command</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ /usr/bin/marco --replace
+</span></span></code></pre></div>
   </p>
 
   
@@ -360,8 +421,8 @@ $ /usr/bin/marco --replace
   </header>
 
   <p>
-  Mode tty di sini maksudnya adalah mode yang hanya ada teks. Mode inilah yang aktif setelah masuk runlevel 3 sebelum masuk ke lingkungan X maupun wayland.
-Mungkin, ketika sedang melakukan maintenance dalam mode tty, tanpa terasa sudah menghabiskan waktu berjam-jam. Daya yang ada, seperti kecerahan layar, bisa terbuang percuma. Apalagi paparan layar yang terlalu cerah dalam durasi lama berpotensi mengganggu kesehatan. Eksekusi redshift di tty adalah solusi yang layak dipertimbangkan. Berikut adalah command-nya
+  <p>Mode <strong>tty</strong> di sini maksudnya adalah mode yang hanya ada teks. Mode inilah yang aktif setelah masuk <em>runlevel</em> 3 sebelum masuk ke lingkungan <strong>X</strong> maupun <strong>wayland</strong>.</p>
+<p>Mungkin, ketika sedang melakukan <em>maintenance</em> dalam mode tty, tanpa terasa sudah menghabiskan waktu berjam-jam. Daya yang ada, seperti kecerahan layar, bisa terbuang percuma. Apalagi paparan layar yang terlalu cerah dalam durasi lama berpotensi mengganggu kesehatan. Eksekusi <strong>redshift</strong> di tty adalah solusi yang layak dipertimbangkan. Berikut adalah <em>command</em>-nya</p>
   </p>
 
   
@@ -407,58 +468,13 @@ Mungkin, ketika sedang melakukan maintenance dalam mode tty, tanpa terasa sudah 
   </header>
 
   <p>
-  Mengunduh file spreadsheet dari google sheets di setiap selnya yang berisi data angka diawali oleh tanda apostrofe atau kutip tunggal. Tanda ini tidak terlihat langsung. Ketika kita klik selnya dan lihat formula bar, baru tanda ini terlihat.
-Untuk menghapusnya melalui libreofiice calc tentu saja. Klik Find &amp; Replace. Search for inputkan .* dan Replace with inputkan &amp;. Centang atau piih opsi Regular expressions. Kemudian Replace atau Replace all sesuai kebutuhan.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Mariadb error 2002</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jun 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.
-$ mariadb -u root -p Enter password: ERROR 2002 (HY000): Can&#39;t connect to local server through socket &#39;/var/run/mysql/mysql.sock&#39; (2) Setelah dicek, ternyata service-nya belum jalan karena tidak executable.
-$ ls -l /etc/rc.d|grep -iE &#34;(maria|mysql)&#34; -rw-r--r-- 1 root root 2517 May 2 09:08 rc.mysqld -rw-r--r-- 1 root root 2943 Aug 4 2020 rc.mysqld.orig Mari aktifkan
-# chmod +x /etc/rc.
+  <p>Mengunduh file <em>spreadsheet</em> dari <strong>google sheets</strong> di setiap selnya yang berisi data angka diawali oleh tanda apostrofe atau kutip tunggal. Tanda ini tidak terlihat langsung. Ketika kita klik selnya dan lihat formula bar, baru tanda ini terlihat.</p>
+<p>Untuk menghapusnya melalui <strong>libreofiice calc</strong> tentu saja. Klik <strong>Find &amp; Replace</strong>. <strong>Search for</strong> inputkan .* dan <strong>Replace with</strong> inputkan &amp;. Centang atau piih opsi <strong>Regular expressions</strong>. Kemudian <strong>Replace</strong> atau <strong>Replace all</strong> sesuai kebutuhan.</p>
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2021-06-02-hapus-awalan-apostrofe-libreoffice-calc/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -472,7 +488,7 @@ $ ls -l /etc/rc.d|grep -iE &#34;(maria|mysql)&#34; -rw-r--r-- 1 root root 2517 M
   
   <a href="https://sasongko.web.id/page/15/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;16 / 65&nbsp;</span>
+  <span>&nbsp;16 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/17/"><i class="fa fa-chevron-right"></i></a>
   

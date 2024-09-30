@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,55 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2016-10-29-maleo-slackbuild/">Maleo Slackbuild</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Oct 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackbuild">slackbuild</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p><strong>Maleo</strong> adalah paket khas <a href="http://blankonlinux.or.id">BlankOn</a> untuk menjalankan aplikasi HTML5. Bagi pengguna <em>Slackware</em> yang berminat silahkan mencoba <em>slackbuild</em> yang saya buat di <a href="https://github.com/sasongko26/maleo-slackbuilds">sini</a>.</p>
+<p>Adapun dependensinya adalah :</p>
+<ul>
+<li><!-- raw HTML omitted -->vala<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->libwebp<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->gnome-js-common<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->seed<!-- raw HTML omitted --></li>
+</ul>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/">Upgrade Plasma 5</a></h2>
 
     <div class="post-meta">
@@ -263,8 +312,8 @@
   </header>
 
   <p>
-  Secara resmi, Slackware masih menggunakan KDE 4 yang &ldquo;ketinggalan jaman&rdquo; padahal pengembang KDE telah merilis KDE (sekarang biasa disebut Plasma) 5. Plasma 5 ini masih tetap seperti &ldquo;kakaknya&rdquo; (KDE 4) yang boros memory dibandingkan Xfce. Tapi, masya Allah tampilan lebih keren!
-Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah membuat slackbuild dan binary package-nya yang bisa kita gunakan. Versi terakhir versi Eric saat ini adalah Plasma 5.7.4 sedangkan insya Allah tanggal 4 Oktober 2016 KDE merilis Plasma 5.
+  <p>Secara resmi, <em>Slackware</em> masih menggunakan KDE 4 yang &ldquo;ketinggalan jaman&rdquo; padahal pengembang KDE telah merilis KDE (sekarang biasa disebut <strong>Plasma</strong>) 5. Plasma 5 ini masih tetap seperti &ldquo;kakaknya&rdquo; (KDE 4) yang boros <em>memory</em> dibandingkan <em>Xfce</em>. Tapi, masya Allah tampilan lebih keren!</p>
+<p>Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah membuat <em>slackbuild</em> dan <em>binary package</em>-nya yang bisa kita gunakan. Versi terakhir versi Eric saat ini adalah <strong>Plasma 5.7.4</strong> sedangkan insya Allah tanggal 4 Oktober 2016 KDE merilis Plasma 5.8.0.</p>
   </p>
 
   
@@ -314,10 +363,10 @@ Untuk menikmatinya, Eric Hameleer atau yang terkenal dengan nama Alien telah mem
   </header>
 
   <p>
-  Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
-Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
-modprobe nbd max_part=N max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.
-Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbd yang mengaktifkan koneksi file /mnt/virtual/image/ign11.
+  <p>Untuk mengaitkan/<em>mount</em> berkas <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> ternyata tidak bisa langsung di- <em>mount</em> begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses <em>root</em></p>
+<p>Modul kernel NBD aktifkan dulu. Secara <em>default</em> modul NBD nonaktif. Untuk mengaktifkannya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modprobe nbd max_part<span style="color:#f92672">=</span>N
+</span></span></code></pre></div><p><!-- raw HTML omitted -->max_part=N<!-- raw HTML omitted --> isikan jumlah partisi yang ingin ditangani pada <!-- raw HTML omitted -->N<!-- raw HTML omitted -->. Misalnya, <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> tersebut kalau dijalankan dengan <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> berisi 8 partisi, maka nilai <!-- raw HTML omitted -->N<!-- raw HTML omitted --> adalah 8.</p>
   </p>
 
   
@@ -363,10 +412,15 @@ Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbd yan
   </header>
 
   <p>
-  Secara default, slackpkg akan menghapus semua file yang di- download / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di /etc/slackpkg/slackpkg.conf pada baris 77
-DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah on menjadi off.
+  <p>Secara <em>default</em>, <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --> akan menghapus semua file yang di- <em>download</em> / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di <!-- raw HTML omitted -->/etc/slackpkg/slackpkg.conf<!-- raw HTML omitted --> pada baris 77</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>DELALL<span style="color:#f92672">=</span>on
+</span></span></code></pre></div><p>Keuntungan dari konfigurasi ini menghemat <em>ruang harddisk</em>. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah <!-- raw HTML omitted -->on<!-- raw HTML omitted --> menjadi <!-- raw HTML omitted -->off<!-- raw HTML omitted -->.</p>
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-09-10-nonaktif-delall-slackpkg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -406,62 +460,15 @@ DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya le
   </header>
 
   <p>
-  Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya
-dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck. Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu /dev/sda1. Dan direkomendasikan untuk menjalankan fsck.
-fsck /dev/sda1 fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.
+  <p>Sewaktu <em>booting</em>, sekilas membaca <!-- raw HTML omitted -->some data may be corrupt<!-- raw HTML omitted -->. Untuk pesan <em>error</em> komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dmesg | grep -i corrupt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   19.076118<span style="color:#f92672">]</span> FAT-fs <span style="color:#f92672">(</span>sda1<span style="color:#f92672">)</span>: Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+</span></span></code></pre></div><p>Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu <!-- raw HTML omitted -->/dev/sda1<!-- raw HTML omitted -->. Dan direkomendasikan untuk menjalankan <!-- raw HTML omitted -->fsck<!-- raw HTML omitted -->.</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/">Mengatur DNS Default</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Aug 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, DNS atau Domain Name Server yang digunakan adalah DNS dari operator/penyedia layanan internet. Namun sayangnya, operator tertentu kurang baik dalam penapisan/pemblokiran situs-situs negatif sehingga kadang konten-konten pornografi, judi, dan konten lainnya yang tidak sesuai dengan norma kesusilaan dan budaya Indonesia dapat sampai ke hadapan kita. Oleh karena itulah perlu menggunakan DNS lain.
-Penggantian DNS ini ada 2 cara, yaitu manual dan otomatis.
-Cara manual dengan menyunting berkas /etc/resolv.conf. Mengganti nameserver yang ada dengan nameserver yang diinginkan.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -475,7 +482,7 @@ Cara manual dengan menyunting berkas /etc/resolv.conf. Mengganti nameserver yang
   
   <a href="https://sasongko.web.id/page/46/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;47 / 65&nbsp;</span>
+  <span>&nbsp;47 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/48/"><i class="fa fa-chevron-right"></i></a>
   

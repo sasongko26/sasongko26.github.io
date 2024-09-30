@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Elilo &middot; Catatan Sasongko</title>
 
@@ -268,11 +268,30 @@
   </header>
 
   <p>
-  Untuk menampilkan status penggunaan zram bisa dengan menjalankan
-# zramctl --output-all NAME DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT /dev/zram0 1G 4K 74B lzo-rle 4 0 12K 0B 12K 0B [SWAP] Berikut penjelasan masing-masing kolomnya
-NAME	zram device name DISKSIZE	limit on the uncompressed amount of data DATA	uncompressed size of stored data COMPR	compressed size of stored data ALGORITHM	the selected compression algorithm STREAMS	number of concurrent compress operations ZERO-PAGES	empty pages with no allocated memory TOTAL	all memory including allocator fragmentation and metadata overhead MEM-LIMIT	memory limit used to store compressed data MEM-USED	memory zram have been consumed to store compressed data MIGRATED	number of objects migrated by compaction MOUNTPOINT	where the device is mounted
+  <p>Untuk menampilkan status penggunaan zram bisa dengan menjalankan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># zramctl --output-all</span>
+</span></span><span style="display:flex;"><span>NAME     DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT
+</span></span><span style="display:flex;"><span>/dev/zram0
+</span></span><span style="display:flex;"><span>               1G   4K   74B lzo-rle         <span style="color:#ae81ff">4</span>          <span style="color:#ae81ff">0</span>   12K        0B      12K       0B <span style="color:#f92672">[</span>SWAP<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>Berikut penjelasan masing-masing kolomnya</p>
+<p>NAME	zram device name
+DISKSIZE	limit on the uncompressed amount of data
+DATA	uncompressed size of stored data
+COMPR	compressed size of stored data
+ALGORITHM	the selected compression algorithm
+STREAMS	number of concurrent compress operations
+ZERO-PAGES	empty pages with no allocated memory
+TOTAL	all memory including allocator fragmentation and metadata overhead
+MEM-LIMIT	memory limit used to store compressed data
+MEM-USED	memory zram have been consumed to store compressed data
+MIGRATED	number of objects migrated by compaction
+MOUNTPOINT	where the device is mounted</p>
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -318,8 +337,8 @@ NAME	zram device name DISKSIZE	limit on the uncompressed amount of data DATA	unc
   </header>
 
   <p>
-  Aktif di-maintain pengembang merupakan salah satu kriteria preferensi software yang penulis gunakan. elilo sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. Slackware adalah distro yang masih bertahan menyediakan elilo. Terima kasih PV.
-Sejak pertama menggunakan slackware dengan sistem UEFI sekitar 2016, elilo penulis jadikan pilihan utama boot loader. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini elilo sudah tidak dikembangkan developer aslinya. Mengangkat grub sebagai suksesor elilo bukanlah hal buruk.
+  <p>Aktif di-<em>maintain</em> pengembang merupakan salah satu kriteria preferensi <em>software</em> yang penulis gunakan. <em>elilo</em> sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. <strong>Slackware</strong> adalah distro yang masih bertahan menyediakan <strong>elilo</strong>. Terima kasih PV.</p>
+<p>Sejak pertama menggunakan <strong>slackware</strong> dengan sistem <strong>UEFI</strong> sekitar 2016, <strong>elilo</strong> penulis jadikan pilihan utama <em>boot loader</em>. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini <strong>elilo</strong> sudah tidak dikembangkan <em>developer</em> aslinya. Mengangkat <strong>grub</strong> sebagai suksesor <strong>elilo</strong> bukanlah hal buruk. <strong>Grub</strong> ini sebenarnya sudah lama terinstall dan rutin ikut di-<em>upgrade</em> juga, tapi memang tidak digunakan. Sekarang saatnya mengaktifkannya.</p>
   </p>
 
   
@@ -371,8 +390,8 @@ Sejak pertama menggunakan slackware dengan sistem UEFI sekitar 2016, elilo penul
   </header>
 
   <p>
-  Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.
-Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan.
+  <p>Beberapa tahun ini perkembangan dunia <em>opensource</em> bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi <em>software</em> berjalan beriringan dengan <em>hardware</em>. Semakin tinggi spesifikasi <em>hardware</em> semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin <em>interface</em> yang aduhai menawan, seyogyanya diimbangi <em>hardware</em> yang mumpuni.</p>
+<p>Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan. Namun, saat ini, saat kebutuhan <em>multitasking</em> meningkat pesat, terlebih di era <em>work from home</em> (WFH), beberapa aplikasi dijalankan sekaligus bersama-sama, apalagi ditambah dengan faktor U perangkatnya, RAM 2 GB terasa cepat penuh.</p>
   </p>
 
   
@@ -420,10 +439,10 @@ Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 
   </header>
 
   <p>
-  Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang bootloop apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. Update terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui rebuilt elilo.
-Setelah upgrade terutama untuk elilo jangan lupa menjalankan
-eliloconfig yang secara otomatis juga akan meng- generate elilo.conf yang berisi pengaturan boot dengan kernel huge.
-Namun, saya kurang suka dengan cara otomatis ini.
+  <p>Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang <em>bootloop</em> apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. <em>Update</em> terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui <em>rebuilt</em> <!-- raw HTML omitted -->elilo<!-- raw HTML omitted -->.</p>
+<p>Setelah <em>upgrade</em> terutama untuk <!-- raw HTML omitted -->elilo<!-- raw HTML omitted --> jangan lupa menjalankan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eliloconfig
+</span></span></code></pre></div><p>yang secara otomatis juga akan meng- <em>generate</em> <!-- raw HTML omitted -->elilo.conf<!-- raw HTML omitted --> yang berisi pengaturan <em>boot</em> dengan kernel huge.</p>
   </p>
 
   
@@ -471,9 +490,8 @@ Namun, saya kurang suka dengan cara otomatis ini.
   </header>
 
   <p>
-  Setelah 2 minggu, -Current kembali mendapatkan update Jum&rsquo;at kemarin tanggal 17 November 2017. Banyak update, ada yang upgraded, rebuilt, added, dan removed. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.
-Setelah upgrade dan eliloconfig kemudian restart, ternyata muncul masalah! Bootloop! Loading vmlinuz&hellip; langsung reboot. Begitu seterusnya.
-Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk recovery-nya lebih mudah. Boot dari DVD kemudian waktu muncul grub pilih opsi yang intinya detect another operating system (persisnya saya lupa).
+  <p>Setelah 2 minggu, -Current kembali mendapatkan <em>update</em> Jum&rsquo;at kemarin tanggal 17 November 2017. Banyak <em>update</em>, ada yang <em>upgraded, rebuilt, added,</em> dan <em>removed</em>. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.</p>
+<p>Setelah <em>upgrade</em> dan <!-- raw HTML omitted -->eliloconfig<!-- raw HTML omitted --> kemudian <em>restart</em>, ternyata muncul masalah! <em>Bootloop</em>!  <!-- raw HTML omitted -->Loading vmlinuz&hellip; <!-- raw HTML omitted --> langsung <em>reboot</em>. Begitu seterusnya.</p>
   </p>
 
   
@@ -521,7 +539,7 @@ Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk rec
   </header>
 
   <p>
-  Posting kali ini terinspirasi dari Pak Walesa yang menulis di sini dan ini. Perbedaannya adalah pada boot loader yang digunakan. Saya gunakan elilo. Selain itu, sudah ada existing Slackware64 current dan Slackware64 14.2. Keduanya dengan filesystem ext4. Mau ditambahkan yang stable (Slackware64 14.2 dan Slackware 14.2) tetapi dengan filesystem btrfs. Jadi dual Slackware stable ini akan ditempatkan di dalam partisi yang sama. Sebenarnya tripleboot dengan Windows 10, tetapi Windows 10 sangat jarang dipakai.
+  <p>Posting kali ini terinspirasi dari Pak Walesa yang menulis <a href="http://walecha.web.id/node/57">di sini</a> dan <a href="http://walecha.web.id/node/58">ini</a>. Perbedaannya adalah pada <em>boot loader</em> yang digunakan. Saya gunakan <!-- raw HTML omitted -->elilo<!-- raw HTML omitted -->. Selain itu, sudah ada <em>existing</em> Slackware64 current dan Slackware64 14.2. Keduanya dengan filesystem ext4. Mau ditambahkan yang stable (Slackware64 14.2 dan Slackware 14.2) tetapi dengan <em>filesystem btrfs</em>. Jadi dual Slackware stable ini akan ditempatkan di dalam partisi yang sama. Sebenarnya <em>tripleboot</em> dengan Windows 10, tetapi Windows 10 sangat jarang dipakai. Jadi abaikan saja Windowsnya.</p>
   </p>
 
   
@@ -569,8 +587,7 @@ Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk rec
   </header>
 
   <p>
-  Kemarin melihat ChangeLog ada beberapa update yang sebagian di antaranya adalah security fix. Salah satu update adalah kernel. Melakukan upgrade semuanya baik-baik saja dan lanjut shutdown. Siang ini, booting pun masih fine dan no problem. Begitu juga login. Baru terasa saat ingin masuk desktop malah gagal.
-$ startx xauth: file /home/sasongko/.serverauth.2717 does not exist X.Org X Server 1.19.3 Release Date: 2017-03-15 X Protocol Version 11, Revision 0 Build Operating System: Slackware 14.
+  <p>Kemarin melihat <em>ChangeLog</em> ada beberapa <em>update</em> yang sebagian di antaranya adalah <em>security fix</em>. Salah satu <em>update</em> adalah kernel. Melakukan <em>upgrade</em> semuanya baik-baik saja dan lanjut <!-- raw HTML omitted -->shutdown<!-- raw HTML omitted -->. Siang ini, <!-- raw HTML omitted -->booting<!-- raw HTML omitted --> pun masih <em>fine</em> dan <em>no problem</em>. Begitu juga <!-- raw HTML omitted -->login<!-- raw HTML omitted -->. Baru terasa saat ingin masuk <em>desktop</em> malah gagal.</p>
   </p>
 
   

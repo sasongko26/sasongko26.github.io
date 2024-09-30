@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Grub &middot; Catatan Sasongko</title>
 
@@ -262,8 +262,9 @@
   </header>
 
   <p>
-  Kadang kita perlu mengubah pengaturan pada UEFI. Pengaturan tersebut misalnya pengaturan waktu, secure boot, urutan boot dan lain sebagainya. Untuk masuk ke UEFI Firmware Settings bisa dilakukan dari grub. Yaitu dengan cara ketika menampilkan bootloader, biasanya ada jeda waktu. Manfaatkan jeda waktu tersebut dengan segera menekan tombol c untuk masuk ke grub shell, kemudian pada prompt yang disediakan ketik fwsetup.
-grub&gt; fwsetup 
+  <p>Kadang kita perlu mengubah pengaturan pada UEFI. Pengaturan tersebut misalnya pengaturan waktu, <em>secure boot</em>, urutan <em>boot</em> dan lain sebagainya. Untuk  masuk ke <strong>UEFI Firmware Settings</strong> bisa dilakukan dari <strong>grub</strong>. Yaitu dengan cara ketika menampilkan <em>bootloader</em>, biasanya ada jeda waktu. Manfaatkan jeda waktu tersebut dengan segera menekan tombol <strong>c</strong> untuk masuk ke <em>grub shell</em>, kemudian pada <em>prompt</em> yang disediakan ketik <strong>fwsetup</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grub&gt; fwsetup
+</span></span></code></pre></div>
   </p>
 
   
@@ -309,8 +310,8 @@ grub&gt; fwsetup
   </header>
 
   <p>
-  Pascamigrasi dari elilo ke grub ada hal yang dirindukan. Zram dengan komresi zstd. Entah masalahnya di mana, zstd tidak bisa digunakan untuk zram apabila menggunakan grub. Menggunakan elilo aman damai sentosa lanjcar jaya. Padahal kernel dan initrd-nya sama.
-Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-rle. Alhamdulillah. Dengan adanya zram aktivitas komputasi di laptop dengan RAM hanya 2GB masih bisa dijalankan dengan lancar.
+  <p>Pascamigrasi dari <strong>elilo</strong> ke <strong>grub</strong> ada hal yang dirindukan. <strong>Zram</strong> dengan komresi <strong>zstd</strong>. Entah masalahnya di mana, <strong>zstd</strong> tidak bisa digunakan untuk zram apabila menggunakan <strong>grub</strong>. Menggunakan <strong>elilo</strong> aman damai sentosa lanjcar jaya. Padahal <strong>kernel</strong> dan <strong>initrd</strong>-nya sama.</p>
+<p>Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default <strong>lzo-rle</strong>. Alhamdulillah. Dengan adanya <strong>zram</strong> aktivitas komputasi di laptop dengan RAM hanya 2GB masih bisa dijalankan dengan lancar.</p>
   </p>
 
   
@@ -356,7 +357,7 @@ Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-r
   </header>
 
   <p>
-  Secara default, timeout grub adalah 10 detik. Menurut penulis, 10 detik ini terlalu lama. Untuk mengubahnya ganti angka 10 ke detik yang diinginkan pada baris dengan GRUB_TIMEOUT pada file /etc/default/grub
+  <p>Secara default, <em>timeout</em> <strong>grub</strong> adalah 10 detik. Menurut penulis, 10 detik ini terlalu lama. Untuk mengubahnya ganti angka 10 ke detik yang diinginkan pada baris dengan GRUB_TIMEOUT pada file /etc/default/grub</p>
   </p>
 
   
@@ -406,11 +407,30 @@ Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-r
   </header>
 
   <p>
-  Untuk menampilkan status penggunaan zram bisa dengan menjalankan
-# zramctl --output-all NAME DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT /dev/zram0 1G 4K 74B lzo-rle 4 0 12K 0B 12K 0B [SWAP] Berikut penjelasan masing-masing kolomnya
-NAME	zram device name DISKSIZE	limit on the uncompressed amount of data DATA	uncompressed size of stored data COMPR	compressed size of stored data ALGORITHM	the selected compression algorithm STREAMS	number of concurrent compress operations ZERO-PAGES	empty pages with no allocated memory TOTAL	all memory including allocator fragmentation and metadata overhead MEM-LIMIT	memory limit used to store compressed data MEM-USED	memory zram have been consumed to store compressed data MIGRATED	number of objects migrated by compaction MOUNTPOINT	where the device is mounted
+  <p>Untuk menampilkan status penggunaan zram bisa dengan menjalankan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># zramctl --output-all</span>
+</span></span><span style="display:flex;"><span>NAME     DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT
+</span></span><span style="display:flex;"><span>/dev/zram0
+</span></span><span style="display:flex;"><span>               1G   4K   74B lzo-rle         <span style="color:#ae81ff">4</span>          <span style="color:#ae81ff">0</span>   12K        0B      12K       0B <span style="color:#f92672">[</span>SWAP<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>Berikut penjelasan masing-masing kolomnya</p>
+<p>NAME	zram device name
+DISKSIZE	limit on the uncompressed amount of data
+DATA	uncompressed size of stored data
+COMPR	compressed size of stored data
+ALGORITHM	the selected compression algorithm
+STREAMS	number of concurrent compress operations
+ZERO-PAGES	empty pages with no allocated memory
+TOTAL	all memory including allocator fragmentation and metadata overhead
+MEM-LIMIT	memory limit used to store compressed data
+MEM-USED	memory zram have been consumed to store compressed data
+MIGRATED	number of objects migrated by compaction
+MOUNTPOINT	where the device is mounted</p>
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -456,8 +476,8 @@ NAME	zram device name DISKSIZE	limit on the uncompressed amount of data DATA	unc
   </header>
 
   <p>
-  Aktif di-maintain pengembang merupakan salah satu kriteria preferensi software yang penulis gunakan. elilo sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. Slackware adalah distro yang masih bertahan menyediakan elilo. Terima kasih PV.
-Sejak pertama menggunakan slackware dengan sistem UEFI sekitar 2016, elilo penulis jadikan pilihan utama boot loader. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini elilo sudah tidak dikembangkan developer aslinya. Mengangkat grub sebagai suksesor elilo bukanlah hal buruk.
+  <p>Aktif di-<em>maintain</em> pengembang merupakan salah satu kriteria preferensi <em>software</em> yang penulis gunakan. <em>elilo</em> sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. <strong>Slackware</strong> adalah distro yang masih bertahan menyediakan <strong>elilo</strong>. Terima kasih PV.</p>
+<p>Sejak pertama menggunakan <strong>slackware</strong> dengan sistem <strong>UEFI</strong> sekitar 2016, <strong>elilo</strong> penulis jadikan pilihan utama <em>boot loader</em>. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini <strong>elilo</strong> sudah tidak dikembangkan <em>developer</em> aslinya. Mengangkat <strong>grub</strong> sebagai suksesor <strong>elilo</strong> bukanlah hal buruk. <strong>Grub</strong> ini sebenarnya sudah lama terinstall dan rutin ikut di-<em>upgrade</em> juga, tapi memang tidak digunakan. Sekarang saatnya mengaktifkannya.</p>
   </p>
 
   

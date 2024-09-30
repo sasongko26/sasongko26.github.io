@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Gis &middot; Catatan Sasongko</title>
 
@@ -262,9 +262,11 @@
   </header>
 
   <p>
-  Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.
-Install docker dan docker-cli QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.
-Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.
+  <p>Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.</p>
+<h1 id="install-docker-dan-docker-cli">Install docker dan docker-cli</h1>
+<p>QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.</p>
+<h1 id="install-docker-qgis">Install docker QGIS</h1>
+<p>Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.04 LTS. Yang harus diperhatikan, versi qgis yang digunakan adalah versi 3.16 LTR, sedangkan yang disediakan repo resmi ubuntu 20.04 masihi versi 3.10.</p>
   </p>
 
   
@@ -310,10 +312,13 @@ Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam
   </header>
 
   <p>
-  QGIS adalah aplikasi sistem informasi geografis populer dan mudah digunakan. QGIS sudah ada di SBo, tetapi build-nya lama. Jadi saya install via flatpak saja.
-flatpak install --from https://flathub.org/repo/appstream/org.qgis.qgis.flatpakref Untuk menjalankannya, bisa klik dari menu atau
-flatpak run org.qgis.qgis Untuk meng-update
-flatpak update 
+  <p><strong>QGIS</strong> adalah aplikasi sistem informasi geografis populer dan mudah digunakan. <strong>QGIS</strong> sudah ada di <strong>SBo</strong>, tetapi <em>build</em>-nya lama. Jadi saya install via <strong>flatpak</strong> saja.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>flatpak install --from  https://flathub.org/repo/appstream/org.qgis.qgis.flatpakref
+</span></span></code></pre></div><p>Untuk menjalankannya, bisa klik dari menu atau</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>flatpak run org.qgis.qgis
+</span></span></code></pre></div><p>Untuk meng-<em>update</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>flatpak update
+</span></span></code></pre></div>
   </p>
 
   
@@ -355,9 +360,10 @@ flatpak update
   </header>
 
   <p>
-  Ketika [menggunakan OpenStreetMap (OSM)]({% post_url 2018-04-13-cari-lokasi-osm %}) dan menjumpai ada data/informasi yang kita tahu tidak benar, kita diijinkan untuk memperbaikinya. Inilah kelebihan OSM yang bersifat open source.
-Kali ini memperbaiki kesalahan nama jalan. Jalan yang keliru penamaannya adalah Jalan Wonosari IV yang seharusnya Jalan Widosari IV. Jalan ini terletak di sebelah barat laut SMP Negeri 3 Semarang.
-Kesalahan tersebut sudah saya perbaiki, sehingga kalau Pembaca membukanya di OSM peta di atas sudah tidak berlaku.
+  <p>Ketika [menggunakan OpenStreetMap (OSM)]({% post_url 2018-04-13-cari-lokasi-osm %}) dan menjumpai ada data/informasi yang kita tahu tidak benar, <strong>kita diijinkan untuk memperbaikinya</strong>. Inilah kelebihan OSM yang bersifat <em>open source</em>.</p>
+<p>Kali ini memperbaiki kesalahan nama jalan. Jalan yang keliru penamaannya adalah <strong>Jalan Wonosari IV</strong> yang seharusnya <strong>Jalan Widosari IV</strong>. Jalan ini terletak di sebelah barat laut SMP Negeri 3 Semarang.</p>
+<p><img src="https://sasongko.web.id/gambar/osm-search-spega.png" alt=""></p>
+<p>Kesalahan tersebut sudah saya perbaiki, sehingga kalau Pembaca membukanya di OSM peta di atas sudah tidak berlaku.</p>
   </p>
 
   
@@ -403,10 +409,10 @@ Kesalahan tersebut sudah saya perbaiki, sehingga kalau Pembaca membukanya di OSM
   </header>
 
   <p>
-  Dari [catatan sebelumnya]({% post_url 2018-04-12-mengenal-josm %}) diketahui bahwa OSM adalah layanan peta digital. Berikut cara menggunakannya.
-Misalkan, kita akan mencari di mana SMP Negeri 3 Semarang. Pertama, pastikan komputer terhubung ke internet dan buka web OSM. Pada kotak pencarian masukkan tempat yang dicari, (yang saya beri elips merah), dalam contoh ini saya tuliskan smp negeri 3 semarang.
-Apabila ditemukan akan ditampilkan seperti di bawah ini
-Kemudian klik hasil pencarian untuk mengetahui detil lokasi.
+  <p>Dari [catatan sebelumnya]({% post_url 2018-04-12-mengenal-josm %}) diketahui bahwa OSM adalah layanan peta digital. Berikut cara menggunakannya.</p>
+<p>Misalkan, kita akan mencari di mana SMP Negeri 3 Semarang. Pertama, pastikan komputer terhubung ke internet dan buka web <a href="https://openstreetmap.org">OSM</a>. Pada kotak pencarian masukkan tempat yang dicari, (yang saya beri elips merah), dalam contoh ini saya tuliskan <!-- raw HTML omitted -->smp negeri 3 semarang<!-- raw HTML omitted -->.</p>
+<p><img src="https://sasongko.web.id/gambar/osm-search-1.png" alt=""></p>
+<p>Apabila ditemukan akan ditampilkan seperti di bawah ini</p>
   </p>
 
   
@@ -452,9 +458,15 @@ Kemudian klik hasil pencarian untuk mengetahui detil lokasi.
   </header>
 
   <p>
-  Sebenarnya sudah lama ingin menulis dengan topik Geographical Information System (GIS) tapi baru sempat sekarang.
-OSM Apakah OSM itu? OpenStreetMap (OSM) adalah salah satu layanan peta digital seperti Google Maps dan Here Maps yang dapat diakses melalui https://openstreetmap.org/ . OSM bersifat free &amp; open source sehingga mempersilakan kita untuk berkontribusi secara luas, baik itu menambah/edit data maupun koreksi peta. Mengapa saya lebih suka OSM daripada layanan peta digital lainnya?
-Open source.
+  <p>Sebenarnya sudah lama ingin menulis dengan topik <em>Geographical Information System (GIS)</em> tapi baru sempat sekarang.</p>
+<h1 id="osm">OSM</h1>
+<p><img src="https://sasongko.web.id/gambar/osm-home.png" alt=""></p>
+<p>Apakah OSM itu? <strong>OpenStreetMap (OSM)</strong> adalah salah satu layanan peta digital seperti <em>Google Maps</em> dan <em>Here Maps</em> yang dapat diakses melalui <a href="https://openstreetmap.org/">https://openstreetmap.org/</a> . OSM bersifat <em>free &amp; open source</em> sehingga mempersilakan kita untuk berkontribusi secara luas, baik itu menambah/edit data maupun koreksi peta. Mengapa saya lebih suka OSM daripada layanan peta digital lainnya?</p>
+<ol>
+<li><em>Open source</em>. Inilah alasan utama. Karena <em>open source</em> memungkinkan kita untuk berkontribusi.</li>
+<li>Masih berhubungan dengan alasan pertama, OSM memberikan kepercayaan (<em>trust</em>) kepada penggunanya dan ini membuat saya nyaman. Ada pengalaman tidak mengenakkan ketika saya mencoba memperbaiki peta digital lainnya. Saya usulkan perubahan/perbaikan agar peta tersebut sesuai kenyataan di lapangan. Sebagian kecil diterima, sedangkan sebagian lainnya bernasib antah-berantah yang meminjam kosa kata dalam lagu <em>Gereja Tua</em>-nya <em>Panbers</em> : tak tahu di mana rimbanya. Yang menyakitkan adalah perbaikan yang saya usulkan yang bernasib ga jelas itu lokasinya sangat dekat dengan rumah saya sendiri! Saya merasa dia kurang ajar dan sok tahu. Dia datang ke sana paling cuma 1x saja di tahun 2015 saat pemotretan dan <em>tracking GPS</em> (pembuatan peta). Lha saya bertahun-tahun lewat sana!</li>
+</ol>
+<p>Saya rasa cukup curcolnya. Mari lanjutkan!</p>
   </p>
 
   

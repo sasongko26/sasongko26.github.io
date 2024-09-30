@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,60 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/">Pentingnya Shebang</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Jun 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <h1 id="shebang-itu-apa">Shebang itu apa?</h1>
+<p>Pengguna linux, BSD, ataupun mac yang terbiasa melihat <em>source code</em> sangat mungkin sudah tidak asing lagi dengan <strong>shebang</strong>. Ada yang menyebut shebang sebagai <strong>sh bang</strong>, <strong>shabang</strong>, <strong>hashbang</strong>, <strong>hashpling</strong>, dan <strong>poundbang</strong>. Shebang ini dituliskan di baris pertama, yakni diawali dengan <!-- raw HTML omitted -->#!<!-- raw HTML omitted -->.</p>
+<p>Contoh, untuk <strong>perl</strong> :</p>
+<pre tabindex="0"><code>#!/usr/bin/perl
+</code></pre><p>atau</p>
+<pre tabindex="0"><code>#!/usr/bin/env perl
+</code></pre><p>Sebagai pengguna linux khususnya <strong>Slackware</strong>, <em>user</em> akan merasakan betapa pentingnya shebang ini. Kepentingannya terkait fungsi shebang itu sendiri dan bagaimana <em>user</em> menjalankannya.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2018-06-15-operation-not-possible-due-to-rfkill/">Operation not possible due to RF-kill</a></h2>
 
     <div class="post-meta">
@@ -265,7 +319,7 @@
   </header>
 
   <p>
-  Pagi ini, refreshing dengan berganti desktop environment (DE) memakai Window Maker (WM). DE yang jarang digunakan karena biasanya memakai XFCE. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk tethering. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong Network Manager atau Wicd aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah root.
+  <p>Pagi ini, <em>refreshing</em> dengan berganti <em>desktop environment (DE)</em> memakai <strong>Window Maker (WM)</strong>. DE yang jarang digunakan karena biasanya memakai <strong>XFCE</strong>. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk <em>tethering</em>. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong <strong>Network Manager</strong> atau <strong>Wicd</strong> aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah <em>root</em>. Di sini <!-- raw HTML omitted -->$<!-- raw HTML omitted --> maksudnya adalah tetap dilakukan oleh <em>root</em>. Untuk memudahkan <em>syntax highlighting</em> karena kalau <em>command</em>-nya ditulis dengan <!-- raw HTML omitted -->#<!-- raw HTML omitted --> akan terbaca sebagai komentar sehingga tidak begitu jelas terbacanya.</p>
   </p>
 
   
@@ -313,8 +367,13 @@
   </header>
 
   <p>
-  Mengapa saya suka mengenkripsi file dengan openssl? Karena
-Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&hellip;. 
+  <p>Mengapa saya suka mengenkripsi file dengan <!-- raw HTML omitted -->openssl<!-- raw HTML omitted -->? Karena</p>
+<ol>
+<li>Tersedia sebagai <em>official package</em> <strong>Slackware</strong> sehingga sangat mudah untuk <em>install/remove/upgrade</em></li>
+<li>Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis <em>cipher</em> enkripsi yang digunakan dan <em>password</em>-nya</li>
+<li>Mudah digunakan</li>
+<li>Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha&hellip;.</li>
+</ol>
   </p>
 
   
@@ -356,9 +415,10 @@ Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/
   </header>
 
   <p>
-  Ternyata tidak sulit mengkonversi/convert video menjadi audio, dalam hal ini mp3. Misalkan, akan dikonversi file video Gambang_Semarang.mkv menjadi file Gambang_Semarang.mp3
-ffmpeg -i Gambang_Semarang.mkv -b:a 128K -vn Gambang_Semarang.mp3 (output) dari command tersebut di atas sengaja tidak ditampilkan di sini karena agak panjang.
-Cara ini juga berlaku untuk mengubah file mp4 ke mp3 atau dengan kata lain, sebenarnya mengekstrak audio yang ada di dalam video.
+  <p>Ternyata tidak sulit mengkonversi/<em>convert</em> video menjadi audio, dalam hal ini mp3. Misalkan, akan dikonversi file video Gambang_Semarang.mkv menjadi file Gambang_Semarang.mp3</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i Gambang_Semarang.mkv -b:a 128K -vn Gambang_Semarang.mp3
+</span></span></code></pre></div><p>(<em>output</em>) dari <em>command</em> tersebut di atas sengaja tidak ditampilkan di sini karena agak panjang.</p>
+<p>Cara ini juga berlaku untuk mengubah file mp4 ke mp3 atau dengan kata lain, sebenarnya mengekstrak audio yang ada di dalam video.</p>
   </p>
 
   
@@ -400,52 +460,9 @@ Cara ini juga berlaku untuk mengubah file mp4 ke mp3 atau dengan kata lain, sebe
   </header>
 
   <p>
-  Cara uninstall semua modul perl yang dulunya install dari CPAN secara manual :
-rm -r /usr/local/{lib{,64},share}/perl5 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-04-23-salah-password-terminal/">Salah Password di Terminal</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Apr 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Pengguna GNU/Linux mungkin pernah salah menuliskan password saat login melalui terminal. Apa yang dilakukan?
-Mungkin sebagian ada yang menekan backspace berkali-kali sampai dirasa cukup. Ya, sampai dirasa cukup. Sampai dirasa kursor sudah kembali ke posisi awal penulisan password. Tapi, tahukah kalau ada cara yang lebih smart ?
-Ya, dengan kombinasi Ctrl + u .
+  <p>Cara <em>uninstall</em> semua modul perl yang dulunya <em>install</em> dari <a href="https://cpan.org">CPAN</a> secara manual :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -r /usr/local/<span style="color:#f92672">{</span>lib<span style="color:#f92672">{</span>,64<span style="color:#f92672">}</span>,share<span style="color:#f92672">}</span>/perl5
+</span></span></code></pre></div>
   </p>
 
   
@@ -460,7 +477,7 @@ Ya, dengan kombinasi Ctrl + u .
   
   <a href="https://sasongko.web.id/page/39/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;40 / 65&nbsp;</span>
+  <span>&nbsp;40 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/41/"><i class="fa fa-chevron-right"></i></a>
   

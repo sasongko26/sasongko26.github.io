@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Perl &middot; Catatan Sasongko</title>
 
@@ -260,9 +260,26 @@
   </header>
 
   <p>
-  Penyeleksian kondisi di perl dapat menggunakan syntax if&hellip;else dengan format
-if ( kondisi ) { .... } else { .... } Contoh
-#!/usr/bin/perl use strict; use warnings; use feature &#39;say&#39;; my $username = &#34;user&#34;; if ( $username eq &#34;nama&#34; ) { say &#34;Oke&#34;; } else { say &#34;Ulangi lagi....&#34;; } 
+  <p>Penyeleksian kondisi di <strong>perl</strong> dapat menggunakan <em>syntax</em> <!-- raw HTML omitted -->if&hellip;else<!-- raw HTML omitted --> dengan format</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ( kondisi ) {
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">....</span>
+</span></span><span style="display:flex;"><span>	} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">....</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><p>Contoh</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#39;say&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;user&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ( $username <span style="color:#f92672">eq</span> <span style="color:#e6db74">&#34;nama&#34;</span> ) {
+</span></span><span style="display:flex;"><span>    say <span style="color:#e6db74">&#34;Oke&#34;</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    say <span style="color:#e6db74">&#34;Ulangi lagi....&#34;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div>
   </p>
 
   
@@ -304,8 +321,15 @@ if ( kondisi ) { .... } else { .... } Contoh
   </header>
 
   <p>
-  Operator perbandingan digunakan untuk membandingkan nilai. Data/nilai yang dibandingkan dapat berupa bilangan ataupun string. Namun ada perbedaan notasi.
-Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &lt; $b	| $a lebih kecil dari $b	| |$a &gt; $b	| $a lebih besar dari $b	| |$a &lt;= $b	| $a lebih kecil atau sama dengan $b	| |$a =&gt; $b	| $a lebih besar atau sama dengan $b	| |$a == $b	| $a sama dengan $b	| |$a !
+  <p>Operator perbandingan digunakan untuk membandingkan nilai. Data/nilai yang dibandingkan dapat berupa bilangan ataupun string. Namun ada perbedaan notasi.</p>
+<h1 id="perbandingan-bilangan">Perbandingan bilangan</h1>
+<p>|Contoh penulisan	|Penjelasan	|
+|$a &lt; $b	| $a lebih kecil dari $b	|
+|$a &gt; $b	| $a lebih besar dari $b	|
+|$a &lt;= $b	| $a lebih kecil atau sama dengan $b	|
+|$a =&gt; $b	| $a lebih besar atau sama dengan $b	|
+|$a == $b	| $a sama dengan $b	|
+|$a != $b	| $a tidak sama dengan $b	|</p>
   </p>
 
   
@@ -351,14 +375,29 @@ Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &lt; $b	| $a lebih kec
   </header>
 
   <p>
-  Pada perl, variabel scalar yang berupa string dapat dilakukan penggabungan dan pengulangan. Contoh, terdapat 3 variabel sebagai berikut: $sapa = &ldquo;Hai&hellip;. &quot; $distro = &ldquo;Slackware&rdquo; $penilaian = &ldquo;distro terbaik.&rdquo; Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan &ldquo;.&rdquo;, sedangkan pengulangan dengan &ldquo;x&rdquo;.
-#!/usr/bin/perl use strict; use warnings; use feature &#34;say&#34;; my $sapa = &#34;Hai.... &#34;; my $distro = &#34;Slackware &#34;; my $penilaian = &#34;distro terbaik.
+  <p>Pada <strong>perl</strong>, variabel <strong>scalar</strong> yang berupa <strong>string</strong> dapat dilakukan penggabungan dan pengulangan. Contoh, terdapat 3 variabel sebagai berikut:
+$sapa = &ldquo;Hai&hellip;. &quot;
+$distro = &ldquo;Slackware&rdquo;
+$penilaian = &ldquo;distro terbaik.&rdquo;
+Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan &ldquo;.&rdquo;, sedangkan pengulangan dengan &ldquo;x&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#34;say&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $sapa <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hai.... &#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $distro <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Slackware &#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $penilaian <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;distro terbaik.&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># penggabungan</span>
+</span></span><span style="display:flex;"><span>say($sapa<span style="color:#f92672">.</span>$distro<span style="color:#f92672">.</span>$penilaian);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pengulangan</span>
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;$distro&#34;</span> x <span style="color:#ae81ff">5</span>);
+</span></span></code></pre></div>
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -398,15 +437,23 @@ Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &lt; $b	| $a lebih kec
   </header>
 
   <p>
-  Penggabungan operator yang dimaksudkan di sini adalah menggabungkan = dan operator lainnya seperti penjumlahan, perkalian, pengurangan, dll. Penggabungan ini biasanya digunakan untuk memperbarui nilai suatu variabel. Contoh di sini adalah penggabungan dengan operator penjumlahan.
-Misalkan, terdapat variabel a dengan nilai awal 10. Nilai a kemudian akan diubah dengan cara ditambah 4. Nilai a yang baru ini dituliskan dengan
-a += 4; Sehingga nilai a kemudian berubah dari 10 menjadi 14.
+  <p>Penggabungan operator yang dimaksudkan di sini adalah menggabungkan = dan operator lainnya seperti penjumlahan, perkalian, pengurangan, dll. Penggabungan ini biasanya digunakan untuk memperbarui nilai suatu variabel. Contoh di sini adalah penggabungan dengan operator penjumlahan.</p>
+<p>Misalkan, terdapat variabel a dengan nilai awal 10. Nilai a kemudian akan diubah dengan cara ditambah 4. Nilai a yang baru ini dituliskan dengan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span>a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">4</span>;
+</span></span></code></pre></div><p>Sehingga nilai a kemudian berubah dari 10 menjadi 14.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#34;say&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai a awal. a = 10&#34;</span>);
+</span></span><span style="display:flex;"><span>$a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">4</span>;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai a baru setelah ditambah 4. a += 4. a = $a&#34;</span>);
+</span></span></code></pre></div>
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -446,15 +493,78 @@ a += 4; Sehingga nilai a kemudian berubah dari 10 menjadi 14.
   </header>
 
   <p>
-  Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.
-Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.
-#!/usr/bin/perl use strict; use warnings; use feature &#39;say&#39;; my $a = 2; my $b = 25; say(&#34;Angka pertama (a) adalah $a&#34;); say(&#34;Angka kedua (b) adalah $b&#34;); # penjumlahan my $c = $a + $b; say(&#34;a+b = $c&#34;); # pengurangan my $d = $b - $a; say(&#34;b-a = $d&#34;); # perkalian my $e = $a * $b; say(&#34;a*b = $e&#34;); # pembagian my $f = $a / $b; my $g = $b / $a; say(&#34;a/b = $f&#34;); say(&#34;b/a = $g&#34;); # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(&#34;a^b = $h&#34;); say(&#34;b^a = $i&#34;); # autoincrement # tanda + di depan say(&#34;Nilai a sebelum autoincrement = $a&#34;); my $j = ++$a; say(&#34;++a = $j&#34;); say(&#34;Nilai a sesudah autoincrement = $a&#34;); # tanda + di belakang say(&#34;Nilai b sebelum autoincrement $b&#34;); my $k = $b++; say(&#34;$b++ = $k&#34;); say(&#34;Nilai b setelah autoincrement $b&#34;); # autodecrement # tanda - di depan say(&#34;c = a+b.
+  <p>Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, <em>autoincrement, autodecrement</em>.</p>
+<p>Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#39;say&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $a <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $b <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Angka pertama (a) adalah $a&#34;</span>);
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Angka kedua (b) adalah $b&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># penjumlahan</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $c <span style="color:#f92672">=</span> $a <span style="color:#f92672">+</span> $b;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a+b = $c&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pengurangan</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $d <span style="color:#f92672">=</span> $b <span style="color:#f92672">-</span> $a;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b-a = $d&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># perkalian</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $e <span style="color:#f92672">=</span> $a <span style="color:#f92672">*</span> $b;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a*b = $e&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pembagian</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $f <span style="color:#f92672">=</span> $a <span style="color:#f92672">/</span> $b;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $g <span style="color:#f92672">=</span> $b <span style="color:#f92672">/</span> $a;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a/b = $f&#34;</span>);
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b/a = $g&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pemangkatan</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $h <span style="color:#f92672">=</span> $a <span style="color:#f92672">**</span> $b;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $i <span style="color:#f92672">=</span> $b <span style="color:#f92672">**</span> $a;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a^b = $h&#34;</span>);
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b^a = $i&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># autoincrement</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># tanda + di depan</span>
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai a sebelum autoincrement = $a&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $j <span style="color:#f92672">=</span> <span style="color:#f92672">++</span>$a;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;++a = $j&#34;</span>);
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai a sesudah autoincrement = $a&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># tanda + di belakang</span>
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai b sebelum autoincrement $b&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $k <span style="color:#f92672">=</span> $b<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;$b++ = $k&#34;</span>);
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai b setelah autoincrement $b&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># autodecrement</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># tanda - di depan</span>
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;c = a+b. c sebelum autodecrement = $c&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $l <span style="color:#f92672">=</span> <span style="color:#f92672">--</span>$c;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;l = c setelah autodecrement = $l&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># tanda - di belakang</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $m <span style="color:#f92672">=</span> $c<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;c setelah autodecrement = $m&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># modulus (sisa hasil bagi)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $a <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $b <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $n <span style="color:#f92672">=</span> $a % <span style="color:#960050;background-color:#1e0010">$</span>b;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $o <span style="color:#f92672">=</span> $b % <span style="color:#960050;background-color:#1e0010">$</span>a;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a = $a&#34;</span>);
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b = $b&#34;</span>);
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a%b = $n&#34;</span>);
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b%a = $o&#34;</span>);
+</span></span></code></pre></div>
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -494,9 +604,14 @@ Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer ada
   </header>
 
   <p>
-  Array merupakan variabel pada perl dengan data yang nilainya majemuk. Sedangkan scalar bernilai tunggal. Catatan kali ini tentang bagaimana cara membuat array dari scalar yang tersedia.
-my $nama = &#34;Sasongko&#34;; my $jenis_kelamin = &#34;Laki-laki&#34;; my $distro = &#34;Slackware&#34;; my $tahun = 2021; Keempat scalar tersebut akan disatukan menjadi array @biodata.
-my @biodata = ($nama, $jenis_kelamin, $distro, $tahun); 
+  <p>Array merupakan variabel pada <strong>perl</strong> dengan data yang nilainya majemuk. Sedangkan scalar bernilai tunggal. Catatan kali ini tentang bagaimana cara membuat array dari scalar yang tersedia.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $nama <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sasongko&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $jenis_kelamin <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Laki-laki&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $distro <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Slackware&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $tahun <span style="color:#f92672">=</span> <span style="color:#ae81ff">2021</span>;
+</span></span></code></pre></div><p>Keempat scalar tersebut akan disatukan menjadi array @biodata.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> @biodata <span style="color:#f92672">=</span> ($nama, $jenis_kelamin, $distro, $tahun);
+</span></span></code></pre></div>
   </p>
 
   
@@ -538,8 +653,14 @@ my @biodata = ($nama, $jenis_kelamin, $distro, $tahun);
   </header>
 
   <p>
-  Untuk mengetahui semua modul perl yang terinstall bisa menggunakan instmodsh.
-$ instmodsh Available commands are: l - List all installed modules m &lt;module&gt; - Select a module q - Quit the program cmd? Kemudian pilih l.
+  <p>Untuk mengetahui semua modul <strong>perl</strong> yang terinstall bisa menggunakan <strong>instmodsh</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ instmodsh
+</span></span><span style="display:flex;"><span>Available commands are:
+</span></span><span style="display:flex;"><span>   l            - List all installed modules
+</span></span><span style="display:flex;"><span>   m &lt;module&gt;   - Select a module
+</span></span><span style="display:flex;"><span>   q            - Quit the program
+</span></span><span style="display:flex;"><span>cmd?
+</span></span></code></pre></div><p>Kemudian pilih l.</p>
   </p>
 
   
@@ -581,10 +702,12 @@ $ instmodsh Available commands are: l - List all installed modules m &lt;module&
   </header>
 
   <p>
-  Array adalah salah satu tipe data pada bahasa pemrograman perl. Tipe data ini berisi data majemuk. Penulisan array menggunakan notasi @.
-Contoh:
-my @buah = (&#34;pepaya&#34;, &#34;manga&#34;, &#34;pisang&#34;, &#34;jambu&#34;, &#34;durian&#34;, &#34;apel&#34;); Untuk mengetahui berapa banyaknya elemen dari array, bisa menggunakan scalar().
-print(scalar(@buah)); 
+  <p><em>Array</em> adalah salah satu tipe data pada <strong>bahasa pemrograman perl</strong>. Tipe data ini berisi data majemuk. Penulisan <em>array</em> menggunakan notasi @.</p>
+<p>Contoh:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> @buah <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;pepaya&#34;</span>, <span style="color:#e6db74">&#34;manga&#34;</span>, <span style="color:#e6db74">&#34;pisang&#34;</span>, <span style="color:#e6db74">&#34;jambu&#34;</span>, <span style="color:#e6db74">&#34;durian&#34;</span>, <span style="color:#e6db74">&#34;apel&#34;</span>);
+</span></span></code></pre></div><p>Untuk mengetahui berapa banyaknya elemen dari <em>array</em>, bisa menggunakan <strong>scalar()</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">print</span>(scalar(@buah));
+</span></span></code></pre></div>
   </p>
 
   
@@ -626,9 +749,13 @@ print(scalar(@buah));
   </header>
 
   <p>
-  Jenis variabel ketiga yang dimiliki perl adalah hash. Hash ini merupakan data berpasangan. Penulisan dengan menyertakan tanda %.
-Contoh: akan dideklarasikan data tentang saya, yaitu nama dan distro yang saya gunakan. Nama saya Sasongko, distro Slackware.
-my %data = ( nama =&gt; &#34;Sasongko&#34;, distro =&gt; &#34;Slackware&#34;, ); 
+  <p>Jenis variabel ketiga yang dimiliki <strong>perl</strong> adalah <strong>hash</strong>. <strong>Hash</strong> ini merupakan data berpasangan. Penulisan dengan menyertakan tanda %.</p>
+<p>Contoh: akan dideklarasikan data tentang saya, yaitu nama dan distro yang saya gunakan. Nama saya Sasongko, distro Slackware.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> %data <span style="color:#f92672">=</span> (
+</span></span><span style="display:flex;"><span>	nama <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Sasongko&#34;</span>,
+</span></span><span style="display:flex;"><span>	distro <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Slackware&#34;</span>,
+</span></span><span style="display:flex;"><span>	);
+</span></span></code></pre></div>
   </p>
 
   
@@ -670,11 +797,14 @@ my %data = ( nama =&gt; &#34;Sasongko&#34;, distro =&gt; &#34;Slackware&#34;, );
   </header>
 
   <p>
-  Melanjutkan catatan sebelumnya tentang variabel yang dimiliki bahasa pemrograman perl. Sebelumnya membahas tentang variabel scalar. Catatan kali ini tentang jenis variabel yang kedua yaitu array.
-Berbeda dengan scalar yang bernilai tunggal, array bernilai majemuk. Array merupakan himpunan. Element array zero indexed, artinya, elemen pertama berindeks 0.
-Pendeklarasian array diserta simbol @.
-Contoh: himpunan nama-nama buah dan daftar nilai
-my @buah = (&#34;pisang&#34;, &#34;mangga&#34;, &#34;jeruk&#34;, &#34;pepaya&#34;); my @daftar_nilai = (80, 100, 76.
+  <p>Melanjutkan catatan sebelumnya tentang variabel yang dimiliki bahasa pemrograman <strong>perl</strong>. Sebelumnya membahas tentang variabel <strong>scalar</strong>. Catatan kali ini tentang jenis variabel yang kedua yaitu <strong>array</strong>.</p>
+<p>Berbeda dengan <strong>scalar</strong> yang bernilai tunggal, <strong>array</strong> bernilai majemuk. Array merupakan himpunan. Element <strong>array</strong> <em>zero indexed</em>, artinya, elemen pertama berindeks 0.</p>
+<p>Pendeklarasian array diserta simbol @.</p>
+<p>Contoh: himpunan nama-nama buah dan daftar nilai</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> @buah <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;pisang&#34;</span>, <span style="color:#e6db74">&#34;mangga&#34;</span>, <span style="color:#e6db74">&#34;jeruk&#34;</span>, <span style="color:#e6db74">&#34;pepaya&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> @daftar_nilai <span style="color:#f92672">=</span> (<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">76.5</span>, <span style="color:#ae81ff">21.87</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">print</span> $buah[<span style="color:#ae81ff">0</span>];
+</span></span></code></pre></div><p>menghasilkan output pisang. Sedangkan</p>
   </p>
 
   
@@ -720,8 +850,10 @@ my @buah = (&#34;pisang&#34;, &#34;mangga&#34;, &#34;jeruk&#34;, &#34;pepaya&#34
   </header>
 
   <p>
-  Perl memiliki 3 jenis variabel, yaitu scalar, array dan hash. Scalar adalah variabel dengan nilai tunggal. Penulisan scalar diawali dengan tanda $.Pendeklarasian variabel dengan my. Nilai dari scalar bisa berupa text/string ataupun angka. Contoh: akan dideklarasikan variabel buah. buah ini bernilai &ldquo;mangga&rdquo;.
-my $buah = &#34;mangga&#34;; 
+  <p><strong>Perl</strong> memiliki 3 jenis variabel, yaitu scalar, array dan hash. Scalar adalah variabel dengan nilai tunggal. Penulisan scalar diawali dengan tanda $.Pendeklarasian variabel dengan my. Nilai dari scalar bisa berupa text/string ataupun angka.
+Contoh: akan dideklarasikan variabel <em>buah</em>. buah ini bernilai &ldquo;mangga&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $buah <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mangga&#34;</span>;
+</span></span></code></pre></div>
   </p>
 
   
@@ -763,8 +895,9 @@ my $buah = &#34;mangga&#34;;
   </header>
 
   <p>
-  Salah satu keunggulan perl dibanding bahasa pemrograman lainnya adalah tersedia dokumentasi atau panduan bagi pemula. Pemula membutuhkan panduan singkat tapi tetap komprehensif dan mudah dipahami. Perl sudah memberikannya. Dokumentasi atau panduan ini bisa diakses secara offline setelah menginstall perl. Namanya adalah perlintro.
-$ perldoc perlintro 
+  <p>Salah satu keunggulan <strong>perl</strong> dibanding bahasa pemrograman lainnya adalah tersedia dokumentasi atau panduan bagi pemula. Pemula membutuhkan panduan singkat tapi tetap komprehensif dan mudah dipahami. <strong>Perl</strong> sudah memberikannya. Dokumentasi atau panduan ini bisa diakses secara <em>offline</em> setelah menginstall <strong>perl</strong>. Namanya adalah <strong>perlintro</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ perldoc perlintro
+</span></span></code></pre></div>
   </p>
 
   
@@ -806,10 +939,14 @@ $ perldoc perlintro
   </header>
 
   <p>
-  Reputasi vim sebagai text editor sudah teruji berpuluh tahun. Ternyata Vim juga memiliki support plugin untuk perl. Hal ini membuat vim bisa dijadikan sebagai integrated development environment (IDE) untuk perl.
-Download plugin-nya kemudian extract
-$ wget https://www.vim.org/scripts/download_script.php?src_id=24473 -O perl-support.zip -O perl-support.zip $ mkdir -p .vim $ unzip perl-support.zip -d .vim Aktifkan
-$ echo &#34;filetype plugin on&#34; &gt;&gt; .vimrc 
+  <p>Reputasi <strong>vim</strong> sebagai <strong>text editor</strong> sudah teruji berpuluh tahun. Ternyata <strong>Vim</strong> juga memiliki <em>support</em> <strong>plugin</strong> untuk <strong>perl</strong>. Hal ini membuat <strong>vim</strong> bisa dijadikan sebagai <strong>integrated development environment (IDE)</strong> untuk <strong>perl</strong>.</p>
+<p><em>Download plugin</em>-nya kemudian extract</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ wget https://www.vim.org/scripts/download_script.php?src_id<span style="color:#f92672">=</span><span style="color:#ae81ff">24473</span> -O perl-support.zip -O perl-support.zip
+</span></span><span style="display:flex;"><span>$ mkdir -p .vim
+</span></span><span style="display:flex;"><span>$ unzip perl-support.zip -d .vim
+</span></span></code></pre></div><p>Aktifkan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;filetype plugin on&#34;</span> &gt;&gt; .vimrc
+</span></span></code></pre></div>
   </p>
 
   
@@ -851,8 +988,10 @@ $ echo &#34;filetype plugin on&#34; &gt;&gt; .vimrc
   </header>
 
   <p>
-  Siang ini, sudah agak lama tidak check update paket-paket dari SBo. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.
-$ sbocheck # command ini dijalankan oleh root Unescaped left brace in regex is deprecated here (and will be fatal in Perl 5.32), passed through in regex; marked by &lt;-- HERE in m/\$({ &lt;-- HERE |)[A-Za-z0-9_]+(}|)/ at /usr/share/perl5/SBO/Lib/Build.pm line 244 Ada masalah ternyata dan masalahnya di Perl.
+  <p>Siang ini, sudah agak lama tidak <em>check update</em> paket-paket dari <a href="http://slackbuilds.org">SBo</a>. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sbocheck <span style="color:#75715e"># command ini dijalankan oleh root</span>
+</span></span><span style="display:flex;"><span>Unescaped left brace in regex is deprecated here <span style="color:#f92672">(</span>and will be fatal in Perl 5.32<span style="color:#f92672">)</span>, passed through in regex; marked by &lt;-- HERE in m/<span style="color:#ae81ff">\$</span><span style="color:#f92672">({</span> &lt;-- HERE |<span style="color:#f92672">)[</span>A-Za-z0-9_<span style="color:#f92672">]</span>+<span style="color:#f92672">(}</span>|<span style="color:#f92672">)</span>/ at /usr/share/perl5/SBO/Lib/Build.pm line <span style="color:#ae81ff">244</span>
+</span></span></code></pre></div><p>Ada masalah ternyata dan masalahnya di <a href="http://sasongko.web.id/tags/#perl">Perl</a>. Simpel sih solusinya. Buka file <!-- raw HTML omitted -->/usr/share/perl5/SBO/Lib/Build.pm<!-- raw HTML omitted -->, pada <em>line</em> 244 karakter { diganti {</p>
   </p>
 
   
@@ -900,10 +1039,13 @@ $ sbocheck # command ini dijalankan oleh root Unescaped left brace in regex is d
   </header>
 
   <p>
-  Shebang itu apa? Pengguna linux, BSD, ataupun mac yang terbiasa melihat source code sangat mungkin sudah tidak asing lagi dengan shebang. Ada yang menyebut shebang sebagai sh bang, shabang, hashbang, hashpling, dan poundbang. Shebang ini dituliskan di baris pertama, yakni diawali dengan #!.
-Contoh, untuk perl :
-#!/usr/bin/perl atau
-#!/usr/bin/env perl Sebagai pengguna linux khususnya Slackware, user akan merasakan betapa pentingnya shebang ini. Kepentingannya terkait fungsi shebang itu sendiri dan bagaimana user menjalankannya.
+  <h1 id="shebang-itu-apa">Shebang itu apa?</h1>
+<p>Pengguna linux, BSD, ataupun mac yang terbiasa melihat <em>source code</em> sangat mungkin sudah tidak asing lagi dengan <strong>shebang</strong>. Ada yang menyebut shebang sebagai <strong>sh bang</strong>, <strong>shabang</strong>, <strong>hashbang</strong>, <strong>hashpling</strong>, dan <strong>poundbang</strong>. Shebang ini dituliskan di baris pertama, yakni diawali dengan <!-- raw HTML omitted -->#!<!-- raw HTML omitted -->.</p>
+<p>Contoh, untuk <strong>perl</strong> :</p>
+<pre tabindex="0"><code>#!/usr/bin/perl
+</code></pre><p>atau</p>
+<pre tabindex="0"><code>#!/usr/bin/env perl
+</code></pre><p>Sebagai pengguna linux khususnya <strong>Slackware</strong>, <em>user</em> akan merasakan betapa pentingnya shebang ini. Kepentingannya terkait fungsi shebang itu sendiri dan bagaimana <em>user</em> menjalankannya.</p>
   </p>
 
   
@@ -949,8 +1091,9 @@ Contoh, untuk perl :
   </header>
 
   <p>
-  Cara uninstall semua modul perl yang dulunya install dari CPAN secara manual :
-rm -r /usr/local/{lib{,64},share}/perl5 
+  <p>Cara <em>uninstall</em> semua modul perl yang dulunya <em>install</em> dari <a href="https://cpan.org">CPAN</a> secara manual :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -r /usr/local/<span style="color:#f92672">{</span>lib<span style="color:#f92672">{</span>,64<span style="color:#f92672">}</span>,share<span style="color:#f92672">}</span>/perl5
+</span></span></code></pre></div>
   </p>
 
   
@@ -992,14 +1135,23 @@ rm -r /usr/local/{lib{,64},share}/perl5
   </header>
 
   <p>
-  Padre merupakan integrated development environment (IDE) untuk bahasa pemrograman perl.
-Padre ini belum dimasukkan ke dalam paket resmi Slackware maupun SBo. Sehingga ada 2 kemungkinan cara menginstallnya.
-Build sendiri dari source
-Install dari cpan
-Cara yang saya gunakan adalah cara kedua, yaitu
-$ cpan -i Padre 
+  <p><!-- raw HTML omitted -->Padre<!-- raw HTML omitted --> merupakan <strong><em>integrated development environment (IDE)</em> untuk bahasa pemrograman <!-- raw HTML omitted -->perl<!-- raw HTML omitted --></strong>.</p>
+<p><!-- raw HTML omitted -->Padre<!-- raw HTML omitted --> ini belum dimasukkan ke dalam paket resmi <strong>Slackware</strong> maupun <strong>SBo</strong>. Sehingga ada 2 kemungkinan cara menginstallnya.</p>
+<ol>
+<li>
+<p><em>Build</em> sendiri dari <em>source</em></p>
+</li>
+<li>
+<p>Install dari <!-- raw HTML omitted -->cpan<!-- raw HTML omitted --></p>
+</li>
+</ol>
+<p>Cara yang saya gunakan adalah cara kedua, yaitu</p>
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-01-19-install-padre/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 

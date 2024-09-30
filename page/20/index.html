@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,64 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-03-27-median-data-python/">Median data dengan python</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>27 Mar 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi <strong>describe()</strong> atau <strong>median()</strong> yang dimiliki <strong>pandas</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># dengan editing header variabel </span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;../dataset/drinks.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># median</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;median konsumsi bir adalah &#39;</span>,data[<span style="color:#e6db74">&#39;beer_servings&#39;</span>]<span style="color:#f92672">.</span>median(),<span style="color:#e6db74">&#39;kaleng&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;median konsumsi spirit adalah &#39;</span>, data[<span style="color:#e6db74">&#39;spirit_servings&#39;</span>]<span style="color:#f92672">.</span>median())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;median konsumsi anggur adalah &#39;</span>, data[<span style="color:#e6db74">&#39;wine_servings&#39;</span>]<span style="color:#f92672">.</span>median(), <span style="color:#e6db74">&#39;gelas&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;median konsumsi alkohol murni adalah &#39;</span>, data[<span style="color:#e6db74">&#39;pure_alcohol&#39;</span>]<span style="color:#f92672">.</span>median(), <span style="color:#e6db74">&#39;liter&#39;</span>)
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-03-26-mean-data-python/">Mean data dengan python</a></h2>
 
     <div class="post-meta">
@@ -263,8 +321,21 @@
   </header>
 
   <p>
-  Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau mean() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # mean print(&#39;rerata konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].mean(),&#39;kaleng&#39;) print(&#39;rerata konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].mean()) print(&#39;rerata konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].mean(), &#39;gelas&#39;) print(&#39;rerata konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].mean(), &#39;liter&#39;) 
+  <p>Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi <strong>describe()</strong> atau <strong>mean()</strong> yang dimiliki <strong>pandas</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># dengan editing header variabel </span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;../dataset/drinks.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># mean</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;rerata konsumsi bir adalah &#39;</span>,data[<span style="color:#e6db74">&#39;beer_servings&#39;</span>]<span style="color:#f92672">.</span>mean(),<span style="color:#e6db74">&#39;kaleng&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;rerata konsumsi spirit adalah &#39;</span>, data[<span style="color:#e6db74">&#39;spirit_servings&#39;</span>]<span style="color:#f92672">.</span>mean())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;rerata konsumsi anggur adalah &#39;</span>, data[<span style="color:#e6db74">&#39;wine_servings&#39;</span>]<span style="color:#f92672">.</span>mean(), <span style="color:#e6db74">&#39;gelas&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;rerata konsumsi alkohol murni adalah &#39;</span>, data[<span style="color:#e6db74">&#39;pure_alcohol&#39;</span>]<span style="color:#f92672">.</span>mean(), <span style="color:#e6db74">&#39;liter&#39;</span>)
+</span></span></code></pre></div>
   </p>
 
   
@@ -308,10 +379,16 @@
   </header>
 
   <p>
-  Untuk menampilkan statistik deskriptif suatu data, bisa menggunakan fungsi describe() dari library yang dimiliki python yaitu pandas.
-Berikut ini akan ditampilkan deskripsi data konsumsi alkohol dunia. Sumber data : https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv
-Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel yaitu :
-beer_servings (konsumsi bir yang dinyatakan dalam kaleng) spirit_servings (konsumsi minuman beralkohol spirit; maaf, variabel ini masih belum penulis pahami sepenuhnya) wine_servings (konsumsi anggur yang dinyatakan dalam gelas) pure_alcohol (konsumsi alkohol murni yang dinyataksan dalam liter, nama variabel ini sudah penulis singkat) Adapun deskripsi yang ditampilkan adalah :
+  <p>Untuk menampilkan statistik deskriptif suatu data, bisa menggunakan fungsi <strong>describe()</strong> dari <em>library</em> yang dimiliki <strong>python</strong> yaitu <strong>pandas</strong>.</p>
+<p>Berikut ini akan ditampilkan deskripsi data konsumsi alkohol dunia. Sumber data : <a href="https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv">https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</a></p>
+<p>Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel yaitu :</p>
+<ol>
+<li>beer_servings (konsumsi bir yang dinyatakan dalam kaleng)</li>
+<li>spirit_servings (konsumsi minuman beralkohol spirit; maaf, variabel ini masih belum penulis pahami sepenuhnya)</li>
+<li>wine_servings (konsumsi anggur yang dinyatakan dalam gelas)</li>
+<li>pure_alcohol (konsumsi alkohol murni yang dinyataksan dalam liter, nama variabel ini sudah penulis singkat)</li>
+</ol>
+<p>Adapun deskripsi yang ditampilkan adalah :</p>
   </p>
 
   
@@ -359,10 +436,61 @@ beer_servings (konsumsi bir yang dinyatakan dalam kaleng) spirit_servings (konsu
   </header>
 
   <p>
-  Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi info() dari pandas.
-Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-#!/usr/bin/env python3 import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.info()) Outputnya
-&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns): # Column Non-Null Count Dtype --- ------ -------------- ----- 0 RowId 178539 non-null object 1 YearStart 178539 non-null int64 2 YearEnd 178539 non-null int64 3 LocationAbbr 178539 non-null object 4 LocationDesc 178539 non-null object 5 Datasource 178539 non-null object 6 Class 178539 non-null object 7 Topic 178539 non-null object 8 Question 178539 non-null object 9 Response 0 non-null float64 10 Data_Value_Unit 178539 non-null object 11 DataValueTypeID 178539 non-null object 12 Data_Value_Type 178539 non-null object 13 Data_Value 120885 non-null float64 14 Data_Value_Alt 0 non-null float64 15 Data_Value_Footnote_Symbol 70619 non-null object 16 Data_Value_Footnote 70619 non-null object 17 Low_Confidence_Limit 120750 non-null float64 18 High_Confidence_Limit 120750 non-null float64 19 Sample_Size 0 non-null float64 20 StratificationCategory1 178539 non-null object 21 Stratification1 178539 non-null object 22 StratificationCategory2 178539 non-null object 23 Stratification2 178539 non-null object 24 StratificationCategory3 0 non-null float64 25 Stratification3 0 non-null float64 26 Geolocation 159375 non-null object 27 ClassID 178539 non-null object 28 TopicID 178539 non-null object 29 QuestionID 178539 non-null object 30 ResponseID 0 non-null float64 31 LocationID 178539 non-null int64 32 StratificationCategoryID1 178539 non-null object 33 StratificationID1 178539 non-null object 34 StratificationCategoryID2 178539 non-null object 35 StratificationID2 178539 non-null object 36 StratificationCategoryID3 0 non-null float64 37 StratificationID3 0 non-null float64 38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.
+  <p>Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi <strong>info()</strong> dari <strong>pandas</strong>.</p>
+<p>Data diambil dari <a href="https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/">https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>print(data<span style="color:#f92672">.</span>info())
+</span></span></code></pre></div><p>Outputnya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;class <span style="color:#e6db74">&#39;pandas.core.frame.DataFrame&#39;</span>&gt;
+</span></span><span style="display:flex;"><span>RangeIndex: <span style="color:#ae81ff">178539</span> entries, <span style="color:#ae81ff">0</span> to <span style="color:#ae81ff">178538</span>
+</span></span><span style="display:flex;"><span>Data columns <span style="color:#f92672">(</span>total <span style="color:#ae81ff">39</span> columns<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">#   Column                      Non-Null Count   Dtype  </span>
+</span></span><span style="display:flex;"><span>---  ------                      --------------   -----  
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">0</span>   RowId                       <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span>   YearStart                   <span style="color:#ae81ff">178539</span> non-null  int64  
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span>   YearEnd                     <span style="color:#ae81ff">178539</span> non-null  int64  
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span>   LocationAbbr                <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">4</span>   LocationDesc                <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">5</span>   Datasource                  <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">6</span>   Class                       <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">7</span>   Topic                       <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8</span>   Question                    <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">9</span>   Response                    <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">10</span>  Data_Value_Unit             <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">11</span>  DataValueTypeID             <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">12</span>  Data_Value_Type             <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">13</span>  Data_Value                  <span style="color:#ae81ff">120885</span> non-null  float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">14</span>  Data_Value_Alt              <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">15</span>  Data_Value_Footnote_Symbol  <span style="color:#ae81ff">70619</span> non-null   object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">16</span>  Data_Value_Footnote         <span style="color:#ae81ff">70619</span> non-null   object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">17</span>  Low_Confidence_Limit        <span style="color:#ae81ff">120750</span> non-null  float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">18</span>  High_Confidence_Limit       <span style="color:#ae81ff">120750</span> non-null  float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">19</span>  Sample_Size                 <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">20</span>  StratificationCategory1     <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">21</span>  Stratification1             <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">22</span>  StratificationCategory2     <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">23</span>  Stratification2             <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">24</span>  StratificationCategory3     <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">25</span>  Stratification3             <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">26</span>  Geolocation                 <span style="color:#ae81ff">159375</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">27</span>  ClassID                     <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">28</span>  TopicID                     <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">29</span>  QuestionID                  <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">30</span>  ResponseID                  <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">31</span>  LocationID                  <span style="color:#ae81ff">178539</span> non-null  int64  
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">32</span>  StratificationCategoryID1   <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">33</span>  StratificationID1           <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">34</span>  StratificationCategoryID2   <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">35</span>  StratificationID2           <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">36</span>  StratificationCategoryID3   <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">37</span>  StratificationID3           <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">38</span>  Report                      <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span>dtypes: float64<span style="color:#f92672">(</span>12<span style="color:#f92672">)</span>, int64<span style="color:#f92672">(</span>3<span style="color:#f92672">)</span>, object<span style="color:#f92672">(</span>24<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>memory usage: 53.1+ MB
+</span></span></code></pre></div><p>Dari output tersebut dapat diketahui antara lain:</p>
   </p>
 
   
@@ -408,54 +536,12 @@ Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-health
   </header>
 
   <p>
-  Secara default, apabila menggunakan wget, file di-download ke direktori aktif. Dengan mengaktifkan prefix directory (-P), file tersebut bisa disimpan ke direktori lain.
-$ wget [url] -P [direktori] [url] : URL / alamat lengkap file yang akan di-download [direktori] : direktori tujuan 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/">Mengetahui dimensi dataset python</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>22 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk mengetahui dimensi atau jumlah baris dan kolom dataset dapat menggunakan shape dari pandas. Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.shape) Output:
-(178539, 39) Dari output tersebut diketahui dataset mempunyai 178539 baris dan 39 kolom.
+  <p>Secara <em>default</em>, apabila menggunakan <strong>wget</strong>, file di-<em>download</em> ke direktori aktif. Dengan mengaktifkan <em>prefix directory</em> (-P), file tersebut bisa disimpan ke direktori lain.</p>
+<pre tabindex="0"><code>$ wget [url] -P [direktori]
+</code></pre><ul>
+<li>[url] : URL / alamat lengkap file yang akan di-<em>download</em></li>
+<li>[direktori] : direktori tujuan</li>
+</ul>
   </p>
 
   
@@ -470,7 +556,7 @@ import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Agin
   
   <a href="https://sasongko.web.id/page/19/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;20 / 65&nbsp;</span>
+  <span>&nbsp;20 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/21/"><i class="fa fa-chevron-right"></i></a>
   

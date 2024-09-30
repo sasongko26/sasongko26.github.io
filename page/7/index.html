@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,51 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2023-01-10-ubah-colorscheme-vim/">Mengubah colorscheme vim</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Jan 2023</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text-editor</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>VIm merupakan teks editor legendaris yang masih aktif dikembangkan. Mudah diubahsuaikan menjadi salah satu alasan vim dan derivatnya digemari banyak kalangan, baik itu programmer maupun pengguna awam seperti kami ini. Salah satu yang mudah diubahsuaikan adalah tampilannya. Lebih spesifik lagi skema warna atau <em>color scheme</em>-nya.</p>
+<p>Banyak <em>color scheme</em> yang disediakan, salah satunya adalah <strong>koehler</strong>. Untuk mengubah <strong>koehler</strong> sebagai <em>default</em> tambahkan ini ke .vimrc</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>colorscheme koehler
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-11-16-mengatur-brightness/">Mengatur brightness</a></h2>
 
     <div class="post-meta">
@@ -261,9 +306,11 @@
   </header>
 
   <p>
-  Pengaturan brightness bisa dilakukan dengan melakukan assign nilai pada
-/sys/class/backlight/intel_backlight/brightness Adapun nilai maksimal yang bisa diset ada di
-/sys/class/backlight/intel_backlight/max_brightness Oiya, di atas menggunakan graphics intel jadi intel_backlight.
+  <p>Pengaturan <em>brightness</em> bisa dilakukan dengan melakukan <em>assign</em> nilai pada</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/sys/class/backlight/intel_backlight/brightness
+</span></span></code></pre></div><p>Adapun nilai maksimal yang bisa diset ada di</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/sys/class/backlight/intel_backlight/max_brightness
+</span></span></code></pre></div><p>Oiya, di atas menggunakan <em>graphics</em> <strong>intel</strong> jadi <em>intel_backlight</em>.</p>
   </p>
 
   
@@ -305,9 +352,15 @@
   </header>
 
   <p>
-  Setelah install virtualbox menggunakan binary .run, ketika dijalankan via terminal mengalami sgfault:
-bash-5.2$ virtualbox (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot register existing type &#39;NMAgentManagerError&#39; (process:7040): GLib-CRITICAL **: 00:53:14.710: g_once_init_leave: assertion &#39;result != 0&#39; failed (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot retrieve class for invalid (unclassed) type &#39;invalid&#39; Segmentation fault Solusinya:
-bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never 
+  <p>Setelah <strong>install virtualbox</strong> menggunakan <em>binary</em>  .run, ketika dijalankan via terminal mengalami sgfault:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bash-5.2$ virtualbox
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>process:7040<span style="color:#f92672">)</span>: GLib-GObject-WARNING **: 00:53:14.710: cannot register existing type <span style="color:#e6db74">&#39;NMAgentManagerError&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>process:7040<span style="color:#f92672">)</span>: GLib-CRITICAL **: 00:53:14.710: g_once_init_leave: assertion <span style="color:#e6db74">&#39;result != 0&#39;</span> failed
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>process:7040<span style="color:#f92672">)</span>: GLib-GObject-WARNING **: 00:53:14.710: cannot retrieve class <span style="color:#66d9ef">for</span> invalid <span style="color:#f92672">(</span>unclassed<span style="color:#f92672">)</span> type <span style="color:#e6db74">&#39;invalid&#39;</span>
+</span></span><span style="display:flex;"><span>Segmentation fault
+</span></span></code></pre></div><p>Solusinya:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never
+</span></span></code></pre></div>
   </p>
 
   
@@ -347,8 +400,8 @@ bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never
   </header>
 
   <p>
-  Catatan kali ini tidak terkait langsung dengan pengalaman penggunaan slackware ataupun open source software lainnya. Sedikit ngudarasa atau berbagi cerita dengan pembaca tentang salah satu registrar &amp; hosting provider. Provider tersebut adalah Exabytes.
-Domain blog ini menuju kadaluwarsa. Sekitar 2 bulan sebelum expired date, Exabytes mengirimkan email sebagai pengingat. Pun H-30. Saya ucapkan terima kasih atas reminder-nya, walaupun sebenarnya tanpa reminder pun saya ingat dan sudah ada rencana kapan memperpanjang domain.
+  <p>Catatan kali ini tidak terkait langsung dengan pengalaman penggunaan <strong>slackware</strong> ataupun <em>open source software</em> lainnya. Sedikit <em>ngudarasa</em> atau berbagi cerita dengan pembaca tentang salah satu <em>registrar &amp; hosting provider</em>. Provider tersebut adalah <strong>Exabytes</strong>.</p>
+<p>Domain blog ini menuju kadaluwarsa. Sekitar 2 bulan sebelum <em>expired date</em>, <strong>Exabytes</strong> mengirimkan email sebagai pengingat. Pun H-30. Saya ucapkan terima kasih atas <em>reminder</em>-nya, walaupun sebenarnya tanpa <em>reminder</em> pun saya ingat dan sudah ada rencana kapan memperpanjang domain. Ternyata domain ini tidak bisa diakses. Sekali dua kali mulanya saya coba gagal.</p>
   </p>
 
   
@@ -396,53 +449,15 @@ Domain blog ini menuju kadaluwarsa. Sekitar 2 bulan sebelum expired date, Exabyt
   </header>
 
   <p>
-  Langsung saja
-cd /opt git clone https://github.com/thesofproject/sof-bin.git cd sof-bin Masuk ke direktori rilis terbaru, contoh kali ini v2.2
-cd v2.2.x rsync -a sof-v2.2/ /lib/firmware/intel/sof/ rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/ 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-05-28-if-else-perl/">If else perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>28 May 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Penyeleksian kondisi di perl dapat menggunakan syntax if&hellip;else dengan format
-if ( kondisi ) { .... } else { .... } Contoh
-#!/usr/bin/perl use strict; use warnings; use feature &#39;say&#39;; my $username = &#34;user&#34;; if ( $username eq &#34;nama&#34; ) { say &#34;Oke&#34;; } else { say &#34;Ulangi lagi....&#34;; } 
+  <p>Langsung saja</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /opt
+</span></span><span style="display:flex;"><span>git clone https://github.com/thesofproject/sof-bin.git
+</span></span><span style="display:flex;"><span>cd sof-bin
+</span></span></code></pre></div><p>Masuk ke direktori rilis terbaru, contoh kali ini v2.2</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd v2.2.x
+</span></span><span style="display:flex;"><span>rsync -a sof-v2.2/ /lib/firmware/intel/sof/
+</span></span><span style="display:flex;"><span>rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/
+</span></span></code></pre></div>
   </p>
 
   
@@ -457,7 +472,7 @@ if ( kondisi ) { .... } else { .... } Contoh
   
   <a href="https://sasongko.web.id/page/6/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;7 / 65&nbsp;</span>
+  <span>&nbsp;7 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/8/"><i class="fa fa-chevron-right"></i></a>
   

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,62 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2017-01-19-install-padre/">Install Padre</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>19 Jan 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p><!-- raw HTML omitted -->Padre<!-- raw HTML omitted --> merupakan <strong><em>integrated development environment (IDE)</em> untuk bahasa pemrograman <!-- raw HTML omitted -->perl<!-- raw HTML omitted --></strong>.</p>
+<p><!-- raw HTML omitted -->Padre<!-- raw HTML omitted --> ini belum dimasukkan ke dalam paket resmi <strong>Slackware</strong> maupun <strong>SBo</strong>. Sehingga ada 2 kemungkinan cara menginstallnya.</p>
+<ol>
+<li>
+<p><em>Build</em> sendiri dari <em>source</em></p>
+</li>
+<li>
+<p>Install dari <!-- raw HTML omitted -->cpan<!-- raw HTML omitted --></p>
+</li>
+</ol>
+<p>Cara yang saya gunakan adalah cara kedua, yaitu</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-01-19-install-padre/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/">Enkripsi File dengan gnupg</a></h2>
 
     <div class="post-meta">
@@ -265,9 +321,11 @@
   </header>
 
   <p>
-  Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupg atau yang biasa disebut dengan gpg.
-$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
-$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi 
+  <p>Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan <!-- raw HTML omitted -->gnupg<!-- raw HTML omitted --> atau yang biasa disebut dengan <!-- raw HTML omitted -->gpg<!-- raw HTML omitted -->.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi
+</span></span></code></pre></div><p>Sedangkan untuk dekripsi</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
+</span></span></code></pre></div>
   </p>
 
   
@@ -309,9 +367,13 @@ $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
   </header>
 
   <p>
-  Changelog current hari ini 12 Januari 2017 ramai sekali. Upgrade dan rebuilt secara masif seolah menjadi kado tahun baru dari Patrick Volkerding. Dan ternyata berimbas segfault alias Segmentation fault pada qtFM file manager berbasis Qt yang saya install dari SBo.
+  <p><em>Changelog current</em> hari ini 12 Januari 2017 ramai sekali. <em>Upgrade</em> dan <em>rebuilt</em> secara masif seolah menjadi kado tahun baru dari Patrick Volkerding. Dan ternyata berimbas <strong>segfault</strong> alias <!-- raw HTML omitted -->Segmentation fault<!-- raw HTML omitted --> pada <!-- raw HTML omitted -->qtFM<!-- raw HTML omitted --> <em>file manager</em> berbasis <!-- raw HTML omitted -->Qt<!-- raw HTML omitted --> yang saya <em>install</em> dari <!-- raw HTML omitted -->SBo<!-- raw HTML omitted -->.</p>
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-01-12-qtfm-segfault-pascaupgrade-changelog12jan17/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -355,8 +417,8 @@ $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
   </header>
 
   <p>
-  Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
-Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssl dengan cipher rc4. File hasil enkripsi saya namai rahasia.odt yang saya taruh di fd dan fd saya mount di /media/hd0. Kemudian akan ditanya password enkripsinya.
+  <p>Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan <!-- raw HTML omitted -->openssl<!-- raw HTML omitted -->. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).</p>
+<p>Contoh, saya punya file yang perlu diamankan. Katakanlah filenya <!-- raw HTML omitted -->indonesia-raya.odt<!-- raw HTML omitted -->. Saya enkripsi menggunakan <!-- raw HTML omitted -->openssl<!-- raw HTML omitted --> dengan <em>cipher rc4</em>. File hasil enkripsi saya namai <!-- raw HTML omitted -->rahasia.odt<!-- raw HTML omitted --> yang saya taruh di fd dan fd saya <!-- raw HTML omitted -->mount<!-- raw HTML omitted --> di <!-- raw HTML omitted -->/media/hd0<!-- raw HTML omitted -->. Kemudian akan ditanya <em>password</em> enkripsinya.</p>
   </p>
 
   
@@ -402,56 +464,13 @@ Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.
   </header>
 
   <p>
-  Alhamdulillah malam ini bisa membuat slackbuild untuk KBBI Qt. Sebenarnya sih sudah sejak kira-kira 2 bulan yang lalu ingin membuat slackbuildnya, baru kesampaian sekarang.
-KBBI Qt adalah aplikasi Kamus Besar Bahasa Indonesia (KBBI) yang dikembangkan oleh komunitas Belajar GNU/Linux Indonesia atau BGLI. Aplikasi ini dibuat dengan bahasa C++ dan framework Qt yang berlisensi GPLv3. Lisensi ini mengijinkan kita semua boleh menggunakan, memodifikasi dan menyebarluaskan aplikasi KBBI Qt.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-01-01-blankon-wallpapers-slackbuild/">blankon-wallpapers slackbuild</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jan 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Alhamdulillah, hari ini, 1 Januari 2017, tepat di hari pertama tahun 2017, Tim Pengembang BlankOn secara resmi merilis BlankOn X dengan codename Tambora. Dan di hari ini pula, saya rilis blankon-wallpapers slackbuild secara resmi, walaupun sebenarnya sudah saya taruh di repo github sejak beberapa hari yang lalu.
-Tujuan pembuatan slackbuild ini adalah untuk memasyarakatkan ke-Indonesia-an. BlankOn sebagai salah satu dari beberapa distro GNU/Linux yang dikembangkan oleh rakyat Indonesia tentu memiliki kekhasan bila dibandingkan dengan distro lainnya seperti Debian, Ubuntu, dan Fedora.
+  <p>Alhamdulillah malam ini bisa membuat <em>slackbuild</em> untuk <strong>KBBI Qt</strong>. Sebenarnya sih sudah sejak kira-kira 2 bulan yang lalu ingin membuat <a href="http://github.com/sasongko26/kbbi-qt-slackbuild">slackbuildnya</a>, baru kesampaian sekarang.</p>
+<p><!-- raw HTML omitted -->KBBI Qt<!-- raw HTML omitted --> adalah aplikasi <strong>Kamus Besar Bahasa Indonesia (KBBI)</strong> yang dikembangkan oleh komunitas <em>Belajar GNU/Linux Indonesia</em> atau BGLI. Aplikasi ini dibuat dengan bahasa C++ dan framework Qt yang berlisensi GPLv3. Lisensi ini mengijinkan kita semua boleh menggunakan, memodifikasi dan menyebarluaskan aplikasi KBBI Qt.</p>
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2017-01-01-blankon-wallpapers-slackbuild/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2017-01-02-kbbi-qt-slackbuild/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -465,7 +484,7 @@ Tujuan pembuatan slackbuild ini adalah untuk memasyarakatkan ke-Indonesia-an. Bl
   
   <a href="https://sasongko.web.id/page/44/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;45 / 65&nbsp;</span>
+  <span>&nbsp;45 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/46/"><i class="fa fa-chevron-right"></i></a>
   

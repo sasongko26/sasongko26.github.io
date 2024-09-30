@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,58 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2024-01-15-sintaks-komentar-rust/">Sintaks komentar rust</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Jan 2024</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/rust">rust</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Komentar pada <strong>rust</strong> yang biasa digunakan ada 2 jenis, yaitu komentar baris dan komentar blok. Komentar baris diberikan dengan sintaks // pada awal komentar. Semua yang ada setelah tanda // pada baris tersebut akan dianggap sebagai komentar yang tidak akan dieksekusi. Komentar blok untuk memberikan komentar pada blok kode atau beberapa baris kode. Semua baris yang ada di antara /* dan */ dianggap sebagai komentar.</p>
+<p>Contoh komentar baris</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// ini adalah komentar yang tidak akan dieksekusi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    println!(<span style="color:#e6db74">&#34;Hai&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Contoh komentar blok</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2024-01-15-sintaks-komentar-rust/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2023-11-20-hapus-spasi-libreoffice-calc/">Hapus spasi libreoffice calc</a></h2>
 
     <div class="post-meta">
@@ -261,7 +313,7 @@
   </header>
 
   <p>
-  Untuk menghapus spasi pada libreoffice calc menggunakan fitur Find &amp; Replace. Pada bagian Find isikan \s+ dengan \s adalah regex untuk spasi sedangkan + untuk menerapkan regex ke semua yang ditemukan. Replace kosongkan. Centang RegularExpressions.
+  <p>Untuk menghapus spasi pada <strong>libreoffice calc</strong> menggunakan fitur <em>Find &amp; Replace</em>. Pada bagian <em>Find</em> isikan \s+ dengan \s adalah regex untuk spasi sedangkan + untuk menerapkan regex ke semua yang ditemukan. <em>Replace</em> kosongkan. Centang <em>RegularExpressions</em>.</p>
   </p>
 
   
@@ -303,9 +355,15 @@
   </header>
 
   <p>
-  Wayland digadang-gadang sebagai suksesor Xorg/X11. GNOME dan Fedora sudah memutuskan tidak lagi menggunakan X11 untuk rilis berikutnya. Proyek-proyek opensource terkait wayland bermunculan.
-Berikut adalah yang kami gunakan ketika berkomputasi dengan wayland:
-Compositor: labwc atau hyprland Status bar/panel : nwg-panel Gamma/night mode : wlsunset Screenlocker : swaylock dan swayidle Bukankah KDE Plasma juga mendukung wayland, mengapa tidak digunakan? Kami lebih suka menggunakan wayland berbasis wlroot, sedangkan KDE Plasma masih berbasis dbus. Mengapa menggunakan wlroot?
+  <p><em>Wayland</em> digadang-gadang sebagai suksesor Xorg/X11. <strong>GNOME</strong> dan <strong>Fedora</strong> sudah memutuskan tidak lagi menggunakan X11 untuk rilis berikutnya. Proyek-proyek <em>opensource</em> terkait <em>wayland</em> bermunculan.</p>
+<p>Berikut adalah yang kami gunakan ketika berkomputasi dengan <em>wayland</em>:</p>
+<ol>
+<li>Compositor: <em>labwc</em> atau <em>hyprland</em></li>
+<li>Status bar/panel : <em>nwg-panel</em></li>
+<li>Gamma/night mode : <em>wlsunset</em></li>
+<li>Screenlocker : <em>swaylock</em> dan <em>swayidle</em></li>
+</ol>
+<p>Bukankah KDE Plasma juga mendukung <em>wayland</em>, mengapa tidak digunakan? Kami lebih suka menggunakan <em>wayland</em> berbasis <em>wlroot</em>, sedangkan KDE Plasma masih berbasis <em>dbus</em>. Mengapa menggunakan <em>wlroot</em>? Ya karena sedang menginginkannya saja.</p>
   </p>
 
   
@@ -351,8 +409,8 @@ Compositor: labwc atau hyprland Status bar/panel : nwg-panel Gamma/night mode : 
   </header>
 
   <p>
-  Catatan ini sebenarnya sudah ditulis beberapa bulan yang lalu atau bahkan bertahun lalu, tetapi karena kesibukan baru sempat di-commit sekarang. Saat menggunakan wayland pertama kalinya, ada masalah. Touchpad tidak bisa digunakan untuk klik sebagai ganti klik pada mouse. Ternyata secara default memang demikian. Keunggulan linux salah satunya adalah penggunanya bebas melakukan modifikasi sesuai kemampuan dan kebutuhannya.
-Untuk membuat touchpad bisa melakukan tap sebagai klik, masuk ke Settings kemudian search touchpad. Di sini kami lebih suka menggunakan fitur search karena tidak ingat betul lokasi spesifik pengaturannya.
+  <p>Catatan ini sebenarnya sudah ditulis beberapa bulan yang lalu atau bahkan bertahun lalu, tetapi karena kesibukan baru sempat di-<em>commit</em> sekarang. Saat menggunakan <strong>wayland</strong> pertama kalinya, ada masalah. <strong>Touchpad</strong> tidak bisa digunakan untuk klik sebagai ganti klik pada <em>mouse</em>. Ternyata secara <em>default</em> memang demikian. <strong>Keunggulan linux</strong> salah satunya adalah penggunanya <em>bebas melakukan modifikasi</em> sesuai kemampuan dan kebutuhannya.</p>
+<p>Untuk membuat <em>touchpad</em> bisa melakukan tap sebagai klik, masuk ke <strong>Settings</strong> kemudian <em>search</em> <strong>touchpad</strong>. Di sini kami lebih suka menggunakan fitur <em>search</em> karena tidak ingat betul lokasi spesifik pengaturannya. Pada hasil yang muncul, klik <strong>Touchpad</strong>, pada bagian <strong>Tapping</strong> centang <strong>Tap-to-click</strong>.</p>
   </p>
 
   
@@ -398,51 +456,11 @@ Untuk membuat touchpad bisa melakukan tap sebagai klik, masuk ke Settings kemudi
   </header>
 
   <p>
-  Bash memiliki beberapa cara untuk melakukan pengulangan (looping). Salah satunya adalah dengan for. Contoh berikut akan menampilkan angka 1 sampai dengan 10.
-for i in {1..10} do echo $i done 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-08-03-mencari-menyalin-file/">Mencari file dan menyalinnya</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>03 Aug 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Salah satu keunggulan linux adalah mudahnya untuk melakukan otomatisasi yang dapat dilakukan dengan mengetikkan sebaris perintah. Sebagai contoh, apabila ingin melakukan pencadangan semua file tanpa melihat struktur direktorinya ke media penyimpanan eksternal bisa mengetikkan
-$ find direktori_asli -iname &#39;*&#39; -exec cp &#39;{}&#39; direktori_cadangan \; Perintah tersebut akan membuat semua file di direktori_asli berpindah ke direktori_cadangan.
+  <p><em>Bash</em> memiliki beberapa cara untuk melakukan pengulangan (<em>looping</em>). Salah satunya adalah dengan <strong>for</strong>. Contoh berikut akan menampilkan angka 1 sampai dengan 10.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span>1..10<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span> echo $i
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -457,7 +475,7 @@ $ find direktori_asli -iname &#39;*&#39; -exec cp &#39;{}&#39; direktori_cadanga
   
   <a href="https://sasongko.web.id/page/2/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;3 / 65&nbsp;</span>
+  <span>&nbsp;3 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/4/"><i class="fa fa-chevron-right"></i></a>
   

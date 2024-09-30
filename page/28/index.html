@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,58 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/">Pelengkap dnscrypt-proxy</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>27 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Catatan ini merupakan catatan tambahan untuk melengkapi <strong>README.Slackware</strong> pada skrip <strong>dnscrypt-proxy</strong> yang ada di SBo. Yang ada di SBo :</p>
+<ol>
+<li>Membuat grup <strong>dnscrypt</strong> dan usernya</li>
+<li>Mengkonfigurasi dns <strong>/etc/resolv.conf.head</strong></li>
+<li>Memasukkan <strong>dnscryp-proxy</strong> ke /etc/rc.d/rc.local{,_shutdown}</li>
+</ol>
+<p>Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi <em>maintainer</em> <strong>dnscrypt-proxy</strong> tidak mengikutsertakan langkah ini. Penulis menggunakan <strong>NetworkManager</strong>, setelah <em>check &amp; recheck</em>, <code>dnscrypt-proxy</code> tidak bekerja karena file /etc/resolv.conf terkena <em>overwrite</em> oleh <strong>NetworkManager</strong>. Ini adalah langkah untuk memberikan imunisasi/mencegah <em>overwrite</em>. <em>Command</em> berikut dijalankan dengan <em>root privilege</em></p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-01-26-aktivasi-zram/">Aktivasi zram</a></h2>
 
     <div class="post-meta">
@@ -267,8 +319,8 @@
   </header>
 
   <p>
-  Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.
-Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan.
+  <p>Beberapa tahun ini perkembangan dunia <em>opensource</em> bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi <em>software</em> berjalan beriringan dengan <em>hardware</em>. Semakin tinggi spesifikasi <em>hardware</em> semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin <em>interface</em> yang aduhai menawan, seyogyanya diimbangi <em>hardware</em> yang mumpuni.</p>
+<p>Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan. Namun, saat ini, saat kebutuhan <em>multitasking</em> meningkat pesat, terlebih di era <em>work from home</em> (WFH), beberapa aplikasi dijalankan sekaligus bersama-sama, apalagi ditambah dengan faktor U perangkatnya, RAM 2 GB terasa cepat penuh.</p>
   </p>
 
   
@@ -314,10 +366,12 @@ Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 
   </header>
 
   <p>
-  Upgrade kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. Backlight menjadi tidak berfungsi. Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah xbacklight.
-$ xbacklight No outputs have backlight property Backlight atau brightness 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).
-Kebetulan, salah 1 situs yang sering penulis kunjungi, LinuxQuestions.Org ada thread yang membahas masalah ini.
-Cara yang dipakai di sini adalah dengan membuat /etc/X11/xorg.
+  <p><em>Upgrade</em> kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. <em>Backlight</em> menjadi tidak berfungsi.  Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah <code>xbacklight</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ xbacklight
+</span></span><span style="display:flex;"><span>No outputs have backlight property
+</span></span></code></pre></div><p><img src="https://sasongko.web.id/gambar/brightness-100.png" alt="Brightness 100%. Mentok kanan!"></p>
+<p><em>Backlight</em> atau <em>brightness</em> 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).</p>
+<p>Kebetulan, salah 1 situs yang sering penulis kunjungi, <strong>LinuxQuestions.Org</strong> ada <em>thread</em> yang <a href="https://www.linuxquestions.org/questions/slackware-14/intel_backlight-not-working-on-current-4175688981/">membahas masalah ini</a>.</p>
   </p>
 
   
@@ -363,9 +417,17 @@ Cara yang dipakai di sini adalah dengan membuat /etc/X11/xorg.
   </header>
 
   <p>
-  Catatan ini merupakan lanjutan dari sebelumnya yang membuat tar archive. Kali ini tentang bagaimana mengetahui apa saja file ada di dalam archive tersebut tanpa harus mengekstrak.
-Contoh, terdapat file screenshot2.tar.xz. Untuk mengetahui apa saja isinya
-$ tar tvf screenshot2.tar.xz -rw-r--r-- user1/users 580563 2020-07-15 10:17 Screenshot_2020-07-15_10-17-33.png -rw-r--r-- user1/users 851743 2020-08-03 10:31 Screenshot_2020-08-03_10-31-47.png -rw-r--r-- user1/users 9958 2020-08-04 16:33 Screenshot_2020-08-04_16-33-18.png -rw-r--r-- user1/users 822389 2020-08-06 08:23 Screenshot_2020-08-06_08-22-59.png -rw-r--r-- user1/users 737008 2020-08-06 08:31 Screenshot_2020-08-06_08-31-22.png -rw-r--r-- user1/users 243660 2020-12-04 18:44 Screenshot_2020-12-04_18-44-18.
+  <p>Catatan ini merupakan lanjutan dari sebelumnya yang membuat <em>tar archive</em>. Kali ini tentang bagaimana mengetahui apa saja file ada di dalam <em>archive</em> tersebut tanpa harus mengekstrak.</p>
+<p>Contoh, terdapat file screenshot2.tar.xz. Untuk mengetahui apa saja isinya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar tvf screenshot2.tar.xz
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">580563</span> 2020-07-15 10:17 Screenshot_2020-07-15_10-17-33.png
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">851743</span> 2020-08-03 10:31 Screenshot_2020-08-03_10-31-47.png
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users   <span style="color:#ae81ff">9958</span> 2020-08-04 16:33 Screenshot_2020-08-04_16-33-18.png
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">822389</span> 2020-08-06 08:23 Screenshot_2020-08-06_08-22-59.png
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">737008</span> 2020-08-06 08:31 Screenshot_2020-08-06_08-31-22.png
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">243660</span> 2020-12-04 18:44 Screenshot_2020-12-04_18-44-18.png
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">122966</span> 2021-01-12 01:21 Screenshot_2021-01-12_01-21-31.png
+</span></span></code></pre></div><p>Dapat diketahui bahwa file screenshot2.tar.xz berisi 7 file png screenshot sebagaimana tersebut di atas.</p>
   </p>
 
   
@@ -411,60 +473,32 @@ $ tar tvf screenshot2.tar.xz -rw-r--r-- user1/users 580563 2020-07-15 10:17 Scre
   </header>
 
   <p>
-  Terdapat file sebagai berikut:
-Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Ketujuh file tersebut akan disatukan dalam 1 archive dengan nama file screenshot.tar.gz.
-$ tar cvf screenshot.tar.gz Screen* Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Penjelasan command
-tar : manajemen archive yang digunakan aalah tar c : wajib dituliskan untuk create atau membuat archive v : opsi untuk verbose, menampilkan list file yang diproses f : wajib dituliskan dalam semua penggunaan tar karena f adalah file, identifier untuk file yang akan diproses screenshot.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/">Mengetahui IP lokal dengan nmcli</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Untuk mengetahui alamat ip lokal tanpa akses root dapat menggunakan nmcli
-$ nmcli wlan0: connected to Anatomi &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), CC:B0:DA:B5:3B:75, hw, mtu 1500 ip4 default inet4 192.168.120.19/24 route4 0.0.0.0/0 route4 192.168.120.0/24 route4 192.168.120.0/24 inet6 fe80::1a37:a13:b117:ff74/64 route6 fe80::/64 route6 ff00::/8 Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah
-ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74 
+  <p>Terdapat file sebagai berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Screenshot_2020-07-15_10-17-33.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-03_10-31-47.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-04_16-33-18.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-06_08-22-59.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-06_08-31-22.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-12-04_18-44-18.png
+</span></span><span style="display:flex;"><span>Screenshot_2021-01-12_01-21-31.png
+</span></span></code></pre></div><p>Ketujuh file tersebut akan disatukan dalam 1 <em>archive</em> dengan nama file <em>screenshot.tar.gz</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar cvf screenshot.tar.gz Screen*
+</span></span><span style="display:flex;"><span>Screenshot_2020-07-15_10-17-33.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-03_10-31-47.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-04_16-33-18.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-06_08-22-59.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-06_08-31-22.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-12-04_18-44-18.png
+</span></span><span style="display:flex;"><span>Screenshot_2021-01-12_01-21-31.png
+</span></span></code></pre></div><p>Penjelasan <em>command</em></p>
+<ul>
+<li>tar : manajemen <em>archive</em> yang digunakan aalah <em>tar</em></li>
+<li>c : wajib dituliskan untuk <em>create</em> atau membuat <em>archive</em></li>
+<li>v : opsi untuk <em>verbose</em>, menampilkan list file yang diproses</li>
+<li>f : wajib dituliskan dalam semua penggunaan <em>tar</em> karena f adalah file, identifier untuk file yang akan diproses</li>
+<li>screenshot.tar.gz : nama file <em>archive</em>. Ekstensi bisa .tar, .tar.gz, atau .tar.xz. Ketika ekstensi ini sering dipakai di dunia <em>open source</em>.</li>
+<li>Screen* : file yang akan di-<em>archive</em>. Karena filenya banyak dan mempunyai kemiripan pola maka digunakan <em>regex</em> agar lebih praktis. File ini juga bisa dituliskan satu persatu.</li>
+</ul>
   </p>
 
   
@@ -479,7 +513,7 @@ ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74
   
   <a href="https://sasongko.web.id/page/27/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;28 / 65&nbsp;</span>
+  <span>&nbsp;28 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/29/"><i class="fa fa-chevron-right"></i></a>
   

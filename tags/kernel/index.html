@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Kernel &middot; Catatan Sasongko</title>
 
@@ -262,7 +262,7 @@
   </header>
 
   <p>
-  Ada sedikit masalah ketika menggunakan kernel 6.1.38. Masalah tersebut antara lain tidak stabilnya jaringan internet bila konek via NetworkManager, usb dan bluetooth yang kadang suka diskonek sendiri. Solusi untuk masalah jaringan dan bluetooth tersebut adalah mengganti dhcpcd dengan dhclient pada konfigurasi Network Manager /etc/NetworkManager/conf.d/00-dhcp-client.conf, sesuai masukan dari Pak Walesa.
+  <p>Ada sedikit masalah ketika menggunakan kernel 6.1.38. Masalah tersebut antara lain tidak stabilnya jaringan internet bila konek via NetworkManager, usb dan bluetooth yang kadang suka diskonek sendiri. Solusi untuk masalah jaringan dan bluetooth tersebut adalah mengganti dhcpcd dengan dhclient pada konfigurasi Network Manager /etc/NetworkManager/conf.d/00-dhcp-client.conf, sesuai masukan dari Pak Walesa.</p>
   </p>
 
   
@@ -306,9 +306,15 @@
   </header>
 
   <p>
-  Langsung saja
-cd /opt git clone https://github.com/thesofproject/sof-bin.git cd sof-bin Masuk ke direktori rilis terbaru, contoh kali ini v2.2
-cd v2.2.x rsync -a sof-v2.2/ /lib/firmware/intel/sof/ rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/ 
+  <p>Langsung saja</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /opt
+</span></span><span style="display:flex;"><span>git clone https://github.com/thesofproject/sof-bin.git
+</span></span><span style="display:flex;"><span>cd sof-bin
+</span></span></code></pre></div><p>Masuk ke direktori rilis terbaru, contoh kali ini v2.2</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd v2.2.x
+</span></span><span style="display:flex;"><span>rsync -a sof-v2.2/ /lib/firmware/intel/sof/
+</span></span><span style="display:flex;"><span>rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/
+</span></span></code></pre></div>
   </p>
 
   
@@ -354,8 +360,8 @@ cd v2.2.x rsync -a sof-v2.2/ /lib/firmware/intel/sof/ rsync -a sof-tplg-v2.2 /li
   </header>
 
   <p>
-  Pascamigrasi dari elilo ke grub ada hal yang dirindukan. Zram dengan komresi zstd. Entah masalahnya di mana, zstd tidak bisa digunakan untuk zram apabila menggunakan grub. Menggunakan elilo aman damai sentosa lanjcar jaya. Padahal kernel dan initrd-nya sama.
-Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-rle. Alhamdulillah. Dengan adanya zram aktivitas komputasi di laptop dengan RAM hanya 2GB masih bisa dijalankan dengan lancar.
+  <p>Pascamigrasi dari <strong>elilo</strong> ke <strong>grub</strong> ada hal yang dirindukan. <strong>Zram</strong> dengan komresi <strong>zstd</strong>. Entah masalahnya di mana, <strong>zstd</strong> tidak bisa digunakan untuk zram apabila menggunakan <strong>grub</strong>. Menggunakan <strong>elilo</strong> aman damai sentosa lanjcar jaya. Padahal <strong>kernel</strong> dan <strong>initrd</strong>-nya sama.</p>
+<p>Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default <strong>lzo-rle</strong>. Alhamdulillah. Dengan adanya <strong>zram</strong> aktivitas komputasi di laptop dengan RAM hanya 2GB masih bisa dijalankan dengan lancar.</p>
   </p>
 
   
@@ -401,7 +407,7 @@ Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-r
   </header>
 
   <p>
-  Secara default, timeout grub adalah 10 detik. Menurut penulis, 10 detik ini terlalu lama. Untuk mengubahnya ganti angka 10 ke detik yang diinginkan pada baris dengan GRUB_TIMEOUT pada file /etc/default/grub
+  <p>Secara default, <em>timeout</em> <strong>grub</strong> adalah 10 detik. Menurut penulis, 10 detik ini terlalu lama. Untuk mengubahnya ganti angka 10 ke detik yang diinginkan pada baris dengan GRUB_TIMEOUT pada file /etc/default/grub</p>
   </p>
 
   
@@ -451,11 +457,30 @@ Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-r
   </header>
 
   <p>
-  Untuk menampilkan status penggunaan zram bisa dengan menjalankan
-# zramctl --output-all NAME DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT /dev/zram0 1G 4K 74B lzo-rle 4 0 12K 0B 12K 0B [SWAP] Berikut penjelasan masing-masing kolomnya
-NAME	zram device name DISKSIZE	limit on the uncompressed amount of data DATA	uncompressed size of stored data COMPR	compressed size of stored data ALGORITHM	the selected compression algorithm STREAMS	number of concurrent compress operations ZERO-PAGES	empty pages with no allocated memory TOTAL	all memory including allocator fragmentation and metadata overhead MEM-LIMIT	memory limit used to store compressed data MEM-USED	memory zram have been consumed to store compressed data MIGRATED	number of objects migrated by compaction MOUNTPOINT	where the device is mounted
+  <p>Untuk menampilkan status penggunaan zram bisa dengan menjalankan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># zramctl --output-all</span>
+</span></span><span style="display:flex;"><span>NAME     DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT
+</span></span><span style="display:flex;"><span>/dev/zram0
+</span></span><span style="display:flex;"><span>               1G   4K   74B lzo-rle         <span style="color:#ae81ff">4</span>          <span style="color:#ae81ff">0</span>   12K        0B      12K       0B <span style="color:#f92672">[</span>SWAP<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>Berikut penjelasan masing-masing kolomnya</p>
+<p>NAME	zram device name
+DISKSIZE	limit on the uncompressed amount of data
+DATA	uncompressed size of stored data
+COMPR	compressed size of stored data
+ALGORITHM	the selected compression algorithm
+STREAMS	number of concurrent compress operations
+ZERO-PAGES	empty pages with no allocated memory
+TOTAL	all memory including allocator fragmentation and metadata overhead
+MEM-LIMIT	memory limit used to store compressed data
+MEM-USED	memory zram have been consumed to store compressed data
+MIGRATED	number of objects migrated by compaction
+MOUNTPOINT	where the device is mounted</p>
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -501,8 +526,8 @@ NAME	zram device name DISKSIZE	limit on the uncompressed amount of data DATA	unc
   </header>
 
   <p>
-  Aktif di-maintain pengembang merupakan salah satu kriteria preferensi software yang penulis gunakan. elilo sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. Slackware adalah distro yang masih bertahan menyediakan elilo. Terima kasih PV.
-Sejak pertama menggunakan slackware dengan sistem UEFI sekitar 2016, elilo penulis jadikan pilihan utama boot loader. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini elilo sudah tidak dikembangkan developer aslinya. Mengangkat grub sebagai suksesor elilo bukanlah hal buruk.
+  <p>Aktif di-<em>maintain</em> pengembang merupakan salah satu kriteria preferensi <em>software</em> yang penulis gunakan. <em>elilo</em> sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. <strong>Slackware</strong> adalah distro yang masih bertahan menyediakan <strong>elilo</strong>. Terima kasih PV.</p>
+<p>Sejak pertama menggunakan <strong>slackware</strong> dengan sistem <strong>UEFI</strong> sekitar 2016, <strong>elilo</strong> penulis jadikan pilihan utama <em>boot loader</em>. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini <strong>elilo</strong> sudah tidak dikembangkan <em>developer</em> aslinya. Mengangkat <strong>grub</strong> sebagai suksesor <strong>elilo</strong> bukanlah hal buruk. <strong>Grub</strong> ini sebenarnya sudah lama terinstall dan rutin ikut di-<em>upgrade</em> juga, tapi memang tidak digunakan. Sekarang saatnya mengaktifkannya.</p>
   </p>
 
   
@@ -548,9 +573,10 @@ Sejak pertama menggunakan slackware dengan sistem UEFI sekitar 2016, elilo penul
   </header>
 
   <p>
-  Htop merupakan system monitoring tool yang cukup lengkap, bukan sekedar process viewer yang menampilkan proses apa saja yang berjalan. Dengan htop user dapat melihat running process, mencari process ataupun mengakhirinya.
-Secara default tampilan htop sebagai berikut
-Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin menambahkan persentase baterai dan penggunaan zram. Caranya, tekan F2. Perhatikan kolom paling kanan Available Meters. Letakkan kursor di kolom tersebut, scroll sampai ketemu yang diinginkan.
+  <p><strong>Htop</strong> merupakan <em>system monitoring tool</em> yang cukup lengkap, bukan sekedar <em>process viewer</em> yang menampilkan proses apa saja yang berjalan. Dengan <strong>htop</strong> <em>user</em> dapat melihat <em>running process</em>, mencari <em>process</em> ataupun mengakhirinya.</p>
+<p>Secara <em>default</em> tampilan <strong>htop</strong> sebagai berikut</p>
+<p><img src="https://sasongko.web.id/gambar/htop-default.png" alt=""></p>
+<p>Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin menambahkan persentase baterai dan penggunaan zram. Caranya, tekan <code>F2</code>. Perhatikan kolom paling kanan <strong>Available Meters</strong>. Letakkan kursor di kolom tersebut, <em>scroll</em> sampai ketemu yang diinginkan. Tekan <code>Enter</code> untuk memilih atau menambahkan. Di sini dicontohkan <strong>Battery</strong>. Meter tersebut telah berpindah ke <strong>Right column</strong>/kolom sebelah kanan. Atur posisinya, apakah akan ditempatkan di kanan atau kiri (pada contoh ini kanan). Setelah itu tekan <code>Enter</code> lagi untuk mengunci posisinya.</p>
   </p>
 
   
@@ -602,8 +628,8 @@ Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin men
   </header>
 
   <p>
-  Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.
-Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan.
+  <p>Beberapa tahun ini perkembangan dunia <em>opensource</em> bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi <em>software</em> berjalan beriringan dengan <em>hardware</em>. Semakin tinggi spesifikasi <em>hardware</em> semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin <em>interface</em> yang aduhai menawan, seyogyanya diimbangi <em>hardware</em> yang mumpuni.</p>
+<p>Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan. Namun, saat ini, saat kebutuhan <em>multitasking</em> meningkat pesat, terlebih di era <em>work from home</em> (WFH), beberapa aplikasi dijalankan sekaligus bersama-sama, apalagi ditambah dengan faktor U perangkatnya, RAM 2 GB terasa cepat penuh.</p>
   </p>
 
   
@@ -649,10 +675,12 @@ Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 
   </header>
 
   <p>
-  Upgrade kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. Backlight menjadi tidak berfungsi. Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah xbacklight.
-$ xbacklight No outputs have backlight property Backlight atau brightness 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).
-Kebetulan, salah 1 situs yang sering penulis kunjungi, LinuxQuestions.Org ada thread yang membahas masalah ini.
-Cara yang dipakai di sini adalah dengan membuat /etc/X11/xorg.
+  <p><em>Upgrade</em> kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. <em>Backlight</em> menjadi tidak berfungsi.  Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah <code>xbacklight</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ xbacklight
+</span></span><span style="display:flex;"><span>No outputs have backlight property
+</span></span></code></pre></div><p><img src="https://sasongko.web.id/gambar/brightness-100.png" alt="Brightness 100%. Mentok kanan!"></p>
+<p><em>Backlight</em> atau <em>brightness</em> 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).</p>
+<p>Kebetulan, salah 1 situs yang sering penulis kunjungi, <strong>LinuxQuestions.Org</strong> ada <em>thread</em> yang <a href="https://www.linuxquestions.org/questions/slackware-14/intel_backlight-not-working-on-current-4175688981/">membahas masalah ini</a>.</p>
   </p>
 
   
@@ -700,9 +728,18 @@ Cara yang dipakai di sini adalah dengan membuat /etc/X11/xorg.
   </header>
 
   <p>
-  Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan dmesg
-$ dmesg -T | head -1 [Fri Dec 25 00:39:42 2020] Linux version 5.10.2 Penjelasan command :
-eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp | adalah pipe, untu menjadikan output dmesg sebagai input untuk head head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya [Fri Dec 25 00:39:42 2020] Linux version 5.
+  <p>Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan <strong>dmesg</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ dmesg -T | head -1 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Fri Dec <span style="color:#ae81ff">25</span> 00:39:42 2020<span style="color:#f92672">]</span> Linux version 5.10.2 
+</span></span></code></pre></div><p>Penjelasan command :</p>
+<ol>
+<li>eksekusi sebagai root</li>
+<li>opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp</li>
+<li>| adalah pipe, untu menjadikan output dmesg sebagai input untuk head</li>
+<li>head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya</li>
+<li>[Fri Dec 25 00:39:42 2020] Linux version 5.10.2 # baris 1 yang kami tuliskan hanya sampai sini</li>
+</ol>
+<p>Dari <em>output</em> tersebut tampak bahwa komputer dinyalakan pada hari Jum&rsquo;at, 25 Desember 2020 sekitar jam 00.39.</p>
   </p>
 
   
@@ -750,8 +787,13 @@ eksekusi sebagai root opsi -T pada dmesg bertujuan untuk memformat output dmesg 
   </header>
 
   <p>
-  Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam main tree slackware current. Saat catatan ini dituliskan, sudah &ldquo;mendarat&rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk start up. Yang dimaksud start up di sini adalah kondisi dari eksekusi elilo dan initrd sampai muncul login prompt.
-$ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segment Routing with IPv6 [ 32.
+  <p>Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam <em>main tree</em> <strong>slackware current</strong>. Saat catatan ini dituliskan, sudah &ldquo;mendarat&rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk <em>start up</em>. Yang dimaksud <em>start up</em> di sini adalah kondisi dari eksekusi <strong>elilo</strong> dan <strong>initrd</strong> sampai muncul <em>login prompt</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ dmesg | tail -5
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   20.687205<span style="color:#f92672">]</span> Segment Routing with IPv6
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   20.687213<span style="color:#f92672">]</span> RPL Segment Routing with IPv6
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   32.472700<span style="color:#f92672">]</span> RTL8208 Fast Ethernet r8169-300:00: attached PHY driver <span style="color:#f92672">[</span>RTL8208 Fast Ethernet<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>mii_bus:phy_addr<span style="color:#f92672">=</span>r8169-300:00, irq<span style="color:#f92672">=</span>IGNORE<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   32.750379<span style="color:#f92672">]</span> r8169 0000:03:00.0 eth0: Link is Down
+</span></span></code></pre></div><p>Penjelasan <em>command</em></p>
   </p>
 
   
@@ -799,10 +841,10 @@ $ dmesg | tail -5 [ 20.687205] Segment Routing with IPv6 [ 20.687213] RPL Segmen
   </header>
 
   <p>
-  Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang bootloop apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. Update terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui rebuilt elilo.
-Setelah upgrade terutama untuk elilo jangan lupa menjalankan
-eliloconfig yang secara otomatis juga akan meng- generate elilo.conf yang berisi pengaturan boot dengan kernel huge.
-Namun, saya kurang suka dengan cara otomatis ini.
+  <p>Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang <em>bootloop</em> apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. <em>Update</em> terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui <em>rebuilt</em> <!-- raw HTML omitted -->elilo<!-- raw HTML omitted -->.</p>
+<p>Setelah <em>upgrade</em> terutama untuk <!-- raw HTML omitted -->elilo<!-- raw HTML omitted --> jangan lupa menjalankan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eliloconfig
+</span></span></code></pre></div><p>yang secara otomatis juga akan meng- <em>generate</em> <!-- raw HTML omitted -->elilo.conf<!-- raw HTML omitted --> yang berisi pengaturan <em>boot</em> dengan kernel huge.</p>
   </p>
 
   
@@ -850,9 +892,8 @@ Namun, saya kurang suka dengan cara otomatis ini.
   </header>
 
   <p>
-  Setelah 2 minggu, -Current kembali mendapatkan update Jum&rsquo;at kemarin tanggal 17 November 2017. Banyak update, ada yang upgraded, rebuilt, added, dan removed. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.
-Setelah upgrade dan eliloconfig kemudian restart, ternyata muncul masalah! Bootloop! Loading vmlinuz&hellip; langsung reboot. Begitu seterusnya.
-Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk recovery-nya lebih mudah. Boot dari DVD kemudian waktu muncul grub pilih opsi yang intinya detect another operating system (persisnya saya lupa).
+  <p>Setelah 2 minggu, -Current kembali mendapatkan <em>update</em> Jum&rsquo;at kemarin tanggal 17 November 2017. Banyak <em>update</em>, ada yang <em>upgraded, rebuilt, added,</em> dan <em>removed</em>. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.</p>
+<p>Setelah <em>upgrade</em> dan <!-- raw HTML omitted -->eliloconfig<!-- raw HTML omitted --> kemudian <em>restart</em>, ternyata muncul masalah! <em>Bootloop</em>!  <!-- raw HTML omitted -->Loading vmlinuz&hellip; <!-- raw HTML omitted --> langsung <em>reboot</em>. Begitu seterusnya.</p>
   </p>
 
   
@@ -900,8 +941,7 @@ Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk rec
   </header>
 
   <p>
-  Kemarin melihat ChangeLog ada beberapa update yang sebagian di antaranya adalah security fix. Salah satu update adalah kernel. Melakukan upgrade semuanya baik-baik saja dan lanjut shutdown. Siang ini, booting pun masih fine dan no problem. Begitu juga login. Baru terasa saat ingin masuk desktop malah gagal.
-$ startx xauth: file /home/sasongko/.serverauth.2717 does not exist X.Org X Server 1.19.3 Release Date: 2017-03-15 X Protocol Version 11, Revision 0 Build Operating System: Slackware 14.
+  <p>Kemarin melihat <em>ChangeLog</em> ada beberapa <em>update</em> yang sebagian di antaranya adalah <em>security fix</em>. Salah satu <em>update</em> adalah kernel. Melakukan <em>upgrade</em> semuanya baik-baik saja dan lanjut <!-- raw HTML omitted -->shutdown<!-- raw HTML omitted -->. Siang ini, <!-- raw HTML omitted -->booting<!-- raw HTML omitted --> pun masih <em>fine</em> dan <em>no problem</em>. Begitu juga <!-- raw HTML omitted -->login<!-- raw HTML omitted -->. Baru terasa saat ingin masuk <em>desktop</em> malah gagal.</p>
   </p>
 
   
@@ -949,9 +989,9 @@ $ startx xauth: file /home/sasongko/.serverauth.2717 does not exist X.Org X Serv
   </header>
 
   <p>
-  Tiga bulan lalu saya sambat Slackware current [hang]({% post_url 2016-02-08-slackware-current-hang %}) saat booting dan shutdown. Sekarang masalah tersebut teratasi.
-Secara default laptop Asus X453MA diperuntukkan bagi pengguna Microsoft Windows. Hal ini terlihat dari web resminya yang menyediakan driver hanya untuk Windows khususnya Windows 8.1 dan Windows 10. Juga terlihat dari &ldquo;paket bundling&rdquo;-nya yang menyediakan Windows preinstalled.
-Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.1 oleh pihak toko. Awalnya saya pilih kosongan aja sesuai aslinya.
+  <p>Tiga bulan lalu saya <em>sambat</em> <strong><em>Slackware current</em></strong> [hang]({% post_url 2016-02-08-slackware-current-hang %}) saat <em>booting</em> dan <em>shutdown</em>. Sekarang  masalah tersebut teratasi.</p>
+<p>Secara <em>default</em> <a href="http://www.bhinneka.com/Associate/asc_clicks.aspx?BARef=BATL150600397&amp;BATrcID=linfocatatansas225204&amp;CatID=02no&amp;Link=http%3a%2f%2fwww.bhinneka.com%2fcategory%2fnotebook___laptop.aspx"><strong>laptop</strong></a> <a href="http://www.bhinneka.com/Associate/asc_clicks.aspx?BARef=BATL150600398&amp;BATrcID=linfocatatansas225204&amp;Link=http%3a%2f%2fwww.bhinneka.com%2fproducts%2fsku00215793%2fasus_notebook_x453ma-bing-wx320b_-_black.aspx">Asus X453MA</a> diperuntukkan bagi pengguna <em>Microsoft Windows</em>. Hal ini terlihat dari web resminya yang menyediakan <em>driver</em> hanya untuk <em>Windows</em> khususnya <strong>Windows 8.1</strong> dan <strong>Windows 10</strong>. Juga terlihat dari &ldquo;paket bundling&rdquo;-nya yang menyediakan <em>Windows preinstalled</em>.</p>
+<p>Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.1 oleh pihak toko. Awalnya saya pilih kosongan aja sesuai aslinya. Tapi berhubung pihak toko menawarkan <em>Windows 8.1 trial</em> 6 bulan dan saya kepengen icip-icip Windows 8.1 jadilah laptopnya ada Windowsnya. Nah, karena Windowsnya cuma trial, saya belum sanggup beli orinya (bajakan sih banyak yang jual) dan lebih suka pakai <strong>Linux</strong>, Jadilah laptopnya ber-<strong>Slackware</strong>.</p>
   </p>
 
   
@@ -1001,9 +1041,9 @@ Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.
   </header>
 
   <p>
-  Setelah upgrade current ternyata ada masalah dengan mouse. Mouse mengalami stuck, ga ada respons saat drag, drop, bahkan ga bisa klik baik klik kiri maupun kanan. Dari grup di telegram dapat informasi dari Pak Willy hal serupa juga dialami oleh beberapa slacker yang lainnya. Alhamdulillah masalah ini bisa solved dengan mudahnya di Slackware64 saya.
-Dengan akses root copas /lib/modprobe.d/psmouse.conf ke /etc/modprobe.d. Kemudian uncomment baris terakhir.
-############################################################################## # Do not edit this file; instead, copy it to /etc/modprobe.
+  <p>Setelah <em>upgrade current</em> ternyata ada masalah dengan mouse. Mouse mengalami <em>stuck</em>, ga ada respons saat <em>drag, drop</em>, bahkan ga bisa klik baik klik kiri maupun kanan.
+Dari grup di <em>telegram</em> dapat informasi dari Pak Willy hal serupa juga dialami oleh beberapa <em>slacker</em> yang lainnya. Alhamdulillah masalah ini bisa <em>solved</em> dengan mudahnya di Slackware64 saya.</p>
+<p>Dengan akses root copas <!-- raw HTML omitted -->/lib/modprobe.d/psmouse.conf<!-- raw HTML omitted --> ke <!-- raw HTML omitted -->/etc/modprobe.d<!-- raw HTML omitted -->. Kemudian <em>uncomment</em> baris terakhir.</p>
   </p>
 
   
@@ -1051,8 +1091,8 @@ Dengan akses root copas /lib/modprobe.d/psmouse.conf ke /etc/modprobe.d. Kemudia
   </header>
 
   <p>
-  Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering stuck saat boot dan shutdown.
-Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis ID-Slackware, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.
+  <p>Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering <em>stuck</em> saat <em>boot</em> dan <em>shutdown</em>.</p>
+<p>Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis <em>ID-Slackware</em>, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.4.1 pun belum ada perubahan berarti.</p>
   </p>
 
   
@@ -1098,9 +1138,12 @@ Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan d
   </header>
 
   <p>
-  Setelah upgrade kernel, ada yang kurang sreg. Ternyata kernelnya malah jadi ada 2. ini terlihat di grub
-OK, kernel yang lama (2.6.32-5-686) dihapus saja.
-# apt-get remove linux-image-2.6.32-5-686 kemudian restart.
+  <p>Setelah upgrade kernel, ada yang kurang sreg. Ternyata kernelnya malah jadi ada 2. ini terlihat di grub</p>
+<p><img src="https://sasongko.web.id/gambar/hapus-kernel-1.png" alt=""></p>
+<p>OK, kernel yang lama (2.6.32-5-686) dihapus saja.</p>
+<pre tabindex="0"><code># apt-get remove linux-image-2.6.32-5-686
+</code></pre><p>kemudian restart.</p>
+<p><img src="https://sasongko.web.id/gambar/hapus-kernel-2.png" alt=""></p>
   </p>
 
   

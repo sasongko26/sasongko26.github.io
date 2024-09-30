@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,48 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-04-25-konversi-deb-tgz/">Konversi Paket deb ke tgz</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>25 Apr 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Untuk mengkonversi paket deb ke tgz kita bisa menggunakan <em>alien</em>.</p>
+<pre tabindex="0"><code># alien -t namapaket.deb
+</code></pre>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-04-10-install-maktabah-alqirthas/">Install Maktabah Alqirthas di BlankOn</a></h2>
 
     <div class="post-meta">
@@ -261,8 +303,8 @@
   </header>
 
   <p>
-  Maktabah Alqirthas atau Maktabah Elkirtas atau Elkirtasse adalah padanan Maktabah Syamilah-nya Windows yang lintas platform, tersedia untuk Windows dan Linux. Bisa untuk membaca kitab kuning digital, mengubah, bahkan sampai membuat kitab sendiri. Tampilannya menarik, user friendly (bagi yang bisa bahasa Arab atau terbiasa membaca kitab Arab gundul).
-Cara menginstallnya mudah. Sebenarnya di repo BlankOn sudah ada, tapi ada sedikit masalah saat menambahkan kitab. Maka, di sini kita pakai yang dari sumber aslinya saja bukan dari repo BlankOn.
+  <p><em>Maktabah Alqirthas</em> atau <strong>Maktabah Elkirtas</strong> atau <strong>Elkirtasse</strong> adalah padanan Maktabah Syamilah-nya Windows yang lintas platform, tersedia untuk Windows dan Linux. Bisa untuk membaca kitab kuning digital, mengubah, bahkan sampai membuat kitab sendiri. Tampilannya menarik, user friendly (bagi yang bisa bahasa Arab atau terbiasa membaca kitab Arab gundul).</p>
+<p>Cara menginstallnya mudah. Sebenarnya di repo BlankOn sudah ada, tapi ada sedikit masalah saat menambahkan kitab. Maka, di sini kita pakai yang dari sumber aslinya saja bukan dari repo BlankOn.</p>
   </p>
 
   
@@ -306,19 +348,38 @@ Cara menginstallnya mudah. Sebenarnya di repo BlankOn sudah ada, tapi ada sediki
   </header>
 
   <p>
-  Agar bisa internetan di Slackware dengan modem tentunya kita harus install dulu paket atau aplikasinya. Aplikasi yang penulis sarankan adalah WvDial. WvDial ini berbasis text/CLI, bisa untuk GSM maupun CDMA. Slackware yang digunakan Slackware 14.1.
-Paket yang dibutuhkan:
-WvStreams
-WvDial
-Kita akan unduh dari sini
-WvStreams :
-Slackbuild : http://slackbuilds.org/slackbuilds/14.1/libraries/wvstreams.tar.gz
-Source code : http://wvstreams.googlecode.com/files/wvstreams-4.6.1.tar.gz
-WvDial :
-Slackbuild : http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tar.gz
-Source code : http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tar.gz
-Kemudian masuk ke /usr/local/src
-# cd /usr/local/src Kemudian salin slackbuild wvstream dan wvdial ke direktori ini (/usr/local/src).
+  <p>Agar bisa internetan di Slackware dengan modem tentunya kita harus install dulu paket atau aplikasinya. Aplikasi yang penulis sarankan adalah WvDial. WvDial ini berbasis text/CLI, bisa untuk GSM maupun CDMA. Slackware yang digunakan Slackware 14.1.</p>
+<p>Paket yang dibutuhkan:</p>
+<ul>
+<li>
+<p>WvStreams</p>
+</li>
+<li>
+<p>WvDial</p>
+</li>
+</ul>
+<p>Kita akan unduh dari sini</p>
+<p>WvStreams :</p>
+<ul>
+<li>
+<p>Slackbuild : <a href="http://slackbuilds.org/slackbuilds/14.1/libraries/wvstreams.tar.gz">http://slackbuilds.org/slackbuilds/14.1/libraries/wvstreams.tar.gz</a></p>
+</li>
+<li>
+<p>Source code : <a href="http://wvstreams.googlecode.com/files/wvstreams-4.6.1.tar.gz">http://wvstreams.googlecode.com/files/wvstreams-4.6.1.tar.gz</a></p>
+</li>
+</ul>
+<p>WvDial :</p>
+<ul>
+<li>
+<p>Slackbuild : <a href="http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tar.gz">http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tar.gz</a></p>
+</li>
+<li>
+<p>Source code : <a href="http://wvstreams.googlecode.com/files/wvdial-1.61.tar.gz">http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tar.gz</a></p>
+</li>
+</ul>
+<p>Kemudian masuk ke /usr/local/src</p>
+<pre tabindex="0"><code># cd /usr/local/src
+</code></pre><p>Kemudian salin slackbuild wvstream dan wvdial ke direktori ini (/usr/local/src).</p>
   </p>
 
   
@@ -364,7 +425,7 @@ Kemudian masuk ke /usr/local/src
   </header>
 
   <p>
-  
+  <p><img src="https://sasongko.web.id/gambar/blankon-sayembara-infograph-1.png" alt=""></p>
   </p>
 
   
@@ -408,54 +469,11 @@ Kemudian masuk ke /usr/local/src
   </header>
 
   <p>
-  Berkas atau file dengan ekstensi tar.xz adalah berkas kompresi/arsip. Untuk mengekstraknya mudah.
-$ tar xpf nama_file.tar.xz 
+  <p>Berkas atau file dengan ekstensi <em>tar.xz</em> adalah berkas kompresi/arsip. Untuk mengekstraknya mudah.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ tar xpf nama_file.tar.xz
+</span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-11-26-mencoba-blankon-liveiso/">Booting BlankOn LiveISO</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Nov 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Bagi yang ingin menggunakan BlankOn, ada baiknya mencoba BlankOn dulu tanpa memasangnya. Percobaan ini biasanya disebut dengan istilah live. Umumnya percobaan ini menggunaan sarana atau media berupa DVD sehingga muncullah istilah livedvd, atau flashdisk yang kemudian memunculkan liveusb. Bisakah kita live tanpa dvd maupun usb? Bisa saja, asal kita punya ISO-nya. Kita akan me-live langsung dari komputer atau laptop yang sudah terpasang BlankOn atau distro linux lainnya. Dengan ini kita ga perlu repot membakar ISOnya ke DVD atau membuat liveusb segala.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2014-11-26-mencoba-blankon-liveiso/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -468,7 +486,7 @@ $ tar xpf nama_file.tar.xz
   
   <a href="https://sasongko.web.id/page/60/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;61 / 65&nbsp;</span>
+  <span>&nbsp;61 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/62/"><i class="fa fa-chevron-right"></i></a>
   

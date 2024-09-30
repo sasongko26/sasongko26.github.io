@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Manajemen-File &middot; Catatan Sasongko</title>
 
@@ -260,8 +260,9 @@
   </header>
 
   <p>
-  Melengkapi catatan yang sudah ada tentang konversi file. Kali ini adalah konversi atau convert file dari berformat png menjadi pdf. Misalkan file gambar.png akan dikonversi menjadi pdf, maka command-nya
-$ mogrify -format pdf gambar.png Command tersebut di atas adalah bagian dari imagemagick yang secara default sudah terinstall di slackware.
+  <p>Melengkapi catatan yang sudah ada tentang konversi file. Kali ini adalah konversi  atau convert file dari berformat png menjadi pdf. Misalkan file gambar.png akan dikonversi menjadi pdf, maka <em>command</em>-nya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mogrify -format pdf gambar.png
+</span></span></code></pre></div><p><em>Command</em> tersebut di atas adalah bagian dari <strong>imagemagick</strong> yang secara default sudah terinstall di <strong>slackware</strong>.</p>
   </p>
 
   
@@ -303,8 +304,8 @@ $ mogrify -format pdf gambar.png Command tersebut di atas adalah bagian dari ima
   </header>
 
   <p>
-  Salah satu hal yang saya sukai dari keunggulan linux adalah kemudahannya dalam melakukan sesuatu secara massal dengan mudah, termasuk di antaranya konversi file. Hanya dengan mengetikkan atau bahkan cukup copy paste edit kita bisa menghemat waktu dan tenaga dalam mengubah format file.
-Kali ini kita akan mengubah atau convert file dari pdf menjadi gambar png. Tool yang digunakan adalah pdftopng. Tool ini secara default sudah ter-install di Slackware menjadi bagian dari package xpdf.
+  <p>Salah satu hal yang saya sukai dari <strong>keunggulan linux</strong> adalah kemudahannya dalam melakukan sesuatu secara massal dengan mudah, termasuk di antaranya konversi file. Hanya dengan mengetikkan atau bahkan cukup <em>copy paste edit</em> kita bisa menghemat waktu dan tenaga dalam mengubah format file.</p>
+<p>Kali ini kita akan mengubah atau <em>convert</em> file dari pdf menjadi gambar png. <em>Tool</em> yang digunakan adalah <strong>pdftopng</strong>. <em>Tool</em> ini secara <em>default</em> sudah ter-<em>install</em> di <strong>Slackware</strong> menjadi bagian dari <em>package</em> <strong>xpdf</strong>.</p>
   </p>
 
   
@@ -350,8 +351,9 @@ Kali ini kita akan mengubah atau convert file dari pdf menjadi gambar png. Tool 
   </header>
 
   <p>
-  Salah satu keunggulan linux adalah mudahnya untuk melakukan otomatisasi yang dapat dilakukan dengan mengetikkan sebaris perintah. Sebagai contoh, apabila ingin melakukan pencadangan semua file tanpa melihat struktur direktorinya ke media penyimpanan eksternal bisa mengetikkan
-$ find direktori_asli -iname &#39;*&#39; -exec cp &#39;{}&#39; direktori_cadangan \; Perintah tersebut akan membuat semua file di direktori_asli berpindah ke direktori_cadangan.
+  <p>Salah satu keunggulan linux adalah mudahnya untuk melakukan otomatisasi yang dapat dilakukan dengan mengetikkan sebaris perintah. Sebagai contoh, apabila ingin melakukan pencadangan semua file tanpa melihat struktur direktorinya ke media penyimpanan eksternal bisa mengetikkan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find direktori_asli -iname <span style="color:#e6db74">&#39;*&#39;</span> -exec cp <span style="color:#e6db74">&#39;{}&#39;</span> direktori_cadangan <span style="color:#ae81ff">\;</span>
+</span></span></code></pre></div><p>Perintah tersebut akan membuat semua file di direktori_asli berpindah ke direktori_cadangan.</p>
   </p>
 
   
@@ -393,15 +395,18 @@ $ find direktori_asli -iname &#39;*&#39; -exec cp &#39;{}&#39; direktori_cadanga
   </header>
 
   <p>
-  Untuk memperkecil ukuran file pdf bisa mengeksekusi
-$ ps2pdf filelama.pdf filebaru.pdf Command tersebut akan membuat ukuran filebaru.pdf merupakan filelama.pdf dengan ukuran lebih kecil. Ada opsi yang bisa diberikan yang tentunya dapat digunakan sesuai kebutuhan
--dPDFSETTINGS=/screen untuk mendapatkan ukuran yang jauh lebih kecil dengan kualitas 72 dpi. -dPDFSETTINGS=/ebooks untuk mendapatkan ukuran lebih kecil dengan kualitas 150 dpi. -dPDFSETTINGS=/prepress untuk kualitas 300 dpi. -dPDFSETTINGS=/printer untuk kualitas printer (300 dpi). -dPDFSETTINGS=/default untuk berbagai keperluan tapi kadang ukurannya tidak beda teralu jauh dengan aslinya.
+  <p>Untuk memperkecil ukuran file pdf bisa mengeksekusi</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ps2pdf filelama.pdf filebaru.pdf
+</span></span></code></pre></div><p><em>Command</em> tersebut akan membuat ukuran filebaru.pdf merupakan filelama.pdf dengan ukuran lebih kecil. Ada opsi yang bisa diberikan yang tentunya dapat digunakan sesuai kebutuhan</p>
+<ol>
+<li>-dPDFSETTINGS=/screen untuk mendapatkan ukuran yang jauh lebih kecil dengan kualitas 72 dpi.</li>
+<li>-dPDFSETTINGS=/ebooks untuk mendapatkan ukuran lebih kecil dengan kualitas 150 dpi.</li>
+<li>-dPDFSETTINGS=/prepress untuk kualitas 300 dpi.</li>
+<li>-dPDFSETTINGS=/printer untuk kualitas printer (300 dpi).</li>
+<li>-dPDFSETTINGS=/default untuk berbagai keperluan tapi kadang ukurannya tidak beda teralu jauh dengan aslinya.</li>
+</ol>
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2023-07-09-memperkecil-ukuran-file-pdf/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -441,8 +446,9 @@ $ ps2pdf filelama.pdf filebaru.pdf Command tersebut akan membuat ukuran filebaru
   </header>
 
   <p>
-  Secara default, dd tidak menampilkan progress. Untuk menampilkannya tambahkan
-status=progress 
+  <p>Secara default, <strong>dd</strong> tidak menampilkan progress. Untuk menampilkannya tambahkan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>status<span style="color:#f92672">=</span>progress
+</span></span></code></pre></div>
   </p>
 
   
@@ -484,9 +490,10 @@ status=progress
   </header>
 
   <p>
-  Mount media (kasus kali ini pada flashdisk) melalui command line secara default membuat ownership filenya menjadi milik root. Hal ini berakibat media tersebut berjalan pada mode read-only. Hanya user setingkat root yang bisa melakukan write on.
-Kasus ini bisa disiasati dengan mendefinisikan id user yang akan melakukan write on.
-mount -o rw,uid=1020,gid=120 /dev/sdb1 /media/hd0/ uid dan gid di sini hanya contoh, silakan disesuaikan.
+  <p><em>Mount</em> media (kasus kali ini pada <em>flashdisk</em>)  melalui <em>command line</em> secara default membuat <em>ownership</em> filenya menjadi milik <strong>root</strong>. Hal ini berakibat media tersebut berjalan pada mode <strong>read-only</strong>. Hanya <em>user</em> setingkat <strong>root</strong> yang bisa melakukan <em>write on</em>.</p>
+<p>Kasus ini bisa disiasati dengan mendefinisikan <em>id</em> user yang akan melakukan <em>write on</em>.</p>
+<pre tabindex="0"><code>mount -o rw,uid=1020,gid=120 /dev/sdb1 /media/hd0/
+</code></pre><p>uid dan gid di sini hanya contoh, silakan disesuaikan.</p>
   </p>
 
   
@@ -530,8 +537,9 @@ mount -o rw,uid=1020,gid=120 /dev/sdb1 /media/hd0/ uid dan gid di sini hanya con
   </header>
 
   <p>
-  Untuk mengubah timestamp akses dan modifikasi pada file
-$ touch -t YYYYMMDDHHmm.ss dokumen di mana dokumen adalah filename, waktu yang diinginkan dalam format YYYYMMDDHHmm.ss
+  <p>Untuk mengubah <em>timestamp</em> akses dan modifikasi pada file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ touch -t YYYYMMDDHHmm.ss dokumen
+</span></span></code></pre></div><p>di mana dokumen adalah <em>filename</em>, waktu yang diinginkan dalam format YYYYMMDDHHmm.ss</p>
   </p>
 
   
@@ -573,9 +581,16 @@ $ touch -t YYYYMMDDHHmm.ss dokumen di mana dokumen adalah filename, waktu yang d
   </header>
 
   <p>
-  Efek samping work from home, harddisk laptop lebih cepat penuh. Saat menghapus file-file yang sudah tidak diperlukan, Dolphin mengeluarkan warning
-Job Failed The wastebin has reached its maximum size! Cleanup the wastebin manually Ada 2 alternatif solusi:
-Sesuai yang ada di warning untuk menghapus file-file di wastebin secara manual. Mengatur ulang wastebin pada Dolphin. Wastebin diatur melalui menu Settings &ndash;&gt; Configure Dolphin klik Wastebin. Di sini kita bisa mengatur apakah file di wastebin akan dihapus secara otomatis setelah tenggat yang ditentukan.
+  <p>Efek samping <em>work from home, harddisk</em> laptop lebih cepat penuh. Saat menghapus file-file yang sudah tidak diperlukan, <strong>Dolphin</strong> mengeluarkan <em>warning</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Job Failed
+</span></span><span style="display:flex;"><span>The wastebin has reached its maximum size!
+</span></span><span style="display:flex;"><span>Cleanup the wastebin manually
+</span></span></code></pre></div><p>Ada 2 alternatif solusi:</p>
+<ol>
+<li>Sesuai yang ada di <em>warning</em> untuk menghapus file-file di <strong>wastebin</strong> secara manual.</li>
+<li>Mengatur ulang <strong>wastebin</strong> pada <strong>Dolphin</strong>. <strong>Wastebin</strong> diatur melalui menu <strong>Settings &ndash;&gt; Configure Dolphin</strong> klik <strong>Wastebin</strong>. Di sini kita bisa mengatur apakah file di <strong>wastebin</strong> akan dihapus secara otomatis setelah tenggat yang ditentukan. Kemudian bisa diatur pula limit kapasitas <strong>wastebin</strong>. Lalu, apakah yang akan dilakukan <strong>Dolphin</strong> ketika <strong>wastebin</strong> sudah penuh, apakah hanya memunculkan <em>warning</em>, menghapus file paling lawas atau menghapus file paling besar <em>size</em>-nya.</li>
+</ol>
+<p>Silakan dipilih sesuai kebutuhan.</p>
   </p>
 
   
@@ -623,8 +638,13 @@ Sesuai yang ada di warning untuk menghapus file-file di wastebin secara manual. 
   </header>
 
   <p>
-  Untuk menghapus history atau riwayat video yang ditonton dengan QtAV Player ada 2 cara:
-melalui QtAV Player dengan klik History kemudian Clear menghapus file historynya $ rm ~/.local/share/Player/*.qds Command tersebut juga menghapus riwayat playlist
+  <p>Untuk menghapus <em>history</em> atau riwayat video yang ditonton dengan <strong>QtAV Player</strong> ada 2 cara:</p>
+<ol>
+<li>melalui QtAV Player dengan klik <strong>History</strong> kemudian <strong>Clear</strong></li>
+<li>menghapus file historynya</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm ~/.local/share/Player/*.qds
+</span></span></code></pre></div><p><em>Command</em> tersebut juga menghapus riwayat <em>playlist</em></p>
   </p>
 
   
@@ -666,9 +686,10 @@ melalui QtAV Player dengan klik History kemudian Clear menghapus file historynya
   </header>
 
   <p>
-  Sedang membutuhkan kepingan DVDRW kosong tapi tidak menemukannya. Yang ditemukan DVDRW yang sudah ada isinya tetapi sudah tidak berguna. Baiklah DVDRW nya disuperbersihkan saja alias diformat.
-DVDRW terdeteksi sebagai /dev/sr0
-dvd+rw-format -f /dev/sr0 
+  <p>Sedang membutuhkan kepingan DVDRW kosong tapi tidak menemukannya. Yang ditemukan DVDRW yang sudah ada isinya tetapi sudah tidak berguna. Baiklah DVDRW nya disuperbersihkan saja alias diformat.</p>
+<p>DVDRW terdeteksi sebagai /dev/sr0</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dvd+rw-format -f /dev/sr0
+</span></span></code></pre></div>
   </p>
 
   
@@ -710,10 +731,27 @@ dvd+rw-format -f /dev/sr0
   </header>
 
   <p>
-  Malam ini, ketika akan update SBo, ternyata tanpa disadari internet disconnect sebelumnya.
-bash-5.1# sbocheck Updating SlackBuilds tree... fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution) Could not sync from git://github.com/Ponce/slackbuilds.git. Setelah internet tidak ada masalah, gantian sbotools-nya yang masalah
-bash-5.1# sbocheck /usr/sbo/repo exists and is not empty. Exiting. Baiklah, local repository-nya minta dikosongkan dulu
-bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree... Cloning into &#39;/usr/sbo/repo&#39;.
+  <p>Malam ini, ketika akan <em>update</em> SBo, ternyata tanpa disadari internet <em>disconnect</em> sebelumnya.</p>
+<pre tabindex="0"><code>bash-5.1# sbocheck
+Updating SlackBuilds tree...
+fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution)
+Could not sync from git://github.com/Ponce/slackbuilds.git.
+</code></pre><p>Setelah internet tidak ada masalah, gantian <strong>sbotools</strong>-nya yang masalah</p>
+<pre tabindex="0"><code>bash-5.1# sbocheck
+/usr/sbo/repo exists and is not empty. Exiting.
+</code></pre><p>Baiklah, <em>local repository</em>-nya minta dikosongkan dulu</p>
+<pre tabindex="0"><code>bash-5.1# rm -r /usr/sbo/repo
+bash-5.1# sbosnap fetch
+Pulling SlackBuilds tree...
+Cloning into &#39;/usr/sbo/repo&#39;...
+remote: Enumerating objects: 42, done.
+remote: Counting objects: 100% (42/42), done.
+remote: Compressing objects: 100% (42/42), done.
+remote: Total 498277 (delta 8), reused 12 (delta 0), pack-reused 498235
+Receiving objects: 100% (498277/498277), 142.33 MiB | 199.00 KiB/s, done.
+Resolving deltas: 100% (345959/345959), done.
+Updating files: 100% (40245/40245), done.
+</code></pre><p><em>Recheck</em></p>
   </p>
 
   
@@ -759,8 +797,9 @@ bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree..
   </header>
 
   <p>
-  Misal, file slackware64-live-current.iso akan di-burn ke DVD. DVD terdeteksi oleh sistem sebagai /dev/sr0. Command dijalankan root.
-$ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso 
+  <p>Misal, file slackware64-live-current.iso akan di-<em>burn</em> ke DVD. DVD terdeteksi oleh sistem sebagai /dev/sr0. <em>Command</em> dijalankan root.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ growisofs -dvd-compat -Z /dev/sr0<span style="color:#f92672">=</span>slackware64-live-current.iso
+</span></span></code></pre></div>
   </p>
 
   
@@ -802,7 +841,7 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
   </header>
 
   <p>
-  Salah 1 akibat Work from Home a.k.a WfH adalah kapasitas storage laptop menjadi penuh. Semakin banyak file, semakin berkurang free space. Untuk menyiasatinya, ketika ada kesempatan bekerja di kantor, file-file tersebut ditransfer ke komputer kantor. Karena komputer kantor menggunakan Windows 7 yang mana saya tidak paham bagaimana cara file sharing-nya saya gunakan ftp. Mungkin karena sudah terlanjur nyaman memakai slackware, saya tidak mau ribet pengaturan ftpnya di komputer kantor. Serahkan saja ke bagian IT untuk installnya.
+  <p>Salah 1 akibat <em>Work from Home</em> a.k.a WfH adalah kapasitas <em>storage</em> laptop menjadi penuh. Semakin banyak file, semakin berkurang <em>free space</em>. Untuk menyiasatinya, ketika ada kesempatan bekerja di kantor, file-file tersebut ditransfer ke komputer kantor. Karena komputer kantor menggunakan <strong>Windows 7</strong> yang mana saya tidak paham bagaimana cara <em>file sharing</em>-nya saya gunakan ftp. Mungkin karena sudah terlanjur nyaman memakai <strong>slackware</strong>, saya tidak mau ribet pengaturan ftpnya di komputer kantor. Serahkan saja ke bagian IT untuk installnya. Pasrah sakbongkokan. Hahahaha&hellip;.</p>
   </p>
 
   
@@ -848,8 +887,9 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
   </header>
 
   <p>
-  Untuk mengenumerasi atau mengetahui packages apa saja yang terinstall dapat menggunakan command untuk menampilkan isi directory /var/lib/pkgtools/packages
-$ ls /var/lib/pkgtools/packages 
+  <p>Untuk mengenumerasi atau mengetahui <em>packages</em> apa saja yang terinstall dapat menggunakan <em>command</em> untuk menampilkan isi directory /var/lib/pkgtools/packages</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ls /var/lib/pkgtools/packages
+</span></span></code></pre></div>
   </p>
 
   
@@ -893,8 +933,9 @@ $ ls /var/lib/pkgtools/packages
   </header>
 
   <p>
-  Misalkan mempunyai 2 file ebook yaitu ebook1.pdf dan ebook2.pdf. Kedua file ini akan digabung menjadi ebook.pdf. Maka untuk menggabungkannya
-$ pdfunite ebook1.pdf ebook2.pdf ebook.pdf 
+  <p>Misalkan mempunyai 2 file <em>ebook</em> yaitu ebook1.pdf dan ebook2.pdf. Kedua file ini akan digabung menjadi ebook.pdf. Maka untuk menggabungkannya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ pdfunite ebook1.pdf ebook2.pdf ebook.pdf
+</span></span></code></pre></div>
   </p>
 
   
@@ -936,10 +977,15 @@ $ pdfunite ebook1.pdf ebook2.pdf ebook.pdf
   </header>
 
   <p>
-  Lima tahun yang lalu ketika membeli laptop yang saat ini digunakan untuk menulis catatan ini, toko memberikan OS Windows 10 tanpa lisensinya. Penulis tetap mempertahankannya untuk jaga-jaga jika di kemudian hari kepepet sangat membutuhkan Windows.
-Tadi pagi iseng ingin melihat-lihat adakah file di partisi tempat Windows diinstall yang bisa dihapus sehingga storage harddisk lebih lega?
-Partisi Windows teridentifikasi sebagai /dev/sda2. Akan di-mount ke /media/hd0
-$ mount /dev/sda2 /media/hd0 Windows is hibernated, refused to mount.
+  <p>Lima tahun yang lalu ketika membeli laptop yang saat ini digunakan untuk menulis catatan ini, toko memberikan OS Windows 10 tanpa lisensinya. Penulis tetap mempertahankannya untuk jaga-jaga jika di kemudian hari kepepet sangat membutuhkan Windows.</p>
+<p>Tadi pagi iseng ingin melihat-lihat adakah file di partisi tempat Windows diinstall yang bisa dihapus sehingga storage harddisk lebih lega?</p>
+<p>Partisi Windows teridentifikasi sebagai /dev/sda2. Akan di-<em>mount</em> ke /media/hd0</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ mount /dev/sda2 /media/hd0
+</span></span><span style="display:flex;"><span>Windows is hibernated, refused to mount.
+</span></span><span style="display:flex;"><span>Falling back to read-only mount because the NTFS partition is in an
+</span></span><span style="display:flex;"><span>unsafe state. Please resume and shutdown Windows fully <span style="color:#f92672">(</span>no hibernation
+</span></span><span style="display:flex;"><span>or fast restarting.<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>What? Windows is hibernate? Seingat penulis selalu tertib dalam menjalankan SOP shutdown (<em>close</em> semua window aplikasi yang terbuka, shutdown melalui menu, tidak ada <em>warning</em> apapun yang muncul di monitor). Jadi ya dianggap baik-baik saja. Ternyata tidak.</p>
   </p>
 
   
@@ -985,8 +1031,9 @@ $ mount /dev/sda2 /media/hd0 Windows is hibernated, refused to mount.
   </header>
 
   <p>
-  Misalkan akan menghapus semua file berekstensi .rtf di direktori /tmp. Pada direktori /tmp terdapat banyak direktori dan file lainnya. File yang akan dihapus hanya pada direktor induk, tidak termasuk subdirektorinya (maxdepth=1).
-$ find /tmp -maxdepth 1 -name *.rtf -delete 
+  <p>Misalkan akan menghapus semua file berekstensi <strong>.rtf</strong> di direktori /tmp. Pada direktori /tmp terdapat banyak direktori dan file lainnya. File yang akan dihapus hanya pada direktor induk, tidak termasuk subdirektorinya (maxdepth=1).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ find /tmp -maxdepth <span style="color:#ae81ff">1</span> -name *.rtf -delete
+</span></span></code></pre></div>
   </p>
 
   
@@ -1032,9 +1079,17 @@ $ find /tmp -maxdepth 1 -name *.rtf -delete
   </header>
 
   <p>
-  File csv merupakan file yang umum digunakan sebagai file data. Mudah dalam pembuatannya. Begitu juga dengan aksesnya. Bisa dibuat dengan text editor, spreadsheet software maupun statistical software. Pada kesempatan kali ini tidak menggunakan statistical software seperti R.
-Membuat file csv dengan text editor Prinsip pembuatan adalah :
-Antar kolom dipisahkan oleh tanda koma (,) Kolom pertama (umumnya) sebagai header atau nama/judul kolom Antar baris dipisahkan oleh enter Angka dituliskan seperti biasanya Teks/string dituliskan dalam tanda kutip (&quot; atatu &lsquo;) Contoh, data kasus malaria tahun 2019 terdiri atas 2 kolom, yaitu provinsi dan jumlah.
+  <p>File <strong>csv</strong> merupakan file yang umum digunakan sebagai file data. Mudah dalam pembuatannya. Begitu juga dengan aksesnya. Bisa dibuat dengan <em>text editor, spreadsheet software</em> maupun <em>statistical software</em>. Pada kesempatan kali ini tidak menggunakan <em>statistical software</em> seperti <strong>R</strong>.</p>
+<h1 id="membuat-file-csv-dengan-_text-editor_">Membuat file csv dengan <em>text editor</em></h1>
+<p>Prinsip pembuatan adalah :</p>
+<ol>
+<li>Antar kolom dipisahkan oleh tanda koma (,)</li>
+<li>Kolom pertama (umumnya) sebagai <em>header</em> atau nama/judul kolom</li>
+<li>Antar baris dipisahkan oleh enter</li>
+<li>Angka dituliskan seperti biasanya</li>
+<li>Teks/<em>string</em> dituliskan dalam tanda kutip (&quot; atatu &lsquo;)</li>
+</ol>
+<p>Contoh, data kasus malaria tahun 2019 terdiri atas 2 kolom, yaitu provinsi dan jumlah.</p>
   </p>
 
   
@@ -1080,8 +1135,9 @@ Antar kolom dipisahkan oleh tanda koma (,) Kolom pertama (umumnya) sebagai heade
   </header>
 
   <p>
-  Untuk menghapus file Screenshot_2020-08-06_08-31-22.png yang ada dalam screenshot.tar.xz, caranya
-$ tar f screenshot.tar.xz --delete Screenshot_2020-08-06_08-31-22.png 
+  <p>Untuk menghapus file Screenshot_2020-08-06_08-31-22.png yang ada dalam screenshot.tar.xz, caranya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar f screenshot.tar.xz --delete Screenshot_2020-08-06_08-31-22.png
+</span></span></code></pre></div>
   </p>
 
   
@@ -1123,11 +1179,14 @@ $ tar f screenshot.tar.xz --delete Screenshot_2020-08-06_08-31-22.png
   </header>
 
   <p>
-  Untuk menambahkan file ke dalam tar archive mudah. Gunakan opsi -r atau &ndash;append pada command tar.
-Misalkan, file photo_2020-08-22_19-03-32.jpg yang ada di ~/Documents akan dimasukkan atau ditambahkan ke dalam file archive screenshot.tar.xz
-$ tar rf screenshot.tar.xz photo_2020-08-22_19-03-32.jpg Atau
-$ tar f screenshot.tar.xz --append photo_2020-08-22_19-03-32.jpg Apabila file photo_2020-08-22_19-03-32.jpg ingin langsung dihapus dari lokasi aslinya setelah ditambahkan ke tar, beri opsi &ndash;remove-files
-$ tar f screenshot.tar.xz --append --remove-files photo_2020-08-22_19-03-32.jpg 
+  <p>Untuk menambahkan file ke dalam <em>tar archive</em> mudah. Gunakan opsi -r atau &ndash;append pada <em>command</em> <strong>tar</strong>.</p>
+<p>Misalkan, file photo_2020-08-22_19-03-32.jpg yang ada di ~/Documents akan dimasukkan atau ditambahkan ke dalam file <em>archive</em> screenshot.tar.xz</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar rf screenshot.tar.xz photo_2020-08-22_19-03-32.jpg
+</span></span></code></pre></div><p>Atau</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar f screenshot.tar.xz --append photo_2020-08-22_19-03-32.jpg
+</span></span></code></pre></div><p>Apabila file photo_2020-08-22_19-03-32.jpg ingin langsung dihapus dari lokasi aslinya setelah ditambahkan ke tar, beri opsi &ndash;remove-files</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar f screenshot.tar.xz --append --remove-files photo_2020-08-22_19-03-32.jpg
+</span></span></code></pre></div>
   </p>
 
   
@@ -1169,9 +1228,17 @@ $ tar f screenshot.tar.xz --append --remove-files photo_2020-08-22_19-03-32.jpg
   </header>
 
   <p>
-  Catatan ini merupakan lanjutan dari sebelumnya yang membuat tar archive. Kali ini tentang bagaimana mengetahui apa saja file ada di dalam archive tersebut tanpa harus mengekstrak.
-Contoh, terdapat file screenshot2.tar.xz. Untuk mengetahui apa saja isinya
-$ tar tvf screenshot2.tar.xz -rw-r--r-- user1/users 580563 2020-07-15 10:17 Screenshot_2020-07-15_10-17-33.png -rw-r--r-- user1/users 851743 2020-08-03 10:31 Screenshot_2020-08-03_10-31-47.png -rw-r--r-- user1/users 9958 2020-08-04 16:33 Screenshot_2020-08-04_16-33-18.png -rw-r--r-- user1/users 822389 2020-08-06 08:23 Screenshot_2020-08-06_08-22-59.png -rw-r--r-- user1/users 737008 2020-08-06 08:31 Screenshot_2020-08-06_08-31-22.png -rw-r--r-- user1/users 243660 2020-12-04 18:44 Screenshot_2020-12-04_18-44-18.
+  <p>Catatan ini merupakan lanjutan dari sebelumnya yang membuat <em>tar archive</em>. Kali ini tentang bagaimana mengetahui apa saja file ada di dalam <em>archive</em> tersebut tanpa harus mengekstrak.</p>
+<p>Contoh, terdapat file screenshot2.tar.xz. Untuk mengetahui apa saja isinya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar tvf screenshot2.tar.xz
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">580563</span> 2020-07-15 10:17 Screenshot_2020-07-15_10-17-33.png
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">851743</span> 2020-08-03 10:31 Screenshot_2020-08-03_10-31-47.png
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users   <span style="color:#ae81ff">9958</span> 2020-08-04 16:33 Screenshot_2020-08-04_16-33-18.png
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">822389</span> 2020-08-06 08:23 Screenshot_2020-08-06_08-22-59.png
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">737008</span> 2020-08-06 08:31 Screenshot_2020-08-06_08-31-22.png
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">243660</span> 2020-12-04 18:44 Screenshot_2020-12-04_18-44-18.png
+</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">122966</span> 2021-01-12 01:21 Screenshot_2021-01-12_01-21-31.png
+</span></span></code></pre></div><p>Dapat diketahui bahwa file screenshot2.tar.xz berisi 7 file png screenshot sebagaimana tersebut di atas.</p>
   </p>
 
   
@@ -1217,16 +1284,34 @@ $ tar tvf screenshot2.tar.xz -rw-r--r-- user1/users 580563 2020-07-15 10:17 Scre
   </header>
 
   <p>
-  Terdapat file sebagai berikut:
-Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Ketujuh file tersebut akan disatukan dalam 1 archive dengan nama file screenshot.tar.gz.
-$ tar cvf screenshot.tar.gz Screen* Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Penjelasan command
-tar : manajemen archive yang digunakan aalah tar c : wajib dituliskan untuk create atau membuat archive v : opsi untuk verbose, menampilkan list file yang diproses f : wajib dituliskan dalam semua penggunaan tar karena f adalah file, identifier untuk file yang akan diproses screenshot.
+  <p>Terdapat file sebagai berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Screenshot_2020-07-15_10-17-33.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-03_10-31-47.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-04_16-33-18.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-06_08-22-59.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-06_08-31-22.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-12-04_18-44-18.png
+</span></span><span style="display:flex;"><span>Screenshot_2021-01-12_01-21-31.png
+</span></span></code></pre></div><p>Ketujuh file tersebut akan disatukan dalam 1 <em>archive</em> dengan nama file <em>screenshot.tar.gz</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar cvf screenshot.tar.gz Screen*
+</span></span><span style="display:flex;"><span>Screenshot_2020-07-15_10-17-33.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-03_10-31-47.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-04_16-33-18.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-06_08-22-59.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-06_08-31-22.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-12-04_18-44-18.png
+</span></span><span style="display:flex;"><span>Screenshot_2021-01-12_01-21-31.png
+</span></span></code></pre></div><p>Penjelasan <em>command</em></p>
+<ul>
+<li>tar : manajemen <em>archive</em> yang digunakan aalah <em>tar</em></li>
+<li>c : wajib dituliskan untuk <em>create</em> atau membuat <em>archive</em></li>
+<li>v : opsi untuk <em>verbose</em>, menampilkan list file yang diproses</li>
+<li>f : wajib dituliskan dalam semua penggunaan <em>tar</em> karena f adalah file, identifier untuk file yang akan diproses</li>
+<li>screenshot.tar.gz : nama file <em>archive</em>. Ekstensi bisa .tar, .tar.gz, atau .tar.xz. Ketika ekstensi ini sering dipakai di dunia <em>open source</em>.</li>
+<li>Screen* : file yang akan di-<em>archive</em>. Karena filenya banyak dan mempunyai kemiripan pola maka digunakan <em>regex</em> agar lebih praktis. File ini juga bisa dituliskan satu persatu.</li>
+</ul>
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -1268,9 +1353,14 @@ tar : manajemen archive yang digunakan aalah tar c : wajib dituliskan untuk crea
   </header>
 
   <p>
-  Kegunaan rsync rsync berguna untuk transfer file secara efisien. Dibandingkan dengan cp atau mv, rsync memiliki keunggulan :
-Bebas pilih-pilih file maupun direktori yang akan ditransfer karena ada fitur include dan exclude Apabila gagal, misalnya karena storage penuh atau &ldquo;kecelakaan&rdquo; salah klik sehingga ter-close, dapat dilanjutkan tanpa mengulang dari awal sehingga waktunya tentu lebih cepat Dibandingkan wget, rsync mendukung penggunaan wildcard dan secara default rsync resumeable.
-Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1
+  <h1 id="kegunaan-rsync">Kegunaan rsync</h1>
+<p><strong>rsync</strong> berguna untuk transfer file secara efisien. Dibandingkan dengan <strong>cp</strong> atau <strong>mv</strong>, <strong>rsync</strong> memiliki keunggulan :</p>
+<ol>
+<li>Bebas pilih-pilih file maupun direktori yang akan ditransfer karena ada fitur <em>include</em> dan <em>exclude</em></li>
+<li>Apabila gagal, misalnya karena <em>storage</em> penuh atau &ldquo;kecelakaan&rdquo; salah klik sehingga ter-<em>close</em>, dapat dilanjutkan tanpa mengulang dari awal sehingga waktunya tentu lebih cepat</li>
+</ol>
+<p>Dibandingkan <strong>wget</strong>, <strong>rsync</strong> mendukung penggunaan <em>wildcard</em> dan secara <em>default</em> <strong>rsync</strong> <em>resumeable</em>.</p>
+<p>Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1</p>
   </p>
 
   
@@ -1316,8 +1406,9 @@ Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1
   </header>
 
   <p>
-  Kadang kita perlu mengambil beberapa halaman dari e-book atau sejenisnya yang bertipe pdf. Kita bisa gunakan pdfjam. Misalkan akan mengambil halaman 10-21 dari file buku.pdf.
-pdfjam buku.pdf &#39;10-21&#39; 
+  <p>Kadang kita perlu mengambil beberapa halaman dari <em>e-book</em> atau sejenisnya yang bertipe pdf. Kita bisa gunakan <!-- raw HTML omitted -->pdfjam<!-- raw HTML omitted -->. Misalkan akan mengambil halaman 10-21 dari file buku.pdf.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pdfjam buku.pdf <span style="color:#e6db74">&#39;10-21&#39;</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -1361,8 +1452,14 @@ pdfjam buku.pdf &#39;10-21&#39;
   </header>
 
   <p>
-  Walau sudah ada tools yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan tools bawaan Slackware. Tools yang umum digunakan antara lain fslint, fdupes atau jdupes. Adapun tools yang biasa saya gunakan
-sha512sum awk uniq grep Misalkan, akan mencari adakah duplikasi file di folder Downloads. Pertama, catat dulu hash-nya. Di sini saya gunakan sha512. Kumpulan sha512 tersebut disatukan dalam file downloads.sha512. File ini terdiri dari 2 kolom. Kolom pertama berisi hash, sedangkan kolom kedua nama filenya.
+  <p>Walau sudah ada <em>tools</em> yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan <em>tools</em> bawaan <strong>Slackware</strong>. <em>Tools</em> yang umum digunakan antara lain <!-- raw HTML omitted -->fslint<!-- raw HTML omitted -->, <!-- raw HTML omitted -->fdupes<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->jdupes<!-- raw HTML omitted -->. Adapun <em>tools</em> yang biasa saya gunakan</p>
+<ol>
+<li><!-- raw HTML omitted -->sha512sum<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->awk<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->uniq<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->grep<!-- raw HTML omitted --></li>
+</ol>
+<p>Misalkan, akan mencari adakah duplikasi file di folder <!-- raw HTML omitted -->Downloads<!-- raw HTML omitted -->. Pertama, catat dulu <em>hash</em>-nya. Di sini saya gunakan <em>sha512</em>. Kumpulan <em>sha512</em> tersebut disatukan dalam file <!-- raw HTML omitted -->downloads.sha512<!-- raw HTML omitted -->. File ini terdiri dari 2 kolom. Kolom pertama berisi <em>hash</em>, sedangkan kolom kedua nama filenya.</p>
   </p>
 
   
@@ -1408,8 +1505,11 @@ sha512sum awk uniq grep Misalkan, akan mencari adakah duplikasi file di folder D
   </header>
 
   <p>
-  Menggunakan linux terutama slackware membuat pekerjaan lebih ringan dan efisien. Suatu ketika diberikan sebuah file terkompresi zip yang misterius. Misterius karena ukurannya besar dan konon kata empunya file tersebut ngehang saat akan dibuka di komputer dengan sistem bukan slackware juga bukan linux. Dan ketika dibuka di slackware ketahuanlah nama &ldquo;penduduk&rdquo; zip tersebut.
-zip -sf namafile.zip # atau less namafile.zip 
+  <p>Menggunakan linux terutama <strong>slackware</strong> membuat pekerjaan lebih ringan dan efisien. Suatu ketika diberikan sebuah file terkompresi zip yang misterius. Misterius karena ukurannya besar dan konon kata empunya file tersebut <em>ngehang</em> saat akan dibuka di komputer dengan sistem <strong>bukan slackware</strong> juga <strong>bukan linux</strong>. Dan ketika dibuka di <strong>slackware</strong> ketahuanlah nama &ldquo;penduduk&rdquo; zip tersebut.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zip -sf namafile.zip
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># atau</span>
+</span></span><span style="display:flex;"><span>less namafile.zip
+</span></span></code></pre></div>
   </p>
 
   
@@ -1451,8 +1551,8 @@ zip -sf namafile.zip # atau less namafile.zip
   </header>
 
   <p>
-  Tak terasa ternyata sudah lebih dari 3 bulan tidak posting. Mengapa? Sibuk? Kesibukan sebenarnya seperti biasa. Tidak ada peningkatan kesibukan secara signifikan. Lalu mengapa? Alasannya simpel. Karena semua kegiatan berkomputer baik-baik saja. Tidak ada masalah. Biasanya saya menulis di sini ketika saya menghadapi masalah terkait penggunaan komputer. Nah, kali ini masalahnya adalah saya menemukan banyak file yang namanya tidak sesuai dengan standar saya.
-Contoh, adik-adik asisten anatomi mengirimkan softcopy materi asistensi.
+  <p>Tak terasa ternyata sudah lebih dari 3 bulan tidak <em>posting</em>. Mengapa? Sibuk? Kesibukan sebenarnya seperti biasa. Tidak ada peningkatan kesibukan secara signifikan. Lalu mengapa? Alasannya simpel. Karena semua kegiatan berkomputer baik-baik saja. Tidak ada masalah. Biasanya saya menulis di sini ketika saya menghadapi masalah terkait penggunaan komputer. Nah, kali ini masalahnya adalah saya menemukan banyak file yang namanya tidak sesuai dengan standar saya.</p>
+<p>Contoh, adik-adik asisten anatomi mengirimkan <em>softcopy</em> materi asistensi. Penamaan file yang diberikan adik-adik adalah berawalan dengan <strong>MC</strong> untuk materi <em>systema musculoskeletale</em>. Saya ingin melakukan <em>rename</em> semua file tersebut yang semula berawalan <strong>MC</strong> menjadi berawalan <strong>Asistensi Anatomi Syst Musculoskeletale</strong>. Perubahan nama banyak file dengan nama yang cukup panjang tentu saja menyita waktu. Sebenarnya ini masih sangat mendingan, hanya 6 file. <em>Rename</em> satu-persatu sebenarnya tidak masalah juga. Tapi <strong>bagaimana kalau kasus serupa jumlah filenya puluhan, ratusan bahkan ribuan?</strong> Era industri 4.0 semakin menuntut efisiensi waktu. Efisiensi waktu ini berdampak pada efisiensi tenaga, baik itu tenaga <em>brainware</em> maupun komputernya yang kemudian mengakibatkan efisiensi biaya.</p>
   </p>
 
   
@@ -1500,10 +1600,12 @@ Contoh, adik-adik asisten anatomi mengirimkan softcopy materi asistensi.
   </header>
 
   <p>
-  Kemarin di grup facebook Ubuntu Indonesia ada yang bertanya yang intinya
-Bagaimana cara install file .tar.gz?
-File dengan ekstensi tar.gz adalah file kompresi/arsip. &lsquo;Saudara&rsquo; dari tar.gz yang juga sering dijumpai adalah [zip]({% post_url 2015-05-13-ekstrak-file-zip %}). Atau, bagi yang sebelum memakai linux sudah sangat familiar dengan Windows, tar.gz ini mirip dengan rar.
-Nah, file kompresi ini bukanlah file installer, tetapi bisa jadi mengandung file installer. File installer di linux ada berbagai macam ekstensinya, contoh deb, rpm, tgz, dan sh.
+  <p>Kemarin di grup facebook Ubuntu Indonesia ada yang bertanya yang intinya</p>
+<blockquote>
+<p>Bagaimana cara install file .tar.gz?</p>
+</blockquote>
+<p>File dengan ekstensi tar.gz adalah file kompresi/arsip. &lsquo;Saudara&rsquo; dari tar.gz yang juga sering dijumpai adalah [zip]({% post_url 2015-05-13-ekstrak-file-zip %}). Atau, bagi yang sebelum memakai linux sudah sangat familiar dengan Windows, tar.gz ini mirip dengan rar.</p>
+<p>Nah, file kompresi ini <em>bukanlah</em> file installer, tetapi <strong>bisa jadi</strong> mengandung file installer. File installer di linux ada berbagai macam ekstensinya, contoh deb, rpm, tgz, dan sh. Tiap file installer itu mempunyai cara install yang beda. Untuk menginstallnya tentu saja tergantung dari isi file tar.gz itu tadi.</p>
   </p>
 
   
@@ -1551,8 +1653,9 @@ Nah, file kompresi ini bukanlah file installer, tetapi bisa jadi mengandung file
   </header>
 
   <p>
-  Berkas atau file dengan ekstensi tar.xz adalah berkas kompresi/arsip. Untuk mengekstraknya mudah.
-$ tar xpf nama_file.tar.xz 
+  <p>Berkas atau file dengan ekstensi <em>tar.xz</em> adalah berkas kompresi/arsip. Untuk mengekstraknya mudah.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ tar xpf nama_file.tar.xz
+</span></span></code></pre></div>
   </p>
 
   

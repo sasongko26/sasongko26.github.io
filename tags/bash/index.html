@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Bash &middot; Catatan Sasongko</title>
 
@@ -260,8 +260,11 @@
   </header>
 
   <p>
-  Bash memiliki beberapa cara untuk melakukan pengulangan (looping). Salah satunya adalah dengan for. Contoh berikut akan menampilkan angka 1 sampai dengan 10.
-for i in {1..10} do echo $i done 
+  <p><em>Bash</em> memiliki beberapa cara untuk melakukan pengulangan (<em>looping</em>). Salah satunya adalah dengan <strong>for</strong>. Contoh berikut akan menampilkan angka 1 sampai dengan 10.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span>1..10<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span> echo $i
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -303,15 +306,18 @@ for i in {1..10} do echo $i done
   </header>
 
   <p>
-  Two fer merupakan salah satu soal latihan pemrograman yang ada di exercism. Latihan ini meminta untuk dibuatkan suatu script yang apabila script tersebut dieksekusi tanpa argumen apapun maka akan mengeluarkan output &ldquo;One for you, one for me.&rdquo;. Apabila diberikan suatu argumen yang merupakan nama seseorang misalnya Sasongko, maka outputnya &ldquo;One for Sasongko, one for me.&rdquo;.
-Berikut adalah script bash-nya
-#!/usr/bin/bash main () { NAME=${1:-you} echo &#34;One for $NAME, one for me.
+  <p><em>Two fer</em> merupakan salah satu soal latihan pemrograman yang ada di <strong>exercism</strong>. Latihan ini meminta untuk dibuatkan suatu <em>script</em> yang apabila script tersebut dieksekusi tanpa argumen apapun maka akan mengeluarkan output &ldquo;One for you, one for me.&rdquo;. Apabila diberikan suatu argumen yang merupakan nama seseorang misalnya Sasongko, maka outputnya &ldquo;One for Sasongko, one for me.&rdquo;.</p>
+<p>Berikut adalah <em>script bash</em>-nya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>main <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	NAME<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>you<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>	echo <span style="color:#e6db74">&#34;One for </span>$NAME<span style="color:#e6db74">, one for me.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>main <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div>
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2023-03-30-two-fer-bash/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

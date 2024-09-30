@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,67 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-04-11-membuat-data-integer-acak-python/">Membuat data integer acak python</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Apr 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Bingung membuat data? Gampang, <strong>python</strong> dengan <em>library</em> <strong>numpy</strong> punya solusinya!</p>
+<p>Akan dibuat data acak bertipe integer (bilangan bulat). Banyaknya data 200, nilai minimal 145, maksimal 180.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(size<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>, low<span style="color:#f92672">=</span><span style="color:#ae81ff">145</span>, high<span style="color:#f92672">=</span><span style="color:#ae81ff">180</span>)
+</span></span><span style="display:flex;"><span>print(data)
+</span></span></code></pre></div><p>Berikut datanya</p>
+<pre tabindex="0"><code>[160 147 160 177 147 149 170 149 166 153 154 156 160 165 161 154 168 173
+ 151 145 158 148 163 178 164 166 159 159 172 147 153 170 174 159 152 170
+ 151 159 168 167 147 156 177 168 176 151 153 146 163 156 149 145 152 173
+ 151 162 165 164 179 173 168 172 158 177 148 177 157 150 145 164 171 166
+ 175 164 159 158 178 173 155 162 178 171 146 145 158 151 150 151 165 166
+ 148 168 159 175 165 173 167 178 150 173 147 161 175 158 150 150 159 168
+ 172 159 160 165 156 150 170 175 171 174 149 175 165 168 155 179 161 162
+ 160 146 151 172 171 179 157 171 170 157 149 147 169 151 172 148 164 169
+ 160 158 168 163 153 154 179 163 174 172 176 166 172 166 173 179 155 158
+ 176 151 152 157 164 175 164 165 179 177 175 164 162 164 172 152 172 154
+ 179 162 171 162 149 149 154 163 168 163 178 179 166 166 167 156 158 155
+ 171 148]
+</code></pre>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/">sbocheck /usr/sbo/repo exists and is not empty</a></h2>
 
     <div class="post-meta">
@@ -261,10 +322,27 @@
   </header>
 
   <p>
-  Malam ini, ketika akan update SBo, ternyata tanpa disadari internet disconnect sebelumnya.
-bash-5.1# sbocheck Updating SlackBuilds tree... fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution) Could not sync from git://github.com/Ponce/slackbuilds.git. Setelah internet tidak ada masalah, gantian sbotools-nya yang masalah
-bash-5.1# sbocheck /usr/sbo/repo exists and is not empty. Exiting. Baiklah, local repository-nya minta dikosongkan dulu
-bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree... Cloning into &#39;/usr/sbo/repo&#39;.
+  <p>Malam ini, ketika akan <em>update</em> SBo, ternyata tanpa disadari internet <em>disconnect</em> sebelumnya.</p>
+<pre tabindex="0"><code>bash-5.1# sbocheck
+Updating SlackBuilds tree...
+fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution)
+Could not sync from git://github.com/Ponce/slackbuilds.git.
+</code></pre><p>Setelah internet tidak ada masalah, gantian <strong>sbotools</strong>-nya yang masalah</p>
+<pre tabindex="0"><code>bash-5.1# sbocheck
+/usr/sbo/repo exists and is not empty. Exiting.
+</code></pre><p>Baiklah, <em>local repository</em>-nya minta dikosongkan dulu</p>
+<pre tabindex="0"><code>bash-5.1# rm -r /usr/sbo/repo
+bash-5.1# sbosnap fetch
+Pulling SlackBuilds tree...
+Cloning into &#39;/usr/sbo/repo&#39;...
+remote: Enumerating objects: 42, done.
+remote: Counting objects: 100% (42/42), done.
+remote: Compressing objects: 100% (42/42), done.
+remote: Total 498277 (delta 8), reused 12 (delta 0), pack-reused 498235
+Receiving objects: 100% (498277/498277), 142.33 MiB | 199.00 KiB/s, done.
+Resolving deltas: 100% (345959/345959), done.
+Updating files: 100% (40245/40245), done.
+</code></pre><p><em>Recheck</em></p>
   </p>
 
   
@@ -310,7 +388,7 @@ bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree..
   </header>
 
   <p>
-  Berapa jumlah baris dan kolom yang ada pada worksheet LibreOffice Calc? Jumlah barisnya adalah 1048576. Adapun kolom, tersedia dari A sampai AMJ (1024).
+  <p>Berapa jumlah baris dan kolom yang ada pada <em>worksheet</em> <strong>LibreOffice Calc</strong>? Jumlah barisnya adalah 1048576. Adapun kolom, tersedia dari A sampai AMJ (1024).</p>
   </p>
 
   
@@ -352,8 +430,9 @@ bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree..
   </header>
 
   <p>
-  Misal, file slackware64-live-current.iso akan di-burn ke DVD. DVD terdeteksi oleh sistem sebagai /dev/sr0. Command dijalankan root.
-$ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso 
+  <p>Misal, file slackware64-live-current.iso akan di-<em>burn</em> ke DVD. DVD terdeteksi oleh sistem sebagai /dev/sr0. <em>Command</em> dijalankan root.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ growisofs -dvd-compat -Z /dev/sr0<span style="color:#f92672">=</span>slackware64-live-current.iso
+</span></span></code></pre></div>
   </p>
 
   
@@ -395,58 +474,13 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
   </header>
 
   <p>
-  Salah 1 akibat Work from Home a.k.a WfH adalah kapasitas storage laptop menjadi penuh. Semakin banyak file, semakin berkurang free space. Untuk menyiasatinya, ketika ada kesempatan bekerja di kantor, file-file tersebut ditransfer ke komputer kantor. Karena komputer kantor menggunakan Windows 7 yang mana saya tidak paham bagaimana cara file sharing-nya saya gunakan ftp. Mungkin karena sudah terlanjur nyaman memakai slackware, saya tidak mau ribet pengaturan ftpnya di komputer kantor. Serahkan saja ke bagian IT untuk installnya.
+  <p>Salah 1 akibat <em>Work from Home</em> a.k.a WfH adalah kapasitas <em>storage</em> laptop menjadi penuh. Semakin banyak file, semakin berkurang <em>free space</em>. Untuk menyiasatinya, ketika ada kesempatan bekerja di kantor, file-file tersebut ditransfer ke komputer kantor. Karena komputer kantor menggunakan <strong>Windows 7</strong> yang mana saya tidak paham bagaimana cara <em>file sharing</em>-nya saya gunakan ftp. Mungkin karena sudah terlanjur nyaman memakai <strong>slackware</strong>, saya tidak mau ribet pengaturan ftpnya di komputer kantor. Serahkan saja ke bagian IT untuk installnya. Pasrah sakbongkokan. Hahahaha&hellip;.</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-27-median-data-python/">Median data dengan python</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>27 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau median() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # median print(&#39;median konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].median(),&#39;kaleng&#39;) print(&#39;median konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].median()) print(&#39;median konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].median(), &#39;gelas&#39;) print(&#39;median konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].median(), &#39;liter&#39;) 
-  </p>
-
   
 </article>
 
@@ -459,7 +493,7 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso
   
   <a href="https://sasongko.web.id/page/18/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;19 / 65&nbsp;</span>
+  <span>&nbsp;19 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/20/"><i class="fa fa-chevron-right"></i></a>
   

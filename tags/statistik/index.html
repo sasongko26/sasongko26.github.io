@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Statistik &middot; Catatan Sasongko</title>
 
@@ -260,10 +260,13 @@
   </header>
 
   <p>
-  PSPP merupakan software statistika yang open source, ringan tetapi sangat fungsional dan powerful. Ringan karena installer-nya hanya beberapa MB. Jauh lebih kecil daripada software sejenis yang proprietary. Fungsional dan powerful karena berbagai analisis dapat dilakukan dengan PSPP.
-PSPP bisa dijalankan dengan tampilan text ataupun grafis. Uktuk memulai pspp tampilan text
-$ pspp PSPP&gt; Untuk membuka file, pada PSPP prompt
-PSPP&gt; get file=&#39;tulis-nama-filenya yang berekstensi sav&#39;. Bagian dalam tanda kutip adalah file yang akan dibuka.
+  <p>PSPP merupakan <em>software</em> statistika yang <em>open source</em>, ringan tetapi sangat fungsional dan <em>powerful</em>. Ringan karena <em>installer</em>-nya hanya beberapa MB. Jauh lebih kecil daripada <em>software</em> sejenis yang <em>proprietary</em>. Fungsional dan <em>powerful</em> karena berbagai analisis dapat dilakukan dengan PSPP.</p>
+<p>PSPP bisa dijalankan dengan tampilan <em>text</em> ataupun grafis. Uktuk memulai pspp tampilan <em>text</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pspp
+</span></span><span style="display:flex;"><span>PSPP&gt;
+</span></span></code></pre></div><p>Untuk membuka file, pada <em>PSPP prompt</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PSPP&gt; get file<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tulis-nama-filenya yang berekstensi sav&#39;</span>.
+</span></span></code></pre></div><p>Bagian dalam tanda kutip adalah file yang akan dibuka.</p>
   </p>
 
   
@@ -311,10 +314,16 @@ PSPP&gt; get file=&#39;tulis-nama-filenya yang berekstensi sav&#39;. Bagian dala
   </header>
 
   <p>
-  Uji normalitas data dapat dilakukan dengan beberapa cara antara lain
-Visual dengan grafik salah satunya histogram Uji statistik seperti Kolmogorov-Smirnov atau Shapiro-Wilk Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv dengan pengubahan nama variabel menjadi lebih singkat.
-Uji normalitas dengan histogram Histogramnya
-Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.
+  <p>Uji normalitas data dapat dilakukan dengan beberapa cara antara lain</p>
+<ol>
+<li>Visual dengan grafik salah satunya histogram</li>
+<li>Uji statistik seperti Kolmogorov-Smirnov atau Shapiro-Wilk</li>
+</ol>
+<p>Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari <a href="https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv">https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</a> dengan pengubahan nama variabel menjadi lebih singkat.</p>
+<h1 id="uji-normalitas-dengan-histogram">Uji normalitas dengan histogram</h1>
+<p>Histogramnya</p>
+<p><img src="https://sasongko.web.id/gambar/histogram-beer-servings-2010.png" alt=""></p>
+<p>Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.</p>
   </p>
 
   
@@ -362,8 +371,25 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
   </header>
 
   <p>
-  Untuk membuat histogram dengan python dibutuhkan library pandas dan matplotlib dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:
-#!/usr/bin/python3 import pandas as pd import matplotlib.pyplot as plt # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # histogram plt.hist(x=&#39;beer_servings&#39;, data=alkohol) plt.xlabel(&#39;Kaleng&#39;) plt.ylabel(&#39;Jumlah&#39;) plt.title(&#39;Konsumsi bir tahun 2010 (kaleng)&#39;) plt.tight_layout() plt.show() Hasilnya:
+  <p>Untuk membuat <strong>histogram</strong> dengan <strong>python</strong> dibutuhkan library <strong>pandas</strong> dan <strong>matplotlib</strong> dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># dengan editing header variabel</span>
+</span></span><span style="display:flex;"><span>alkohol <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;../dataset/drinks.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># histogram</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>hist(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;beer_servings&#39;</span>, data<span style="color:#f92672">=</span>alkohol)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Kaleng&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Jumlah&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Konsumsi bir tahun 2010 (kaleng)&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p>Hasilnya:</p>
+<p><img src="https://sasongko.web.id/gambar/histogram-beer-servings-2010.png" alt=""></p>
   </p>
 
   
@@ -407,8 +433,21 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
   </header>
 
   <p>
-  Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau median() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # median print(&#39;median konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].median(),&#39;kaleng&#39;) print(&#39;median konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].median()) print(&#39;median konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].median(), &#39;gelas&#39;) print(&#39;median konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].median(), &#39;liter&#39;) 
+  <p>Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi <strong>describe()</strong> atau <strong>median()</strong> yang dimiliki <strong>pandas</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># dengan editing header variabel </span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;../dataset/drinks.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># median</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;median konsumsi bir adalah &#39;</span>,data[<span style="color:#e6db74">&#39;beer_servings&#39;</span>]<span style="color:#f92672">.</span>median(),<span style="color:#e6db74">&#39;kaleng&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;median konsumsi spirit adalah &#39;</span>, data[<span style="color:#e6db74">&#39;spirit_servings&#39;</span>]<span style="color:#f92672">.</span>median())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;median konsumsi anggur adalah &#39;</span>, data[<span style="color:#e6db74">&#39;wine_servings&#39;</span>]<span style="color:#f92672">.</span>median(), <span style="color:#e6db74">&#39;gelas&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;median konsumsi alkohol murni adalah &#39;</span>, data[<span style="color:#e6db74">&#39;pure_alcohol&#39;</span>]<span style="color:#f92672">.</span>median(), <span style="color:#e6db74">&#39;liter&#39;</span>)
+</span></span></code></pre></div>
   </p>
 
   
@@ -452,8 +491,21 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
   </header>
 
   <p>
-  Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau mean() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # mean print(&#39;rerata konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].mean(),&#39;kaleng&#39;) print(&#39;rerata konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].mean()) print(&#39;rerata konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].mean(), &#39;gelas&#39;) print(&#39;rerata konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].mean(), &#39;liter&#39;) 
+  <p>Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi <strong>describe()</strong> atau <strong>mean()</strong> yang dimiliki <strong>pandas</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># dengan editing header variabel </span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;../dataset/drinks.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># mean</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;rerata konsumsi bir adalah &#39;</span>,data[<span style="color:#e6db74">&#39;beer_servings&#39;</span>]<span style="color:#f92672">.</span>mean(),<span style="color:#e6db74">&#39;kaleng&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;rerata konsumsi spirit adalah &#39;</span>, data[<span style="color:#e6db74">&#39;spirit_servings&#39;</span>]<span style="color:#f92672">.</span>mean())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;rerata konsumsi anggur adalah &#39;</span>, data[<span style="color:#e6db74">&#39;wine_servings&#39;</span>]<span style="color:#f92672">.</span>mean(), <span style="color:#e6db74">&#39;gelas&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;rerata konsumsi alkohol murni adalah &#39;</span>, data[<span style="color:#e6db74">&#39;pure_alcohol&#39;</span>]<span style="color:#f92672">.</span>mean(), <span style="color:#e6db74">&#39;liter&#39;</span>)
+</span></span></code></pre></div>
   </p>
 
   
@@ -497,10 +549,16 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
   </header>
 
   <p>
-  Untuk menampilkan statistik deskriptif suatu data, bisa menggunakan fungsi describe() dari library yang dimiliki python yaitu pandas.
-Berikut ini akan ditampilkan deskripsi data konsumsi alkohol dunia. Sumber data : https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv
-Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel yaitu :
-beer_servings (konsumsi bir yang dinyatakan dalam kaleng) spirit_servings (konsumsi minuman beralkohol spirit; maaf, variabel ini masih belum penulis pahami sepenuhnya) wine_servings (konsumsi anggur yang dinyatakan dalam gelas) pure_alcohol (konsumsi alkohol murni yang dinyataksan dalam liter, nama variabel ini sudah penulis singkat) Adapun deskripsi yang ditampilkan adalah :
+  <p>Untuk menampilkan statistik deskriptif suatu data, bisa menggunakan fungsi <strong>describe()</strong> dari <em>library</em> yang dimiliki <strong>python</strong> yaitu <strong>pandas</strong>.</p>
+<p>Berikut ini akan ditampilkan deskripsi data konsumsi alkohol dunia. Sumber data : <a href="https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv">https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</a></p>
+<p>Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel yaitu :</p>
+<ol>
+<li>beer_servings (konsumsi bir yang dinyatakan dalam kaleng)</li>
+<li>spirit_servings (konsumsi minuman beralkohol spirit; maaf, variabel ini masih belum penulis pahami sepenuhnya)</li>
+<li>wine_servings (konsumsi anggur yang dinyatakan dalam gelas)</li>
+<li>pure_alcohol (konsumsi alkohol murni yang dinyataksan dalam liter, nama variabel ini sudah penulis singkat)</li>
+</ol>
+<p>Adapun deskripsi yang ditampilkan adalah :</p>
   </p>
 
   
@@ -548,10 +606,61 @@ beer_servings (konsumsi bir yang dinyatakan dalam kaleng) spirit_servings (konsu
   </header>
 
   <p>
-  Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi info() dari pandas.
-Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-#!/usr/bin/env python3 import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.info()) Outputnya
-&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns): # Column Non-Null Count Dtype --- ------ -------------- ----- 0 RowId 178539 non-null object 1 YearStart 178539 non-null int64 2 YearEnd 178539 non-null int64 3 LocationAbbr 178539 non-null object 4 LocationDesc 178539 non-null object 5 Datasource 178539 non-null object 6 Class 178539 non-null object 7 Topic 178539 non-null object 8 Question 178539 non-null object 9 Response 0 non-null float64 10 Data_Value_Unit 178539 non-null object 11 DataValueTypeID 178539 non-null object 12 Data_Value_Type 178539 non-null object 13 Data_Value 120885 non-null float64 14 Data_Value_Alt 0 non-null float64 15 Data_Value_Footnote_Symbol 70619 non-null object 16 Data_Value_Footnote 70619 non-null object 17 Low_Confidence_Limit 120750 non-null float64 18 High_Confidence_Limit 120750 non-null float64 19 Sample_Size 0 non-null float64 20 StratificationCategory1 178539 non-null object 21 Stratification1 178539 non-null object 22 StratificationCategory2 178539 non-null object 23 Stratification2 178539 non-null object 24 StratificationCategory3 0 non-null float64 25 Stratification3 0 non-null float64 26 Geolocation 159375 non-null object 27 ClassID 178539 non-null object 28 TopicID 178539 non-null object 29 QuestionID 178539 non-null object 30 ResponseID 0 non-null float64 31 LocationID 178539 non-null int64 32 StratificationCategoryID1 178539 non-null object 33 StratificationID1 178539 non-null object 34 StratificationCategoryID2 178539 non-null object 35 StratificationID2 178539 non-null object 36 StratificationCategoryID3 0 non-null float64 37 StratificationID3 0 non-null float64 38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.
+  <p>Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi <strong>info()</strong> dari <strong>pandas</strong>.</p>
+<p>Data diambil dari <a href="https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/">https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>print(data<span style="color:#f92672">.</span>info())
+</span></span></code></pre></div><p>Outputnya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;class <span style="color:#e6db74">&#39;pandas.core.frame.DataFrame&#39;</span>&gt;
+</span></span><span style="display:flex;"><span>RangeIndex: <span style="color:#ae81ff">178539</span> entries, <span style="color:#ae81ff">0</span> to <span style="color:#ae81ff">178538</span>
+</span></span><span style="display:flex;"><span>Data columns <span style="color:#f92672">(</span>total <span style="color:#ae81ff">39</span> columns<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">#   Column                      Non-Null Count   Dtype  </span>
+</span></span><span style="display:flex;"><span>---  ------                      --------------   -----  
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">0</span>   RowId                       <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span>   YearStart                   <span style="color:#ae81ff">178539</span> non-null  int64  
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span>   YearEnd                     <span style="color:#ae81ff">178539</span> non-null  int64  
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span>   LocationAbbr                <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">4</span>   LocationDesc                <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">5</span>   Datasource                  <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">6</span>   Class                       <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">7</span>   Topic                       <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8</span>   Question                    <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">9</span>   Response                    <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">10</span>  Data_Value_Unit             <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">11</span>  DataValueTypeID             <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">12</span>  Data_Value_Type             <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">13</span>  Data_Value                  <span style="color:#ae81ff">120885</span> non-null  float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">14</span>  Data_Value_Alt              <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">15</span>  Data_Value_Footnote_Symbol  <span style="color:#ae81ff">70619</span> non-null   object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">16</span>  Data_Value_Footnote         <span style="color:#ae81ff">70619</span> non-null   object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">17</span>  Low_Confidence_Limit        <span style="color:#ae81ff">120750</span> non-null  float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">18</span>  High_Confidence_Limit       <span style="color:#ae81ff">120750</span> non-null  float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">19</span>  Sample_Size                 <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">20</span>  StratificationCategory1     <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">21</span>  Stratification1             <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">22</span>  StratificationCategory2     <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">23</span>  Stratification2             <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">24</span>  StratificationCategory3     <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">25</span>  Stratification3             <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">26</span>  Geolocation                 <span style="color:#ae81ff">159375</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">27</span>  ClassID                     <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">28</span>  TopicID                     <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">29</span>  QuestionID                  <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">30</span>  ResponseID                  <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">31</span>  LocationID                  <span style="color:#ae81ff">178539</span> non-null  int64  
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">32</span>  StratificationCategoryID1   <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">33</span>  StratificationID1           <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">34</span>  StratificationCategoryID2   <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">35</span>  StratificationID2           <span style="color:#ae81ff">178539</span> non-null  object 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">36</span>  StratificationCategoryID3   <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">37</span>  StratificationID3           <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">38</span>  Report                      <span style="color:#ae81ff">0</span> non-null       float64
+</span></span><span style="display:flex;"><span>dtypes: float64<span style="color:#f92672">(</span>12<span style="color:#f92672">)</span>, int64<span style="color:#f92672">(</span>3<span style="color:#f92672">)</span>, object<span style="color:#f92672">(</span>24<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>memory usage: 53.1+ MB
+</span></span></code></pre></div><p>Dari output tersebut dapat diketahui antara lain:</p>
   </p>
 
   
@@ -599,9 +708,13 @@ Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-health
   </header>
 
   <p>
-  Untuk mengetahui dimensi atau jumlah baris dan kolom dataset dapat menggunakan shape dari pandas. Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.shape) Output:
-(178539, 39) Dari output tersebut diketahui dataset mempunyai 178539 baris dan 39 kolom.
+  <p>Untuk mengetahui dimensi atau jumlah baris dan kolom dataset dapat menggunakan shape dari pandas. Data diambil dari <a href="https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/">https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>print(data<span style="color:#f92672">.</span>shape)
+</span></span></code></pre></div><p>Output:</p>
+<pre tabindex="0"><code>(178539, 39)
+</code></pre><p>Dari output tersebut diketahui dataset mempunyai 178539 baris dan 39 kolom.</p>
   </p>
 
   
@@ -645,10 +758,24 @@ import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Agin
   </header>
 
   <p>
-  Untuk menampilkan data baris terakhir dengan python dapat menggunakan fungsi tail() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
-Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.tail(7)) Output :
-RowId ... Report 178532 2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA ... NaN 178533 2019~2019~9002~Q41~AGE~AGE_OVERALL~GENDER~MALE ... NaN 178534 2019~2019~9002~Q42~AGE~5064~RACE~HIS ... NaN 178535 2019~2019~9003~Q42~AGE~65PLUS~RACE~ASN ... NaN 178536 2019~2019~9002~Q42~AGE~65PLUS~RACE~HIS ... NaN 178537 2019~2019~9003~Q42~AGE~5064~RACE~BLK .
+  <p>Untuk menampilkan data baris terakhir dengan python dapat menggunakan fungsi tail() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.</p>
+<p>Data diambil dari <a href="https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/">https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(data<span style="color:#f92672">.</span>tail(<span style="color:#ae81ff">7</span>))
+</span></span></code></pre></div><p>Output :</p>
+<pre tabindex="0"><code>                                                 RowId  ...  Report
+178532     2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA  ...     NaN
+178533  2019~2019~9002~Q41~AGE~AGE_OVERALL~GENDER~MALE  ...     NaN
+178534            2019~2019~9002~Q42~AGE~5064~RACE~HIS  ...     NaN
+178535          2019~2019~9003~Q42~AGE~65PLUS~RACE~ASN  ...     NaN
+178536          2019~2019~9002~Q42~AGE~65PLUS~RACE~HIS  ...     NaN
+178537            2019~2019~9003~Q42~AGE~5064~RACE~BLK  ...     NaN
+178538            2019~2019~9004~Q42~AGE~5064~RACE~NAA  ...     NaN
+
+[7 rows x 39 columns]
+</code></pre><p>Dari output tersebut juga dapat diperoleh informasi jumlah baris dan kolomnya yaitu 178539 baris dan 39 kolom.</p>
   </p>
 
   
@@ -696,10 +823,22 @@ RowId ... Report 178532 2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA ... NaN 1785
   </header>
 
   <p>
-  Untuk menampilkan data baris pertama dengan python dapat menggunakan fungsi head() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
-Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.head()) Output :
-RowId ... Report 0 2016~2016~12~Q27~AGE~AGE_OVERALL~GENDER~MALE ... NaN 1 2015~2015~66~Q43~AGE~5064~GENDER~MALE ... NaN 2 2018~2018~66~Q18~AGE~5064~GENDER~MALE ... NaN 3 2018~2018~66~Q34~AGE~5064~GENDER~FEMALE ... NaN 4 2015~2015~16~Q43~AGE~65PLUS~GENDER~FEMALE ... NaN [5 rows x 39 columns] Dari output tersebut juga dapat diperoleh informasi jumlah kolomnya, yaitu 39 yang tidak semua kolom ditampilkan.
+  <p>Untuk menampilkan data baris pertama dengan python dapat menggunakan fungsi head() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.</p>
+<p>Data diambil dari <a href="https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/">https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(data<span style="color:#f92672">.</span>head())
+</span></span></code></pre></div><p>Output :</p>
+<pre tabindex="0"><code>                                          RowId  ...  Report
+0  2016~2016~12~Q27~AGE~AGE_OVERALL~GENDER~MALE  ...     NaN
+1         2015~2015~66~Q43~AGE~5064~GENDER~MALE  ...     NaN
+2         2018~2018~66~Q18~AGE~5064~GENDER~MALE  ...     NaN
+3       2018~2018~66~Q34~AGE~5064~GENDER~FEMALE  ...     NaN
+4     2015~2015~16~Q43~AGE~65PLUS~GENDER~FEMALE  ...     NaN
+
+[5 rows x 39 columns]
+</code></pre><p>Dari output tersebut juga dapat diperoleh informasi jumlah kolomnya, yaitu 39 yang tidak semua kolom ditampilkan.</p>
   </p>
 
   
@@ -747,8 +886,10 @@ RowId ... Report 0 2016~2016~12~Q27~AGE~AGE_OVERALL~GENDER~MALE ... NaN 1 2015~2
   </header>
 
   <p>
-  Misalkan ada dataset dalam format csv. Data tersebut dapat di-load atau diimpor dengan python dengan library pandas. Berikut script untuk load file data.csv.
-import pandas as pd data = pd.read_csv(&#34;data.csv&#34;) 
+  <p>Misalkan ada dataset dalam format csv. Data tersebut dapat di-<em>load</em> atau diimpor dengan <strong>python</strong> dengan <em>library</em> <strong>pandas</strong>. Berikut script untuk load file data.csv.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>import pandas as pd
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd.read_csv<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;data.csv&#34;</span><span style="color:#f92672">)</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -792,8 +933,14 @@ import pandas as pd data = pd.read_csv(&#34;data.csv&#34;)
   </header>
 
   <p>
-  Beberapa library atau module python yang sering digunakan untuk statistika adalah
-numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis vektor atau matriks pandas: digunakan untuk melakukan pengolahan data tabular matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat digunakan sebagai alat bantu dalam analisa data statsmodels: digunakan untuk melakukan uji hipotesa, eksplorasi data maupun pemodelan statistika scipy: digunakan untuk melakukan uji statistika, juga dapat digunakan untuk melakukan pemodelan statistika 
+  <p>Beberapa library atau module python yang sering digunakan untuk statistika adalah</p>
+<ol>
+<li>numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis vektor atau matriks</li>
+<li>pandas: digunakan untuk melakukan pengolahan data tabular
+matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat digunakan sebagai alat bantu dalam analisa data</li>
+<li>statsmodels: digunakan untuk melakukan uji hipotesa, eksplorasi data maupun pemodelan statistika</li>
+<li>scipy: digunakan untuk melakukan uji statistika, juga dapat digunakan untuk melakukan pemodelan statistika</li>
+</ol>
   </p>
 
   
@@ -839,9 +986,17 @@ numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis v
   </header>
 
   <p>
-  File csv merupakan file yang umum digunakan sebagai file data. Mudah dalam pembuatannya. Begitu juga dengan aksesnya. Bisa dibuat dengan text editor, spreadsheet software maupun statistical software. Pada kesempatan kali ini tidak menggunakan statistical software seperti R.
-Membuat file csv dengan text editor Prinsip pembuatan adalah :
-Antar kolom dipisahkan oleh tanda koma (,) Kolom pertama (umumnya) sebagai header atau nama/judul kolom Antar baris dipisahkan oleh enter Angka dituliskan seperti biasanya Teks/string dituliskan dalam tanda kutip (&quot; atatu &lsquo;) Contoh, data kasus malaria tahun 2019 terdiri atas 2 kolom, yaitu provinsi dan jumlah.
+  <p>File <strong>csv</strong> merupakan file yang umum digunakan sebagai file data. Mudah dalam pembuatannya. Begitu juga dengan aksesnya. Bisa dibuat dengan <em>text editor, spreadsheet software</em> maupun <em>statistical software</em>. Pada kesempatan kali ini tidak menggunakan <em>statistical software</em> seperti <strong>R</strong>.</p>
+<h1 id="membuat-file-csv-dengan-_text-editor_">Membuat file csv dengan <em>text editor</em></h1>
+<p>Prinsip pembuatan adalah :</p>
+<ol>
+<li>Antar kolom dipisahkan oleh tanda koma (,)</li>
+<li>Kolom pertama (umumnya) sebagai <em>header</em> atau nama/judul kolom</li>
+<li>Antar baris dipisahkan oleh enter</li>
+<li>Angka dituliskan seperti biasanya</li>
+<li>Teks/<em>string</em> dituliskan dalam tanda kutip (&quot; atatu &lsquo;)</li>
+</ol>
+<p>Contoh, data kasus malaria tahun 2019 terdiri atas 2 kolom, yaitu provinsi dan jumlah.</p>
   </p>
 
   
@@ -889,14 +1044,26 @@ Antar kolom dipisahkan oleh tanda koma (,) Kolom pertama (umumnya) sebagai heade
   </header>
 
   <p>
-  Dispersi atau ukuran penyebaran data menunjukkan seberapa bervariasi suatu data. Kali ini data yang digunakan diambil dari dataset ldeaths yang merupakan bagian dari UKLungDeaths. Dataset UKLungDeaths berisi data jumlah kematian akibat penyakit bronchitis, emphysema dan asma di Inggris dalam kurun waktu 1974-1979. Data ini disajikan berdasarkan bulan dan jenis kelamin. Secara total untuk kedua jenis kelamin ada di ldeaths, laki-laki mdeaths dan perempuan fdeaths.
-Nilai minimal min(ldeaths) [1] 1300 Nilai maksimal max(ldeaths) [1] 3891 Range range(ldeaths) [1] 1300 3891 Varians var(ldeaths) [1] 371911.
+  <p>Dispersi atau ukuran penyebaran data menunjukkan seberapa bervariasi suatu data.
+Kali ini data yang digunakan diambil dari dataset <strong>ldeaths</strong> yang merupakan bagian dari <strong>UKLungDeaths</strong>. Dataset <strong>UKLungDeaths</strong> berisi data jumlah kematian akibat penyakit bronchitis, emphysema dan asma di Inggris dalam kurun waktu 1974-1979. Data ini disajikan berdasarkan bulan dan jenis kelamin. Secara total untuk kedua jenis kelamin ada di <strong>ldeaths</strong>, laki-laki <strong>mdeaths</strong> dan perempuan <strong>fdeaths</strong>.</p>
+<h1 id="nilai-minimal">Nilai minimal</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">min</span>(ldeaths)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">1300</span>
+</span></span></code></pre></div><h1 id="nilai-maksimal">Nilai maksimal</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">max</span>(ldeaths)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">3891</span>
+</span></span></code></pre></div><h1 id="range">Range</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">range</span>(ldeaths)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">1300</span> <span style="color:#ae81ff">3891</span>
+</span></span></code></pre></div><h1 id="varians">Varians</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">var</span>(ldeaths)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">371911.8</span>
+</span></span></code></pre></div><h1 id="standar-deviasi">Standar deviasi</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">sd</span>(ldeaths)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">609.8457</span>
+</span></span></code></pre></div>
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-04-04-dispersi-data-dengan-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -938,8 +1105,34 @@ Nilai minimal min(ldeaths) [1] 1300 Nilai maksimal max(ldeaths) [1] 3891 Range r
   </header>
 
   <p>
-  Data yang digunakan :
-&gt; nilai [1] 25 60 79 32 57 74 52 70 82 36 75 77 81 95 41 65 92 85 55 66 52 10 64 75 78 [26] 25 80 98 81 67 41 71 83 54 64 72 88 62 74 45 60 78 89 76 48 84 84 90 15 79 [51] 35 67 17 82 69 74 63 80 85 61 Mean &gt; mean(nilai) [1] 65.
+  <p>Data yang digunakan :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> nilai
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">60</span> <span style="color:#ae81ff">79</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">57</span> <span style="color:#ae81ff">74</span> <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">70</span> <span style="color:#ae81ff">82</span> <span style="color:#ae81ff">36</span> <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">77</span> <span style="color:#ae81ff">81</span> <span style="color:#ae81ff">95</span> <span style="color:#ae81ff">41</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">92</span> <span style="color:#ae81ff">85</span> <span style="color:#ae81ff">55</span> <span style="color:#ae81ff">66</span> <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">78</span>
+</span></span><span style="display:flex;"><span>[26] <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">80</span> <span style="color:#ae81ff">98</span> <span style="color:#ae81ff">81</span> <span style="color:#ae81ff">67</span> <span style="color:#ae81ff">41</span> <span style="color:#ae81ff">71</span> <span style="color:#ae81ff">83</span> <span style="color:#ae81ff">54</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">88</span> <span style="color:#ae81ff">62</span> <span style="color:#ae81ff">74</span> <span style="color:#ae81ff">45</span> <span style="color:#ae81ff">60</span> <span style="color:#ae81ff">78</span> <span style="color:#ae81ff">89</span> <span style="color:#ae81ff">76</span> <span style="color:#ae81ff">48</span> <span style="color:#ae81ff">84</span> <span style="color:#ae81ff">84</span> <span style="color:#ae81ff">90</span> <span style="color:#ae81ff">15</span> <span style="color:#ae81ff">79</span>
+</span></span><span style="display:flex;"><span>[51] <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">67</span> <span style="color:#ae81ff">17</span> <span style="color:#ae81ff">82</span> <span style="color:#ae81ff">69</span> <span style="color:#ae81ff">74</span> <span style="color:#ae81ff">63</span> <span style="color:#ae81ff">80</span> <span style="color:#ae81ff">85</span> <span style="color:#ae81ff">61</span>
+</span></span></code></pre></div><h1 id="mean">Mean</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">mean</span>(nilai)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">65.31667</span>
+</span></span></code></pre></div><p>Rerata nilai adalah 65,31667.</p>
+<h1 id="median">Median</h1>
+<h2 id="cara-1--menggunakan-median">Cara 1 : menggunakan median()</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">median</span>(nilai)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">70.5</span>
+</span></span></code></pre></div><h2 id="cara-2--menggunakan-quantile">Cara 2 : menggunakan quantile()</h2>
+<p>Karena median tak lain adalah kuartil 2 atau dengan kata lain posisinya di tengah-tengah atau pada posisi 50% maka</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">quantile</span>(nilai, <span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">50</span>% 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">70.5</span>
+</span></span></code></pre></div><p>Median nilai adalah 70,5.</p>
+<h1 id="modus">Modus</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">names</span>(<span style="color:#a6e22e">which.max</span>(<span style="color:#a6e22e">table</span>(nilai)))
+</span></span><span style="display:flex;"><span>[1] <span style="color:#e6db74">&#34;74&#34;</span>
+</span></span></code></pre></div><p>Modus adalah 74.</p>
+<h1 id="kuartil-1">Kuartil 1</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">quantile</span>(nilai, <span style="color:#ae81ff">0.25</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">25</span>% 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">54.75</span>
+</span></span></code></pre></div><p>Kuartil 1 nya adalah 54,75.</p>
   </p>
 
   
@@ -987,8 +1180,13 @@ Nilai minimal min(ldeaths) [1] 1300 Nilai maksimal max(ldeaths) [1] 3891 Range r
   </header>
 
   <p>
-  Input data dalam R sangat mudah dan ada beragam cara, yaitu:
-Menuliskan dalam bentuk syntax. Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100 Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel.
+  <p>Input data dalam R sangat mudah dan ada beragam cara, yaitu:</p>
+<ol>
+<li>Menuliskan dalam bentuk <em>syntax</em>.  Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100</li>
+<li>Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel.</li>
+<li>Import dari file. Data dibuat tanpa menggunakan R dan disimpan ke dalam bentuk file. Data bisa dibuat menggunakan text editor (contoh vim, gvim, nano, pico, kate), aplikasi perkantoran (LibreOffice Calc dan Microsoft Excel) atau aplikasi statistik lainnya seperti SPSS, Minitab, dan Stata).</li>
+</ol>
+<p>Pada kesempatan ini yang digunakan adalah cara pertama. Misalkan datanya adalah nilai ujian dari 60 mahasiswa sebagai berikut :</p>
   </p>
 
   

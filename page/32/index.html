@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,48 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-06-20-edit-video-ffmpeg-lossless/">Edit video ffmpeg tanpa menurunkan kualitas</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>20 Jun 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Ketika mengedit video menggunakan <!-- raw HTML omitted -->ffmpeg<!-- raw HTML omitted -->, filter video ataupun filter yang lebih kompleks seperti menambahkan watermark, tanpa pengaturan tambahan kadang hasilnya mengecewakan. Gambar pada video menjadi pecah. Untuk meminimalisirnya, bisa ditambahkan opsi <!-- raw HTML omitted -->-q:v 0<!-- raw HTML omitted -->.</p>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-06-11-memisahkan-halaman-pdf/">Memisahkan halaman PDF</a></h2>
 
     <div class="post-meta">
@@ -261,8 +303,9 @@
   </header>
 
   <p>
-  Kadang kita perlu mengambil beberapa halaman dari e-book atau sejenisnya yang bertipe pdf. Kita bisa gunakan pdfjam. Misalkan akan mengambil halaman 10-21 dari file buku.pdf.
-pdfjam buku.pdf &#39;10-21&#39; 
+  <p>Kadang kita perlu mengambil beberapa halaman dari <em>e-book</em> atau sejenisnya yang bertipe pdf. Kita bisa gunakan <!-- raw HTML omitted -->pdfjam<!-- raw HTML omitted -->. Misalkan akan mengambil halaman 10-21 dari file buku.pdf.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pdfjam buku.pdf <span style="color:#e6db74">&#39;10-21&#39;</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -306,8 +349,14 @@ pdfjam buku.pdf &#39;10-21&#39;
   </header>
 
   <p>
-  Walau sudah ada tools yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan tools bawaan Slackware. Tools yang umum digunakan antara lain fslint, fdupes atau jdupes. Adapun tools yang biasa saya gunakan
-sha512sum awk uniq grep Misalkan, akan mencari adakah duplikasi file di folder Downloads. Pertama, catat dulu hash-nya. Di sini saya gunakan sha512. Kumpulan sha512 tersebut disatukan dalam file downloads.sha512. File ini terdiri dari 2 kolom. Kolom pertama berisi hash, sedangkan kolom kedua nama filenya.
+  <p>Walau sudah ada <em>tools</em> yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan <em>tools</em> bawaan <strong>Slackware</strong>. <em>Tools</em> yang umum digunakan antara lain <!-- raw HTML omitted -->fslint<!-- raw HTML omitted -->, <!-- raw HTML omitted -->fdupes<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->jdupes<!-- raw HTML omitted -->. Adapun <em>tools</em> yang biasa saya gunakan</p>
+<ol>
+<li><!-- raw HTML omitted -->sha512sum<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->awk<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->uniq<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->grep<!-- raw HTML omitted --></li>
+</ol>
+<p>Misalkan, akan mencari adakah duplikasi file di folder <!-- raw HTML omitted -->Downloads<!-- raw HTML omitted -->. Pertama, catat dulu <em>hash</em>-nya. Di sini saya gunakan <em>sha512</em>. Kumpulan <em>sha512</em> tersebut disatukan dalam file <!-- raw HTML omitted -->downloads.sha512<!-- raw HTML omitted -->. File ini terdiri dari 2 kolom. Kolom pertama berisi <em>hash</em>, sedangkan kolom kedua nama filenya.</p>
   </p>
 
   
@@ -353,9 +402,22 @@ sha512sum awk uniq grep Misalkan, akan mencari adakah duplikasi file di folder D
   </header>
 
   <p>
-  Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu
-piknik-1.mkv piknik-2.mkv piknik-3.mkv piknik-4.mkv Keempat file tersebut berada dalam folder yang sama. Kemudian mereka akan digabungkan menjadi piknik.mkv. Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.
-$ vim list-piknik file &#39;piknik-1.
+  <p>Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu</p>
+<ol>
+<li>piknik-1.mkv</li>
+<li>piknik-2.mkv</li>
+<li>piknik-3.mkv</li>
+<li>piknik-4.mkv</li>
+</ol>
+<p>Keempat file tersebut berada dalam folder yang sama.
+Kemudian mereka akan digabungkan menjadi piknik.mkv.
+Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vim list-piknik
+</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-1.mkv&#39;</span>
+</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-2.mkv&#39;</span>
+</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-3.mkv&#39;</span>
+</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-4.mkv&#39;</span>
+</span></span></code></pre></div><p>Untuk menggabungnya</p>
   </p>
 
   
@@ -401,59 +463,15 @@ $ vim list-piknik file &#39;piknik-1.
   </header>
 
   <p>
-  Mengetahui working directory Secara default, working directory pada Slackware adalah home directory user atau di mana command R dijalankan.
-getwd() Mengganti working directory Misal, akan berpindah working directory ke Documents/project
-setwd(&#39;Documents/project&#39;) 
+  <h1 id="mengetahui-_working-directory_">Mengetahui <em>working directory</em></h1>
+<p>Secara <em>default, working directory</em> pada <strong>Slackware</strong> adalah home directory user atau di mana <em>command</em> <!-- raw HTML omitted -->R<!-- raw HTML omitted --> dijalankan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">getwd</span>()
+</span></span></code></pre></div><h1 id="mengganti-_working-directory_">Mengganti <em>working directory</em></h1>
+<p>Misal, akan berpindah <em>working directory</em> ke <!-- raw HTML omitted -->Documents/project<!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">setwd</span>(<span style="color:#e6db74">&#39;Documents/project&#39;</span>)
+</span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/">Mengetahui volume suara video</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.
-Untuk mengetahui intensitas suara video intro.mkv
-$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &#39;intro.mkv&#39;: Metadata: COMPATIBLE_BRANDS: isommp42 COM.ANDROID.VERSION: 9 MAJOR_BRAND : mp42 MINOR_VERSION : 0 ENCODER : Lavf58.29.100 Duration: 00:00:14.90, start: 0.000000, bitrate: 5559 kb/s Stream #0:0(eng): Video: mpeg4 (Simple Profile), yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 1k tbn, 30 tbc (default) Metadata: HANDLER_NAME : VideoHandle ENCODER : Lavc58.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -466,7 +484,7 @@ $ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matrosk
   
   <a href="https://sasongko.web.id/page/31/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;32 / 65&nbsp;</span>
+  <span>&nbsp;32 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/33/"><i class="fa fa-chevron-right"></i></a>
   

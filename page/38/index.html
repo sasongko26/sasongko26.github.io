@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,52 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2019-04-19-chromium-disable-unlock-keyring/">Chromium Disable Unlock Keyring</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>19 Apr 2019</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Mungkin ada yang merasa bosan setiap membuka <strong>Chromium</strong> muncul kotak dialog <em>Unlock Keyring</em>.</p>
+<p><img src="https://sasongko.web.id/gambar/chromium-unlock-keyring.png" alt=""></p>
+<p>Itu bisa diatasi, agar tidak muncul lagi. Aktifkan <!-- raw HTML omitted -->CHROMIUM_FLAGS<!-- raw HTML omitted --> pada <!-- raw HTML omitted -->/etc/chromium/00-default.conf<!-- raw HTML omitted -->.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CHROMIUM_FLAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--password-store=basic&#34;</span>
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2019-04-01-membuat-user-baru/">Membuat User Baru</a></h2>
 
     <div class="post-meta">
@@ -261,9 +307,10 @@
   </header>
 
   <p>
-  Secara default, pascainstalasi Slackware hanya ada 1 user yaitu root. Slackware mempercayakan sepenuhnya apa yang akan dilakukan para penggunanya, karena memang hampir semua pengguna Slackware adalah pengguna yang telah berpengalaman. Namun, tak ada salahnya saya tuliskan di sini bagaimana cara membuat akun user baru di Slackware sebagai pengingat buat saya pribadi maupun pengguna lainnya.
-Command-nya simpel saja
-R/ adduser # saya gunakan R/ sebagai pengganti shell prompt untuk root kemudian isi sesuai petunjuk yang diberikan.
+  <p>Secara <em>default</em>, pascainstalasi <strong>Slackware</strong> hanya ada 1 <em>user</em> yaitu <strong>root</strong>. <strong>Slackware</strong> mempercayakan sepenuhnya apa yang akan dilakukan para penggunanya, karena memang hampir semua pengguna <strong>Slackware</strong> adalah pengguna yang telah berpengalaman. Namun, tak ada salahnya saya tuliskan di sini bagaimana cara membuat akun <em>user</em> baru di <strong>Slackware</strong> sebagai pengingat buat saya pribadi maupun pengguna lainnya.</p>
+<p><em>Command</em>-nya simpel saja</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>R/ adduser <span style="color:#75715e"># saya gunakan R/ sebagai pengganti shell prompt untuk root</span>
+</span></span></code></pre></div><p>kemudian isi sesuai petunjuk yang diberikan.</p>
   </p>
 
   
@@ -309,10 +356,12 @@ R/ adduser # saya gunakan R/ sebagai pengganti shell prompt untuk root kemudian 
   </header>
 
   <p>
-  Apa itu MariaDB MariaDB adalah software untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.
-Install MariaDB Secara default, apabila Slackware diisnntall full system maka MariaDB akan terinstall. Jadi tidak usah repot-repot untuk insytallnya.
-Memulai MariaDB Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. prompt R/ menunjukkan dilakukan dengan priviledge root
-R/ mysql_install_db R/ chown -R mysql:mysql /var/lib/mysql R/ chmod +x /etc/rc.
+  <h1 id="apa-itu-mariadb">Apa itu MariaDB</h1>
+<p>MariaDB adalah <em>software</em> untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.</p>
+<h1 id="install-mariadb">Install MariaDB</h1>
+<p>Secara <em>default</em>, apabila Slackware diisnntall <em>full system</em> maka MariaDB akan terinstall. Jadi tidak usah repot-repot untuk insytallnya.</p>
+<h1 id="memulai-mariadb">Memulai MariaDB</h1>
+<p>Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. <em>prompt</em> <!-- raw HTML omitted -->R/<!-- raw HTML omitted --> menunjukkan dilakukan dengan <em>priviledge</em> <!-- raw HTML omitted -->root<!-- raw HTML omitted --></p>
   </p>
 
   
@@ -358,10 +407,14 @@ R/ mysql_install_db R/ chown -R mysql:mysql /var/lib/mysql R/ chmod +x /etc/rc.
   </header>
 
   <p>
-  Reputasi vim sebagai text editor sudah teruji berpuluh tahun. Ternyata Vim juga memiliki support plugin untuk perl. Hal ini membuat vim bisa dijadikan sebagai integrated development environment (IDE) untuk perl.
-Download plugin-nya kemudian extract
-$ wget https://www.vim.org/scripts/download_script.php?src_id=24473 -O perl-support.zip -O perl-support.zip $ mkdir -p .vim $ unzip perl-support.zip -d .vim Aktifkan
-$ echo &#34;filetype plugin on&#34; &gt;&gt; .vimrc 
+  <p>Reputasi <strong>vim</strong> sebagai <strong>text editor</strong> sudah teruji berpuluh tahun. Ternyata <strong>Vim</strong> juga memiliki <em>support</em> <strong>plugin</strong> untuk <strong>perl</strong>. Hal ini membuat <strong>vim</strong> bisa dijadikan sebagai <strong>integrated development environment (IDE)</strong> untuk <strong>perl</strong>.</p>
+<p><em>Download plugin</em>-nya kemudian extract</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ wget https://www.vim.org/scripts/download_script.php?src_id<span style="color:#f92672">=</span><span style="color:#ae81ff">24473</span> -O perl-support.zip -O perl-support.zip
+</span></span><span style="display:flex;"><span>$ mkdir -p .vim
+</span></span><span style="display:flex;"><span>$ unzip perl-support.zip -d .vim
+</span></span></code></pre></div><p>Aktifkan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;filetype plugin on&#34;</span> &gt;&gt; .vimrc
+</span></span></code></pre></div>
   </p>
 
   
@@ -401,58 +454,14 @@ $ echo &#34;filetype plugin on&#34; &gt;&gt; .vimrc
   </header>
 
   <p>
-  Tiga hari ini mencoba-coba install kdenlive, aplikasi editor video yang konon handal. Sengaja disebut konon karena belum membuktikannya secara langsung. Setelah semua beres diinstall ternyata malah berubah pikiran. Apa perlu saya pakai editor video? Toh selama ini tidak pernah edit video dan pekerjaan sehari-hari juga tidak bersentuhan langsung dengan pembuatan maupun editing video. Jadi hapus sajalah.
-kdenlive-nya sukses di-uninstall, tapi bagaimana dengan seabrek dependensinya? Hapus juga deh! Kalau besok-besok diperlukan tinggal install lagi.
+  <p>Tiga hari ini mencoba-coba install <!-- raw HTML omitted -->kdenlive<!-- raw HTML omitted -->, aplikasi editor video yang konon handal. Sengaja disebut konon karena belum membuktikannya secara langsung. Setelah semua beres diinstall ternyata malah berubah pikiran. Apa perlu saya pakai editor video? Toh selama ini tidak pernah edit video dan pekerjaan sehari-hari juga tidak bersentuhan langsung dengan pembuatan maupun <em>editing</em> video. Jadi hapus sajalah.</p>
+<p><!-- raw HTML omitted -->kdenlive<!-- raw HTML omitted -->-nya sukses di-<em>uninstall</em>, tapi bagaimana dengan seabrek dependensinya? Hapus juga deh! Kalau besok-besok diperlukan tinggal install lagi.</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-08-31-bermain-tetris-emacs/">Bermain Tetris dengan Emacs</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>31 Aug 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/game">game</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Emacs sebagai text editor legendaris mempunyai banyak fitur. Salah satunya adalah tetris. Sebagai penggemar tetris tentunya belum afdhal kalau belum memainkannya.
-Tetris bisa dimainkan dari Emacs pada menu bar klik Tools &gt; Games &gt; Tetris
-Untuk memainkannya tekan tombol P untuk pause dan melanjutkannya, panah kanan-kiri untuk menggeser, panah bawah untuk mempercepat dan panah atas untuk merotasi atau mengubah bentuk.
-  </p>
-
   
 </article>
 
@@ -465,7 +474,7 @@ Untuk memainkannya tekan tombol P untuk pause dan melanjutkannya, panah kanan-ki
   
   <a href="https://sasongko.web.id/page/37/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;38 / 65&nbsp;</span>
+  <span>&nbsp;38 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/39/"><i class="fa fa-chevron-right"></i></a>
   

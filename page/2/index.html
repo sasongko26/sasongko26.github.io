@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,55 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2024-05-15-listing-directory-python/">Listing direktori dengan python</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 May 2024</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Berikut adalah <em>script</em> <strong>python</strong> sederhana untuk menampilkan isi direktori aktif</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>isidirektori <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>listdir()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(isidirektori)):
+</span></span><span style="display:flex;"><span>    print(isidirektori[i])
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2024-04-02-menambahkan-line-number-vim/">Menampilkan line number vim</a></h2>
 
     <div class="post-meta">
@@ -261,8 +310,9 @@
   </header>
 
   <p>
-  Vim secara default tidak menampilkan line number. Adanya line number ini bisa sangat memudahkan terutama saat proses debugging atau pengecekan kesalahan. Untuk menampilkannya, tambahkan baris berikut di file konfigurasinya (contoh: ~/.vimrc) :
-set number 
+  <p><strong>Vim</strong> secara <em>default</em> tidak menampilkan <em>line number</em>. Adanya <em>line number</em> ini bisa sangat memudahkan terutama saat proses <em>debugging</em> atau pengecekan kesalahan. Untuk menampilkannya, tambahkan baris berikut di file konfigurasinya (contoh: ~/.vimrc) :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vim" data-lang="vim"><span style="display:flex;"><span><span style="color:#66d9ef">set</span> <span style="color:#a6e22e">number</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -304,9 +354,16 @@ set number
   </header>
 
   <p>
-  Kooha adalah salah satu aplikasi screen recorder. Keunggulannya antara lain:
-User interface atau tampilan yang simpel tapi tetap mudah dimengerti Bisa dijalankan dengan baik di lingkungan wayland dan X11 Mudah dijalankan Mudah di-install. Kooha menyediakan metode instalasi menggunakan flatpak. Inilah cara yang kami sarankan untuk slackers mengingat belum ada di SBo. Caranya
-$ flatpak install io.github.seadve.Kooha 
+  <p><strong>Kooha</strong> adalah salah satu aplikasi <em>screen recorder</em>. Keunggulannya antara lain:</p>
+<ol>
+<li><em>User interface</em> atau tampilan yang simpel tapi tetap mudah dimengerti</li>
+<li>Bisa dijalankan dengan baik di lingkungan  <strong>wayland</strong> dan <strong>X11</strong></li>
+<li>Mudah dijalankan</li>
+<li>Mudah di-<em>install</em>.</li>
+</ol>
+<p><strong>Kooha</strong> menyediakan metode instalasi menggunakan <strong>flatpak</strong>. Inilah cara yang kami sarankan untuk <em>slackers</em> mengingat belum ada di SBo. Caranya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak install io.github.seadve.Kooha
+</span></span></code></pre></div>
   </p>
 
   
@@ -350,9 +407,26 @@ $ flatpak install io.github.seadve.Kooha
   </header>
 
   <p>
-  Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi
-Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz Memory: 11,5 GiB of RAM Graphics Processor: Mesa Intel® UHD Graphics 600 dengan audio awalnya berupa dummy output alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.
-$ aplay -l **** List of PLAYBACK Hardware Devices **** card 0: sofessx8336 [sof-essx8336], device 0: ES8336 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 5: HDMI 1 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 6: HDMI 2 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 7: HDMI 3 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker.
+  <p>Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi</p>
+<pre tabindex="0"><code>Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz
+Memory: 11,5 GiB of RAM
+Graphics Processor: Mesa Intel® UHD Graphics 600
+</code></pre><p>dengan audio awalnya berupa <em>dummy output</em> alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ aplay -l
+</span></span><span style="display:flex;"><span>**** List of PLAYBACK Hardware Devices ****
+</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 0: ES8336 <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>  Subdevices: 1/1
+</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
+</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 5: HDMI <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>  Subdevices: 1/1
+</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
+</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 6: HDMI <span style="color:#ae81ff">2</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>  Subdevices: 1/1
+</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
+</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 7: HDMI <span style="color:#ae81ff">3</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>  Subdevices: 1/1
+</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
+</span></span></code></pre></div><p>Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker. Yah, laptop masih diam seribu bahasa. <strong>Sound Open Firmware</strong> memberikan secercah harapan. Apalagi kemudian <strong>sof-firmware</strong> masuk ke repo <em>current</em>. Namun sayang, laptop masih membisu. Beberapa kali upgrade kernel, alsa, pulseaudio dan pipewire, masih saja tak terdengar. Alhamdulillah kemudian menemukan solusi dari <em>issue</em> yang dibuat oleh junocom di github alsa-project/alsa-ucm-conf.</p>
   </p>
 
   
@@ -398,62 +472,17 @@ $ aplay -l **** List of PLAYBACK Hardware Devices **** card 0: sofessx8336 [sof-
   </header>
 
   <p>
-  Rust mempunyai cara tersendiri untuk mendeklarasikan variabel, yaitu dengan diawali let. Kemudian, nama variabel dituliskan dengan huruf kecil semua dengan separator pemisah antarkata adalah underscore (_). Contoh nama, kota_kelahiran, hasil_kali, dll.
-Misalkan data kota kelahiran, akan kita deklarasikan sebagai kota_kelahiran
-fn main(){ let kota_kelahiran = &#34;Jayapura&#34;; } Untuk menampilkan variabel tersebut, misalkan dengan macro println!() maka harus dengan formatted print yang mengandung string literal. String literal yang dimaksud adalah &quot;{}&quot;,
+  <p><strong>Rust</strong> mempunyai cara tersendiri untuk mendeklarasikan variabel, yaitu dengan diawali <!-- raw HTML omitted -->let<!-- raw HTML omitted -->. Kemudian, nama variabel dituliskan dengan huruf kecil semua dengan separator pemisah antarkata adalah <em>underscore</em> (_). Contoh nama, kota_kelahiran, hasil_kali, dll.</p>
+<p>Misalkan data kota kelahiran, akan kita deklarasikan sebagai kota_kelahiran</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> kota_kelahiran <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Jayapura&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Untuk menampilkan variabel tersebut, misalkan dengan macro <!-- raw HTML omitted -->println!()<!-- raw HTML omitted --> maka harus dengan <em>formatted print</em> yang mengandung <strong>string literal</strong>. String literal yang dimaksud adalah <!-- raw HTML omitted -->&quot;{}&quot;<!-- raw HTML omitted -->,</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2024-01-20-variabel-rust/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2024-01-15-sintaks-komentar-rust/">Sintaks komentar rust</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Jan 2024</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/rust">rust</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Komentar pada rust yang biasa digunakan ada 2 jenis, yaitu komentar baris dan komentar blok. Komentar baris diberikan dengan sintaks // pada awal komentar. Semua yang ada setelah tanda // pada baris tersebut akan dianggap sebagai komentar yang tidak akan dieksekusi. Komentar blok untuk memberikan komentar pada blok kode atau beberapa baris kode. Semua baris yang ada di antara /* dan */ dianggap sebagai komentar.
-Contoh komentar baris
-// ini adalah komentar yang tidak akan dieksekusi fn main(){ println!
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2024-01-15-sintaks-komentar-rust/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -467,7 +496,7 @@ Contoh komentar baris
   
   <a href="https://sasongko.web.id/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;2 / 65&nbsp;</span>
+  <span>&nbsp;2 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/3/"><i class="fa fa-chevron-right"></i></a>
   

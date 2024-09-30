@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,58 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2016-02-26-mouse-stuck/">Mouse Stuck</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Feb 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/mouse">mouse</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Setelah <em>upgrade current</em> ternyata ada masalah dengan mouse. Mouse mengalami <em>stuck</em>, ga ada respons saat <em>drag, drop</em>, bahkan ga bisa klik baik klik kiri maupun kanan.
+Dari grup di <em>telegram</em> dapat informasi dari Pak Willy hal serupa juga dialami oleh beberapa <em>slacker</em> yang lainnya. Alhamdulillah masalah ini bisa <em>solved</em> dengan mudahnya di Slackware64 saya.</p>
+<p>Dengan akses root copas <!-- raw HTML omitted -->/lib/modprobe.d/psmouse.conf<!-- raw HTML omitted --> ke <!-- raw HTML omitted -->/etc/modprobe.d<!-- raw HTML omitted -->. Kemudian <em>uncomment</em> baris terakhir.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-02-26-mouse-stuck/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2016-02-08-slackware-current-hang/">Slackware Current Susah Booting dan Shutdown</a></h2>
 
     <div class="post-meta">
@@ -263,8 +315,8 @@
   </header>
 
   <p>
-  Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering stuck saat boot dan shutdown.
-Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis ID-Slackware, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.
+  <p>Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering <em>stuck</em> saat <em>boot</em> dan <em>shutdown</em>.</p>
+<p>Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis <em>ID-Slackware</em>, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.4.1 pun belum ada perubahan berarti.</p>
   </p>
 
   
@@ -312,8 +364,12 @@ Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan d
   </header>
 
   <p>
-  Saat melakukan pencarian dengan pip, muncul pesan
-/usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:315: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning. SNIMissingWarning /usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:120: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail.
+  <p>Saat melakukan pencarian dengan pip, muncul pesan</p>
+<pre tabindex="0"><code>/usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:315: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+  SNIMissingWarning
+/usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:120: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+</code></pre><p>Biar peringatan ini tidak muncul lagi, ndg-httpsclient harus diupgrade.</p>
   </p>
 
   
@@ -361,8 +417,33 @@ Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan d
   </header>
 
   <p>
-  gdrv adalah salah satu command line interface tool berbasis python untuk Google Drive. Cara menginstallnya silahkan buka [catatan ini]({% post_url 2015-07-26-install-gdrv %}). Adapun cara penggunaannya adalah sebagai berikut:
-$ gdrv -h usage: gdrv [-h] [-v] [-w] [-V] {ftp,pull,search,url,push,mkdir,share,trash,list,init} ... YMK google drive command line tool positional arguments: {ftp,pull,search,url,push,mkdir,share,trash,list,init} drive sub command ftp interactive mode like sftp, lftp pull command pull help search command search help url command url help push command push help mkdir command mkdir help share command share help trash command trash help list command list help init command init help optional arguments: -h, --help show this help message and exit -v, --verbose increse verbosity/logging level -w, --write-config write a default config -V, --version show version infomation Pertama, inisiasi dulu,
+  <p>gdrv adalah salah satu <em>command line interface tool</em> berbasis python untuk <strong>Google Drive</strong>. Cara menginstallnya silahkan buka [catatan ini]({% post_url 2015-07-26-install-gdrv %}). Adapun cara penggunaannya adalah sebagai berikut:</p>
+<pre tabindex="0"><code>$ gdrv -h
+usage: gdrv [-h] [-v] [-w] [-V]
+            {ftp,pull,search,url,push,mkdir,share,trash,list,init} ...
+
+YMK google drive command line tool
+
+positional arguments:
+  {ftp,pull,search,url,push,mkdir,share,trash,list,init}
+                        drive sub command
+    ftp                 interactive mode like sftp, lftp
+    pull                command pull help
+    search              command search help
+    url                 command url help
+    push                command push help
+    mkdir               command mkdir help
+    share               command share help
+    trash               command trash help
+    list                command list help
+    init                command init help
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --verbose         increse verbosity/logging level
+  -w, --write-config    write a default config
+  -V, --version         show version infomation
+</code></pre><p>Pertama, inisiasi dulu,</p>
   </p>
 
   
@@ -408,62 +489,14 @@ $ gdrv -h usage: gdrv [-h] [-v] [-w] [-V] {ftp,pull,search,url,push,mkdir,share,
   </header>
 
   <p>
-  Mempunyai berkas citra ISO/ISO image ada manfaatnya. Pertama, sebagai cadangan kalau FD/DVD installernya tidak dapat digunakan. Kedua, untuk melakukan remaster. Bagaimana caranya mengetahui isi dari ISO tersebut? Paket apa saja yang ada di dalamnya? Untuk distro tertentu seperti slackware misalnya, paket yang disertakan bisa dilihat dengan mudah dari ISO tanpa harus membakarnya. Kita mount saja ISOnya.
-Misalkan berkas ISO yang akan di mount adalah slackware64-14.1-install-dvd.iso, dan akan di-mount di /mnt/iso
+  <p>Mempunyai berkas citra ISO/ISO image ada manfaatnya. Pertama, sebagai cadangan kalau FD/DVD installernya tidak dapat digunakan. Kedua, untuk melakukan remaster.
+Bagaimana caranya mengetahui isi dari ISO tersebut? Paket apa saja yang ada di dalamnya? Untuk distro tertentu seperti slackware misalnya, paket yang disertakan bisa dilihat dengan mudah dari ISO tanpa harus membakarnya. Kita mount saja ISOnya.</p>
+<p>Misalkan berkas ISO yang akan di mount adalah slackware64-14.1-install-dvd.iso, dan akan di-mount di /mnt/iso</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2015-12-26-mount-iso-image/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/">Tidak Ada Ikon NetworkManager di Panel</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Dec 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Iseng-iseng install lagi slackware tapi tanpa paket yang ada di kategori ap atau direktori slackware/ap dan xap (slackware64/xap).
-Efek sampingnya adalah, tidak adanya ikon NetworkManager di panel. Di sini saya gunakan DE XFCE. Sementara itu paket direktori slackware/n semuanya terinstall.
-Install dulu appletnya. Karena saya punya berkas ISOnya maka installnya bisa offline asalkan tahu di mana letak paketnya berada. Setelah mount ISOnya ke /mnt/iso,
-installpkg /mnt/iso/slackware64/xap/network-manager*.txz Ketika memunculkan ikon/applet NetworkManagernya ke panel,
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -477,7 +510,7 @@ installpkg /mnt/iso/slackware64/xap/network-manager*.txz Ketika memunculkan ikon
   
   <a href="https://sasongko.web.id/page/50/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;51 / 65&nbsp;</span>
+  <span>&nbsp;51 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/52/"><i class="fa fa-chevron-right"></i></a>
   

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Rust &middot; Catatan Sasongko</title>
 
@@ -260,9 +260,12 @@
   </header>
 
   <p>
-  Rust mempunyai cara tersendiri untuk mendeklarasikan variabel, yaitu dengan diawali let. Kemudian, nama variabel dituliskan dengan huruf kecil semua dengan separator pemisah antarkata adalah underscore (_). Contoh nama, kota_kelahiran, hasil_kali, dll.
-Misalkan data kota kelahiran, akan kita deklarasikan sebagai kota_kelahiran
-fn main(){ let kota_kelahiran = &#34;Jayapura&#34;; } Untuk menampilkan variabel tersebut, misalkan dengan macro println!() maka harus dengan formatted print yang mengandung string literal. String literal yang dimaksud adalah &quot;{}&quot;,
+  <p><strong>Rust</strong> mempunyai cara tersendiri untuk mendeklarasikan variabel, yaitu dengan diawali <!-- raw HTML omitted -->let<!-- raw HTML omitted -->. Kemudian, nama variabel dituliskan dengan huruf kecil semua dengan separator pemisah antarkata adalah <em>underscore</em> (_). Contoh nama, kota_kelahiran, hasil_kali, dll.</p>
+<p>Misalkan data kota kelahiran, akan kita deklarasikan sebagai kota_kelahiran</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> kota_kelahiran <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Jayapura&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Untuk menampilkan variabel tersebut, misalkan dengan macro <!-- raw HTML omitted -->println!()<!-- raw HTML omitted --> maka harus dengan <em>formatted print</em> yang mengandung <strong>string literal</strong>. String literal yang dimaksud adalah <!-- raw HTML omitted -->&quot;{}&quot;<!-- raw HTML omitted -->,</p>
   </p>
 
   
@@ -308,9 +311,13 @@ fn main(){ let kota_kelahiran = &#34;Jayapura&#34;; } Untuk menampilkan variabel
   </header>
 
   <p>
-  Komentar pada rust yang biasa digunakan ada 2 jenis, yaitu komentar baris dan komentar blok. Komentar baris diberikan dengan sintaks // pada awal komentar. Semua yang ada setelah tanda // pada baris tersebut akan dianggap sebagai komentar yang tidak akan dieksekusi. Komentar blok untuk memberikan komentar pada blok kode atau beberapa baris kode. Semua baris yang ada di antara /* dan */ dianggap sebagai komentar.
-Contoh komentar baris
-// ini adalah komentar yang tidak akan dieksekusi fn main(){ println!
+  <p>Komentar pada <strong>rust</strong> yang biasa digunakan ada 2 jenis, yaitu komentar baris dan komentar blok. Komentar baris diberikan dengan sintaks // pada awal komentar. Semua yang ada setelah tanda // pada baris tersebut akan dianggap sebagai komentar yang tidak akan dieksekusi. Komentar blok untuk memberikan komentar pada blok kode atau beberapa baris kode. Semua baris yang ada di antara /* dan */ dianggap sebagai komentar.</p>
+<p>Contoh komentar baris</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// ini adalah komentar yang tidak akan dieksekusi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    println!(<span style="color:#e6db74">&#34;Hai&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Contoh komentar blok</p>
   </p>
 
   
@@ -356,8 +363,8 @@ Contoh komentar baris
   </header>
 
   <p>
-  Rust bahasa pemrograman yang saat ini sedang naik daun digadang-gadang sebagai suksesor C. Rust sudah banyak digunakan bahkan rencananya masuk sebagai second language pada kernel linux sebagai pendamping C. Hal ini ditandai dengan adanya akomodasi rust mulai kernel 6.1.
-File source code rust berekstensi .rs. Rust memerlukan kompilasi untuk dapat dijalankan karena rust adalah compiled language. Ada 2 cara kompilasi, yaitu dengan rustc/ apabila programnya simple hanya terdiri dari 1 file .
+  <p><strong>Rust</strong> bahasa pemrograman yang saat ini sedang naik daun digadang-gadang sebagai suksesor C. Rust sudah banyak digunakan bahkan rencananya masuk sebagai <em>second language</em> pada kernel linux sebagai pendamping C. Hal ini ditandai dengan adanya akomodasi <strong>rust</strong> mulai kernel 6.1.</p>
+<p>File <em>source code</em> <strong>rust</strong> berekstensi <!-- raw HTML omitted -->.rs<!-- raw HTML omitted -->. <strong>Rust</strong> memerlukan kompilasi untuk dapat dijalankan karena <strong>rust</strong> adalah <em>compiled language</em>. Ada 2 cara kompilasi, yaitu dengan <!-- raw HTML omitted -->rustc/<!-- raw HTML omitted --> apabila programnya simple hanya terdiri dari 1 file .rs dan tanpa adanya dependensi, atau dengan <!-- raw HTML omitted -->cargo<!-- raw HTML omitted --> kalau programnya kompleks.</p>
   </p>
 
   

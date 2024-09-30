@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,64 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2022-01-01-hapus-baris-dari-awal-sampai-kata-spesifik/">Hapus baris dari awal sampai dengan baris dengan kata spesifik</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Jan 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sed">sed</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Mungkin ini adalah catatan dengan judul terpanjang yang pernah kami tulis. Catatan ini berisi tentang bagaimana cara menghapus baris dari awal sampai dengan baris yang berawalan dengan kata-kata spesifik.</p>
+<p>Contoh, punya file teks lagu.txt berisi sebagai berikut</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>kelelawar
+</span></span><span style="display:flex;"><span>by koes plus
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>kelelawar sayapnya hitam
+</span></span><span style="display:flex;"><span>terbang rendah di tengah malam
+</span></span><span style="display:flex;"><span>pagi-pagi mereka pulang
+</span></span><span style="display:flex;"><span>di dahan pohon bergelantungan
+</span></span><span style="display:flex;"><span>hitam
+</span></span><span style="display:flex;"><span>hitam
+</span></span><span style="display:flex;"><span>hitam
+</span></span></code></pre></div><p>Teks tersebut dihapus sebagian, yaitu mulai baris pertama sampai dengan pagi-pagi. Dengan kata lain hanya tersisa di dahan pohon dst.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2022-01-01-hapus-baris-dari-awal-sampai-kata-spesifik/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-12-27-background-transparan-krita/">Membuat background transparan krita</a></h2>
 
     <div class="post-meta">
@@ -261,7 +319,7 @@
   </header>
 
   <p>
-  Untuk mengubah background gambar menjadi transparan, bisa dilakukan dengan mudah menggunakan krita. Klik menu Filter &ndash;&gt; Colours &ndash;&gt; Colour to Aplha. Color picker pilih warna background yang akan diganti menjadi transparan. Threshold atur 100 atau sesuai kebutuhan. Kemudian Ok.
+  <p>Untuk mengubah <em>background</em> gambar menjadi transparan, bisa dilakukan dengan mudah menggunakan <strong>krita</strong>. Klik menu Filter &ndash;&gt; Colours &ndash;&gt; Colour to Aplha. Color picker pilih warna background yang akan diganti menjadi transparan. Threshold atur 100 atau sesuai kebutuhan. Kemudian Ok.</p>
   </p>
 
   
@@ -303,8 +361,14 @@
   </header>
 
   <p>
-  Untuk mengetahui semua modul perl yang terinstall bisa menggunakan instmodsh.
-$ instmodsh Available commands are: l - List all installed modules m &lt;module&gt; - Select a module q - Quit the program cmd? Kemudian pilih l.
+  <p>Untuk mengetahui semua modul <strong>perl</strong> yang terinstall bisa menggunakan <strong>instmodsh</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ instmodsh
+</span></span><span style="display:flex;"><span>Available commands are:
+</span></span><span style="display:flex;"><span>   l            - List all installed modules
+</span></span><span style="display:flex;"><span>   m &lt;module&gt;   - Select a module
+</span></span><span style="display:flex;"><span>   q            - Quit the program
+</span></span><span style="display:flex;"><span>cmd?
+</span></span></code></pre></div><p>Kemudian pilih l.</p>
   </p>
 
   
@@ -348,10 +412,17 @@ $ instmodsh Available commands are: l - List all installed modules m &lt;module&
   </header>
 
   <p>
-  Suatu program gagal dijalankan. Eksekusi via terminal menunjukkan segmentation fault tanpa keterangan lainnya. Pada situasi inilah core dump diperlukan untuk debugging sehingga diketahui penyebabnya.
-Contoh, geeqie apabila dijalankan di lingkungan wayland berbuah segmentation fault
-$ geeqie Segmentation fault Saatnya membuat core dump
-$ gcore /usr/bin/geeqie Illegal process-id: /usr/bin/geeqie. You can&#39;t do that without a process to debug. The program is not being run. gcore: failed to create core./usr/bin/geeqie Kemudian eksekusi lagi
+  <p>Suatu program gagal dijalankan. Eksekusi via terminal menunjukkan <strong>segmentation fault</strong> tanpa keterangan lainnya. Pada situasi inilah <strong>core dump</strong> diperlukan untuk <em>debugging</em> sehingga diketahui penyebabnya.</p>
+<p>Contoh, <strong>geeqie</strong> apabila dijalankan di lingkungan <strong>wayland</strong> berbuah <strong>segmentation fault</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ geeqie
+</span></span><span style="display:flex;"><span>Segmentation fault
+</span></span></code></pre></div><p>Saatnya membuat core dump</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gcore /usr/bin/geeqie
+</span></span><span style="display:flex;"><span>Illegal process-id: /usr/bin/geeqie.
+</span></span><span style="display:flex;"><span>You can<span style="color:#960050;background-color:#1e0010">&#39;</span>t <span style="color:#66d9ef">do</span> that without a process to debug.
+</span></span><span style="display:flex;"><span>The program is not being run.
+</span></span><span style="display:flex;"><span>gcore: failed to create core./usr/bin/geeqie
+</span></span></code></pre></div><p>Kemudian eksekusi lagi</p>
   </p>
 
   
@@ -399,61 +470,14 @@ $ gcore /usr/bin/geeqie Illegal process-id: /usr/bin/geeqie. You can&#39;t do th
   </header>
 
   <p>
-  Judul catatan kali ini sedikit berbeda dibanding sebelumnya. Ada hacking-nya. Hehehehe&hellip;. Tapi itu tidak menunjukkan bahwa kemampuan penulis dalam ilmu hacking bagus. Hanya bisa itu tok.
-Information gathering merupakan tahap krusial dalam proses hacking maupun cracking. Salah satu kegiatan information gathering adalah scanning atau deteksi sistem operasi yang digunakan pada target. Deteksi ini perlu karena berbeda sistem operasi mungkin membutuhkan teknik yang berbeda.
-Deteksi menggunakan nmap yang secara default sudah tertanam di slackware.
+  <p>Judul catatan kali ini sedikit berbeda dibanding sebelumnya. Ada <strong>hacking</strong>-nya. Hehehehe&hellip;. Tapi itu tidak menunjukkan bahwa kemampuan penulis dalam ilmu <strong>hacking</strong> bagus. Hanya bisa itu tok.</p>
+<p><em>Information gathering</em> merupakan tahap krusial dalam proses <strong>hacking</strong> maupun <strong>cracking</strong>. Salah satu kegiatan <em>information gathering</em> adalah <em>scanning</em> atau deteksi sistem operasi yang digunakan pada target. Deteksi ini perlu karena berbeda sistem operasi mungkin membutuhkan teknik yang berbeda.</p>
+<p>Deteksi menggunakan <strong>nmap</strong> yang secara <em>default</em> sudah tertanam di <strong>slackware</strong>. Kasus kali ini alamat target adalah 192.168.106.250. Hasil <em>scanning</em> menunjukkan beberapa informasi, antara lain sistem operasi, port yang terbuka dan webserver yang digunakan.</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2021-12-17-deteksi-os-hacking/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-12-17-hapus-riwayat-kfind/">Hapus riwayat kfind</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>17 Dec 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Kfind adalah tool pencarian dari KDE Plasma. Bagi pengguna linux yang kurang familiar dengan command line bisa menggunakan kfind yang berpenampilan mode grafis.
-Fitur yang sangat bagus dari kfind adalah bisa menyimpan hasil pencarian. Namun, catatan kali ini tidak tentang bagaimana cara penggunaan kfind. Kali ini justru cara menghapus riwayat pencarian. Riwayat ini ada di file ~/.config/kfindrc pada segmen [History]. Riwayat yang dicatat adalah Patterns dan Directories pencariannya. Sehingga, penghapusan riwayat pencarian dapat dilakukan dengan menghapus ketiganya.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-12-17-hapus-riwayat-kfind/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -467,7 +491,7 @@ Fitur yang sangat bagus dari kfind adalah bisa menyimpan hasil pencarian. Namun,
   
   <a href="https://sasongko.web.id/page/11/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;12 / 65&nbsp;</span>
+  <span>&nbsp;12 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/13/"><i class="fa fa-chevron-right"></i></a>
   

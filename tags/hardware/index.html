@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Hardware &middot; Catatan Sasongko</title>
 
@@ -262,9 +262,26 @@
   </header>
 
   <p>
-  Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi
-Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz Memory: 11,5 GiB of RAM Graphics Processor: Mesa Intel® UHD Graphics 600 dengan audio awalnya berupa dummy output alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.
-$ aplay -l **** List of PLAYBACK Hardware Devices **** card 0: sofessx8336 [sof-essx8336], device 0: ES8336 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 5: HDMI 1 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 6: HDMI 2 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 7: HDMI 3 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker.
+  <p>Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi</p>
+<pre tabindex="0"><code>Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz
+Memory: 11,5 GiB of RAM
+Graphics Processor: Mesa Intel® UHD Graphics 600
+</code></pre><p>dengan audio awalnya berupa <em>dummy output</em> alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ aplay -l
+</span></span><span style="display:flex;"><span>**** List of PLAYBACK Hardware Devices ****
+</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 0: ES8336 <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>  Subdevices: 1/1
+</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
+</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 5: HDMI <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>  Subdevices: 1/1
+</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
+</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 6: HDMI <span style="color:#ae81ff">2</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>  Subdevices: 1/1
+</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
+</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 7: HDMI <span style="color:#ae81ff">3</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>  Subdevices: 1/1
+</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
+</span></span></code></pre></div><p>Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker. Yah, laptop masih diam seribu bahasa. <strong>Sound Open Firmware</strong> memberikan secercah harapan. Apalagi kemudian <strong>sof-firmware</strong> masuk ke repo <em>current</em>. Namun sayang, laptop masih membisu. Beberapa kali upgrade kernel, alsa, pulseaudio dan pipewire, masih saja tak terdengar. Alhamdulillah kemudian menemukan solusi dari <em>issue</em> yang dibuat oleh junocom di github alsa-project/alsa-ucm-conf.</p>
   </p>
 
   
@@ -310,8 +327,8 @@ $ aplay -l **** List of PLAYBACK Hardware Devices **** card 0: sofessx8336 [sof-
   </header>
 
   <p>
-  Identifikasi RAM yang ada di komputer merupakan hal mutlak untuk penggantian, upgrade ataupun sekedar membersihkan RAM. Informasi awal tentang RAM bisa diperoleh tanpa membongkar komputer ataupun laptop. Hal ini sangat bermanfaat bagi pengguna yang tidak punya keterampilan bongkar pasang komputer. Apalagi kalau masih garansi, kalau dibongkar bukan teknisi service center resminya maka garansinya hangus.
-Untuk mengetahui spek RAM mudah. Bagi slackers (pengguna Slackware) tidak perlu repot menginstall macam-macam. Tool-nya sudah tersedia.
+  <p>Identifikasi RAM yang ada di komputer merupakan hal mutlak untuk penggantian, upgrade ataupun sekedar membersihkan RAM. Informasi awal tentang RAM bisa diperoleh tanpa membongkar komputer ataupun laptop. Hal ini sangat bermanfaat bagi pengguna yang tidak punya keterampilan bongkar pasang komputer. Apalagi kalau masih garansi, kalau dibongkar bukan teknisi <em>service center</em> resminya maka garansinya hangus.</p>
+<p>Untuk mengetahui spek RAM mudah. Bagi <strong>slackers</strong> (pengguna <strong>Slackware</strong>) tidak perlu repot menginstall macam-macam. <em>Tool</em>-nya sudah tersedia.</p>
   </p>
 
   
@@ -357,9 +374,9 @@ Untuk mengetahui spek RAM mudah. Bagi slackers (pengguna Slackware) tidak perlu 
   </header>
 
   <p>
-  Instalasi scanner di linux terutama slackware sangat mudah. Biasanya scanner terdeteksi secara otomatis dan langsung bisa dijalankan. Pengaturan hanya dibutuhkan jika scanner tidak terdeteksi.
-Catatan kali ini tentang menambahkan scanner yang tidak terdeteksi secara otomatis. Scanner seperangkat dengan printer, yaitu Epson L3110. Printer terdeteksi otomatis dan langsun bisa digunakan, tetapi scanner-nya belum. Software untuk scan seperti xsane atau skanlite salah mendeteksi. Keduanya mendeteksi scanner yang digunakan adalah webcam.
-Scanner terhubung melalui usb, sehingga perlu dicek terlebih dahulu apakah usbnya terdeteksi.
+  <p>Instalasi <em>scanner</em> di linux terutama <strong>slackware</strong> sangat mudah. Biasanya <em>scanner</em> terdeteksi secara otomatis dan langsung bisa dijalankan. Pengaturan hanya dibutuhkan jika <em>scanner</em> tidak terdeteksi.</p>
+<p>Catatan kali ini tentang menambahkan <em>scanner</em> yang tidak terdeteksi secara otomatis. <em>Scanner</em> seperangkat dengan <em>printer</em>, yaitu <strong>Epson L3110</strong>. Printer terdeteksi otomatis dan langsun bisa digunakan, tetapi <em>scanner</em>-nya belum. Software untuk scan seperti xsane atau skanlite salah mendeteksi. Keduanya mendeteksi scanner yang digunakan adalah webcam.</p>
+<p><em>Scanner</em> terhubung melalui usb, sehingga perlu dicek terlebih dahulu apakah usbnya terdeteksi.</p>
   </p>
 
   
@@ -409,9 +426,8 @@ Scanner terhubung melalui usb, sehingga perlu dicek terlebih dahulu apakah usbny
   </header>
 
   <p>
-  Beberapa hari yang lalu install i3 (i3wm) menggunakan sbopkg. Biasanya, dengan desktop environment lain seperti Mate, baterai bisa bertahan 4 - 6 jam. Namun, dengan i3 belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.
-Cek powertop ternyata banyak yang Bad seperti default-nya tanpa TLP. Padahal service TLP saat booting jalan, Tunable di powertop hanya 1 yang Bad lainnya Good semua.
-I3 memiliki berkas konfigurasi /etc/i3/config.
+  <p>Beberapa hari yang lalu install <!-- raw HTML omitted -->i3 (i3wm)<!-- raw HTML omitted --> menggunakan <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->. Biasanya, dengan <em>desktop environment</em> lain seperti <em>Mate</em>, baterai bisa bertahan 4 - 6 jam. Namun, dengan <em>i3</em> belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.</p>
+<p>Cek <!-- raw HTML omitted -->powertop<!-- raw HTML omitted --> ternyata banyak yang <strong>Bad</strong> seperti <em>default</em>-nya tanpa TLP. Padahal <em>service</em> TLP saat <em>booting</em> jalan, <em>Tunable</em> di <!-- raw HTML omitted -->powertop<!-- raw HTML omitted --> hanya 1 yang <strong>Bad</strong> lainnya <strong>Good</strong> semua.</p>
   </p>
 
   
@@ -457,9 +473,10 @@ I3 memiliki berkas konfigurasi /etc/i3/config.
   </header>
 
   <p>
-  Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya
-dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck. Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu /dev/sda1. Dan direkomendasikan untuk menjalankan fsck.
-fsck /dev/sda1 fsck from util-linux 2.27.1 fsck.fat 3.0.28 (2015-05-16) 0x41: Dirty bit is set.
+  <p>Sewaktu <em>booting</em>, sekilas membaca <!-- raw HTML omitted -->some data may be corrupt<!-- raw HTML omitted -->. Untuk pesan <em>error</em> komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dmesg | grep -i corrupt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   19.076118<span style="color:#f92672">]</span> FAT-fs <span style="color:#f92672">(</span>sda1<span style="color:#f92672">)</span>: Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+</span></span></code></pre></div><p>Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu <!-- raw HTML omitted -->/dev/sda1<!-- raw HTML omitted -->. Dan direkomendasikan untuk menjalankan <!-- raw HTML omitted -->fsck<!-- raw HTML omitted -->.</p>
   </p>
 
   

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Slackpkg &middot; Catatan Sasongko</title>
 
@@ -260,9 +260,10 @@
   </header>
 
   <p>
-  Package management atas packages yang ada di official repo pda slackware dapat dilakukan dengan dengan slackpkg. Sinkronisasi perlu dilakukan agar packages yang diinstall merupakan versi terbaru sesuai yang disediakan di repo. Sinkronisasi ini meliputi 2 kegiatan, yaitu sinkronisasi database packages dan versi packages.
-Sinkronisasi database packages meliputi list apa saja file yang ada di repo, checksum, dll. Dilakukan dengan
-slackpkg update Khusus untuk versi packages, menyamakan versi terinstall dengan versi repo untuk semua packages
+  <p><em>Package management</em> atas <em>packages</em> yang ada di <em>official repo</em> pda <strong>slackware</strong> dapat dilakukan dengan dengan <strong>slackpkg</strong>. Sinkronisasi perlu dilakukan agar <em>packages</em> yang diinstall merupakan versi terbaru sesuai yang disediakan di repo. Sinkronisasi ini meliputi 2 kegiatan, yaitu sinkronisasi <em>database packages</em> dan versi <em>packages</em>.</p>
+<p>Sinkronisasi <em>database packages</em> meliputi <em>list</em> apa saja file yang ada di repo, checksum, dll. Dilakukan dengan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>slackpkg update
+</span></span></code></pre></div><p>Khusus untuk versi <em>packages</em>, menyamakan versi terinstall dengan versi repo untuk semua <em>packages</em></p>
   </p>
 
   
@@ -308,10 +309,17 @@ slackpkg update Khusus untuk versi packages, menyamakan versi terinstall dengan 
   </header>
 
   <p>
-  Slackpkg merupakan salah satu official slackware package manager. Fitur yang dimilikinya antara lain
-Cek apakah ada update Baca changelog Install, upgrade, reinstall, remove, blacklist packages Sebelum menggunakannya, pilih dahulu mirror yang akan digunakan
-# vi /etc/slackpkg/mirrors Pada file tersebut sudah tersedia list mirror yang bisa digunakan. Apakah menggunakan current atau stable (saat ini 15.0). Pilih mirrornya dengan cara uncomment baris alamat mirrornya. Contoh
-https://mirrors.slackware.com/slackware/slackware64-15.0/ untuk menggunakan mirror terdekat versi slackware 15.
+  <p><strong>Slackpkg</strong> merupakan salah satu <strong>official slackware package manager</strong>. Fitur yang dimilikinya antara lain</p>
+<ol>
+<li>Cek apakah ada update</li>
+<li>Baca changelog</li>
+<li>Install, upgrade, reinstall, remove, blacklist packages</li>
+</ol>
+<p>Sebelum menggunakannya, pilih dahulu <em>mirror</em> yang akan digunakan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># vi /etc/slackpkg/mirrors</span>
+</span></span></code></pre></div><p>Pada file tersebut sudah tersedia list mirror yang bisa digunakan. Apakah menggunakan <strong>current</strong> atau <strong>stable</strong> (saat ini 15.0). Pilih mirrornya dengan cara <em>uncomment</em> baris alamat mirrornya. Contoh</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>https://mirrors.slackware.com/slackware/slackware64-15.0/
+</span></span></code></pre></div><p>untuk menggunakan mirror terdekat versi <strong>slackware 15.0</strong></p>
   </p>
 
   
@@ -357,9 +365,8 @@ https://mirrors.slackware.com/slackware/slackware64-15.0/ untuk menggunakan mirr
   </header>
 
   <p>
-  Siang ini, upgrade beberapa paket SBo, salah satunya adalah nodejs. Tetapi terjadi insiden di sela-sela prosesnya : lowbatt sehingga laptop mati. Kejadian ini awalnya tidak saya ketahui, karena banyak paket yang di-upgrade sehingga lama kemudian saya tinggal mengerjakan pekerjaan yang lain.
-Singkat cerita, saya ingin upgrade paket-paket official melalui slackpkg
-slackpkg upgrade-all FATAL! There is some problem in packages database or maybe an installation or upgrade in progress: nodejs-6.11.2-x86_64-1_SBo-upgraded-2018-04-03,11:12:24 If you continue you may corrupt packages database.
+  <p>Siang ini, <em>upgrade</em> beberapa paket <!-- raw HTML omitted -->SBo<!-- raw HTML omitted -->, salah satunya adalah <!-- raw HTML omitted -->nodejs<!-- raw HTML omitted -->. Tetapi terjadi insiden di sela-sela prosesnya : <em>lowbatt</em> sehingga laptop mati. Kejadian ini awalnya tidak saya ketahui, karena banyak paket yang di-<em>upgrade</em> sehingga lama kemudian saya tinggal mengerjakan pekerjaan yang lain.</p>
+<p>Singkat cerita, saya ingin <em>upgrade</em> paket-paket <em>official</em> melalui <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --></p>
   </p>
 
   
@@ -405,10 +412,15 @@ slackpkg upgrade-all FATAL! There is some problem in packages database or maybe 
   </header>
 
   <p>
-  Secara default, slackpkg akan menghapus semua file yang di- download / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di /etc/slackpkg/slackpkg.conf pada baris 77
-DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah on menjadi off.
+  <p>Secara <em>default</em>, <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --> akan menghapus semua file yang di- <em>download</em> / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di <!-- raw HTML omitted -->/etc/slackpkg/slackpkg.conf<!-- raw HTML omitted --> pada baris 77</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>DELALL<span style="color:#f92672">=</span>on
+</span></span></code></pre></div><p>Keuntungan dari konfigurasi ini menghemat <em>ruang harddisk</em>. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah <!-- raw HTML omitted -->on<!-- raw HTML omitted --> menjadi <!-- raw HTML omitted -->off<!-- raw HTML omitted -->.</p>
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-09-10-nonaktif-delall-slackpkg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -448,14 +460,20 @@ DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya le
   </header>
 
   <p>
-  Sehubungan dengan telah rilisnya Slackware 14.2 maka silahkan melakukan upgrade untuk mendapatkan keamanan yang lebih bagus dan fitur-fitur baru. Saya selama ini melakukan upgrade bertahap demi penghematan kuota internet. Dimulai dengan upgrade ke current karena saat itu versi stable yang baru (14.2) masih dalam proses pengembangan. Upgrade ini menggunakan slackpkg. Dan tentu saja membutuhkan sambungan internet.
-Pilih cermin atau mirror. Dengan menyunting /etc/slackpkg/mirrors, menghilangkan tanda komentar/tanda pagar pada repo yang diinginkan.
+  <p>Sehubungan dengan telah rilisnya <strong>Slackware 14.2</strong> maka silahkan melakukan <em>upgrade</em> untuk mendapatkan keamanan yang lebih bagus dan fitur-fitur baru. Saya selama ini melakukan <strong><em>upgrade</em> bertahap demi penghematan kuota internet</strong>. Dimulai dengan upgrade ke <em>current</em> karena saat itu versi <em>stable</em> yang baru (14.2) masih dalam proses pengembangan. <em>Upgrade</em> ini menggunakan <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted -->. Dan tentu saja membutuhkan sambungan internet.</p>
+<ol>
+<li>Pilih cermin atau <em>mirror</em>. Dengan menyunting <!-- raw HTML omitted -->/etc/slackpkg/mirrors<!-- raw HTML omitted -->, menghilangkan tanda komentar/tanda pagar pada repo yang diinginkan. Tersedia banyak repo yang bisa dijadikan rujukan, tetapi sayangnya baru 2 repo lokal yang resmi terdaftar, yaitu <em>UI</em> dan <em>UKDW</em>. Saya gunakan milik UKDW karena lebih dekat (UKDW di Yogyakarta sedangkan saya di Semarang) sehingga harapannya lebih cepat. Bisa juga memilih repo <em>Slackware.com</em> yang secara otomatis akan memilihkan repo terdekat. Pastikan hanya 1 repo yang dipilih.</li>
+<li><em>Update</em> daftar paket dengan melakukan <!-- raw HTML omitted -->slackpkg update<!-- raw HTML omitted --></li>
+<li><em>Upgrade</em> <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --> untuk mendapatkan alamat repo 14.2. <em>Upgrade</em> juga <!-- raw HTML omitted -->glibc-solibs<!-- raw HTML omitted -->. Keduanya dapat dilakukan secara simultan : <!-- raw HTML omitted -->slackpkg upgrade slackpkg glibc-solibs<!-- raw HTML omitted --></li>
+<li>Kalau muncul pertanyaan tentang konfigurasi baru, pilih saja <!-- raw HTML omitted -->O<!-- raw HTML omitted --> alias <!-- raw HTML omitted -->overwrite<!-- raw HTML omitted -->. Kalau tidak muncul lakukan <!-- raw HTML omitted -->slackpkg new-config<!-- raw HTML omitted --></li>
+<li>Setelah <em>upgrade</em> <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --> pilih repo lagi karena ada perubahan alamat/URL repo kemudian <em>update</em> lagi.</li>
+<li>Lanjut install paket-paket baru yang sebelumnya tidak ada : <!-- raw HTML omitted -->slackpkg install-new<!-- raw HTML omitted --></li>
+<li><em>Upgrade</em> sistem : <!-- raw HTML omitted -->slackpkg upgrade-all<!-- raw HTML omitted -->. Akan ditampilkan paket yang bisa di-<em>upgrade</em>. Hilangkan tanda bintangnya dengan menekan tombol <!-- raw HTML omitted -->spasi<!-- raw HTML omitted --> bila tidak ingin paket tersebut di-<em>upgrade</em> kemudian <!-- raw HTML omitted -->OK<!-- raw HTML omitted -->.</li>
+<li>Hapus paket yang tidak berguna. Paket yang perlu dihapus dan berbagai perubahan dari Slackware 14.1 ke 14.2 bisa dilihat <a href="http://repo.ukdw.ac.id/slackware/slackware64-14.2/CHANGES_AND_HINTS.TXT">di sini</a> : <!-- raw HTML omitted -->slackpkg remove    <!-- raw HTML omitted --></li>
+<li>Karena ada pergantian kernel, jangan lupa konfigurasi ulang <em>boot loader</em> itu <!-- raw HTML omitted -->lilo<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->elilo<!-- raw HTML omitted -->. Kalau menggunakan <!-- raw HTML omitted -->lilo<!-- raw HTML omitted --> : <!-- raw HTML omitted -->liloconfig<!-- raw HTML omitted -->. Kalau menggunakan <!-- raw HTML omitted -->elilo<!-- raw HTML omitted --> : <!-- raw HTML omitted -->eliloconfig<!-- raw HTML omitted --></li>
+</ol>
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackware-142/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

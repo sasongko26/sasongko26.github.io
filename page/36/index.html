@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,84 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/">Package bawaan R Slackware</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Feb 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Berikut adalah <em>package</em> atau <em>library</em> <strong>R</strong> yang secara <em>default</em> terinstall di Slackware melalui SBo.</p>
+<ol>
+<li><strong>KernSmooth</strong>.Functions for Kernel Smoothing Supporting Wand &amp; Jones (1995)</li>
+<li><strong>MASS</strong>. Support Functions and Datasets for Venables and Ripley&rsquo;s MASS</li>
+<li><strong>Matrix</strong>. Sparse and Dense Matrix Classes and Methods</li>
+<li><strong>base</strong>. The R Base Package</li>
+<li><strong>boot</strong>. Bootstrap Functions (Originally by Angelo Canty for S)</li>
+<li><strong>class</strong>. Functions for Classification</li>
+<li><strong>cluster</strong>. &ldquo;Finding Groups in Data&rdquo;: Cluster Analysis Extended Rousseeuw et al.</li>
+<li><strong>codetools</strong>. Code Analysis Tools for R</li>
+<li><strong>compiler</strong>. The R Compiler Package</li>
+<li><strong>datasets</strong>. The R Datasets Package</li>
+<li><strong>foreign</strong>. Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka, dBase, &hellip;</li>
+<li><strong>grDevices</strong>. The R Graphics Devices and Support for Colours and Fonts</li>
+<li><strong>graphics</strong>. The R Graphics Package</li>
+<li><strong>grid</strong>. The Grid Graphics Package</li>
+<li><strong>lattice</strong>. Trellis Graphics for R</li>
+<li><strong>methods</strong>. Formal Methods and Classes</li>
+<li><strong>mgcv</strong>. Mixed GAM Computation Vehicle with Automatic Smoothness Estimation</li>
+<li><strong>nlme</strong>. Linear and Nonlinear Mixed Effects Models</li>
+<li><strong>nnet</strong>. Feed-Forward Neural Networks and Multinomial Log-Linear Models</li>
+<li><strong>parallel</strong>. Support for Parallel computation in R</li>
+<li><strong>rpart</strong>. Recursive Partitioning and Regression Trees</li>
+<li><strong>spatial</strong>. Functions for Kriging and Point Pattern Analysis</li>
+<li><strong>splines</strong>. Regression Spline Functions and Classes</li>
+<li><strong>stats</strong>. The R Stats Package</li>
+<li><strong>stats4</strong>. Statistical Functions using S4 Classes</li>
+<li><strong>survival</strong>. Survival Analysis</li>
+<li><strong>tcltk</strong>. Tcl/Tk Interface</li>
+<li><strong>tools</strong>. Tools for Package Development</li>
+<li><strong>utils</strong>. The R Utils Package</li>
+</ol>
+<p><strong>Packages</strong> tersebut bisa dilihat dengan menjalankan pada <!-- raw HTML omitted -->Rconsole<!-- raw HTML omitted --></p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-02-10-mengenal-r/">Mengenal R</a></h2>
 
     <div class="post-meta">
@@ -261,8 +339,8 @@
   </header>
 
   <p>
-  R adalah salah satu bahasa pemrograman yang banyak digunakan dan bersifat open source. R bisa dikatakan sebagai bahasa pemrograman spesialis data. Tidak mengherankan kalau R digunakan untuk keperluan handling data seperti statistik, data mining, data science dan machine learning.
-Meskipun bersifat open source, sampai sekarang belum ada sistem operasi open source yang memasukkan R secara default terinstall dalam sistemnya. Namun demikian beberapa distro linux menyertakan R ke dalam repo resmi. Distro tersebut antara lain Debian, OpenSUSE dan Ubuntu.
+  <p>R adalah salah satu bahasa pemrograman yang banyak digunakan dan bersifat <em>open source</em>. R bisa dikatakan sebagai bahasa pemrograman spesialis data. Tidak mengherankan kalau R digunakan untuk keperluan <em>handling data</em> seperti statistik, <em>data mining, data science</em> dan <em>machine learning</em>.</p>
+<p>Meskipun bersifat <em>open source</em>, sampai sekarang belum ada sistem operasi <em>open source</em> yang memasukkan R secara <em>default</em> terinstall dalam sistemnya. Namun demikian beberapa distro linux menyertakan R ke dalam repo resmi. Distro tersebut antara lain Debian, OpenSUSE dan Ubuntu. Bagaimana dengan <strong>Slackware</strong>? <em>Officiall repo</em> tidak ada. Namun, bisa didapatkan dari komunitas <strong>SBo</strong>. Apakah tersedia untuk Windows dan MacOS? Pengembang R sangat baik hati. Mereka juga membuat R untuk Windows dan MacOS. Jadi, R bisa digunakan semua sistem operasi komputer.</p>
   </p>
 
   
@@ -312,9 +390,13 @@ Meskipun bersifat open source, sampai sekarang belum ada sistem operasi open sou
   </header>
 
   <p>
-  Terkadang saat browsing perlu fokus sehingga tampilan pun butuh fullscreen. Pada Mozilla Firefox, secara default F11 adalah tombol untuk fullscreen dan exit fullscreen. Akan tetapi, hal ini tidak berlaku pada kami, Slackware64 current dengan desktop environment XFCE yang berjalan di laptop Lenovo Ideapad 110-14IBR. Pada perangkat kami ini, F11 untuk mengurangi brightness. Maka, untuk fullscreen dan exit-nya kami gunakan Fn F11.
+  <p>Terkadang saat <em>browsing</em> perlu fokus sehingga tampilan pun butuh <em>fullscreen</em>. Pada <em>Mozilla Firefox</em>, secara <em>default</em> <!-- raw HTML omitted -->F11<!-- raw HTML omitted --> adalah tombol untuk <em>fullscreen</em> dan <em>exit fullscreen</em>. Akan tetapi, hal ini tidak berlaku pada kami, <strong>Slackware64 current</strong> dengan <em>desktop environment</em>  XFCE  yang berjalan di laptop Lenovo Ideapad 110-14IBR. Pada perangkat kami ini, <!-- raw HTML omitted -->F11<!-- raw HTML omitted --> untuk mengurangi <em>brightness</em>. Maka, untuk <em>fullscreen</em> dan <em>exit</em>-nya kami gunakan <!-- raw HTML omitted -->Fn F11<!-- raw HTML omitted -->.</p>
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-02-01-fullscreen-firefox/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -354,9 +436,14 @@ Meskipun bersifat open source, sampai sekarang belum ada sistem operasi open sou
   </header>
 
   <p>
-  Ketika akan memindahkan data dari HP android ke laptop melalui thunar, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui jmtpfs
-$ jmtpfs Device 0 (VID=0e8d and PID=201d) is a MediaTek Inc Elephone P8000. error returned by libusb_claim_interface() = -6LIBMTP PANIC: Unable to initialize device terminate called after throwing an instance of &#39;MtpErrorCantOpenDevice&#39; what(): Can&#39;t open device Aborted Ada masalah di libusb. Coba reinstall libusb
-# slackpkg reinstall libusb Alhamdulillah sukses.
+  <p>Ketika akan memindahkan data dari HP android ke laptop melalui <!-- raw HTML omitted -->thunar<!-- raw HTML omitted -->, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui <!-- raw HTML omitted -->jmtpfs<!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ jmtpfs
+</span></span><span style="display:flex;"><span>Device <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>VID<span style="color:#f92672">=</span>0e8d and PID<span style="color:#f92672">=</span>201d<span style="color:#f92672">)</span> is a MediaTek Inc Elephone P8000.
+</span></span><span style="display:flex;"><span>error returned by libusb_claim_interface<span style="color:#f92672">()</span> <span style="color:#f92672">=</span> -6LIBMTP PANIC: Unable to initialize device
+</span></span><span style="display:flex;"><span>terminate called after throwing an instance of <span style="color:#e6db74">&#39;MtpErrorCantOpenDevice&#39;</span>
+</span></span><span style="display:flex;"><span>  what<span style="color:#f92672">()</span>:  Can<span style="color:#960050;background-color:#1e0010">&#39;</span>t open device
+</span></span><span style="display:flex;"><span>Aborted
+</span></span></code></pre></div><p>Ada masalah di <!-- raw HTML omitted -->libusb<!-- raw HTML omitted -->. Coba reinstall <!-- raw HTML omitted -->libusb<!-- raw HTML omitted --></p>
   </p>
 
   
@@ -402,57 +489,11 @@ $ jmtpfs Device 0 (VID=0e8d and PID=201d) is a MediaTek Inc Elephone P8000. erro
   </header>
 
   <p>
-  Salah satu keunggulan perl dibanding bahasa pemrograman lainnya adalah tersedia dokumentasi atau panduan bagi pemula. Pemula membutuhkan panduan singkat tapi tetap komprehensif dan mudah dipahami. Perl sudah memberikannya. Dokumentasi atau panduan ini bisa diakses secara offline setelah menginstall perl. Namanya adalah perlintro.
-$ perldoc perlintro 
+  <p>Salah satu keunggulan <strong>perl</strong> dibanding bahasa pemrograman lainnya adalah tersedia dokumentasi atau panduan bagi pemula. Pemula membutuhkan panduan singkat tapi tetap komprehensif dan mudah dipahami. <strong>Perl</strong> sudah memberikannya. Dokumentasi atau panduan ini bisa diakses secara <em>offline</em> setelah menginstall <strong>perl</strong>. Namanya adalah <strong>perlintro</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ perldoc perlintro
+</span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2019-12-01-rename-banyak-file-sekaligus/">Rename Banyak File Sekaligus</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Dec 2019</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Tak terasa ternyata sudah lebih dari 3 bulan tidak posting. Mengapa? Sibuk? Kesibukan sebenarnya seperti biasa. Tidak ada peningkatan kesibukan secara signifikan. Lalu mengapa? Alasannya simpel. Karena semua kegiatan berkomputer baik-baik saja. Tidak ada masalah. Biasanya saya menulis di sini ketika saya menghadapi masalah terkait penggunaan komputer. Nah, kali ini masalahnya adalah saya menemukan banyak file yang namanya tidak sesuai dengan standar saya.
-Contoh, adik-adik asisten anatomi mengirimkan softcopy materi asistensi.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2019-12-01-rename-banyak-file-sekaligus/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -465,7 +506,7 @@ Contoh, adik-adik asisten anatomi mengirimkan softcopy materi asistensi.
   
   <a href="https://sasongko.web.id/page/35/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;36 / 65&nbsp;</span>
+  <span>&nbsp;36 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/37/"><i class="fa fa-chevron-right"></i></a>
   

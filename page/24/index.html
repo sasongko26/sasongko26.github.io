@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,65 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/">Aktivasi apache webserver slackware</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>24 Feb 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/cloud">cloud</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <h1 id="install-apache-webserver-slackware-linux">Install apache webserver slackware linux</h1>
+<p>Secara <em>default</em>, <strong>apache webserver</strong> sudah ter-<em>install</em> di <strong>slackware</strong>. Namun, jika saat meng-<em>install</em> <strong>slackware</strong> tidak memilih <em>full installation</em>, <strong>apache webserver</strong> dapat di-<em>install</em> dengan mudah, yaitu dengan meng-<em>install</em> <strong>httpd</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>slackpkg install httpd
+</span></span></code></pre></div><h1 id="aktivasi-apache-webserver-slackware-linux">Aktivasi apache webserver slackware linux</h1>
+<p>Setelah diinstall, bisa diaktifkan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd start
+</span></span></code></pre></div><p>Untuk menonaktifkan atau mematikan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd stop
+</span></span></code></pre></div><p>Untuk <em>restart</em> webserver:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd restart
+</span></span></code></pre></div><h1 id="mengaktifkan-apache-webserver-otomatis">Mengaktifkan apache webserver otomatis</h1>
+<p>Untuk dapat <em>running</em> atau mengaktifkan <em>apache</em> secara otomatis setelah <em>booting</em>, pastikan /etc/rc.d/rc.httpd <em>executable</em>.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-02-19-set-background-blackbox/">Set background blackbox</a></h2>
 
     <div class="post-meta">
@@ -261,10 +320,12 @@
   </header>
 
   <p>
-  Menggunakan blackbox yang &lsquo;hanya&rsquo; window manager tentunya berbeda dengan ketika menggunakan desktop environment (DE) seperti kde atau xfce. Pengaturan background atau wallpaper dalam DE menggunakan tampilan grafis.
-Untuk meng-set background pada blackbox menggunakan bsetbg
-$ bsetbg nama_file_background Atau, kalau menghendaki background-nya adalah warna (solid color) juga bisa. Contoh, akan mengganti background-nya dengan warna hijau.
-$ bsetbg -solid green 
+  <p>Menggunakan <strong>blackbox</strong> yang &lsquo;hanya&rsquo; <strong>window manager</strong> tentunya berbeda dengan ketika menggunakan <strong>desktop environment</strong> (DE) seperti <strong>kde</strong> atau <strong>xfce</strong>. Pengaturan <em>background</em> atau <em>wallpaper</em> dalam DE menggunakan tampilan grafis.</p>
+<p>Untuk meng-<em>set background</em> pada <strong>blackbox</strong> menggunakan <strong>bsetbg</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ bsetbg nama_file_background
+</span></span></code></pre></div><p>Atau, kalau menghendaki <em>background</em>-nya adalah warna (solid color) juga bisa. Contoh, akan mengganti <em>background</em>-nya dengan warna hijau.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ bsetbg -solid green
+</span></span></code></pre></div>
   </p>
 
   
@@ -306,9 +367,9 @@ $ bsetbg -solid green
   </header>
 
   <p>
-  xterm adalah X terminal emulator populer legendaris. Penulis masih menggunakannya sebagai terminal utama ketika menggunakan blackbox. Sesekali saat menggunakan xfce atau kde.
-xterm ini khas. Tidak seperti xfce4-terminal atau konsole yang secara default pengguna bisa melakukan copy paste (Copas) dengan mudah. Ctrl Shift C, Ctrl Shift V untuk copas pada terminal emulator lainnya tidak berlaku! Butuh pengaturan khusus untuk melakukannya. Mengatur agar setiap yang diblok akan dimasukkan ke clipboard.
-Untuk bisa melakukan copy:
+  <p><strong>xterm</strong> adalah <strong>X terminal emulator</strong> populer legendaris. Penulis masih  menggunakannya sebagai terminal utama ketika menggunakan <strong>blackbox</strong>. Sesekali saat menggunakan <strong>xfce</strong> atau <strong>kde</strong>.</p>
+<p><strong>xterm</strong> ini khas. Tidak seperti <strong>xfce4-terminal</strong> atau <strong>konsole</strong> yang secara <em>default</em> pengguna bisa melakukan <em>copy paste</em> (Copas) dengan mudah. <strong>Ctrl Shift C, Ctrl Shift V</strong> untuk copas pada terminal emulator lainnya tidak berlaku! Butuh pengaturan khusus untuk melakukannya. Mengatur agar setiap yang diblok akan dimasukkan ke <em>clipboard</em>.</p>
+<p>Untuk bisa melakukan <em>copy</em>:</p>
   </p>
 
   
@@ -356,9 +417,11 @@ Untuk bisa melakukan copy:
   </header>
 
   <p>
-  Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-charge. Alhasil laptop mati seketika. Dinyalakan lagi (sambil charging tentunya) gagal masuk ke X.
-xauth: file /home/xyz/.serverauth.2909 does not exist Solusinya simpel
-$ rm .serverauth* 
+  <p>Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-<em>charge</em>. Alhasil laptop mati seketika. Dinyalakan lagi (sambil <em>charging</em> tentunya) gagal masuk ke <strong>X</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>xauth: file /home/xyz/.serverauth.2909 does not exist
+</span></span></code></pre></div><p>Solusinya simpel</p>
+<pre tabindex="0"><code>$ rm .serverauth*
+</code></pre>
   </p>
 
   
@@ -400,61 +463,34 @@ $ rm .serverauth*
   </header>
 
   <p>
-  Beberapa saat yang lalu penulis terkena prank dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan flight mode di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek nmcli
-$ nmcli p2p-dev-wlan0: disconnected &#34;p2p-dev-wlan0&#34; wifi-p2p, sw disabled, hw eth0: unavailable &#34;Realtek RTL810xE&#34; ethernet (r8169), C8:5B:76:66:51:6C, hw, mtu 1500 wlan0: unavailable &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), 8E:58:C9:8B:64:0F, sw disabled, hw, mtu 1500 lo: unmanaged &#34;lo&#34; loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536 Use &#34;nmcli device show&#34; to get complete information about known devices and &#34;nmcli connection show&#34; to get an overview on active connection profiles.
+  <p>Beberapa saat yang lalu penulis terkena <em>prank</em> dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan <strong>flight mode</strong> di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek <strong>nmcli</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ nmcli
+</span></span><span style="display:flex;"><span>p2p-dev-wlan0: disconnected
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;p2p-dev-wlan0&#34;</span>
+</span></span><span style="display:flex;"><span>        wifi-p2p, sw disabled, hw
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>eth0: unavailable
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Realtek RTL810xE&#34;</span>
+</span></span><span style="display:flex;"><span>        ethernet <span style="color:#f92672">(</span>r8169<span style="color:#f92672">)</span>, C8:5B:76:66:51:6C, hw, mtu <span style="color:#ae81ff">1500</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wlan0: unavailable
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Qualcomm Atheros QCA9377&#34;</span>
+</span></span><span style="display:flex;"><span>        wifi <span style="color:#f92672">(</span>ath10k_pci<span style="color:#f92672">)</span>, 8E:58:C9:8B:64:0F, sw disabled, hw, mtu <span style="color:#ae81ff">1500</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lo: unmanaged
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;lo&#34;</span>
+</span></span><span style="display:flex;"><span>        loopback <span style="color:#f92672">(</span>unknown<span style="color:#f92672">)</span>, 00:00:00:00:00:00, sw, mtu <span style="color:#ae81ff">65536</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Use <span style="color:#e6db74">&#34;nmcli device show&#34;</span> to get complete information about known devices and
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;nmcli connection show&#34;</span> to get an overview on active connection profiles.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Consult nmcli<span style="color:#f92672">(</span>1<span style="color:#f92672">)</span> and nmcli-examples<span style="color:#f92672">(</span>7<span style="color:#f92672">)</span> manual pages <span style="color:#66d9ef">for</span> complete usage details.
+</span></span></code></pre></div><p>Ada <em>output</em> yang aneh : <strong>sw disabled</strong>. Penulis baru ingat kalau <strong>flight mode</strong>-nya aktif. Setelah dinonaktifkan, semua kembali normal. <strong>sw disabled</strong> enyah dari <em>Output</em> <strong>nmcli</strong>.</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/">Copy paste vim mode visual</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>08 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text-editor</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  VIm merupakan text editor legendaris yang sampai saat ini masih memiliki penggemar. Penulis salah satunya. Berbeda dengan text editor lain, vim tidak menampilkan menu untuk copy/cut paste. Namun, itu tidak masalah. Semua bisa diatur. Oya, ini semua berada dalam lingkungan vim dengan mode visual.
-Sebelum melakukan copy paste, tentunya memilih dulu yang akan dicopas.
-Tempatkan kursor di awal text yang akan dicops Tekan v untuk memulai blok Jalankan panah kanan kiri atas bawah untuk memilih blok Tekan y untuk copy (y singkatan dari yank), atau d untuk cut (d singkatan dari delete) Kalau mau mem-paste, tekan p di awal tempat tujuan paste Nah, selesai.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -468,7 +504,7 @@ Tempatkan kursor di awal text yang akan dicops Tekan v untuk memulai blok Jalank
   
   <a href="https://sasongko.web.id/page/23/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;24 / 65&nbsp;</span>
+  <span>&nbsp;24 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/25/"><i class="fa fa-chevron-right"></i></a>
   

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Android &middot; Catatan Sasongko</title>
 
@@ -260,10 +260,12 @@
   </header>
 
   <p>
-  Transfer data antara smartphone android dan komputer/pc/laptop linux (dalam contoh ini Slackware) dapat dilakukan dengan mudah. Kemudahan tersebut bahkan dapat dilakukan dengan mode text tanpa grafis.
-Misalkan akan menghubungkan storage yang ada di android smartphone dengan linux. Storage dimount ke direktori mtp. Direktori ini bebas, silahkan pilih sendiri sesuai kebutuhan/keinginan.
-$ jmtpfs mtp Selanjutnya dapat dilakukan transfer file seperti biasa. Jika sudah selesai unmount
-$ fusermount mtp 
+  <p>Transfer data antara <em>smartphone android</em> dan komputer/pc/laptop linux (dalam contoh ini <strong>Slackware</strong>) dapat dilakukan dengan mudah. Kemudahan tersebut bahkan dapat dilakukan dengan mode text tanpa grafis.</p>
+<p>Misalkan akan menghubungkan <em>storage</em> yang ada di <em>android smartphone</em> dengan linux. <em>Storage</em> dimount ke direktori mtp. Direktori ini bebas, silahkan pilih sendiri sesuai kebutuhan/keinginan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ jmtpfs mtp
+</span></span></code></pre></div><p>Selanjutnya dapat dilakukan transfer file seperti biasa. Jika sudah selesai unmount</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ fusermount mtp
+</span></span></code></pre></div>
   </p>
 
   
@@ -305,8 +307,9 @@ $ fusermount mtp
   </header>
 
   <p>
-  Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di external memory (sdcard) dengan nama file screenshot.png
-adb shell screencap -p /sdcard/screenshot.png 
+  <p>Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di <em>external memory</em> (sdcard) dengan nama file screenshot.png</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell screencap -p /sdcard/screenshot.png
+</span></span></code></pre></div>
   </p>
 
   
@@ -348,8 +351,9 @@ adb shell screencap -p /sdcard/screenshot.png
   </header>
 
   <p>
-  Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan adb
-adb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti angka 3 dengan 0.
+  <p>Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan <!-- raw HTML omitted -->adb<!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell settings put secure location_mode <span style="color:#ae81ff">3</span>
+</span></span></code></pre></div><p>Kalau ingin menonaktifkan, ganti angka 3 dengan 0.</p>
   </p>
 
   
@@ -391,9 +395,14 @@ adb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti a
   </header>
 
   <p>
-  Ketika akan memindahkan data dari HP android ke laptop melalui thunar, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui jmtpfs
-$ jmtpfs Device 0 (VID=0e8d and PID=201d) is a MediaTek Inc Elephone P8000. error returned by libusb_claim_interface() = -6LIBMTP PANIC: Unable to initialize device terminate called after throwing an instance of &#39;MtpErrorCantOpenDevice&#39; what(): Can&#39;t open device Aborted Ada masalah di libusb. Coba reinstall libusb
-# slackpkg reinstall libusb Alhamdulillah sukses.
+  <p>Ketika akan memindahkan data dari HP android ke laptop melalui <!-- raw HTML omitted -->thunar<!-- raw HTML omitted -->, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui <!-- raw HTML omitted -->jmtpfs<!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ jmtpfs
+</span></span><span style="display:flex;"><span>Device <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>VID<span style="color:#f92672">=</span>0e8d and PID<span style="color:#f92672">=</span>201d<span style="color:#f92672">)</span> is a MediaTek Inc Elephone P8000.
+</span></span><span style="display:flex;"><span>error returned by libusb_claim_interface<span style="color:#f92672">()</span> <span style="color:#f92672">=</span> -6LIBMTP PANIC: Unable to initialize device
+</span></span><span style="display:flex;"><span>terminate called after throwing an instance of <span style="color:#e6db74">&#39;MtpErrorCantOpenDevice&#39;</span>
+</span></span><span style="display:flex;"><span>  what<span style="color:#f92672">()</span>:  Can<span style="color:#960050;background-color:#1e0010">&#39;</span>t open device
+</span></span><span style="display:flex;"><span>Aborted
+</span></span></code></pre></div><p>Ada masalah di <!-- raw HTML omitted -->libusb<!-- raw HTML omitted -->. Coba reinstall <!-- raw HTML omitted -->libusb<!-- raw HTML omitted --></p>
   </p>
 
   
@@ -439,9 +448,9 @@ $ jmtpfs Device 0 (VID=0e8d and PID=201d) is a MediaTek Inc Elephone P8000. erro
   </header>
 
   <p>
-  Catatan kali ini masih seputar troubleshoot HP android dengan komputer terutama Slackware.
-Tadi malam, HP yang OS android touchscreen-nya tidak ada respon. Di semua bagian layar. Tapi tombol power dan volume masih berfungsi. Begitu juga dengan konektivitas internet maupun telepon. Mau mencoba di-restart, tombol power normal tapi untuk memilih shutdown atau reboot tidak bisa karena tochscreen-nya tidak ada respon. Lepas baterai? Tidak bisa karena baterainya tanam.
-Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersedia di SBo).
+  <p>Catatan kali ini masih seputar <em>troubleshoot</em> HP android dengan komputer terutama <strong>Slackware</strong>.</p>
+<p>Tadi malam, HP yang OS android <em>touchscreen</em>-nya tidak ada respon. Di semua bagian layar. Tapi tombol power dan volume masih berfungsi. Begitu juga dengan konektivitas internet maupun telepon. Mau mencoba di-<em>restart</em>, tombol power normal tapi untuk memilih <em>shutdown</em> atau <em>reboot</em> tidak bisa karena <em>tochscreen</em>-nya tidak ada respon. Lepas baterai? Tidak bisa karena baterainya tanam.</p>
+<p>Solusinya? <em>restart</em> via komputer. Pastikan sudah terinstall <em>andorid tools</em> (tersedia di SBo).</p>
   </p>
 
   
@@ -487,9 +496,11 @@ Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersed
   </header>
 
   <p>
-  Sebelum berganti ponsel atau HP sangat disarankan untuk mem-back up data-data penting, seperti dokumen, foto, video, maupun chat WhatsApp. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi Slackware.
-Persiapan Slackware Pastikan bisa menjalankan adb yang merupakan bagian dari android tools. Kalau belum bisa install dari SBo
-Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer pakai adb bisa lebih cepat
+  <p>Sebelum berganti ponsel atau HP sangat disarankan untuk mem-<em>back up</em> data-data penting, seperti dokumen, foto, video, maupun chat <em>WhatsApp</em>. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi <strong>Slackware</strong>.</p>
+<h1 id="persiapan-slackware">Persiapan <strong>Slackware</strong></h1>
+<p>Pastikan bisa menjalankan <!-- raw HTML omitted -->adb<!-- raw HTML omitted --> yang merupakan bagian dari <!-- raw HTML omitted -->android tools<!-- raw HTML omitted -->. Kalau belum bisa install dari SBo</p>
+<h1 id="mengapa-adb">Mengapa adb?</h1>
+<p>Mengapa <!-- raw HTML omitted -->adb<!-- raw HTML omitted -->? Mengapa tidak pakai <em>file manager</em> saja? Karena transfer pakai <!-- raw HTML omitted -->adb<!-- raw HTML omitted --> bisa lebih cepat</p>
   </p>
 
   
@@ -535,13 +546,15 @@ Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer
   </header>
 
   <p>
-  Di catatan kemarin sudah saya sampaikan [cara install sbopkg]({% post_url 2016-05-03-install-sbopkg %}), nah sekarang adalah contoh cara menggunakan sbopkg, untuk install Android Tools.
-Jalankan sebagai root
-sbopkg Tersedia pilihan Sync, Changelog, Packages, Updates, Browse, Search, Queue, Utilities, Help.
-Pilih Search
-Masukkan kata kuncinya, misalnya android
-Kemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan OK.
-Keluar beraneka opsi. Alangkah baiknya baca-baca README atau Info dulu terutama untuk cek dependensi pada bagian REQUIRE
+  <p>Di catatan kemarin sudah saya sampaikan [cara install <strong>sbopkg</strong>]({% post_url 2016-05-03-install-sbopkg %}), nah sekarang adalah contoh cara menggunakan <strong>sbopkg</strong>, untuk install <strong>Android Tools</strong>.</p>
+<p>Jalankan sebagai <strong>root</strong></p>
+<pre tabindex="0"><code>sbopkg
+</code></pre><p><img src="https://sasongko.web.id/gambar/sbopkg-android-tools-1.png" alt="">
+Tersedia pilihan <strong>Sync, Changelog, Packages, Updates, Browse, Search, Queue, Utilities, Help</strong>.</p>
+<p>Pilih <!-- raw HTML omitted -->Search<!-- raw HTML omitted --></p>
+<p>Masukkan kata kuncinya, misalnya <!-- raw HTML omitted -->android<!-- raw HTML omitted --></p>
+<p><img src="https://sasongko.web.id/gambar/sbopkg-android-tools-2.png" alt=""></p>
+<p>Kemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan <!-- raw HTML omitted -->OK<!-- raw HTML omitted -->.</p>
   </p>
 
   
@@ -589,9 +602,20 @@ Keluar beraneka opsi. Alangkah baiknya baca-baca README atau Info dulu terutama 
   </header>
 
   <p>
-  GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:
-python-protobuf (&gt;=2.4) python-requests (&gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&gt;=2.8) python 2.5+ java (opsional) Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
-easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).
+  <p>GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:</p>
+<ul>
+<li>python-protobuf (&gt;=2.4)</li>
+<li>python-requests (&gt;=0.12)</li>
+<li>python-ndg-httpsclient</li>
+<li>python-pyasn1</li>
+<li>python-wxgtk2.8 (&gt;=2.8)</li>
+<li>python 2.5+</li>
+<li>java (opsional)</li>
+</ul>
+<p>Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).</p>
+<pre tabindex="0"><code>easy_install protobuf requests ndg-httpsclient
+</code></pre><p>Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).
+Kemudian, unduh Google Play Downloadernya. Sebenarnya sih mau unduh dulu atau install dependensi dulu terserah. Sebenarnya ada .deb nya, tapi berhubung di sini pakai Slackware maka unduh aja <a href="http://codingteam.net/project/googleplaydownloader/download/file/googleplaydownloader_1.7.orig.tar.gz">kode sumbernya</a> biar lebih asyik.</p>
   </p>
 
   

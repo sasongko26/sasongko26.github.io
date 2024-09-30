@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Virtualisasi &middot; Catatan Sasongko</title>
 
@@ -227,6 +227,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/">Jalankan windows dari linux dengan qemu</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>28 Sep 2024</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Sebagian masyarakat memilih untuk <em>dualboot</em> atau bahkan <em>multiboot</em> dalam berkomputer. Satu Perangkat komputer diinstall lebih dari satu sistem operasi. Alhasil, harddisk pasti terbagi menjadi paling sedikit 2 partisi. Tak jarang, sistem operasi tersebut adalah linux dan windows. Kelemahan dari model seperti ini adalah pengguna harus memilih salah satu, mana sistem yang akan dijalankan. Namun, tidak demikian bila ada qemu.</p>
+<p>Qemu memungkinkan sistem operasi windows dipanggil atau dijalankan dari linux. Untuk dapat menjalankannya perlu install qemu (tentu saja) dan edk-ovmf. Keduanya tersedia di SBo.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2023-06-27-install-guest-os-qemu/">Install Guest OS Qemu</a></h2>
 
     <div class="post-meta">
@@ -260,8 +307,9 @@
   </header>
 
   <p>
-  Akan diinstall sebagai guest os slackware, dengan file iso slackware.iso, disk image slackware.qcow dan virtual RAM 5GB. Maka command yang dijalankan dengan qemu adalah
-$ qemu-system-x86_64 -enable-kvm -m 5120 -cdrom slackware.iso -drive file=slackware.qcow2 -boot d 
+  <p>Akan diinstall sebagai <em>guest os</em> slackware, dengan file iso slackware.iso, <em>disk image</em> slackware.qcow dan virtual RAM 5GB. Maka <em>command</em> yang dijalankan dengan qemu adalah</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ qemu-system-x86_64 -enable-kvm -m <span style="color:#ae81ff">5120</span> -cdrom slackware.iso -drive file<span style="color:#f92672">=</span>slackware.qcow2 -boot d
+</span></span></code></pre></div>
   </p>
 
   
@@ -303,8 +351,10 @@ $ qemu-system-x86_64 -enable-kvm -m 5120 -cdrom slackware.iso -drive file=slackw
   </header>
 
   <p>
-  Untuk membuat disk image sebagai storage sistem oprasi yang akan divirtualisasikan dengan qemu, bisa menggunakan command yang mudah. Misalkan nama file adalah slack.img dengan size 100G
-#penggunaan: qemu-img create file_disk_imagenya sizenya $ qemu-img create slack.img 100G 
+  <p>Untuk membuat <em>disk image</em> sebagai <em>storage</em> sistem oprasi yang akan divirtualisasikan dengan qemu, bisa menggunakan <em>command</em> yang mudah. Misalkan nama file adalah slack.img dengan <em>size</em> 100G</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> <span style="color:#75715e">#penggunaan: qemu-img create file_disk_imagenya sizenya </span>
+</span></span><span style="display:flex;"><span>$ qemu-img create slack.img 100G
+</span></span></code></pre></div>
   </p>
 
   
@@ -346,8 +396,9 @@ $ qemu-system-x86_64 -enable-kvm -m 5120 -cdrom slackware.iso -drive file=slackw
   </header>
 
   <p>
-  Untuk konversi file dd/img menjadi vdi mudah. Pastikan sudah install virtualbox. Misalkan akan mengubah file1.dd menjadi file2.vdi,
-$ VBoxManage convertfromraw file1.dd --format VDI file2.vdi 
+  <p>Untuk konversi file dd/img menjadi vdi mudah. Pastikan sudah install virtualbox. Misalkan akan mengubah file1.dd menjadi file2.vdi,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ VBoxManage convertfromraw file1.dd --format VDI file2.vdi
+</span></span></code></pre></div>
   </p>
 
   
@@ -389,9 +440,15 @@ $ VBoxManage convertfromraw file1.dd --format VDI file2.vdi
   </header>
 
   <p>
-  Setelah install virtualbox menggunakan binary .run, ketika dijalankan via terminal mengalami sgfault:
-bash-5.2$ virtualbox (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot register existing type &#39;NMAgentManagerError&#39; (process:7040): GLib-CRITICAL **: 00:53:14.710: g_once_init_leave: assertion &#39;result != 0&#39; failed (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot retrieve class for invalid (unclassed) type &#39;invalid&#39; Segmentation fault Solusinya:
-bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never 
+  <p>Setelah <strong>install virtualbox</strong> menggunakan <em>binary</em>  .run, ketika dijalankan via terminal mengalami sgfault:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bash-5.2$ virtualbox
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>process:7040<span style="color:#f92672">)</span>: GLib-GObject-WARNING **: 00:53:14.710: cannot register existing type <span style="color:#e6db74">&#39;NMAgentManagerError&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>process:7040<span style="color:#f92672">)</span>: GLib-CRITICAL **: 00:53:14.710: g_once_init_leave: assertion <span style="color:#e6db74">&#39;result != 0&#39;</span> failed
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>process:7040<span style="color:#f92672">)</span>: GLib-GObject-WARNING **: 00:53:14.710: cannot retrieve class <span style="color:#66d9ef">for</span> invalid <span style="color:#f92672">(</span>unclassed<span style="color:#f92672">)</span> type <span style="color:#e6db74">&#39;invalid&#39;</span>
+</span></span><span style="display:flex;"><span>Segmentation fault
+</span></span></code></pre></div><p>Solusinya:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never
+</span></span></code></pre></div>
   </p>
 
   
@@ -433,17 +490,27 @@ bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never
   </header>
 
   <p>
-  Docker image yang suah tidak digunakan sebaiknya dihapus saja, agar storage lebih longgar. Pastikan docker daemon aktif
-dockerd List docker imagenya
-$ docker images REPOSITORY TAG IMAGE ID CREATED SIZE qgis/qgis release-3_16 ee28ddd8c37a 4 days ago 7.43GB qgis/qgis &lt;none&gt; c84657a1e2f6 3 weeks ago 7.43GB Hapus
-$ docker rmi -f ee28ddd8c37a c84657a1e2f6 Ingin menghapus semua container, image, dll
-$ docker system prune -a WARNING! This will remove: - all stopped containers - all networks not used by at least one container - all dangling images - all dangling build cache Are you sure you want to continue?
+  <p><em>Docker image</em> yang suah tidak digunakan sebaiknya dihapus saja, agar <em>storage</em> lebih longgar. Pastikan docker daemon aktif</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dockerd
+</span></span></code></pre></div><p>List docker imagenya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker images
+</span></span><span style="display:flex;"><span>REPOSITORY   TAG            IMAGE ID       CREATED       SIZE
+</span></span><span style="display:flex;"><span>qgis/qgis    release-3_16   ee28ddd8c37a   <span style="color:#ae81ff">4</span> days ago    7.43GB
+</span></span><span style="display:flex;"><span>qgis/qgis    &lt;none&gt;         c84657a1e2f6   <span style="color:#ae81ff">3</span> weeks ago   7.43GB
+</span></span></code></pre></div><p>Hapus</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker rmi -f ee28ddd8c37a c84657a1e2f6
+</span></span></code></pre></div><p>Ingin menghapus semua container, image, dll</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker system prune -a
+</span></span><span style="display:flex;"><span>WARNING! This will remove:
+</span></span><span style="display:flex;"><span>  - all stopped containers
+</span></span><span style="display:flex;"><span>  - all networks not used by at least one container
+</span></span><span style="display:flex;"><span>  - all dangling images
+</span></span><span style="display:flex;"><span>  - all dangling build cache
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Are you sure you want to <span style="color:#66d9ef">continue</span>? <span style="color:#f92672">[</span>y/N<span style="color:#f92672">]</span> y
+</span></span></code></pre></div>
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-11-14-hapus-docker-image/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -485,9 +552,11 @@ $ docker system prune -a WARNING! This will remove: - all stopped containers - a
   </header>
 
   <p>
-  Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.
-Install docker dan docker-cli QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.
-Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.
+  <p>Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.</p>
+<h1 id="install-docker-dan-docker-cli">Install docker dan docker-cli</h1>
+<p>QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.</p>
+<h1 id="install-docker-qgis">Install docker QGIS</h1>
+<p>Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.04 LTS. Yang harus diperhatikan, versi qgis yang digunakan adalah versi 3.16 LTR, sedangkan yang disediakan repo resmi ubuntu 20.04 masihi versi 3.10.</p>
   </p>
 
   
@@ -533,9 +602,10 @@ Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam
   </header>
 
   <p>
-  Tiba-tiba terlintas keinginan mencoba fedora. Sejak mengenal linux tahun 2005an, saya belum pernah menggunakan fedora. Entah kalau saat itu warnetnya pakai fedora wkwkwkwk. Pertama memakai linux memang di warnet. Saat itu warnetnya menawarkan pakai Windows atau linux, saya pilih linux karena tarifnya 50% lebih murah.
-Kembali ke topik. Berikut akan install fedora secara virtual via lxc.
-$ lxc-create -n fedora -t download Opsi n adalah untuk memberi nama containernya, t template yang digunakan.
+  <p>Tiba-tiba terlintas keinginan mencoba <strong>fedora</strong>. Sejak mengenal linux tahun 2005an, saya belum pernah menggunakan <strong>fedora</strong>. Entah kalau saat itu warnetnya pakai <strong>fedora</strong> wkwkwkwk. Pertama memakai linux memang di warnet. Saat itu warnetnya menawarkan pakai Windows atau linux, saya pilih linux karena tarifnya 50% lebih murah.</p>
+<p>Kembali ke topik. Berikut akan install <strong>fedora</strong> secara virtual via <strong>lxc</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ lxc-create -n fedora -t download
+</span></span></code></pre></div><p>Opsi n adalah untuk memberi nama containernya, t template yang digunakan. Karena akan mendownload dari reponya gunakan template download.</p>
   </p>
 
   
@@ -585,10 +655,10 @@ $ lxc-create -n fedora -t download Opsi n adalah untuk memberi nama containernya
   </header>
 
   <p>
-  Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
-Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
-modprobe nbd max_part=N max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.
-Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbd yang mengaktifkan koneksi file /mnt/virtual/image/ign11.
+  <p>Untuk mengaitkan/<em>mount</em> berkas <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> ternyata tidak bisa langsung di- <em>mount</em> begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses <em>root</em></p>
+<p>Modul kernel NBD aktifkan dulu. Secara <em>default</em> modul NBD nonaktif. Untuk mengaktifkannya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modprobe nbd max_part<span style="color:#f92672">=</span>N
+</span></span></code></pre></div><p><!-- raw HTML omitted -->max_part=N<!-- raw HTML omitted --> isikan jumlah partisi yang ingin ditangani pada <!-- raw HTML omitted -->N<!-- raw HTML omitted -->. Misalnya, <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> tersebut kalau dijalankan dengan <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> berisi 8 partisi, maka nilai <!-- raw HTML omitted -->N<!-- raw HTML omitted --> adalah 8.</p>
   </p>
 
   
@@ -638,8 +708,24 @@ Setalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbd yan
   </header>
 
   <p>
-  Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Manager belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failure dengan detail sebagai berikut
-Unable to connect to libvirt. internal error: Cannot find suitable emulator for x86_64 Libvirt URI is: qemu:///system Traceback (most recent call last): File &#34;/usr/share/virt-manager/virtManager/connection.py&#34;, line 979, in _open_thread self._populate_initial_state() File &#34;/usr/share/virt-manager/virtManager/connection.
+  <p>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata <!-- raw HTML omitted -->Virtual Manager<!-- raw HTML omitted --> belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka <em>graphical front-end</em>-nya, tapi ternyata kemudian muncul kotak dialog <!-- raw HTML omitted -->Virtual Machine Manager Connection Failure<!-- raw HTML omitted --> dengan detail sebagai berikut</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Unable to connect to libvirt.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>internal error: Cannot find suitable emulator <span style="color:#66d9ef">for</span> x86_64
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Libvirt URI is: qemu:///system
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtManager/connection.py&#34;</span>, line 979, in _open_thread
+</span></span><span style="display:flex;"><span>    self._populate_initial_state<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtManager/connection.py&#34;</span>, line 941, in _populate_initial_state
+</span></span><span style="display:flex;"><span>    logging.debug<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;conn version=%s&#34;</span>, self._backend.conn_version<span style="color:#f92672">())</span>
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtinst/connection.py&#34;</span>, line 316, in conn_version
+</span></span><span style="display:flex;"><span>    self._conn_version <span style="color:#f92672">=</span> self._libvirtconn.getVersion<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/lib64/python2.7/site-packages/libvirt.py&#34;</span>, line 3984, in getVersion
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ret <span style="color:#f92672">==</span> -1: raise libvirtError <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;virConnectGetVersion() failed&#39;</span>, conn<span style="color:#f92672">=</span>self<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>libvirtError: internal error: Cannot find suitable emulator <span style="color:#66d9ef">for</span> x86_64
+</span></span></code></pre></div><p>Cek <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> apakah masih terinstall atau tidak. Harusnya sih memang terinstall karena saya belum pernah menghapusnya.</p>
   </p>
 
   
@@ -691,8 +777,19 @@ Unable to connect to libvirt. internal error: Cannot find suitable emulator for 
   </header>
 
   <p>
-  Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.
-$ virt-manager Traceback (most recent call last): File &#34;/usr/share/virt-manager/virt-manager&#34;, line 33, in &lt;module&gt; from virtinst import util as util File &#34;/usr/share/virt-manager/virtinst/__init__.py&#34;, line 89, in &lt;module&gt; from virtinst.distroinstaller import DistroInstaller File &#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;, line 23, in &lt;module&gt; from . import urlfetcher File &#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;, line 34, in &lt;module&gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests.
+  <p>Setelah [<em>upgrade slackbuilds</em>]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata <!-- raw HTML omitted -->Virtual Machine Manager<!-- raw HTML omitted --> tidak bisa dijalankan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ virt-manager
+</span></span><span style="display:flex;"><span>Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virt-manager&#34;</span>, line 33, in &lt;module&gt;
+</span></span><span style="display:flex;"><span>    from virtinst import util as util
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtinst/__init__.py&#34;</span>, line 89, in &lt;module&gt;
+</span></span><span style="display:flex;"><span>    from virtinst.distroinstaller import DistroInstaller
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;</span>, line 23, in &lt;module&gt;
+</span></span><span style="display:flex;"><span>    from . import urlfetcher
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;</span>, line 34, in &lt;module&gt;
+</span></span><span style="display:flex;"><span>    import requests
+</span></span><span style="display:flex;"><span>ImportError: No module named requests
+</span></span></code></pre></div><p>Ternyata, ada masalah dependensi. <!-- raw HTML omitted -->ImportError: No module named requests<!-- raw HTML omitted --> menunjukkan tidak adanya modul <!-- raw HTML omitted -->requests<!-- raw HTML omitted -->, atau tidak terinstall paket <!-- raw HTML omitted -->python-requests<!-- raw HTML omitted -->. Ini dibuktikan dengan <em>output</em> <!-- raw HTML omitted -->ls /var/log/packages|grep python-request<!-- raw HTML omitted --> yang kosong.</p>
   </p>
 
   
@@ -740,9 +837,12 @@ $ virt-manager Traceback (most recent call last): File &#34;/usr/share/virt-mana
   </header>
 
   <p>
-  Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.
-Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya
-$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% Clone hard disk created in format &#39;VMDK&#39;. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa Hardisk virtualnya sudah terkonversi.
+  <p>Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.</p>
+<p>Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya</p>
+<pre tabindex="0"><code>$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% 
+Clone hard disk created in format &#39;VMDK&#39;. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa
+</code></pre><p>Hardisk virtualnya sudah terkonversi.</p>
   </p>
 
   

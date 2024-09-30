@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,61 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/">Copy paste vim mode visual</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 Feb 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text-editor</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p><strong>VIm</strong> merupakan <em>text editor</em> legendaris yang sampai saat ini masih memiliki penggemar. Penulis salah satunya. Berbeda dengan <em>text editor</em> lain, <strong>vim</strong> tidak menampilkan menu untuk <em>copy/cut paste</em>. Namun, itu tidak masalah. Semua bisa diatur. Oya, ini semua berada dalam lingkungan <strong>vim</strong> dengan <strong>mode visual</strong>.</p>
+<p>Sebelum melakukan <em>copy paste</em>, tentunya memilih dulu yang akan dicopas.</p>
+<ol>
+<li>Tempatkan kursor di awal text yang akan dicops</li>
+<li>Tekan <strong>v</strong> untuk memulai blok</li>
+<li>Jalankan panah kanan kiri atas bawah untuk memilih blok</li>
+<li>Tekan <strong>y</strong> untuk <em>copy</em> (y singkatan dari yank), atau <strong>d</strong> untuk <em>cut</em> (d singkatan dari delete)</li>
+<li>Kalau mau mem-<em>paste</em>, tekan <strong>p</strong> di awal tempat tujuan <em>paste</em></li>
+</ol>
+<p>Nah, selesai.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-02-07-impor-library-python/">Impor library python</a></h2>
 
     <div class="post-meta">
@@ -261,9 +316,11 @@
   </header>
 
   <p>
-  Dengan adanya library, programmer python dimudahkan. Lebih efisien. Contoh : untuk mencari nilai akar kuadrat, tidak perlu menuliskan bertele-tele menuliskan rumus. Tinggal impor dan gunakan fungsi yang ada saja Misalkan akan mencari nilai akar kuadrat dari 100.
-import math print(math.sqrt(100)) Baris 1, deklarasi untuk mengimpor library. Nama library-nya math.
-Baris 2, fungsi print() untuk menampilkan ke layar. sqrt() adalah fungsi untuk mencari nilai akar kuadrat. Karena fungsi ini ada di library atau modul math, maka dituliskan juga librarynya.
+  <p>Dengan adanya <strong>library</strong>, <em>programmer</em> <strong>python</strong> dimudahkan. Lebih efisien. Contoh : untuk mencari nilai akar kuadrat, tidak perlu menuliskan bertele-tele menuliskan rumus. Tinggal impor dan gunakan fungsi yang ada saja Misalkan akan mencari nilai akar kuadrat dari 100.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> math
+</span></span><span style="display:flex;"><span>print(math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">100</span>))
+</span></span></code></pre></div><p>Baris 1, deklarasi untuk mengimpor <em>library</em>. Nama <em>library</em>-nya <strong>math</strong>.</p>
+<p>Baris 2, fungsi print() untuk menampilkan ke layar. sqrt() adalah fungsi untuk mencari nilai akar kuadrat. Karena fungsi ini ada di library atau modul math, maka dituliskan juga librarynya.</p>
   </p>
 
   
@@ -309,10 +366,21 @@ Baris 2, fungsi print() untuk menampilkan ke layar. sqrt() adalah fungsi untuk m
   </header>
 
   <p>
-  Comments atau komentar adalah sekumpulan teks yang dituliskan dalam program tetapi tidak akan dieksekusi. Ada 2 jenis comments dalam bahasa python, yaitu
-Single line comment. Hanya terdiri dari 1 baris comments. Untuk menuliskannya, beri tanda # di awal comments. Contoh :
-# ini adalah single line comment Multiline comments. Terdiri dari lebih dari 1 baris. Dibuka dan ditutup dengan ''' Contoh :
-&#39;&#39;&#39; ini adalah program python untuk mengetahui sesuatu &#39;&#39;&#39; 
+  <p><strong>Comments</strong> atau komentar adalah sekumpulan teks yang dituliskan dalam program tetapi tidak akan dieksekusi. Ada 2 jenis <strong>comments</strong> dalam bahasa <strong>python</strong>, yaitu</p>
+<ol>
+<li><em>Single line comment</em>. Hanya terdiri dari 1 baris <em>comments</em>. Untuk menuliskannya, beri tanda # di awal <em>comments</em>.</li>
+</ol>
+<p>Contoh :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ini adalah single line comment</span>
+</span></span></code></pre></div><ol start="2">
+<li><em>Multiline comments</em>. Terdiri dari lebih dari 1 baris. Dibuka dan ditutup dengan '''</li>
+</ol>
+<p>Contoh :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#e6db74">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">ini adalah program python
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">untuk mengetahui sesuatu
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -354,12 +422,25 @@ Single line comment. Hanya terdiri dari 1 baris comments. Untuk menuliskannya, b
   </header>
 
   <p>
-  Python memiliki beberapa tipe data, yaitu :
-None Numeric Boolean Sequence Set Map Tipe data python none Hanya memiliki 1 nilai yaitu None
-Tipe data numeric Tipe data numeric terdiri atas tipe data integer dan float. Integer merupakan bilangan bulat. Float merupakan bilangan desimal.
-Tipe data boolean Terdiri dari 2 nilai yaitu True dan False
-Tipe data sequence Ada 3 macam yaitu string, list dan tuple
-Tipe data string Data ini diapit oleh ' atau &quot;.
+  <p><strong>Python</strong> memiliki beberapa tipe data, yaitu :</p>
+<ol>
+<li>None</li>
+<li>Numeric</li>
+<li>Boolean</li>
+<li>Sequence</li>
+<li>Set</li>
+<li>Map</li>
+</ol>
+<h1 id="tipe-data-python-none">Tipe data python none</h1>
+<p>Hanya memiliki 1 nilai yaitu None</p>
+<h1 id="tipe-data-numeric">Tipe data numeric</h1>
+<p>Tipe data numeric terdiri atas tipe data <strong>integer</strong> dan <strong>float</strong>. Integer merupakan bilangan bulat. Float merupakan bilangan desimal.</p>
+<h1 id="tipe-data-boolean">Tipe data boolean</h1>
+<p>Terdiri dari 2 nilai yaitu <strong>True</strong> dan <strong>False</strong></p>
+<h1 id="tipe-data-sequence">Tipe data sequence</h1>
+<p>Ada 3 macam yaitu <strong>string</strong>, <strong>list</strong> dan <strong>tuple</strong></p>
+<h2 id="tipe-data-string">Tipe data string</h2>
+<p>Data ini diapit oleh ' atau &quot;. Contoh :</p>
   </p>
 
   
@@ -405,51 +486,13 @@ Tipe data string Data ini diapit oleh ' atau &quot;.
   </header>
 
   <p>
-  Dalam bahasa python, ada 4 ketentuan pemberian nama variabel, yaitu :
-Harus dimulai dengan huruf (a-z, A-Z) atau garis bawah underscore (_) dan tidak boleh diawali dengan angka (0-9). Boleh mengandung karakter huruf, angka dan underscore (a-z, A-Z, 0-9, _) Bersifat sensitive case yang mengartikan bahwa variabel Nama, nama dan NAMA adalah variabel yang berbeda Tidak boleh menggunakan reserved words seperti for, while, return 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-03-mengubah-colorscheme-kdevelop/">Mengubah color scheme kdevelop</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>03 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Kdevelop merupakan integrated development environment (IDE) default dari KDE yang merupakan salah satu official packages dari Slackware. Kdevelop mendukung berbagai bahasa pemrograman, yaitu C, C++, python, javascript dan PHP.
-Secara default, color scheme yang diaktifkan kdevelop bernuansa terang. Ada sebagian pengguna yang lebih menyukai nuansa gelap. Caranya, klik Settings - Color Scheme, lalu pilih color scheme yang diinginkan. Video berikut ini menunjukkan mudahnya mengubah color scheme-nya dari Default menjadi Breeze High Contrast
+  <p>Dalam bahasa <strong>python</strong>, ada 4 ketentuan pemberian nama variabel, yaitu :</p>
+<ol>
+<li>Harus dimulai dengan huruf (a-z, A-Z) atau garis bawah <em>underscore</em> (_) dan tidak boleh diawali dengan angka (0-9).</li>
+<li>Boleh mengandung karakter huruf, angka dan <em>underscore</em> (a-z, A-Z, 0-9, _)</li>
+<li>Bersifat <em>sensitive case</em> yang mengartikan bahwa variabel <strong>Nama</strong>, <strong>nama</strong> dan <strong>NAMA</strong> adalah variabel yang berbeda</li>
+<li>Tidak boleh menggunakan <em>reserved words</em> seperti for, while, return</li>
+</ol>
   </p>
 
   
@@ -464,7 +507,7 @@ Secara default, color scheme yang diaktifkan kdevelop bernuansa terang. Ada seba
   
   <a href="https://sasongko.web.id/page/24/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;25 / 65&nbsp;</span>
+  <span>&nbsp;25 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/26/"><i class="fa fa-chevron-right"></i></a>
   

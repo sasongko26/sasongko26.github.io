@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Multimedia &middot; Catatan Sasongko</title>
 
@@ -260,9 +260,16 @@
   </header>
 
   <p>
-  Kooha adalah salah satu aplikasi screen recorder. Keunggulannya antara lain:
-User interface atau tampilan yang simpel tapi tetap mudah dimengerti Bisa dijalankan dengan baik di lingkungan wayland dan X11 Mudah dijalankan Mudah di-install. Kooha menyediakan metode instalasi menggunakan flatpak. Inilah cara yang kami sarankan untuk slackers mengingat belum ada di SBo. Caranya
-$ flatpak install io.github.seadve.Kooha 
+  <p><strong>Kooha</strong> adalah salah satu aplikasi <em>screen recorder</em>. Keunggulannya antara lain:</p>
+<ol>
+<li><em>User interface</em> atau tampilan yang simpel tapi tetap mudah dimengerti</li>
+<li>Bisa dijalankan dengan baik di lingkungan  <strong>wayland</strong> dan <strong>X11</strong></li>
+<li>Mudah dijalankan</li>
+<li>Mudah di-<em>install</em>.</li>
+</ol>
+<p><strong>Kooha</strong> menyediakan metode instalasi menggunakan <strong>flatpak</strong>. Inilah cara yang kami sarankan untuk <em>slackers</em> mengingat belum ada di SBo. Caranya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ flatpak install io.github.seadve.Kooha
+</span></span></code></pre></div>
   </p>
 
   
@@ -306,9 +313,26 @@ $ flatpak install io.github.seadve.Kooha
   </header>
 
   <p>
-  Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi
-Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz Memory: 11,5 GiB of RAM Graphics Processor: Mesa Intel® UHD Graphics 600 dengan audio awalnya berupa dummy output alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.
-$ aplay -l **** List of PLAYBACK Hardware Devices **** card 0: sofessx8336 [sof-essx8336], device 0: ES8336 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 5: HDMI 1 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 6: HDMI 2 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 7: HDMI 3 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker.
+  <p>Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi</p>
+<pre tabindex="0"><code>Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz
+Memory: 11,5 GiB of RAM
+Graphics Processor: Mesa Intel® UHD Graphics 600
+</code></pre><p>dengan audio awalnya berupa <em>dummy output</em> alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ aplay -l
+</span></span><span style="display:flex;"><span>**** List of PLAYBACK Hardware Devices ****
+</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 0: ES8336 <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>  Subdevices: 1/1
+</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
+</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 5: HDMI <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>  Subdevices: 1/1
+</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
+</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 6: HDMI <span style="color:#ae81ff">2</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>  Subdevices: 1/1
+</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
+</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 7: HDMI <span style="color:#ae81ff">3</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>  Subdevices: 1/1
+</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
+</span></span></code></pre></div><p>Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker. Yah, laptop masih diam seribu bahasa. <strong>Sound Open Firmware</strong> memberikan secercah harapan. Apalagi kemudian <strong>sof-firmware</strong> masuk ke repo <em>current</em>. Namun sayang, laptop masih membisu. Beberapa kali upgrade kernel, alsa, pulseaudio dan pipewire, masih saja tak terdengar. Alhamdulillah kemudian menemukan solusi dari <em>issue</em> yang dibuat oleh junocom di github alsa-project/alsa-ucm-conf.</p>
   </p>
 
   
@@ -354,9 +378,11 @@ $ aplay -l **** List of PLAYBACK Hardware Devices **** card 0: sofessx8336 [sof-
   </header>
 
   <p>
-  Catatan tentang pipewire sebenarnya sudah pernah dituliskan. Tetapi, biar tidak lupa dan lebih mudah mencarinya kala lupa, tidak ada salahnya dibuat catatan tersendiri. Bedanya, ini lebih singkat dan mudah dikerjakan.
-Salah satu keberuntungan slackers adalah Patrick Volkerding menyediakan skrip untuk meng-enable dan disable pipewire. Skrip tersebut adalah
-/usr/sbin/pipewire-enable.sh /usr/sbin/pipewire-disable.sh Silakan dieksekusi sesuai kebutuhan.
+  <p>Catatan tentang <strong>pipewire</strong> sebenarnya sudah pernah dituliskan. Tetapi, biar tidak lupa dan lebih mudah mencarinya kala lupa, tidak ada salahnya dibuat catatan tersendiri. Bedanya, ini lebih singkat dan mudah dikerjakan.</p>
+<p>Salah satu keberuntungan <strong>slackers</strong> adalah Patrick Volkerding menyediakan skrip untuk meng-<em>enable</em> dan <em>disable</em> <strong>pipewire</strong>. Skrip tersebut adalah</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/usr/sbin/pipewire-enable.sh
+</span></span><span style="display:flex;"><span>/usr/sbin/pipewire-disable.sh
+</span></span></code></pre></div><p>Silakan dieksekusi sesuai kebutuhan.</p>
   </p>
 
   
@@ -400,9 +426,15 @@ Salah satu keberuntungan slackers adalah Patrick Volkerding menyediakan skrip un
   </header>
 
   <p>
-  Langsung saja
-cd /opt git clone https://github.com/thesofproject/sof-bin.git cd sof-bin Masuk ke direktori rilis terbaru, contoh kali ini v2.2
-cd v2.2.x rsync -a sof-v2.2/ /lib/firmware/intel/sof/ rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/ 
+  <p>Langsung saja</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /opt
+</span></span><span style="display:flex;"><span>git clone https://github.com/thesofproject/sof-bin.git
+</span></span><span style="display:flex;"><span>cd sof-bin
+</span></span></code></pre></div><p>Masuk ke direktori rilis terbaru, contoh kali ini v2.2</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd v2.2.x
+</span></span><span style="display:flex;"><span>rsync -a sof-v2.2/ /lib/firmware/intel/sof/
+</span></span><span style="display:flex;"><span>rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/
+</span></span></code></pre></div>
   </p>
 
   
@@ -444,15 +476,15 @@ cd v2.2.x rsync -a sof-v2.2/ /lib/firmware/intel/sof/ rsync -a sof-tplg-v2.2 /li
   </header>
 
   <p>
-  Lama tidak menggunakan, hati ini rindu pada WindowMaker. Segera mengalihkan .xinitrc ke xinitrc.wmaker. Beberapa hari kemudian, merasa ada yang janggal. Suasana menjadi sunyi senyap. Tanpa suara. Padahal ketika menggunakan KDE Plasma tidak ada masalah dengan sound system.
-Hati ini baru sadar bahwa sound-nya telah diserahterimakan dari pulseaudio kepada pipewire. Baiklah, mari tambahkan beberapa baris berikut ke ~/GNUstep/Library/WindowMaker/autostart
-#pipewire /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire /usr/bin/pipewire &amp; /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire-pulse /usr/bin/pipewire-pulse &amp; /usr/bin/daemon -frB --pidfiles=~/.
+  <p>Lama tidak menggunakan, hati ini rindu pada <strong>WindowMaker</strong>. Segera mengalihkan <strong>.xinitrc</strong> ke <strong>xinitrc.wmaker</strong>. Beberapa hari kemudian, merasa ada yang janggal. Suasana menjadi sunyi senyap. Tanpa suara. Padahal ketika menggunakan <strong>KDE Plasma</strong> tidak ada masalah dengan <em>sound system</em>.</p>
+<p>Hati ini baru sadar bahwa <em>sound</em>-nya telah diserahterimakan dari <strong>pulseaudio</strong> kepada <strong>pipewire</strong>. Baiklah, mari tambahkan beberapa baris berikut ke ~/GNUstep/Library/WindowMaker/autostart</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#pipewire</span>
+</span></span><span style="display:flex;"><span>/usr/bin/daemon -frB --pidfiles<span style="color:#f92672">=</span>~/.run --name<span style="color:#f92672">=</span>pipewire /usr/bin/pipewire &amp;
+</span></span><span style="display:flex;"><span>/usr/bin/daemon -frB --pidfiles<span style="color:#f92672">=</span>~/.run --name<span style="color:#f92672">=</span>pipewire-pulse /usr/bin/pipewire-pulse &amp;
+</span></span><span style="display:flex;"><span>/usr/bin/daemon -frB --pidfiles<span style="color:#f92672">=</span>~/.run --name<span style="color:#f92672">=</span>pipewire-media-session /usr/bin/pipewire-media-session &amp;
+</span></span></code></pre></div>
   </p>
 
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -492,11 +524,15 @@ Hati ini baru sadar bahwa sound-nya telah diserahterimakan dari pulseaudio kepad
   </header>
 
   <p>
-  Salah satu fitur baru yang dihadirkan Slackware 15.0 adalah masuknya pipewire sebagai alternatif dari pulseaudio. Bagaimana penggunaanya? Silakan simak catatan berikut ini.
-Pertama, edit /etc/pulse/client.conf. Ubah autospawn dari yes menjadi no.
-Hapus /etc/xdg/autostart/pulseaudio.desktop atau rename menjadi file yang &ldquo;tidak penting&rdquo;.
-Rename file berikut menjadi .desktop saja
-/etc/xdg/autostart/pipewire-media-session.desktop.sample /etc/xdg/autostart/pipewire-pulse.desktop.sample /etc/xdg/autostart/pipewire.desktop 
+  <p>Salah satu fitur baru yang dihadirkan <strong>Slackware 15.0</strong> adalah masuknya <strong>pipewire</strong> sebagai alternatif dari <strong>pulseaudio</strong>. Bagaimana penggunaanya? Silakan simak catatan berikut ini.</p>
+<p>Pertama, edit /etc/pulse/client.conf. Ubah autospawn dari yes menjadi no.</p>
+<p>Hapus /etc/xdg/autostart/pulseaudio.desktop atau rename menjadi file yang &ldquo;tidak penting&rdquo;.</p>
+<p>Rename file berikut menjadi .desktop saja</p>
+<ol>
+<li>/etc/xdg/autostart/pipewire-media-session.desktop.sample</li>
+<li>/etc/xdg/autostart/pipewire-pulse.desktop.sample</li>
+<li>/etc/xdg/autostart/pipewire.desktop</li>
+</ol>
   </p>
 
   
@@ -538,7 +574,7 @@ Rename file berikut menjadi .desktop saja
   </header>
 
   <p>
-  Untuk mengubah background gambar menjadi transparan, bisa dilakukan dengan mudah menggunakan krita. Klik menu Filter &ndash;&gt; Colours &ndash;&gt; Colour to Aplha. Color picker pilih warna background yang akan diganti menjadi transparan. Threshold atur 100 atau sesuai kebutuhan. Kemudian Ok.
+  <p>Untuk mengubah <em>background</em> gambar menjadi transparan, bisa dilakukan dengan mudah menggunakan <strong>krita</strong>. Klik menu Filter &ndash;&gt; Colours &ndash;&gt; Colour to Aplha. Color picker pilih warna background yang akan diganti menjadi transparan. Threshold atur 100 atau sesuai kebutuhan. Kemudian Ok.</p>
   </p>
 
   
@@ -582,8 +618,13 @@ Rename file berikut menjadi .desktop saja
   </header>
 
   <p>
-  Untuk menghapus history atau riwayat video yang ditonton dengan QtAV Player ada 2 cara:
-melalui QtAV Player dengan klik History kemudian Clear menghapus file historynya $ rm ~/.local/share/Player/*.qds Command tersebut juga menghapus riwayat playlist
+  <p>Untuk menghapus <em>history</em> atau riwayat video yang ditonton dengan <strong>QtAV Player</strong> ada 2 cara:</p>
+<ol>
+<li>melalui QtAV Player dengan klik <strong>History</strong> kemudian <strong>Clear</strong></li>
+<li>menghapus file historynya</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm ~/.local/share/Player/*.qds
+</span></span></code></pre></div><p><em>Command</em> tersebut juga menghapus riwayat <em>playlist</em></p>
   </p>
 
   
@@ -625,7 +666,7 @@ melalui QtAV Player dengan klik History kemudian Clear menghapus file historynya
   </header>
 
   <p>
-  Ketika mengedit video menggunakan ffmpeg, filter video ataupun filter yang lebih kompleks seperti menambahkan watermark, tanpa pengaturan tambahan kadang hasilnya mengecewakan. Gambar pada video menjadi pecah. Untuk meminimalisirnya, bisa ditambahkan opsi -q:v 0.
+  <p>Ketika mengedit video menggunakan <!-- raw HTML omitted -->ffmpeg<!-- raw HTML omitted -->, filter video ataupun filter yang lebih kompleks seperti menambahkan watermark, tanpa pengaturan tambahan kadang hasilnya mengecewakan. Gambar pada video menjadi pecah. Untuk meminimalisirnya, bisa ditambahkan opsi <!-- raw HTML omitted -->-q:v 0<!-- raw HTML omitted -->.</p>
   </p>
 
   
@@ -667,9 +708,22 @@ melalui QtAV Player dengan klik History kemudian Clear menghapus file historynya
   </header>
 
   <p>
-  Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu
-piknik-1.mkv piknik-2.mkv piknik-3.mkv piknik-4.mkv Keempat file tersebut berada dalam folder yang sama. Kemudian mereka akan digabungkan menjadi piknik.mkv. Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.
-$ vim list-piknik file &#39;piknik-1.
+  <p>Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu</p>
+<ol>
+<li>piknik-1.mkv</li>
+<li>piknik-2.mkv</li>
+<li>piknik-3.mkv</li>
+<li>piknik-4.mkv</li>
+</ol>
+<p>Keempat file tersebut berada dalam folder yang sama.
+Kemudian mereka akan digabungkan menjadi piknik.mkv.
+Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vim list-piknik
+</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-1.mkv&#39;</span>
+</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-2.mkv&#39;</span>
+</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-3.mkv&#39;</span>
+</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-4.mkv&#39;</span>
+</span></span></code></pre></div><p>Untuk menggabungnya</p>
   </p>
 
   
@@ -715,9 +769,55 @@ $ vim list-piknik file &#39;piknik-1.
   </header>
 
   <p>
-  Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.
-Untuk mengetahui intensitas suara video intro.mkv
-$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &#39;intro.mkv&#39;: Metadata: COMPATIBLE_BRANDS: isommp42 COM.ANDROID.VERSION: 9 MAJOR_BRAND : mp42 MINOR_VERSION : 0 ENCODER : Lavf58.29.100 Duration: 00:00:14.90, start: 0.000000, bitrate: 5559 kb/s Stream #0:0(eng): Video: mpeg4 (Simple Profile), yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 1k tbn, 30 tbc (default) Metadata: HANDLER_NAME : VideoHandle ENCODER : Lavc58.
+  <p>Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.</p>
+<p>Untuk mengetahui intensitas suara video intro.mkv</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null
+</span></span><span style="display:flex;"><span>Input <span style="color:#75715e">#0, matroska,webm, from &#39;intro.mkv&#39;:</span>
+</span></span><span style="display:flex;"><span>  Metadata:
+</span></span><span style="display:flex;"><span>    COMPATIBLE_BRANDS: isommp42
+</span></span><span style="display:flex;"><span>    COM.ANDROID.VERSION: <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span>    MAJOR_BRAND     : mp42
+</span></span><span style="display:flex;"><span>    MINOR_VERSION   : <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    ENCODER         : Lavf58.29.100
+</span></span><span style="display:flex;"><span>  Duration: 00:00:14.90, start: 0.000000, bitrate: <span style="color:#ae81ff">5559</span> kb/s
+</span></span><span style="display:flex;"><span>    Stream <span style="color:#75715e">#0:0(eng): Video: mpeg4 (Simple Profile), yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 1k tbn, 30 tbc (default)</span>
+</span></span><span style="display:flex;"><span>    Metadata:
+</span></span><span style="display:flex;"><span>      HANDLER_NAME    : VideoHandle
+</span></span><span style="display:flex;"><span>      ENCODER         : Lavc58.54.100 mpeg4
+</span></span><span style="display:flex;"><span>      DURATION        : 00:00:14.900000000
+</span></span><span style="display:flex;"><span>    Stream <span style="color:#75715e">#0:1(eng): Audio: vorbis, 48000 Hz, stereo, fltp (default)</span>
+</span></span><span style="display:flex;"><span>    Metadata:
+</span></span><span style="display:flex;"><span>      HANDLER_NAME    : SoundHandle
+</span></span><span style="display:flex;"><span>      ENCODER         : Lavc58.54.100 libvorbis
+</span></span><span style="display:flex;"><span>      DURATION        : 00:00:14.849000000
+</span></span><span style="display:flex;"><span>Stream mapping:
+</span></span><span style="display:flex;"><span>  Stream <span style="color:#75715e">#0:0 -&gt; #0:0 (mpeg4 (native) -&gt; wrapped_avframe (native))</span>
+</span></span><span style="display:flex;"><span>  Stream <span style="color:#75715e">#0:1 -&gt; #0:1 (vorbis (native) -&gt; pcm_s16le (native))</span>
+</span></span><span style="display:flex;"><span>Press <span style="color:#f92672">[</span>q<span style="color:#f92672">]</span> to stop, <span style="color:#f92672">[</span>?<span style="color:#f92672">]</span> <span style="color:#66d9ef">for</span> help
+</span></span><span style="display:flex;"><span>Output <span style="color:#75715e">#0, null, to &#39;/dev/null&#39;:</span>
+</span></span><span style="display:flex;"><span>  Metadata:
+</span></span><span style="display:flex;"><span>    COMPATIBLE_BRANDS: isommp42
+</span></span><span style="display:flex;"><span>    COM.ANDROID.VERSION: <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span>    MAJOR_BRAND     : mp42
+</span></span><span style="display:flex;"><span>    MINOR_VERSION   : <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    encoder         : Lavf58.29.100
+</span></span><span style="display:flex;"><span>    Stream <span style="color:#75715e">#0:0(eng): Video: wrapped_avframe, yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 30 tbn, 30 tbc (default)</span>
+</span></span><span style="display:flex;"><span>    Metadata:
+</span></span><span style="display:flex;"><span>      HANDLER_NAME    : VideoHandle
+</span></span><span style="display:flex;"><span>      DURATION        : 00:00:14.900000000
+</span></span><span style="display:flex;"><span>      encoder         : Lavc58.54.100 wrapped_avframe
+</span></span><span style="display:flex;"><span>    Stream <span style="color:#75715e">#0:1(eng): Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s (default)</span>
+</span></span><span style="display:flex;"><span>    Metadata:
+</span></span><span style="display:flex;"><span>      HANDLER_NAME    : SoundHandle
+</span></span><span style="display:flex;"><span>      DURATION        : 00:00:14.849000000
+</span></span><span style="display:flex;"><span>      encoder         : Lavc58.54.100 pcm_s16le
+</span></span><span style="display:flex;"><span>frame<span style="color:#f92672">=</span>  <span style="color:#ae81ff">447</span> fps<span style="color:#f92672">=</span> <span style="color:#ae81ff">97</span> q<span style="color:#f92672">=</span>-0.0 Lsize<span style="color:#f92672">=</span>N/A time<span style="color:#f92672">=</span>00:00:14.90 bitrate<span style="color:#f92672">=</span>N/A speed<span style="color:#f92672">=</span>3.24x    
+</span></span><span style="display:flex;"><span>video:234kB audio:2784kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Parsed_volumedetect_0 @ 0x1a28300<span style="color:#f92672">]</span> n_samples: <span style="color:#ae81ff">1425280</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Parsed_volumedetect_0 @ 0x1a28300<span style="color:#f92672">]</span> mean_volume: -12.1 dB
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Parsed_volumedetect_0 @ 0x1a28300<span style="color:#f92672">]</span> max_volume: 0.0 dB
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Parsed_volumedetect_0 @ 0x1a28300<span style="color:#f92672">]</span> histogram_0db: <span style="color:#ae81ff">10593</span>
+</span></span></code></pre></div><p>Dari hasil tersebut di atas, tampak bahwa rata-rata intensitas suara/volumenya -12,1 dB dengan maksimum 0,0 dB.</p>
   </p>
 
   
@@ -763,9 +863,18 @@ $ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matrosk
   </header>
 
   <p>
-  Misalkan kita akan memberikan watermark berupa gambar logo.png ke video ramadhan.mkv. Watermark ditempatkan di pojok kiri bawah. Video dengan watermark diberi nama ramadhan-fix.mkv
-ffmpeg -i ramadhan.mkv -i logo.png -filter_complex &#34;overlay=x=0:y=(main_h-overlay-h)&#34; ramadhan-fix.mkv Keterangan opsi dan parameternya
--filter_complex : menggunakan filter yang kompleks overlay : menambahkan watermark x : posisi pada sumbu x, dihitung dari ujung kiri y : posisi pada sumbu y, dihitung dari ujung atas main_h : tinggi video main_w : lebar video overlay_h : tinggi gambar yang akan dijadikan watermark overlay_w : lebar gambar yang akan dijadikan watermark 
+  <p>Misalkan kita akan memberikan <em>watermark</em> berupa gambar logo.png ke video ramadhan.mkv. <em>Watermark</em> ditempatkan di pojok kiri bawah. Video dengan <em>watermark</em> diberi nama ramadhan-fix.mkv</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i ramadhan.mkv -i logo.png -filter_complex <span style="color:#e6db74">&#34;overlay=x=0:y=(main_h-overlay-h)&#34;</span> ramadhan-fix.mkv
+</span></span></code></pre></div><p>Keterangan opsi dan parameternya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>-filter_complex : menggunakan filter yang kompleks
+</span></span><span style="display:flex;"><span>overlay : menambahkan watermark
+</span></span><span style="display:flex;"><span>x : posisi pada sumbu x, dihitung dari ujung kiri
+</span></span><span style="display:flex;"><span>y : posisi pada sumbu y, dihitung dari ujung atas
+</span></span><span style="display:flex;"><span>main_h : tinggi video
+</span></span><span style="display:flex;"><span>main_w : lebar video
+</span></span><span style="display:flex;"><span>overlay_h : tinggi gambar yang akan dijadikan watermark
+</span></span><span style="display:flex;"><span>overlay_w : lebar gambar yang akan dijadikan watermark
+</span></span></code></pre></div>
   </p>
 
   
@@ -807,8 +916,9 @@ ffmpeg -i ramadhan.mkv -i logo.png -filter_complex &#34;overlay=x=0:y=(main_h-ov
   </header>
 
   <p>
-  Misalkan terdapat video VID20200509135621.mp4, dengan resolusi 3840x2160 SAR 1:1 DAR 16:9. Akan diubah resolusinya menjadi 1920x1080 dengan tetap memperhatikan SAR dan DAR. Video hasil scaling ini diberi nama VID20200509135621-1080p.mkv. Perubahan ini sekaligus konversi ke mkv agar menghemat space.
-ffmpeg -i VID20200509135621.mp4 -vf &#34;scale=1920:1080, setdar=16:9, setsar=1:1&#34; VID20200509135621-1080p.mkv 
+  <p>Misalkan terdapat video VID20200509135621.mp4, dengan resolusi 3840x2160 SAR 1:1 DAR 16:9. Akan diubah resolusinya menjadi 1920x1080 dengan tetap memperhatikan SAR dan DAR. Video hasil <em>scaling</em> ini diberi nama VID20200509135621-1080p.mkv. Perubahan ini sekaligus konversi ke mkv agar menghemat <em>space</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i VID20200509135621.mp4 -vf <span style="color:#e6db74">&#34;scale=1920:1080, setdar=16:9, setsar=1:1&#34;</span> VID20200509135621-1080p.mkv
+</span></span></code></pre></div>
   </p>
 
   
@@ -850,8 +960,25 @@ ffmpeg -i VID20200509135621.mp4 -vf &#34;scale=1920:1080, setdar=16:9, setsar=1:
   </header>
 
   <p>
-  Secara default, output ffmpeg akan menampilkan built configuration yang digunakan.
-$ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers built with gcc 9.2.0 (GCC) configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-4.2.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack libavutil 56. 31.100 / 56. 31.100 libavcodec 58. 54.
+  <p>Secara <em>default</em>, <em>output</em> <!-- raw HTML omitted -->ffmpeg<!-- raw HTML omitted --> akan menampilkan <em>built configuration</em> yang digunakan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ffmpeg
+</span></span><span style="display:flex;"><span>ffmpeg version 4.2.2 Copyright <span style="color:#f92672">(</span>c<span style="color:#f92672">)</span> 2000-2019 the FFmpeg developers
+</span></span><span style="display:flex;"><span>  built with gcc 9.2.0 <span style="color:#f92672">(</span>GCC<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  configuration: --prefix<span style="color:#f92672">=</span>/usr --libdir<span style="color:#f92672">=</span>/usr/lib64 --shlibdir<span style="color:#f92672">=</span>/usr/lib64 --docdir<span style="color:#f92672">=</span>/usr/doc/ffmpeg-4.2.2/html --mandir<span style="color:#f92672">=</span>/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --enable-avresample --arch<span style="color:#f92672">=</span>x86_64 --disable-encoder<span style="color:#f92672">=</span>aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libwavpack
+</span></span><span style="display:flex;"><span>  libavutil      56. 31.100 / 56. 31.100
+</span></span><span style="display:flex;"><span>  libavcodec     58. 54.100 / 58. 54.100
+</span></span><span style="display:flex;"><span>  libavformat    58. 29.100 / 58. 29.100
+</span></span><span style="display:flex;"><span>  libavdevice    58.  8.100 / 58.  8.100
+</span></span><span style="display:flex;"><span>  libavfilter     7. 57.100 /  7. 57.100
+</span></span><span style="display:flex;"><span>  libavresample   4.  0.  <span style="color:#ae81ff">0</span> /  4.  0.  <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  libswscale      5.  5.100 /  5.  5.100
+</span></span><span style="display:flex;"><span>  libswresample   3.  5.100 /  3.  5.100
+</span></span><span style="display:flex;"><span>  libpostproc    55.  5.100 / 55.  5.100
+</span></span><span style="display:flex;"><span>Hyper fast Audio and Video encoder
+</span></span><span style="display:flex;"><span>usage: ffmpeg <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> <span style="color:#f92672">[[</span>infile options<span style="color:#f92672">]</span> -i infile<span style="color:#f92672">]</span>... <span style="color:#f92672">{[</span>outfile options<span style="color:#f92672">]</span> outfile<span style="color:#f92672">}</span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Use -h to get full help or, even better, run <span style="color:#e6db74">&#39;man ffmpeg&#39;</span>
+</span></span></code></pre></div><p>Menurut saya ini tidak perlu ditampilkan. Berdasarkan pengalaman selama ini menggunakan <!-- raw HTML omitted -->ffmpeg<!-- raw HTML omitted --> baik-baik saja. Informasi tersebut bisa dikatakan mubadzir. Lebih baik tidak ditampilkan. Caranya beri opsi</p>
   </p>
 
   
@@ -897,9 +1024,11 @@ $ ffmpeg ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers buil
   </header>
 
   <p>
-  Editing kali ini adalah bagaimana mengubah volume default audio/suara menggunakan ffmpeg. Misal, file yang akan diinput/diedit adalah video.mp4. Karena suaranya terlalu pelan, akan dinaikkan menjadi 5x semula melalui filter audio. File hasil editan diberi nama video-louder.webm.
-ffmpeg -i video.mp4 -filter:a &#34;volume=5&#34; video-louder.webm Apabila suara terlalu nyaring bisa dipelankan. Berikut akan dipelankan menjadi setengahnya dari volume semula dan file baru diberi nama new.webm
-ffmpeg -i video.mp4 -filter:a &#34;volume=0.5&#34; new.webm Atau, dengan menuliskan volume suaranya secara langsung.
+  <p><em>Editing</em> kali ini adalah bagaimana mengubah volume default audio/suara menggunakan <strong>ffmpeg</strong>. Misal, file yang akan diinput/diedit adalah video.mp4. Karena suaranya terlalu pelan, akan dinaikkan menjadi 5x semula melalui filter audio. File hasil editan diberi nama video-louder.webm.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i video.mp4 -filter:a <span style="color:#e6db74">&#34;volume=5&#34;</span> video-louder.webm
+</span></span></code></pre></div><p>Apabila suara terlalu nyaring bisa dipelankan. Berikut akan dipelankan menjadi setengahnya dari volume semula dan file baru diberi nama new.webm</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i video.mp4 -filter:a <span style="color:#e6db74">&#34;volume=0.5&#34;</span> new.webm
+</span></span></code></pre></div><p>Atau, dengan menuliskan volume suaranya secara langsung. Default aslinya 256. Misalkan akan dinaikkan menjadi 300 kemudian disimpan sebagai anyar.mkv</p>
   </p>
 
   
@@ -945,8 +1074,9 @@ ffmpeg -i video.mp4 -filter:a &#34;volume=0.5&#34; new.webm Atau, dengan menulis
   </header>
 
   <p>
-  Misalkan, kita akan mencuplik sebagian (trimming) video video-asli.mp4 dari menit ke 57 lebih 34 detik sampai durasi ke 1 jam 2 menit 5 detik. Fila hasil trimming adalah cuplikan.mp4
-ffmpeg -i video-asli.mp4 -ss 00:57:34 -to 01:02:05 -c copy cuplikan.mp4 
+  <p>Misalkan, kita akan mencuplik sebagian (<em>trimming</em>) video video-asli.mp4 dari menit ke 57 lebih 34 detik sampai durasi ke 1 jam 2 menit 5 detik. Fila hasil <em>trimming</em> adalah cuplikan.mp4</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i video-asli.mp4 -ss 00:57:34 -to 01:02:05 -c copy cuplikan.mp4
+</span></span></code></pre></div>
   </p>
 
   
@@ -988,10 +1118,12 @@ ffmpeg -i video-asli.mp4 -ss 00:57:34 -to 01:02:05 -c copy cuplikan.mp4
   </header>
 
   <p>
-  Download video dari Youtube adalah hal yang mudah bagi pengguna Slackware. Paling tidak ada 2 cara. Cara pertama menggunakan peramban web, dan cara kedua menggunakan youtube-dl yang berantar muka teks. Di sini menggunakan cara kedua. Untuk menginstall youtube-dl silahkan [klik di sini]({% post_url 2015-10-01-install-youtubedl %}).
-Cara menggunakannya
-youtube-dl url_video_youtube Contoh, akan URL video yang akan di download adalah https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54.
-youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54 Kalau ada beberapa video yang ingin didownload, masukkan saja URLnya ke satu file, tiap baris 1 URL, kemudian cara downloadnya tambahkan opsi -a
+  <p>Download video dari <em>Youtube</em> adalah hal yang mudah bagi pengguna <em>Slackware</em>. Paling tidak ada 2 cara. Cara pertama menggunakan peramban web, dan cara kedua menggunakan <em>youtube-dl</em> yang berantar muka teks. Di sini menggunakan cara kedua. Untuk menginstall <em>youtube-dl</em> silahkan [klik di sini]({% post_url 2015-10-01-install-youtubedl %}).</p>
+<p>Cara menggunakannya</p>
+<pre tabindex="0"><code>youtube-dl url_video_youtube
+</code></pre><p>Contoh, akan URL video yang akan di download adalah <a href="https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54">https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54</a>.</p>
+<pre tabindex="0"><code>youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54
+</code></pre><p>Kalau ada beberapa video yang ingin didownload, masukkan saja URLnya ke satu file, tiap baris 1 URL, kemudian cara downloadnya tambahkan opsi -a</p>
   </p>
 
   
@@ -1037,8 +1169,15 @@ youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9
   </header>
 
   <p>
-  Siapa bilang pakai Slackware ga bisa download video dari Youtube? Bisa kok pakai youtube-dl.Cara installnya gampang. Pastikan terhubung ke internet untuk mengunduh berkasnya. Dan untuk install butuh hak akses root. Di sini kita pakai cara yang mudah saja, install dari slackbuilds.org.
-cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-dl.tar.gz tar xzf youtube-dl.tar.gz cd youtube-dl wget https://github.com/rg3/youtube-dl/archive/2015.09.22.tar.gz sh youtube-dl.SlackBuild installpkg /tmp/youtube-dl-2015.09.22-x86_64-1_SBo.tgz 
+  <p>Siapa bilang pakai <em>Slackware</em> ga bisa download video dari <em>Youtube</em>? Bisa kok pakai <em>youtube-dl</em>.Cara installnya gampang. Pastikan terhubung ke internet untuk mengunduh berkasnya. Dan untuk install butuh hak akses root. Di sini kita pakai cara yang mudah saja, install dari slackbuilds.org.</p>
+<pre tabindex="0"><code>cd /usr/local/src
+wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-dl.tar.gz
+tar xzf youtube-dl.tar.gz
+cd youtube-dl
+wget https://github.com/rg3/youtube-dl/archive/2015.09.22.tar.gz
+sh youtube-dl.SlackBuild
+installpkg /tmp/youtube-dl-2015.09.22-x86_64-1_SBo.tgz
+</code></pre>
   </p>
 
   

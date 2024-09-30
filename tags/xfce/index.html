@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Xfce &middot; Catatan Sasongko</title>
 
@@ -262,9 +262,10 @@
   </header>
 
   <p>
-  Secara default, window manager yang digunakan xfce adalah xfwm4. Tetapi, ini bisa diganti menjadi window manager lain seperti fluxbox ataupun marco milik mate.
-Kali ini kita akan ganti xfwm4 dengan marco. Caranya, membuat startup baru berisikan command
-$ /usr/bin/marco --replace 
+  <p>Secara <em>default, window manager</em> yang digunakan xfce adalah xfwm4. Tetapi, ini bisa diganti menjadi <em>window manager</em> lain seperti <strong>fluxbox</strong> ataupun <strong>marco</strong> milik <strong>mate</strong>.</p>
+<p>Kali ini kita akan ganti <strong>xfwm4</strong> dengan <strong>marco</strong>. Caranya, membuat <strong>startup</strong> baru berisikan <em>command</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ /usr/bin/marco --replace
+</span></span></code></pre></div>
   </p>
 
   
@@ -306,10 +307,17 @@ $ /usr/bin/marco --replace
   </header>
 
   <p>
-  Pagi ini, Patrick memasukkan xfce 4.16 ke slackware current main tree tanpa singgah di /testing. Interface xfce 4.16 lebih cantik dan menarik dibanding sebelumnya. Demikian pula icons-nya.
-Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown xfce stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses development.
-Ada beberapa hal yang menjadi catatan buat penulis terkait xfce 4.16 ini, yaitu
-Interface lebih cantik dan menarik Penambahan xfce4-panel-profiles yang memungkinkan untuk menyimpan profil/konfigurasi panel.
+  <p>Pagi ini, Patrick memasukkan <strong>xfce 4.16</strong> ke <em>slackware current main tree</em> tanpa singgah di /testing. <em>Interface</em> <strong>xfce 4.16</strong> lebih cantik dan menarik dibanding sebelumnya. Demikian pula <em>icons</em>-nya.</p>
+<p>Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown <strong>xfce</strong> stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses <em>development</em>.</p>
+<p>Ada beberapa hal yang menjadi catatan buat penulis terkait <strong>xfce 4.16</strong> ini, yaitu</p>
+<ol>
+<li><em>Interface</em> lebih cantik dan menarik</li>
+<li>Penambahan <strong>xfce4-panel-profiles</strong> yang memungkinkan untuk menyimpan profil/konfigurasi panel. Sangat bermanfaat bagi mereka yang suka berganti-ganti tampilan panel, ukuran dan letak panel, serta <em>shortcut</em> apa saja yang berada di panel.</li>
+<li>Perubahan letak tombol <strong>Open</strong> atau <strong>Save</strong> pada <em>dialog box</em> yang sebelumnya di bawah menjadi di atas. Ini memudahkan pengguna. Tidak usah geser <em>mouse</em> terlalu jauh atau repot <strong>tab</strong> berkali-kali.</li>
+<li>Penambahan <strong>libgtop</strong> yang memungkinkan <em>user</em> mengetahui informasi singkat sistem melalui tab <strong>System</strong> pada <strong>About Xfce</strong></li>
+</ol>
+<p><img src="https://sasongko.web.id/gambar/about-xfce-4.14.png" alt="about xfce 4.14">
+<img src="https://sasongko.web.id/gambar/about-xfce-4.16.png" alt="about xfce 4.16"></p>
   </p>
 
   
@@ -359,9 +367,13 @@ Interface lebih cantik dan menarik Penambahan xfce4-panel-profiles yang memungki
   </header>
 
   <p>
-  Terkadang saat browsing perlu fokus sehingga tampilan pun butuh fullscreen. Pada Mozilla Firefox, secara default F11 adalah tombol untuk fullscreen dan exit fullscreen. Akan tetapi, hal ini tidak berlaku pada kami, Slackware64 current dengan desktop environment XFCE yang berjalan di laptop Lenovo Ideapad 110-14IBR. Pada perangkat kami ini, F11 untuk mengurangi brightness. Maka, untuk fullscreen dan exit-nya kami gunakan Fn F11.
+  <p>Terkadang saat <em>browsing</em> perlu fokus sehingga tampilan pun butuh <em>fullscreen</em>. Pada <em>Mozilla Firefox</em>, secara <em>default</em> <!-- raw HTML omitted -->F11<!-- raw HTML omitted --> adalah tombol untuk <em>fullscreen</em> dan <em>exit fullscreen</em>. Akan tetapi, hal ini tidak berlaku pada kami, <strong>Slackware64 current</strong> dengan <em>desktop environment</em>  XFCE  yang berjalan di laptop Lenovo Ideapad 110-14IBR. Pada perangkat kami ini, <!-- raw HTML omitted -->F11<!-- raw HTML omitted --> untuk mengurangi <em>brightness</em>. Maka, untuk <em>fullscreen</em> dan <em>exit</em>-nya kami gunakan <!-- raw HTML omitted -->Fn F11<!-- raw HTML omitted -->.</p>
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-02-01-fullscreen-firefox/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -401,8 +413,9 @@ Interface lebih cantik dan menarik Penambahan xfce4-panel-profiles yang memungki
   </header>
 
   <p>
-  Iseng-iseng buka hidden folder ada yang menarik. File yang ada di Trash (bisa buka di Thunar dengan path trash:/// sama dengan yang ada di ~/.local/share/Trash/files/. Sehingga kalau ingin mengosongkan Trash dan posisi sedang di CLI dan tidak membuka file manager ataupun lagi aras-arasen, sangat bisa.
-rm -rv ~/.local/share/Trash/* 
+  <p>Iseng-iseng buka <em>hidden folder</em> ada yang menarik. File yang ada di <strong>Trash</strong> (bisa buka di <strong>Thunar</strong> dengan path <!-- raw HTML omitted -->trash:///<!-- raw HTML omitted --> sama dengan yang ada di <!-- raw HTML omitted -->~/.local/share/Trash/files/<!-- raw HTML omitted -->. Sehingga kalau ingin mengosongkan <strong>Trash</strong> dan posisi sedang di CLI dan tidak membuka <strong>file manager</strong> ataupun lagi <em>aras-arasen</em>, sangat bisa.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -rv ~/.local/share/Trash/*
+</span></span></code></pre></div>
   </p>
 
   
@@ -450,10 +463,14 @@ rm -rv ~/.local/share/Trash/*
   </header>
 
   <p>
-  Mencoba merasakan kejadulan WindowMaker yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama xfce melalui command xwmconfig, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di WindowMaker. Bahkan tidak bisa ganti DE lainnya termasuk KDE dan Mate.
-Tapi kemudian bisa teratasi dengan menghapus .xinitrc dan folder GNUStep yang ada di home direktori pengguna.
+  <p>Mencoba merasakan kejadulan <em>WindowMaker</em> yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama <em>xfce</em> melalui <em>command</em> <!-- raw HTML omitted -->xwmconfig<!-- raw HTML omitted -->, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di <em>WindowMaker</em>. Bahkan tidak bisa ganti DE lainnya termasuk <em>KDE</em> dan <em>Mate</em>.</p>
+<p>Tapi kemudian bisa teratasi dengan menghapus <!-- raw HTML omitted -->.xinitrc<!-- raw HTML omitted --> dan folder <!-- raw HTML omitted -->GNUStep<!-- raw HTML omitted --> yang ada di <!-- raw HTML omitted -->home<!-- raw HTML omitted --> direktori pengguna.</p>
   </p>
 
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -495,9 +512,9 @@ Tapi kemudian bisa teratasi dengan menghapus .xinitrc dan folder GNUStep yang ad
   </header>
 
   <p>
-  Kecerahan monitor / brightness 100% membuat mata cepat lelah. Apalagi kalau secara default begitu masuk X brightness-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan Computer Vision Syndrome.
-Berapa persen brightness yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur brightness bisa gunakan xbacklight.
-Untuk mengetahui berapa persen brightness yang digunakan saat ini xbacklight. Sedangkan untuk mengubahnya xbacklight -set persen. Contoh akan diatur brightness-nya 15%:
+  <p>Kecerahan monitor / <em>brightness</em> 100% membuat mata cepat lelah. Apalagi kalau secara <em>default</em> begitu masuk X <em>brightness</em>-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan <em>Computer Vision Syndrome</em>.</p>
+<p>Berapa persen <em>brightness</em> yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur <em>brightness</em> bisa gunakan <!-- raw HTML omitted -->xbacklight<!-- raw HTML omitted -->.</p>
+<p>Untuk mengetahui berapa persen <em>brightness</em> yang digunakan saat ini <!-- raw HTML omitted -->xbacklight<!-- raw HTML omitted -->. Sedangkan untuk mengubahnya <!-- raw HTML omitted -->xbacklight -set persen<!-- raw HTML omitted -->. Contoh akan diatur <em>brightness</em>-nya 15%:</p>
   </p>
 
   
@@ -545,10 +562,8 @@ Untuk mengetahui berapa persen brightness yang digunakan saat ini xbacklight. Se
   </header>
 
   <p>
-  Bosan dengan tampilan theme yang itu-itu aja? Tenang, theme-nya bisa diganti kok, bahkan diganti agar tampilannya mirip Mac OS X. Sebagai contoh akan kita install theme GlossyP3 yang membuat tampilan menjadi mirip Mac OS X.
-Download terlebih dahulu berkasnya dari sini (pastikan tersambung internet). Berkas dalam bentuk arsip .tar.bz2 ekstrak ke direktori /usr/share/themes dengan hak administrator atau root.
-Kemudian ke Settings &mdash;&gt; Appearance pilih GlossyP3
-Kemudian, meminjam kata Mario Teguh, dan lihat apa yang terjadi.
+  <p>Bosan dengan tampilan <em>theme</em> yang itu-itu aja? Tenang, <em>theme</em>-nya bisa diganti kok, bahkan diganti agar tampilannya mirip Mac OS X. Sebagai contoh akan kita <em>install theme GlossyP3</em> yang membuat tampilan menjadi mirip Mac OS X.</p>
+<p><em>Download</em> terlebih dahulu berkasnya dari <a href="https://drive.google.com/file/d/0B6CSxWwQO8rCOG5EU0xJSklLNnc/edit?usp=sharing">sini</a> (pastikan tersambung internet). Berkas dalam bentuk arsip <!-- raw HTML omitted -->.tar.bz2<!-- raw HTML omitted --> ekstrak ke direktori <!-- raw HTML omitted -->/usr/share/themes<!-- raw HTML omitted --> dengan hak administrator atau <!-- raw HTML omitted -->root<!-- raw HTML omitted -->.</p>
   </p>
 
   
@@ -600,8 +615,10 @@ Kemudian, meminjam kata Mario Teguh, dan lihat apa yang terjadi.
   </header>
 
   <p>
-  Biar tidak membosankan, kadangkala kita butuh ganti desktop environment (DE). Caranya (root privileges),
-xwmconfig Pilih X Windows (atau DE)-nya. Kemudian Ok atau tekan Enter, Log out dan Log in kembali.
+  <p>Biar tidak membosankan, kadangkala kita butuh ganti <em>desktop environment</em> (DE). Caranya (<em>root privileges</em>),</p>
+<pre tabindex="0"><code>xwmconfig
+</code></pre><p>Pilih <em>X Windows</em> (atau DE)-nya. Kemudian Ok atau tekan <em>Enter</em>, <em>Log out</em> dan <em>Log in</em> kembali.</p>
+<p><img src="https://sasongko.web.id/gambar/xwmconfig.png" alt=""></p>
   </p>
 
   

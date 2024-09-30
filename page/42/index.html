@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,75 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2018-02-18-rename-network-interface/">Rename Network Interface</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Feb 2018</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Entah mengapa tadi kepikiran untuk jalankan <!-- raw HTML omitted -->ifconfig -a<!-- raw HTML omitted -->. Ternyata kemudian ada <em>output</em> yang menarik</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eth0: flags<span style="color:#f92672">=</span>4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu <span style="color:#ae81ff">1500</span>
+</span></span><span style="display:flex;"><span>        ether c8:5b:76:66:51:6a  txqueuelen <span style="color:#ae81ff">1000</span>  <span style="color:#f92672">(</span>Ethernet<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        TX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lo: flags<span style="color:#f92672">=</span>73&lt;UP,LOOPBACK,RUNNING&gt;  mtu <span style="color:#ae81ff">65536</span>
+</span></span><span style="display:flex;"><span>        inet 127.0.0.1  netmask 255.0.0.0
+</span></span><span style="display:flex;"><span>        inet6 ::1  prefixlen <span style="color:#ae81ff">128</span>  scopeid 0x10&lt;host&gt;
+</span></span><span style="display:flex;"><span>        loop  txqueuelen <span style="color:#ae81ff">1000</span>  <span style="color:#f92672">(</span>Local Loopback<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        TX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wlan1: flags<span style="color:#f92672">=</span>4098&lt;BROADCAST,MULTICAST&gt;  mtu <span style="color:#ae81ff">1500</span>
+</span></span><span style="display:flex;"><span>        ether ca:b0:da:b5:3d:75  txqueuelen <span style="color:#ae81ff">1000</span>  <span style="color:#f92672">(</span>Ethernet<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        TX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
+</span></span></code></pre></div><p>Menariknya adalah angka index <em>interface</em>-nya. Semua 0 kecuali <!-- raw HTML omitted -->wlan<!-- raw HTML omitted --> yang 1 sendiri. Sebenarnya <em>no problem</em> sih, cuma ga sedap dipandang aja. Kalau indexnya kompak 0 kan cakep. Hahahaha&hellip;..</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2018-02-18-rename-network-interface/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2017-12-08-libsodium-masuk-current/">Libsodium Masuk -Current</a></h2>
 
     <div class="post-meta">
@@ -261,8 +330,8 @@
   </header>
 
   <p>
-  Pada hari Rabu 6 Desember 2017 jam 14.13.48 UTC, Patrick Volkerding selaku BDFL Slackware, memberikan update di kanal -current. Salah satunya adalah menambahkan libsodium-1.0.15. Libsodium merupakan library atau pustaka untuk enkripsi, dekripsi, signature (tanda tangan digital), dlsb.
-Bagi saya, masuknya libsodium membawa konsekwensi untuk rebuild dnscrypt-proxy yang menggunakan libsodium. libsodium yang sebelumnya adalah versi 1.0.13 dari SBo sedangkan versi baru dari official Slackware 1.0.15. Hal ini diketahui dari gagalnya men-start service dnscrypt-proxy .
+  <p>Pada hari Rabu 6 Desember 2017 jam 14.13.48 UTC, Patrick Volkerding selaku BDFL <strong>Slackware</strong>, memberikan <em>update</em> di kanal <!-- raw HTML omitted -->-current<!-- raw HTML omitted -->. Salah satunya adalah menambahkan <!-- raw HTML omitted -->libsodium-1.0.15<!-- raw HTML omitted -->. Libsodium merupakan <em>library</em> atau pustaka untuk enkripsi, dekripsi, <em>signature</em> (tanda tangan digital), dlsb.</p>
+<p>Bagi saya, masuknya <!-- raw HTML omitted -->libsodium<!-- raw HTML omitted --> membawa konsekwensi untuk <em>rebuild</em> <!-- raw HTML omitted -->dnscrypt-proxy<!-- raw HTML omitted --> yang menggunakan <!-- raw HTML omitted -->libsodium<!-- raw HTML omitted -->. <!-- raw HTML omitted -->libsodium<!-- raw HTML omitted --> yang sebelumnya adalah versi 1.0.13 dari <a href="http://slackbuilds.org/repository/14.2/libraries/libsodium/">SBo</a> sedangkan versi baru dari <em>official</em> <strong>Slackware</strong> 1.0.15. Hal ini diketahui dari gagalnya men-<em>start service</em> <!-- raw HTML omitted -->dnscrypt-proxy <!-- raw HTML omitted -->.</p>
   </p>
 
   
@@ -310,10 +379,10 @@ Bagi saya, masuknya libsodium membawa konsekwensi untuk rebuild dnscrypt-proxy y
   </header>
 
   <p>
-  Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang bootloop apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. Update terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui rebuilt elilo.
-Setelah upgrade terutama untuk elilo jangan lupa menjalankan
-eliloconfig yang secara otomatis juga akan meng- generate elilo.conf yang berisi pengaturan boot dengan kernel huge.
-Namun, saya kurang suka dengan cara otomatis ini.
+  <p>Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang <em>bootloop</em> apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. <em>Update</em> terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui <em>rebuilt</em> <!-- raw HTML omitted -->elilo<!-- raw HTML omitted -->.</p>
+<p>Setelah <em>upgrade</em> terutama untuk <!-- raw HTML omitted -->elilo<!-- raw HTML omitted --> jangan lupa menjalankan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eliloconfig
+</span></span></code></pre></div><p>yang secara otomatis juga akan meng- <em>generate</em> <!-- raw HTML omitted -->elilo.conf<!-- raw HTML omitted --> yang berisi pengaturan <em>boot</em> dengan kernel huge.</p>
   </p>
 
   
@@ -361,9 +430,8 @@ Namun, saya kurang suka dengan cara otomatis ini.
   </header>
 
   <p>
-  Setelah 2 minggu, -Current kembali mendapatkan update Jum&rsquo;at kemarin tanggal 17 November 2017. Banyak update, ada yang upgraded, rebuilt, added, dan removed. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.
-Setelah upgrade dan eliloconfig kemudian restart, ternyata muncul masalah! Bootloop! Loading vmlinuz&hellip; langsung reboot. Begitu seterusnya.
-Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk recovery-nya lebih mudah. Boot dari DVD kemudian waktu muncul grub pilih opsi yang intinya detect another operating system (persisnya saya lupa).
+  <p>Setelah 2 minggu, -Current kembali mendapatkan <em>update</em> Jum&rsquo;at kemarin tanggal 17 November 2017. Banyak <em>update</em>, ada yang <em>upgraded, rebuilt, added,</em> dan <em>removed</em>. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.</p>
+<p>Setelah <em>upgrade</em> dan <!-- raw HTML omitted -->eliloconfig<!-- raw HTML omitted --> kemudian <em>restart</em>, ternyata muncul masalah! <em>Bootloop</em>!  <!-- raw HTML omitted -->Loading vmlinuz&hellip; <!-- raw HTML omitted --> langsung <em>reboot</em>. Begitu seterusnya.</p>
   </p>
 
   
@@ -409,54 +477,13 @@ Alhamdulillah punya DVD Slackware64 14.1 yang masih bisa dipakai, jadi untuk rec
   </header>
 
   <p>
-  Salah satu hal yang membuat saya menggunakan linux khususnya Slackware adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan . pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan steganografi tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}) atau [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}).
+  <p>Salah satu hal yang membuat saya menggunakan linux khususnya <em>Slackware</em> adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan <!-- raw HTML omitted -->.<!-- raw HTML omitted --> pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan <em>steganografi</em> tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [<!-- raw HTML omitted -->gpg<!-- raw HTML omitted -->]({% post_url 2017-01-14-enkripsi-dg-gpg %})  atau [<!-- raw HTML omitted -->openssl<!-- raw HTML omitted -->]({% post_url 2017-01-08-enkripsi-dg-openssl %}).</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2017-11-15-mengamankan-file-folder/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-08-08-set-clang-as-default-c-compiler/">Mengatur Clang Sebagai C Compiler Utama</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>08 Aug 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default, C Compiler yang digunakan adalah gcc. Namun, apabila diinginkan, bisa dialihkan menggunakan clang. Caranya, buat file di /etc/profile.d misalnya c-compiler.sh, yang isinya
-export CC=/usr/bin/clang export CXX=/usr/bin/clang++ 
-  </p>
-
   
 </article>
 
@@ -469,7 +496,7 @@ export CC=/usr/bin/clang export CXX=/usr/bin/clang++
   
   <a href="https://sasongko.web.id/page/41/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;42 / 65&nbsp;</span>
+  <span>&nbsp;42 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/43/"><i class="fa fa-chevron-right"></i></a>
   

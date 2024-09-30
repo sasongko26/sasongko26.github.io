@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Debug &middot; Catatan Sasongko</title>
 
@@ -262,10 +262,17 @@
   </header>
 
   <p>
-  Suatu program gagal dijalankan. Eksekusi via terminal menunjukkan segmentation fault tanpa keterangan lainnya. Pada situasi inilah core dump diperlukan untuk debugging sehingga diketahui penyebabnya.
-Contoh, geeqie apabila dijalankan di lingkungan wayland berbuah segmentation fault
-$ geeqie Segmentation fault Saatnya membuat core dump
-$ gcore /usr/bin/geeqie Illegal process-id: /usr/bin/geeqie. You can&#39;t do that without a process to debug. The program is not being run. gcore: failed to create core./usr/bin/geeqie Kemudian eksekusi lagi
+  <p>Suatu program gagal dijalankan. Eksekusi via terminal menunjukkan <strong>segmentation fault</strong> tanpa keterangan lainnya. Pada situasi inilah <strong>core dump</strong> diperlukan untuk <em>debugging</em> sehingga diketahui penyebabnya.</p>
+<p>Contoh, <strong>geeqie</strong> apabila dijalankan di lingkungan <strong>wayland</strong> berbuah <strong>segmentation fault</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ geeqie
+</span></span><span style="display:flex;"><span>Segmentation fault
+</span></span></code></pre></div><p>Saatnya membuat core dump</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gcore /usr/bin/geeqie
+</span></span><span style="display:flex;"><span>Illegal process-id: /usr/bin/geeqie.
+</span></span><span style="display:flex;"><span>You can<span style="color:#960050;background-color:#1e0010">&#39;</span>t <span style="color:#66d9ef">do</span> that without a process to debug.
+</span></span><span style="display:flex;"><span>The program is not being run.
+</span></span><span style="display:flex;"><span>gcore: failed to create core./usr/bin/geeqie
+</span></span></code></pre></div><p>Kemudian eksekusi lagi</p>
   </p>
 
   

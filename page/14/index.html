@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,54 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/">Variabel hash perl</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Nov 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Jenis variabel ketiga yang dimiliki <strong>perl</strong> adalah <strong>hash</strong>. <strong>Hash</strong> ini merupakan data berpasangan. Penulisan dengan menyertakan tanda %.</p>
+<p>Contoh: akan dideklarasikan data tentang saya, yaitu nama dan distro yang saya gunakan. Nama saya Sasongko, distro Slackware.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> %data <span style="color:#f92672">=</span> (
+</span></span><span style="display:flex;"><span>	nama <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Sasongko&#34;</span>,
+</span></span><span style="display:flex;"><span>	distro <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Slackware&#34;</span>,
+</span></span><span style="display:flex;"><span>	);
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-11-28-variabel-array-perl/">Variabel array perl</a></h2>
 
     <div class="post-meta">
@@ -261,11 +309,14 @@
   </header>
 
   <p>
-  Melanjutkan catatan sebelumnya tentang variabel yang dimiliki bahasa pemrograman perl. Sebelumnya membahas tentang variabel scalar. Catatan kali ini tentang jenis variabel yang kedua yaitu array.
-Berbeda dengan scalar yang bernilai tunggal, array bernilai majemuk. Array merupakan himpunan. Element array zero indexed, artinya, elemen pertama berindeks 0.
-Pendeklarasian array diserta simbol @.
-Contoh: himpunan nama-nama buah dan daftar nilai
-my @buah = (&#34;pisang&#34;, &#34;mangga&#34;, &#34;jeruk&#34;, &#34;pepaya&#34;); my @daftar_nilai = (80, 100, 76.
+  <p>Melanjutkan catatan sebelumnya tentang variabel yang dimiliki bahasa pemrograman <strong>perl</strong>. Sebelumnya membahas tentang variabel <strong>scalar</strong>. Catatan kali ini tentang jenis variabel yang kedua yaitu <strong>array</strong>.</p>
+<p>Berbeda dengan <strong>scalar</strong> yang bernilai tunggal, <strong>array</strong> bernilai majemuk. Array merupakan himpunan. Element <strong>array</strong> <em>zero indexed</em>, artinya, elemen pertama berindeks 0.</p>
+<p>Pendeklarasian array diserta simbol @.</p>
+<p>Contoh: himpunan nama-nama buah dan daftar nilai</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> @buah <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;pisang&#34;</span>, <span style="color:#e6db74">&#34;mangga&#34;</span>, <span style="color:#e6db74">&#34;jeruk&#34;</span>, <span style="color:#e6db74">&#34;pepaya&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> @daftar_nilai <span style="color:#f92672">=</span> (<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">76.5</span>, <span style="color:#ae81ff">21.87</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">print</span> $buah[<span style="color:#ae81ff">0</span>];
+</span></span></code></pre></div><p>menghasilkan output pisang. Sedangkan</p>
   </p>
 
   
@@ -311,8 +362,10 @@ my @buah = (&#34;pisang&#34;, &#34;mangga&#34;, &#34;jeruk&#34;, &#34;pepaya&#34
   </header>
 
   <p>
-  Perl memiliki 3 jenis variabel, yaitu scalar, array dan hash. Scalar adalah variabel dengan nilai tunggal. Penulisan scalar diawali dengan tanda $.Pendeklarasian variabel dengan my. Nilai dari scalar bisa berupa text/string ataupun angka. Contoh: akan dideklarasikan variabel buah. buah ini bernilai &ldquo;mangga&rdquo;.
-my $buah = &#34;mangga&#34;; 
+  <p><strong>Perl</strong> memiliki 3 jenis variabel, yaitu scalar, array dan hash. Scalar adalah variabel dengan nilai tunggal. Penulisan scalar diawali dengan tanda $.Pendeklarasian variabel dengan my. Nilai dari scalar bisa berupa text/string ataupun angka.
+Contoh: akan dideklarasikan variabel <em>buah</em>. buah ini bernilai &ldquo;mangga&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $buah <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mangga&#34;</span>;
+</span></span></code></pre></div>
   </p>
 
   
@@ -356,8 +409,9 @@ my $buah = &#34;mangga&#34;;
   </header>
 
   <p>
-  Untuk mengubah timestamp akses dan modifikasi pada file
-$ touch -t YYYYMMDDHHmm.ss dokumen di mana dokumen adalah filename, waktu yang diinginkan dalam format YYYYMMDDHHmm.ss
+  <p>Untuk mengubah <em>timestamp</em> akses dan modifikasi pada file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ touch -t YYYYMMDDHHmm.ss dokumen
+</span></span></code></pre></div><p>di mana dokumen adalah <em>filename</em>, waktu yang diinginkan dalam format YYYYMMDDHHmm.ss</p>
   </p>
 
   
@@ -399,62 +453,14 @@ $ touch -t YYYYMMDDHHmm.ss dokumen di mana dokumen adalah filename, waktu yang d
   </header>
 
   <p>
-  Transfer data antara smartphone android dan komputer/pc/laptop linux (dalam contoh ini Slackware) dapat dilakukan dengan mudah. Kemudahan tersebut bahkan dapat dilakukan dengan mode text tanpa grafis.
-Misalkan akan menghubungkan storage yang ada di android smartphone dengan linux. Storage dimount ke direktori mtp. Direktori ini bebas, silahkan pilih sendiri sesuai kebutuhan/keinginan.
-$ jmtpfs mtp Selanjutnya dapat dilakukan transfer file seperti biasa. Jika sudah selesai unmount
-$ fusermount mtp 
+  <p>Transfer data antara <em>smartphone android</em> dan komputer/pc/laptop linux (dalam contoh ini <strong>Slackware</strong>) dapat dilakukan dengan mudah. Kemudahan tersebut bahkan dapat dilakukan dengan mode text tanpa grafis.</p>
+<p>Misalkan akan menghubungkan <em>storage</em> yang ada di <em>android smartphone</em> dengan linux. <em>Storage</em> dimount ke direktori mtp. Direktori ini bebas, silahkan pilih sendiri sesuai kebutuhan/keinginan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ jmtpfs mtp
+</span></span></code></pre></div><p>Selanjutnya dapat dilakukan transfer file seperti biasa. Jika sudah selesai unmount</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ fusermount mtp
+</span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-14-hapus-docker-image/">Menghapus docker image</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Docker image yang suah tidak digunakan sebaiknya dihapus saja, agar storage lebih longgar. Pastikan docker daemon aktif
-dockerd List docker imagenya
-$ docker images REPOSITORY TAG IMAGE ID CREATED SIZE qgis/qgis release-3_16 ee28ddd8c37a 4 days ago 7.43GB qgis/qgis &lt;none&gt; c84657a1e2f6 3 weeks ago 7.43GB Hapus
-$ docker rmi -f ee28ddd8c37a c84657a1e2f6 Ingin menghapus semua container, image, dll
-$ docker system prune -a WARNING! This will remove: - all stopped containers - all networks not used by at least one container - all dangling images - all dangling build cache Are you sure you want to continue?
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-11-14-hapus-docker-image/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
@@ -467,7 +473,7 @@ $ docker system prune -a WARNING! This will remove: - all stopped containers - a
   
   <a href="https://sasongko.web.id/page/13/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;14 / 65&nbsp;</span>
+  <span>&nbsp;14 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/15/"><i class="fa fa-chevron-right"></i></a>
   

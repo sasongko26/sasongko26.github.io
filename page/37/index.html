@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2019-12-01-rename-banyak-file-sekaligus/">Rename Banyak File Sekaligus</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Dec 2019</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Tak terasa ternyata sudah lebih dari 3 bulan tidak <em>posting</em>. Mengapa? Sibuk? Kesibukan sebenarnya seperti biasa. Tidak ada peningkatan kesibukan secara signifikan. Lalu mengapa? Alasannya simpel. Karena semua kegiatan berkomputer baik-baik saja. Tidak ada masalah. Biasanya saya menulis di sini ketika saya menghadapi masalah terkait penggunaan komputer. Nah, kali ini masalahnya adalah saya menemukan banyak file yang namanya tidak sesuai dengan standar saya.</p>
+<p>Contoh, adik-adik asisten anatomi mengirimkan <em>softcopy</em> materi asistensi. Penamaan file yang diberikan adik-adik adalah berawalan dengan <strong>MC</strong> untuk materi <em>systema musculoskeletale</em>. Saya ingin melakukan <em>rename</em> semua file tersebut yang semula berawalan <strong>MC</strong> menjadi berawalan <strong>Asistensi Anatomi Syst Musculoskeletale</strong>. Perubahan nama banyak file dengan nama yang cukup panjang tentu saja menyita waktu. Sebenarnya ini masih sangat mendingan, hanya 6 file. <em>Rename</em> satu-persatu sebenarnya tidak masalah juga. Tapi <strong>bagaimana kalau kasus serupa jumlah filenya puluhan, ratusan bahkan ribuan?</strong> Era industri 4.0 semakin menuntut efisiensi waktu. Efisiensi waktu ini berdampak pada efisiensi tenaga, baik itu tenaga <em>brainware</em> maupun komputernya yang kemudian mengakibatkan efisiensi biaya.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2019-12-01-rename-banyak-file-sekaligus/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2019-11-30-mengetahui-x11-atau-wayland/">Mengetahui lingkungan aktif X11 atau wayland</a></h2>
 
     <div class="post-meta">
@@ -261,8 +308,9 @@
   </header>
 
   <p>
-  Untuk mengetahui sedang aktif di dalam environment X11 atau wayland
-$ echo $XDG_SESSION_TYPE 
+  <p>Untuk mengetahui sedang aktif di dalam <em>environment</em> <strong>X11</strong> atau <strong>wayland</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ echo $XDG_SESSION_TYPE
+</span></span></code></pre></div>
   </p>
 
   
@@ -304,9 +352,9 @@ $ echo $XDG_SESSION_TYPE
   </header>
 
   <p>
-  Catatan kali ini masih seputar troubleshoot HP android dengan komputer terutama Slackware.
-Tadi malam, HP yang OS android touchscreen-nya tidak ada respon. Di semua bagian layar. Tapi tombol power dan volume masih berfungsi. Begitu juga dengan konektivitas internet maupun telepon. Mau mencoba di-restart, tombol power normal tapi untuk memilih shutdown atau reboot tidak bisa karena tochscreen-nya tidak ada respon. Lepas baterai? Tidak bisa karena baterainya tanam.
-Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersedia di SBo).
+  <p>Catatan kali ini masih seputar <em>troubleshoot</em> HP android dengan komputer terutama <strong>Slackware</strong>.</p>
+<p>Tadi malam, HP yang OS android <em>touchscreen</em>-nya tidak ada respon. Di semua bagian layar. Tapi tombol power dan volume masih berfungsi. Begitu juga dengan konektivitas internet maupun telepon. Mau mencoba di-<em>restart</em>, tombol power normal tapi untuk memilih <em>shutdown</em> atau <em>reboot</em> tidak bisa karena <em>tochscreen</em>-nya tidak ada respon. Lepas baterai? Tidak bisa karena baterainya tanam.</p>
+<p>Solusinya? <em>restart</em> via komputer. Pastikan sudah terinstall <em>andorid tools</em> (tersedia di SBo).</p>
   </p>
 
   
@@ -352,9 +400,11 @@ Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersed
   </header>
 
   <p>
-  Sebelum berganti ponsel atau HP sangat disarankan untuk mem-back up data-data penting, seperti dokumen, foto, video, maupun chat WhatsApp. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi Slackware.
-Persiapan Slackware Pastikan bisa menjalankan adb yang merupakan bagian dari android tools. Kalau belum bisa install dari SBo
-Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer pakai adb bisa lebih cepat
+  <p>Sebelum berganti ponsel atau HP sangat disarankan untuk mem-<em>back up</em> data-data penting, seperti dokumen, foto, video, maupun chat <em>WhatsApp</em>. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi <strong>Slackware</strong>.</p>
+<h1 id="persiapan-slackware">Persiapan <strong>Slackware</strong></h1>
+<p>Pastikan bisa menjalankan <!-- raw HTML omitted -->adb<!-- raw HTML omitted --> yang merupakan bagian dari <!-- raw HTML omitted -->android tools<!-- raw HTML omitted -->. Kalau belum bisa install dari SBo</p>
+<h1 id="mengapa-adb">Mengapa adb?</h1>
+<p>Mengapa <!-- raw HTML omitted -->adb<!-- raw HTML omitted -->? Mengapa tidak pakai <em>file manager</em> saja? Karena transfer pakai <!-- raw HTML omitted -->adb<!-- raw HTML omitted --> bisa lebih cepat</p>
   </p>
 
   
@@ -402,59 +452,16 @@ Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer
   </header>
 
   <p>
-  Secara default sbopkg tidak menyediakan fitur reverse dependency. Adapun untuk butuh dependency-nya apa saja bisa menggunakan sqg. Bagaimana tahu reverse dependency-nya?
-Ini cara sederhana yang saya gunakan
-grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan cara tersebut bisa diketahui suatu paket/package itu menjadi dependensi dari paket apa. Tapi, salah 1 dari output tersebut tidak lain adalah paket itu sendiri. Dan, package yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah packages tersebut terinstall atau tidak.
+  <p>Secara <em>default</em> <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> tidak menyediakan fitur <strong>reverse dependency</strong>. Adapun untuk butuh <em>dependency</em>-nya apa saja bisa menggunakan <!-- raw HTML omitted -->sqg<!-- raw HTML omitted -->. Bagaimana tahu <em>reverse dependency</em>-nya?</p>
+<p>Ini cara sederhana yang saya gunakan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket
+</span></span></code></pre></div><p>Dengan cara tersebut bisa diketahui suatu paket/<em>package</em> itu menjadi dependensi dari paket apa. Tapi, salah 1 dari <em>output</em> tersebut tidak lain adalah paket itu sendiri. Dan, <em>package</em> yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah <em>packages</em> tersebut terinstall atau tidak.</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2019-04-19-chromium-disable-unlock-keyring/">Chromium Disable Unlock Keyring</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Apr 2019</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Mungkin ada yang merasa bosan setiap membuka Chromium muncul kotak dialog Unlock Keyring.
-Itu bisa diatasi, agar tidak muncul lagi. Aktifkan CHROMIUM_FLAGS pada /etc/chromium/00-default.conf.
-CHROMIUM_FLAGS=&#34;--password-store=basic&#34; 
-  </p>
-
   
 </article>
 
@@ -467,7 +474,7 @@ CHROMIUM_FLAGS=&#34;--password-store=basic&#34;
   
   <a href="https://sasongko.web.id/page/36/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;37 / 65&nbsp;</span>
+  <span>&nbsp;37 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/38/"><i class="fa fa-chevron-right"></i></a>
   

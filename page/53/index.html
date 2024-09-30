@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,62 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-10-29-install-testdisk/">Install Testdisk</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Oct 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Testdisk adalah salah satu aplikasi <em>digital</em> forensik multiplatform. Bisa dijalankan di Windows (NT4, 2000, 2003, XP, Vista dan 7), Linux, FreeBSD, OpenBSD, NetBSD, SunOS, dan MacOS. Adapun kegunaannya untuk mengembalikan partisi yang terhapus beserta file-file yang ada di dalamnya. Informasi lebih lengkap tentang testdisk bisa didapatkan di <a href="http://www.cgsecurity.org/">sini</a>.</p>
+<p>Sebenarnya untuk Slackware sudah ada <em>slackbuild</em>-nya, tapi tidak ada salahnya kalau install dari kode sumber. Penginstallan dijalankan dengan level root.</p>
+<pre tabindex="0"><code>wget http://www.cgsecurity.org/testdisk-7.0.tar.bz2
+tar xjvf testdisk-7.0.tar.bz2
+cd testdisk-7.0 
+./configure
+make
+make install
+</code></pre><p>Oke, testdisk sudah diinstall. Untuk mulai menjalankannya (harus level root)</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-10-29-install-testdisk/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-10-01-download-video-youtube/">Download Video Youtube</a></h2>
 
     <div class="post-meta">
@@ -261,10 +317,12 @@
   </header>
 
   <p>
-  Download video dari Youtube adalah hal yang mudah bagi pengguna Slackware. Paling tidak ada 2 cara. Cara pertama menggunakan peramban web, dan cara kedua menggunakan youtube-dl yang berantar muka teks. Di sini menggunakan cara kedua. Untuk menginstall youtube-dl silahkan [klik di sini]({% post_url 2015-10-01-install-youtubedl %}).
-Cara menggunakannya
-youtube-dl url_video_youtube Contoh, akan URL video yang akan di download adalah https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54.
-youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54 Kalau ada beberapa video yang ingin didownload, masukkan saja URLnya ke satu file, tiap baris 1 URL, kemudian cara downloadnya tambahkan opsi -a
+  <p>Download video dari <em>Youtube</em> adalah hal yang mudah bagi pengguna <em>Slackware</em>. Paling tidak ada 2 cara. Cara pertama menggunakan peramban web, dan cara kedua menggunakan <em>youtube-dl</em> yang berantar muka teks. Di sini menggunakan cara kedua. Untuk menginstall <em>youtube-dl</em> silahkan [klik di sini]({% post_url 2015-10-01-install-youtubedl %}).</p>
+<p>Cara menggunakannya</p>
+<pre tabindex="0"><code>youtube-dl url_video_youtube
+</code></pre><p>Contoh, akan URL video yang akan di download adalah <a href="https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54">https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54</a>.</p>
+<pre tabindex="0"><code>youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54
+</code></pre><p>Kalau ada beberapa video yang ingin didownload, masukkan saja URLnya ke satu file, tiap baris 1 URL, kemudian cara downloadnya tambahkan opsi -a</p>
   </p>
 
   
@@ -310,8 +368,15 @@ youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9
   </header>
 
   <p>
-  Siapa bilang pakai Slackware ga bisa download video dari Youtube? Bisa kok pakai youtube-dl.Cara installnya gampang. Pastikan terhubung ke internet untuk mengunduh berkasnya. Dan untuk install butuh hak akses root. Di sini kita pakai cara yang mudah saja, install dari slackbuilds.org.
-cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-dl.tar.gz tar xzf youtube-dl.tar.gz cd youtube-dl wget https://github.com/rg3/youtube-dl/archive/2015.09.22.tar.gz sh youtube-dl.SlackBuild installpkg /tmp/youtube-dl-2015.09.22-x86_64-1_SBo.tgz 
+  <p>Siapa bilang pakai <em>Slackware</em> ga bisa download video dari <em>Youtube</em>? Bisa kok pakai <em>youtube-dl</em>.Cara installnya gampang. Pastikan terhubung ke internet untuk mengunduh berkasnya. Dan untuk install butuh hak akses root. Di sini kita pakai cara yang mudah saja, install dari slackbuilds.org.</p>
+<pre tabindex="0"><code>cd /usr/local/src
+wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-dl.tar.gz
+tar xzf youtube-dl.tar.gz
+cd youtube-dl
+wget https://github.com/rg3/youtube-dl/archive/2015.09.22.tar.gz
+sh youtube-dl.SlackBuild
+installpkg /tmp/youtube-dl-2015.09.22-x86_64-1_SBo.tgz
+</code></pre>
   </p>
 
   
@@ -355,7 +420,7 @@ cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-d
   </header>
 
   <p>
-  Bagaimana sih caranya copy paste teks yang ada di Terminal? Untuk copy blok tulisannya kemudian klik kanan pilih Copy, atau setelah diblok tekan Ctrl Shift C. Sedangkan untuk paste ke terminal silahkan klik kanan pilih Paste atau tekan Ctrl Shift V.
+  <p>Bagaimana sih caranya <em>copy paste</em> teks yang ada di Terminal? Untuk <em>copy</em> blok tulisannya kemudian klik kanan pilih <em>Copy</em>, atau setelah diblok tekan Ctrl Shift C. Sedangkan untuk <em>paste</em> ke terminal silahkan klik kanan pilih <em>Paste</em> atau tekan Ctrl Shift V.</p>
   </p>
 
   
@@ -395,61 +460,33 @@ cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-d
   </header>
 
   <p>
-  Di [catatan yang lalu]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) telah kami sampaikan cara konek internet di Slackware dengan modem, ppp, dan internet provider atau operator Tri. Kali ini akan kami ganti dengan operator XL.
-Sunting berkas /etc/ppp/options
-# General configuration options for PPPD: lock defaultroute noipdefault modem /dev/ttyUSB0 460800 crtscts # Uncomment the line below for more verbose error reporting: #debug # If you have a default route already, pppd may require the other side # to authenticate itself, which most ISPs will not do.
+  <p>Di [catatan yang lalu]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) telah kami sampaikan cara konek internet di Slackware dengan modem, ppp, dan internet provider atau operator Tri. Kali ini akan kami ganti dengan operator XL.</p>
+<p>Sunting berkas /etc/ppp/options</p>
+<pre tabindex="0"><code># General configuration options for PPPD:
+lock
+defaultroute
+noipdefault
+modem
+/dev/ttyUSB0
+460800
+crtscts
+# Uncomment the line below for more verbose error reporting:
+#debug
+# If you have a default route already, pppd may require the other side
+# to authenticate itself, which most ISPs will not do.  To work around this,
+# uncomment the line below.  Note that this may have negative side effects
+# on system security if you allow PPP dialins.  See the docs in /usr/doc/ppp*
+# for more information.
+#noauth
+passive
+asyncmap 0
+name &#34;3data&#34;
+</code></pre><p>Baris 19, ganti &ldquo;3data&rdquo; dengan &ldquo;internet&rdquo;.</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2015-08-17-setting-internet-xl-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-08-01-unduh-iso-slackware-current/">Unduh ISO Slackware Current</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Aug 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Slackware adalah distro yang istimewa. Tak seperti distro lainnya yang menyediakan ISO versi terbaru atau current yang masih dalam pengembangan, slackware tidak merilis current ISO secara resmi. Walaupun demikian, ada yang menyediakannya bagi yang berminat, salah satunya bisa didapatkan di repo ftp://ftp.slackware.no.
-Kali ini coba mengunduh slackware current ISO. Pakai rsync saja yang gampang dan bisa dilanjut kalau internetnya putus.
-Sebelumnya cek dulu ISO terbaru
-$ rsync ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/ drwxr-xr-x 4,096 2015/07/28 10:00:29 .
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-08-01-unduh-iso-slackware-current/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -463,7 +500,7 @@ $ rsync ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/ drwxr-x
   
   <a href="https://sasongko.web.id/page/52/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;53 / 65&nbsp;</span>
+  <span>&nbsp;53 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/54/"><i class="fa fa-chevron-right"></i></a>
   

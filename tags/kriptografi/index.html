@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Kriptografi &middot; Catatan Sasongko</title>
 
@@ -264,9 +264,11 @@
   </header>
 
   <p>
-  Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupg atau yang biasa disebut dengan gpg.
-$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
-$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi 
+  <p>Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan <!-- raw HTML omitted -->gnupg<!-- raw HTML omitted --> atau yang biasa disebut dengan <!-- raw HTML omitted -->gpg<!-- raw HTML omitted -->.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi
+</span></span></code></pre></div><p>Sedangkan untuk dekripsi</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
+</span></span></code></pre></div>
   </p>
 
   
@@ -312,8 +314,8 @@ $ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
   </header>
 
   <p>
-  Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
-Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssl dengan cipher rc4. File hasil enkripsi saya namai rahasia.odt yang saya taruh di fd dan fd saya mount di /media/hd0. Kemudian akan ditanya password enkripsinya.
+  <p>Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan <!-- raw HTML omitted -->openssl<!-- raw HTML omitted -->. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).</p>
+<p>Contoh, saya punya file yang perlu diamankan. Katakanlah filenya <!-- raw HTML omitted -->indonesia-raya.odt<!-- raw HTML omitted -->. Saya enkripsi menggunakan <!-- raw HTML omitted -->openssl<!-- raw HTML omitted --> dengan <em>cipher rc4</em>. File hasil enkripsi saya namai <!-- raw HTML omitted -->rahasia.odt<!-- raw HTML omitted --> yang saya taruh di fd dan fd saya <!-- raw HTML omitted -->mount<!-- raw HTML omitted --> di <!-- raw HTML omitted -->/media/hd0<!-- raw HTML omitted -->. Kemudian akan ditanya <em>password</em> enkripsinya.</p>
   </p>
 
   

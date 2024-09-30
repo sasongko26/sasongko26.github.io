@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,49 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2017-08-08-set-clang-as-default-c-compiler/">Mengatur Clang Sebagai C Compiler Utama</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 Aug 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Secara <em>default</em>, <em>C Compiler</em> yang digunakan adalah <!-- raw HTML omitted -->gcc<!-- raw HTML omitted -->. Namun, apabila diinginkan, bisa dialihkan menggunakan <!-- raw HTML omitted -->clang<!-- raw HTML omitted -->. Caranya, buat file di <!-- raw HTML omitted -->/etc/profile.d<!-- raw HTML omitted -->  misalnya <!-- raw HTML omitted -->c-compiler.sh<!-- raw HTML omitted -->, yang isinya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export CC<span style="color:#f92672">=</span>/usr/bin/clang
+</span></span><span style="display:flex;"><span>export CXX<span style="color:#f92672">=</span>/usr/bin/clang++
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2017-07-31-multi-slackware-elilo/">Multi Slackware dengan elilo</a></h2>
 
     <div class="post-meta">
@@ -263,7 +306,7 @@
   </header>
 
   <p>
-  Posting kali ini terinspirasi dari Pak Walesa yang menulis di sini dan ini. Perbedaannya adalah pada boot loader yang digunakan. Saya gunakan elilo. Selain itu, sudah ada existing Slackware64 current dan Slackware64 14.2. Keduanya dengan filesystem ext4. Mau ditambahkan yang stable (Slackware64 14.2 dan Slackware 14.2) tetapi dengan filesystem btrfs. Jadi dual Slackware stable ini akan ditempatkan di dalam partisi yang sama. Sebenarnya tripleboot dengan Windows 10, tetapi Windows 10 sangat jarang dipakai.
+  <p>Posting kali ini terinspirasi dari Pak Walesa yang menulis <a href="http://walecha.web.id/node/57">di sini</a> dan <a href="http://walecha.web.id/node/58">ini</a>. Perbedaannya adalah pada <em>boot loader</em> yang digunakan. Saya gunakan <!-- raw HTML omitted -->elilo<!-- raw HTML omitted -->. Selain itu, sudah ada <em>existing</em> Slackware64 current dan Slackware64 14.2. Keduanya dengan filesystem ext4. Mau ditambahkan yang stable (Slackware64 14.2 dan Slackware 14.2) tetapi dengan <em>filesystem btrfs</em>. Jadi dual Slackware stable ini akan ditempatkan di dalam partisi yang sama. Sebenarnya <em>tripleboot</em> dengan Windows 10, tetapi Windows 10 sangat jarang dipakai. Jadi abaikan saja Windowsnya.</p>
   </p>
 
   
@@ -309,8 +352,8 @@
   </header>
 
   <p>
-  Sebagai pengguna SBo dan sbopkg, file yang dihasilkan proses build ditaruh di /tmp. Folder ini lama-lama semakin banyak isinya. Padahal filenya bisa dikatakan tidak terpakai. Script masih aman tersimpan rapi di /var/lib/sbopkg. Sedangkan source-nya di /var/cache/sbopkg.
-Semua yang ada di folder /tmp akan saya hapus kecuali file yang berekstensi txt. Saya memang kadang iseng nulis-nulis sesuatu kemudian saya simpan dengan ekstensi txt dan ditaruh di /tmp. File-file ini tidak mau saya hapus, buat dibaca jadi hiburan sendiri kelak bahwa dulu pernah iseng nulis seperti itu&hellip; Hahahaha&hellip;.
+  <p>Sebagai pengguna <em>SBo</em> dan <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->, file yang dihasilkan proses <em>build</em> ditaruh di <!-- raw HTML omitted -->/tmp<!-- raw HTML omitted -->. Folder ini lama-lama semakin banyak isinya. Padahal filenya bisa dikatakan tidak terpakai. <em>Script</em> masih aman tersimpan rapi di <!-- raw HTML omitted -->/var/lib/sbopkg<!-- raw HTML omitted -->. Sedangkan <em>source</em>-nya di <!-- raw HTML omitted -->/var/cache/sbopkg<!-- raw HTML omitted -->.</p>
+<p>Semua yang ada di folder <!-- raw HTML omitted -->/tmp<!-- raw HTML omitted --> akan saya hapus kecuali file yang berekstensi <!-- raw HTML omitted -->txt<!-- raw HTML omitted -->. Saya memang kadang iseng nulis-nulis sesuatu kemudian saya simpan dengan ekstensi <!-- raw HTML omitted -->txt<!-- raw HTML omitted --> dan ditaruh di <!-- raw HTML omitted -->/tmp<!-- raw HTML omitted -->. File-file ini tidak mau saya hapus, buat dibaca jadi hiburan sendiri kelak bahwa dulu pernah iseng nulis seperti itu&hellip; Hahahaha&hellip;..</p>
   </p>
 
   
@@ -358,8 +401,7 @@ Semua yang ada di folder /tmp akan saya hapus kecuali file yang berekstensi txt.
   </header>
 
   <p>
-  Kemarin melihat ChangeLog ada beberapa update yang sebagian di antaranya adalah security fix. Salah satu update adalah kernel. Melakukan upgrade semuanya baik-baik saja dan lanjut shutdown. Siang ini, booting pun masih fine dan no problem. Begitu juga login. Baru terasa saat ingin masuk desktop malah gagal.
-$ startx xauth: file /home/sasongko/.serverauth.2717 does not exist X.Org X Server 1.19.3 Release Date: 2017-03-15 X Protocol Version 11, Revision 0 Build Operating System: Slackware 14.
+  <p>Kemarin melihat <em>ChangeLog</em> ada beberapa <em>update</em> yang sebagian di antaranya adalah <em>security fix</em>. Salah satu <em>update</em> adalah kernel. Melakukan <em>upgrade</em> semuanya baik-baik saja dan lanjut <!-- raw HTML omitted -->shutdown<!-- raw HTML omitted -->. Siang ini, <!-- raw HTML omitted -->booting<!-- raw HTML omitted --> pun masih <em>fine</em> dan <em>no problem</em>. Begitu juga <!-- raw HTML omitted -->login<!-- raw HTML omitted -->. Baru terasa saat ingin masuk <em>desktop</em> malah gagal.</p>
   </p>
 
   
@@ -405,56 +447,13 @@ $ startx xauth: file /home/sasongko/.serverauth.2717 does not exist X.Org X Serv
   </header>
 
   <p>
-  LibreOffice sudah lama mendukung konversi file dari Word/Writer (doc, docx dan odt) ke file pdf. Keunggulannya adalah bisa melakukan konversi secara massal.
-Misalkan, dipunyai 1000 file docx yang tersimpan di /Documents. Masing-masing file ini akan dikonversi menjadi pdf di /convert.
-$ soffice --headless --nologo --convert-to pdf:writer_pdf_Export --outdir ~/convert Documents/*.docx Opsi &ndash;headless &ndash;nologo diberikan agar lebih cepat, lebih hemat waktu, karena tidak menampilkan splash screen.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-07-04-presentasi-lcd-projector/">Presentasi dengan LCD Projector</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>04 Jul 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Tools yang digunakan adalah xrandr. Sebenarnya bisa menggunakan aplikasi GUI yang disediakan desktop environment masing-masing, tapi saya lebih suka menggunakan xrandr agar universal bisa digunakan di lingkungan desktop apapun, entah itu Fluxbox, FVWM, TWM, Xfce, KDE, Lumina, LXQt, Mate, Cinnamon, dsb.
-Pertama, identifikasi monitor/screen primer yang aktif tersambung saat ini, jangan sambungkan proyektor dulu
-$ xrandr Screen 0: minimum 8 x 8, current 1366 x 768, maximum 32767 x 32767 eDP1 connected primary 1366x768+0+0 (normal left inverted right x axis y axis) 310mm x 170mm 1366x768 59.
+  <p><!-- raw HTML omitted -->LibreOffice<!-- raw HTML omitted --> sudah lama mendukung konversi file dari Word/Writer (doc, docx dan odt) ke file pdf. Keunggulannya adalah bisa melakukan konversi secara massal.</p>
+<p>Misalkan, dipunyai 1000 file <!-- raw HTML omitted -->docx<!-- raw HTML omitted --> yang tersimpan di <!-- raw HTML omitted --><del>/Documents<!-- raw HTML omitted -->. Masing-masing file ini akan dikonversi menjadi <!-- raw HTML omitted -->pdf<!-- raw HTML omitted --> di <!-- raw HTML omitted --></del>/convert<!-- raw HTML omitted -->.</p>
   </p>
 
   
   <footer>
-    <a href="https://sasongko.web.id/post/2017-07-04-presentasi-lcd-projector/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+    <a href="https://sasongko.web.id/post/2017-07-05-convert-word-pdf-massal/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -468,7 +467,7 @@ $ xrandr Screen 0: minimum 8 x 8, current 1366 x 768, maximum 32767 x 32767 eDP1
   
   <a href="https://sasongko.web.id/page/42/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;43 / 65&nbsp;</span>
+  <span>&nbsp;43 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/44/"><i class="fa fa-chevron-right"></i></a>
   

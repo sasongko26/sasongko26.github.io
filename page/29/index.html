@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,67 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/">Mengetahui IP lokal dengan nmcli</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Untuk mengetahui alamat ip lokal tanpa akses <strong>root</strong> dapat menggunakan <strong>nmcli</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ nmcli
+</span></span><span style="display:flex;"><span>wlan0: connected to Anatomi
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Qualcomm Atheros QCA9377&#34;</span>
+</span></span><span style="display:flex;"><span>        wifi <span style="color:#f92672">(</span>ath10k_pci<span style="color:#f92672">)</span>, CC:B0:DA:B5:3B:75, hw, mtu <span style="color:#ae81ff">1500</span>
+</span></span><span style="display:flex;"><span>        ip4 default
+</span></span><span style="display:flex;"><span>        inet4 192.168.120.19/24
+</span></span><span style="display:flex;"><span>        route4 0.0.0.0/0
+</span></span><span style="display:flex;"><span>        route4 192.168.120.0/24
+</span></span><span style="display:flex;"><span>        route4 192.168.120.0/24
+</span></span><span style="display:flex;"><span>        inet6 fe80::1a37:a13:b117:ff74/64
+</span></span><span style="display:flex;"><span>        route6 fe80::/64
+</span></span><span style="display:flex;"><span>        route6 ff00::/8
+</span></span></code></pre></div><p>Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah</p>
+<ol>
+<li>ipv4 192.168.120.19</li>
+<li>ipv6 fe80::1a37:a13:b117:ff74</li>
+</ol>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Rebuild R post-upgrade icu4c</a></h2>
 
     <div class="post-meta">
@@ -261,9 +322,19 @@
   </header>
 
   <p>
-  Pagi ini, saat akan mengeksekusi R,
-$ R /usr/lib64/R/bin/exec/R: error while loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory Ternyata R nya bermasalah. Di atas disebutkan bahwa libicuuc.so.67 tidak ditemukan. Dari namanya, bisa ditebak itu adalah shared object/library miliknya icu4c. Kita pastikan dulu,
-$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE The list below shows the packages that contains &#34;libicuuc\.
+  <p>Pagi ini, saat akan mengeksekusi <strong>R</strong>,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ R
+</span></span><span style="display:flex;"><span>/usr/lib64/R/bin/exec/R: error <span style="color:#66d9ef">while</span> loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory
+</span></span></code></pre></div><p>Ternyata <strong>R</strong> nya bermasalah. Di atas disebutkan bahwa <strong>libicuuc.so.67</strong> tidak ditemukan. Dari namanya, bisa ditebak itu adalah <em>shared object/library</em> miliknya <strong>icu4c</strong>. Kita pastikan dulu,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ slackpkg file-search libicuuc.so
+</span></span><span style="display:flex;"><span>Looking <span style="color:#66d9ef">for</span> libicuuc.so in package list. Please wait... DONE
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>The list below shows the packages that contains <span style="color:#e6db74">&#34;libicuuc\.so&#34;</span> file.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> installed <span style="color:#f92672">]</span> - icu4c-68.2-x86_64-1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>You can search specific packages using <span style="color:#e6db74">&#34;slackpkg search package&#34;</span>.
+</span></span></code></pre></div><p><em>Command</em> tersebut dieksekusi dengan <em>root privileges</em>.</p>
   </p>
 
   
@@ -309,11 +380,18 @@ $ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Plea
   </header>
 
   <p>
-  Ini adalah keisengan di kala WFH alias work from home. Melakukan ekstraksi waktu pada changelog slackware64-current yang terakhir kami update 8 Januari 2021.
-Changelognya terdiri dari 4 bagian:
-Waktu Packages yang mengalami perubahan (Upgraded, Removed, Added, Rebuilt) Keterangan perubahan Pembatas update antarwaktu (+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+) Akan diambil yang no.1 saja.
-Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.txt.
-$ sed &#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!
+  <p>Ini adalah keisengan di kala WFH alias <em>work from home</em>. Melakukan ekstraksi waktu pada <em>changelog</em> <strong>slackware64-current</strong> yang terakhir kami update 8 Januari 2021.</p>
+<p>Changelognya terdiri dari 4 bagian:</p>
+<ol>
+<li>Waktu</li>
+<li><em>Packages</em> yang mengalami perubahan (<em>Upgraded, Removed, Added, Rebuilt</em>)</li>
+<li>Keterangan perubahan</li>
+<li>Pembatas <em>update</em> antarwaktu (+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+)</li>
+</ol>
+<p>Akan diambil yang no.1 saja.</p>
+<p>Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.txt.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ sed <span style="color:#e6db74">&#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!d&#39;</span> /var/lib/slackpkg/ChangeLog.txt &gt; changelog-date.txt
+</span></span></code></pre></div><p>Hapus semua baris yang berakhiran dengan tanda titik.</p>
   </p>
 
   
@@ -361,8 +439,8 @@ $ sed &#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!
   </header>
 
   <p>
-  Ratpoison sesuai namanya benar adalah racun! Mouse-nya terkena racun! Penggunaan mouse menjadi minimal. User banyak menggunakan keyboard.
-Memasuki lingkungan ratpoison user disambut interface hitam (mungkin dengan disertai bayangannya sendiri). Sudut kanan atas muncul ucapan selamat datang Welcome to ratpoison! Hit C - t ? for help.. Bagi yang selalu berpesta dalam gemerlapnya KDE Plasma, Cinnamon, Xfce, Mate, Budgie, dll sangat mungkin merasa njegleg atau keheranan bahkan mungkin bingung atau linglung. Tapi slackers insyaallah tetap tenang-tenang saja, bisa beradaptasi.
+  <p><strong>Ratpoison</strong> sesuai namanya benar adalah racun! <em>Mouse</em>-nya terkena racun! Penggunaan <em>mouse</em> menjadi minimal. <em>User</em> banyak menggunakan <em>keyboard</em>.</p>
+<p>Memasuki lingkungan <strong>ratpoison</strong> <em>user</em> disambut interface hitam (mungkin dengan disertai bayangannya sendiri). Sudut kanan atas muncul ucapan selamat datang <strong>Welcome to ratpoison! Hit <code>C - t ?</code> for help.</strong>. Bagi yang selalu berpesta dalam gemerlapnya <strong>KDE Plasma, Cinnamon, Xfce, Mate, Budgie</strong>, dll sangat mungkin merasa <em>njegleg</em> atau keheranan bahkan mungkin bingung atau linglung. Tapi slackers insyaallah tetap tenang-tenang saja, bisa beradaptasi. Apalagi kalau <strong>emacs</strong> adalah <em>text editor</em> favoritnya. Apa hubungannya? Keduanya mempunyai <em>keybindings</em> yang serupa.</p>
   </p>
 
   
@@ -412,63 +490,13 @@ Memasuki lingkungan ratpoison user disambut interface hitam (mungkin dengan dise
   </header>
 
   <p>
-  Mengecek kondisi baterai laptop melalui terminal atau command line interface sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara default sudah menyertakan desktop environment seperti xfce, kde, mate, cinnamon, budgie, lumina dan manokwari dengan interface yang cantik dan menarik. DE tersebut sudah mempunyai power manager lengkap dengan applet-nya yang tak pernah bosan nempel di panel.
-Bagaimana kalau &lsquo;hanya&rsquo; menggunakan window manager seperti GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm atau ratpoison yang tidak mempunyai power manager sendiri?
+  <p>Mengecek kondisi baterai laptop melalui terminal atau <em>command line interface</em> sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara <em>default</em> sudah menyertakan <em>desktop environment</em> seperti <strong>xfce, kde, mate, cinnamon, budgie, lumina</strong> dan <strong>manokwari</strong> dengan <em>interface</em> yang cantik dan menarik. DE tersebut sudah mempunyai <em>power manager</em> lengkap dengan <em>applet</em>-nya yang tak pernah bosan nempel di panel.</p>
+<p>Bagaimana kalau &lsquo;hanya&rsquo; menggunakan <em>window manager</em> seperti <strong>GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm</strong> atau <strong>ratpoison</strong> yang tidak mempunyai <em>power manager</em> sendiri? Melalui terminal lah jawabannya. Di sini digunakan <strong>upower</strong> yang secara default ada di <strong>Slackware</strong></p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/">Menggunakan rsync</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/internet-download-manager">internet-download-manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Kegunaan rsync rsync berguna untuk transfer file secara efisien. Dibandingkan dengan cp atau mv, rsync memiliki keunggulan :
-Bebas pilih-pilih file maupun direktori yang akan ditransfer karena ada fitur include dan exclude Apabila gagal, misalnya karena storage penuh atau &ldquo;kecelakaan&rdquo; salah klik sehingga ter-close, dapat dilanjutkan tanpa mengulang dari awal sehingga waktunya tentu lebih cepat Dibandingkan wget, rsync mendukung penggunaan wildcard dan secara default rsync resumeable.
-Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -482,7 +510,7 @@ Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1
   
   <a href="https://sasongko.web.id/page/28/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;29 / 65&nbsp;</span>
+  <span>&nbsp;29 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/30/"><i class="fa fa-chevron-right"></i></a>
   

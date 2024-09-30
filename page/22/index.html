@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-03-17-layar-merah-kuning-redshift/">Mengatur pencahayaan monitor dengan redshift</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>17 Mar 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/power-manager">power-manager</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Beberapa bulan ini mata menjadi lebih cepat lelah apabila malam-malam berlama-lama menatap monitor. Padahal <em>backlight/brightness</em> sudah diset 15%. Mungkin karena faktor U dan pagi/siang sebelumnya sudah memandangi layar komputer. Maka, jadilah penulis menginstal <strong>redshift</strong> untuk &ldquo;memerah/kuningkan <em>brightness</em> monitor.</p>
+<p><strong>Redshift</strong> tersedia di SBo, sehingga bisa diinstal dengan mudah melalui <em>sbotools, sbopkg, sboui, slpkg,</em> atau yang lainnya.</p>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-03-16-load-csv-python/">Load dataset csv dengan python</a></h2>
 
     <div class="post-meta">
@@ -263,8 +310,10 @@
   </header>
 
   <p>
-  Misalkan ada dataset dalam format csv. Data tersebut dapat di-load atau diimpor dengan python dengan library pandas. Berikut script untuk load file data.csv.
-import pandas as pd data = pd.read_csv(&#34;data.csv&#34;) 
+  <p>Misalkan ada dataset dalam format csv. Data tersebut dapat di-<em>load</em> atau diimpor dengan <strong>python</strong> dengan <em>library</em> <strong>pandas</strong>. Berikut script untuk load file data.csv.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>import pandas as pd
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd.read_csv<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;data.csv&#34;</span><span style="color:#f92672">)</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -308,8 +357,14 @@ import pandas as pd data = pd.read_csv(&#34;data.csv&#34;)
   </header>
 
   <p>
-  Beberapa library atau module python yang sering digunakan untuk statistika adalah
-numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis vektor atau matriks pandas: digunakan untuk melakukan pengolahan data tabular matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat digunakan sebagai alat bantu dalam analisa data statsmodels: digunakan untuk melakukan uji hipotesa, eksplorasi data maupun pemodelan statistika scipy: digunakan untuk melakukan uji statistika, juga dapat digunakan untuk melakukan pemodelan statistika 
+  <p>Beberapa library atau module python yang sering digunakan untuk statistika adalah</p>
+<ol>
+<li>numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis vektor atau matriks</li>
+<li>pandas: digunakan untuk melakukan pengolahan data tabular
+matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat digunakan sebagai alat bantu dalam analisa data</li>
+<li>statsmodels: digunakan untuk melakukan uji hipotesa, eksplorasi data maupun pemodelan statistika</li>
+<li>scipy: digunakan untuk melakukan uji statistika, juga dapat digunakan untuk melakukan pemodelan statistika</li>
+</ol>
   </p>
 
   
@@ -353,8 +408,9 @@ numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis v
   </header>
 
   <p>
-  Misalkan mempunyai 2 file ebook yaitu ebook1.pdf dan ebook2.pdf. Kedua file ini akan digabung menjadi ebook.pdf. Maka untuk menggabungkannya
-$ pdfunite ebook1.pdf ebook2.pdf ebook.pdf 
+  <p>Misalkan mempunyai 2 file <em>ebook</em> yaitu ebook1.pdf dan ebook2.pdf. Kedua file ini akan digabung menjadi ebook.pdf. Maka untuk menggabungkannya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ pdfunite ebook1.pdf ebook2.pdf ebook.pdf
+</span></span></code></pre></div>
   </p>
 
   
@@ -396,63 +452,15 @@ $ pdfunite ebook1.pdf ebook2.pdf ebook.pdf
   </header>
 
   <p>
-  Masih adakah pengguna linux di Indonesia yang menggunakan blackbox sebagai window manager sehari-hari? Masih, minimal seorang yaitu yang menulis catatan ini. Hehehehe&hellip;.
-Secara default, toolbar blackbox tidak menyertakan tanggal walau menampilkan jam. Jam ditampilkan dalam format 12 jam AM/PM. Untuk menambahkannya, dan menggunakan jam format 24 jam sebagaimana lazimnya di Indonesia, diatur sebagai berikut pada ~/.blackboxrc
-session.screen0.strftimeFormat : %d/%m/%Y %H:%M Untuk menerapkan perubahan tersebut secara langsung, restart blackbox (tidak perlu restart komputer!
+  <p>Masih adakah pengguna linux di Indonesia yang menggunakan <strong>blackbox</strong> sebagai <strong>window manager</strong> sehari-hari? Masih, minimal seorang yaitu yang menulis catatan ini. Hehehehe&hellip;.</p>
+<p>Secara <em>default, toolbar</em> <strong>blackbox</strong> tidak menyertakan tanggal walau menampilkan jam. Jam ditampilkan dalam format 12 jam AM/PM. Untuk menambahkannya, dan menggunakan jam format 24 jam sebagaimana lazimnya di Indonesia, diatur sebagai berikut pada ~/.blackboxrc</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>session.screen0.strftimeFormat : %d/%m/%Y %H:%M
+</span></span></code></pre></div><p>Untuk menerapkan perubahan tersebut secara langsung, restart <strong>blackbox</strong> (tidak perlu restart komputer!)</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/">Mengubah user agent firefox</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Pengertian user agent User agent (UA) adalah identitas web browser yang dikirimkan ke website yang diakses. Identitas tersebut antara lain nama web browser dan versinya.
-Default UA firefox Firefox yang saat ini digunakan adalah versi 78.6.1esr. Versi ini memiliki UA Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
-Mengetahui UA firefox Pada address bar ketik about:support. Perhatikan bagian User Agent.
-Cara mengganti UA Untuk mengubahnya, contoh kali ini akan diubah dengan UA Chrome pada Mac.
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
@@ -466,7 +474,7 @@ Cara mengganti UA Untuk mengubahnya, contoh kali ini akan diubah dengan UA Chrom
   
   <a href="https://sasongko.web.id/page/21/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;22 / 65&nbsp;</span>
+  <span>&nbsp;22 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/23/"><i class="fa fa-chevron-right"></i></a>
   

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,65 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Mariadb error 2002</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Jun 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mariadb -u root -p
+</span></span><span style="display:flex;"><span>Enter password:
+</span></span><span style="display:flex;"><span>ERROR <span style="color:#ae81ff">2002</span> <span style="color:#f92672">(</span>HY000<span style="color:#f92672">)</span>: Can<span style="color:#e6db74">&#39;t connect to local server through socket &#39;</span>/var/run/mysql/mysql.sock<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">(</span>2<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Setelah dicek, ternyata <em>service</em>-nya belum jalan karena tidak <em>executable</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls -l /etc/rc.d|grep -iE <span style="color:#e6db74">&#34;(maria|mysql)&#34;</span>
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> root     root   <span style="color:#ae81ff">2517</span> May  <span style="color:#ae81ff">2</span> 09:08 rc.mysqld
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> root     root   <span style="color:#ae81ff">2943</span> Aug  <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2020</span> rc.mysqld.orig
+</span></span></code></pre></div><p>Mari aktifkan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># chmod +x /etc/rc.d/rc.mysqld</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># /etc/rc.d/rc.mysqld start</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">210530</span> 10:36:21 mysqld_safe Logging to <span style="color:#e6db74">&#39;/var/lib/mysql/bumi.bumi.err&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">210530</span> 10:36:21 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
+</span></span></code></pre></div><p>Done. Alhamdulillah</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-05-27-list-ip-aktif-sejaringan/">Mengetahui ip aktif sejaringan</a></h2>
 
     <div class="post-meta">
@@ -261,8 +320,15 @@
   </header>
 
   <p>
-  Sebelum mengetahui alamat IP aktif dalam 1 jaringan yang sama, tentu saja harus konek atau masuk ke jaringan tersebut dulu. Setelah masuk, cek IP kita sendiri. Karena konek ke wifi maka interface-nya wlan0
-# ip addr show wlan0 3: wlan0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000 link/ether cc:b0:da:b5:3b:75 brd ff:ff:ff:ff:ff:ff inet 192.168.43.20/24 brd 192.168.43.255 scope global dynamic noprefixroute wlan0 valid_lft 1574sec preferred_lft 1574sec inet6 fe80::7f1b:2f4d:b98e:6500/64 scope link noprefixroute valid_lft forever preferred_lft forever Atau bisa juga dengan
+  <p>Sebelum mengetahui alamat IP aktif dalam 1 jaringan yang sama, tentu saja harus konek atau masuk ke jaringan tersebut dulu. Setelah masuk, cek IP kita sendiri. Karena konek ke wifi maka <em>interface</em>-nya wlan0</p>
+<pre tabindex="0"><code># ip addr show wlan0
+3: wlan0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether cc:b0:da:b5:3b:75 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.43.20/24 brd 192.168.43.255 scope global dynamic noprefixroute wlan0
+       valid_lft 1574sec preferred_lft 1574sec
+    inet6 fe80::7f1b:2f4d:b98e:6500/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+</code></pre><p>Atau bisa juga dengan</p>
   </p>
 
   
@@ -310,9 +376,11 @@
   </header>
 
   <p>
-  Secara default, indexing pada apache hanya menampilkan nama direktori dan file yang berada dalam direktori tersebut dengan format unordered list. Bagi yang menganggap tampilan ini tidak menarik, bisa mengaktifkan fancy indexing dengan cara edit file /etc/httpd/httpd.conf, uncomment baris
-#Include /etc/httpd/extra/httpd-autoindex.conf kemudian restart apache
-# /etc/rc.d/rc.httpd restart 
+  <p>Secara <em>default</em>, <em>indexing</em> pada <strong>apache</strong> hanya menampilkan nama direktori dan file yang berada dalam direktori tersebut dengan format <em>unordered list</em>. Bagi yang menganggap tampilan ini tidak menarik, bisa mengaktifkan <em>fancy indexing</em> dengan cara edit file /etc/httpd/httpd.conf, <em>uncomment</em> baris</p>
+<pre tabindex="0"><code>#Include /etc/httpd/extra/httpd-autoindex.conf
+</code></pre><p>kemudian <em>restart</em> <strong>apache</strong></p>
+<pre tabindex="0"><code># /etc/rc.d/rc.httpd restart
+</code></pre>
   </p>
 
   
@@ -356,8 +424,13 @@
   </header>
 
   <p>
-  Untuk menghapus history atau riwayat video yang ditonton dengan QtAV Player ada 2 cara:
-melalui QtAV Player dengan klik History kemudian Clear menghapus file historynya $ rm ~/.local/share/Player/*.qds Command tersebut juga menghapus riwayat playlist
+  <p>Untuk menghapus <em>history</em> atau riwayat video yang ditonton dengan <strong>QtAV Player</strong> ada 2 cara:</p>
+<ol>
+<li>melalui QtAV Player dengan klik <strong>History</strong> kemudian <strong>Clear</strong></li>
+<li>menghapus file historynya</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm ~/.local/share/Player/*.qds
+</span></span></code></pre></div><p><em>Command</em> tersebut juga menghapus riwayat <em>playlist</em></p>
   </p>
 
   
@@ -399,54 +472,9 @@ melalui QtAV Player dengan klik History kemudian Clear menghapus file historynya
   </header>
 
   <p>
-  Untuk mengubah boot timeout efibootmgr menjadi 2 detik:
-$ efibootmgr -t 2 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/">Memindahkan tombol minimize maximize close window fluxbox</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 May 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Secara default tombol Minimize/Iconify, Maximize dan Close pada window fluxbox terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian
-session.screen0.titlebar.right: Minimize Maximize Close Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian
-session.screen0.titlebar.left: 
+  <p>Untuk mengubah <em>boot timeout</em> <strong>efibootmgr</strong> menjadi 2 detik:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ efibootmgr -t <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div>
   </p>
 
   
@@ -461,7 +489,7 @@ session.screen0.titlebar.left:
   
   <a href="https://sasongko.web.id/page/16/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;17 / 65&nbsp;</span>
+  <span>&nbsp;17 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/18/"><i class="fa fa-chevron-right"></i></a>
   

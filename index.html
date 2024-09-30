@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.133.0">
+  <meta name="generator" content="Hugo 0.135.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/">Jalankan windows dari linux dengan qemu</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>28 Sep 2024</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Sebagian masyarakat memilih untuk <em>dualboot</em> atau bahkan <em>multiboot</em> dalam berkomputer. Satu Perangkat komputer diinstall lebih dari satu sistem operasi. Alhasil, harddisk pasti terbagi menjadi paling sedikit 2 partisi. Tak jarang, sistem operasi tersebut adalah linux dan windows. Kelemahan dari model seperti ini adalah pengguna harus memilih salah satu, mana sistem yang akan dijalankan. Namun, tidak demikian bila ada qemu.</p>
+<p>Qemu memungkinkan sistem operasi windows dipanggil atau dijalankan dari linux. Untuk dapat menjalankannya perlu install qemu (tentu saja) dan edk-ovmf. Keduanya tersedia di SBo.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2024-09-13-convert-png-ke-pdf/">Convert png ke pdf</a></h2>
 
     <div class="post-meta">
@@ -261,8 +308,9 @@
   </header>
 
   <p>
-  Melengkapi catatan yang sudah ada tentang konversi file. Kali ini adalah konversi atau convert file dari berformat png menjadi pdf. Misalkan file gambar.png akan dikonversi menjadi pdf, maka command-nya
-$ mogrify -format pdf gambar.png Command tersebut di atas adalah bagian dari imagemagick yang secara default sudah terinstall di slackware.
+  <p>Melengkapi catatan yang sudah ada tentang konversi file. Kali ini adalah konversi  atau convert file dari berformat png menjadi pdf. Misalkan file gambar.png akan dikonversi menjadi pdf, maka <em>command</em>-nya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mogrify -format pdf gambar.png
+</span></span></code></pre></div><p><em>Command</em> tersebut di atas adalah bagian dari <strong>imagemagick</strong> yang secara default sudah terinstall di <strong>slackware</strong>.</p>
   </p>
 
   
@@ -304,8 +352,8 @@ $ mogrify -format pdf gambar.png Command tersebut di atas adalah bagian dari ima
   </header>
 
   <p>
-  Salah satu hal yang saya sukai dari keunggulan linux adalah kemudahannya dalam melakukan sesuatu secara massal dengan mudah, termasuk di antaranya konversi file. Hanya dengan mengetikkan atau bahkan cukup copy paste edit kita bisa menghemat waktu dan tenaga dalam mengubah format file.
-Kali ini kita akan mengubah atau convert file dari pdf menjadi gambar png. Tool yang digunakan adalah pdftopng. Tool ini secara default sudah ter-install di Slackware menjadi bagian dari package xpdf.
+  <p>Salah satu hal yang saya sukai dari <strong>keunggulan linux</strong> adalah kemudahannya dalam melakukan sesuatu secara massal dengan mudah, termasuk di antaranya konversi file. Hanya dengan mengetikkan atau bahkan cukup <em>copy paste edit</em> kita bisa menghemat waktu dan tenaga dalam mengubah format file.</p>
+<p>Kali ini kita akan mengubah atau <em>convert</em> file dari pdf menjadi gambar png. <em>Tool</em> yang digunakan adalah <strong>pdftopng</strong>. <em>Tool</em> ini secara <em>default</em> sudah ter-<em>install</em> di <strong>Slackware</strong> menjadi bagian dari <em>package</em> <strong>xpdf</strong>.</p>
   </p>
 
   
@@ -351,9 +399,12 @@ Kali ini kita akan mengubah atau convert file dari pdf menjadi gambar png. Tool 
   </header>
 
   <p>
-  Seamonkey adalah salah satu web browser yang secara default terinstall di slackware. Ketika login menggunakan SDDM dan mengaktifkan lingkungan native wayland, seamonkey tidak bisa dijalankan.
-$ seamonkey Error: cannot open display: :1 Solusinya
-$ GDK_BACKEND=x11 seamonkey 
+  <p><strong>Seamonkey</strong> adalah salah satu <em>web browser</em> yang secara default terinstall di <strong>slackware</strong>. Ketika login menggunakan <strong>SDDM</strong> dan mengaktifkan lingkungan <em>native wayland</em>, <strong>seamonkey</strong> tidak bisa dijalankan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ seamonkey
+</span></span><span style="display:flex;"><span>Error: cannot open display: :1
+</span></span></code></pre></div><p>Solusinya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ GDK_BACKEND<span style="color:#f92672">=</span>x11 seamonkey
+</span></span></code></pre></div>
   </p>
 
   
@@ -397,57 +448,14 @@ $ GDK_BACKEND=x11 seamonkey
   </header>
 
   <p>
-  Machine learning belakangan ini semakin populer. Salah satu yang bisa dilakukan dengan machine learning adalah klasifikasi. Ada beberapa metode klasifikasi. Kali ini akan melakukan klasifikasi dengan cara decision tree supervised learning.
-Skenario klasifikasi yang akan kita lakukan adalah menentukan jenis (label) bunga iris berdasarkan kriteria (atribut) yang diberikan. Jenis bunga irisnya adalah iris setosa, iris versicolor dan iris virginica. Adapun kriterianya berdasarkan panjang sepal, lebar sepal, panjang petal dan lebar petal.
+  <p><em>Machine learning</em> belakangan ini semakin populer. Salah satu yang bisa dilakukan dengan <em>machine learning</em> adalah klasifikasi. Ada beberapa metode klasifikasi. Kali ini akan melakukan klasifikasi dengan cara <em>decision tree supervised learning</em>.</p>
+<p>Skenario klasifikasi yang akan kita lakukan adalah menentukan jenis (label) bunga iris berdasarkan kriteria (atribut) yang diberikan. Jenis bunga irisnya adalah iris setosa, iris versicolor dan iris virginica. Adapun kriterianya berdasarkan panjang sepal, lebar sepal, panjang petal dan lebar petal.</p>
   </p>
 
   
   <footer>
     <a href="https://sasongko.web.id/post/2024-05-20-klasifikasi-decision-tree-sklearn/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2024-05-15-listing-directory-python/">Listing direktori dengan python</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 May 2024</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  Berikut adalah script python sederhana untuk menampilkan isi direktori aktif
-#!/usr/bin/python import os isidirektori = os.listdir() for i in range(len(isidirektori)): print(isidirektori[i]) 
-  </p>
-
   
 </article>
 
@@ -460,7 +468,7 @@ Skenario klasifikasi yang akan kita lakukan adalah menentukan jenis (label) bung
   
   <i class="fa fa-chevron-left"></i>
   
-  <span>&nbsp;1 / 65&nbsp;</span>
+  <span>&nbsp;1 / 66&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/2/"><i class="fa fa-chevron-right"></i></a>
   
