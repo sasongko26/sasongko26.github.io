@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.139.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,51 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2023-06-26-membuat-qemu-disk-image/">Membuat qemu disk image</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Jun 2023</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Untuk membuat <em>disk image</em> sebagai <em>storage</em> sistem oprasi yang akan divirtualisasikan dengan qemu, bisa menggunakan <em>command</em> yang mudah. Misalkan nama file adalah slack.img dengan <em>size</em> 100G</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> <span style="color:#75715e">#penggunaan: qemu-img create file_disk_imagenya sizenya </span>
+</span></span><span style="display:flex;"><span>$ qemu-img create slack.img 100G
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2023-06-22-convert-dd-to-vdi/">Convert dd ke vdi</a></h2>
 
     <div class="post-meta">
@@ -420,53 +465,6 @@
 </span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-05-19-deskreen-no-wifi-lan-connection/">Deskreen No WiFi and LAN Connection</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>20 May 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Buka-buka direktori lama, ternyata ada catatan yang belum dipublikasikan, salah satunya soal <strong>deskreen</strong>. Aplikasi ini kami gunakan untuk <em>share screen</em> ataupun presentasi dari laptop ke TV. Sebenarnya untuk menghubungkan laptop dan TV bisa menggunakan kabel HDMI, tapi karena kabelnya kurang panjang, TVnya banyak dan belum punya <em>HDMI splitter</em> maka terbersitlah untuk presentasi menggunakan jaringan wifi. <em>Duckduckgo</em> memberikan hasil bagaimana cara, salah satunya dengan <strong>deskreen</strong> ini.</p>
-<p>Demi kepraktisan, kami <em>donwload</em> edisi <strong>appimage</strong>. Namun, setelah dieksekusi ada masalah, yaitu muncul <em>error box</em> yang menyatakan bahwa <strong>No WiFi &amp; LAN Connection</strong> padahal koneksi internet sudah berjalan lancar, stabil dan kencang di laptop maupun TV.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2023-05-19-deskreen-no-wifi-lan-connection/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

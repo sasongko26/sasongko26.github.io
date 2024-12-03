@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.139.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,55 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/">Cek Harddisk Korup</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>17 Aug 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Sewaktu <em>booting</em>, sekilas membaca <!-- raw HTML omitted -->some data may be corrupt<!-- raw HTML omitted -->. Untuk pesan <em>error</em> komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dmesg | grep -i corrupt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   19.076118<span style="color:#f92672">]</span> FAT-fs <span style="color:#f92672">(</span>sda1<span style="color:#f92672">)</span>: Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+</span></span></code></pre></div><p>Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu <!-- raw HTML omitted -->/dev/sda1<!-- raw HTML omitted -->. Dan direkomendasikan untuk menjalankan <!-- raw HTML omitted -->fsck<!-- raw HTML omitted -->.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/">Mengatur DNS Default</a></h2>
 
     <div class="post-meta">
@@ -439,70 +488,6 @@
   
   <footer>
     <a href="https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Virt-Manager ImportError: No module named requests</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>04 Jul 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Setelah [<em>upgrade slackbuilds</em>]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata <!-- raw HTML omitted -->Virtual Machine Manager<!-- raw HTML omitted --> tidak bisa dijalankan.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ virt-manager
-</span></span><span style="display:flex;"><span>Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virt-manager&#34;</span>, line 33, in &lt;module&gt;
-</span></span><span style="display:flex;"><span>    from virtinst import util as util
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtinst/__init__.py&#34;</span>, line 89, in &lt;module&gt;
-</span></span><span style="display:flex;"><span>    from virtinst.distroinstaller import DistroInstaller
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;</span>, line 23, in &lt;module&gt;
-</span></span><span style="display:flex;"><span>    from . import urlfetcher
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;</span>, line 34, in &lt;module&gt;
-</span></span><span style="display:flex;"><span>    import requests
-</span></span><span style="display:flex;"><span>ImportError: No module named requests
-</span></span></code></pre></div><p>Ternyata, ada masalah dependensi. <!-- raw HTML omitted -->ImportError: No module named requests<!-- raw HTML omitted --> menunjukkan tidak adanya modul <!-- raw HTML omitted -->requests<!-- raw HTML omitted -->, atau tidak terinstall paket <!-- raw HTML omitted -->python-requests<!-- raw HTML omitted -->. Ini dibuktikan dengan <em>output</em> <!-- raw HTML omitted -->ls /var/log/packages|grep python-request<!-- raw HTML omitted --> yang kosong.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

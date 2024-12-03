@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.139.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,62 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Bye wicd</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Aug 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan <strong>wicd</strong> dari repo <strong>slackware current</strong>.</p>
+<blockquote>
+<p>extra/wicd/wicd-1.7.4-x86_64-3.txz:  Removed.</p>
+<blockquote>
+<p>This is unmaintained, possibly insecure, and doesn&rsquo;t work with Python
+versions newer than 2.7.18. NetworkManager is a better choice these days.</p>
+</blockquote>
+</blockquote>
+<p>Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan <strong>wicd</strong> daripada <strong>NetworkManager</strong>. Kenyamanan ini sebenarnya karena saya tidak mau repot, <strong>NetworkManager</strong> seringkali timbulkan masalah, salah satunya mengatur <em>hostname</em> dan domain. Keduanya saya kosongi. Mengapa? Saya belum kepikiran nama apa yang cocok. Hehehe&hellip;&hellip;</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-06-20-edit-video-ffmpeg-lossless/">Edit video ffmpeg tanpa menurunkan kualitas</a></h2>
 
     <div class="post-meta">
@@ -424,54 +480,6 @@ Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefo
   <footer>
     <a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/">Operasi direktori R</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <h1 id="mengetahui-_working-directory_">Mengetahui <em>working directory</em></h1>
-<p>Secara <em>default, working directory</em> pada <strong>Slackware</strong> adalah home directory user atau di mana <em>command</em> <!-- raw HTML omitted -->R<!-- raw HTML omitted --> dijalankan.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">getwd</span>()
-</span></span></code></pre></div><h1 id="mengganti-_working-directory_">Mengganti <em>working directory</em></h1>
-<p>Misal, akan berpindah <em>working directory</em> ke <!-- raw HTML omitted -->Documents/project<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">setwd</span>(<span style="color:#e6db74">&#39;Documents/project&#39;</span>)
-</span></span></code></pre></div>
-  </p>
-
   
 </article>
 

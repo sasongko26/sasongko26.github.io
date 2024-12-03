@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.139.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,61 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/">Mengembalikan File yang Terhapus dengan Testdisk</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 Oct 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/<em>recovery</em> file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.</p>
+<p>Sebagai root jalankan</p>
+<pre tabindex="0"><code>testdisk
+</code></pre><p>kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih <em>No Log</em> karena merasa log ini tidak terlalu penting.
+<img src="https://sasongko.web.id/gambar/testdisk01.png" alt=""></p>
+<p>Selanjutnya akan terdeteksi media simpan yang terpasang di komputer. Di sini flashdisknya terdeteksi sebagai /dev/sdc.
+<img src="https://sasongko.web.id/gambar/testdisk02.png" alt="">
+pilih Disk /dev/sdc kemudian <em>Proceed</em> untuk melanjutkan.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-10-29-install-testdisk/">Install Testdisk</a></h2>
 
     <div class="post-meta">
@@ -423,71 +478,6 @@ installpkg /tmp/youtube-dl-2015.09.22-x86_64-1_SBo.tgz
   <p>Bagaimana sih caranya <em>copy paste</em> teks yang ada di Terminal? Untuk <em>copy</em> blok tulisannya kemudian klik kanan pilih <em>Copy</em>, atau setelah diblok tekan Ctrl Shift C. Sedangkan untuk <em>paste</em> ke terminal silahkan klik kanan pilih <em>Paste</em> atau tekan Ctrl Shift V.</p>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-08-17-setting-internet-xl-slackware/">Setting Internet XL Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>17 Aug 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Di [catatan yang lalu]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) telah kami sampaikan cara konek internet di Slackware dengan modem, ppp, dan internet provider atau operator Tri. Kali ini akan kami ganti dengan operator XL.</p>
-<p>Sunting berkas /etc/ppp/options</p>
-<pre tabindex="0"><code># General configuration options for PPPD:
-lock
-defaultroute
-noipdefault
-modem
-/dev/ttyUSB0
-460800
-crtscts
-# Uncomment the line below for more verbose error reporting:
-#debug
-# If you have a default route already, pppd may require the other side
-# to authenticate itself, which most ISPs will not do.  To work around this,
-# uncomment the line below.  Note that this may have negative side effects
-# on system security if you allow PPP dialins.  See the docs in /usr/doc/ppp*
-# for more information.
-#noauth
-passive
-asyncmap 0
-name &#34;3data&#34;
-</code></pre><p>Baris 19, ganti &ldquo;3data&rdquo; dengan &ldquo;internet&rdquo;.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-08-17-setting-internet-xl-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

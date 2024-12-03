@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.139.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-03-23-menggunakan-wget-prefix-directory/">Menggunakan wget prefix directory</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 Mar 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/internet-download-manager">internet-download-manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Secara <em>default</em>, apabila menggunakan <strong>wget</strong>, file di-<em>download</em> ke direktori aktif. Dengan mengaktifkan <em>prefix directory</em> (-P), file tersebut bisa disimpan ke direktori lain.</p>
+<pre tabindex="0"><code>$ wget [url] -P [direktori]
+</code></pre><ul>
+<li>[url] : URL / alamat lengkap file yang akan di-<em>download</em></li>
+<li>[direktori] : direktori tujuan</li>
+</ul>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/">Mengetahui dimensi dataset python</a></h2>
 
     <div class="post-meta">
@@ -441,55 +488,6 @@
   <p>
   <p>Untuk mengenumerasi atau mengetahui <em>packages</em> apa saja yang terinstall dapat menggunakan <em>command</em> untuk menampilkan isi directory /var/lib/pkgtools/packages</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ls /var/lib/pkgtools/packages
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-03-18-disable-recent-documents-mate/">Disable recent documents mate</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 Mar 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/mate">mate</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Masalah <em>security</em> saat penggunaan <em>desktop environment</em> <strong>mate</strong> adalah adanya <strong>recent documents</strong> pada menu. Ini terletak pada menu di bagian bawah menu <strong>Places</strong>. Bagi <em>user</em> yang <em>concern</em> dengan privasi dan menghendaki untuk menonaktifkannya alih-alih membersihkannya &ldquo;setiap saat&rdquo;,</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;&#34;</span> &gt; ~/.local/share/recently-used.xbel 
-</span></span><span style="display:flex;"><span>$ chattr -i ~/.local/share/recently-used.xbel <span style="color:#75715e"># dijalankan oleh root</span>
 </span></span></code></pre></div>
   </p>
 

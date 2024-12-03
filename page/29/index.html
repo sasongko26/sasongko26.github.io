@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.139.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,73 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/">Membuat archive tar</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Terdapat file sebagai berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Screenshot_2020-07-15_10-17-33.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-03_10-31-47.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-04_16-33-18.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-06_08-22-59.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-06_08-31-22.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-12-04_18-44-18.png
+</span></span><span style="display:flex;"><span>Screenshot_2021-01-12_01-21-31.png
+</span></span></code></pre></div><p>Ketujuh file tersebut akan disatukan dalam 1 <em>archive</em> dengan nama file <em>screenshot.tar.gz</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar cvf screenshot.tar.gz Screen*
+</span></span><span style="display:flex;"><span>Screenshot_2020-07-15_10-17-33.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-03_10-31-47.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-04_16-33-18.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-06_08-22-59.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-08-06_08-31-22.png
+</span></span><span style="display:flex;"><span>Screenshot_2020-12-04_18-44-18.png
+</span></span><span style="display:flex;"><span>Screenshot_2021-01-12_01-21-31.png
+</span></span></code></pre></div><p>Penjelasan <em>command</em></p>
+<ul>
+<li>tar : manajemen <em>archive</em> yang digunakan aalah <em>tar</em></li>
+<li>c : wajib dituliskan untuk <em>create</em> atau membuat <em>archive</em></li>
+<li>v : opsi untuk <em>verbose</em>, menampilkan list file yang diproses</li>
+<li>f : wajib dituliskan dalam semua penggunaan <em>tar</em> karena f adalah file, identifier untuk file yang akan diproses</li>
+<li>screenshot.tar.gz : nama file <em>archive</em>. Ekstensi bisa .tar, .tar.gz, atau .tar.xz. Ketika ekstensi ini sering dipakai di dunia <em>open source</em>.</li>
+<li>Screen* : file yang akan di-<em>archive</em>. Karena filenya banyak dan mempunyai kemiripan pola maka digunakan <em>regex</em> agar lebih praktis. File ini juga bisa dituliskan satu persatu.</li>
+</ul>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/">Mengetahui IP lokal dengan nmcli</a></h2>
 
     <div class="post-meta">
@@ -446,57 +513,6 @@
   
   <footer>
     <a href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Mengetahui kondisi baterai</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/power-manager">power-manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Mengecek kondisi baterai laptop melalui terminal atau <em>command line interface</em> sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara <em>default</em> sudah menyertakan <em>desktop environment</em> seperti <strong>xfce, kde, mate, cinnamon, budgie, lumina</strong> dan <strong>manokwari</strong> dengan <em>interface</em> yang cantik dan menarik. DE tersebut sudah mempunyai <em>power manager</em> lengkap dengan <em>applet</em>-nya yang tak pernah bosan nempel di panel.</p>
-<p>Bagaimana kalau &lsquo;hanya&rsquo; menggunakan <em>window manager</em> seperti <strong>GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm</strong> atau <strong>ratpoison</strong> yang tidak mempunyai <em>power manager</em> sendiri? Melalui terminal lah jawabannya. Di sini digunakan <strong>upower</strong> yang secara default ada di <strong>Slackware</strong></p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

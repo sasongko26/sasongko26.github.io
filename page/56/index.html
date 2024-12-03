@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.139.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,61 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-06-25-install-unrar/">Install Unrar</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>25 Jun 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Di antara file kompresi/arsip yang ada, kompresi yang tidak saya utamakan adalah rar. Simpel sih alasannya, karena secara default baik BlankOn maupun Slackware tidak meng-<em>embed</em> ekstraktornya :D. Harus install dulu. Pastikan tersambung internet untuk mengunduh berkas.</p>
+<p>Untuk BlankOn bisa install dari repo.</p>
+<pre tabindex="0"><code>$ sudo apt-get install unrar
+</code></pre><p>Sedangkan untuk Slackware install slackbuildnya saja.</p>
+<pre tabindex="0"><code># cd /usr/local/src
+# wget http://slackbuilds.org/slackbuilds/14.1/system/unrar.tar.gz
+# tar xzf unrar.tgr.gz
+# cd unrar
+# wget http://www.rarlab.com/rar/unrarsrc-5.2.6.tar.gz
+# sh unrar.SlackBuild
+# installpkg /tmp/unrar-5.2.6-x86_64-1_SBo.tgz
+</code></pre><p>Install unrar selesai.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2015-06-25-install-unrar/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/">InstalL Sleuth Kit Slackware</a></h2>
 
     <div class="post-meta">
@@ -439,58 +494,6 @@ $ wget http://files.libburnia-project.org/releases/libisofs-1.4.0.tar.gz
 </code></pre><p>Install paketnya</p>
 <pre tabindex="0"><code># installpkg /tmp/libisofs-1.4.0-x86_64-1_SBo.tgz
 </code></pre><p>Selesai.</p>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-15-cek-paket-terinstall-slackware/">Cek Paket Terinstall di Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk mengetahui apakah suatu paket atau aplikasi telah terpasang di Slackware kita atau belum caranya mudah.</p>
-<pre tabindex="0"><code>$ ls /var/log/packages | grep nama_paket
-</code></pre><p>Contoh, mencari paket yang di nama paketnya ada kata <em>xfce</em></p>
-<pre tabindex="0"><code>$ ls /var/log/packages | grep xfce
-gtk-xfce-engine-3.0.1-x86_64-1
-libxfce4ui-4.10.0-x86_64-2
-libxfce4util-4.10.1-x86_64-1
-libxfcegui4-4.10.0-x86_64-2
-xfce4-clipman-plugin-1.2.3-x86_64-2
-xfce4-dev-tools-4.10.0-x86_64-1
-xfce4-mixer-4.8.0-x86_64-1
-xfce4-notifyd-0.2.4-x86_64-1
-xfce4-panel-4.10.1-x86_64-2
-xfce4-power-manager-1.2.0-x86_64-2
-xfce4-screenshooter-1.8.1-x86_64-2
-xfce4-session-4.10.1-x86_64-3
-xfce4-settings-4.10.1-x86_64-1
-xfce4-systemload-plugin-1.1.1-x86_64-2
-xfce4-taskmanager-1.0.0-x86_64-2
-xfce4-terminal-0.6.2-x86_64-1
-xfce4-volumed-0.1.13-x86_64-1
-xfce4-weather-plugin-0.8.3-x86_64-2
-</code></pre><p>Jika tidak ada keluaran berarti paket tersebut belum diinstall.</p>
   </p>
 
   

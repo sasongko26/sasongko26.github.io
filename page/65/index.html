@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.139.0">
 
   <title>Catatan Sasongko</title>
 
@@ -225,6 +225,51 @@
 </div>
 
 <div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2014-04-15-download-iso-blankon-zsync/">Download ISO BlankOn dengan ZSync</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Apr 2014</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Sebagai anggota Quality Assurance (Tim Jaminan Kualitas) BlankOn, kami bertanggung jawab untuk menemukan kutu (bugs) sebanyak-banyaknya. Hampir setiap hari rilis iso baru dan 2 bulan sekali ada rilis kandidat baru, istilahnya sih jahitan.Tiap berkas iso baik itu i386 maupun amd64 berukuran sekitar 1GB. Kalau setiap hari iso tersebut harus diunduh, waaahhhh bakal tekor! :D</p>
+<p>Alhamdulillah iso BlankOn bisa diunduh dengan rsync dan zsync sehingga bisa lebih hemat karena tidak perlu mengunduh semua isi iso tapi hanya perubahannya saja. Walau demikian, kami akan sampaikan yang zsync nya saja dulu. Cara menggunakan zsync sangat mudah.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2014-04-15-download-iso-blankon-zsync/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
   
     <article>
   <header>
@@ -595,53 +640,6 @@ Cara menggunakannya mudah.</p>
 </span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-03-01-disable-automount/">Disable Automount BlankOn 9 Suroboyo</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Mar 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Walaupun diturunkan dari <a href="http://www.debian.org">debian</a>, <strong>BlankOn Suroboyo</strong> berbeda dengan debian karena pada Suroboyo secara default akan secara otomatis membuka media simpan (<em>flashdisk</em> misalnya) setelah media disambungkan ke komputer/laptop. Fitur ini dinamakan <em>automount-open media</em> yang agak mirip dengan <em>autorun</em> pada <em>windows</em>. Beberapa orang mungkin merasa terganggu dan ingin mematikan. Atau sebaliknya, pengguna debian justru ingin mengaktifkan fitur ini. Bagaimana cara mengaturnya?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gsettings set org.gnome.desktop.media-handling automount false
-</span></span><span style="display:flex;"><span>$ gsettings set org.gnome.desktop.media-handling automount-open false
-</span></span></code></pre></div><p>Atau untuk tampilan grafisnya gunakan <strong>dconf-editor / penyunting dconf</strong> yang mana harus install dulu, sedangkan debian tidak usah karena <strong>dconf-editor</strong> sudah terpasang.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2014-03-01-disable-automount/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

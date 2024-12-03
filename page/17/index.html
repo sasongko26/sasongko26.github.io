@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.139.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-06-02-hapus-awalan-apostrofe-libreoffice-calc/">Hapus awalan apostrofe libreoffice calc</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Jun 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Mengunduh file <em>spreadsheet</em> dari <strong>google sheets</strong> di setiap selnya yang berisi data angka diawali oleh tanda apostrofe atau kutip tunggal. Tanda ini tidak terlihat langsung. Ketika kita klik selnya dan lihat formula bar, baru tanda ini terlihat.</p>
+<p>Untuk menghapusnya melalui <strong>libreofiice calc</strong> tentu saja. Klik <strong>Find &amp; Replace</strong>. <strong>Search for</strong> inputkan .* dan <strong>Replace with</strong> inputkan &amp;. Centang atau piih opsi <strong>Regular expressions</strong>. Kemudian <strong>Replace</strong> atau <strong>Replace all</strong> sesuai kebutuhan.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-06-02-hapus-awalan-apostrofe-libreoffice-calc/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Mariadb error 2002</a></h2>
 
     <div class="post-meta">
@@ -431,50 +478,6 @@
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm ~/.local/share/Player/*.qds
 </span></span></code></pre></div><p><em>Command</em> tersebut juga menghapus riwayat <em>playlist</em></p>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-05-17-mengubah-boot-timeout-efibootmgr/">Mengubah boot timeout efibootmgr</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>17 May 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk mengubah <em>boot timeout</em> <strong>efibootmgr</strong> menjadi 2 detik:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ efibootmgr -t <span style="color:#ae81ff">2</span>
-</span></span></code></pre></div>
   </p>
 
   

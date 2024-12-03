@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.139.0">
 
-  <title>Mengenal objek R factor &middot; Catatan Sasongko</title>
+  <title>Disable direct cursor mode libreoffice writer &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Mengenal objek R factor</h1>
+  <h1>Disable direct cursor mode libreoffice writer</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>22 May 2020</time>
+    <time>02 Dec 2024</time>
   </div>
 
   
@@ -236,7 +236,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
     
   </div>
   
@@ -245,45 +245,22 @@
 </div>
 
 
-  <p>Factor adalah representasi data kategorik. Factor bisa dibuat dengan fungsi <!-- raw HTML omitted -->factor()<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->cut()<!-- raw HTML omitted -->. Saya lebih sering menggunakan <!-- raw HTML omitted -->cut()<!-- raw HTML omitted --> karena lebih aplikatif saat akan mengubah skala data dari rasio atau interval ke ordinal.</p>
-<p>Contoh, bmi adalah data <em>body mass index</em> (BMI) atau indeks massa tubuh (IMT). Klasifikasi IMT ada 4 macam, yaitu</p>
-<ul>
-<li>&lt; 18,5 : underweight</li>
-<li>18,5 - 24,99 : normal</li>
-<li>25 - 29,99 : overweight</li>
-<li>&gt; 30 : obese/obesitas
-Untuk obesitas, masih bisa diklasifikasikan menjadi 3</li>
-<li>30 - 34,99 : obese class 1</li>
-<li>35 - 39,99 : obese class 2</li>
-<li>&gt; 40 : extreme obesity</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> bmi <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">21.5</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">25.5</span>, <span style="color:#ae81ff">20.5</span>)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> kategori <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">cut</span>(bmi, breaks<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">18.5</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">40</span>, <span style="color:#66d9ef">Inf</span>), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#39;Underweight&#39;</span>, <span style="color:#e6db74">&#39;Normal&#39;</span>, <span style="color:#e6db74">&#39;Overweight&#39;</span>, <span style="color:#e6db74">&#39;Obese Class 1&#39;</span>, <span style="color:#e6db74">&#39;Obese Class 2&#39;</span>, <span style="color:#e6db74">&#39;Extreme Obesity&#39;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">View</span>(kategori)
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> Normal
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> Normal
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> Underweight
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span> Normal
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> Overweight
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span> Overweight
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span> Overweight
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span> Normal
-</span></span></code></pre></div><p>kategori pada data di atas, adalah factor yang saya buat dengan 6 level, yaitu Underweight, Normal, Overweight, Obese Class 1, Obese Class 2, Extreme Obesity. Berhubung sumber data kategori berasal dari bmi, maka ketika di-View, yang terlihat hanya kategori Normal, Underweight dan Overweight, menyesuaikan dengan data yang diberikan.</p>
+  <p><em>Direct cursor mode</em> adalah suatu mode untuk menempatkan kursor di area mana saja pada halaman. Jika mode ini aktif dan kita melakukan klik di mana saja di suatu halaman, maka secara otomatis akan menempatkan kursor di tempat yang kita klik itu. Saya lebih suka mode ini non-aktif. Sehingga untuk mematikan mode ini klik menu <strong>Edit</strong> lalu hilangkan centang pada <strong>Direct Cursor Mode</strong>.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-05-22-mengenal-r-factor%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2024-12-02-disable-direct-cursor-mode-libreoffice-writer%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-05-22-mengenal-r-factor%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2024-12-02-disable-direct-cursor-mode-libreoffice-writer%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-05-22-mengenal-r-factor%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2024-12-02-disable-direct-cursor-mode-libreoffice-writer%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-05-22-mengenal-r-factor%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2024-12-02-disable-direct-cursor-mode-libreoffice-writer%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-05-22-mengenal-r-factor%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2024-12-02-disable-direct-cursor-mode-libreoffice-writer%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2020-05-22-mengenal-r-factor%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2024-12-02-disable-direct-cursor-mode-libreoffice-writer%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -315,13 +292,13 @@ Untuk obesitas, masih bisa diklasifikasikan menjadi 3</li>
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/">Edit volume suara</a>
+      <a href="https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/">Jalankan windows dari linux dengan qemu</a>
     </nav>
     
   </div>
@@ -330,14 +307,8 @@ Untuk obesitas, masih bisa diklasifikasikan menjadi 3</li>
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Disable tampilan konfigurasi ffmpeg</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>

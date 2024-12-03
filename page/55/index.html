@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.139.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-07-13-install-pip/">Install pip</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Jul 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Pip akan memudahkan kita semua untuk menginstall paket-paket yang terkait dengan python.</p>
+<pre tabindex="0"><code>wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py
+python get-pip.py
+</code></pre>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/">Mount Partisi Otomatis</a></h2>
 
     <div class="post-meta">
@@ -432,61 +479,6 @@ Writing superblocks and filesystem accounting information: done
   
   <footer>
     <a href="https://sasongko.web.id/post/2015-06-28-konek-internet-menggunakan-pppsetup/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-25-install-unrar/">Install Unrar</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Di antara file kompresi/arsip yang ada, kompresi yang tidak saya utamakan adalah rar. Simpel sih alasannya, karena secara default baik BlankOn maupun Slackware tidak meng-<em>embed</em> ekstraktornya :D. Harus install dulu. Pastikan tersambung internet untuk mengunduh berkas.</p>
-<p>Untuk BlankOn bisa install dari repo.</p>
-<pre tabindex="0"><code>$ sudo apt-get install unrar
-</code></pre><p>Sedangkan untuk Slackware install slackbuildnya saja.</p>
-<pre tabindex="0"><code># cd /usr/local/src
-# wget http://slackbuilds.org/slackbuilds/14.1/system/unrar.tar.gz
-# tar xzf unrar.tgr.gz
-# cd unrar
-# wget http://www.rarlab.com/rar/unrarsrc-5.2.6.tar.gz
-# sh unrar.SlackBuild
-# installpkg /tmp/unrar-5.2.6-x86_64-1_SBo.tgz
-</code></pre><p>Install unrar selesai.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-25-install-unrar/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

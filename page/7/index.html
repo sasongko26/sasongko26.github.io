@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.139.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2023-12-01-coding-pertama-rust/">Coding pertama rust</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Jan 2023</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/rust">rust</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p><strong>Rust</strong> bahasa pemrograman yang saat ini sedang naik daun digadang-gadang sebagai suksesor C. Rust sudah banyak digunakan bahkan rencananya masuk sebagai <em>second language</em> pada kernel linux sebagai pendamping C. Hal ini ditandai dengan adanya akomodasi <strong>rust</strong> mulai kernel 6.1.</p>
+<p>File <em>source code</em> <strong>rust</strong> berekstensi <!-- raw HTML omitted -->.rs<!-- raw HTML omitted -->. <strong>Rust</strong> memerlukan kompilasi untuk dapat dijalankan karena <strong>rust</strong> adalah <em>compiled language</em>. Ada 2 cara kompilasi, yaitu dengan <!-- raw HTML omitted -->rustc/<!-- raw HTML omitted --> apabila programnya simple hanya terdiri dari 1 file .rs dan tanpa adanya dependensi, atau dengan <!-- raw HTML omitted -->cargo<!-- raw HTML omitted --> kalau programnya kompleks.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2023-12-01-coding-pertama-rust/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2023-01-10-ubah-colorscheme-vim/">Mengubah colorscheme vim</a></h2>
 
     <div class="post-meta">
@@ -408,58 +455,6 @@
   <footer>
     <a href="https://sasongko.web.id/post/2022-02-14-pelayanan-exabytes/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-08-13-install-sof/">Install Sound Open Firmware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>13 Aug 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Langsung saja</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /opt
-</span></span><span style="display:flex;"><span>git clone https://github.com/thesofproject/sof-bin.git
-</span></span><span style="display:flex;"><span>cd sof-bin
-</span></span></code></pre></div><p>Masuk ke direktori rilis terbaru, contoh kali ini v2.2</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd v2.2.x
-</span></span><span style="display:flex;"><span>rsync -a sof-v2.2/ /lib/firmware/intel/sof/
-</span></span><span style="display:flex;"><span>rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/
-</span></span></code></pre></div>
-  </p>
-
   
 </article>
 

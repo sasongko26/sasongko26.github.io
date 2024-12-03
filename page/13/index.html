@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.139.0">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,56 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-12-17-deteksi-os-hacking/">Deteksi Sistem Operasi Target Hacking</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>17 Dec 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Judul catatan kali ini sedikit berbeda dibanding sebelumnya. Ada <strong>hacking</strong>-nya. Hehehehe&hellip;. Tapi itu tidak menunjukkan bahwa kemampuan penulis dalam ilmu <strong>hacking</strong> bagus. Hanya bisa itu tok.</p>
+<p><em>Information gathering</em> merupakan tahap krusial dalam proses <strong>hacking</strong> maupun <strong>cracking</strong>. Salah satu kegiatan <em>information gathering</em> adalah <em>scanning</em> atau deteksi sistem operasi yang digunakan pada target. Deteksi ini perlu karena berbeda sistem operasi mungkin membutuhkan teknik yang berbeda.</p>
+<p>Deteksi menggunakan <strong>nmap</strong> yang secara <em>default</em> sudah tertanam di <strong>slackware</strong>. Kasus kali ini alamat target adalah 192.168.106.250. Hasil <em>scanning</em> menunjukkan beberapa informasi, antara lain sistem operasi, port yang terbuka dan webserver yang digunakan.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-12-17-deteksi-os-hacking/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-12-17-hapus-riwayat-kfind/">Hapus riwayat kfind</a></h2>
 
     <div class="post-meta">
@@ -412,53 +462,6 @@
   <footer>
     <a href="https://sasongko.web.id/post/2021-12-10-install-scanner-linux/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-30-mengetahui-banyaknya-elemen-array-perl/">Mengetahui banyaknya elemen array perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><em>Array</em> adalah salah satu tipe data pada <strong>bahasa pemrograman perl</strong>. Tipe data ini berisi data majemuk. Penulisan <em>array</em> menggunakan notasi @.</p>
-<p>Contoh:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> @buah <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;pepaya&#34;</span>, <span style="color:#e6db74">&#34;manga&#34;</span>, <span style="color:#e6db74">&#34;pisang&#34;</span>, <span style="color:#e6db74">&#34;jambu&#34;</span>, <span style="color:#e6db74">&#34;durian&#34;</span>, <span style="color:#e6db74">&#34;apel&#34;</span>);
-</span></span></code></pre></div><p>Untuk mengetahui berapa banyaknya elemen dari <em>array</em>, bisa menggunakan <strong>scalar()</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">print</span>(scalar(@buah));
-</span></span></code></pre></div>
-  </p>
-
   
 </article>
 
