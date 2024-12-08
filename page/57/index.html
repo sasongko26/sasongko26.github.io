@@ -228,6 +228,59 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-06-16-install-libisofs-slackware/">Install libisofs Slackware</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>16 Jun 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Libisofs adalah pustaka untuk membuat filesystem ISO-9660.</p>
+<p>Berikut cara install libisofs-1.4.0 di slackware melalui slackbuild. Pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas yang diperlukan.</p>
+<p>Unduh slackbuild libisofs</p>
+<pre tabindex="0"><code>$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libisofs.tar.gz
+</code></pre><p>Ekstrak</p>
+<pre tabindex="0"><code>$ tar xzf libisofs.tar.gz
+</code></pre><p>Terbentuk folder libisofs, pindah direktori ke folder itu kemudain unduh kode sumbernya.</p>
+<pre tabindex="0"><code>$ cd libisofs
+$ wget http://files.libburnia-project.org/releases/libisofs-1.4.0.tar.gz
+</code></pre><p>Install slackbuildnya</p>
+<pre tabindex="0"><code># sh libisofs.SlackBuild
+</code></pre><p>Install paketnya</p>
+<pre tabindex="0"><code># installpkg /tmp/libisofs-1.4.0-x86_64-1_SBo.tgz
+</code></pre><p>Selesai.</p>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-06-15-cek-paket-terinstall-slackware/">Cek Paket Terinstall di Slackware</a></h2>
 
     <div class="post-meta">
@@ -412,53 +465,6 @@ bash: wvdial: command not found
   
   <footer>
     <a href="https://sasongko.web.id/post/2015-06-09-install-libreoffice-slackbuild/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-09-uninstall-calligra/">Uninstall Calligra Office Suite</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><em>Calligra</em> adalah <em>office suite</em> atau aplikasi perkantoran yang dikembangkan KDE yang dulu bernama KOffice. Kalau memasang KDE secara <em>full</em> kita akan mendapatinya.</p>
-<p>Calligra memang layak digunakan untuk keperluan perkantoran. Performanya dalam mengolah dokumen terbuka (<em>open document format/ODF</em>) cukup bagus. Namun sayangnya, <em>Calligra</em> tidak kompatibel dengan dokumen OOXML (dokumen yang dibuat dengan <em>Microsoft Office</em>). Tak jarang <em>Calligra</em> menjadi <em>hang</em> saat membuka atau mengolah dokumen dengan format docx (<em>Ms Word</em>), xlsx (<em>Ms Excel</em>) dan pptx (<em>Ms PowerPoint</em>). Penulis sering bekerja dengan dokumen OOXML karena rekan-rekan di kantor dan para mahasiswa belum bisa lepas dari OOXML. Maka demi kemaslahatan bersama, penulis tinggalkan <em>Calligra</em> dan beralih ke <em>LibreOffice</em>.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-09-uninstall-calligra/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

@@ -228,6 +228,59 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-01-10-mtperrorcantopendevice/">MtpErrorCantOpenDevice</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Jan 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Ketika akan memindahkan data dari HP android ke laptop melalui <!-- raw HTML omitted -->thunar<!-- raw HTML omitted -->, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui <!-- raw HTML omitted -->jmtpfs<!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ jmtpfs
+</span></span><span style="display:flex;"><span>Device <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>VID<span style="color:#f92672">=</span>0e8d and PID<span style="color:#f92672">=</span>201d<span style="color:#f92672">)</span> is a MediaTek Inc Elephone P8000.
+</span></span><span style="display:flex;"><span>error returned by libusb_claim_interface<span style="color:#f92672">()</span> <span style="color:#f92672">=</span> -6LIBMTP PANIC: Unable to initialize device
+</span></span><span style="display:flex;"><span>terminate called after throwing an instance of <span style="color:#e6db74">&#39;MtpErrorCantOpenDevice&#39;</span>
+</span></span><span style="display:flex;"><span>  what<span style="color:#f92672">()</span>:  Can<span style="color:#960050;background-color:#1e0010">&#39;</span>t open device
+</span></span><span style="display:flex;"><span>Aborted
+</span></span></code></pre></div><p>Ada masalah di <!-- raw HTML omitted -->libusb<!-- raw HTML omitted -->. Coba reinstall <!-- raw HTML omitted -->libusb<!-- raw HTML omitted --></p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-01-10-mtperrorcantopendevice/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2019-12-02-perlintro-panduan-pertama-belajar-pemrograman-perl/">perlintro panduan pertama belajar pemrograman perl</a></h2>
 
     <div class="post-meta">
@@ -404,56 +457,6 @@
   
   <footer>
     <a href="https://sasongko.web.id/post/2019-08-03-restart-android-via-adb/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2019-06-09-backup-android/">Back Up Data HP Android</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Jun 2019</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Sebelum berganti ponsel atau HP sangat disarankan untuk mem-<em>back up</em> data-data penting, seperti dokumen, foto, video, maupun chat <em>WhatsApp</em>. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi <strong>Slackware</strong>.</p>
-<h1 id="persiapan-slackware">Persiapan <strong>Slackware</strong></h1>
-<p>Pastikan bisa menjalankan <!-- raw HTML omitted -->adb<!-- raw HTML omitted --> yang merupakan bagian dari <!-- raw HTML omitted -->android tools<!-- raw HTML omitted -->. Kalau belum bisa install dari SBo</p>
-<h1 id="mengapa-adb">Mengapa adb?</h1>
-<p>Mengapa <!-- raw HTML omitted -->adb<!-- raw HTML omitted -->? Mengapa tidak pakai <em>file manager</em> saja? Karena transfer pakai <!-- raw HTML omitted -->adb<!-- raw HTML omitted --> bisa lebih cepat</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2019-06-09-backup-android/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

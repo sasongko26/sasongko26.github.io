@@ -228,6 +228,63 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">NetworkManager device not ready</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>07 Aug 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Baru beberapa hari memakai (lagi) <strong>NetworkManager</strong>, sudah bermasalah (lagi).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>device not ready
+</span></span></code></pre></div><p><img src="https://sasongko.web.id/gambar/networkmanager-device-not-ready.png" alt=""></p>
+<p>begitulah&hellip;.</p>
+<p>Padahal <em>network interface</em>-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai <strong>NetworkManager</strong>.
+Solusinya dari berbagai referensi (lupa mencatat linknya)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;managed=true&#34;</span> &gt;&gt; /etc/NetworkManager/NetworkManager.conf
+</span></span></code></pre></div><p>Tapi, ternyata ini kemudian munculkan <em>warning</em> di <strong>syslog</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Aug  <span style="color:#ae81ff">9</span> 12:04:53 localhost NetworkManager<span style="color:#f92672">[</span>1047<span style="color:#f92672">]</span>: &lt;warn&gt;  <span style="color:#f92672">[</span>1596949493.8398<span style="color:#f92672">]</span> config: unknown key <span style="color:#e6db74">&#39;managed&#39;</span> in section <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> of file <span style="color:#960050;background-color:#1e0010">&#39;</span>/etc/NetworkManager/NetworkManager.conf
+</span></span></code></pre></div><p>Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal). Sampai sekarang belum terjadi lagi (dan semoga tidak akan terjadi lagi. Saya lelah dengan kerewelan <strong>NetworkManager</strong>).</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Bye wicd</a></h2>
 
     <div class="post-meta">
@@ -418,67 +475,6 @@ versions newer than 2.7.18. NetworkManager is a better choice these days.</p>
   
   <footer>
     <a href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Menggabungkan video ffmpeg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu</p>
-<ol>
-<li>piknik-1.mkv</li>
-<li>piknik-2.mkv</li>
-<li>piknik-3.mkv</li>
-<li>piknik-4.mkv</li>
-</ol>
-<p>Keempat file tersebut berada dalam folder yang sama.
-Kemudian mereka akan digabungkan menjadi piknik.mkv.
-Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vim list-piknik
-</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-1.mkv&#39;</span>
-</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-2.mkv&#39;</span>
-</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-3.mkv&#39;</span>
-</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-4.mkv&#39;</span>
-</span></span></code></pre></div><p>Untuk menggabungnya</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

@@ -228,6 +228,55 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-07-18-install-wxpython/">Install wxPython</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Jul 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>wxPython adalah salah satu toolkit untuk membuat aplikasi grafis dengan python. Untuk menginstallnya mudah, kita install saja slackbuildnya. Pastikan tersambung internet.</p>
+<pre tabindex="0"><code>wget http://slackbuilds.org/slackbuilds/14.1/libraries/wxPython.tar.gz
+tar xzf wxPython.tar.gz
+cd wxPython
+wget http://downloads.sourceforge.net/wxpython/wxPython-src-2.8.12.1.tar.bz2
+sh wxPython.SlackBuild
+installpkg /tmp/wxPython-2.8.12.1-x86_64-2_SBo.tgz
+</code></pre>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-07-13-install-pip/">Install pip</a></h2>
 
     <div class="post-meta">
@@ -423,62 +472,6 @@ Writing superblocks and filesystem accounting information: done
   
   <footer>
     <a href="https://sasongko.web.id/post/2015-07-11-membuat-partisi-dengan-cgdisk/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-28-konek-internet-menggunakan-pppsetup/">Konek Internet Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>28 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Di catatan yang lalu sudah pernah dibahas cara konek internet di Slackware dengan [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}). Sekarang masih tentang cara konek internet melalui modem di Slackware, hanya saja caranya berbeda. Kali ini menggunakan <em>pppsetup</em> yang secara default sudah dimiliki Slackware.</p>
-<p>Perangkat yang kami gunakan:</p>
-<ul>
-<li>laptop <a href="http://www.bhinneka.com/Associate/asc_clicks.aspx?BARef=BATL150600398&amp;BATrcID=linfocatatansas225204&amp;Link=http%3a%2f%2fwww.bhinneka.com%2fproducts%2fsku00215793%2fasus_notebook_x453ma-bing-wx320b_-_black.aspx">Asus X453MA</a></li>
-<li>modem USB Huawei E1550</li>
-<li>simcard dengan internet service provider 3.</li>
-</ul>
-<p>Cara-cara berikut ini dijalankan oleh root.</p>
-<pre tabindex="0"><code>pppsetup
-</code></pre><p><img src="https://sasongko.web.id/gambar/pppsetup-01.png" alt=""></p>
-<p>Tekan enter.</p>
-<p><img src="https://sasongko.web.id/gambar/pppsetup-02.png" alt=""></p>
-<p>Isi phone number dengan</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-28-konek-internet-menggunakan-pppsetup/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

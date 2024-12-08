@@ -228,6 +228,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2024-05-25-seamonkey-in-wayland/">Seamonkey in wayland Error cannot open display</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>25 May 2024</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p><strong>Seamonkey</strong> adalah salah satu <em>web browser</em> yang secara default terinstall di <strong>slackware</strong>. Ketika login menggunakan <strong>SDDM</strong> dan mengaktifkan lingkungan <em>native wayland</em>, <strong>seamonkey</strong> tidak bisa dijalankan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ seamonkey
+</span></span><span style="display:flex;"><span>Error: cannot open display: :1
+</span></span></code></pre></div><p>Solusinya</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ GDK_BACKEND<span style="color:#f92672">=</span>x11 seamonkey
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2024-05-20-klasifikasi-decision-tree-sklearn/">Klasifikasi decision tree dengan sklearn</a></h2>
 
     <div class="post-meta">
@@ -415,73 +462,6 @@
 </span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/">Mengatasi Audio Tanpa Suara ES8336</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 Feb 2024</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi</p>
-<pre tabindex="0"><code>Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz
-Memory: 11,5 GiB of RAM
-Graphics Processor: Mesa Intel® UHD Graphics 600
-</code></pre><p>dengan audio awalnya berupa <em>dummy output</em> alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ aplay -l
-</span></span><span style="display:flex;"><span>**** List of PLAYBACK Hardware Devices ****
-</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 0: ES8336 <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>  Subdevices: 1/1
-</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
-</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 5: HDMI <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>  Subdevices: 1/1
-</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
-</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 6: HDMI <span style="color:#ae81ff">2</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>  Subdevices: 1/1
-</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
-</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 7: HDMI <span style="color:#ae81ff">3</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>  Subdevices: 1/1
-</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
-</span></span></code></pre></div><p>Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker. Yah, laptop masih diam seribu bahasa. <strong>Sound Open Firmware</strong> memberikan secercah harapan. Apalagi kemudian <strong>sof-firmware</strong> masuk ke repo <em>current</em>. Namun sayang, laptop masih membisu. Beberapa kali upgrade kernel, alsa, pulseaudio dan pipewire, masih saja tak terdengar. Alhamdulillah kemudian menemukan solusi dari <em>issue</em> yang dibuat oleh junocom di github alsa-project/alsa-ucm-conf.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

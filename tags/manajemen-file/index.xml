@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Manajemen-File on Catatan Sasongko</title>
+    <title>Manajemen File on Catatan Sasongko</title>
     <link>https://sasongko.web.id/tags/manajemen-file/</link>
-    <description>Recent content in Manajemen-File on Catatan Sasongko</description>
+    <description>Recent content in Manajemen File on Catatan Sasongko</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/tags/manajemen-file/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengakses file .dmg</title>
+      <link>https://sasongko.web.id/post/2024-12-04-mengakses-file-dmg/</link>
+      <pubDate>Wed, 04 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2024-12-04-mengakses-file-dmg/</guid>
+      <description>&lt;p&gt;File .dmg biasanya adalah &lt;em&gt;software installer&lt;/em&gt; yang berlaku untuk MacOs. Scara &lt;em&gt;default&lt;/em&gt; pengguna linux tidak bisa mengakses isi dari .dmg ini. Namun, dengan &lt;em&gt;software&lt;/em&gt; dan teknik tertentu hal ini bisa dilakukan.&lt;/p&gt;&#xA;&lt;p&gt;Pertama, &lt;em&gt;convert&lt;/em&gt; .dmg ke .img. Ini membutuhkan &lt;strong&gt;dmg2img&lt;/strong&gt;. Khusus pengguna slackware dan derivatnya ini tersedia di SBo. Setelah dmg2img terinstall, konversi bisa dilakukan, dengan &lt;em&gt;root privileges&lt;/em&gt; tentunya. Misalnya file .dmg nya adalah apel.dmg yang kemudian dikonversi menjadi apel.img.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ dmg2img apel.dmg apel.img&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kemudian, atur apel.img sebagai &lt;em&gt;loop device&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Convert png ke pdf</title>
       <link>https://sasongko.web.id/post/2024-09-13-convert-png-ke-pdf/</link>

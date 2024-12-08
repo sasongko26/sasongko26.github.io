@@ -228,6 +228,60 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/">Start up time kernel 5.10.2</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>24 Dec 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam <em>main tree</em> <strong>slackware current</strong>. Saat catatan ini dituliskan, sudah &ldquo;mendarat&rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk <em>start up</em>. Yang dimaksud <em>start up</em> di sini adalah kondisi dari eksekusi <strong>elilo</strong> dan <strong>initrd</strong> sampai muncul <em>login prompt</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ dmesg | tail -5
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   20.687205<span style="color:#f92672">]</span> Segment Routing with IPv6
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   20.687213<span style="color:#f92672">]</span> RPL Segment Routing with IPv6
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   32.472700<span style="color:#f92672">]</span> RTL8208 Fast Ethernet r8169-300:00: attached PHY driver <span style="color:#f92672">[</span>RTL8208 Fast Ethernet<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>mii_bus:phy_addr<span style="color:#f92672">=</span>r8169-300:00, irq<span style="color:#f92672">=</span>IGNORE<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   32.750379<span style="color:#f92672">]</span> r8169 0000:03:00.0 eth0: Link is Down
+</span></span></code></pre></div><p>Penjelasan <em>command</em></p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-12-20-beralih-hugo/">Beralih ke Hugo</a></h2>
 
     <div class="post-meta">
@@ -418,63 +472,6 @@ Keunggulan <strong>hugo</strong> :</p>
 </span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">NetworkManager device not ready</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Aug 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Baru beberapa hari memakai (lagi) <strong>NetworkManager</strong>, sudah bermasalah (lagi).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>device not ready
-</span></span></code></pre></div><p><img src="https://sasongko.web.id/gambar/networkmanager-device-not-ready.png" alt=""></p>
-<p>begitulah&hellip;.</p>
-<p>Padahal <em>network interface</em>-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai <strong>NetworkManager</strong>.
-Solusinya dari berbagai referensi (lupa mencatat linknya)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;managed=true&#34;</span> &gt;&gt; /etc/NetworkManager/NetworkManager.conf
-</span></span></code></pre></div><p>Tapi, ternyata ini kemudian munculkan <em>warning</em> di <strong>syslog</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Aug  <span style="color:#ae81ff">9</span> 12:04:53 localhost NetworkManager<span style="color:#f92672">[</span>1047<span style="color:#f92672">]</span>: &lt;warn&gt;  <span style="color:#f92672">[</span>1596949493.8398<span style="color:#f92672">]</span> config: unknown key <span style="color:#e6db74">&#39;managed&#39;</span> in section <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> of file <span style="color:#960050;background-color:#1e0010">&#39;</span>/etc/NetworkManager/NetworkManager.conf
-</span></span></code></pre></div><p>Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal). Sampai sekarang belum terjadi lagi (dan semoga tidak akan terjadi lagi. Saya lelah dengan kerewelan <strong>NetworkManager</strong>).</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

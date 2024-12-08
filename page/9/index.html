@@ -228,6 +228,58 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2023-05-25-syntax-pspp-membuka-file-sav/">Syntax PSPP Membuka File</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>25 May 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>PSPP merupakan <em>software</em> statistika yang <em>open source</em>, ringan tetapi sangat fungsional dan <em>powerful</em>. Ringan karena <em>installer</em>-nya hanya beberapa MB. Jauh lebih kecil daripada <em>software</em> sejenis yang <em>proprietary</em>. Fungsional dan <em>powerful</em> karena berbagai analisis dapat dilakukan dengan PSPP.</p>
+<p>PSPP bisa dijalankan dengan tampilan <em>text</em> ataupun grafis. Uktuk memulai pspp tampilan <em>text</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pspp
+</span></span><span style="display:flex;"><span>PSPP&gt;
+</span></span></code></pre></div><p>Untuk membuka file, pada <em>PSPP prompt</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PSPP&gt; get file<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tulis-nama-filenya yang berekstensi sav&#39;</span>.
+</span></span></code></pre></div><p>Bagian dalam tanda kutip adalah file yang akan dibuka.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2023-05-25-syntax-pspp-membuka-file-sav/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-04-25-menampilkan-progress-dd/">Menampilkan progress dd</a></h2>
 
     <div class="post-meta">
@@ -407,77 +459,6 @@
   <p>Secara default, <em>timeout</em> <strong>grub</strong> adalah 10 detik. Menurut penulis, 10 detik ini terlalu lama. Untuk mengubahnya ganti angka 10 ke detik yang diinginkan pada baris dengan GRUB_TIMEOUT pada file /etc/default/grub</p>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/">Menampilkan status penggunaan zram</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>27 Mar 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/zram">zram</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/grub">grub</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk menampilkan status penggunaan zram bisa dengan menjalankan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># zramctl --output-all</span>
-</span></span><span style="display:flex;"><span>NAME     DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT
-</span></span><span style="display:flex;"><span>/dev/zram0
-</span></span><span style="display:flex;"><span>               1G   4K   74B lzo-rle         <span style="color:#ae81ff">4</span>          <span style="color:#ae81ff">0</span>   12K        0B      12K       0B <span style="color:#f92672">[</span>SWAP<span style="color:#f92672">]</span>
-</span></span></code></pre></div><p>Berikut penjelasan masing-masing kolomnya</p>
-<p>NAME	zram device name
-DISKSIZE	limit on the uncompressed amount of data
-DATA	uncompressed size of stored data
-COMPR	compressed size of stored data
-ALGORITHM	the selected compression algorithm
-STREAMS	number of concurrent compress operations
-ZERO-PAGES	empty pages with no allocated memory
-TOTAL	all memory including allocator fragmentation and metadata overhead
-MEM-LIMIT	memory limit used to store compressed data
-MEM-USED	memory zram have been consumed to store compressed data
-MIGRATED	number of objects migrated by compaction
-MOUNTPOINT	where the device is mounted</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

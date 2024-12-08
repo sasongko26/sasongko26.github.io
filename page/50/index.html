@@ -228,6 +228,78 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/">Konek Internet dengan nmcli</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Jun 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Menyambung catatan tentang [hilangnya ikon atau NetworkManager]({% post_url 2015-12-26-ikon-networkmanager-hilang %}). Jika <!-- raw HTML omitted -->nm-applet<!-- raw HTML omitted --> tidak mempan untuk menampilkan <em>applet NetworkManager</em>, maka kita bisa gunakan <!-- raw HTML omitted -->nmcli<!-- raw HTML omitted -->.</p>
+<p><!-- raw HTML omitted -->nmcli<!-- raw HTML omitted --> adalah <em>NetworkManager</em> dengan antarmuka teks (<em>command line interface</em>).</p>
+<pre tabindex="0"><code>nmcli
+Usage: nmcli [OPTIONS] OBJECT { COMMAND | help }
+
+OPTIONS
+  -t[erse]                                   terse output
+  -p[retty]                                  pretty output
+  -m[ode] tabular|multiline                  output mode
+  -c[olors] auto|yes|no                      whether to use colors in output
+  -f[ields] &lt;field1,field2,...&gt;|all|common   specify fields to output
+  -e[scape] yes|no                           escape columns separators in values
+  -a[sk]                                     ask for missing parameters
+  -s[how-secrets]                            allow displaying passwords
+  -w[ait] &lt;seconds&gt;                          set timeout waiting for finishing operations
+  -v[ersion]                                 show program version
+  -h[elp]                                    print this help
+
+OBJECT
+  g[eneral]       NetworkManager&#39;s general status and operations
+  n[etworking]    overall networking control
+  r[adio]         NetworkManager radio switches
+  c[onnection]    NetworkManager&#39;s connections
+  d[evice]        devices managed by NetworkManager
+  a[gent]         NetworkManager secret agent or polkit agent
+  m[onitor]       monitor NetworkManager changes
+</code></pre><p>Untuk melihat sambungan/koneksi yang telah dibuat dengan <em>NetworkManager</em> gunakan <!-- raw HTML omitted -->nmcli c<!-- raw HTML omitted -->. Berikut adalah contoh <em>output</em>-nya</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2016-05-12-download-fathul-muin-maktabah-elkirtas/">Download Kitab Fathul Muin Maktabah Elkirtas</a></h2>
 
     <div class="post-meta">
@@ -435,57 +507,6 @@ Tersedia pilihan <strong>Sync, Changelog, Packages, Updates, Browse, Search, Que
   
   <footer>
     <a href="https://sasongko.web.id/post/2016-05-03-install-sbopkg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-04-29-install-tor/">Install Tor Browser</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 Apr 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/tor">tor</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/firefox">firefox</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><a href="http://torproject.org">Tor Browser</a> adalah peramban web yang sangat memerhatikan privasi. Kita bisa mengakses web secara anonim/ <em>anonymous</em> karena melewati jaringan Tor yang beraneka jalur.</p>
-<p>Sebenarnya di <a href="http://slackbuilds.org">SBo</a> sudah tersedia browser satu ini. Tapi sayang untuk versi <strong>Slackware 14.1</strong> <em>download link</em>-nya <em>expired</em>. <em>Tor Stable</em> terbaru adalah versi 5.5.5 dan ini belum tersedia SBo resminya untuk Slackware. Jadi kita akan install mandiri. Tentu saja kita butuh koneksi internet untuk mengunduh berkasnya. Tor tersedia untuk Linux, Windows maupun Mac Os X, baik arsitektur 32 bit maupun 64 bit. Ini tidak hanya berlaku untuk Slackware tapi juga BlankOn. Di sini digunakan 64 bit. <strong>Proses instalasi dengan bukan root</strong>.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-04-29-install-tor/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

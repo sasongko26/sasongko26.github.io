@@ -228,6 +228,77 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/">Menampilkan status penggunaan zram</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>27 Mar 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/zram">zram</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/grub">grub</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Untuk menampilkan status penggunaan zram bisa dengan menjalankan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># zramctl --output-all</span>
+</span></span><span style="display:flex;"><span>NAME     DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT
+</span></span><span style="display:flex;"><span>/dev/zram0
+</span></span><span style="display:flex;"><span>               1G   4K   74B lzo-rle         <span style="color:#ae81ff">4</span>          <span style="color:#ae81ff">0</span>   12K        0B      12K       0B <span style="color:#f92672">[</span>SWAP<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>Berikut penjelasan masing-masing kolomnya</p>
+<p>NAME	zram device name
+DISKSIZE	limit on the uncompressed amount of data
+DATA	uncompressed size of stored data
+COMPR	compressed size of stored data
+ALGORITHM	the selected compression algorithm
+STREAMS	number of concurrent compress operations
+ZERO-PAGES	empty pages with no allocated memory
+TOTAL	all memory including allocator fragmentation and metadata overhead
+MEM-LIMIT	memory limit used to store compressed data
+MEM-USED	memory zram have been consumed to store compressed data
+MIGRATED	number of objects migrated by compaction
+MOUNTPOINT	where the device is mounted</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-03-26-migrasi-elilo-ke-grub/">Migrasi dari elilo ke grub</a></h2>
 
     <div class="post-meta">
@@ -417,50 +488,6 @@
   <p>
   <p>Secara <em>default</em>, setelah berhasil <em>login</em> di <strong>tty</strong> muncul pesan-pesan berupa kata-kata mutiara dari para tokoh. <strong>Fortune</strong> ini menjadi sepaket dengan <strong>bsd-games</strong>. Jadi kalau ingin di-<em>disable</em> bisa uninstall <strong>bsd-games</strong>. Kalau masih butuh <strong>bsd-games</strong> tinggal jadikan file /etc/profile.d/bsd-games-login-fortune.*sh <em>nonexecutable</em></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>chmod -x /etc/profile.d/bsd-games-login-fortune.*sh
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-02-22-aktivasi-runlevel4/">Mengaktifkan runlevel 4</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>22 Feb 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/init">init</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><em>Runlevel 4</em> bisa dikatakan sebagai runlevel multiuser dengan <em>graphical user interface</em> saat loginnya. Secara <em>default</em>, <em>Runlevel</em> <strong>slackware</strong> adalah 3. Untuk mengubahnya ke 4 edit file /etc/inittab, ganti angka 3 pada baris berikut dengan angka 4</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>id:4:initdefault:
 </span></span></code></pre></div>
   </p>
 
