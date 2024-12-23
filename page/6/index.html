@@ -228,6 +228,72 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2022-06-03-spdlog-build-error-basic-runtime/">spdlog build error basic runtime</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Jun 2023</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Ketika <em>build</em> <strong>spdlog</strong> dari SBo ditemukan error</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>n file included from /tmp/SBo/spdlog-1.11.0/include/spdlog/spdlog.h:12,
+</span></span><span style="display:flex;"><span>                 from /tmp/SBo/spdlog-1.11.0/include/spdlog/spdlog-inl.h:7,
+</span></span><span style="display:flex;"><span>                 from /tmp/SBo/spdlog-1.11.0/src/spdlog.cpp:8:
+</span></span><span style="display:flex;"><span>/tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:111: error: ‘basic_runtime’ is not a member of ‘fmt’
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">168</span> | nvertible&lt;T, fmt::basic_string_view&lt;Char&gt;&gt;::value <span style="color:#f92672">||</span> std::is_same&lt;remove_cvref_t&lt;T&gt;, fmt::basic_runtime&lt;Char&gt;&gt;::value&gt;
+</span></span><span style="display:flex;"><span>      |                                                                                           ^~~~~~~~~~~~~
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:111: error: ‘basic_runtime’ is not a member of ‘fmt’
+</span></span><span style="display:flex;"><span>/tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:125: error: template argument <span style="color:#ae81ff">2</span> is invalid
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">168</span> | mt::basic_string_view&lt;Char&gt;&gt;::value <span style="color:#f92672">||</span> std::is_same&lt;remove_cvref_t&lt;T&gt;, fmt::basic_runtime&lt;Char&gt;&gt;::value&gt;
+</span></span><span style="display:flex;"><span>      |                                                                                           ^~~~
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:138: error: expected ‘<span style="color:#f92672">{</span>’ before ‘&gt;’ token
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">168</span> | :basic_string_view&lt;Char&gt;&gt;::value <span style="color:#f92672">||</span> std::is_same&lt;remove_cvref_t&lt;T&gt;, fmt::basic_runtime&lt;Char&gt;&gt;::value&gt;
+</span></span><span style="display:flex;"><span>      |                                                                                                     ^
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>: *** <span style="color:#f92672">[</span>CMakeFiles/spdlog.dir/build.make:76: CMakeFiles/spdlog.dir/src/spdlog.cpp.o<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: *** <span style="color:#f92672">[</span>CMakeFiles/Makefile2:100: CMakeFiles/spdlog.dir/all<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>make: *** <span style="color:#f92672">[</span>Makefile:166: all<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>Failures:
+</span></span><span style="display:flex;"><span>  spdlog: spdlog.SlackBuild <span style="color:#66d9ef">return</span> non-zero
+</span></span></code></pre></div><p>Spdlog ini mempunyai dependensi fmt. Fmt yang tersedia di current versi 10.0.0. Tapi versi ini gagal untuk build spdlog. Maka mt yang ada di current ini dihapus dan ganti dengan yang disediakan SBo (9.1.0).</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2022-06-03-spdlog-build-error-basic-runtime/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2023-06-02-masuk-uefi-firmware-settings-via-grub/">Masuk UEFI Firmware Settings dari GRUB</a></h2>
 
     <div class="post-meta">
@@ -412,67 +478,6 @@
 </span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/">Akses akun root mariadb tanpa password</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>22 Mar 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk akses root mariadb biasanya memerlukan password. Tapi sebenarnya root bisa diakses tanpa password. Pertama, hentikan dulu <em>service</em> <strong>mariadb</strong>-nya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ /etc/rc.d/rc.mysqld stop
-</span></span></code></pre></div><p>Kemudian, restart database server tanpa peduli otentikasinya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mariadbd-safe --skip-grant-tables --skip-networking &amp;
-</span></span></code></pre></div><p>Nah, akun root <strong>mariadb</strong> sudah bisa diakses tanpa <em>password</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mariadb -u root
-</span></span><span style="display:flex;"><span>Welcome to the MariaDB monitor.  Commands end with ; or <span style="color:#ae81ff">\g</span>.
-</span></span><span style="display:flex;"><span>Your MariaDB connection id is <span style="color:#ae81ff">3</span>
-</span></span><span style="display:flex;"><span>Server version: 10.11.2-MariaDB Source distribution
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Copyright <span style="color:#f92672">(</span>c<span style="color:#f92672">)</span> 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#39;help;&#39;</span> or <span style="color:#e6db74">&#39;\h&#39;</span> <span style="color:#66d9ef">for</span> help. Type <span style="color:#e6db74">&#39;\c&#39;</span> to clear the current input statement.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>MariaDB <span style="color:#f92672">[(</span>none<span style="color:#f92672">)]</span>&gt; 
-</span></span></code></pre></div><p>Oiya, 3 <em>command</em> pertama dijalankan dengan <em>privilege</em> <strong>root</strong> yang ada di sistem di mana <strong>mariadb</strong> tersebut diinstall.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

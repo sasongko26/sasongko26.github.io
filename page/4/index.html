@@ -228,6 +228,60 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2023-10-28-menggunakan-wayland/">Menggunakan wayland</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>28 Oct 2023</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p><em>Wayland</em> digadang-gadang sebagai suksesor Xorg/X11. <strong>GNOME</strong> dan <strong>Fedora</strong> sudah memutuskan tidak lagi menggunakan X11 untuk rilis berikutnya. Proyek-proyek <em>opensource</em> terkait <em>wayland</em> bermunculan.</p>
+<p>Berikut adalah yang kami gunakan ketika berkomputasi dengan <em>wayland</em>:</p>
+<ol>
+<li>Compositor: <em>labwc</em> atau <em>hyprland</em></li>
+<li>Status bar/panel : <em>nwg-panel</em></li>
+<li>Gamma/night mode : <em>wlsunset</em></li>
+<li>Screenlocker : <em>swaylock</em> dan <em>swayidle</em></li>
+</ol>
+<p>Bukankah KDE Plasma juga mendukung <em>wayland</em>, mengapa tidak digunakan? Kami lebih suka menggunakan <em>wayland</em> berbasis <em>wlroot</em>, sedangkan KDE Plasma masih berbasis <em>dbus</em>. Mengapa menggunakan <em>wlroot</em>? Ya karena sedang menginginkannya saja.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2023-10-28-menggunakan-wayland/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2023-09-25-touchpad-tap-to-click/">Aktifkan Touchpad untuk Klik</a></h2>
 
     <div class="post-meta">
@@ -401,57 +455,6 @@
 
   <p>
   <p>Ada sedikit masalah ketika menggunakan kernel 6.1.38. Masalah tersebut antara lain tidak stabilnya jaringan internet bila konek via NetworkManager, usb dan bluetooth yang kadang suka diskonek sendiri. Solusi untuk masalah jaringan dan bluetooth tersebut adalah mengganti dhcpcd dengan dhclient pada konfigurasi Network Manager /etc/NetworkManager/conf.d/00-dhcp-client.conf, sesuai masukan dari Pak Walesa.</p>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-07-09-memperkecil-ukuran-file-pdf/">Memperkecil ukuran file pdf</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Jul 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk memperkecil ukuran file pdf bisa mengeksekusi</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ps2pdf filelama.pdf filebaru.pdf
-</span></span></code></pre></div><p><em>Command</em> tersebut akan membuat ukuran filebaru.pdf merupakan filelama.pdf dengan ukuran lebih kecil. Ada opsi yang bisa diberikan yang tentunya dapat digunakan sesuai kebutuhan</p>
-<ol>
-<li>-dPDFSETTINGS=/screen untuk mendapatkan ukuran yang jauh lebih kecil dengan kualitas 72 dpi.</li>
-<li>-dPDFSETTINGS=/ebooks untuk mendapatkan ukuran lebih kecil dengan kualitas 150 dpi.</li>
-<li>-dPDFSETTINGS=/prepress untuk kualitas 300 dpi.</li>
-<li>-dPDFSETTINGS=/printer untuk kualitas printer (300 dpi).</li>
-<li>-dPDFSETTINGS=/default untuk berbagai keperluan tapi kadang ukurannya tidak beda teralu jauh dengan aslinya.</li>
-</ol>
   </p>
 
   

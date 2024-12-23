@@ -228,6 +228,57 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/">Enable TLP on i3wm</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Dec 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/power-manager">power manager</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/hardware">hardware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/i3">i3</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Beberapa hari yang lalu install <!-- raw HTML omitted -->i3 (i3wm)<!-- raw HTML omitted --> menggunakan <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->. Biasanya, dengan <em>desktop environment</em> lain seperti <em>Mate</em>, baterai bisa bertahan 4 - 6 jam. Namun, dengan <em>i3</em> belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.</p>
+<p>Cek <!-- raw HTML omitted -->powertop<!-- raw HTML omitted --> ternyata banyak yang <strong>Bad</strong> seperti <em>default</em>-nya tanpa TLP. Padahal <em>service</em> TLP saat <em>booting</em> jalan, <em>Tunable</em> di <!-- raw HTML omitted -->powertop<!-- raw HTML omitted --> hanya 1 yang <strong>Bad</strong> lainnya <strong>Good</strong> semua.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2016-12-08-scrolling-xterm/">Scrolling pada XTerm</a></h2>
 
     <div class="post-meta">
@@ -413,59 +464,6 @@
   
   <footer>
     <a href="https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Mount qcow2</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Sep 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk mengaitkan/<em>mount</em> berkas <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> ternyata tidak bisa langsung di- <em>mount</em> begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses <em>root</em></p>
-<p>Modul kernel NBD aktifkan dulu. Secara <em>default</em> modul NBD nonaktif. Untuk mengaktifkannya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modprobe nbd max_part<span style="color:#f92672">=</span>N
-</span></span></code></pre></div><p><!-- raw HTML omitted -->max_part=N<!-- raw HTML omitted --> isikan jumlah partisi yang ingin ditangani pada <!-- raw HTML omitted -->N<!-- raw HTML omitted -->. Misalnya, <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> tersebut kalau dijalankan dengan <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> berisi 8 partisi, maka nilai <!-- raw HTML omitted -->N<!-- raw HTML omitted --> adalah 8.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

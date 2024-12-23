@@ -228,6 +228,62 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/">Penggabungan operator perl</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Jan 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Penggabungan operator yang dimaksudkan di sini adalah menggabungkan = dan operator lainnya seperti penjumlahan, perkalian, pengurangan, dll. Penggabungan ini biasanya digunakan untuk memperbarui nilai suatu variabel. Contoh di sini adalah penggabungan dengan operator penjumlahan.</p>
+<p>Misalkan, terdapat variabel a dengan nilai awal 10. Nilai a kemudian akan diubah dengan cara ditambah 4. Nilai a yang baru ini dituliskan dengan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span>a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">4</span>;
+</span></span></code></pre></div><p>Sehingga nilai a kemudian berubah dari 10 menjadi 14.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#34;say&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai a awal. a = 10&#34;</span>);
+</span></span><span style="display:flex;"><span>$a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">4</span>;
+</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai a baru setelah ditambah 4. a += 4. a = $a&#34;</span>);
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/">Operator aritmatika scalar perl</a></h2>
 
     <div class="post-meta">
@@ -480,55 +536,6 @@
 
   <p>
   <p>Untuk mengubah <em>background</em> gambar menjadi transparan, bisa dilakukan dengan mudah menggunakan <strong>krita</strong>. Klik menu Filter &ndash;&gt; Colours &ndash;&gt; Colour to Aplha. Color picker pilih warna background yang akan diganti menjadi transparan. Threshold atur 100 atau sesuai kebutuhan. Kemudian Ok.</p>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-12-19-list-module-perl-terinstall/">List semua module perl terinstall</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Dec 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk mengetahui semua modul <strong>perl</strong> yang terinstall bisa menggunakan <strong>instmodsh</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ instmodsh
-</span></span><span style="display:flex;"><span>Available commands are:
-</span></span><span style="display:flex;"><span>   l            - List all installed modules
-</span></span><span style="display:flex;"><span>   m &lt;module&gt;   - Select a module
-</span></span><span style="display:flex;"><span>   q            - Quit the program
-</span></span><span style="display:flex;"><span>cmd?
-</span></span></code></pre></div><p>Kemudian pilih l.</p>
   </p>
 
   

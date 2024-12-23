@@ -228,6 +228,61 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/">Deteksi duplikasi file</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Jun 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Walau sudah ada <em>tools</em> yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan <em>tools</em> bawaan <strong>Slackware</strong>. <em>Tools</em> yang umum digunakan antara lain <!-- raw HTML omitted -->fslint<!-- raw HTML omitted -->, <!-- raw HTML omitted -->fdupes<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->jdupes<!-- raw HTML omitted -->. Adapun <em>tools</em> yang biasa saya gunakan</p>
+<ol>
+<li><!-- raw HTML omitted -->sha512sum<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->awk<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->uniq<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->grep<!-- raw HTML omitted --></li>
+</ol>
+<p>Misalkan, akan mencari adakah duplikasi file di folder <!-- raw HTML omitted -->Downloads<!-- raw HTML omitted -->. Pertama, catat dulu <em>hash</em>-nya. Di sini saya gunakan <em>sha512</em>. Kumpulan <em>sha512</em> tersebut disatukan dalam file <!-- raw HTML omitted -->downloads.sha512<!-- raw HTML omitted -->. File ini terdiri dari 2 kolom. Kolom pertama berisi <em>hash</em>, sedangkan kolom kedua nama filenya.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Menggabungkan video ffmpeg</a></h2>
 
     <div class="post-meta">
@@ -467,59 +522,6 @@ Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefo
   <p>Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan <!-- raw HTML omitted -->adb<!-- raw HTML omitted --></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell settings put secure location_mode <span style="color:#ae81ff">3</span>
 </span></span></code></pre></div><p>Kalau ingin menonaktifkan, ganti angka 3 dengan 0.</p>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-21-menambah-watermark-gambar-video/">Menambah watermark gambar ke video dengan ffmpeg</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Misalkan kita akan memberikan <em>watermark</em> berupa gambar logo.png ke video ramadhan.mkv. <em>Watermark</em> ditempatkan di pojok kiri bawah. Video dengan <em>watermark</em> diberi nama ramadhan-fix.mkv</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i ramadhan.mkv -i logo.png -filter_complex <span style="color:#e6db74">&#34;overlay=x=0:y=(main_h-overlay-h)&#34;</span> ramadhan-fix.mkv
-</span></span></code></pre></div><p>Keterangan opsi dan parameternya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>-filter_complex : menggunakan filter yang kompleks
-</span></span><span style="display:flex;"><span>overlay : menambahkan watermark
-</span></span><span style="display:flex;"><span>x : posisi pada sumbu x, dihitung dari ujung kiri
-</span></span><span style="display:flex;"><span>y : posisi pada sumbu y, dihitung dari ujung atas
-</span></span><span style="display:flex;"><span>main_h : tinggi video
-</span></span><span style="display:flex;"><span>main_w : lebar video
-</span></span><span style="display:flex;"><span>overlay_h : tinggi gambar yang akan dijadikan watermark
-</span></span><span style="display:flex;"><span>overlay_w : lebar gambar yang akan dijadikan watermark
-</span></span></code></pre></div>
   </p>
 
   

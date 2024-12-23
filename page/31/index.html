@@ -228,6 +228,65 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Mengetahui kapan komputer dinyalakan</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>25 Dec 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan <strong>dmesg</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ dmesg -T | head -1 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Fri Dec <span style="color:#ae81ff">25</span> 00:39:42 2020<span style="color:#f92672">]</span> Linux version 5.10.2 
+</span></span></code></pre></div><p>Penjelasan command :</p>
+<ol>
+<li>eksekusi sebagai root</li>
+<li>opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp</li>
+<li>| adalah pipe, untu menjadikan output dmesg sebagai input untuk head</li>
+<li>head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya</li>
+<li>[Fri Dec 25 00:39:42 2020] Linux version 5.10.2 # baris 1 yang kami tuliskan hanya sampai sini</li>
+</ol>
+<p>Dari <em>output</em> tersebut tampak bahwa komputer dinyalakan pada hari Jum&rsquo;at, 25 Desember 2020 sekitar jam 00.39.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/">Start up time kernel 5.10.2</a></h2>
 
     <div class="post-meta">
@@ -424,51 +483,6 @@ Keunggulan <strong>hugo</strong> :</p>
   <p>
   <p>Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di <em>external memory</em> (sdcard) dengan nama file screenshot.png</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell screencap -p /sdcard/screenshot.png
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-15-mengenal-r-home/">Mengenal R_HOME</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Aug 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>R_HOME adalah direktori tempat R diinstall. Maksudnya, pada direktori inilah terdapat file <em>binary</em> dan konfigurasinya. Pada linux khususnya <strong>slackware</strong>, R_HOME ada di</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/usr/lib<span style="color:#f92672">{</span>,64<span style="color:#f92672">}</span>/R
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># tergantung arsitekturnya apakah 32bit atau 64bit.</span>
 </span></span></code></pre></div>
   </p>
 

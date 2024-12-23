@@ -228,6 +228,54 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-05-23-aktivasi-fancy-indexing-directory-listing-apache/">Aktivasi fancy indexing directory listing apache</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 May 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/cloud">cloud</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Secara <em>default</em>, <em>indexing</em> pada <strong>apache</strong> hanya menampilkan nama direktori dan file yang berada dalam direktori tersebut dengan format <em>unordered list</em>. Bagi yang menganggap tampilan ini tidak menarik, bisa mengaktifkan <em>fancy indexing</em> dengan cara edit file /etc/httpd/httpd.conf, <em>uncomment</em> baris</p>
+<pre tabindex="0"><code>#Include /etc/httpd/extra/httpd-autoindex.conf
+</code></pre><p>kemudian <em>restart</em> <strong>apache</strong></p>
+<pre tabindex="0"><code># /etc/rc.d/rc.httpd restart
+</code></pre>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-05-21-menghapus-history-qtav-player/">Menghapus history QtAV Player</a></h2>
 
     <div class="post-meta">
@@ -421,68 +469,6 @@
   <footer>
     <a href="https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/">Membuat histogram dengan python</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 May 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk membuat <strong>histogram</strong> dengan <strong>python</strong> dibutuhkan library <strong>pandas</strong> dan <strong>matplotlib</strong> dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># dengan editing header variabel</span>
-</span></span><span style="display:flex;"><span>alkohol <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;../dataset/drinks.csv&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># histogram</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>hist(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;beer_servings&#39;</span>, data<span style="color:#f92672">=</span>alkohol)
-</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Kaleng&#39;</span>)
-</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Jumlah&#39;</span>)
-</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Konsumsi bir tahun 2010 (kaleng)&#39;</span>)
-</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
-</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
-</span></span></code></pre></div><p>Hasilnya:</p>
-<p><img src="https://sasongko.web.id/gambar/histogram-beer-servings-2010.png" alt=""></p>
-  </p>
-
   
 </article>
 

@@ -228,6 +228,55 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/">Menambah file archive tar</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Untuk menambahkan file ke dalam <em>tar archive</em> mudah. Gunakan opsi -r atau &ndash;append pada <em>command</em> <strong>tar</strong>.</p>
+<p>Misalkan, file photo_2020-08-22_19-03-32.jpg yang ada di ~/Documents akan dimasukkan atau ditambahkan ke dalam file <em>archive</em> screenshot.tar.xz</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar rf screenshot.tar.xz photo_2020-08-22_19-03-32.jpg
+</span></span></code></pre></div><p>Atau</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar f screenshot.tar.xz --append photo_2020-08-22_19-03-32.jpg
+</span></span></code></pre></div><p>Apabila file photo_2020-08-22_19-03-32.jpg ingin langsung dihapus dari lokasi aslinya setelah ditambahkan ke tar, beri opsi &ndash;remove-files</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar f screenshot.tar.xz --append --remove-files photo_2020-08-22_19-03-32.jpg
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-01-28-video-mengenal-main-window-calc/">(Video) Mengenal main window libreoffice calc</a></h2>
 
     <div class="post-meta">
@@ -427,57 +476,6 @@
   
   <footer>
     <a href="https://sasongko.web.id/post/2021-01-26-aktivasi-zram/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/">Mengembalikan backlight</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><em>Upgrade</em> kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. <em>Backlight</em> menjadi tidak berfungsi.  Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah <code>xbacklight</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ xbacklight
-</span></span><span style="display:flex;"><span>No outputs have backlight property
-</span></span></code></pre></div><p><img src="https://sasongko.web.id/gambar/brightness-100.png" alt="Brightness 100%. Mentok kanan!"></p>
-<p><em>Backlight</em> atau <em>brightness</em> 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).</p>
-<p>Kebetulan, salah 1 situs yang sering penulis kunjungi, <strong>LinuxQuestions.Org</strong> ada <em>thread</em> yang <a href="https://www.linuxquestions.org/questions/slackware-14/intel_backlight-not-working-on-current-4175688981/">membahas masalah ini</a>.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

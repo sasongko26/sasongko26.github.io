@@ -6,8 +6,15 @@
     <description>Recent content on Catatan Sasongko</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reset pengaturan audio ke default</title>
+      <link>https://sasongko.web.id/post/2024-12-18-reset-pengaturan-audio-default/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2024-12-18-reset-pengaturan-audio-default/</guid>
+      <description>&lt;p&gt;Secara default, apabila komputer dihidupkan (atau dihidupkan ulang), audio akan mengikuti pengaturan terakhir yang digunakan. Keunggulan dari sistem ini adalah pengguna tidak perlu repot mengatur kalau sudah menemukan konfigurasi yang cocok. Tapi hal ini buat sebgaian orang, terutama kami bisa menjadi masalah.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Soundcard&lt;/em&gt; yang saat ini digunakan adalah ES8336 yang problematik. Problem yang kami catat adalah tidak adanya suara yang terdengar, yang disebabkan oleh ketidakcocokan konfigurasi default alsa sehingga kami gunakan konfigurasi dari junocomp. Namun, konfigurasi dari junocomp ini ternyata juga masih ada masalah, yaitu selalu kembali ke pengaturan terakhir dalam pemilihan _audio device_nya. Contoh kasus: Kami pasang headset. Suara keluar dari headset. Laptop kami &lt;em&gt;shutdown&lt;/em&gt; kemudian dihidupkan kembali dalam kondisi headset tidak lagi terpasang. Audio menjadi mati sempurna. Untuk mengatasi hal ini kami perlu mengembalikan ke pengaturan awal.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Mengakses file .dmg</title>
       <link>https://sasongko.web.id/post/2024-12-04-mengakses-file-dmg/</link>

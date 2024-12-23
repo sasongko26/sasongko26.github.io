@@ -228,6 +228,59 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/">pip InsecurePlatformWarning</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>21 Jan 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Saat melakukan pencarian dengan pip, muncul pesan</p>
+<pre tabindex="0"><code>/usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:315: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+  SNIMissingWarning
+/usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:120: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+</code></pre><p>Biar peringatan ini tidak muncul lagi, ndg-httpsclient harus diupgrade.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-12-26-menggunakan-gdrv/">Cara Menggunakan gdrv</a></h2>
 
     <div class="post-meta">
@@ -442,57 +495,6 @@ $ tar xzf bzr-2.6.0.tar.gz
 $ cd bzr-2.6.0
 # python setup.py install
 </code></pre>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-11-06-ganti-de/">Ganti Desktop Environment</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Nov 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/mate">mate</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kde">kde</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Biar tidak membosankan, kadangkala kita butuh ganti <em>desktop environment</em> (DE). Caranya (<em>root privileges</em>),</p>
-<pre tabindex="0"><code>xwmconfig
-</code></pre><p>Pilih <em>X Windows</em> (atau DE)-nya. Kemudian Ok atau tekan <em>Enter</em>, <em>Log out</em> dan <em>Log in</em> kembali.</p>
-<p><img src="https://sasongko.web.id/gambar/xwmconfig.png" alt=""></p>
   </p>
 
   

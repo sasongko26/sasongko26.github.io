@@ -228,6 +228,63 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Ekstraksi waktu pada changelog dengan sed</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sed">sed</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Ini adalah keisengan di kala WFH alias <em>work from home</em>. Melakukan ekstraksi waktu pada <em>changelog</em> <strong>slackware64-current</strong> yang terakhir kami update 8 Januari 2021.</p>
+<p>Changelognya terdiri dari 4 bagian:</p>
+<ol>
+<li>Waktu</li>
+<li><em>Packages</em> yang mengalami perubahan (<em>Upgraded, Removed, Added, Rebuilt</em>)</li>
+<li>Keterangan perubahan</li>
+<li>Pembatas <em>update</em> antarwaktu (+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+)</li>
+</ol>
+<p>Akan diambil yang no.1 saja.</p>
+<p>Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.txt.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ sed <span style="color:#e6db74">&#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!d&#39;</span> /var/lib/slackpkg/ChangeLog.txt &gt; changelog-date.txt
+</span></span></code></pre></div><p>Hapus semua baris yang berakhiran dengan tanda titik.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/">Menggunakan ratpoison</a></h2>
 
     <div class="post-meta">
@@ -432,65 +489,6 @@
   
   <footer>
     <a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Mengetahui kapan komputer dinyalakan</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 Dec 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan <strong>dmesg</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ dmesg -T | head -1 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Fri Dec <span style="color:#ae81ff">25</span> 00:39:42 2020<span style="color:#f92672">]</span> Linux version 5.10.2 
-</span></span></code></pre></div><p>Penjelasan command :</p>
-<ol>
-<li>eksekusi sebagai root</li>
-<li>opsi -T pada dmesg bertujuan untuk memformat output dmesg dengan memberikan timestamp</li>
-<li>| adalah pipe, untu menjadikan output dmesg sebagai input untuk head</li>
-<li>head untuk menampilkan baris dari atas, jumlah baris yang ditampilkan sesuai angka yang dituliskan berikutnya</li>
-<li>[Fri Dec 25 00:39:42 2020] Linux version 5.10.2 # baris 1 yang kami tuliskan hanya sampai sini</li>
-</ol>
-<p>Dari <em>output</em> tersebut tampak bahwa komputer dinyalakan pada hari Jum&rsquo;at, 25 Desember 2020 sekitar jam 00.39.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
