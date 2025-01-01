@@ -1,544 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.140.1">
+	<meta name="generator" content="Hugo 0.140.1"><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Catatan Sasongko</title>
 
-  <title>Catatan Sasongko</title>
+<meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+<meta name="author" content="">
+<link rel="canonical" href="https://sasongko.web.id/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://sasongko.web.id/index.xml">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-    
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+            .list {
+                background: var(--theme);
+            }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
-  <!--<![endif]-->
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
-  <!--<![endif]-->
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
+    </style>
+</noscript><meta property="og:url" content="https://sasongko.web.id/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Catatan Sasongko">
+  <meta property="og:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Catatan Sasongko">
+<meta name="twitter:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-
-  
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
- 
-  
-  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
-    href='https://sasongko.web.id/index.xml' />
-  
-
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
-  
-
-  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
-
-  
-    
-        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
-    
-  
-  
-    
-        <script src="https://sasongko.web.id/js/my.js"></script>
-    
-  
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Catatan Sasongko",
+  "url": "https://sasongko.web.id/",
+  "description": "Catatan Penggunaan Slackware \u0026 Open Source Software Lainnya",
+  "logo": "https://sasongko.web.id/favicon.ico",
+  "sameAs": [
+      
+  ]
+}
+</script>
 </head>
 
-
-<body>
-<div id="layout">
-
-  
-<a href="#menu" id="menuLink" class="menu-link">
-  
-  <span></span>
-</a>
-<div id="menu">
-
-  
-
-  <div class="pure-menu">
-    <ul class="pure-menu-list">
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
-      
-        </li>
-      
-    </ul>
-  </div>
-
-  <div class="pure-menu social">
-  <ul class="pure-menu-list">
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://sasongko.web.id/index.xml'><i
-          class="fas fa-rss"></i>RSS</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://youtube.com/channel/UCY4H1n73aQMB4LZjIJvH0_A" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </ul>
-</div>
-
-
-  <div>
-  <div class="small-print">
-    <small></small>
-  </div>
-  <div class="small-print">
-    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
-    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
-  </div>
-</div>
-
-</div>
-
-
-  <div id="main">
-
-
-<div class="header">
-  <h1>Catatan Sasongko</h1>
-  <h2></h2>
-</div>
-
-<div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/">Aktivasi apache webserver slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/cloud">cloud</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <h1 id="install-apache-webserver-slackware-linux">Install apache webserver slackware linux</h1>
-<p>Secara <em>default</em>, <strong>apache webserver</strong> sudah ter-<em>install</em> di <strong>slackware</strong>. Namun, jika saat meng-<em>install</em> <strong>slackware</strong> tidak memilih <em>full installation</em>, <strong>apache webserver</strong> dapat di-<em>install</em> dengan mudah, yaitu dengan meng-<em>install</em> <strong>httpd</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>slackpkg install httpd
-</span></span></code></pre></div><h1 id="aktivasi-apache-webserver-slackware-linux">Aktivasi apache webserver slackware linux</h1>
-<p>Setelah diinstall, bisa diaktifkan:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd start
-</span></span></code></pre></div><p>Untuk menonaktifkan atau mematikan:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd stop
-</span></span></code></pre></div><p>Untuk <em>restart</em> webserver:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd restart
-</span></span></code></pre></div><h1 id="mengaktifkan-apache-webserver-otomatis">Mengaktifkan apache webserver otomatis</h1>
-<p>Untuk dapat <em>running</em> atau mengaktifkan <em>apache</em> secara otomatis setelah <em>booting</em>, pastikan /etc/rc.d/rc.httpd <em>executable</em>.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-19-set-background-blackbox/">Set background blackbox</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Menggunakan <strong>blackbox</strong> yang &lsquo;hanya&rsquo; <strong>window manager</strong> tentunya berbeda dengan ketika menggunakan <strong>desktop environment</strong> (DE) seperti <strong>kde</strong> atau <strong>xfce</strong>. Pengaturan <em>background</em> atau <em>wallpaper</em> dalam DE menggunakan tampilan grafis.</p>
-<p>Untuk meng-<em>set background</em> pada <strong>blackbox</strong> menggunakan <strong>bsetbg</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ bsetbg nama_file_background
-</span></span></code></pre></div><p>Atau, kalau menghendaki <em>background</em>-nya adalah warna (solid color) juga bisa. Contoh, akan mengganti <em>background</em>-nya dengan warna hijau.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ bsetbg -solid green
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/">Copy paste xterm</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><strong>xterm</strong> adalah <strong>X terminal emulator</strong> populer legendaris. Penulis masih  menggunakannya sebagai terminal utama ketika menggunakan <strong>blackbox</strong>. Sesekali saat menggunakan <strong>xfce</strong> atau <strong>kde</strong>.</p>
-<p><strong>xterm</strong> ini khas. Tidak seperti <strong>xfce4-terminal</strong> atau <strong>konsole</strong> yang secara <em>default</em> pengguna bisa melakukan <em>copy paste</em> (Copas) dengan mudah. <strong>Ctrl Shift C, Ctrl Shift V</strong> untuk copas pada terminal emulator lainnya tidak berlaku! Butuh pengaturan khusus untuk melakukannya. Mengatur agar setiap yang diblok akan dimasukkan ke <em>clipboard</em>.</p>
-<p>Untuk bisa melakukan <em>copy</em>:</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/">xauth serverauthXXX does not exist</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/display">display</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-<em>charge</em>. Alhasil laptop mati seketika. Dinyalakan lagi (sambil <em>charging</em> tentunya) gagal masuk ke <strong>X</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>xauth: file /home/xyz/.serverauth.2909 does not exist
-</span></span></code></pre></div><p>Solusinya simpel</p>
-<pre tabindex="0"><code>$ rm .serverauth*
-</code></pre>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/">nmcli sw disabled</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network-manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Beberapa saat yang lalu penulis terkena <em>prank</em> dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan <strong>flight mode</strong> di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek <strong>nmcli</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ nmcli
-</span></span><span style="display:flex;"><span>p2p-dev-wlan0: disconnected
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;p2p-dev-wlan0&#34;</span>
-</span></span><span style="display:flex;"><span>        wifi-p2p, sw disabled, hw
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>eth0: unavailable
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Realtek RTL810xE&#34;</span>
-</span></span><span style="display:flex;"><span>        ethernet <span style="color:#f92672">(</span>r8169<span style="color:#f92672">)</span>, C8:5B:76:66:51:6C, hw, mtu <span style="color:#ae81ff">1500</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>wlan0: unavailable
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Qualcomm Atheros QCA9377&#34;</span>
-</span></span><span style="display:flex;"><span>        wifi <span style="color:#f92672">(</span>ath10k_pci<span style="color:#f92672">)</span>, 8E:58:C9:8B:64:0F, sw disabled, hw, mtu <span style="color:#ae81ff">1500</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>lo: unmanaged
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;lo&#34;</span>
-</span></span><span style="display:flex;"><span>        loopback <span style="color:#f92672">(</span>unknown<span style="color:#f92672">)</span>, 00:00:00:00:00:00, sw, mtu <span style="color:#ae81ff">65536</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Use <span style="color:#e6db74">&#34;nmcli device show&#34;</span> to get complete information about known devices and
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;nmcli connection show&#34;</span> to get an overview on active connection profiles.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Consult nmcli<span style="color:#f92672">(</span>1<span style="color:#f92672">)</span> and nmcli-examples<span style="color:#f92672">(</span>7<span style="color:#f92672">)</span> manual pages <span style="color:#66d9ef">for</span> complete usage details.
-</span></span></code></pre></div><p>Ada <em>output</em> yang aneh : <strong>sw disabled</strong>. Penulis baru ingat kalau <strong>flight mode</strong>-nya aktif. Setelah dinonaktifkan, semua kembali normal. <strong>sw disabled</strong> enyah dari <em>Output</em> <strong>nmcli</strong>.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-
-  
-
-
-<nav class="pagination" role="pagination">
-  
-  <a href="https://sasongko.web.id/page/24/"><i class="fa fa-chevron-left"></i></a>
-  
-  <span>&nbsp;25 / 67&nbsp;</span>
-  
-  <a href="https://sasongko.web.id/page/26/"><i class="fa fa-chevron-right"></i></a>
-  
-</nav>
-
-
-
-</div>
-
-</div>
-</div>
-<script src="https://sasongko.web.id/js/ui.js"></script>
-<script src="https://sasongko.web.id/js/menus.js"></script>
-
-
+<body class="list" id="top">
 <script>
-  
-  if (window.location.hostname != "localhost") {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    ga('create', 'UA-49503242-1', 'auto');
-    ga('send', 'pageview');
-  }
 </script>
 
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sasongko.web.id/" title="Home">
+                    <span class="active"><i class='fa fa-home fa-fw'></i>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/post/" title="Posts">
+                    <span><i class='fa fa-list fa-fw'></i>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/about/" title="Profil">
+                    <span><i class='fa fa-user fa-fw'></i>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/logo/" title="Logo">
+                    <span><i class='fa fa-user fa-fw'></i>Logo</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Aktivasi apache webserver slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Install apache webserver slackware linux Secara default, apache webserver sudah ter-install di slackware. Namun, jika saat meng-install slackware tidak memilih full installation, apache webserver dapat di-install dengan mudah, yaitu dengan meng-install httpd.
+slackpkg install httpd Aktivasi apache webserver slackware linux Setelah diinstall, bisa diaktifkan:
+/etc/rc.d/rc.httpd start Untuk menonaktifkan atau mematikan:
+/etc/rc.d/rc.httpd stop Untuk restart webserver:
+/etc/rc.d/rc.httpd restart Mengaktifkan apache webserver otomatis Untuk dapat running atau mengaktifkan apache secara otomatis setelah booting, pastikan /etc/rc.d/rc.httpd executable.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-24 00:00:00 +0000 UTC'>24 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Aktivasi apache webserver slackware" href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Set background blackbox
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Menggunakan blackbox yang ‘hanya’ window manager tentunya berbeda dengan ketika menggunakan desktop environment (DE) seperti kde atau xfce. Pengaturan background atau wallpaper dalam DE menggunakan tampilan grafis.
+Untuk meng-set background pada blackbox menggunakan bsetbg
+$ bsetbg nama_file_background Atau, kalau menghendaki background-nya adalah warna (solid color) juga bisa. Contoh, akan mengganti background-nya dengan warna hijau.
+$ bsetbg -solid green </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-19 00:00:00 +0000 UTC'>19 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Set background blackbox" href="https://sasongko.web.id/post/2021-02-19-set-background-blackbox/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Copy paste xterm
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>xterm adalah X terminal emulator populer legendaris. Penulis masih menggunakannya sebagai terminal utama ketika menggunakan blackbox. Sesekali saat menggunakan xfce atau kde.
+xterm ini khas. Tidak seperti xfce4-terminal atau konsole yang secara default pengguna bisa melakukan copy paste (Copas) dengan mudah. Ctrl Shift C, Ctrl Shift V untuk copas pada terminal emulator lainnya tidak berlaku! Butuh pengaturan khusus untuk melakukannya. Mengatur agar setiap yang diblok akan dimasukkan ke clipboard.
+Untuk bisa melakukan copy:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-11 00:00:00 +0000 UTC'>11 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Copy paste xterm" href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">xauth serverauthXXX does not exist
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-charge. Alhasil laptop mati seketika. Dinyalakan lagi (sambil charging tentunya) gagal masuk ke X.
+xauth: file /home/xyz/.serverauth.2909 does not exist Solusinya simpel
+$ rm .serverauth* </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-10 00:00:00 +0000 UTC'>10 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to xauth serverauthXXX does not exist" href="https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">nmcli sw disabled
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Beberapa saat yang lalu penulis terkena prank dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan flight mode di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek nmcli
+$ nmcli p2p-dev-wlan0: disconnected &#34;p2p-dev-wlan0&#34; wifi-p2p, sw disabled, hw eth0: unavailable &#34;Realtek RTL810xE&#34; ethernet (r8169), C8:5B:76:66:51:6C, hw, mtu 1500 wlan0: unavailable &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), 8E:58:C9:8B:64:0F, sw disabled, hw, mtu 1500 lo: unmanaged &#34;lo&#34; loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536 Use &#34;nmcli device show&#34; to get complete information about known devices and &#34;nmcli connection show&#34; to get an overview on active connection profiles. Consult nmcli(1) and nmcli-examples(7) manual pages for complete usage details. Ada output yang aneh : sw disabled. Penulis baru ingat kalau flight mode-nya aktif. Setelah dinonaktifkan, semua kembali normal. sw disabled enyah dari Output nmcli.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-09 00:00:00 +0000 UTC'>09 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to nmcli sw disabled" href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="https://sasongko.web.id/page/24/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="https://sasongko.web.id/page/26/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
-</html>
 
+</html>

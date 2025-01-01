@@ -1,1314 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.140.1">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Posts | Catatan Sasongko</title>
+<meta name="keywords" content="">
+<meta name="description" content="Posts - Catatan Sasongko">
+<meta name="author" content="">
+<link rel="canonical" href="https://sasongko.web.id/post/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://sasongko.web.id/post/index.xml">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-  <title>Posts &middot; Catatan Sasongko</title>
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-    
+            .list {
+                background: var(--theme);
+            }
 
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
-  <!--<![endif]-->
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
-  <!--<![endif]-->
+    </style>
+</noscript><meta property="og:url" content="https://sasongko.web.id/post/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Posts">
+  <meta property="og:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Posts">
+<meta name="twitter:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 
-  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
 
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-
-  
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
- 
-  
-  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
-    href='https://sasongko.web.id/post/index.xml' />
-  
-
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
-  
-
-  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
-
-  
-    
-        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
-    
-  
-  
-    
-        <script src="https://sasongko.web.id/js/my.js"></script>
-    
-  
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://sasongko.web.id/post/"
+    }
+  ]
+}
+</script>
 </head>
 
-
-<body>
-<div id="layout">
-
-  
-<a href="#menu" id="menuLink" class="menu-link">
-  
-  <span></span>
-</a>
-<div id="menu">
-
-  
-
-  <div class="pure-menu">
-    <ul class="pure-menu-list">
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
-      
-        </li>
-      
-    </ul>
-  </div>
-
-  <div class="pure-menu social">
-  <ul class="pure-menu-list">
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://sasongko.web.id/post/index.xml'><i
-          class="fas fa-rss"></i>RSS</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://youtube.com/channel/UCY4H1n73aQMB4LZjIJvH0_A" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </ul>
-</div>
-
-
-  <div>
-  <div class="small-print">
-    <small></small>
-  </div>
-  <div class="small-print">
-    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
-    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
-  </div>
-</div>
-
-</div>
-
-
-  <div id="main">
-
-
-<div class="header">
-  <h1>Posts</h1>
-</div>
-<div class="content">
-  
-  <h2>2025</h2>
-  <ul>
-  
-    <li><time>01 Jan 2025</time> - <a href="https://sasongko.web.id/post/2025-01-01-immutabilitas-variabel-rust/">Immutabilitas variabel rust</a></li>
-
-  
-  </ul>
-  
-  <h2>2024</h2>
-  <ul>
-  
-    <li><time>22 Dec 2024</time> - <a href="https://sasongko.web.id/post/2024-12-22-mengetahui-kapasitas-terpakai-direktori/">Mengetahui kapasitas terpakai direktori</a></li>
-
-  
-    <li><time>18 Dec 2024</time> - <a href="https://sasongko.web.id/post/2024-12-18-reset-pengaturan-audio-default/">Reset pengaturan audio ke default</a></li>
-
-  
-    <li><time>04 Dec 2024</time> - <a href="https://sasongko.web.id/post/2024-12-04-mengakses-file-dmg/">Mengakses file .dmg</a></li>
-
-  
-    <li><time>02 Dec 2024</time> - <a href="https://sasongko.web.id/post/2024-12-02-disable-direct-cursor-mode-libreoffice-writer/">Disable direct cursor mode libreoffice writer</a></li>
-
-  
-    <li><time>28 Sep 2024</time> - <a href="https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/">Jalankan windows dari linux dengan qemu</a></li>
-
-  
-    <li><time>13 Sep 2024</time> - <a href="https://sasongko.web.id/post/2024-09-13-convert-png-ke-pdf/">Convert png ke pdf</a></li>
-
-  
-    <li><time>19 Jul 2024</time> - <a href="https://sasongko.web.id/post/2024-07-19-convert-pdf-to-png/">Convert pdf ke png secara massal</a></li>
-
-  
-    <li><time>25 May 2024</time> - <a href="https://sasongko.web.id/post/2024-05-25-seamonkey-in-wayland/">Seamonkey in wayland Error cannot open display</a></li>
-
-  
-    <li><time>20 May 2024</time> - <a href="https://sasongko.web.id/post/2024-05-20-klasifikasi-decision-tree-sklearn/">Klasifikasi decision tree dengan sklearn</a></li>
-
-  
-    <li><time>15 May 2024</time> - <a href="https://sasongko.web.id/post/2024-05-15-listing-directory-python/">Listing direktori dengan python</a></li>
-
-  
-    <li><time>02 Apr 2024</time> - <a href="https://sasongko.web.id/post/2024-04-02-menambahkan-line-number-vim/">Menampilkan line number vim</a></li>
-
-  
-    <li><time>01 Apr 2024</time> - <a href="https://sasongko.web.id/post/2024-04-01-install-kooha-slackware/">Install Kooha di Slackware</a></li>
-
-  
-    <li><time>29 Feb 2024</time> - <a href="https://sasongko.web.id/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/">Mengatasi Audio Tanpa Suara ES8336</a></li>
-
-  
-    <li><time>20 Jan 2024</time> - <a href="https://sasongko.web.id/post/2024-01-20-variabel-rust/">Variabel rust</a></li>
-
-  
-    <li><time>15 Jan 2024</time> - <a href="https://sasongko.web.id/post/2024-01-15-sintaks-komentar-rust/">Sintaks komentar rust</a></li>
-
-  
-  </ul>
-  
-  <h2>2023</h2>
-  <ul>
-  
-    <li><time>20 Nov 2023</time> - <a href="https://sasongko.web.id/post/2023-11-20-hapus-spasi-libreoffice-calc/">Hapus spasi libreoffice calc</a></li>
-
-  
-    <li><time>28 Oct 2023</time> - <a href="https://sasongko.web.id/post/2023-10-28-menggunakan-wayland/">Menggunakan wayland</a></li>
-
-  
-    <li><time>25 Sep 2023</time> - <a href="https://sasongko.web.id/post/2023-09-25-touchpad-tap-to-click/">Aktifkan Touchpad untuk Klik</a></li>
-
-  
-    <li><time>06 Aug 2023</time> - <a href="https://sasongko.web.id/post/2023-08-06-for-looping-bash/">Pengulangan for pada bash</a></li>
-
-  
-    <li><time>03 Aug 2023</time> - <a href="https://sasongko.web.id/post/2023-08-03-mencari-menyalin-file/">Mencari file dan menyalinnya</a></li>
-
-  
-    <li><time>19 Jul 2023</time> - <a href="https://sasongko.web.id/post/2023-07-19-menggunakan-dhclient-networkmanager/">Menggunakan dhclient untuk NetworkManager</a></li>
-
-  
-    <li><time>09 Jul 2023</time> - <a href="https://sasongko.web.id/post/2023-07-09-memperkecil-ukuran-file-pdf/">Memperkecil ukuran file pdf</a></li>
-
-  
-    <li><time>27 Jun 2023</time> - <a href="https://sasongko.web.id/post/2023-06-27-install-guest-os-qemu/">Install Guest OS Qemu</a></li>
-
-  
-    <li><time>26 Jun 2023</time> - <a href="https://sasongko.web.id/post/2023-06-26-membuat-qemu-disk-image/">Membuat qemu disk image</a></li>
-
-  
-    <li><time>22 Jun 2023</time> - <a href="https://sasongko.web.id/post/2023-06-22-convert-dd-to-vdi/">Convert dd ke vdi</a></li>
-
-  
-    <li><time>10 Jun 2023</time> - <a href="https://sasongko.web.id/post/2022-06-10-tiling-window-kde-plasma/">Menggunakan tiling window KDE Plasma</a></li>
-
-  
-    <li><time>03 Jun 2023</time> - <a href="https://sasongko.web.id/post/2022-06-03-spdlog-build-error-basic-runtime/">spdlog build error basic runtime</a></li>
-
-  
-    <li><time>02 Jun 2023</time> - <a href="https://sasongko.web.id/post/2023-06-02-masuk-uefi-firmware-settings-via-grub/">Masuk UEFI Firmware Settings dari GRUB</a></li>
-
-  
-    <li><time>20 May 2023</time> - <a href="https://sasongko.web.id/post/2023-05-19-deskreen-no-wifi-lan-connection/">Deskreen No WiFi and LAN Connection</a></li>
-
-  
-    <li><time>29 Apr 2023</time> - <a href="https://sasongko.web.id/post/2023-04-29-enable-disable-pipewire-slackware/">Enable Disable Pipewire Slackware</a></li>
-
-  
-    <li><time>30 Mar 2023</time> - <a href="https://sasongko.web.id/post/2023-03-30-two-fer-bash/">Two fer bash</a></li>
-
-  
-    <li><time>22 Mar 2023</time> - <a href="https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/">Akses akun root mariadb tanpa password</a></li>
-
-  
-    <li><time>25 Feb 2023</time> - <a href="https://sasongko.web.id/post/2023-02-26-restore-rc-local/">Restore rc.local</a></li>
-
-  
-    <li><time>12 Jan 2023</time> - <a href="https://sasongko.web.id/post/2023-12-01-coding-pertama-rust/">Coding pertama rust</a></li>
-
-  
-    <li><time>10 Jan 2023</time> - <a href="https://sasongko.web.id/post/2023-01-10-ubah-colorscheme-vim/">Mengubah colorscheme vim</a></li>
-
-  
-  </ul>
-  
-  <h2>2022</h2>
-  <ul>
-  
-    <li><time>16 Nov 2022</time> - <a href="https://sasongko.web.id/post/2022-11-16-mengatur-brightness/">Mengatur brightness</a></li>
-
-  
-    <li><time>30 Oct 2022</time> - <a href="https://sasongko.web.id/post/2022-10-30-virtualbox-updater-segfault/">Virtualbox cannot register existing type NMAgentManagerError</a></li>
-
-  
-    <li><time>14 Aug 2022</time> - <a href="https://sasongko.web.id/post/2022-02-14-pelayanan-exabytes/">Pelayanan Exabytes</a></li>
-
-  
-    <li><time>13 Aug 2022</time> - <a href="https://sasongko.web.id/post/2022-08-13-install-sof/">Install Sound Open Firmware</a></li>
-
-  
-    <li><time>28 May 2022</time> - <a href="https://sasongko.web.id/post/2022-05-28-if-else-perl/">If else perl</a></li>
-
-  
-    <li><time>26 May 2022</time> - <a href="https://sasongko.web.id/post/2022-05-26-sinkronisasi-official-repo/">Sinkronisasi official repo slackware</a></li>
-
-  
-    <li><time>25 May 2022</time> - <a href="https://sasongko.web.id/post/2023-05-25-syntax-pspp-membuka-file-sav/">Syntax PSPP Membuka File</a></li>
-
-  
-    <li><time>25 May 2022</time> - <a href="https://sasongko.web.id/post/2022-05-25-mengetahui-spek-ram/">Mengetahui spek RAM</a></li>
-
-  
-    <li><time>25 Apr 2022</time> - <a href="https://sasongko.web.id/post/2022-04-25-menampilkan-progress-dd/">Menampilkan progress dd</a></li>
-
-  
-    <li><time>10 Apr 2022</time> - <a href="https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/">Pipewire di WindowMaker</a></li>
-
-  
-    <li><time>08 Apr 2022</time> - <a href="https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/">Kenggulan elilo dibanding grub</a></li>
-
-  
-    <li><time>28 Mar 2022</time> - <a href="https://sasongko.web.id/post/2022-03-28-mengubah-grub-timeout/">Mengubah timeout grub</a></li>
-
-  
-    <li><time>27 Mar 2022</time> - <a href="https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/">Menampilkan status penggunaan zram</a></li>
-
-  
-    <li><time>26 Mar 2022</time> - <a href="https://sasongko.web.id/post/2022-03-26-migrasi-elilo-ke-grub/">Migrasi dari elilo ke grub</a></li>
-
-  
-    <li><time>05 Mar 2022</time> - <a href="https://sasongko.web.id/post/2022-03-05-mount-media-read-write-mode/">Mount media read write mode</a></li>
-
-  
-    <li><time>01 Mar 2022</time> - <a href="https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/">Konfigurasi mirror slackware</a></li>
-
-  
-    <li><time>23 Feb 2022</time> - <a href="https://sasongko.web.id/post/2022-02-23-disable-fortune-postlogin/">Disable fortune postlogin</a></li>
-
-  
-    <li><time>22 Feb 2022</time> - <a href="https://sasongko.web.id/post/2023-02-22-aktivasi-runlevel4/">Mengaktifkan runlevel 4</a></li>
-
-  
-    <li><time>19 Feb 2022</time> - <a href="https://sasongko.web.id/post/2022-02-19-menggunakan-pipewire/">Menggunakan pipewire</a></li>
-
-  
-    <li><time>06 Jan 2022</time> - <a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/">Operator perbandingan perl</a></li>
-
-  
-    <li><time>05 Jan 2022</time> - <a href="https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/">Operator penggabungan pengulangan string perl</a></li>
-
-  
-    <li><time>04 Jan 2022</time> - <a href="https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/">Penggabungan operator perl</a></li>
-
-  
-    <li><time>03 Jan 2022</time> - <a href="https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/">Operator aritmatika scalar perl</a></li>
-
-  
-    <li><time>02 Jan 2022</time> - <a href="https://sasongko.web.id/post/2022-01-02-membuat-array-perl-dari-scalar/">Membuat array perl dari scalar</a></li>
-
-  
-    <li><time>01 Jan 2022</time> - <a href="https://sasongko.web.id/post/2022-01-01-hapus-baris-dari-awal-sampai-kata-spesifik/">Hapus baris dari awal sampai dengan baris dengan kata spesifik</a></li>
-
-  
-  </ul>
-  
-  <h2>2021</h2>
-  <ul>
-  
-    <li><time>27 Dec 2021</time> - <a href="https://sasongko.web.id/post/2021-12-27-background-transparan-krita/">Membuat background transparan krita</a></li>
-
-  
-    <li><time>19 Dec 2021</time> - <a href="https://sasongko.web.id/post/2021-12-19-list-module-perl-terinstall/">List semua module perl terinstall</a></li>
-
-  
-    <li><time>18 Dec 2021</time> - <a href="https://sasongko.web.id/post/2021-12-18-membuat-coredump/">Membuat dan analisis core dump</a></li>
-
-  
-    <li><time>17 Dec 2021</time> - <a href="https://sasongko.web.id/post/2021-12-17-hapus-riwayat-kfind/">Hapus riwayat kfind</a></li>
-
-  
-    <li><time>17 Dec 2021</time> - <a href="https://sasongko.web.id/post/2021-12-17-deteksi-os-hacking/">Deteksi Sistem Operasi Target Hacking</a></li>
-
-  
-    <li><time>16 Dec 2021</time> - <a href="https://sasongko.web.id/post/2021-12-16-mitigasi-log4shell/">Deteksi log4shell</a></li>
-
-  
-    <li><time>14 Dec 2021</time> - <a href="https://sasongko.web.id/post/2021-12-14-show-line-number-kate/">Menambahkan line number kate</a></li>
-
-  
-    <li><time>10 Dec 2021</time> - <a href="https://sasongko.web.id/post/2021-12-10-install-scanner-linux/">Menambahkan scanner</a></li>
-
-  
-    <li><time>30 Nov 2021</time> - <a href="https://sasongko.web.id/post/2021-11-30-mengetahui-banyaknya-elemen-array-perl/">Mengetahui banyaknya elemen array perl</a></li>
-
-  
-    <li><time>29 Nov 2021</time> - <a href="https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/">Variabel hash perl</a></li>
-
-  
-    <li><time>28 Nov 2021</time> - <a href="https://sasongko.web.id/post/2021-11-28-variabel-array-perl/">Variabel array perl</a></li>
-
-  
-    <li><time>27 Nov 2021</time> - <a href="https://sasongko.web.id/post/2021-11-27-variabel-scalar-perl/">Variabel scalar perl</a></li>
-
-  
-    <li><time>23 Nov 2021</time> - <a href="https://sasongko.web.id/post/2021-11-23-ubah-timestamp/">Mengubah timestamp akses dan modifikasi</a></li>
-
-  
-    <li><time>16 Nov 2021</time> - <a href="https://sasongko.web.id/post/2021-11-16-mount-android-storage-linux/">Mount smartphone ke linux</a></li>
-
-  
-    <li><time>14 Nov 2021</time> - <a href="https://sasongko.web.id/post/2021-11-14-hapus-docker-image/">Menghapus docker image</a></li>
-
-  
-    <li><time>07 Nov 2021</time> - <a href="https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/">Jalankan QGIS docker</a></li>
-
-  
-    <li><time>24 Oct 2021</time> - <a href="https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/">Install Fedora di Slackware</a></li>
-
-  
-    <li><time>10 Sep 2021</time> - <a href="https://sasongko.web.id/post/2021-09-10-install-qgis-via-flatpak/">Install QGIS via flatpak</a></li>
-
-  
-    <li><time>02 Aug 2021</time> - <a href="https://sasongko.web.id/post/2021-08-02-kate-disable-swap/">Kate disable swap</a></li>
-
-  
-    <li><time>01 Aug 2021</time> - <a href="https://sasongko.web.id/post/2021-08-01-dolphin-wastebin-reached-maximum-size/">Dolphin the wastebin has reached its maximum size</a></li>
-
-  
-    <li><time>24 Jun 2021</time> - <a href="https://sasongko.web.id/post/2021-06-24-query-sql/">Query SQL</a></li>
-
-  
-    <li><time>23 Jun 2021</time> - <a href="https://sasongko.web.id/post/2021-06-23-menyusupkan-mate-ke-xfce/">Menyusupkan mate ke xfce</a></li>
-
-  
-    <li><time>06 Jun 2021</time> - <a href="https://sasongko.web.id/post/2021-06-06-redshift-tty/">Eksekusi redshift di tty</a></li>
-
-  
-    <li><time>02 Jun 2021</time> - <a href="https://sasongko.web.id/post/2021-06-02-hapus-awalan-apostrofe-libreoffice-calc/">Hapus awalan apostrofe libreoffice calc</a></li>
-
-  
-    <li><time>01 Jun 2021</time> - <a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Mariadb error 2002</a></li>
-
-  
-    <li><time>27 May 2021</time> - <a href="https://sasongko.web.id/post/2021-05-27-list-ip-aktif-sejaringan/">Mengetahui ip aktif sejaringan</a></li>
-
-  
-    <li><time>23 May 2021</time> - <a href="https://sasongko.web.id/post/2021-05-23-aktivasi-fancy-indexing-directory-listing-apache/">Aktivasi fancy indexing directory listing apache</a></li>
-
-  
-    <li><time>21 May 2021</time> - <a href="https://sasongko.web.id/post/2021-05-21-menghapus-history-qtav-player/">Menghapus history QtAV Player</a></li>
-
-  
-    <li><time>17 May 2021</time> - <a href="https://sasongko.web.id/post/2021-05-17-mengubah-boot-timeout-efibootmgr/">Mengubah boot timeout efibootmgr</a></li>
-
-  
-    <li><time>15 May 2021</time> - <a href="https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/">Memindahkan tombol minimize maximize close window fluxbox</a></li>
-
-  
-    <li><time>02 May 2021</time> - <a href="https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/">Uji normalitas dengan python</a></li>
-
-  
-    <li><time>01 May 2021</time> - <a href="https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/">Membuat histogram dengan python</a></li>
-
-  
-    <li><time>30 Apr 2021</time> - <a href="https://sasongko.web.id/post/2021-04-30-memformat-dvdrw/">Memformat dvdrw</a></li>
-
-  
-    <li><time>12 Apr 2021</time> - <a href="https://sasongko.web.id/post/2021-04-12-membuat-data-acak-normal-python/">Membuat data acak berdistribusi normal</a></li>
-
-  
-    <li><time>11 Apr 2021</time> - <a href="https://sasongko.web.id/post/2021-04-11-membuat-data-integer-acak-python/">Membuat data integer acak python</a></li>
-
-  
-    <li><time>10 Apr 2021</time> - <a href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/">sbocheck /usr/sbo/repo exists and is not empty</a></li>
-
-  
-    <li><time>07 Apr 2021</time> - <a href="https://sasongko.web.id/post/2021-04-07-jumlah-baris-kolom-libreoffice-calc/">Jumlah baris dan kolom libreoffice calc</a></li>
-
-  
-    <li><time>06 Apr 2021</time> - <a href="https://sasongko.web.id/post/2021-04-06-burning-iso-dvd/">Burn iso ke dvd</a></li>
-
-  
-    <li><time>05 Apr 2021</time> - <a href="https://sasongko.web.id/post/2021-04-05-transfer-file-dengan-lftp/">Transfer file dengan lftp</a></li>
-
-  
-    <li><time>27 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-27-median-data-python/">Median data dengan python</a></li>
-
-  
-    <li><time>26 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-26-mean-data-python/">Mean data dengan python</a></li>
-
-  
-    <li><time>25 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/">Statistik deskriptif dengan python</a></li>
-
-  
-    <li><time>24 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/">Mengetahui struktur dataset</a></li>
-
-  
-    <li><time>23 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-23-menggunakan-wget-prefix-directory/">Menggunakan wget prefix directory</a></li>
-
-  
-    <li><time>22 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/">Mengetahui dimensi dataset python</a></li>
-
-  
-    <li><time>21 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/">Menampilkan data baris terakhir python</a></li>
-
-  
-    <li><time>20 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-20-menampilkan-data-baris-pertama-python/">Menampilkan data baris pertama python</a></li>
-
-  
-    <li><time>19 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-19-enumerasi-packages-terinstall/">Enumerasi packages terinstall</a></li>
-
-  
-    <li><time>18 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-18-disable-recent-documents-mate/">Disable recent documents mate</a></li>
-
-  
-    <li><time>17 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-17-layar-merah-kuning-redshift/">Mengatur pencahayaan monitor dengan redshift</a></li>
-
-  
-    <li><time>16 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-16-load-csv-python/">Load dataset csv dengan python</a></li>
-
-  
-    <li><time>15 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-15-library-python-statistika/">Library python untuk statistika</a></li>
-
-  
-    <li><time>13 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-13-menggabungkan-file-pdf/">Menggabungkan file pdf</a></li>
-
-  
-    <li><time>11 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/">Menambahkan tanggal toolbar blackbox</a></li>
-
-  
-    <li><time>10 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/">Mengubah user agent firefox</a></li>
-
-  
-    <li><time>09 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-09-mount-partisi-hibernated-windows/">Mount partisi hibernated windows</a></li>
-
-  
-    <li><time>08 Mar 2021</time> - <a href="https://sasongko.web.id/post/2021-03-08-resize-window-blackbox/">Resize window blackbox</a></li>
-
-  
-    <li><time>26 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/">Menghapus file berdasarkan pencarian</a></li>
-
-  
-    <li><time>25 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-25-mengatur-ukuran-window-gvim-otomatis/">Mengatur ukuran window gvim</a></li>
-
-  
-    <li><time>24 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/">Aktivasi apache webserver slackware</a></li>
-
-  
-    <li><time>19 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-19-set-background-blackbox/">Set background blackbox</a></li>
-
-  
-    <li><time>11 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/">Copy paste xterm</a></li>
-
-  
-    <li><time>10 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/">xauth serverauthXXX does not exist</a></li>
-
-  
-    <li><time>09 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/">nmcli sw disabled</a></li>
-
-  
-    <li><time>08 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/">Copy paste vim mode visual</a></li>
-
-  
-    <li><time>07 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-07-impor-library-python/">Impor library python</a></li>
-
-  
-    <li><time>05 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-06-tipe-data-python/">Tipe data python</a></li>
-
-  
-    <li><time>05 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-05-comments-python/">Comments python</a></li>
-
-  
-    <li><time>04 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-04-penamaan-variabel-python/">Penamaan variabel python</a></li>
-
-  
-    <li><time>03 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-03-mengubah-colorscheme-kdevelop/">Mengubah color scheme kdevelop</a></li>
-
-  
-    <li><time>02 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-02-mengenal-python/">Mengenal python</a></li>
-
-  
-    <li><time>01 Feb 2021</time> - <a href="https://sasongko.web.id/post/2021-02-01-download-video-youtube-khusus-member/">Download video youtube khusus member</a></li>
-
-  
-    <li><time>31 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-31-membuat-file-csv/">Membuat file csv</a></li>
-
-  
-    <li><time>30 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-30-menghapus-file-dari-tar/">Menghapus file dari tar</a></li>
-
-  
-    <li><time>30 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-30-video-spreadsheet-layout/">(Video) Mengenal spreadsheet layout libre office calc</a></li>
-
-  
-    <li><time>29 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/">Menambah file archive tar</a></li>
-
-  
-    <li><time>29 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-29-video-mengetahui-versi-libreoffice/">(Video) Mengetahui versi libreoffice</a></li>
-
-  
-    <li><time>28 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-28-modifikasi-htop/">Modifikasi htop</a></li>
-
-  
-    <li><time>28 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-28-video-mengenal-main-window-calc/">(Video) Mengenal main window libreoffice calc</a></li>
-
-  
-    <li><time>27 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/">Pelengkap dnscrypt-proxy</a></li>
-
-  
-    <li><time>26 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-26-aktivasi-zram/">Aktivasi zram</a></li>
-
-  
-    <li><time>25 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/">Mengembalikan backlight</a></li>
-
-  
-    <li><time>24 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/">Mengetahui isi file tar archive</a></li>
-
-  
-    <li><time>23 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/">Membuat archive tar</a></li>
-
-  
-    <li><time>15 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/">Mengetahui IP lokal dengan nmcli</a></li>
-
-  
-    <li><time>13 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Rebuild R post-upgrade icu4c</a></li>
-
-  
-    <li><time>12 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Ekstraksi waktu pada changelog dengan sed</a></li>
-
-  
-    <li><time>11 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/">Menggunakan ratpoison</a></li>
-
-  
-    <li><time>10 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Mengetahui kondisi baterai</a></li>
-
-  
-    <li><time>01 Jan 2021</time> - <a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/">Menggunakan rsync</a></li>
-
-  
-  </ul>
-  
-  <h2>2020</h2>
-  <ul>
-  
-    <li><time>28 Dec 2020</time> - <a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/">Xfce 4.16 Masuk Current</a></li>
-
-  
-    <li><time>25 Dec 2020</time> - <a href="https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/">Mengetahui kapan komputer dinyalakan</a></li>
-
-  
-    <li><time>24 Dec 2020</time> - <a href="https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/">Start up time kernel 5.10.2</a></li>
-
-  
-    <li><time>20 Dec 2020</time> - <a href="https://sasongko.web.id/post/2020-12-20-beralih-hugo/">Beralih ke Hugo</a></li>
-
-  
-    <li><time>22 Oct 2020</time> - <a href="https://sasongko.web.id/post/2020-10-22-akses-whatsapp-web-seamonkey/">Akses WhatsApp Web via Seamonkey</a></li>
-
-  
-    <li><time>21 Aug 2020</time> - <a href="https://sasongko.web.id/post/2020-08-21-screenshot-via-adb/">Screenshot android dengan adb</a></li>
-
-  
-    <li><time>15 Aug 2020</time> - <a href="https://sasongko.web.id/post/2020-08-15-mengenal-r-home/">Mengenal R_HOME</a></li>
-
-  
-    <li><time>07 Aug 2020</time> - <a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">NetworkManager device not ready</a></li>
-
-  
-    <li><time>04 Aug 2020</time> - <a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Bye wicd</a></li>
-
-  
-    <li><time>20 Jun 2020</time> - <a href="https://sasongko.web.id/post/2020-06-20-edit-video-ffmpeg-lossless/">Edit video ffmpeg tanpa menurunkan kualitas</a></li>
-
-  
-    <li><time>11 Jun 2020</time> - <a href="https://sasongko.web.id/post/2020-06-11-memisahkan-halaman-pdf/">Memisahkan halaman PDF</a></li>
-
-  
-    <li><time>01 Jun 2020</time> - <a href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/">Deteksi duplikasi file</a></li>
-
-  
-    <li><time>30 May 2020</time> - <a href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/">Menggabungkan video ffmpeg</a></li>
-
-  
-    <li><time>29 May 2020</time> - <a href="https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/">Operasi direktori R</a></li>
-
-  
-    <li><time>25 May 2020</time> - <a href="https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/">Mengetahui volume suara video</a></li>
-
-  
-    <li><time>24 May 2020</time> - <a href="https://sasongko.web.id/post/2020-05-24-mengubah-resolusi-video-ffmpeg/">Mengubah resolusi video ffmpeg</a></li>
-
-  
-    <li><time>24 May 2020</time> - <a href="https://sasongko.web.id/post/2020-05-21-menambah-watermark-gambar-video/">Menambah watermark gambar ke video dengan ffmpeg</a></li>
-
-  
-    <li><time>24 May 2020</time> - <a href="https://sasongko.web.id/post/2020-05-24-aktivasi-android-gps-adb/">Aktivasi android GPS via adb</a></li>
-
-  
-    <li><time>23 May 2020</time> - <a href="https://sasongko.web.id/post/2020-05-23-disable-tampilan-konfigurasi-ffmpeg/">Disable tampilan konfigurasi ffmpeg</a></li>
-
-  
-    <li><time>22 May 2020</time> - <a href="https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/">Mengenal objek R factor</a></li>
-
-  
-    <li><time>14 May 2020</time> - <a href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/">Edit volume suara</a></li>
-
-  
-    <li><time>13 May 2020</time> - <a href="https://sasongko.web.id/post/2020-05-13-convert-jpg-pdf/">Convert jpg ke pdf</a></li>
-
-  
-    <li><time>12 May 2020</time> - <a href="https://sasongko.web.id/post/2020-05-12-melihat-isi-file-zip/">Melihat isi file zip</a></li>
-
-  
-    <li><time>05 May 2020</time> - <a href="https://sasongko.web.id/post/2020-05-05-trimming-video-ffmpeg/">Trimming Video ffmpeg</a></li>
-
-  
-    <li><time>29 Apr 2020</time> - <a href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">Mengenal Objek R Vector</a></li>
-
-  
-    <li><time>11 Apr 2020</time> - <a href="https://sasongko.web.id/post/2020-04-11-install-jasp/">Install JASP</a></li>
-
-  
-    <li><time>04 Apr 2020</time> - <a href="https://sasongko.web.id/post/2020-04-04-dispersi-data-dengan-r/">Dispersi Data dengan R</a></li>
-
-  
-    <li><time>21 Mar 2020</time> - <a href="https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/">Tendensi Sentral dengan R</a></li>
-
-  
-    <li><time>14 Mar 2020</time> - <a href="https://sasongko.web.id/post/2020-03-14-input-data-r/">Input Data R</a></li>
-
-  
-    <li><time>13 Feb 2020</time> - <a href="https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/">Package bawaan R Slackware</a></li>
-
-  
-    <li><time>10 Feb 2020</time> - <a href="https://sasongko.web.id/post/2020-02-10-mengenal-r/">Mengenal R</a></li>
-
-  
-    <li><time>01 Feb 2020</time> - <a href="https://sasongko.web.id/post/2020-02-01-fullscreen-firefox/">Fullscreen Mozilla Firefox</a></li>
-
-  
-    <li><time>10 Jan 2020</time> - <a href="https://sasongko.web.id/post/2020-01-10-mtperrorcantopendevice/">MtpErrorCantOpenDevice</a></li>
-
-  
-  </ul>
-  
-  <h2>2019</h2>
-  <ul>
-  
-    <li><time>02 Dec 2019</time> - <a href="https://sasongko.web.id/post/2019-12-02-perlintro-panduan-pertama-belajar-pemrograman-perl/">perlintro panduan pertama belajar pemrograman perl</a></li>
-
-  
-    <li><time>01 Dec 2019</time> - <a href="https://sasongko.web.id/post/2019-12-01-rename-banyak-file-sekaligus/">Rename Banyak File Sekaligus</a></li>
-
-  
-    <li><time>30 Nov 2019</time> - <a href="https://sasongko.web.id/post/2019-11-30-mengetahui-x11-atau-wayland/">Mengetahui lingkungan aktif X11 atau wayland</a></li>
-
-  
-    <li><time>03 Aug 2019</time> - <a href="https://sasongko.web.id/post/2019-08-03-restart-android-via-adb/">Restart android via adb</a></li>
-
-  
-    <li><time>09 Jun 2019</time> - <a href="https://sasongko.web.id/post/2019-06-09-backup-android/">Back Up Data HP Android</a></li>
-
-  
-    <li><time>20 Apr 2019</time> - <a href="https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/">Reverse Dependency sbopkg</a></li>
-
-  
-    <li><time>19 Apr 2019</time> - <a href="https://sasongko.web.id/post/2019-04-19-chromium-disable-unlock-keyring/">Chromium Disable Unlock Keyring</a></li>
-
-  
-    <li><time>01 Apr 2019</time> - <a href="https://sasongko.web.id/post/2019-04-01-membuat-user-baru/">Membuat User Baru</a></li>
-
-  
-    <li><time>30 Mar 2019</time> - <a href="https://sasongko.web.id/post/2019-03-30-memulai-mariadb/">Memulai MariaDB</a></li>
-
-  
-    <li><time>01 Feb 2019</time> - <a href="https://sasongko.web.id/post/2019-02-01-perl-ide-vim/">Perl IDE dengan vim</a></li>
-
-  
-  </ul>
-  
-  <h2>2018</h2>
-  <ul>
-  
-    <li><time>08 Dec 2018</time> - <a href="https://sasongko.web.id/post/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/">Hapus Aplikasi yang Diinstall Tanggal Tertentu</a></li>
-
-  
-    <li><time>31 Aug 2018</time> - <a href="https://sasongko.web.id/post/2018-08-31-bermain-tetris-emacs/">Bermain Tetris dengan Emacs</a></li>
-
-  
-    <li><time>17 Jul 2018</time> - <a href="https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/">Fix sbotools Perl unescaped left brace in regex is deprecated here</a></li>
-
-  
-    <li><time>23 Jun 2018</time> - <a href="https://sasongko.web.id/post/2018-06-23-kosongkan-trash/">Hapus Trash via Command Line</a></li>
-
-  
-    <li><time>19 Jun 2018</time> - <a href="https://sasongko.web.id/post/2018-06-19-mengganti-kata-secara-massal/">Mengganti Kata Secara Massal</a></li>
-
-  
-    <li><time>19 Jun 2018</time> - <a href="https://sasongko.web.id/post/2018-06-19-mencoba-manokwari/">Mencoba Manokwari</a></li>
-
-  
-    <li><time>18 Jun 2018</time> - <a href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/">Pentingnya Shebang</a></li>
-
-  
-    <li><time>16 Jun 2018</time> - <a href="https://sasongko.web.id/post/2018-06-15-operation-not-possible-due-to-rfkill/">Operation not possible due to RF-kill</a></li>
-
-  
-    <li><time>12 Jun 2018</time> - <a href="https://sasongko.web.id/post/2018-06-12-mengapa-openssl/">Mengapa Enkripsi dengan OpenSSL?</a></li>
-
-  
-    <li><time>18 May 2018</time> - <a href="https://sasongko.web.id/post/2018-05-18-convert-video-mp3/">Convert Video Menjadi MP3</a></li>
-
-  
-    <li><time>08 May 2018</time> - <a href="https://sasongko.web.id/post/2018-05-08-uninstall-all-perl-modules-manually/">Uninstall Manual Semua Modul Perl</a></li>
-
-  
-    <li><time>23 Apr 2018</time> - <a href="https://sasongko.web.id/post/2018-04-23-salah-password-terminal/">Salah Password di Terminal</a></li>
-
-  
-    <li><time>21 Apr 2018</time> - <a href="https://sasongko.web.id/post/2018-04-21-mengubah-nama-jalan-osm/">Mengubah Nama Jalan OSM</a></li>
-
-  
-    <li><time>13 Apr 2018</time> - <a href="https://sasongko.web.id/post/2018-04-13-cari-lokasi-osm/">Mencari Lokasi dengan OpenStreetMap</a></li>
-
-  
-    <li><time>12 Apr 2018</time> - <a href="https://sasongko.web.id/post/2018-04-12-mengenal-josm/">Mengenal JOSM dan OpenStreetMap</a></li>
-
-  
-    <li><time>03 Apr 2018</time> - <a href="https://sasongko.web.id/post/2018-04-03-slackpkg-packages-database-error/">Slackpkg packages database error</a></li>
-
-  
-    <li><time>18 Feb 2018</time> - <a href="https://sasongko.web.id/post/2018-02-18-rename-network-interface/">Rename Network Interface</a></li>
-
-  
-  </ul>
-  
-  <h2>2017</h2>
-  <ul>
-  
-    <li><time>08 Dec 2017</time> - <a href="https://sasongko.web.id/post/2017-12-08-libsodium-masuk-current/">Libsodium Masuk -Current</a></li>
-
-  
-    <li><time>22 Nov 2017</time> - <a href="https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/">Menggunakan Kernel Huge 4.14.0</a></li>
-
-  
-    <li><time>18 Nov 2017</time> - <a href="https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/">Kernel 4.14.0 Masuk -Current, Beralih ke Kernel Generic</a></li>
-
-  
-    <li><time>15 Nov 2017</time> - <a href="https://sasongko.web.id/post/2017-11-15-mengamankan-file-folder/">Mengamankan File Folder</a></li>
-
-  
-    <li><time>08 Aug 2017</time> - <a href="https://sasongko.web.id/post/2017-08-08-set-clang-as-default-c-compiler/">Mengatur Clang Sebagai C Compiler Utama</a></li>
-
-  
-    <li><time>31 Jul 2017</time> - <a href="https://sasongko.web.id/post/2017-07-31-multi-slackware-elilo/">Multi Slackware dengan elilo</a></li>
-
-  
-    <li><time>29 Jul 2017</time> - <a href="https://sasongko.web.id/post/2017-07-29-menghapus-dengan-pengecualian/">Menghapus dengan Pengecualian</a></li>
-
-  
-    <li><time>05 Jul 2017</time> - <a href="https://sasongko.web.id/post/2017-07-05-convert-word-pdf-massal/">Convert Word ke PDF Secara Massal</a></li>
-
-  
-    <li><time>05 Jul 2017</time> - <a href="https://sasongko.web.id/post/2017-07-05-akibat-lupa-eliloconfig/">Akibat Lupa eliloconfig</a></li>
-
-  
-    <li><time>04 Jul 2017</time> - <a href="https://sasongko.web.id/post/2017-07-04-presentasi-lcd-projector/">Presentasi dengan LCD Projector</a></li>
-
-  
-    <li><time>02 Jul 2017</time> - <a href="https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/">Rilis Lumina 1.3.0</a></li>
-
-  
-    <li><time>27 Mar 2017</time> - <a href="https://sasongko.web.id/post/2017-03-27-disable-commands-history/">Disable Command&#39;s History</a></li>
-
-  
-    <li><time>25 Mar 2017</time> - <a href="https://sasongko.web.id/post/2017-03-25-konek-internet-usb-tethering/">Konek Internet USB Tethering</a></li>
-
-  
-    <li><time>11 Feb 2017</time> - <a href="https://sasongko.web.id/post/2017-02-11-install-blankon-debootstrap/">Install BlankOn dengan Debootstrap</a></li>
-
-  
-    <li><time>19 Jan 2017</time> - <a href="https://sasongko.web.id/post/2017-01-19-install-padre/">Install Padre</a></li>
-
-  
-    <li><time>14 Jan 2017</time> - <a href="https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/">Enkripsi File dengan gnupg</a></li>
-
-  
-    <li><time>12 Jan 2017</time> - <a href="https://sasongko.web.id/post/2017-01-12-qtfm-segfault-pascaupgrade-changelog12jan17/">qtFM Segmentation Fault Pascaupgrade</a></li>
-
-  
-    <li><time>08 Jan 2017</time> - <a href="https://sasongko.web.id/post/2017-01-08-enkripsi-dg-openssl/">Enkripsi File dengan OpenSSL</a></li>
-
-  
-    <li><time>02 Jan 2017</time> - <a href="https://sasongko.web.id/post/2017-01-02-kbbi-qt-slackbuild/">KBBI Qt SlackBuild</a></li>
-
-  
-    <li><time>01 Jan 2017</time> - <a href="https://sasongko.web.id/post/2017-01-01-blankon-wallpapers-slackbuild/">blankon-wallpapers slackbuild</a></li>
-
-  
-  </ul>
-  
-  <h2>2016</h2>
-  <ul>
-  
-    <li><time>24 Dec 2016</time> - <a href="https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/">Notifikasi Baterai Lemah i3</a></li>
-
-  
-    <li><time>12 Dec 2016</time> - <a href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/">Enable TLP on i3wm</a></li>
-
-  
-    <li><time>08 Dec 2016</time> - <a href="https://sasongko.web.id/post/2016-12-08-scrolling-xterm/">Scrolling pada XTerm</a></li>
-
-  
-    <li><time>07 Dec 2016</time> - <a href="https://sasongko.web.id/post/2016-12-07-nmcli-konek-wifi/">nmcli untuk konek wifi</a></li>
-
-  
-    <li><time>29 Oct 2016</time> - <a href="https://sasongko.web.id/post/2016-10-29-maleo-slackbuild/">Maleo Slackbuild</a></li>
-
-  
-    <li><time>01 Oct 2016</time> - <a href="https://sasongko.web.id/post/2016-10-01-upgrade-plasma-5/">Upgrade Plasma 5</a></li>
-
-  
-    <li><time>11 Sep 2016</time> - <a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Mount qcow2</a></li>
-
-  
-    <li><time>10 Sep 2016</time> - <a href="https://sasongko.web.id/post/2016-09-10-nonaktif-delall-slackpkg/">Nonaktifkan Penghapusan Unduhan Slackpkg</a></li>
-
-  
-    <li><time>17 Aug 2016</time> - <a href="https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/">Cek Harddisk Korup</a></li>
-
-  
-    <li><time>07 Aug 2016</time> - <a href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/">Mengatur DNS Default</a></li>
-
-  
-    <li><time>28 Jul 2016</time> - <a href="https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/">Terperangkap WindowMaker</a></li>
-
-  
-    <li><time>10 Jul 2016</time> - <a href="https://sasongko.web.id/post/2016-07-10-set-default-brightness/">Set Default Brightness</a></li>
-
-  
-    <li><time>05 Jul 2016</time> - <a href="https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Virtual Manager unable to connect to libvirt</a></li>
-
-  
-    <li><time>04 Jul 2016</time> - <a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Virt-Manager ImportError: No module named requests</a></li>
-
-  
-    <li><time>03 Jul 2016</time> - <a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/">Upgrade Slackbuilds Slackware 14.2</a></li>
-
-  
-    <li><time>03 Jul 2016</time> - <a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackware-142/">Upgrade ke Slackware 14.2</a></li>
-
-  
-    <li><time>30 Jun 2016</time> - <a href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/">Ganti Theme Xfce</a></li>
-
-  
-    <li><time>26 Jun 2016</time> - <a href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/">Konek Internet dengan nmcli</a></li>
-
-  
-    <li><time>12 May 2016</time> - <a href="https://sasongko.web.id/post/2016-05-12-download-fathul-muin-maktabah-elkirtas/">Download Kitab Fathul Muin Maktabah Elkirtas</a></li>
-
-  
-    <li><time>07 May 2016</time> - <a href="https://sasongko.web.id/post/2016-05-07-install-android-tools/">Install Android Tools</a></li>
-
-  
-    <li><time>05 May 2016</time> - <a href="https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/">[SOLVED] Slackware Current Susah Booting dan Shutdown</a></li>
-
-  
-    <li><time>03 May 2016</time> - <a href="https://sasongko.web.id/post/2016-05-03-install-sbopkg/">Install sbopkg</a></li>
-
-  
-    <li><time>29 Apr 2016</time> - <a href="https://sasongko.web.id/post/2016-04-29-install-tor/">Install Tor Browser</a></li>
-
-  
-    <li><time>28 Apr 2016</time> - <a href="https://sasongko.web.id/post/2016-04-28-nano-file-browser/">Kekuatan Tersembunyi Nano : Menampilkan File Tersembunyi</a></li>
-
-  
-    <li><time>26 Feb 2016</time> - <a href="https://sasongko.web.id/post/2016-02-26-mouse-stuck/">Mouse Stuck</a></li>
-
-  
-    <li><time>08 Feb 2016</time> - <a href="https://sasongko.web.id/post/2016-02-08-slackware-current-hang/">Slackware Current Susah Booting dan Shutdown</a></li>
-
-  
-    <li><time>21 Jan 2016</time> - <a href="https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/">pip InsecurePlatformWarning</a></li>
-
-  
-  </ul>
-  
-  <h2>2015</h2>
-  <ul>
-  
-    <li><time>26 Dec 2015</time> - <a href="https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/">Tidak Ada Ikon NetworkManager di Panel</a></li>
-
-  
-    <li><time>26 Dec 2015</time> - <a href="https://sasongko.web.id/post/2015-12-26-mount-iso-image/">Mount ISO Image</a></li>
-
-  
-    <li><time>26 Dec 2015</time> - <a href="https://sasongko.web.id/post/2015-12-26-menggunakan-gdrv/">Cara Menggunakan gdrv</a></li>
-
-  
-    <li><time>12 Dec 2015</time> - <a href="https://sasongko.web.id/post/2015-12-12-install-bzr/">Install Bazaar</a></li>
-
-  
-    <li><time>06 Nov 2015</time> - <a href="https://sasongko.web.id/post/2015-11-06-install-mate-desktop/">Install Mate Desktop</a></li>
-
-  
-    <li><time>06 Nov 2015</time> - <a href="https://sasongko.web.id/post/2015-11-06-ganti-de/">Ganti Desktop Environment</a></li>
-
-  
-    <li><time>30 Oct 2015</time> - <a href="https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/">Mengembalikan File yang Terhapus dengan Testdisk</a></li>
-
-  
-    <li><time>29 Oct 2015</time> - <a href="https://sasongko.web.id/post/2015-10-29-install-testdisk/">Install Testdisk</a></li>
-
-  
-    <li><time>01 Oct 2015</time> - <a href="https://sasongko.web.id/post/2015-10-01-install-youtubedl/">Install Youtube Downloader</a></li>
-
-  
-    <li><time>01 Oct 2015</time> - <a href="https://sasongko.web.id/post/2015-10-01-download-video-youtube/">Download Video Youtube</a></li>
-
-  
-    <li><time>30 Sep 2015</time> - <a href="https://sasongko.web.id/post/2015-09-30-copas-terminal/">Copy Paste di Terminal</a></li>
-
-  
-    <li><time>17 Aug 2015</time> - <a href="https://sasongko.web.id/post/2015-08-17-setting-internet-xl-slackware/">Setting Internet XL Slackware</a></li>
-
-  
-    <li><time>01 Aug 2015</time> - <a href="https://sasongko.web.id/post/2015-08-01-unduh-iso-slackware-current/">Unduh ISO Slackware Current</a></li>
-
-  
-    <li><time>26 Jul 2015</time> - <a href="https://sasongko.web.id/post/2015-07-26-install-gdrv/">Install gdrv</a></li>
-
-  
-    <li><time>18 Jul 2015</time> - <a href="https://sasongko.web.id/post/2015-07-18-install-wxpython/">Install wxPython</a></li>
-
-  
-    <li><time>18 Jul 2015</time> - <a href="https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/">Install Google Play Downloader</a></li>
-
-  
-    <li><time>13 Jul 2015</time> - <a href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/">Mount Partisi Otomatis</a></li>
-
-  
-    <li><time>13 Jul 2015</time> - <a href="https://sasongko.web.id/post/2015-07-13-install-pip/">Install pip</a></li>
-
-  
-    <li><time>12 Jul 2015</time> - <a href="https://sasongko.web.id/post/2015-07-12-memformat-partisi/">Memformat Partisi</a></li>
-
-  
-    <li><time>11 Jul 2015</time> - <a href="https://sasongko.web.id/post/2015-07-11-membuat-partisi-dengan-cgdisk/">Membuat Partisi dengan cgdisk</a></li>
-
-  
-    <li><time>28 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-28-konek-internet-menggunakan-pppsetup/">Konek Internet Slackware</a></li>
-
-  
-    <li><time>25 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-25-install-unrar/">Install Unrar</a></li>
-
-  
-    <li><time>18 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/">InstalL Sleuth Kit Slackware</a></li>
-
-  
-    <li><time>17 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-17-install-xfburn-slackware/">Install Xfburn Slackware</a></li>
-
-  
-    <li><time>16 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-16-install-libisofs-slackware/">Install libisofs Slackware</a></li>
-
-  
-    <li><time>16 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-16-install-libburn-slackware/">Install libburn Slackware</a></li>
-
-  
-    <li><time>15 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-15-cek-paket-terinstall-slackware/">Cek Paket Terinstall di Slackware</a></li>
-
-  
-    <li><time>14 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-14-jalankan-sudo-tanpa-password/">Jalankan Sudo Tanpa Password</a></li>
-
-  
-    <li><time>09 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-09-uninstall-calligra/">Uninstall Calligra Office Suite</a></li>
-
-  
-    <li><time>09 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-09-install-libreoffice-slackbuild/">Install Libre Office di Slackware</a></li>
-
-  
-    <li><time>09 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-06-download-seluruh-website/">Download Seluruh Isi Website</a></li>
-
-  
-    <li><time>07 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-07-install-jdk-slackware/">Install JDK Slackware</a></li>
-
-  
-    <li><time>06 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-06-sebelum-install-linux/">Hal-hal yang Harus Diketahui Sebelum Menginstall Linux</a></li>
-
-  
-    <li><time>01 Jun 2015</time> - <a href="https://sasongko.web.id/post/2015-06-01-operasi-direktori/">Operasi Direktori di Linux</a></li>
-
-  
-    <li><time>30 May 2015</time> - <a href="https://sasongko.web.id/post/2015-05-30-memformat-flashdisk-di-linux/">Memformat Flashdisk di LInux</a></li>
-
-  
-    <li><time>23 May 2015</time> - <a href="https://sasongko.web.id/post/2015-05-23-konversi-livedvd-iso/">Mengubah LiveDVD Menjadi ISO</a></li>
-
-  
-    <li><time>14 May 2015</time> - <a href="https://sasongko.web.id/post/2015-05-14-semnas-security-forensic/">Seminar Nasional Information Technology Security vs Forensic</a></li>
-
-  
-    <li><time>14 May 2015</time> - <a href="https://sasongko.web.id/post/2015-05-14-semnas-hologram-augmented-reality/">Seminar Hologram &amp; Augmented Reality</a></li>
-
-  
-    <li><time>14 May 2015</time> - <a href="https://sasongko.web.id/post/2015-05-14-semnas-dampak-hacking-thd-kemunduran-ekonomi/">Seminar Dampak Hacking terhadap Kemunduran Ekonomi</a></li>
-
-  
-    <li><time>14 May 2015</time> - <a href="https://sasongko.web.id/post/2015-05-02-kontes-desain-web-kominfo-2015/">Kontes Desain Web Kominfo 2015</a></li>
-
-  
-    <li><time>14 May 2015</time> - <a href="https://sasongko.web.id/post/2015-05-14-developer-mengajar-5/">Developer Mengajar 5.0</a></li>
-
-  
-    <li><time>13 May 2015</time> - <a href="https://sasongko.web.id/post/2015-05-13-ekstrak-file-zip/">Ekstrak File zip</a></li>
-
-  
-    <li><time>01 May 2015</time> - <a href="https://sasongko.web.id/post/2015-05-01-pelatihan-sertifikasi-tik-2/">Pelatihan dan Sertifikasi Profesi TIK Gelombang II 2015</a></li>
-
-  
-    <li><time>01 May 2015</time> - <a href="https://sasongko.web.id/post/2015-05-01-pelatihan-sertifikasi-tik-1/">Pelatihan dan Sertifikasi Profesi TIK Gelombang I 2015</a></li>
-
-  
-    <li><time>28 Apr 2015</time> - <a href="https://sasongko.web.id/post/2015-04-28-semnas-cloud-computing-in-government/">Seminar Nasional Cloud Computing in Government</a></li>
-
-  
-    <li><time>28 Apr 2015</time> - <a href="https://sasongko.web.id/post/2015-04-28-ekstrak-file-tar-gz/">Ekstrak File .tar.gz</a></li>
-
-  
-    <li><time>25 Apr 2015</time> - <a href="https://sasongko.web.id/post/2015-04-25-konversi-deb-tgz/">Konversi Paket deb ke tgz</a></li>
-
-  
-    <li><time>25 Apr 2015</time> - <a href="https://sasongko.web.id/post/2015-04-25-hapus-kde-slackware/">Hapus KDE Slackware</a></li>
-
-  
-    <li><time>08 Apr 2015</time> - <a href="https://sasongko.web.id/post/2015-04-10-install-maktabah-alqirthas/">Install Maktabah Alqirthas di BlankOn</a></li>
-
-  
-    <li><time>01 Apr 2015</time> - <a href="https://sasongko.web.id/post/2015-04-01-install-wvdial-slackware/">Install WvDial di Slackware</a></li>
-
-  
-    <li><time>09 Feb 2015</time> - <a href="https://sasongko.web.id/post/2015-02-09-lomba-aplikasi-html5/">Lomba Aplikasi HTML5 BlankOn</a></li>
-
-  
-  </ul>
-  
-  <h2>2014</h2>
-  <ul>
-  
-    <li><time>30 Dec 2014</time> - <a href="https://sasongko.web.id/post/2014-12-30-ekstrak-file-tarxz/">Ekstrak File tar.xz</a></li>
-
-  
-    <li><time>26 Nov 2014</time> - <a href="https://sasongko.web.id/post/2014-11-26-mencoba-blankon-liveiso/">Booting BlankOn LiveISO</a></li>
-
-  
-    <li><time>16 Oct 2014</time> - <a href="https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/">Hapus Kernel Lama Debian</a></li>
-
-  
-    <li><time>14 Oct 2014</time> - <a href="https://sasongko.web.id/post/2014-10-14-konek-internet-recovery/">Konek Internet Recovery Mode</a></li>
-
-  
-    <li><time>14 Oct 2014</time> - <a href="https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/">Konversi VDI ke VMDK</a></li>
-
-  
-    <li><time>03 Aug 2014</time> - <a href="https://sasongko.web.id/post/2014-08-03-dpkg-force-overwrite/">DPKG Force Overwrite</a></li>
-
-  
-    <li><time>09 Jul 2014</time> - <a href="https://sasongko.web.id/post/2014-09-07-video-chatting-dengan-pidgin/">Video Chatting dengan Pidgin</a></li>
-
-  
-    <li><time>03 Jul 2014</time> - <a href="https://sasongko.web.id/post/2014-07-03-mengatur-indentasi-gedit/">Mengatur Indentasi gEdit</a></li>
-
-  
-    <li><time>24 Jun 2014</time> - <a href="https://sasongko.web.id/post/2014-06-24-penipuan-atas-nama-toyota/">Kompetisi Tipuan Atas Nama Toyota</a></li>
-
-  
-    <li><time>23 Jun 2014</time> - <a href="https://sasongko.web.id/post/2014-06-23-mengenal-berkas-deb/">Mengenal Berkas .deb</a></li>
-
-  
-    <li><time>02 Jun 2014</time> - <a href="https://sasongko.web.id/post/2014-06-02-seminar-blankon-jaringan/">Seminar BlankOn &amp; Jaringan</a></li>
-
-  
-    <li><time>06 May 2014</time> - <a href="https://sasongko.web.id/post/2014-05-06-seminar-keamanan-teknologi-informasi/">Seminar Keamanan Teknologi Informasi</a></li>
-
-  
-    <li><time>26 Apr 2014</time> - <a href="https://sasongko.web.id/post/2014-04-26-blokir-situs-porno/">Blokir Situs Porno di BlankOn Linux</a></li>
-
-  
-    <li><time>21 Apr 2014</time> - <a href="https://sasongko.web.id/post/2014-04-21-bermain-mario-bros-blankon-linux/">Bermain Super Mario Bros di BlankOn Linux</a></li>
-
-  
-    <li><time>17 Apr 2014</time> - <a href="https://sasongko.web.id/post/2014-04-17-apt-gantikan-apt-get/">apt Gantikan apt-get</a></li>
-
-  
-    <li><time>15 Apr 2014</time> - <a href="https://sasongko.web.id/post/2014-04-15-download-iso-blankon-zsync/">Download ISO BlankOn dengan ZSync</a></li>
-
-  
-    <li><time>05 Apr 2014</time> - <a href="https://sasongko.web.id/post/2014-04-05-mengetahui-versi-linux-terinstall/">Mengetahui Versi Linux Terinstall</a></li>
-
-  
-    <li><time>28 Mar 2014</time> - <a href="https://sasongko.web.id/post/2014-03-28-mengetahui-tanggal-sekarang/">Mengetahui Tanggal Sekarang</a></li>
-
-  
-    <li><time>24 Mar 2014</time> - <a href="https://sasongko.web.id/post/2014-03-24-menggunakan-perintah-echo/">Menggunakan Perintah Echo</a></li>
-
-  
-    <li><time>23 Mar 2014</time> - <a href="https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/">Menggunakan WGet Linux Download Manager</a></li>
-
-  
-    <li><time>01 Mar 2014</time> - <a href="https://sasongko.web.id/post/2014-03-01-disable-automount/">Disable Automount BlankOn 9 Suroboyo</a></li>
-
-  
-  </ul>
-  
-  <h2>2013</h2>
-  <ul>
-  
-    <li><time>10 Nov 2013</time> - <a href="https://sasongko.web.id/post/2013-11-10-definisi-komputer-forensik/">Definisi Komputer Forensik</a></li>
-
-  
-  </ul>
-  
-</div>
-
-</div>
-</div>
-<script src="https://sasongko.web.id/js/ui.js"></script>
-<script src="https://sasongko.web.id/js/menus.js"></script>
-
-
+<body class="list" id="top">
 <script>
-  
-  if (window.location.hostname != "localhost") {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    ga('create', 'UA-49503242-1', 'auto');
-    ga('send', 'pageview');
-  }
 </script>
 
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sasongko.web.id/" title="Home">
+                    <span><i class='fa fa-home fa-fw'></i>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/post/" title="Posts">
+                    <span class="active"><i class='fa fa-list fa-fw'></i>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/about/" title="Profil">
+                    <span><i class='fa fa-user fa-fw'></i>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/logo/" title="Logo">
+                    <span><i class='fa fa-user fa-fw'></i>Logo</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Posts
+  </h1>
+</header>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Immutabilitas variabel rust
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Tak terasa hampir tepat setahun tidak menulis catatan tentang rust. Mengawali tahun 2025 ini, mari kita lanjutkan. Semoga bisa istiqamah dan khatam menulis catatan rust-nya.
+Salah satu konsep menarik dari rust adalah immutabilitas variabel. Variabel secara default bersifat immutable alias tidak bisa diganti nilainya; hanya bisa di-assign 1x. Rust membedakan antara deklarasi dan assignment. Deklarasi adalah pendefinisian nama variabel dan tipe datanya, sedangkan assignment adalah pemberian nilai ke variabel tersebut. Deklarasi dilakukan lebih dulu, baru kemudian assignment. Memang biasanya ketika melakukan deklarasi sekalian assignment, walaupun sebenarnya kedua hal ini bisa juga dilakukan secara terpisah.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-01-01 00:00:00 +0000 UTC'>01 Jan 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Immutabilitas variabel rust" href="https://sasongko.web.id/post/2025-01-01-immutabilitas-variabel-rust/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengetahui kapasitas terpakai direktori
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk mengetahui kapasitas terpakai suatu direktori, misalnya ~/ bisa dengan
+$ du -s ~/ Akan terlihat berapa byte penggunaannya.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-22 00:00:00 +0000 UTC'>22 Dec 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Mengetahui kapasitas terpakai direktori" href="https://sasongko.web.id/post/2024-12-22-mengetahui-kapasitas-terpakai-direktori/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Reset pengaturan audio ke default
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Secara default, apabila komputer dihidupkan (atau dihidupkan ulang), audio akan mengikuti pengaturan terakhir yang digunakan. Keunggulan dari sistem ini adalah pengguna tidak perlu repot mengatur kalau sudah menemukan konfigurasi yang cocok. Tapi hal ini buat sebgaian orang, terutama kami bisa menjadi masalah.
+Soundcard yang saat ini digunakan adalah ES8336 yang problematik. Problem yang kami catat adalah tidak adanya suara yang terdengar, yang disebabkan oleh ketidakcocokan konfigurasi default alsa sehingga kami gunakan konfigurasi dari junocomp. Namun, konfigurasi dari junocomp ini ternyata juga masih ada masalah, yaitu selalu kembali ke pengaturan terakhir dalam pemilihan _audio device_nya. Contoh kasus: Kami pasang headset. Suara keluar dari headset. Laptop kami shutdown kemudian dihidupkan kembali dalam kondisi headset tidak lagi terpasang. Audio menjadi mati sempurna. Untuk mengatasi hal ini kami perlu mengembalikan ke pengaturan awal.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-18 00:00:00 +0000 UTC'>18 Dec 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Reset pengaturan audio ke default" href="https://sasongko.web.id/post/2024-12-18-reset-pengaturan-audio-default/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengakses file .dmg
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>File .dmg biasanya adalah software installer yang berlaku untuk MacOs. Scara default pengguna linux tidak bisa mengakses isi dari .dmg ini. Namun, dengan software dan teknik tertentu hal ini bisa dilakukan.
+Pertama, convert .dmg ke .img. Ini membutuhkan dmg2img. Khusus pengguna slackware dan derivatnya ini tersedia di SBo. Setelah dmg2img terinstall, konversi bisa dilakukan, dengan root privileges tentunya. Misalnya file .dmg nya adalah apel.dmg yang kemudian dikonversi menjadi apel.img.
+$ dmg2img apel.dmg apel.img Kemudian, atur apel.img sebagai loop device.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-04 00:00:00 +0000 UTC'>04 Dec 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Mengakses file .dmg" href="https://sasongko.web.id/post/2024-12-04-mengakses-file-dmg/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Disable direct cursor mode libreoffice writer
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Direct cursor mode adalah suatu mode untuk menempatkan kursor di area mana saja pada halaman. Jika mode ini aktif dan kita melakukan klik di mana saja di suatu halaman, maka secara otomatis akan menempatkan kursor di tempat yang kita klik itu. Saya lebih suka mode ini non-aktif. Sehingga untuk mematikan mode ini klik menu Edit lalu hilangkan centang pada Direct Cursor Mode.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-02 00:00:00 +0000 UTC'>02 Dec 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Disable direct cursor mode libreoffice writer" href="https://sasongko.web.id/post/2024-12-02-disable-direct-cursor-mode-libreoffice-writer/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://sasongko.web.id/post/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
-</html>
 
+</html>

@@ -1,882 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.140.1">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Virtualisasi | Catatan Sasongko</title>
+<meta name="keywords" content="">
+<meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+<meta name="author" content="">
+<link rel="canonical" href="https://sasongko.web.id/tags/virtualisasi/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://sasongko.web.id/tags/virtualisasi/index.xml">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/tags/virtualisasi/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-  <title>Virtualisasi &middot; Catatan Sasongko</title>
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-    
+            .list {
+                background: var(--theme);
+            }
 
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
-  <!--<![endif]-->
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
-  <!--<![endif]-->
-
-  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
-
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-
-  
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
- 
-  
-  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
-    href='https://sasongko.web.id/tags/virtualisasi/index.xml' />
-  
-
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
-  
-
-  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
-
-  
-    
-        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
-    
-  
-  
-    
-        <script src="https://sasongko.web.id/js/my.js"></script>
-    
-  
+    </style>
+</noscript><meta property="og:url" content="https://sasongko.web.id/tags/virtualisasi/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Virtualisasi">
+  <meta property="og:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Virtualisasi">
+<meta name="twitter:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 
 </head>
 
-
-<body>
-<div id="layout">
-
-  
-<a href="#menu" id="menuLink" class="menu-link">
-  
-  <span></span>
-</a>
-<div id="menu">
-
-  
-
-  <div class="pure-menu">
-    <ul class="pure-menu-list">
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
-      
-        </li>
-      
-    </ul>
-  </div>
-
-  <div class="pure-menu social">
-  <ul class="pure-menu-list">
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://sasongko.web.id/tags/virtualisasi/index.xml'><i
-          class="fas fa-rss"></i>RSS</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://youtube.com/channel/UCY4H1n73aQMB4LZjIJvH0_A" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </ul>
-</div>
-
-
-  <div>
-  <div class="small-print">
-    <small></small>
-  </div>
-  <div class="small-print">
-    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
-    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
-  </div>
-</div>
-
-</div>
-
-
-  <div id="main">
-
-
-<div class="header">
-  <h1>Virtualisasi</h1>
-</div>
-
-<div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/">Jalankan windows dari linux dengan qemu</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>28 Sep 2024</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Sebagian masyarakat memilih untuk <em>dualboot</em> atau bahkan <em>multiboot</em> dalam berkomputer. Satu Perangkat komputer diinstall lebih dari satu sistem operasi. Alhasil, harddisk pasti terbagi menjadi paling sedikit 2 partisi. Tak jarang, sistem operasi tersebut adalah linux dan windows. Kelemahan dari model seperti ini adalah pengguna harus memilih salah satu, mana sistem yang akan dijalankan. Namun, tidak demikian bila ada qemu.</p>
-<p>Qemu memungkinkan sistem operasi windows dipanggil atau dijalankan dari linux. Untuk dapat menjalankannya perlu install qemu (tentu saja) dan edk2-ovmf. Keduanya tersedia di SBo.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-06-27-install-guest-os-qemu/">Install Guest OS Qemu</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>27 Jun 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Akan diinstall sebagai <em>guest os</em> slackware, dengan file iso slackware.iso, <em>disk image</em> slackware.qcow dan virtual RAM 5GB. Maka <em>command</em> yang dijalankan dengan qemu adalah</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ qemu-system-x86_64 -enable-kvm -m <span style="color:#ae81ff">5120</span> -cdrom slackware.iso -drive file<span style="color:#f92672">=</span>slackware.qcow2 -boot d
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-06-26-membuat-qemu-disk-image/">Membuat qemu disk image</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Jun 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk membuat <em>disk image</em> sebagai <em>storage</em> sistem oprasi yang akan divirtualisasikan dengan qemu, bisa menggunakan <em>command</em> yang mudah. Misalkan nama file adalah slack.img dengan <em>size</em> 100G</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> <span style="color:#75715e">#penggunaan: qemu-img create file_disk_imagenya sizenya </span>
-</span></span><span style="display:flex;"><span>$ qemu-img create slack.img 100G
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-06-22-convert-dd-to-vdi/">Convert dd ke vdi</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>22 Jun 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk konversi file dd/img menjadi vdi mudah. Pastikan sudah install virtualbox. Misalkan akan mengubah file1.dd menjadi file2.vdi,</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ VBoxManage convertfromraw file1.dd --format VDI file2.vdi
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-10-30-virtualbox-updater-segfault/">Virtualbox cannot register existing type NMAgentManagerError</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Oct 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Setelah <strong>install virtualbox</strong> menggunakan <em>binary</em>  .run, ketika dijalankan via terminal mengalami sgfault:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bash-5.2$ virtualbox
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>process:7040<span style="color:#f92672">)</span>: GLib-GObject-WARNING **: 00:53:14.710: cannot register existing type <span style="color:#e6db74">&#39;NMAgentManagerError&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>process:7040<span style="color:#f92672">)</span>: GLib-CRITICAL **: 00:53:14.710: g_once_init_leave: assertion <span style="color:#e6db74">&#39;result != 0&#39;</span> failed
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>process:7040<span style="color:#f92672">)</span>: GLib-GObject-WARNING **: 00:53:14.710: cannot retrieve class <span style="color:#66d9ef">for</span> invalid <span style="color:#f92672">(</span>unclassed<span style="color:#f92672">)</span> type <span style="color:#e6db74">&#39;invalid&#39;</span>
-</span></span><span style="display:flex;"><span>Segmentation fault
-</span></span></code></pre></div><p>Solusinya:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-14-hapus-docker-image/">Menghapus docker image</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><em>Docker image</em> yang suah tidak digunakan sebaiknya dihapus saja, agar <em>storage</em> lebih longgar. Pastikan docker daemon aktif</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dockerd
-</span></span></code></pre></div><p>List docker imagenya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker images
-</span></span><span style="display:flex;"><span>REPOSITORY   TAG            IMAGE ID       CREATED       SIZE
-</span></span><span style="display:flex;"><span>qgis/qgis    release-3_16   ee28ddd8c37a   <span style="color:#ae81ff">4</span> days ago    7.43GB
-</span></span><span style="display:flex;"><span>qgis/qgis    &lt;none&gt;         c84657a1e2f6   <span style="color:#ae81ff">3</span> weeks ago   7.43GB
-</span></span></code></pre></div><p>Hapus</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker rmi -f ee28ddd8c37a c84657a1e2f6
-</span></span></code></pre></div><p>Ingin menghapus semua container, image, dll</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker system prune -a
-</span></span><span style="display:flex;"><span>WARNING! This will remove:
-</span></span><span style="display:flex;"><span>  - all stopped containers
-</span></span><span style="display:flex;"><span>  - all networks not used by at least one container
-</span></span><span style="display:flex;"><span>  - all dangling images
-</span></span><span style="display:flex;"><span>  - all dangling build cache
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Are you sure you want to <span style="color:#66d9ef">continue</span>? <span style="color:#f92672">[</span>y/N<span style="color:#f92672">]</span> y
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/">Jalankan QGIS docker</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/gis">gis</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.</p>
-<h1 id="install-docker-dan-docker-cli">Install docker dan docker-cli</h1>
-<p>QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.</p>
-<h1 id="install-docker-qgis">Install docker QGIS</h1>
-<p>Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.04 LTS. Yang harus diperhatikan, versi qgis yang digunakan adalah versi 3.16 LTR, sedangkan yang disediakan repo resmi ubuntu 20.04 masihi versi 3.10.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/">Install Fedora di Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Oct 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Tiba-tiba terlintas keinginan mencoba <strong>fedora</strong>. Sejak mengenal linux tahun 2005an, saya belum pernah menggunakan <strong>fedora</strong>. Entah kalau saat itu warnetnya pakai <strong>fedora</strong> wkwkwkwk. Pertama memakai linux memang di warnet. Saat itu warnetnya menawarkan pakai Windows atau linux, saya pilih linux karena tarifnya 50% lebih murah.</p>
-<p>Kembali ke topik. Berikut akan install <strong>fedora</strong> secara virtual via <strong>lxc</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ lxc-create -n fedora -t download
-</span></span></code></pre></div><p>Opsi n adalah untuk memberi nama containernya, t template yang digunakan. Karena akan mendownload dari reponya gunakan template download.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Mount qcow2</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Sep 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk mengaitkan/<em>mount</em> berkas <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> ternyata tidak bisa langsung di- <em>mount</em> begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses <em>root</em></p>
-<p>Modul kernel NBD aktifkan dulu. Secara <em>default</em> modul NBD nonaktif. Untuk mengaktifkannya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modprobe nbd max_part<span style="color:#f92672">=</span>N
-</span></span></code></pre></div><p><!-- raw HTML omitted -->max_part=N<!-- raw HTML omitted --> isikan jumlah partisi yang ingin ditangani pada <!-- raw HTML omitted -->N<!-- raw HTML omitted -->. Misalnya, <!-- raw HTML omitted -->qcow2<!-- raw HTML omitted --> tersebut kalau dijalankan dengan <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> berisi 8 partisi, maka nilai <!-- raw HTML omitted -->N<!-- raw HTML omitted --> adalah 8.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Virtual Manager unable to connect to libvirt</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>05 Jul 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata <!-- raw HTML omitted -->Virtual Manager<!-- raw HTML omitted --> belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka <em>graphical front-end</em>-nya, tapi ternyata kemudian muncul kotak dialog <!-- raw HTML omitted -->Virtual Machine Manager Connection Failure<!-- raw HTML omitted --> dengan detail sebagai berikut</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Unable to connect to libvirt.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>internal error: Cannot find suitable emulator <span style="color:#66d9ef">for</span> x86_64
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Libvirt URI is: qemu:///system
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtManager/connection.py&#34;</span>, line 979, in _open_thread
-</span></span><span style="display:flex;"><span>    self._populate_initial_state<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtManager/connection.py&#34;</span>, line 941, in _populate_initial_state
-</span></span><span style="display:flex;"><span>    logging.debug<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;conn version=%s&#34;</span>, self._backend.conn_version<span style="color:#f92672">())</span>
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtinst/connection.py&#34;</span>, line 316, in conn_version
-</span></span><span style="display:flex;"><span>    self._conn_version <span style="color:#f92672">=</span> self._libvirtconn.getVersion<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/lib64/python2.7/site-packages/libvirt.py&#34;</span>, line 3984, in getVersion
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ret <span style="color:#f92672">==</span> -1: raise libvirtError <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;virConnectGetVersion() failed&#39;</span>, conn<span style="color:#f92672">=</span>self<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>libvirtError: internal error: Cannot find suitable emulator <span style="color:#66d9ef">for</span> x86_64
-</span></span></code></pre></div><p>Cek <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> apakah masih terinstall atau tidak. Harusnya sih memang terinstall karena saya belum pernah menghapusnya.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Virt-Manager ImportError: No module named requests</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>04 Jul 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtual-manager">virtual manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/qemu">qemu</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Setelah [<em>upgrade slackbuilds</em>]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata <!-- raw HTML omitted -->Virtual Machine Manager<!-- raw HTML omitted --> tidak bisa dijalankan.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ virt-manager
-</span></span><span style="display:flex;"><span>Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virt-manager&#34;</span>, line 33, in &lt;module&gt;
-</span></span><span style="display:flex;"><span>    from virtinst import util as util
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtinst/__init__.py&#34;</span>, line 89, in &lt;module&gt;
-</span></span><span style="display:flex;"><span>    from virtinst.distroinstaller import DistroInstaller
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;</span>, line 23, in &lt;module&gt;
-</span></span><span style="display:flex;"><span>    from . import urlfetcher
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;</span>, line 34, in &lt;module&gt;
-</span></span><span style="display:flex;"><span>    import requests
-</span></span><span style="display:flex;"><span>ImportError: No module named requests
-</span></span></code></pre></div><p>Ternyata, ada masalah dependensi. <!-- raw HTML omitted -->ImportError: No module named requests<!-- raw HTML omitted --> menunjukkan tidak adanya modul <!-- raw HTML omitted -->requests<!-- raw HTML omitted -->, atau tidak terinstall paket <!-- raw HTML omitted -->python-requests<!-- raw HTML omitted -->. Ini dibuktikan dengan <em>output</em> <!-- raw HTML omitted -->ls /var/log/packages|grep python-request<!-- raw HTML omitted --> yang kosong.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/">Konversi VDI ke VMDK</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Oct 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.</p>
-<p>Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya</p>
-<pre tabindex="0"><code>$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 
-0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100% 
-Clone hard disk created in format &#39;VMDK&#39;. UUID: 3127e4c2-6a88-4af6-838a-871cd534b5fa
-</code></pre><p>Hardisk virtualnya sudah terkonversi.</p>
-  </p>
-
-  
-</article>
-
-  
-</div>
-
-</div>
-</div>
-<script src="https://sasongko.web.id/js/ui.js"></script>
-<script src="https://sasongko.web.id/js/menus.js"></script>
-
-
+<body class="list" id="top">
 <script>
-  
-  if (window.location.hostname != "localhost") {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    ga('create', 'UA-49503242-1', 'auto');
-    ga('send', 'pageview');
-  }
 </script>
 
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sasongko.web.id/" title="Home">
+                    <span><i class='fa fa-home fa-fw'></i>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/post/" title="Posts">
+                    <span><i class='fa fa-list fa-fw'></i>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/about/" title="Profil">
+                    <span><i class='fa fa-user fa-fw'></i>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/logo/" title="Logo">
+                    <span><i class='fa fa-user fa-fw'></i>Logo</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Virtualisasi
+  </h1>
+</header>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Jalankan windows dari linux dengan qemu
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sebagian masyarakat memilih untuk dualboot atau bahkan multiboot dalam berkomputer. Satu Perangkat komputer diinstall lebih dari satu sistem operasi. Alhasil, harddisk pasti terbagi menjadi paling sedikit 2 partisi. Tak jarang, sistem operasi tersebut adalah linux dan windows. Kelemahan dari model seperti ini adalah pengguna harus memilih salah satu, mana sistem yang akan dijalankan. Namun, tidak demikian bila ada qemu.
+Qemu memungkinkan sistem operasi windows dipanggil atau dijalankan dari linux. Untuk dapat menjalankannya perlu install qemu (tentu saja) dan edk2-ovmf. Keduanya tersedia di SBo.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-09-28 00:00:00 +0000 UTC'>28 Sep 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Jalankan windows dari linux dengan qemu" href="https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Install Guest OS Qemu
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Akan diinstall sebagai guest os slackware, dengan file iso slackware.iso, disk image slackware.qcow dan virtual RAM 5GB. Maka command yang dijalankan dengan qemu adalah
+$ qemu-system-x86_64 -enable-kvm -m 5120 -cdrom slackware.iso -drive file=slackware.qcow2 -boot d </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-06-27 00:00:00 +0000 UTC'>27 Jun 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Install Guest OS Qemu" href="https://sasongko.web.id/post/2023-06-27-install-guest-os-qemu/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Membuat qemu disk image
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk membuat disk image sebagai storage sistem oprasi yang akan divirtualisasikan dengan qemu, bisa menggunakan command yang mudah. Misalkan nama file adalah slack.img dengan size 100G
+#penggunaan: qemu-img create file_disk_imagenya sizenya $ qemu-img create slack.img 100G </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-06-26 00:00:00 +0000 UTC'>26 Jun 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Membuat qemu disk image" href="https://sasongko.web.id/post/2023-06-26-membuat-qemu-disk-image/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Convert dd ke vdi
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk konversi file dd/img menjadi vdi mudah. Pastikan sudah install virtualbox. Misalkan akan mengubah file1.dd menjadi file2.vdi,
+$ VBoxManage convertfromraw file1.dd --format VDI file2.vdi </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-06-22 00:00:00 +0000 UTC'>22 Jun 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Convert dd ke vdi" href="https://sasongko.web.id/post/2023-06-22-convert-dd-to-vdi/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Virtualbox cannot register existing type NMAgentManagerError
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Setelah install virtualbox menggunakan binary .run, ketika dijalankan via terminal mengalami sgfault:
+bash-5.2$ virtualbox (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot register existing type &#39;NMAgentManagerError&#39; (process:7040): GLib-CRITICAL **: 00:53:14.710: g_once_init_leave: assertion &#39;result != 0&#39; failed (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot retrieve class for invalid (unclassed) type &#39;invalid&#39; Segmentation fault Solusinya:
+bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-10-30 00:00:00 +0000 UTC'>30 Oct 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Virtualbox cannot register existing type NMAgentManagerError" href="https://sasongko.web.id/post/2022-10-30-virtualbox-updater-segfault/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://sasongko.web.id/tags/virtualisasi/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
+
 </html>

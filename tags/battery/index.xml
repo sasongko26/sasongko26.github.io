@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Battery on Catatan Sasongko</title>
     <link>https://sasongko.web.id/tags/battery/</link>
     <description>Recent content in Battery on Catatan Sasongko</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 Jun 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/tags/battery/index.xml" rel="self" type="application/rss+xml" />
@@ -13,35 +13,40 @@
       <link>https://sasongko.web.id/post/2021-06-06-redshift-tty/</link>
       <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-06-06-redshift-tty/</guid>
-      <description>&lt;p&gt;Mode &lt;strong&gt;tty&lt;/strong&gt; di sini maksudnya adalah mode yang hanya ada teks. Mode inilah yang aktif setelah masuk &lt;em&gt;runlevel&lt;/em&gt; 3 sebelum masuk ke lingkungan &lt;strong&gt;X&lt;/strong&gt; maupun &lt;strong&gt;wayland&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Mungkin, ketika sedang melakukan &lt;em&gt;maintenance&lt;/em&gt; dalam mode tty, tanpa terasa sudah menghabiskan waktu berjam-jam. Daya yang ada, seperti kecerahan layar, bisa terbuang percuma. Apalagi paparan layar yang terlalu cerah dalam durasi lama berpotensi mengganggu kesehatan. Eksekusi &lt;strong&gt;redshift&lt;/strong&gt; di tty adalah solusi yang layak dipertimbangkan. Berikut adalah &lt;em&gt;command&lt;/em&gt;-nya&lt;/p&gt;</description>
+      <description>&lt;p&gt;Mode &lt;strong&gt;tty&lt;/strong&gt; di sini maksudnya adalah mode yang hanya ada teks. Mode inilah yang aktif setelah masuk &lt;em&gt;runlevel&lt;/em&gt; 3 sebelum masuk ke lingkungan &lt;strong&gt;X&lt;/strong&gt; maupun &lt;strong&gt;wayland&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Mungkin, ketika sedang melakukan &lt;em&gt;maintenance&lt;/em&gt; dalam mode tty, tanpa terasa sudah menghabiskan waktu berjam-jam. Daya yang ada, seperti kecerahan layar, bisa terbuang percuma. Apalagi paparan layar yang terlalu cerah dalam durasi lama berpotensi mengganggu kesehatan. Eksekusi &lt;strong&gt;redshift&lt;/strong&gt; di tty adalah solusi yang layak dipertimbangkan. Berikut adalah &lt;em&gt;command&lt;/em&gt;-nya&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mengatur pencahayaan monitor dengan redshift</title>
       <link>https://sasongko.web.id/post/2021-03-17-layar-merah-kuning-redshift/</link>
       <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-03-17-layar-merah-kuning-redshift/</guid>
-      <description>&lt;p&gt;Beberapa bulan ini mata menjadi lebih cepat lelah apabila malam-malam berlama-lama menatap monitor. Padahal &lt;em&gt;backlight/brightness&lt;/em&gt; sudah diset 15%. Mungkin karena faktor U dan pagi/siang sebelumnya sudah memandangi layar komputer. Maka, jadilah penulis menginstal &lt;strong&gt;redshift&lt;/strong&gt; untuk &amp;ldquo;memerah/kuningkan &lt;em&gt;brightness&lt;/em&gt; monitor.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Redshift&lt;/strong&gt; tersedia di SBo, sehingga bisa diinstal dengan mudah melalui &lt;em&gt;sbotools, sbopkg, sboui, slpkg,&lt;/em&gt; atau yang lainnya.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Beberapa bulan ini mata menjadi lebih cepat lelah apabila malam-malam berlama-lama menatap monitor. Padahal &lt;em&gt;backlight/brightness&lt;/em&gt; sudah diset 15%. Mungkin karena faktor U dan pagi/siang sebelumnya sudah memandangi layar komputer. Maka, jadilah penulis menginstal &lt;strong&gt;redshift&lt;/strong&gt; untuk &amp;ldquo;memerah/kuningkan &lt;em&gt;brightness&lt;/em&gt; monitor.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Redshift&lt;/strong&gt; tersedia di SBo, sehingga bisa diinstal dengan mudah melalui &lt;em&gt;sbotools, sbopkg, sboui, slpkg,&lt;/em&gt; atau yang lainnya.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mengetahui kondisi baterai</title>
       <link>https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/</link>
       <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/</guid>
-      <description>&lt;p&gt;Mengecek kondisi baterai laptop melalui terminal atau &lt;em&gt;command line interface&lt;/em&gt; sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara &lt;em&gt;default&lt;/em&gt; sudah menyertakan &lt;em&gt;desktop environment&lt;/em&gt; seperti &lt;strong&gt;xfce, kde, mate, cinnamon, budgie, lumina&lt;/strong&gt; dan &lt;strong&gt;manokwari&lt;/strong&gt; dengan &lt;em&gt;interface&lt;/em&gt; yang cantik dan menarik. DE tersebut sudah mempunyai &lt;em&gt;power manager&lt;/em&gt; lengkap dengan &lt;em&gt;applet&lt;/em&gt;-nya yang tak pernah bosan nempel di panel.&lt;/p&gt;&#xA;&lt;p&gt;Bagaimana kalau &amp;lsquo;hanya&amp;rsquo; menggunakan &lt;em&gt;window manager&lt;/em&gt; seperti &lt;strong&gt;GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm&lt;/strong&gt; atau &lt;strong&gt;ratpoison&lt;/strong&gt; yang tidak mempunyai &lt;em&gt;power manager&lt;/em&gt; sendiri? Melalui terminal lah jawabannya. Di sini digunakan &lt;strong&gt;upower&lt;/strong&gt; yang secara default ada di &lt;strong&gt;Slackware&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Mengecek kondisi baterai laptop melalui terminal atau &lt;em&gt;command line interface&lt;/em&gt; sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara &lt;em&gt;default&lt;/em&gt; sudah menyertakan &lt;em&gt;desktop environment&lt;/em&gt; seperti &lt;strong&gt;xfce, kde, mate, cinnamon, budgie, lumina&lt;/strong&gt; dan &lt;strong&gt;manokwari&lt;/strong&gt; dengan &lt;em&gt;interface&lt;/em&gt; yang cantik dan menarik. DE tersebut sudah mempunyai &lt;em&gt;power manager&lt;/em&gt; lengkap dengan &lt;em&gt;applet&lt;/em&gt;-nya yang tak pernah bosan nempel di panel.&lt;/p&gt;
+&lt;p&gt;Bagaimana kalau &amp;lsquo;hanya&amp;rsquo; menggunakan &lt;em&gt;window manager&lt;/em&gt; seperti &lt;strong&gt;GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm&lt;/strong&gt; atau &lt;strong&gt;ratpoison&lt;/strong&gt; yang tidak mempunyai &lt;em&gt;power manager&lt;/em&gt; sendiri? Melalui terminal lah jawabannya. Di sini digunakan &lt;strong&gt;upower&lt;/strong&gt; yang secara default ada di &lt;strong&gt;Slackware&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Notifikasi Baterai Lemah i3</title>
       <link>https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/</link>
       <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/</guid>
-      <description>&lt;p&gt;Salah satu keistimewaan &lt;!-- raw HTML omitted --&gt;i3&lt;!-- raw HTML omitted --&gt; atau &lt;!-- raw HTML omitted --&gt;i3wm&lt;!-- raw HTML omitted --&gt; adalah belum adanya notifikasi/pemberitahuan saat baterai lemah perlu di-&lt;em&gt;charge&lt;/em&gt;. Status baterai sudah ada di bar/panel yang ditampilkan oleh &lt;!-- raw HTML omitted --&gt;i3status&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Berikut adalah &lt;em&gt;script&lt;/em&gt; sederhana untuk menampilkan notifikasi saat baterai sedang lemah dan tidak sedang di-&lt;em&gt;charge&lt;/em&gt;. Jika baterai telah mencapai batas (di sini saya gunakan 5%) maka setiap 30 detik akan tampil notifikasi untuk segera dilakukan &lt;em&gt;charging&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;Wayahe dicas bro&amp;hellip;.!&lt;!-- raw HTML omitted --&gt;. Dan ketika baterai sudah terisi full 100% tetapi masih dalam kondisi dicas akan tampil notifikasi tiap 30 detik bahwa baterai sudah full.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Salah satu keistimewaan &lt;!-- raw HTML omitted --&gt;i3&lt;!-- raw HTML omitted --&gt; atau &lt;!-- raw HTML omitted --&gt;i3wm&lt;!-- raw HTML omitted --&gt; adalah belum adanya notifikasi/pemberitahuan saat baterai lemah perlu di-&lt;em&gt;charge&lt;/em&gt;. Status baterai sudah ada di bar/panel yang ditampilkan oleh &lt;!-- raw HTML omitted --&gt;i3status&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;Berikut adalah &lt;em&gt;script&lt;/em&gt; sederhana untuk menampilkan notifikasi saat baterai sedang lemah dan tidak sedang di-&lt;em&gt;charge&lt;/em&gt;. Jika baterai telah mencapai batas (di sini saya gunakan 5%) maka setiap 30 detik akan tampil notifikasi untuk segera dilakukan &lt;em&gt;charging&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;Wayahe dicas bro&amp;hellip;.!&lt;!-- raw HTML omitted --&gt;. Dan ketika baterai sudah terisi full 100% tetapi masih dalam kondisi dicas akan tampil notifikasi tiap 30 detik bahwa baterai sudah full.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Enable TLP on i3wm</title>
       <link>https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/</link>
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/</guid>
-      <description>&lt;p&gt;Beberapa hari yang lalu install &lt;!-- raw HTML omitted --&gt;i3 (i3wm)&lt;!-- raw HTML omitted --&gt; menggunakan &lt;!-- raw HTML omitted --&gt;sbopkg&lt;!-- raw HTML omitted --&gt;. Biasanya, dengan &lt;em&gt;desktop environment&lt;/em&gt; lain seperti &lt;em&gt;Mate&lt;/em&gt;, baterai bisa bertahan 4 - 6 jam. Namun, dengan &lt;em&gt;i3&lt;/em&gt; belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.&lt;/p&gt;&#xA;&lt;p&gt;Cek &lt;!-- raw HTML omitted --&gt;powertop&lt;!-- raw HTML omitted --&gt; ternyata banyak yang &lt;strong&gt;Bad&lt;/strong&gt; seperti &lt;em&gt;default&lt;/em&gt;-nya tanpa TLP. Padahal &lt;em&gt;service&lt;/em&gt; TLP saat &lt;em&gt;booting&lt;/em&gt; jalan, &lt;em&gt;Tunable&lt;/em&gt; di &lt;!-- raw HTML omitted --&gt;powertop&lt;!-- raw HTML omitted --&gt; hanya 1 yang &lt;strong&gt;Bad&lt;/strong&gt; lainnya &lt;strong&gt;Good&lt;/strong&gt; semua.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Beberapa hari yang lalu install &lt;!-- raw HTML omitted --&gt;i3 (i3wm)&lt;!-- raw HTML omitted --&gt; menggunakan &lt;!-- raw HTML omitted --&gt;sbopkg&lt;!-- raw HTML omitted --&gt;. Biasanya, dengan &lt;em&gt;desktop environment&lt;/em&gt; lain seperti &lt;em&gt;Mate&lt;/em&gt;, baterai bisa bertahan 4 - 6 jam. Namun, dengan &lt;em&gt;i3&lt;/em&gt; belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.&lt;/p&gt;
+&lt;p&gt;Cek &lt;!-- raw HTML omitted --&gt;powertop&lt;!-- raw HTML omitted --&gt; ternyata banyak yang &lt;strong&gt;Bad&lt;/strong&gt; seperti &lt;em&gt;default&lt;/em&gt;-nya tanpa TLP. Padahal &lt;em&gt;service&lt;/em&gt; TLP saat &lt;em&gt;booting&lt;/em&gt; jalan, &lt;em&gt;Tunable&lt;/em&gt; di &lt;!-- raw HTML omitted --&gt;powertop&lt;!-- raw HTML omitted --&gt; hanya 1 yang &lt;strong&gt;Bad&lt;/strong&gt; lainnya &lt;strong&gt;Good&lt;/strong&gt; semua.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

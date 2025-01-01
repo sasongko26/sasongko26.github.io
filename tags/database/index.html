@@ -1,481 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.140.1">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Database | Catatan Sasongko</title>
+<meta name="keywords" content="">
+<meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+<meta name="author" content="">
+<link rel="canonical" href="https://sasongko.web.id/tags/database/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://sasongko.web.id/tags/database/index.xml">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/tags/database/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-  <title>Database &middot; Catatan Sasongko</title>
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-    
+            .list {
+                background: var(--theme);
+            }
 
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
-  <!--<![endif]-->
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
-  <!--<![endif]-->
-
-  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
-
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-
-  
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
- 
-  
-  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
-    href='https://sasongko.web.id/tags/database/index.xml' />
-  
-
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
-  
-
-  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
-
-  
-    
-        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
-    
-  
-  
-    
-        <script src="https://sasongko.web.id/js/my.js"></script>
-    
-  
+    </style>
+</noscript><meta property="og:url" content="https://sasongko.web.id/tags/database/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Database">
+  <meta property="og:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Database">
+<meta name="twitter:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 
 </head>
 
-
-<body>
-<div id="layout">
-
-  
-<a href="#menu" id="menuLink" class="menu-link">
-  
-  <span></span>
-</a>
-<div id="menu">
-
-  
-
-  <div class="pure-menu">
-    <ul class="pure-menu-list">
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
-      
-        </li>
-      
-    </ul>
-  </div>
-
-  <div class="pure-menu social">
-  <ul class="pure-menu-list">
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://sasongko.web.id/tags/database/index.xml'><i
-          class="fas fa-rss"></i>RSS</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://youtube.com/channel/UCY4H1n73aQMB4LZjIJvH0_A" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </ul>
-</div>
-
-
-  <div>
-  <div class="small-print">
-    <small></small>
-  </div>
-  <div class="small-print">
-    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
-    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
-  </div>
-</div>
-
-</div>
-
-
-  <div id="main">
-
-
-<div class="header">
-  <h1>Database</h1>
-</div>
-
-<div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/">Akses akun root mariadb tanpa password</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>22 Mar 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk akses root mariadb biasanya memerlukan password. Tapi sebenarnya root bisa diakses tanpa password. Pertama, hentikan dulu <em>service</em> <strong>mariadb</strong>-nya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ /etc/rc.d/rc.mysqld stop
-</span></span></code></pre></div><p>Kemudian, restart database server tanpa peduli otentikasinya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mariadbd-safe --skip-grant-tables --skip-networking &amp;
-</span></span></code></pre></div><p>Nah, akun root <strong>mariadb</strong> sudah bisa diakses tanpa <em>password</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mariadb -u root
-</span></span><span style="display:flex;"><span>Welcome to the MariaDB monitor.  Commands end with ; or <span style="color:#ae81ff">\g</span>.
-</span></span><span style="display:flex;"><span>Your MariaDB connection id is <span style="color:#ae81ff">3</span>
-</span></span><span style="display:flex;"><span>Server version: 10.11.2-MariaDB Source distribution
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Copyright <span style="color:#f92672">(</span>c<span style="color:#f92672">)</span> 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#39;help;&#39;</span> or <span style="color:#e6db74">&#39;\h&#39;</span> <span style="color:#66d9ef">for</span> help. Type <span style="color:#e6db74">&#39;\c&#39;</span> to clear the current input statement.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>MariaDB <span style="color:#f92672">[(</span>none<span style="color:#f92672">)]</span>&gt; 
-</span></span></code></pre></div><p>Oiya, 3 <em>command</em> pertama dijalankan dengan <em>privilege</em> <strong>root</strong> yang ada di sistem di mana <strong>mariadb</strong> tersebut diinstall.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-06-24-query-sql/">Query SQL</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Jun 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><em>Relational Database Management System (RDBMS)</em> adalah salah satu sistem database populer. Sistem pengolahan database ini menggunakan bahasa <strong>SQL</strong> (dibaca sekuel atau es kiu el). <em>Tool</em> yang dapat digunakan antara lain <strong>mariadb, mysql, postgresql</strong>.</p>
-<p>Pada RDBMS dikenal adanya hirarki atau struktur, yaitu dari tertinggi <strong>database</strong> yang terdiri atas <strong>tabel</strong>. Tabel dibentuk oleh <strong>kolom</strong> dengan data sejumlah barisnya.</p>
-<p>Perintah SQL ada 2</p>
-<ol>
-<li><em>Data Definition Language (DDL)</em> untuk membuat, menghapus atau modifikasi struktur database</li>
-<li><em>Data Manipulation Language (DML)</em> untuk insert data, query, hapus, edit data</li>
-</ol>
-<h1 id="query-sql">QUERY SQL</h1>
-<p>Query adalah pengambilan data dari database. Menggunakan perintah <strong>SELECT</strong>.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-06-24-query-sql/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Mariadb error 2002</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jun 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mariadb -u root -p
-</span></span><span style="display:flex;"><span>Enter password:
-</span></span><span style="display:flex;"><span>ERROR <span style="color:#ae81ff">2002</span> <span style="color:#f92672">(</span>HY000<span style="color:#f92672">)</span>: Can<span style="color:#e6db74">&#39;t connect to local server through socket &#39;</span>/var/run/mysql/mysql.sock<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">(</span>2<span style="color:#f92672">)</span>
-</span></span></code></pre></div><p>Setelah dicek, ternyata <em>service</em>-nya belum jalan karena tidak <em>executable</em>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls -l /etc/rc.d|grep -iE <span style="color:#e6db74">&#34;(maria|mysql)&#34;</span>
-</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> root     root   <span style="color:#ae81ff">2517</span> May  <span style="color:#ae81ff">2</span> 09:08 rc.mysqld
-</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> root     root   <span style="color:#ae81ff">2943</span> Aug  <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2020</span> rc.mysqld.orig
-</span></span></code></pre></div><p>Mari aktifkan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># chmod +x /etc/rc.d/rc.mysqld</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># /etc/rc.d/rc.mysqld start</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">210530</span> 10:36:21 mysqld_safe Logging to <span style="color:#e6db74">&#39;/var/lib/mysql/bumi.bumi.err&#39;</span>.
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">210530</span> 10:36:21 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
-</span></span></code></pre></div><p>Done. Alhamdulillah</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2019-03-30-memulai-mariadb/">Memulai MariaDB</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Mar 2019</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <h1 id="apa-itu-mariadb">Apa itu MariaDB</h1>
-<p>MariaDB adalah <em>software</em> untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.</p>
-<h1 id="install-mariadb">Install MariaDB</h1>
-<p>Secara <em>default</em>, apabila Slackware diisnntall <em>full system</em> maka MariaDB akan terinstall. Jadi tidak usah repot-repot untuk insytallnya.</p>
-<h1 id="memulai-mariadb">Memulai MariaDB</h1>
-<p>Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. <em>prompt</em> <!-- raw HTML omitted -->R/<!-- raw HTML omitted --> menunjukkan dilakukan dengan <em>priviledge</em> <!-- raw HTML omitted -->root<!-- raw HTML omitted --></p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2019-03-30-memulai-mariadb/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-</div>
-
-</div>
-</div>
-<script src="https://sasongko.web.id/js/ui.js"></script>
-<script src="https://sasongko.web.id/js/menus.js"></script>
-
-
+<body class="list" id="top">
 <script>
-  
-  if (window.location.hostname != "localhost") {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    ga('create', 'UA-49503242-1', 'auto');
-    ga('send', 'pageview');
-  }
 </script>
 
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sasongko.web.id/" title="Home">
+                    <span><i class='fa fa-home fa-fw'></i>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/post/" title="Posts">
+                    <span><i class='fa fa-list fa-fw'></i>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/about/" title="Profil">
+                    <span><i class='fa fa-user fa-fw'></i>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/logo/" title="Logo">
+                    <span><i class='fa fa-user fa-fw'></i>Logo</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Database
+  </h1>
+</header>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Akses akun root mariadb tanpa password
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk akses root mariadb biasanya memerlukan password. Tapi sebenarnya root bisa diakses tanpa password. Pertama, hentikan dulu service mariadb-nya.
+$ /etc/rc.d/rc.mysqld stop Kemudian, restart database server tanpa peduli otentikasinya.
+$ mariadbd-safe --skip-grant-tables --skip-networking &amp; Nah, akun root mariadb sudah bisa diakses tanpa password
+$ mariadb -u root Welcome to the MariaDB monitor. Commands end with ; or \g. Your MariaDB connection id is 3 Server version: 10.11.2-MariaDB Source distribution Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others. Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement. MariaDB [(none)]&gt; Oiya, 3 command pertama dijalankan dengan privilege root yang ada di sistem di mana mariadb tersebut diinstall.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-03-22 00:00:00 +0000 UTC'>22 Mar 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Akses akun root mariadb tanpa password" href="https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Query SQL
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Relational Database Management System (RDBMS) adalah salah satu sistem database populer. Sistem pengolahan database ini menggunakan bahasa SQL (dibaca sekuel atau es kiu el). Tool yang dapat digunakan antara lain mariadb, mysql, postgresql.
+Pada RDBMS dikenal adanya hirarki atau struktur, yaitu dari tertinggi database yang terdiri atas tabel. Tabel dibentuk oleh kolom dengan data sejumlah barisnya.
+Perintah SQL ada 2
+Data Definition Language (DDL) untuk membuat, menghapus atau modifikasi struktur database Data Manipulation Language (DML) untuk insert data, query, hapus, edit data QUERY SQL Query adalah pengambilan data dari database. Menggunakan perintah SELECT.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-06-24 00:00:00 +0000 UTC'>24 Jun 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Query SQL" href="https://sasongko.web.id/post/2021-06-24-query-sql/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mariadb error 2002
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.
+$ mariadb -u root -p Enter password: ERROR 2002 (HY000): Can&#39;t connect to local server through socket &#39;/var/run/mysql/mysql.sock&#39; (2) Setelah dicek, ternyata service-nya belum jalan karena tidak executable.
+$ ls -l /etc/rc.d|grep -iE &#34;(maria|mysql)&#34; -rw-r--r-- 1 root root 2517 May 2 09:08 rc.mysqld -rw-r--r-- 1 root root 2943 Aug 4 2020 rc.mysqld.orig Mari aktifkan
+# chmod &#43;x /etc/rc.d/rc.mysqld # /etc/rc.d/rc.mysqld start 210530 10:36:21 mysqld_safe Logging to &#39;/var/lib/mysql/bumi.bumi.err&#39;. 210530 10:36:21 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql Done. Alhamdulillah
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-06-01 00:00:00 +0000 UTC'>01 Jun 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mariadb error 2002" href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Memulai MariaDB
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Apa itu MariaDB MariaDB adalah software untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.
+Install MariaDB Secara default, apabila Slackware diisnntall full system maka MariaDB akan terinstall. Jadi tidak usah repot-repot untuk insytallnya.
+Memulai MariaDB Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. prompt R/ menunjukkan dilakukan dengan priviledge root
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-03-30 00:00:00 +0000 UTC'>30 Mar 2019</span></footer>
+  <a class="entry-link" aria-label="post link to Memulai MariaDB" href="https://sasongko.web.id/post/2019-03-30-memulai-mariadb/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
+
 </html>

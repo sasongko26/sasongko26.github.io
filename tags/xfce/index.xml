@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Xfce on Catatan Sasongko</title>
     <link>https://sasongko.web.id/tags/xfce/</link>
     <description>Recent content in Xfce on Catatan Sasongko</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/tags/xfce/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,27 @@
       <link>https://sasongko.web.id/post/2021-06-23-menyusupkan-mate-ke-xfce/</link>
       <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-06-23-menyusupkan-mate-ke-xfce/</guid>
-      <description>&lt;p&gt;Secara &lt;em&gt;default, window manager&lt;/em&gt; yang digunakan xfce adalah xfwm4. Tetapi, ini bisa diganti menjadi &lt;em&gt;window manager&lt;/em&gt; lain seperti &lt;strong&gt;fluxbox&lt;/strong&gt; ataupun &lt;strong&gt;marco&lt;/strong&gt; milik &lt;strong&gt;mate&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Kali ini kita akan ganti &lt;strong&gt;xfwm4&lt;/strong&gt; dengan &lt;strong&gt;marco&lt;/strong&gt;. Caranya, membuat &lt;strong&gt;startup&lt;/strong&gt; baru berisikan &lt;em&gt;command&lt;/em&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ /usr/bin/marco --replace&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;Secara &lt;em&gt;default, window manager&lt;/em&gt; yang digunakan xfce adalah xfwm4. Tetapi, ini bisa diganti menjadi &lt;em&gt;window manager&lt;/em&gt; lain seperti &lt;strong&gt;fluxbox&lt;/strong&gt; ataupun &lt;strong&gt;marco&lt;/strong&gt; milik &lt;strong&gt;mate&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Kali ini kita akan ganti &lt;strong&gt;xfwm4&lt;/strong&gt; dengan &lt;strong&gt;marco&lt;/strong&gt;. Caranya, membuat &lt;strong&gt;startup&lt;/strong&gt; baru berisikan &lt;em&gt;command&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ /usr/bin/marco --replace
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Xfce 4.16 Masuk Current</title>
       <link>https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/</link>
       <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/</guid>
-      <description>&lt;p&gt;Pagi ini, Patrick memasukkan &lt;strong&gt;xfce 4.16&lt;/strong&gt; ke &lt;em&gt;slackware current main tree&lt;/em&gt; tanpa singgah di /testing. &lt;em&gt;Interface&lt;/em&gt; &lt;strong&gt;xfce 4.16&lt;/strong&gt; lebih cantik dan menarik dibanding sebelumnya. Demikian pula &lt;em&gt;icons&lt;/em&gt;-nya.&lt;/p&gt;&#xA;&lt;p&gt;Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown &lt;strong&gt;xfce&lt;/strong&gt; stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses &lt;em&gt;development&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Ada beberapa hal yang menjadi catatan buat penulis terkait &lt;strong&gt;xfce 4.16&lt;/strong&gt; ini, yaitu&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;em&gt;Interface&lt;/em&gt; lebih cantik dan menarik&lt;/li&gt;&#xA;&lt;li&gt;Penambahan &lt;strong&gt;xfce4-panel-profiles&lt;/strong&gt; yang memungkinkan untuk menyimpan profil/konfigurasi panel. Sangat bermanfaat bagi mereka yang suka berganti-ganti tampilan panel, ukuran dan letak panel, serta &lt;em&gt;shortcut&lt;/em&gt; apa saja yang berada di panel.&lt;/li&gt;&#xA;&lt;li&gt;Perubahan letak tombol &lt;strong&gt;Open&lt;/strong&gt; atau &lt;strong&gt;Save&lt;/strong&gt; pada &lt;em&gt;dialog box&lt;/em&gt; yang sebelumnya di bawah menjadi di atas. Ini memudahkan pengguna. Tidak usah geser &lt;em&gt;mouse&lt;/em&gt; terlalu jauh atau repot &lt;strong&gt;tab&lt;/strong&gt; berkali-kali.&lt;/li&gt;&#xA;&lt;li&gt;Penambahan &lt;strong&gt;libgtop&lt;/strong&gt; yang memungkinkan &lt;em&gt;user&lt;/em&gt; mengetahui informasi singkat sistem melalui tab &lt;strong&gt;System&lt;/strong&gt; pada &lt;strong&gt;About Xfce&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://sasongko.web.id/gambar/about-xfce-4.14.png&#34; alt=&#34;about xfce 4.14&#34;&gt;&#xA;&lt;img src=&#34;https://sasongko.web.id/gambar/about-xfce-4.16.png&#34; alt=&#34;about xfce 4.16&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Pagi ini, Patrick memasukkan &lt;strong&gt;xfce 4.16&lt;/strong&gt; ke &lt;em&gt;slackware current main tree&lt;/em&gt; tanpa singgah di /testing. &lt;em&gt;Interface&lt;/em&gt; &lt;strong&gt;xfce 4.16&lt;/strong&gt; lebih cantik dan menarik dibanding sebelumnya. Demikian pula &lt;em&gt;icons&lt;/em&gt;-nya.&lt;/p&gt;
+&lt;p&gt;Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown &lt;strong&gt;xfce&lt;/strong&gt; stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses &lt;em&gt;development&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Ada beberapa hal yang menjadi catatan buat penulis terkait &lt;strong&gt;xfce 4.16&lt;/strong&gt; ini, yaitu&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Interface&lt;/em&gt; lebih cantik dan menarik&lt;/li&gt;
+&lt;li&gt;Penambahan &lt;strong&gt;xfce4-panel-profiles&lt;/strong&gt; yang memungkinkan untuk menyimpan profil/konfigurasi panel. Sangat bermanfaat bagi mereka yang suka berganti-ganti tampilan panel, ukuran dan letak panel, serta &lt;em&gt;shortcut&lt;/em&gt; apa saja yang berada di panel.&lt;/li&gt;
+&lt;li&gt;Perubahan letak tombol &lt;strong&gt;Open&lt;/strong&gt; atau &lt;strong&gt;Save&lt;/strong&gt; pada &lt;em&gt;dialog box&lt;/em&gt; yang sebelumnya di bawah menjadi di atas. Ini memudahkan pengguna. Tidak usah geser &lt;em&gt;mouse&lt;/em&gt; terlalu jauh atau repot &lt;strong&gt;tab&lt;/strong&gt; berkali-kali.&lt;/li&gt;
+&lt;li&gt;Penambahan &lt;strong&gt;libgtop&lt;/strong&gt; yang memungkinkan &lt;em&gt;user&lt;/em&gt; mengetahui informasi singkat sistem melalui tab &lt;strong&gt;System&lt;/strong&gt; pada &lt;strong&gt;About Xfce&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt=&#34;about xfce 4.14&#34; loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/about-xfce-4.14.png&#34;&gt;
+&lt;img alt=&#34;about xfce 4.16&#34; loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/about-xfce-4.16.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fullscreen Mozilla Firefox</title>
@@ -34,35 +47,44 @@
       <link>https://sasongko.web.id/post/2018-06-23-kosongkan-trash/</link>
       <pubDate>Sat, 23 Jun 2018 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2018-06-23-kosongkan-trash/</guid>
-      <description>&lt;p&gt;Iseng-iseng buka &lt;em&gt;hidden folder&lt;/em&gt; ada yang menarik. File yang ada di &lt;strong&gt;Trash&lt;/strong&gt; (bisa buka di &lt;strong&gt;Thunar&lt;/strong&gt; dengan path &lt;!-- raw HTML omitted --&gt;trash:///&lt;!-- raw HTML omitted --&gt; sama dengan yang ada di &lt;!-- raw HTML omitted --&gt;~/.local/share/Trash/files/&lt;!-- raw HTML omitted --&gt;. Sehingga kalau ingin mengosongkan &lt;strong&gt;Trash&lt;/strong&gt; dan posisi sedang di CLI dan tidak membuka &lt;strong&gt;file manager&lt;/strong&gt; ataupun lagi &lt;em&gt;aras-arasen&lt;/em&gt;, sangat bisa.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rm -rv ~/.local/share/Trash/*&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;Iseng-iseng buka &lt;em&gt;hidden folder&lt;/em&gt; ada yang menarik. File yang ada di &lt;strong&gt;Trash&lt;/strong&gt; (bisa buka di &lt;strong&gt;Thunar&lt;/strong&gt; dengan path &lt;!-- raw HTML omitted --&gt;trash:///&lt;!-- raw HTML omitted --&gt; sama dengan yang ada di &lt;!-- raw HTML omitted --&gt;~/.local/share/Trash/files/&lt;!-- raw HTML omitted --&gt;. Sehingga kalau ingin mengosongkan &lt;strong&gt;Trash&lt;/strong&gt; dan posisi sedang di CLI dan tidak membuka &lt;strong&gt;file manager&lt;/strong&gt; ataupun lagi &lt;em&gt;aras-arasen&lt;/em&gt;, sangat bisa.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rm -rv ~/.local/share/Trash/*
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Terperangkap WindowMaker</title>
       <link>https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/</link>
       <pubDate>Thu, 28 Jul 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-07-28-terperangkap-windowmaker/</guid>
-      <description>&lt;p&gt;Mencoba merasakan kejadulan &lt;em&gt;WindowMaker&lt;/em&gt; yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama &lt;em&gt;xfce&lt;/em&gt; melalui &lt;em&gt;command&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;xwmconfig&lt;!-- raw HTML omitted --&gt;, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di &lt;em&gt;WindowMaker&lt;/em&gt;. Bahkan tidak bisa ganti DE lainnya termasuk &lt;em&gt;KDE&lt;/em&gt; dan &lt;em&gt;Mate&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Tapi kemudian bisa teratasi dengan menghapus &lt;!-- raw HTML omitted --&gt;.xinitrc&lt;!-- raw HTML omitted --&gt; dan folder &lt;!-- raw HTML omitted --&gt;GNUStep&lt;!-- raw HTML omitted --&gt; yang ada di &lt;!-- raw HTML omitted --&gt;home&lt;!-- raw HTML omitted --&gt; direktori pengguna.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Mencoba merasakan kejadulan &lt;em&gt;WindowMaker&lt;/em&gt; yang sangat bersahaja, kemudian mencoba kembali ke habitat bersama &lt;em&gt;xfce&lt;/em&gt; melalui &lt;em&gt;command&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;xwmconfig&lt;!-- raw HTML omitted --&gt;, membuahkan hasil yang mengecewakan. Tidak beralih ke xfce dan tetap di &lt;em&gt;WindowMaker&lt;/em&gt;. Bahkan tidak bisa ganti DE lainnya termasuk &lt;em&gt;KDE&lt;/em&gt; dan &lt;em&gt;Mate&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Tapi kemudian bisa teratasi dengan menghapus &lt;!-- raw HTML omitted --&gt;.xinitrc&lt;!-- raw HTML omitted --&gt; dan folder &lt;!-- raw HTML omitted --&gt;GNUStep&lt;!-- raw HTML omitted --&gt; yang ada di &lt;!-- raw HTML omitted --&gt;home&lt;!-- raw HTML omitted --&gt; direktori pengguna.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Set Default Brightness</title>
       <link>https://sasongko.web.id/post/2016-07-10-set-default-brightness/</link>
       <pubDate>Sun, 10 Jul 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-07-10-set-default-brightness/</guid>
-      <description>&lt;p&gt;Kecerahan monitor / &lt;em&gt;brightness&lt;/em&gt; 100% membuat mata cepat lelah. Apalagi kalau secara &lt;em&gt;default&lt;/em&gt; begitu masuk X &lt;em&gt;brightness&lt;/em&gt;-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan &lt;em&gt;Computer Vision Syndrome&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Berapa persen &lt;em&gt;brightness&lt;/em&gt; yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur &lt;em&gt;brightness&lt;/em&gt; bisa gunakan &lt;!-- raw HTML omitted --&gt;xbacklight&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Untuk mengetahui berapa persen &lt;em&gt;brightness&lt;/em&gt; yang digunakan saat ini &lt;!-- raw HTML omitted --&gt;xbacklight&lt;!-- raw HTML omitted --&gt;. Sedangkan untuk mengubahnya &lt;!-- raw HTML omitted --&gt;xbacklight -set persen&lt;!-- raw HTML omitted --&gt;. Contoh akan diatur &lt;em&gt;brightness&lt;/em&gt;-nya 15%:&lt;/p&gt;</description>
+      <description>&lt;p&gt;Kecerahan monitor / &lt;em&gt;brightness&lt;/em&gt; 100% membuat mata cepat lelah. Apalagi kalau secara &lt;em&gt;default&lt;/em&gt; begitu masuk X &lt;em&gt;brightness&lt;/em&gt;-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan &lt;em&gt;Computer Vision Syndrome&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Berapa persen &lt;em&gt;brightness&lt;/em&gt; yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur &lt;em&gt;brightness&lt;/em&gt; bisa gunakan &lt;!-- raw HTML omitted --&gt;xbacklight&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;Untuk mengetahui berapa persen &lt;em&gt;brightness&lt;/em&gt; yang digunakan saat ini &lt;!-- raw HTML omitted --&gt;xbacklight&lt;!-- raw HTML omitted --&gt;. Sedangkan untuk mengubahnya &lt;!-- raw HTML omitted --&gt;xbacklight -set persen&lt;!-- raw HTML omitted --&gt;. Contoh akan diatur &lt;em&gt;brightness&lt;/em&gt;-nya 15%:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ganti Theme Xfce</title>
       <link>https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/</link>
       <pubDate>Thu, 30 Jun 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/</guid>
-      <description>&lt;p&gt;Bosan dengan tampilan &lt;em&gt;theme&lt;/em&gt; yang itu-itu aja? Tenang, &lt;em&gt;theme&lt;/em&gt;-nya bisa diganti kok, bahkan diganti agar tampilannya mirip Mac OS X. Sebagai contoh akan kita &lt;em&gt;install theme GlossyP3&lt;/em&gt; yang membuat tampilan menjadi mirip Mac OS X.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Download&lt;/em&gt; terlebih dahulu berkasnya dari &lt;a href=&#34;https://drive.google.com/file/d/0B6CSxWwQO8rCOG5EU0xJSklLNnc/edit?usp=sharing&#34;&gt;sini&lt;/a&gt; (pastikan tersambung internet). Berkas dalam bentuk arsip &lt;!-- raw HTML omitted --&gt;.tar.bz2&lt;!-- raw HTML omitted --&gt; ekstrak ke direktori &lt;!-- raw HTML omitted --&gt;/usr/share/themes&lt;!-- raw HTML omitted --&gt; dengan hak administrator atau &lt;!-- raw HTML omitted --&gt;root&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Bosan dengan tampilan &lt;em&gt;theme&lt;/em&gt; yang itu-itu aja? Tenang, &lt;em&gt;theme&lt;/em&gt;-nya bisa diganti kok, bahkan diganti agar tampilannya mirip Mac OS X. Sebagai contoh akan kita &lt;em&gt;install theme GlossyP3&lt;/em&gt; yang membuat tampilan menjadi mirip Mac OS X.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Download&lt;/em&gt; terlebih dahulu berkasnya dari &lt;a href=&#34;https://drive.google.com/file/d/0B6CSxWwQO8rCOG5EU0xJSklLNnc/edit?usp=sharing&#34;&gt;sini&lt;/a&gt; (pastikan tersambung internet). Berkas dalam bentuk arsip &lt;!-- raw HTML omitted --&gt;.tar.bz2&lt;!-- raw HTML omitted --&gt; ekstrak ke direktori &lt;!-- raw HTML omitted --&gt;/usr/share/themes&lt;!-- raw HTML omitted --&gt; dengan hak administrator atau &lt;!-- raw HTML omitted --&gt;root&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ganti Desktop Environment</title>
       <link>https://sasongko.web.id/post/2015-11-06-ganti-de/</link>
       <pubDate>Fri, 06 Nov 2015 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2015-11-06-ganti-de/</guid>
-      <description>&lt;p&gt;Biar tidak membosankan, kadangkala kita butuh ganti &lt;em&gt;desktop environment&lt;/em&gt; (DE). Caranya (&lt;em&gt;root privileges&lt;/em&gt;),&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;xwmconfig&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pilih &lt;em&gt;X Windows&lt;/em&gt; (atau DE)-nya. Kemudian Ok atau tekan &lt;em&gt;Enter&lt;/em&gt;, &lt;em&gt;Log out&lt;/em&gt; dan &lt;em&gt;Log in&lt;/em&gt; kembali.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://sasongko.web.id/gambar/xwmconfig.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Biar tidak membosankan, kadangkala kita butuh ganti &lt;em&gt;desktop environment&lt;/em&gt; (DE). Caranya (&lt;em&gt;root privileges&lt;/em&gt;),&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;xwmconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pilih &lt;em&gt;X Windows&lt;/em&gt; (atau DE)-nya. Kemudian Ok atau tekan &lt;em&gt;Enter&lt;/em&gt;, &lt;em&gt;Log out&lt;/em&gt; dan &lt;em&gt;Log in&lt;/em&gt; kembali.&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/xwmconfig.png&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

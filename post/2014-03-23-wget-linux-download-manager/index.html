@@ -1,255 +1,564 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.140.1">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Menggunakan WGet Linux Download Manager | Catatan Sasongko</title>
+<meta name="keywords" content="slackware, blankon, internet download manager, terminal">
+<meta name="description" content="Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume.
+Cara menggunakannya mudah.
+$ wget [url]
+untuk mem-pause download tekan Ctrl&#43;C. Dan untuk melanjutkan kembali tambahkan opsi -c.
+$ wget [url] -c
+Untuk lebih lengkapnya tentang wget ada di manual wget.
+$ wget -h 
+GNU Wget 1.15, adalah sebuah non-interaktif network retriever. 
+Penggunaan: wget [PILIHAN]... [URL]... 
 
-  <title>Menggunakan WGet Linux Download Manager &middot; Catatan Sasongko</title>
+Argumen yang wajib untuk pilihan panjang juga wajib untuk pilihan yang pendek. 
 
-    
+Memulai: 
+  -V,  --version           menampilkan versi dari Wget dan keluar. 
+  -h,  --help              menampilkan bantuan ini. 
+  -b,  --background        pergi ke background setelah memulai. 
+  -e,  --execute=COMMAND   menjalankan sebuah perintah `.wgetrc&#39;-style. 
 
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+Mencatat dan memasukan berkas: 
+  -o,  --output-file=FILE     pesan log pada FILE. 
+  -a,  --append-output=FILE  tambahkan pesan pada FILE. 
+  -d,  --debug               tampilkan banyak informasi debugging. 
+  -q,  --quiet               diam (tidak ada output). 
+  -v,  --verbose             jadi verbose (ini yang default). 
+   -nv, --no-verbose          matikan verboseness, tanpa menjadi quiet. 
+       --report-speed=TYPE   Output bandwidth as TYPE.  TYPE can be bits. 
+  -i,  --input-file=BERKAS    download URLs ditemukan dalam lokal atau BERKAS eksternal. 
+  -F,  --force-html          perlakukan input file sebagai HTML. 
+  -B,  --base=URL            telusuri berkas masukan HTML (-i -F) 
+                             relatif ke URL. 
+       --config=FILE         Specify config file to use. 
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
-  <!--<![endif]-->
+Download: 
+  -t,  --tries=NUMBER            set nomor mencoba ke NUMBER (0 untuk tidak terbatas). 
+       --retry-connrefused       coba lagi walaupun koneksi ditolak. 
+  -O,  --output-document=FILE    tulis document pada FILE. 
+  -nc, --no-clobber              skip downloads that would download to 
+                                 existing files (overwriting them). 
+  -c,  --continue                lanjutkan mengambil file yang terdownload  sebagian. 
+       --progress=TYPE           pilih tipe gauge progress. 
+  -N,  --timestamping            jangan mengambil kembali file kecuali file 
+                                 lebih baru dari file local. 
+  --no-use-server-timestamps     don&#39;t set the local file&#39;s timestamp by 
+                                 the one on the server. 
+  -S,  --server-response         tampilkan balasan server. 
+       --spider                  jangan mendownload apapun. 
+  -T,  --timeout=SECONDS         set semua nilai timeout pada SECONDS. 
+       --dns-timeout=SECS        set the DNS lookup timeout pada SECS. 
+       --connect-timeout=SECS    set the connect timeout pada SECS. 
+       --read-timeout=SECS       set the read timeout pada SECS. 
+  -w,  --wait=SECONDS            tunggu SECONDS diantara pengambilan. 
+       --waitretry=SECONDS       tunggu 1..SECONDS diantara pencobaan dari sebuah pengambilan. 
+       --random-wait             wait from 0.5*WAIT...1.5*WAIT secs between retrievals. 
+       --no-proxy                secara eksplisit mematikan proxy. 
+  -Q,  --quota=NUMBER            set pengambilan quota pada NUMBER. 
+       --bind-address=ADDRESS    bind ke ADDRESS (hostname atau IP) pada local host. 
+       --limit-rate=RATE         batasi kecepatan download ke RATE. 
+       --no-dns-cache            matikan caching dari DNS lookups. 
+       --restrict-file-names=OS  restrict karakter dalam nama file ke salah satu dari yang dibolehkan oleh OS. 
+       --ignore-case             abaikan besar/kecil huruf ketika mencocokan files/direktori.. 
+  -4,  --inet4-only              hanya menghubungi ke alamat IPv4 saja. 
+  -6,  --inet6-only              hanya menghubungi ke alamat IPv6 saja. 
+       --prefer-family=FAMILY    hubungi terlebih dahulu alamat dari family  yang dispesifikasikan, 
+                                 salah satu dari IPv6, IPv4 atau none. 
+       --user=USER               set kedua ftp dan http user pada USER. 
+       --password=PASS           set kedua ftp dan http password pada PASS. 
+       --ask-password            tanya untuk kata sandi. 
+       --no-iri                  non-aktifkan dukungan IRI. 
+       --local-encoding=ENC      gunakan ENC sebagai pengkodean lokal untuk IRI. 
+       --remote-encoding=ENC     gunakan ENC sebagai pengkodean baku remote. 
+       --unlink                  remove file before clobber. 
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
-  <!--<![endif]-->
+Direktori: 
+  -nd,  --no-directories          jangan membuat direktori. 
+  -x,  --force-directories        paksa pembuatan direktori. 
+  -nH, --no-host-directories      jangan buat host directories. 
+       --protocol-directories     gunakan nama protocol dalam direktori. 
+  -P,  --directory-prefix=PREFIX  simpan file pada PREFIX/... 
+       --cut-dirs=NUMBER           abaikan NUMBER remote komponen direktori. 
 
-  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
+Pilihan HTTP: 
+       --http-user=USER        set http user pada USER. 
+       --http-password=PASS    set http password pada PASS. 
+       --nocache               dissallow server-cached data. 
+       --default-page=NAMA     Ubah nama halaman baku (biasanya 
+                               ini `index.html&#39;.). 
+  -E,  --adjust-extension      simpan HTML/CSS dokumen dengan ekstensi yang sesuai. 
+       --ignore-length         abaikan `Content-Length&#39; bagian header. 
+       --header=STRING         masukkan STRING dalam headers. 
+       --max-redirect          batas maksimal yang diperbolehkan untuk redirection setiap halaman. 
+       --proxy-user=USER       set USER sebagai username proxy. 
+       --proxy-password=PASS   set PASS sebagai password proxy. 
+       --referer=URL           masukkan `Referer: URL&#39; header dalam HTTP request. 
+       --save-headers          simpan HTTP headers pada file. 
+  -U,  --user-agent=AGENT      identifikasi sebagai AGEN daripada sebagai Wget/VERSION. 
+       --no-http-keep-alive    disable HTTP keep-alive (persistent koneksi). 
+       --no-cookies            jangan menggunakan cookies. 
+       --load-cookies=FILE     load cookies dari FILE sebelum session. 
+       --save-cookies=FILE     simpan cookies pada FILE sesudah session. 
+       --keep-session-cookies  load dan simpan session (non-permanen) cookies. 
+       --post-data=STRING      gunakan metoda POST; kirim STRING sebagai data. 
+       --post-file=FILE        gunakan metoda POST; kirim isi dari FILE. 
+       --method=HTTPMethod     use method &#34;HTTPMethod&#34; in the header. 
+       --body-data=STRING      Send STRING as data. --method MUST be set. 
+       --body-file=FILE        Send contents of FILE. --method MUST be set. 
+       --content-disposition   Lihat header Content-Disposition ketika memilih 
+                               berkas lokal (EKSPERIMEN). 
+       --content-on-error      output the received content on server errors. 
+       --auth-no-challenge     Kirim informasi otentifikasi standar HTTP tanpa 
+                               harus menunggu untuk ditanyai oleh server. 
 
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+Pilihan HTTPS (SSL/TLS): 
+       --secure-protocol=PR     choose secure protocol, one of auto, SSLv2, 
+                                SSLv3, TLSv1 and PFS. 
+       --https-only             only follow secure HTTPS links 
+       --no-check-certificate   jangan memvalidasi server certificate. 
+       --certificate=FILE       client certificate file. 
+       --certificate-type=TYPE  tipe sertifikate client, PEM atau DER. 
+       --private-key=FILE       private key file. 
+       --private-key-type=TYPE  tipe private key, PEM atau DER. 
+       --ca-certificate=FILE    file yang berisi CA&#39;s. 
+       --ca-directory=DIR       direktori dimana hash list dari CA&#39;s disimpan 
+       --random-file=FILE       file dengan data acak untuk seeding SSL PRNG. 
+       --egd-file=FILE          penamaan file EGD socket dengan data random. 
 
-  
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+Pilihan FTP: 
+       --ftp-user=USER         set ftp user pada USER. 
+       --ftp-password=PASS     set ftp password pada PASS. 
+       --no-remove-listing     jangan hapus file `.listing&#39;. 
+       --no-glob               matikan FTP nama file globbing. 
+       --no-passive-ftp        disable the &#34;passive&#34; mode trasfer. 
+       --preserve-permissions  preserver remote file permissions. 
+       --retr-symlinks         ketika berekursif, ambil linked-to files (bukan dir). 
 
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+WARC options: 
+       --warc-file=FILENAME      save request/response data to a .warc.gz file. 
+       --warc-header=STRING      insert STRING into the warcinfo record. 
+       --warc-max-size=NUMBER    set maximum size of WARC files to NUMBER. 
+       --warc-cdx                write CDX index files. 
+       --warc-dedup=FILENAME     do not store records listed in this CDX file. 
+       --no-warc-compression     do not compress WARC files with GZIP. 
+       --no-warc-digests         do not calculate SHA1 digests. 
+       --no-warc-keep-log        do not store the log file in a WARC record. 
+       --warc-tempdir=DIRECTORY  location for temporary files created by the 
+                                 WARC writer. 
 
- 
-  
+Recursive download: 
+  -r,  --recursive          spesifikasikan untuk mendownload rekursif. 
+  -l,  --level=NUMBER      maksimum kedalaman rekursi (inf atau 0 untuk tak terhingga). 
+       --delete-after       delete files locally sesudah mendownloadnya. 
+  -k,  --convert-links      buat links dalam HTML yang didownload atau CSS yang 
+                            menunjuk ke berkas lokal. 
+  --backups=N   before writing file X, rotate up to N backup files. 
+  -K,  --backup-converted   sebelum mengubah file X, backup sebagai X.orig. 
+  -m,  --mirror             shortcut untuk -N -r -l inf --no-remove-listing. 
+  -p,  --page-requisites    ambil semua gambar, dll. yang diperlukan untuk menampilkan file HTML. 
+       --strict-comments    hidupkan strick (SGML) handling dari komentar HTML. 
 
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
-  
+Recursive diterima/ditolak: 
+  -A,  --accept=LIST               list yang dipisahkan oleh koma yang berisiekstensi yang diterima. 
+  -R,  --reject=LIST               list yang dipisahkan oleh koma yang berisiekstensi yang ditolak. 
+       --accept-regex=REGEX        regex matching accepted URLs. 
+       --reject-regex=REGEX        regex matching rejected URLs. 
+       --regex-type=TYPE           regex type (posix). 
+  -D,  --domains=LIST              list yang dipisahkan oleh koma yang berisidomains yang dibolehkan. 
+       --exclude-domains=LIST      list yang dipisahkan oleh koma yang berisidomains yang direject/tolak. 
+       --follow-ftp                ikuti link FTP dari dokumen HTML. 
+       --follow-tags=LIST          list yang dipisahkan oleh koma yang berisitag HTML yang diikuti 
+       --ignore-tags=LIST          list yang dipisahkan oleh koma yang berisitag HTML yang diabaikan. 
+  -H,  --span-hosts                pergi ke host asing ketika recursive. 
+  -L,  --relative                  hanya mengikuti links relative saja. 
+  -I,  --include-directories=LIST  list dari direktori yang dibolehkan. 
+  --trust-server-names             use the name specified by the redirection 
+                                   url last component. 
+  -X,  --exclude-directories=LIST   list dari direktori yang diabaikan. 
+  -np, --no-parent                 jangan merambah direktori atasnya. 
 
-  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
+Laporkan bug dan saran kepada &lt;bug-wget@gnu.org&gt;
+">
+<meta name="author" content="">
+<link rel="canonical" href="https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-  
-    
-        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
-    
-  
-  
-    
-        <script src="https://sasongko.web.id/js/my.js"></script>
-    
-  
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Menggunakan WGet Linux Download Manager">
+  <meta property="og:description" content="Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume. Cara menggunakannya mudah.
+$ wget [url] untuk mem-pause download tekan Ctrl&#43;C. Dan untuk melanjutkan kembali tambahkan opsi -c.
+$ wget [url] -c Untuk lebih lengkapnya tentang wget ada di manual wget.
+$ wget -h GNU Wget 1.15, adalah sebuah non-interaktif network retriever. Penggunaan: wget [PILIHAN]... [URL]... Argumen yang wajib untuk pilihan panjang juga wajib untuk pilihan yang pendek. Memulai: -V, --version menampilkan versi dari Wget dan keluar. -h, --help menampilkan bantuan ini. -b, --background pergi ke background setelah memulai. -e, --execute=COMMAND menjalankan sebuah perintah `.wgetrc&#39;-style. Mencatat dan memasukan berkas: -o, --output-file=FILE pesan log pada FILE. -a, --append-output=FILE tambahkan pesan pada FILE. -d, --debug tampilkan banyak informasi debugging. -q, --quiet diam (tidak ada output). -v, --verbose jadi verbose (ini yang default). -nv, --no-verbose matikan verboseness, tanpa menjadi quiet. --report-speed=TYPE Output bandwidth as TYPE. TYPE can be bits. -i, --input-file=BERKAS download URLs ditemukan dalam lokal atau BERKAS eksternal. -F, --force-html perlakukan input file sebagai HTML. -B, --base=URL telusuri berkas masukan HTML (-i -F) relatif ke URL. --config=FILE Specify config file to use. Download: -t, --tries=NUMBER set nomor mencoba ke NUMBER (0 untuk tidak terbatas). --retry-connrefused coba lagi walaupun koneksi ditolak. -O, --output-document=FILE tulis document pada FILE. -nc, --no-clobber skip downloads that would download to existing files (overwriting them). -c, --continue lanjutkan mengambil file yang terdownload sebagian. --progress=TYPE pilih tipe gauge progress. -N, --timestamping jangan mengambil kembali file kecuali file lebih baru dari file local. --no-use-server-timestamps don&#39;t set the local file&#39;s timestamp by the one on the server. -S, --server-response tampilkan balasan server. --spider jangan mendownload apapun. -T, --timeout=SECONDS set semua nilai timeout pada SECONDS. --dns-timeout=SECS set the DNS lookup timeout pada SECS. --connect-timeout=SECS set the connect timeout pada SECS. --read-timeout=SECS set the read timeout pada SECS. -w, --wait=SECONDS tunggu SECONDS diantara pengambilan. --waitretry=SECONDS tunggu 1..SECONDS diantara pencobaan dari sebuah pengambilan. --random-wait wait from 0.5*WAIT...1.5*WAIT secs between retrievals. --no-proxy secara eksplisit mematikan proxy. -Q, --quota=NUMBER set pengambilan quota pada NUMBER. --bind-address=ADDRESS bind ke ADDRESS (hostname atau IP) pada local host. --limit-rate=RATE batasi kecepatan download ke RATE. --no-dns-cache matikan caching dari DNS lookups. --restrict-file-names=OS restrict karakter dalam nama file ke salah satu dari yang dibolehkan oleh OS. --ignore-case abaikan besar/kecil huruf ketika mencocokan files/direktori.. -4, --inet4-only hanya menghubungi ke alamat IPv4 saja. -6, --inet6-only hanya menghubungi ke alamat IPv6 saja. --prefer-family=FAMILY hubungi terlebih dahulu alamat dari family yang dispesifikasikan, salah satu dari IPv6, IPv4 atau none. --user=USER set kedua ftp dan http user pada USER. --password=PASS set kedua ftp dan http password pada PASS. --ask-password tanya untuk kata sandi. --no-iri non-aktifkan dukungan IRI. --local-encoding=ENC gunakan ENC sebagai pengkodean lokal untuk IRI. --remote-encoding=ENC gunakan ENC sebagai pengkodean baku remote. --unlink remove file before clobber. Direktori: -nd, --no-directories jangan membuat direktori. -x, --force-directories paksa pembuatan direktori. -nH, --no-host-directories jangan buat host directories. --protocol-directories gunakan nama protocol dalam direktori. -P, --directory-prefix=PREFIX simpan file pada PREFIX/... --cut-dirs=NUMBER abaikan NUMBER remote komponen direktori. Pilihan HTTP: --http-user=USER set http user pada USER. --http-password=PASS set http password pada PASS. --nocache dissallow server-cached data. --default-page=NAMA Ubah nama halaman baku (biasanya ini `index.html&#39;.). -E, --adjust-extension simpan HTML/CSS dokumen dengan ekstensi yang sesuai. --ignore-length abaikan `Content-Length&#39; bagian header. --header=STRING masukkan STRING dalam headers. --max-redirect batas maksimal yang diperbolehkan untuk redirection setiap halaman. --proxy-user=USER set USER sebagai username proxy. --proxy-password=PASS set PASS sebagai password proxy. --referer=URL masukkan `Referer: URL&#39; header dalam HTTP request. --save-headers simpan HTTP headers pada file. -U, --user-agent=AGENT identifikasi sebagai AGEN daripada sebagai Wget/VERSION. --no-http-keep-alive disable HTTP keep-alive (persistent koneksi). --no-cookies jangan menggunakan cookies. --load-cookies=FILE load cookies dari FILE sebelum session. --save-cookies=FILE simpan cookies pada FILE sesudah session. --keep-session-cookies load dan simpan session (non-permanen) cookies. --post-data=STRING gunakan metoda POST; kirim STRING sebagai data. --post-file=FILE gunakan metoda POST; kirim isi dari FILE. --method=HTTPMethod use method &#34;HTTPMethod&#34; in the header. --body-data=STRING Send STRING as data. --method MUST be set. --body-file=FILE Send contents of FILE. --method MUST be set. --content-disposition Lihat header Content-Disposition ketika memilih berkas lokal (EKSPERIMEN). --content-on-error output the received content on server errors. --auth-no-challenge Kirim informasi otentifikasi standar HTTP tanpa harus menunggu untuk ditanyai oleh server. Pilihan HTTPS (SSL/TLS): --secure-protocol=PR choose secure protocol, one of auto, SSLv2, SSLv3, TLSv1 and PFS. --https-only only follow secure HTTPS links --no-check-certificate jangan memvalidasi server certificate. --certificate=FILE client certificate file. --certificate-type=TYPE tipe sertifikate client, PEM atau DER. --private-key=FILE private key file. --private-key-type=TYPE tipe private key, PEM atau DER. --ca-certificate=FILE file yang berisi CA&#39;s. --ca-directory=DIR direktori dimana hash list dari CA&#39;s disimpan --random-file=FILE file dengan data acak untuk seeding SSL PRNG. --egd-file=FILE penamaan file EGD socket dengan data random. Pilihan FTP: --ftp-user=USER set ftp user pada USER. --ftp-password=PASS set ftp password pada PASS. --no-remove-listing jangan hapus file `.listing&#39;. --no-glob matikan FTP nama file globbing. --no-passive-ftp disable the &#34;passive&#34; mode trasfer. --preserve-permissions preserver remote file permissions. --retr-symlinks ketika berekursif, ambil linked-to files (bukan dir). WARC options: --warc-file=FILENAME save request/response data to a .warc.gz file. --warc-header=STRING insert STRING into the warcinfo record. --warc-max-size=NUMBER set maximum size of WARC files to NUMBER. --warc-cdx write CDX index files. --warc-dedup=FILENAME do not store records listed in this CDX file. --no-warc-compression do not compress WARC files with GZIP. --no-warc-digests do not calculate SHA1 digests. --no-warc-keep-log do not store the log file in a WARC record. --warc-tempdir=DIRECTORY location for temporary files created by the WARC writer. Recursive download: -r, --recursive spesifikasikan untuk mendownload rekursif. -l, --level=NUMBER maksimum kedalaman rekursi (inf atau 0 untuk tak terhingga). --delete-after delete files locally sesudah mendownloadnya. -k, --convert-links buat links dalam HTML yang didownload atau CSS yang menunjuk ke berkas lokal. --backups=N before writing file X, rotate up to N backup files. -K, --backup-converted sebelum mengubah file X, backup sebagai X.orig. -m, --mirror shortcut untuk -N -r -l inf --no-remove-listing. -p, --page-requisites ambil semua gambar, dll. yang diperlukan untuk menampilkan file HTML. --strict-comments hidupkan strick (SGML) handling dari komentar HTML. Recursive diterima/ditolak: -A, --accept=LIST list yang dipisahkan oleh koma yang berisiekstensi yang diterima. -R, --reject=LIST list yang dipisahkan oleh koma yang berisiekstensi yang ditolak. --accept-regex=REGEX regex matching accepted URLs. --reject-regex=REGEX regex matching rejected URLs. --regex-type=TYPE regex type (posix). -D, --domains=LIST list yang dipisahkan oleh koma yang berisidomains yang dibolehkan. --exclude-domains=LIST list yang dipisahkan oleh koma yang berisidomains yang direject/tolak. --follow-ftp ikuti link FTP dari dokumen HTML. --follow-tags=LIST list yang dipisahkan oleh koma yang berisitag HTML yang diikuti --ignore-tags=LIST list yang dipisahkan oleh koma yang berisitag HTML yang diabaikan. -H, --span-hosts pergi ke host asing ketika recursive. -L, --relative hanya mengikuti links relative saja. -I, --include-directories=LIST list dari direktori yang dibolehkan. --trust-server-names use the name specified by the redirection url last component. -X, --exclude-directories=LIST list dari direktori yang diabaikan. -np, --no-parent jangan merambah direktori atasnya. Laporkan bug dan saran kepada &lt;bug-wget@gnu.org&gt; ">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2014-03-23T10:28:12+00:00">
+    <meta property="article:modified_time" content="2014-03-23T10:28:12+00:00">
+    <meta property="article:tag" content="Slackware">
+    <meta property="article:tag" content="Blankon">
+    <meta property="article:tag" content="Internet-Download-Manager">
+    <meta property="article:tag" content="Terminal">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Menggunakan WGet Linux Download Manager">
+<meta name="twitter:description" content="Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume.
+Cara menggunakannya mudah.
+$ wget [url]
+untuk mem-pause download tekan Ctrl&#43;C. Dan untuk melanjutkan kembali tambahkan opsi -c.
+$ wget [url] -c
+Untuk lebih lengkapnya tentang wget ada di manual wget.
+$ wget -h 
+GNU Wget 1.15, adalah sebuah non-interaktif network retriever. 
+Penggunaan: wget [PILIHAN]... [URL]... 
+
+Argumen yang wajib untuk pilihan panjang juga wajib untuk pilihan yang pendek. 
+
+Memulai: 
+  -V,  --version           menampilkan versi dari Wget dan keluar. 
+  -h,  --help              menampilkan bantuan ini. 
+  -b,  --background        pergi ke background setelah memulai. 
+  -e,  --execute=COMMAND   menjalankan sebuah perintah `.wgetrc&#39;-style. 
+
+Mencatat dan memasukan berkas: 
+  -o,  --output-file=FILE     pesan log pada FILE. 
+  -a,  --append-output=FILE  tambahkan pesan pada FILE. 
+  -d,  --debug               tampilkan banyak informasi debugging. 
+  -q,  --quiet               diam (tidak ada output). 
+  -v,  --verbose             jadi verbose (ini yang default). 
+   -nv, --no-verbose          matikan verboseness, tanpa menjadi quiet. 
+       --report-speed=TYPE   Output bandwidth as TYPE.  TYPE can be bits. 
+  -i,  --input-file=BERKAS    download URLs ditemukan dalam lokal atau BERKAS eksternal. 
+  -F,  --force-html          perlakukan input file sebagai HTML. 
+  -B,  --base=URL            telusuri berkas masukan HTML (-i -F) 
+                             relatif ke URL. 
+       --config=FILE         Specify config file to use. 
+
+Download: 
+  -t,  --tries=NUMBER            set nomor mencoba ke NUMBER (0 untuk tidak terbatas). 
+       --retry-connrefused       coba lagi walaupun koneksi ditolak. 
+  -O,  --output-document=FILE    tulis document pada FILE. 
+  -nc, --no-clobber              skip downloads that would download to 
+                                 existing files (overwriting them). 
+  -c,  --continue                lanjutkan mengambil file yang terdownload  sebagian. 
+       --progress=TYPE           pilih tipe gauge progress. 
+  -N,  --timestamping            jangan mengambil kembali file kecuali file 
+                                 lebih baru dari file local. 
+  --no-use-server-timestamps     don&#39;t set the local file&#39;s timestamp by 
+                                 the one on the server. 
+  -S,  --server-response         tampilkan balasan server. 
+       --spider                  jangan mendownload apapun. 
+  -T,  --timeout=SECONDS         set semua nilai timeout pada SECONDS. 
+       --dns-timeout=SECS        set the DNS lookup timeout pada SECS. 
+       --connect-timeout=SECS    set the connect timeout pada SECS. 
+       --read-timeout=SECS       set the read timeout pada SECS. 
+  -w,  --wait=SECONDS            tunggu SECONDS diantara pengambilan. 
+       --waitretry=SECONDS       tunggu 1..SECONDS diantara pencobaan dari sebuah pengambilan. 
+       --random-wait             wait from 0.5*WAIT...1.5*WAIT secs between retrievals. 
+       --no-proxy                secara eksplisit mematikan proxy. 
+  -Q,  --quota=NUMBER            set pengambilan quota pada NUMBER. 
+       --bind-address=ADDRESS    bind ke ADDRESS (hostname atau IP) pada local host. 
+       --limit-rate=RATE         batasi kecepatan download ke RATE. 
+       --no-dns-cache            matikan caching dari DNS lookups. 
+       --restrict-file-names=OS  restrict karakter dalam nama file ke salah satu dari yang dibolehkan oleh OS. 
+       --ignore-case             abaikan besar/kecil huruf ketika mencocokan files/direktori.. 
+  -4,  --inet4-only              hanya menghubungi ke alamat IPv4 saja. 
+  -6,  --inet6-only              hanya menghubungi ke alamat IPv6 saja. 
+       --prefer-family=FAMILY    hubungi terlebih dahulu alamat dari family  yang dispesifikasikan, 
+                                 salah satu dari IPv6, IPv4 atau none. 
+       --user=USER               set kedua ftp dan http user pada USER. 
+       --password=PASS           set kedua ftp dan http password pada PASS. 
+       --ask-password            tanya untuk kata sandi. 
+       --no-iri                  non-aktifkan dukungan IRI. 
+       --local-encoding=ENC      gunakan ENC sebagai pengkodean lokal untuk IRI. 
+       --remote-encoding=ENC     gunakan ENC sebagai pengkodean baku remote. 
+       --unlink                  remove file before clobber. 
+
+Direktori: 
+  -nd,  --no-directories          jangan membuat direktori. 
+  -x,  --force-directories        paksa pembuatan direktori. 
+  -nH, --no-host-directories      jangan buat host directories. 
+       --protocol-directories     gunakan nama protocol dalam direktori. 
+  -P,  --directory-prefix=PREFIX  simpan file pada PREFIX/... 
+       --cut-dirs=NUMBER           abaikan NUMBER remote komponen direktori. 
+
+Pilihan HTTP: 
+       --http-user=USER        set http user pada USER. 
+       --http-password=PASS    set http password pada PASS. 
+       --nocache               dissallow server-cached data. 
+       --default-page=NAMA     Ubah nama halaman baku (biasanya 
+                               ini `index.html&#39;.). 
+  -E,  --adjust-extension      simpan HTML/CSS dokumen dengan ekstensi yang sesuai. 
+       --ignore-length         abaikan `Content-Length&#39; bagian header. 
+       --header=STRING         masukkan STRING dalam headers. 
+       --max-redirect          batas maksimal yang diperbolehkan untuk redirection setiap halaman. 
+       --proxy-user=USER       set USER sebagai username proxy. 
+       --proxy-password=PASS   set PASS sebagai password proxy. 
+       --referer=URL           masukkan `Referer: URL&#39; header dalam HTTP request. 
+       --save-headers          simpan HTTP headers pada file. 
+  -U,  --user-agent=AGENT      identifikasi sebagai AGEN daripada sebagai Wget/VERSION. 
+       --no-http-keep-alive    disable HTTP keep-alive (persistent koneksi). 
+       --no-cookies            jangan menggunakan cookies. 
+       --load-cookies=FILE     load cookies dari FILE sebelum session. 
+       --save-cookies=FILE     simpan cookies pada FILE sesudah session. 
+       --keep-session-cookies  load dan simpan session (non-permanen) cookies. 
+       --post-data=STRING      gunakan metoda POST; kirim STRING sebagai data. 
+       --post-file=FILE        gunakan metoda POST; kirim isi dari FILE. 
+       --method=HTTPMethod     use method &#34;HTTPMethod&#34; in the header. 
+       --body-data=STRING      Send STRING as data. --method MUST be set. 
+       --body-file=FILE        Send contents of FILE. --method MUST be set. 
+       --content-disposition   Lihat header Content-Disposition ketika memilih 
+                               berkas lokal (EKSPERIMEN). 
+       --content-on-error      output the received content on server errors. 
+       --auth-no-challenge     Kirim informasi otentifikasi standar HTTP tanpa 
+                               harus menunggu untuk ditanyai oleh server. 
+
+Pilihan HTTPS (SSL/TLS): 
+       --secure-protocol=PR     choose secure protocol, one of auto, SSLv2, 
+                                SSLv3, TLSv1 and PFS. 
+       --https-only             only follow secure HTTPS links 
+       --no-check-certificate   jangan memvalidasi server certificate. 
+       --certificate=FILE       client certificate file. 
+       --certificate-type=TYPE  tipe sertifikate client, PEM atau DER. 
+       --private-key=FILE       private key file. 
+       --private-key-type=TYPE  tipe private key, PEM atau DER. 
+       --ca-certificate=FILE    file yang berisi CA&#39;s. 
+       --ca-directory=DIR       direktori dimana hash list dari CA&#39;s disimpan 
+       --random-file=FILE       file dengan data acak untuk seeding SSL PRNG. 
+       --egd-file=FILE          penamaan file EGD socket dengan data random. 
+
+Pilihan FTP: 
+       --ftp-user=USER         set ftp user pada USER. 
+       --ftp-password=PASS     set ftp password pada PASS. 
+       --no-remove-listing     jangan hapus file `.listing&#39;. 
+       --no-glob               matikan FTP nama file globbing. 
+       --no-passive-ftp        disable the &#34;passive&#34; mode trasfer. 
+       --preserve-permissions  preserver remote file permissions. 
+       --retr-symlinks         ketika berekursif, ambil linked-to files (bukan dir). 
+
+WARC options: 
+       --warc-file=FILENAME      save request/response data to a .warc.gz file. 
+       --warc-header=STRING      insert STRING into the warcinfo record. 
+       --warc-max-size=NUMBER    set maximum size of WARC files to NUMBER. 
+       --warc-cdx                write CDX index files. 
+       --warc-dedup=FILENAME     do not store records listed in this CDX file. 
+       --no-warc-compression     do not compress WARC files with GZIP. 
+       --no-warc-digests         do not calculate SHA1 digests. 
+       --no-warc-keep-log        do not store the log file in a WARC record. 
+       --warc-tempdir=DIRECTORY  location for temporary files created by the 
+                                 WARC writer. 
+
+Recursive download: 
+  -r,  --recursive          spesifikasikan untuk mendownload rekursif. 
+  -l,  --level=NUMBER      maksimum kedalaman rekursi (inf atau 0 untuk tak terhingga). 
+       --delete-after       delete files locally sesudah mendownloadnya. 
+  -k,  --convert-links      buat links dalam HTML yang didownload atau CSS yang 
+                            menunjuk ke berkas lokal. 
+  --backups=N   before writing file X, rotate up to N backup files. 
+  -K,  --backup-converted   sebelum mengubah file X, backup sebagai X.orig. 
+  -m,  --mirror             shortcut untuk -N -r -l inf --no-remove-listing. 
+  -p,  --page-requisites    ambil semua gambar, dll. yang diperlukan untuk menampilkan file HTML. 
+       --strict-comments    hidupkan strick (SGML) handling dari komentar HTML. 
+
+Recursive diterima/ditolak: 
+  -A,  --accept=LIST               list yang dipisahkan oleh koma yang berisiekstensi yang diterima. 
+  -R,  --reject=LIST               list yang dipisahkan oleh koma yang berisiekstensi yang ditolak. 
+       --accept-regex=REGEX        regex matching accepted URLs. 
+       --reject-regex=REGEX        regex matching rejected URLs. 
+       --regex-type=TYPE           regex type (posix). 
+  -D,  --domains=LIST              list yang dipisahkan oleh koma yang berisidomains yang dibolehkan. 
+       --exclude-domains=LIST      list yang dipisahkan oleh koma yang berisidomains yang direject/tolak. 
+       --follow-ftp                ikuti link FTP dari dokumen HTML. 
+       --follow-tags=LIST          list yang dipisahkan oleh koma yang berisitag HTML yang diikuti 
+       --ignore-tags=LIST          list yang dipisahkan oleh koma yang berisitag HTML yang diabaikan. 
+  -H,  --span-hosts                pergi ke host asing ketika recursive. 
+  -L,  --relative                  hanya mengikuti links relative saja. 
+  -I,  --include-directories=LIST  list dari direktori yang dibolehkan. 
+  --trust-server-names             use the name specified by the redirection 
+                                   url last component. 
+  -X,  --exclude-directories=LIST   list dari direktori yang diabaikan. 
+  -np, --no-parent                 jangan merambah direktori atasnya. 
+
+Laporkan bug dan saran kepada &lt;bug-wget@gnu.org&gt;
+">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://sasongko.web.id/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Menggunakan WGet Linux Download Manager",
+      "item": "https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Menggunakan WGet Linux Download Manager",
+  "name": "Menggunakan WGet Linux Download Manager",
+  "description": "Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume. Cara menggunakannya mudah.\n$ wget [url] untuk mem-pause download tekan Ctrl+C. Dan untuk melanjutkan kembali tambahkan opsi -c.\n$ wget [url] -c Untuk lebih lengkapnya tentang wget ada di manual wget.\n$ wget -h GNU Wget 1.15, adalah sebuah non-interaktif network retriever. Penggunaan: wget [PILIHAN]... [URL]... Argumen yang wajib untuk pilihan panjang juga wajib untuk pilihan yang pendek. Memulai: -V, --version menampilkan versi dari Wget dan keluar. -h, --help menampilkan bantuan ini. -b, --background pergi ke background setelah memulai. -e, --execute=COMMAND menjalankan sebuah perintah `.wgetrc\u0026#39;-style. Mencatat dan memasukan berkas: -o, --output-file=FILE pesan log pada FILE. -a, --append-output=FILE tambahkan pesan pada FILE. -d, --debug tampilkan banyak informasi debugging. -q, --quiet diam (tidak ada output). -v, --verbose jadi verbose (ini yang default). -nv, --no-verbose matikan verboseness, tanpa menjadi quiet. --report-speed=TYPE Output bandwidth as TYPE. TYPE can be bits. -i, --input-file=BERKAS download URLs ditemukan dalam lokal atau BERKAS eksternal. -F, --force-html perlakukan input file sebagai HTML. -B, --base=URL telusuri berkas masukan HTML (-i -F) relatif ke URL. --config=FILE Specify config file to use. Download: -t, --tries=NUMBER set nomor mencoba ke NUMBER (0 untuk tidak terbatas). --retry-connrefused coba lagi walaupun koneksi ditolak. -O, --output-document=FILE tulis document pada FILE. -nc, --no-clobber skip downloads that would download to existing files (overwriting them). -c, --continue lanjutkan mengambil file yang terdownload sebagian. --progress=TYPE pilih tipe gauge progress. -N, --timestamping jangan mengambil kembali file kecuali file lebih baru dari file local. --no-use-server-timestamps don\u0026#39;t set the local file\u0026#39;s timestamp by the one on the server. -S, --server-response tampilkan balasan server. --spider jangan mendownload apapun. -T, --timeout=SECONDS set semua nilai timeout pada SECONDS. --dns-timeout=SECS set the DNS lookup timeout pada SECS. --connect-timeout=SECS set the connect timeout pada SECS. --read-timeout=SECS set the read timeout pada SECS. -w, --wait=SECONDS tunggu SECONDS diantara pengambilan. --waitretry=SECONDS tunggu 1..SECONDS diantara pencobaan dari sebuah pengambilan. --random-wait wait from 0.5*WAIT...1.5*WAIT secs between retrievals. --no-proxy secara eksplisit mematikan proxy. -Q, --quota=NUMBER set pengambilan quota pada NUMBER. --bind-address=ADDRESS bind ke ADDRESS (hostname atau IP) pada local host. --limit-rate=RATE batasi kecepatan download ke RATE. --no-dns-cache matikan caching dari DNS lookups. --restrict-file-names=OS restrict karakter dalam nama file ke salah satu dari yang dibolehkan oleh OS. --ignore-case abaikan besar/kecil huruf ketika mencocokan files/direktori.. -4, --inet4-only hanya menghubungi ke alamat IPv4 saja. -6, --inet6-only hanya menghubungi ke alamat IPv6 saja. --prefer-family=FAMILY hubungi terlebih dahulu alamat dari family yang dispesifikasikan, salah satu dari IPv6, IPv4 atau none. --user=USER set kedua ftp dan http user pada USER. --password=PASS set kedua ftp dan http password pada PASS. --ask-password tanya untuk kata sandi. --no-iri non-aktifkan dukungan IRI. --local-encoding=ENC gunakan ENC sebagai pengkodean lokal untuk IRI. --remote-encoding=ENC gunakan ENC sebagai pengkodean baku remote. --unlink remove file before clobber. Direktori: -nd, --no-directories jangan membuat direktori. -x, --force-directories paksa pembuatan direktori. -nH, --no-host-directories jangan buat host directories. --protocol-directories gunakan nama protocol dalam direktori. -P, --directory-prefix=PREFIX simpan file pada PREFIX/... --cut-dirs=NUMBER abaikan NUMBER remote komponen direktori. Pilihan HTTP: --http-user=USER set http user pada USER. --http-password=PASS set http password pada PASS. --nocache dissallow server-cached data. --default-page=NAMA Ubah nama halaman baku (biasanya ini `index.html\u0026#39;.). -E, --adjust-extension simpan HTML/CSS dokumen dengan ekstensi yang sesuai. --ignore-length abaikan `Content-Length\u0026#39; bagian header. --header=STRING masukkan STRING dalam headers. --max-redirect batas maksimal yang diperbolehkan untuk redirection setiap halaman. --proxy-user=USER set USER sebagai username proxy. --proxy-password=PASS set PASS sebagai password proxy. --referer=URL masukkan `Referer: URL\u0026#39; header dalam HTTP request. --save-headers simpan HTTP headers pada file. -U, --user-agent=AGENT identifikasi sebagai AGEN daripada sebagai Wget/VERSION. --no-http-keep-alive disable HTTP keep-alive (persistent koneksi). --no-cookies jangan menggunakan cookies. --load-cookies=FILE load cookies dari FILE sebelum session. --save-cookies=FILE simpan cookies pada FILE sesudah session. --keep-session-cookies load dan simpan session (non-permanen) cookies. --post-data=STRING gunakan metoda POST; kirim STRING sebagai data. --post-file=FILE gunakan metoda POST; kirim isi dari FILE. --method=HTTPMethod use method \u0026#34;HTTPMethod\u0026#34; in the header. --body-data=STRING Send STRING as data. --method MUST be set. --body-file=FILE Send contents of FILE. --method MUST be set. --content-disposition Lihat header Content-Disposition ketika memilih berkas lokal (EKSPERIMEN). --content-on-error output the received content on server errors. --auth-no-challenge Kirim informasi otentifikasi standar HTTP tanpa harus menunggu untuk ditanyai oleh server. Pilihan HTTPS (SSL/TLS): --secure-protocol=PR choose secure protocol, one of auto, SSLv2, SSLv3, TLSv1 and PFS. --https-only only follow secure HTTPS links --no-check-certificate jangan memvalidasi server certificate. --certificate=FILE client certificate file. --certificate-type=TYPE tipe sertifikate client, PEM atau DER. --private-key=FILE private key file. --private-key-type=TYPE tipe private key, PEM atau DER. --ca-certificate=FILE file yang berisi CA\u0026#39;s. --ca-directory=DIR direktori dimana hash list dari CA\u0026#39;s disimpan --random-file=FILE file dengan data acak untuk seeding SSL PRNG. --egd-file=FILE penamaan file EGD socket dengan data random. Pilihan FTP: --ftp-user=USER set ftp user pada USER. --ftp-password=PASS set ftp password pada PASS. --no-remove-listing jangan hapus file `.listing\u0026#39;. --no-glob matikan FTP nama file globbing. --no-passive-ftp disable the \u0026#34;passive\u0026#34; mode trasfer. --preserve-permissions preserver remote file permissions. --retr-symlinks ketika berekursif, ambil linked-to files (bukan dir). WARC options: --warc-file=FILENAME save request/response data to a .warc.gz file. --warc-header=STRING insert STRING into the warcinfo record. --warc-max-size=NUMBER set maximum size of WARC files to NUMBER. --warc-cdx write CDX index files. --warc-dedup=FILENAME do not store records listed in this CDX file. --no-warc-compression do not compress WARC files with GZIP. --no-warc-digests do not calculate SHA1 digests. --no-warc-keep-log do not store the log file in a WARC record. --warc-tempdir=DIRECTORY location for temporary files created by the WARC writer. Recursive download: -r, --recursive spesifikasikan untuk mendownload rekursif. -l, --level=NUMBER maksimum kedalaman rekursi (inf atau 0 untuk tak terhingga). --delete-after delete files locally sesudah mendownloadnya. -k, --convert-links buat links dalam HTML yang didownload atau CSS yang menunjuk ke berkas lokal. --backups=N before writing file X, rotate up to N backup files. -K, --backup-converted sebelum mengubah file X, backup sebagai X.orig. -m, --mirror shortcut untuk -N -r -l inf --no-remove-listing. -p, --page-requisites ambil semua gambar, dll. yang diperlukan untuk menampilkan file HTML. --strict-comments hidupkan strick (SGML) handling dari komentar HTML. Recursive diterima/ditolak: -A, --accept=LIST list yang dipisahkan oleh koma yang berisiekstensi yang diterima. -R, --reject=LIST list yang dipisahkan oleh koma yang berisiekstensi yang ditolak. --accept-regex=REGEX regex matching accepted URLs. --reject-regex=REGEX regex matching rejected URLs. --regex-type=TYPE regex type (posix). -D, --domains=LIST list yang dipisahkan oleh koma yang berisidomains yang dibolehkan. --exclude-domains=LIST list yang dipisahkan oleh koma yang berisidomains yang direject/tolak. --follow-ftp ikuti link FTP dari dokumen HTML. --follow-tags=LIST list yang dipisahkan oleh koma yang berisitag HTML yang diikuti --ignore-tags=LIST list yang dipisahkan oleh koma yang berisitag HTML yang diabaikan. -H, --span-hosts pergi ke host asing ketika recursive. -L, --relative hanya mengikuti links relative saja. -I, --include-directories=LIST list dari direktori yang dibolehkan. --trust-server-names use the name specified by the redirection url last component. -X, --exclude-directories=LIST list dari direktori yang diabaikan. -np, --no-parent jangan merambah direktori atasnya. Laporkan bug dan saran kepada \u0026lt;bug-wget@gnu.org\u0026gt; ",
+  "keywords": [
+    "slackware", "blankon", "internet download manager", "terminal"
+  ],
+  "articleBody": "Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume. Cara menggunakannya mudah.\n$ wget [url] untuk mem-pause download tekan Ctrl+C. Dan untuk melanjutkan kembali tambahkan opsi -c.\n$ wget [url] -c Untuk lebih lengkapnya tentang wget ada di manual wget.\n$ wget -h GNU Wget 1.15, adalah sebuah non-interaktif network retriever. Penggunaan: wget [PILIHAN]... [URL]... Argumen yang wajib untuk pilihan panjang juga wajib untuk pilihan yang pendek. Memulai: -V, --version menampilkan versi dari Wget dan keluar. -h, --help menampilkan bantuan ini. -b, --background pergi ke background setelah memulai. -e, --execute=COMMAND menjalankan sebuah perintah `.wgetrc'-style. Mencatat dan memasukan berkas: -o, --output-file=FILE pesan log pada FILE. -a, --append-output=FILE tambahkan pesan pada FILE. -d, --debug tampilkan banyak informasi debugging. -q, --quiet diam (tidak ada output). -v, --verbose jadi verbose (ini yang default). -nv, --no-verbose matikan verboseness, tanpa menjadi quiet. --report-speed=TYPE Output bandwidth as TYPE. TYPE can be bits. -i, --input-file=BERKAS download URLs ditemukan dalam lokal atau BERKAS eksternal. -F, --force-html perlakukan input file sebagai HTML. -B, --base=URL telusuri berkas masukan HTML (-i -F) relatif ke URL. --config=FILE Specify config file to use. Download: -t, --tries=NUMBER set nomor mencoba ke NUMBER (0 untuk tidak terbatas). --retry-connrefused coba lagi walaupun koneksi ditolak. -O, --output-document=FILE tulis document pada FILE. -nc, --no-clobber skip downloads that would download to existing files (overwriting them). -c, --continue lanjutkan mengambil file yang terdownload sebagian. --progress=TYPE pilih tipe gauge progress. -N, --timestamping jangan mengambil kembali file kecuali file lebih baru dari file local. --no-use-server-timestamps don't set the local file's timestamp by the one on the server. -S, --server-response tampilkan balasan server. --spider jangan mendownload apapun. -T, --timeout=SECONDS set semua nilai timeout pada SECONDS. --dns-timeout=SECS set the DNS lookup timeout pada SECS. --connect-timeout=SECS set the connect timeout pada SECS. --read-timeout=SECS set the read timeout pada SECS. -w, --wait=SECONDS tunggu SECONDS diantara pengambilan. --waitretry=SECONDS tunggu 1..SECONDS diantara pencobaan dari sebuah pengambilan. --random-wait wait from 0.5*WAIT...1.5*WAIT secs between retrievals. --no-proxy secara eksplisit mematikan proxy. -Q, --quota=NUMBER set pengambilan quota pada NUMBER. --bind-address=ADDRESS bind ke ADDRESS (hostname atau IP) pada local host. --limit-rate=RATE batasi kecepatan download ke RATE. --no-dns-cache matikan caching dari DNS lookups. --restrict-file-names=OS restrict karakter dalam nama file ke salah satu dari yang dibolehkan oleh OS. --ignore-case abaikan besar/kecil huruf ketika mencocokan files/direktori.. -4, --inet4-only hanya menghubungi ke alamat IPv4 saja. -6, --inet6-only hanya menghubungi ke alamat IPv6 saja. --prefer-family=FAMILY hubungi terlebih dahulu alamat dari family yang dispesifikasikan, salah satu dari IPv6, IPv4 atau none. --user=USER set kedua ftp dan http user pada USER. --password=PASS set kedua ftp dan http password pada PASS. --ask-password tanya untuk kata sandi. --no-iri non-aktifkan dukungan IRI. --local-encoding=ENC gunakan ENC sebagai pengkodean lokal untuk IRI. --remote-encoding=ENC gunakan ENC sebagai pengkodean baku remote. --unlink remove file before clobber. Direktori: -nd, --no-directories jangan membuat direktori. -x, --force-directories paksa pembuatan direktori. -nH, --no-host-directories jangan buat host directories. --protocol-directories gunakan nama protocol dalam direktori. -P, --directory-prefix=PREFIX simpan file pada PREFIX/... --cut-dirs=NUMBER abaikan NUMBER remote komponen direktori. Pilihan HTTP: --http-user=USER set http user pada USER. --http-password=PASS set http password pada PASS. --nocache dissallow server-cached data. --default-page=NAMA Ubah nama halaman baku (biasanya ini `index.html'.). -E, --adjust-extension simpan HTML/CSS dokumen dengan ekstensi yang sesuai. --ignore-length abaikan `Content-Length' bagian header. --header=STRING masukkan STRING dalam headers. --max-redirect batas maksimal yang diperbolehkan untuk redirection setiap halaman. --proxy-user=USER set USER sebagai username proxy. --proxy-password=PASS set PASS sebagai password proxy. --referer=URL masukkan `Referer: URL' header dalam HTTP request. --save-headers simpan HTTP headers pada file. -U, --user-agent=AGENT identifikasi sebagai AGEN daripada sebagai Wget/VERSION. --no-http-keep-alive disable HTTP keep-alive (persistent koneksi). --no-cookies jangan menggunakan cookies. --load-cookies=FILE load cookies dari FILE sebelum session. --save-cookies=FILE simpan cookies pada FILE sesudah session. --keep-session-cookies load dan simpan session (non-permanen) cookies. --post-data=STRING gunakan metoda POST; kirim STRING sebagai data. --post-file=FILE gunakan metoda POST; kirim isi dari FILE. --method=HTTPMethod use method \"HTTPMethod\" in the header. --body-data=STRING Send STRING as data. --method MUST be set. --body-file=FILE Send contents of FILE. --method MUST be set. --content-disposition Lihat header Content-Disposition ketika memilih berkas lokal (EKSPERIMEN). --content-on-error output the received content on server errors. --auth-no-challenge Kirim informasi otentifikasi standar HTTP tanpa harus menunggu untuk ditanyai oleh server. Pilihan HTTPS (SSL/TLS): --secure-protocol=PR choose secure protocol, one of auto, SSLv2, SSLv3, TLSv1 and PFS. --https-only only follow secure HTTPS links --no-check-certificate jangan memvalidasi server certificate. --certificate=FILE client certificate file. --certificate-type=TYPE tipe sertifikate client, PEM atau DER. --private-key=FILE private key file. --private-key-type=TYPE tipe private key, PEM atau DER. --ca-certificate=FILE file yang berisi CA's. --ca-directory=DIR direktori dimana hash list dari CA's disimpan --random-file=FILE file dengan data acak untuk seeding SSL PRNG. --egd-file=FILE penamaan file EGD socket dengan data random. Pilihan FTP: --ftp-user=USER set ftp user pada USER. --ftp-password=PASS set ftp password pada PASS. --no-remove-listing jangan hapus file `.listing'. --no-glob matikan FTP nama file globbing. --no-passive-ftp disable the \"passive\" mode trasfer. --preserve-permissions preserver remote file permissions. --retr-symlinks ketika berekursif, ambil linked-to files (bukan dir). WARC options: --warc-file=FILENAME save request/response data to a .warc.gz file. --warc-header=STRING insert STRING into the warcinfo record. --warc-max-size=NUMBER set maximum size of WARC files to NUMBER. --warc-cdx write CDX index files. --warc-dedup=FILENAME do not store records listed in this CDX file. --no-warc-compression do not compress WARC files with GZIP. --no-warc-digests do not calculate SHA1 digests. --no-warc-keep-log do not store the log file in a WARC record. --warc-tempdir=DIRECTORY location for temporary files created by the WARC writer. Recursive download: -r, --recursive spesifikasikan untuk mendownload rekursif. -l, --level=NUMBER maksimum kedalaman rekursi (inf atau 0 untuk tak terhingga). --delete-after delete files locally sesudah mendownloadnya. -k, --convert-links buat links dalam HTML yang didownload atau CSS yang menunjuk ke berkas lokal. --backups=N before writing file X, rotate up to N backup files. -K, --backup-converted sebelum mengubah file X, backup sebagai X.orig. -m, --mirror shortcut untuk -N -r -l inf --no-remove-listing. -p, --page-requisites ambil semua gambar, dll. yang diperlukan untuk menampilkan file HTML. --strict-comments hidupkan strick (SGML) handling dari komentar HTML. Recursive diterima/ditolak: -A, --accept=LIST list yang dipisahkan oleh koma yang berisiekstensi yang diterima. -R, --reject=LIST list yang dipisahkan oleh koma yang berisiekstensi yang ditolak. --accept-regex=REGEX regex matching accepted URLs. --reject-regex=REGEX regex matching rejected URLs. --regex-type=TYPE regex type (posix). -D, --domains=LIST list yang dipisahkan oleh koma yang berisidomains yang dibolehkan. --exclude-domains=LIST list yang dipisahkan oleh koma yang berisidomains yang direject/tolak. --follow-ftp ikuti link FTP dari dokumen HTML. --follow-tags=LIST list yang dipisahkan oleh koma yang berisitag HTML yang diikuti --ignore-tags=LIST list yang dipisahkan oleh koma yang berisitag HTML yang diabaikan. -H, --span-hosts pergi ke host asing ketika recursive. -L, --relative hanya mengikuti links relative saja. -I, --include-directories=LIST list dari direktori yang dibolehkan. --trust-server-names use the name specified by the redirection url last component. -X, --exclude-directories=LIST list dari direktori yang diabaikan. -np, --no-parent jangan merambah direktori atasnya. Laporkan bug dan saran kepada ",
+  "wordCount" : "1121",
+  "inLanguage": "en",
+  "datePublished": "2014-03-23T10:28:12Z",
+  "dateModified": "2014-03-23T10:28:12Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Catatan Sasongko",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sasongko.web.id/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-<body>
-<div id="layout">
+</script>
 
-  
-<a href="#menu" id="menuLink" class="menu-link">
-  
-  <span></span>
-</a>
-<div id="menu">
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sasongko.web.id/" title="Home">
+                    <span><i class='fa fa-home fa-fw'></i>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/post/" title="Posts">
+                    <span><i class='fa fa-list fa-fw'></i>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/about/" title="Profil">
+                    <span><i class='fa fa-user fa-fw'></i>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/logo/" title="Logo">
+                    <span><i class='fa fa-user fa-fw'></i>Logo</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
 
-  
-
-  <div class="pure-menu">
-    <ul class="pure-menu-list">
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
-      
-        </li>
-      
-    </ul>
-  </div>
-
-  <div class="pure-menu social">
-  <ul class="pure-menu-list">
-
+<article class="post-single">
+  <header class="post-header">
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://youtube.com/channel/UCY4H1n73aQMB4LZjIJvH0_A" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </ul>
-</div>
-
-
-  <div>
-  <div class="small-print">
-    <small></small>
-  </div>
-  <div class="small-print">
-    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
-    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
-  </div>
-</div>
+    <h1 class="post-title entry-hint-parent">
+      Menggunakan WGet Linux Download Manager
+    </h1>
+    <div class="post-meta"><span title='2014-03-23 10:28:12 +0000 UTC'>23 Mar 2014</span>
 
 </div>
-
-
-  <div id="main">
-
-
-<div class="header">
-  <h1>Menggunakan WGet Linux Download Manager</h1>
-  <h2></h2>
-</div>
-<div class="content">
-
-  <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Mar 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/internet-download-manager">internet download manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  <p>Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume.
+  </header> 
+  <div class="post-content"><p>Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume.
 Cara menggunakannya mudah.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ wget <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span>
 </span></span></code></pre></div><p>untuk mem-pause download tekan Ctrl+C. Dan untuk melanjutkan kembali tambahkan opsi -c.</p>
@@ -428,130 +737,89 @@ Cara menggunakannya mudah.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Laporkan bug dan saran kepada &lt;bug-wget@gnu.org&gt;
 </span></span></code></pre></div>
-  
-  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
-<ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2014-03-23-wget-linux-download-manager%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
-	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2014-03-23-wget-linux-download-manager%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
-	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2014-03-23-wget-linux-download-manager%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
-	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2014-03-23-wget-linux-download-manager%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
-	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2014-03-23-wget-linux-download-manager%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
-	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2014-03-23-wget-linux-download-manager%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
-	</li>
-</ul>
 
-
-<style>
-	ul.share-buttons{
-	  list-style: none;
-	  padding: 0;
-	}
-
-	ul.share-buttons li{
-	  display: inline;
-	}
-
-	ul.share-buttons .sr-only{
-	  position: absolute;
-	  clip: rect(1px 1px 1px 1px);
-	  clip: rect(1px, 1px, 1px, 1px);
-	  padding: 0;
-	  border: 0;
-	  height: 1px;
-	  width: 1px;
-	  overflow: hidden;
-	}
-</style>
-
-
-  
-<div class="prev-next-post pure-g">
-  <div class="pure-u-1-24" style="text-align: left;">
-    
-    <a href="https://sasongko.web.id/post/2014-03-01-disable-automount/"><i class="fa fa-chevron-left"></i></a>
-    
   </div>
-  <div class="pure-u-10-24">
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
+      <li><a href="https://sasongko.web.id/tags/blankon/">Blankon</a></li>
+      <li><a href="https://sasongko.web.id/tags/internet-download-manager/">Internet-Download-Manager</a></li>
+      <li><a href="https://sasongko.web.id/tags/terminal/">Terminal</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
     
-    <nav class="prev">
-      <a href="https://sasongko.web.id/post/2014-03-01-disable-automount/">Disable Automount BlankOn 9 Suroboyo</a>
-    </nav>
-    
-  </div>
-  <div class="pure-u-2-24">
-    &nbsp;
-  </div>
-  <div class="pure-u-10-24">
-    
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2014-03-24-menggunakan-perintah-echo/">Menggunakan Perintah Echo</a>
-    </nav>
-    
-  </div>
-  <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2014-03-24-menggunakan-perintah-echo/"><i class="fa fa-chevron-right"></i></a>
-    
-  </div>
-</div>
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
-
-
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'catatansasongko';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
-</div>
-
-</div>
-</div>
-<script src="https://sasongko.web.id/js/ui.js"></script>
-<script src="https://sasongko.web.id/js/menus.js"></script>
-
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
 <script>
-  
-  if (window.location.hostname != "localhost") {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
 
-    ga('create', 'UA-49503242-1', 'auto');
-    ga('send', 'pageview');
-  }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
 </script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-
-
-
-<script src="https://sasongko.web.id/js/math-code.js"></script>
-  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-  
-
-
+</script>
 </body>
-</html>
 
+</html>

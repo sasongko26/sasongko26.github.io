@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Office on Catatan Sasongko</title>
     <link>https://sasongko.web.id/tags/office/</link>
     <description>Recent content in Office on Catatan Sasongko</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/tags/office/index.xml" rel="self" type="application/rss+xml" />
@@ -27,7 +27,8 @@
       <link>https://sasongko.web.id/post/2021-06-02-hapus-awalan-apostrofe-libreoffice-calc/</link>
       <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-06-02-hapus-awalan-apostrofe-libreoffice-calc/</guid>
-      <description>&lt;p&gt;Mengunduh file &lt;em&gt;spreadsheet&lt;/em&gt; dari &lt;strong&gt;google sheets&lt;/strong&gt; di setiap selnya yang berisi data angka diawali oleh tanda apostrofe atau kutip tunggal. Tanda ini tidak terlihat langsung. Ketika kita klik selnya dan lihat formula bar, baru tanda ini terlihat.&lt;/p&gt;&#xA;&lt;p&gt;Untuk menghapusnya melalui &lt;strong&gt;libreofiice calc&lt;/strong&gt; tentu saja. Klik &lt;strong&gt;Find &amp;amp; Replace&lt;/strong&gt;. &lt;strong&gt;Search for&lt;/strong&gt; inputkan .* dan &lt;strong&gt;Replace with&lt;/strong&gt; inputkan &amp;amp;. Centang atau piih opsi &lt;strong&gt;Regular expressions&lt;/strong&gt;. Kemudian &lt;strong&gt;Replace&lt;/strong&gt; atau &lt;strong&gt;Replace all&lt;/strong&gt; sesuai kebutuhan.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Mengunduh file &lt;em&gt;spreadsheet&lt;/em&gt; dari &lt;strong&gt;google sheets&lt;/strong&gt; di setiap selnya yang berisi data angka diawali oleh tanda apostrofe atau kutip tunggal. Tanda ini tidak terlihat langsung. Ketika kita klik selnya dan lihat formula bar, baru tanda ini terlihat.&lt;/p&gt;
+&lt;p&gt;Untuk menghapusnya melalui &lt;strong&gt;libreofiice calc&lt;/strong&gt; tentu saja. Klik &lt;strong&gt;Find &amp;amp; Replace&lt;/strong&gt;. &lt;strong&gt;Search for&lt;/strong&gt; inputkan .* dan &lt;strong&gt;Replace with&lt;/strong&gt; inputkan &amp;amp;. Centang atau piih opsi &lt;strong&gt;Regular expressions&lt;/strong&gt;. Kemudian &lt;strong&gt;Replace&lt;/strong&gt; atau &lt;strong&gt;Replace all&lt;/strong&gt; sesuai kebutuhan.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Jumlah baris dan kolom libreoffice calc</title>
@@ -41,14 +42,26 @@
       <link>https://sasongko.web.id/post/2021-03-13-menggabungkan-file-pdf/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-03-13-menggabungkan-file-pdf/</guid>
-      <description>&lt;p&gt;Misalkan mempunyai 2 file &lt;em&gt;ebook&lt;/em&gt; yaitu ebook1.pdf dan ebook2.pdf. Kedua file ini akan digabung menjadi ebook.pdf. Maka untuk menggabungkannya&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ pdfunite ebook1.pdf ebook2.pdf ebook.pdf&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;Misalkan mempunyai 2 file &lt;em&gt;ebook&lt;/em&gt; yaitu ebook1.pdf dan ebook2.pdf. Kedua file ini akan digabung menjadi ebook.pdf. Maka untuk menggabungkannya&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ pdfunite ebook1.pdf ebook2.pdf ebook.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Membuat file csv</title>
       <link>https://sasongko.web.id/post/2021-01-31-membuat-file-csv/</link>
       <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-01-31-membuat-file-csv/</guid>
-      <description>&lt;p&gt;File &lt;strong&gt;csv&lt;/strong&gt; merupakan file yang umum digunakan sebagai file data. Mudah dalam pembuatannya. Begitu juga dengan aksesnya. Bisa dibuat dengan &lt;em&gt;text editor, spreadsheet software&lt;/em&gt; maupun &lt;em&gt;statistical software&lt;/em&gt;. Pada kesempatan kali ini tidak menggunakan &lt;em&gt;statistical software&lt;/em&gt; seperti &lt;strong&gt;R&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h1 id=&#34;membuat-file-csv-dengan-_text-editor_&#34;&gt;Membuat file csv dengan &lt;em&gt;text editor&lt;/em&gt;&lt;/h1&gt;&#xA;&lt;p&gt;Prinsip pembuatan adalah :&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Antar kolom dipisahkan oleh tanda koma (,)&lt;/li&gt;&#xA;&lt;li&gt;Kolom pertama (umumnya) sebagai &lt;em&gt;header&lt;/em&gt; atau nama/judul kolom&lt;/li&gt;&#xA;&lt;li&gt;Antar baris dipisahkan oleh enter&lt;/li&gt;&#xA;&lt;li&gt;Angka dituliskan seperti biasanya&lt;/li&gt;&#xA;&lt;li&gt;Teks/&lt;em&gt;string&lt;/em&gt; dituliskan dalam tanda kutip (&amp;quot; atatu &amp;lsquo;)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Contoh, data kasus malaria tahun 2019 terdiri atas 2 kolom, yaitu provinsi dan jumlah.&lt;/p&gt;</description>
+      <description>&lt;p&gt;File &lt;strong&gt;csv&lt;/strong&gt; merupakan file yang umum digunakan sebagai file data. Mudah dalam pembuatannya. Begitu juga dengan aksesnya. Bisa dibuat dengan &lt;em&gt;text editor, spreadsheet software&lt;/em&gt; maupun &lt;em&gt;statistical software&lt;/em&gt;. Pada kesempatan kali ini tidak menggunakan &lt;em&gt;statistical software&lt;/em&gt; seperti &lt;strong&gt;R&lt;/strong&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;membuat-file-csv-dengan-_text-editor_&#34;&gt;Membuat file csv dengan &lt;em&gt;text editor&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;Prinsip pembuatan adalah :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Antar kolom dipisahkan oleh tanda koma (,)&lt;/li&gt;
+&lt;li&gt;Kolom pertama (umumnya) sebagai &lt;em&gt;header&lt;/em&gt; atau nama/judul kolom&lt;/li&gt;
+&lt;li&gt;Antar baris dipisahkan oleh enter&lt;/li&gt;
+&lt;li&gt;Angka dituliskan seperti biasanya&lt;/li&gt;
+&lt;li&gt;Teks/&lt;em&gt;string&lt;/em&gt; dituliskan dalam tanda kutip (&amp;quot; atatu &amp;lsquo;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Contoh, data kasus malaria tahun 2019 terdiri atas 2 kolom, yaitu provinsi dan jumlah.&lt;/p&gt;</description>
     </item>
     <item>
       <title>(Video) Mengenal spreadsheet layout libre office calc</title>
@@ -69,21 +82,34 @@
       <link>https://sasongko.web.id/post/2021-01-28-video-mengenal-main-window-calc/</link>
       <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-01-28-video-mengenal-main-window-calc/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Libre office calc&lt;/strong&gt; merupakan aplikasi &lt;em&gt;spreadsheet&lt;/em&gt; pengolah data. Pada jendela utama atau &lt;em&gt;main window&lt;/em&gt; terdapat beberapa bagian, antara lain&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Name bar&lt;/li&gt;&#xA;&lt;li&gt;Title bar&lt;/li&gt;&#xA;&lt;li&gt;Menu bar&lt;/li&gt;&#xA;&lt;li&gt;Tool bar&lt;/li&gt;&#xA;&lt;li&gt;Namebox&lt;/li&gt;&#xA;&lt;li&gt;Formula bar&lt;/li&gt;&#xA;&lt;li&gt;Sheet tab&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Untuk ulasan lebih lengkap bisa disimak &lt;a href=&#34;https://www.youtube.com/watch?v=ub7Ky68aCns&amp;amp;t=34s&#34;&gt;video berikut ini&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Libre office calc&lt;/strong&gt; merupakan aplikasi &lt;em&gt;spreadsheet&lt;/em&gt; pengolah data. Pada jendela utama atau &lt;em&gt;main window&lt;/em&gt; terdapat beberapa bagian, antara lain&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Name bar&lt;/li&gt;
+&lt;li&gt;Title bar&lt;/li&gt;
+&lt;li&gt;Menu bar&lt;/li&gt;
+&lt;li&gt;Tool bar&lt;/li&gt;
+&lt;li&gt;Namebox&lt;/li&gt;
+&lt;li&gt;Formula bar&lt;/li&gt;
+&lt;li&gt;Sheet tab&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Untuk ulasan lebih lengkap bisa disimak &lt;a href=&#34;https://www.youtube.com/watch?v=ub7Ky68aCns&amp;amp;t=34s&#34;&gt;video berikut ini&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Convert jpg ke pdf</title>
       <link>https://sasongko.web.id/post/2020-05-13-convert-jpg-pdf/</link>
       <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-05-13-convert-jpg-pdf/</guid>
-      <description>&lt;p&gt;Untuk menjadikan file jpg ke pdf caranya mudah. Misalkan file-gambar.jpg akan diubah menjadi pdf dengan nama dokumen.pdf&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;convert file-gambar.jpg dokumen.pdf&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;Untuk menjadikan file jpg ke pdf caranya mudah. Misalkan file-gambar.jpg akan diubah menjadi pdf dengan nama dokumen.pdf&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;convert file-gambar.jpg dokumen.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Convert Word ke PDF Secara Massal</title>
       <link>https://sasongko.web.id/post/2017-07-05-convert-word-pdf-massal/</link>
       <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2017-07-05-convert-word-pdf-massal/</guid>
-      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;LibreOffice&lt;!-- raw HTML omitted --&gt; sudah lama mendukung konversi file dari Word/Writer (doc, docx dan odt) ke file pdf. Keunggulannya adalah bisa melakukan konversi secara massal.&lt;/p&gt;&#xA;&lt;p&gt;Misalkan, dipunyai 1000 file &lt;!-- raw HTML omitted --&gt;docx&lt;!-- raw HTML omitted --&gt; yang tersimpan di &lt;!-- raw HTML omitted --&gt;&lt;del&gt;/Documents&lt;!-- raw HTML omitted --&gt;. Masing-masing file ini akan dikonversi menjadi &lt;!-- raw HTML omitted --&gt;pdf&lt;!-- raw HTML omitted --&gt; di &lt;!-- raw HTML omitted --&gt;&lt;/del&gt;/convert&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;LibreOffice&lt;!-- raw HTML omitted --&gt; sudah lama mendukung konversi file dari Word/Writer (doc, docx dan odt) ke file pdf. Keunggulannya adalah bisa melakukan konversi secara massal.&lt;/p&gt;
+&lt;p&gt;Misalkan, dipunyai 1000 file &lt;!-- raw HTML omitted --&gt;docx&lt;!-- raw HTML omitted --&gt; yang tersimpan di &lt;!-- raw HTML omitted --&gt;&lt;del&gt;/Documents&lt;!-- raw HTML omitted --&gt;. Masing-masing file ini akan dikonversi menjadi &lt;!-- raw HTML omitted --&gt;pdf&lt;!-- raw HTML omitted --&gt; di &lt;!-- raw HTML omitted --&gt;&lt;/del&gt;/convert&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Install Libre Office di Slackware</title>
@@ -97,7 +123,8 @@
       <link>https://sasongko.web.id/post/2015-06-09-uninstall-calligra/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2015-06-09-uninstall-calligra/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Calligra&lt;/em&gt; adalah &lt;em&gt;office suite&lt;/em&gt; atau aplikasi perkantoran yang dikembangkan KDE yang dulu bernama KOffice. Kalau memasang KDE secara &lt;em&gt;full&lt;/em&gt; kita akan mendapatinya.&lt;/p&gt;&#xA;&lt;p&gt;Calligra memang layak digunakan untuk keperluan perkantoran. Performanya dalam mengolah dokumen terbuka (&lt;em&gt;open document format/ODF&lt;/em&gt;) cukup bagus. Namun sayangnya, &lt;em&gt;Calligra&lt;/em&gt; tidak kompatibel dengan dokumen OOXML (dokumen yang dibuat dengan &lt;em&gt;Microsoft Office&lt;/em&gt;). Tak jarang &lt;em&gt;Calligra&lt;/em&gt; menjadi &lt;em&gt;hang&lt;/em&gt; saat membuka atau mengolah dokumen dengan format docx (&lt;em&gt;Ms Word&lt;/em&gt;), xlsx (&lt;em&gt;Ms Excel&lt;/em&gt;) dan pptx (&lt;em&gt;Ms PowerPoint&lt;/em&gt;). Penulis sering bekerja dengan dokumen OOXML karena rekan-rekan di kantor dan para mahasiswa belum bisa lepas dari OOXML. Maka demi kemaslahatan bersama, penulis tinggalkan &lt;em&gt;Calligra&lt;/em&gt; dan beralih ke &lt;em&gt;LibreOffice&lt;/em&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;Calligra&lt;/em&gt; adalah &lt;em&gt;office suite&lt;/em&gt; atau aplikasi perkantoran yang dikembangkan KDE yang dulu bernama KOffice. Kalau memasang KDE secara &lt;em&gt;full&lt;/em&gt; kita akan mendapatinya.&lt;/p&gt;
+&lt;p&gt;Calligra memang layak digunakan untuk keperluan perkantoran. Performanya dalam mengolah dokumen terbuka (&lt;em&gt;open document format/ODF&lt;/em&gt;) cukup bagus. Namun sayangnya, &lt;em&gt;Calligra&lt;/em&gt; tidak kompatibel dengan dokumen OOXML (dokumen yang dibuat dengan &lt;em&gt;Microsoft Office&lt;/em&gt;). Tak jarang &lt;em&gt;Calligra&lt;/em&gt; menjadi &lt;em&gt;hang&lt;/em&gt; saat membuka atau mengolah dokumen dengan format docx (&lt;em&gt;Ms Word&lt;/em&gt;), xlsx (&lt;em&gt;Ms Excel&lt;/em&gt;) dan pptx (&lt;em&gt;Ms PowerPoint&lt;/em&gt;). Penulis sering bekerja dengan dokumen OOXML karena rekan-rekan di kantor dan para mahasiswa belum bisa lepas dari OOXML. Maka demi kemaslahatan bersama, penulis tinggalkan &lt;em&gt;Calligra&lt;/em&gt; dan beralih ke &lt;em&gt;LibreOffice&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

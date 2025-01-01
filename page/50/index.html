@@ -1,572 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.140.1">
+	<meta name="generator" content="Hugo 0.140.1"><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Catatan Sasongko</title>
 
-  <title>Catatan Sasongko</title>
+<meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+<meta name="author" content="">
+<link rel="canonical" href="https://sasongko.web.id/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://sasongko.web.id/index.xml">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-    
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+            .list {
+                background: var(--theme);
+            }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
-  <!--<![endif]-->
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
-  <!--<![endif]-->
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
+    </style>
+</noscript><meta property="og:url" content="https://sasongko.web.id/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Catatan Sasongko">
+  <meta property="og:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Catatan Sasongko">
+<meta name="twitter:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-
-  
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
- 
-  
-  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
-    href='https://sasongko.web.id/index.xml' />
-  
-
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
-  
-
-  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
-
-  
-    
-        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
-    
-  
-  
-    
-        <script src="https://sasongko.web.id/js/my.js"></script>
-    
-  
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Catatan Sasongko",
+  "url": "https://sasongko.web.id/",
+  "description": "Catatan Penggunaan Slackware \u0026 Open Source Software Lainnya",
+  "logo": "https://sasongko.web.id/favicon.ico",
+  "sameAs": [
+      
+  ]
+}
+</script>
 </head>
 
-
-<body>
-<div id="layout">
-
-  
-<a href="#menu" id="menuLink" class="menu-link">
-  
-  <span></span>
-</a>
-<div id="menu">
-
-  
-
-  <div class="pure-menu">
-    <ul class="pure-menu-list">
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
-      
-        </li>
-      
-    </ul>
-  </div>
-
-  <div class="pure-menu social">
-  <ul class="pure-menu-list">
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://sasongko.web.id/index.xml'><i
-          class="fas fa-rss"></i>RSS</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://youtube.com/channel/UCY4H1n73aQMB4LZjIJvH0_A" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </ul>
-</div>
-
-
-  <div>
-  <div class="small-print">
-    <small></small>
-  </div>
-  <div class="small-print">
-    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
-    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
-  </div>
-</div>
-
-</div>
-
-
-  <div id="main">
-
-
-<div class="header">
-  <h1>Catatan Sasongko</h1>
-  <h2></h2>
-</div>
-
-<div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackware-142/">Upgrade ke Slackware 14.2</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>03 Jul 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackpkg">slackpkg</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Sehubungan dengan telah rilisnya <strong>Slackware 14.2</strong> maka silahkan melakukan <em>upgrade</em> untuk mendapatkan keamanan yang lebih bagus dan fitur-fitur baru. Saya selama ini melakukan <strong><em>upgrade</em> bertahap demi penghematan kuota internet</strong>. Dimulai dengan upgrade ke <em>current</em> karena saat itu versi <em>stable</em> yang baru (14.2) masih dalam proses pengembangan. <em>Upgrade</em> ini menggunakan <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted -->. Dan tentu saja membutuhkan sambungan internet.</p>
-<ol>
-<li>Pilih cermin atau <em>mirror</em>. Dengan menyunting <!-- raw HTML omitted -->/etc/slackpkg/mirrors<!-- raw HTML omitted -->, menghilangkan tanda komentar/tanda pagar pada repo yang diinginkan. Tersedia banyak repo yang bisa dijadikan rujukan, tetapi sayangnya baru 2 repo lokal yang resmi terdaftar, yaitu <em>UI</em> dan <em>UKDW</em>. Saya gunakan milik UKDW karena lebih dekat (UKDW di Yogyakarta sedangkan saya di Semarang) sehingga harapannya lebih cepat. Bisa juga memilih repo <em>Slackware.com</em> yang secara otomatis akan memilihkan repo terdekat. Pastikan hanya 1 repo yang dipilih.</li>
-<li><em>Update</em> daftar paket dengan melakukan <!-- raw HTML omitted -->slackpkg update<!-- raw HTML omitted --></li>
-<li><em>Upgrade</em> <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --> untuk mendapatkan alamat repo 14.2. <em>Upgrade</em> juga <!-- raw HTML omitted -->glibc-solibs<!-- raw HTML omitted -->. Keduanya dapat dilakukan secara simultan : <!-- raw HTML omitted -->slackpkg upgrade slackpkg glibc-solibs<!-- raw HTML omitted --></li>
-<li>Kalau muncul pertanyaan tentang konfigurasi baru, pilih saja <!-- raw HTML omitted -->O<!-- raw HTML omitted --> alias <!-- raw HTML omitted -->overwrite<!-- raw HTML omitted -->. Kalau tidak muncul lakukan <!-- raw HTML omitted -->slackpkg new-config<!-- raw HTML omitted --></li>
-<li>Setelah <em>upgrade</em> <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --> pilih repo lagi karena ada perubahan alamat/URL repo kemudian <em>update</em> lagi.</li>
-<li>Lanjut install paket-paket baru yang sebelumnya tidak ada : <!-- raw HTML omitted -->slackpkg install-new<!-- raw HTML omitted --></li>
-<li><em>Upgrade</em> sistem : <!-- raw HTML omitted -->slackpkg upgrade-all<!-- raw HTML omitted -->. Akan ditampilkan paket yang bisa di-<em>upgrade</em>. Hilangkan tanda bintangnya dengan menekan tombol <!-- raw HTML omitted -->spasi<!-- raw HTML omitted --> bila tidak ingin paket tersebut di-<em>upgrade</em> kemudian <!-- raw HTML omitted -->OK<!-- raw HTML omitted -->.</li>
-<li>Hapus paket yang tidak berguna. Paket yang perlu dihapus dan berbagai perubahan dari Slackware 14.1 ke 14.2 bisa dilihat <a href="http://repo.ukdw.ac.id/slackware/slackware64-14.2/CHANGES_AND_HINTS.TXT">di sini</a> : <!-- raw HTML omitted -->slackpkg remove    <!-- raw HTML omitted --></li>
-<li>Karena ada pergantian kernel, jangan lupa konfigurasi ulang <em>boot loader</em> itu <!-- raw HTML omitted -->lilo<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->elilo<!-- raw HTML omitted -->. Kalau menggunakan <!-- raw HTML omitted -->lilo<!-- raw HTML omitted --> : <!-- raw HTML omitted -->liloconfig<!-- raw HTML omitted -->. Kalau menggunakan <!-- raw HTML omitted -->elilo<!-- raw HTML omitted --> : <!-- raw HTML omitted -->eliloconfig<!-- raw HTML omitted --></li>
-</ol>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/">Upgrade Slackbuilds Slackware 14.2</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>03 Jul 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackbuild">slackbuild</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sbopkg">sbopkg</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Setelah melakukan [ <em>upgrade</em> sistem ke <em>Slackware 14.2</em>]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya <em>upgrade</em> juga paket yang diinstal dari slackbuilds.org.</p>
-<ol>
-<li><em>Upgrade</em> <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> : <!-- raw HTML omitted -->sbopkg -u<!-- raw HTML omitted --></li>
-<li>Versi <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> terbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik <!-- raw HTML omitted -->D<!-- raw HTML omitted --></li>
-<li>Hasil unduhan : <!-- raw HTML omitted -->/tmp/sbopkg-0.38.0-noarch-1_wsr.tgz<!-- raw HTML omitted --></li>
-<li>Setelah diunduh, <em>upgrade</em> : <!-- raw HTML omitted -->upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz<!-- raw HTML omitted --></li>
-<li>Karena menghasilkan konfigurasi baru, lakukan <!-- raw HTML omitted -->slackpkg new-config<!-- raw HTML omitted --> dan pilih overwrite saja.</li>
-<li>Kemudian <em>update</em> ke repo 14.2 : <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> pilih <!-- raw HTML omitted -->Utilities<!-- raw HTML omitted --> lalu <!-- raw HTML omitted -->Repository<!-- raw HTML omitted -->. Kemudian pilih <!-- raw HTML omitted -->SBo (14.2)<!-- raw HTML omitted --></li>
-<li>Muncul konfirmasi, apakah akan membuat baru, pilih <!-- raw HTML omitted -->C<!-- raw HTML omitted --> untuk <!-- raw HTML omitted -->Create<!-- raw HTML omitted -->.</li>
-<li>Kemudian <!-- raw HTML omitted -->Back<!-- raw HTML omitted --> ke awal <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->, pilih <!-- raw HTML omitted -->Sync<!-- raw HTML omitted --> untuk <em>update</em> repo.</li>
-<li>Setelah <em>sync</em>-nya selesai, pilih <!-- raw HTML omitted -->EXIT<!-- raw HTML omitted --> kembali ke awal <!-- raw HTML omitted -->sbopk<!-- raw HTML omitted --></li>
-<li>Kemudian pilih <!-- raw HTML omitted -->Updates<!-- raw HTML omitted --> untuk mengecek paket apa saja yang bisa di-<em>upgrade</em>.</li>
-<li><!-- raw HTML omitted -->EXIT<!-- raw HTML omitted --> keluar konfirmasi apakah paket-paket tersebut akan dimasukkan ke dalam <!-- raw HTML omitted -->queue<!-- raw HTML omitted --> untuk bisa diinstall kemudian.<!-- raw HTML omitted -->YES<!-- raw HTML omitted --> untuk memasukkannya.</li>
-<li>Kembali di awal <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->. Pilih <!-- raw HTML omitted -->Queue<!-- raw HTML omitted --></li>
-<li>PIlih <!-- raw HTML omitted -->Process<!-- raw HTML omitted --> akan muncul daftar paket langkah no.11</li>
-<li>Silahkan pilih paketnya kemudian <!-- raw HTML omitted -->OK<!-- raw HTML omitted --> Kemudian <!-- raw HTML omitted -->Install<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->OK<!-- raw HTML omitted --></li>
-<li>Tunggu sampai selesai.</li>
-<li>Keluar dialog apakah akan menghapus yang ada di <!-- raw HTML omitted -->queue<!-- raw HTML omitted -->. Pilih <!-- raw HTML omitted -->Clear<!-- raw HTML omitted --> untuk menghapus. Kemudian keluar info bahwa queue sudah dihapus, keudian <!-- raw HTML omitted -->OK<!-- raw HTML omitted --></li>
-<li>Kembali ke <!-- raw HTML omitted -->Queue Menu<!-- raw HTML omitted --> pilih <!-- raw HTML omitted -->Back<!-- raw HTML omitted --></li>
-<li>Kembali ke awal <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->, karena sudah selesai, silahkan <!-- raw HTML omitted -->Exit<!-- raw HTML omitted --></li>
-</ol>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/">Ganti Theme Xfce</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Jun 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/theme">theme</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Bosan dengan tampilan <em>theme</em> yang itu-itu aja? Tenang, <em>theme</em>-nya bisa diganti kok, bahkan diganti agar tampilannya mirip Mac OS X. Sebagai contoh akan kita <em>install theme GlossyP3</em> yang membuat tampilan menjadi mirip Mac OS X.</p>
-<p><em>Download</em> terlebih dahulu berkasnya dari <a href="https://drive.google.com/file/d/0B6CSxWwQO8rCOG5EU0xJSklLNnc/edit?usp=sharing">sini</a> (pastikan tersambung internet). Berkas dalam bentuk arsip <!-- raw HTML omitted -->.tar.bz2<!-- raw HTML omitted --> ekstrak ke direktori <!-- raw HTML omitted -->/usr/share/themes<!-- raw HTML omitted --> dengan hak administrator atau <!-- raw HTML omitted -->root<!-- raw HTML omitted -->.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/">Konek Internet dengan nmcli</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Jun 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Menyambung catatan tentang [hilangnya ikon atau NetworkManager]({% post_url 2015-12-26-ikon-networkmanager-hilang %}). Jika <!-- raw HTML omitted -->nm-applet<!-- raw HTML omitted --> tidak mempan untuk menampilkan <em>applet NetworkManager</em>, maka kita bisa gunakan <!-- raw HTML omitted -->nmcli<!-- raw HTML omitted -->.</p>
-<p><!-- raw HTML omitted -->nmcli<!-- raw HTML omitted --> adalah <em>NetworkManager</em> dengan antarmuka teks (<em>command line interface</em>).</p>
-<pre tabindex="0"><code>nmcli
-Usage: nmcli [OPTIONS] OBJECT { COMMAND | help }
-
-OPTIONS
-  -t[erse]                                   terse output
-  -p[retty]                                  pretty output
-  -m[ode] tabular|multiline                  output mode
-  -c[olors] auto|yes|no                      whether to use colors in output
-  -f[ields] &lt;field1,field2,...&gt;|all|common   specify fields to output
-  -e[scape] yes|no                           escape columns separators in values
-  -a[sk]                                     ask for missing parameters
-  -s[how-secrets]                            allow displaying passwords
-  -w[ait] &lt;seconds&gt;                          set timeout waiting for finishing operations
-  -v[ersion]                                 show program version
-  -h[elp]                                    print this help
-
-OBJECT
-  g[eneral]       NetworkManager&#39;s general status and operations
-  n[etworking]    overall networking control
-  r[adio]         NetworkManager radio switches
-  c[onnection]    NetworkManager&#39;s connections
-  d[evice]        devices managed by NetworkManager
-  a[gent]         NetworkManager secret agent or polkit agent
-  m[onitor]       monitor NetworkManager changes
-</code></pre><p>Untuk melihat sambungan/koneksi yang telah dibuat dengan <em>NetworkManager</em> gunakan <!-- raw HTML omitted -->nmcli c<!-- raw HTML omitted -->. Berikut adalah contoh <em>output</em>-nya</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-05-12-download-fathul-muin-maktabah-elkirtas/">Download Kitab Fathul Muin Maktabah Elkirtas</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>12 May 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elkirtas">elkirtas</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Pertama, buka Maktabah Elkirtasnya dulu dan pastikan tersambung internet.</p>
-<p><img src="https://sasongko.web.id/gambar/elkirtasse-2-home.png" alt=""></p>
-<p>Kemudian klik gambar kitabnya akan muncul daftar kategori kitabnya.</p>
-<p><img src="https://sasongko.web.id/gambar/elkirtasse-daftarkitab.png" alt=""></p>
-<p><em>Scroll</em> ke bawah pilih فقة شافعي</p>
-<p><img src="https://sasongko.web.id/gambar/elkirtasse-list-kitab-focus-fiqh-syafii.png" alt=""></p>
-<p><em>Scroll</em> ke bawah dan pilih فتع المعين</p>
-<p><img src="https://sasongko.web.id/gambar/elkirtasse-list-fiqh-syafii-fathul-muin.png" alt=""></p>
-<p>Muncul konfirmasi untuk men- <em>download</em></p>
-<p><img src="https://sasongko.web.id/gambar/elkirtasse-konfirm-download-fathul-muin.png" alt=""></p>
-<p><!-- raw HTML omitted -->Yes<!-- raw HTML omitted --> akan melanjutkan dan tunggu sampai selesai</p>
-<p><img src="https://sasongko.web.id/gambar/elkirtasse-download-fathul-muin.png" alt=""></p>
-<p>Selesai <em>download</em> muncul pemberitahuan</p>
-<p><img src="https://sasongko.web.id/gambar/elkirtasse-download-fathul-muin-komplet.png" alt=""></p>
-<p>Klik <!-- raw HTML omitted -->Yes<!-- raw HTML omitted --> Kitab <em>Fathul Muin</em> siap dikaji.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-05-12-download-fathul-muin-maktabah-elkirtas/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-
-  
-
-
-<nav class="pagination" role="pagination">
-  
-  <a href="https://sasongko.web.id/page/49/"><i class="fa fa-chevron-left"></i></a>
-  
-  <span>&nbsp;50 / 67&nbsp;</span>
-  
-  <a href="https://sasongko.web.id/page/51/"><i class="fa fa-chevron-right"></i></a>
-  
-</nav>
-
-
-
-</div>
-
-</div>
-</div>
-<script src="https://sasongko.web.id/js/ui.js"></script>
-<script src="https://sasongko.web.id/js/menus.js"></script>
-
-
+<body class="list" id="top">
 <script>
-  
-  if (window.location.hostname != "localhost") {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    ga('create', 'UA-49503242-1', 'auto');
-    ga('send', 'pageview');
-  }
 </script>
 
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sasongko.web.id/" title="Home">
+                    <span class="active"><i class='fa fa-home fa-fw'></i>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/post/" title="Posts">
+                    <span><i class='fa fa-list fa-fw'></i>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/about/" title="Profil">
+                    <span><i class='fa fa-user fa-fw'></i>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/logo/" title="Logo">
+                    <span><i class='fa fa-user fa-fw'></i>Logo</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Upgrade ke Slackware 14.2
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sehubungan dengan telah rilisnya Slackware 14.2 maka silahkan melakukan upgrade untuk mendapatkan keamanan yang lebih bagus dan fitur-fitur baru. Saya selama ini melakukan upgrade bertahap demi penghematan kuota internet. Dimulai dengan upgrade ke current karena saat itu versi stable yang baru (14.2) masih dalam proses pengembangan. Upgrade ini menggunakan slackpkg. Dan tentu saja membutuhkan sambungan internet.
+Pilih cermin atau mirror. Dengan menyunting /etc/slackpkg/mirrors, menghilangkan tanda komentar/tanda pagar pada repo yang diinginkan. Tersedia banyak repo yang bisa dijadikan rujukan, tetapi sayangnya baru 2 repo lokal yang resmi terdaftar, yaitu UI dan UKDW. Saya gunakan milik UKDW karena lebih dekat (UKDW di Yogyakarta sedangkan saya di Semarang) sehingga harapannya lebih cepat. Bisa juga memilih repo Slackware.com yang secara otomatis akan memilihkan repo terdekat. Pastikan hanya 1 repo yang dipilih. Update daftar paket dengan melakukan slackpkg update Upgrade slackpkg untuk mendapatkan alamat repo 14.2. Upgrade juga glibc-solibs. Keduanya dapat dilakukan secara simultan : slackpkg upgrade slackpkg glibc-solibs Kalau muncul pertanyaan tentang konfigurasi baru, pilih saja O alias overwrite. Kalau tidak muncul lakukan slackpkg new-config Setelah upgrade slackpkg pilih repo lagi karena ada perubahan alamat/URL repo kemudian update lagi. Lanjut install paket-paket baru yang sebelumnya tidak ada : slackpkg install-new Upgrade sistem : slackpkg upgrade-all. Akan ditampilkan paket yang bisa di-upgrade. Hilangkan tanda bintangnya dengan menekan tombol spasi bila tidak ingin paket tersebut di-upgrade kemudian OK. Hapus paket yang tidak berguna. Paket yang perlu dihapus dan berbagai perubahan dari Slackware 14.1 ke 14.2 bisa dilihat di sini : slackpkg remove Karena ada pergantian kernel, jangan lupa konfigurasi ulang boot loader itu lilo atau elilo. Kalau menggunakan lilo : liloconfig. Kalau menggunakan elilo : eliloconfig </p>
+  </div>
+  <footer class="entry-footer"><span title='2016-07-03 00:00:00 +0000 UTC'>03 Jul 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Upgrade ke Slackware 14.2" href="https://sasongko.web.id/post/2016-07-03-upgrade-slackware-142/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Upgrade Slackbuilds Slackware 14.2
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Setelah melakukan [ upgrade sistem ke Slackware 14.2]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya upgrade juga paket yang diinstal dari slackbuilds.org.
+Upgrade sbopkg : sbopkg -u Versi sbopkg terbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik D Hasil unduhan : /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Setelah diunduh, upgrade : upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Karena menghasilkan konfigurasi baru, lakukan slackpkg new-config dan pilih overwrite saja. Kemudian update ke repo 14.2 : sbopkg pilih Utilities lalu Repository. Kemudian pilih SBo (14.2) Muncul konfirmasi, apakah akan membuat baru, pilih C untuk Create. Kemudian Back ke awal sbopkg, pilih Sync untuk update repo. Setelah sync-nya selesai, pilih EXIT kembali ke awal sbopk Kemudian pilih Updates untuk mengecek paket apa saja yang bisa di-upgrade. EXIT keluar konfirmasi apakah paket-paket tersebut akan dimasukkan ke dalam queue untuk bisa diinstall kemudian.YES untuk memasukkannya. Kembali di awal sbopkg. Pilih Queue PIlih Process akan muncul daftar paket langkah no.11 Silahkan pilih paketnya kemudian OK Kemudian Install dan OK Tunggu sampai selesai. Keluar dialog apakah akan menghapus yang ada di queue. Pilih Clear untuk menghapus. Kemudian keluar info bahwa queue sudah dihapus, keudian OK Kembali ke Queue Menu pilih Back Kembali ke awal sbopkg, karena sudah selesai, silahkan Exit </p>
+  </div>
+  <footer class="entry-footer"><span title='2016-07-03 00:00:00 +0000 UTC'>03 Jul 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Upgrade Slackbuilds Slackware 14.2" href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Ganti Theme Xfce
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Bosan dengan tampilan theme yang itu-itu aja? Tenang, theme-nya bisa diganti kok, bahkan diganti agar tampilannya mirip Mac OS X. Sebagai contoh akan kita install theme GlossyP3 yang membuat tampilan menjadi mirip Mac OS X.
+Download terlebih dahulu berkasnya dari sini (pastikan tersambung internet). Berkas dalam bentuk arsip .tar.bz2 ekstrak ke direktori /usr/share/themes dengan hak administrator atau root.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-06-30 00:00:00 +0000 UTC'>30 Jun 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Ganti Theme Xfce" href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Konek Internet dengan nmcli
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Menyambung catatan tentang [hilangnya ikon atau NetworkManager]({% post_url 2015-12-26-ikon-networkmanager-hilang %}). Jika nm-applet tidak mempan untuk menampilkan applet NetworkManager, maka kita bisa gunakan nmcli.
+nmcli adalah NetworkManager dengan antarmuka teks (command line interface).
+nmcli Usage: nmcli [OPTIONS] OBJECT { COMMAND | help } OPTIONS -t[erse] terse output -p[retty] pretty output -m[ode] tabular|multiline output mode -c[olors] auto|yes|no whether to use colors in output -f[ields] &lt;field1,field2,...&gt;|all|common specify fields to output -e[scape] yes|no escape columns separators in values -a[sk] ask for missing parameters -s[how-secrets] allow displaying passwords -w[ait] &lt;seconds&gt; set timeout waiting for finishing operations -v[ersion] show program version -h[elp] print this help OBJECT g[eneral] NetworkManager&#39;s general status and operations n[etworking] overall networking control r[adio] NetworkManager radio switches c[onnection] NetworkManager&#39;s connections d[evice] devices managed by NetworkManager a[gent] NetworkManager secret agent or polkit agent m[onitor] monitor NetworkManager changes Untuk melihat sambungan/koneksi yang telah dibuat dengan NetworkManager gunakan nmcli c. Berikut adalah contoh output-nya
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-06-26 00:00:00 +0000 UTC'>26 Jun 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Konek Internet dengan nmcli" href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Download Kitab Fathul Muin Maktabah Elkirtas
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Pertama, buka Maktabah Elkirtasnya dulu dan pastikan tersambung internet.
+Kemudian klik gambar kitabnya akan muncul daftar kategori kitabnya.
+Scroll ke bawah pilih فقة شافعي
+Scroll ke bawah dan pilih فتع المعين
+Muncul konfirmasi untuk men- download
+Yes akan melanjutkan dan tunggu sampai selesai
+Selesai download muncul pemberitahuan
+Klik Yes Kitab Fathul Muin siap dikaji.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-05-12 00:00:00 +0000 UTC'>12 May 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Download Kitab Fathul Muin Maktabah Elkirtas" href="https://sasongko.web.id/post/2016-05-12-download-fathul-muin-maktabah-elkirtas/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="https://sasongko.web.id/page/49/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="https://sasongko.web.id/page/51/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
-</html>
 
+</html>

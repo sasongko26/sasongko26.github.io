@@ -1,257 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.140.1">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Aktivasi zram | Catatan Sasongko</title>
+<meta name="keywords" content="slackware, kernel, boot, elilo, zram">
+<meta name="description" content="Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.
+Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan. Namun, saat ini, saat kebutuhan multitasking meningkat pesat, terlebih di era work from home (WFH), beberapa aplikasi dijalankan sekaligus bersama-sama, apalagi ditambah dengan faktor U perangkatnya, RAM 2 GB terasa cepat penuh.">
+<meta name="author" content="">
+<link rel="canonical" href="https://sasongko.web.id/post/2021-01-26-aktivasi-zram/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2021-01-26-aktivasi-zram/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-  <title>Aktivasi zram &middot; Catatan Sasongko</title>
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-    
+            .list {
+                background: var(--theme);
+            }
 
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
-  <!--<![endif]-->
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
-  <!--<![endif]-->
+    </style>
+</noscript><meta property="og:url" content="https://sasongko.web.id/post/2021-01-26-aktivasi-zram/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Aktivasi zram">
+  <meta property="og:description" content="Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.
+Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan. Namun, saat ini, saat kebutuhan multitasking meningkat pesat, terlebih di era work from home (WFH), beberapa aplikasi dijalankan sekaligus bersama-sama, apalagi ditambah dengan faktor U perangkatnya, RAM 2 GB terasa cepat penuh.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-01-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-01-26T00:00:00+00:00">
+    <meta property="article:tag" content="Slackware">
+    <meta property="article:tag" content="Kernel">
+    <meta property="article:tag" content="Boot">
+    <meta property="article:tag" content="Elilo">
+    <meta property="article:tag" content="Zram">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Aktivasi zram">
+<meta name="twitter:description" content="Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.
+Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan. Namun, saat ini, saat kebutuhan multitasking meningkat pesat, terlebih di era work from home (WFH), beberapa aplikasi dijalankan sekaligus bersama-sama, apalagi ditambah dengan faktor U perangkatnya, RAM 2 GB terasa cepat penuh.">
 
-  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
 
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-
-  
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
- 
-  
-
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
-  
-
-  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
-
-  
-    
-        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
-    
-  
-  
-    
-        <script src="https://sasongko.web.id/js/my.js"></script>
-    
-  
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://sasongko.web.id/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Aktivasi zram",
+      "item": "https://sasongko.web.id/post/2021-01-26-aktivasi-zram/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Aktivasi zram",
+  "name": "Aktivasi zram",
+  "description": "Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.\nPerangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan. Namun, saat ini, saat kebutuhan multitasking meningkat pesat, terlebih di era work from home (WFH), beberapa aplikasi dijalankan sekaligus bersama-sama, apalagi ditambah dengan faktor U perangkatnya, RAM 2 GB terasa cepat penuh.\n",
+  "keywords": [
+    "slackware", "kernel", "boot", "elilo", "zram"
+  ],
+  "articleBody": "Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.\nPerangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan. Namun, saat ini, saat kebutuhan multitasking meningkat pesat, terlebih di era work from home (WFH), beberapa aplikasi dijalankan sekaligus bersama-sama, apalagi ditambah dengan faktor U perangkatnya, RAM 2 GB terasa cepat penuh.\nUpgrade RAM? RAM-nya onboard. Di sinilah keuntungan menggunakan linux penulis rasakan. Linux yang opensource dikembangkan banyak orang. Ribuan orang bergotong-royong membuat semakin baik dari masa ke masa untuk semua kalangan. Tak terkecuali kalangan dengan hardware jadul semacam penulis.\nSolusi itu bernama zram. Dengan zram sebagian proses di RAM akan dikompres sehingga menghemat RAM. RAM lebih lega. Sisa kapasitas RAM masih bisa digunakan untuk yang lainnya. Misal, tanpa zram menjalankan zoom meeting dengan share screen libreoffice impress yang berjalan dalam DE Plasma 5, terasa agak lambat saat pindah slide presentasi. Dengan zram tidak lagi terjadi.\nBukankah ada partisi swap? Betul, tetapi swap menggunakan harddisk sedangkan zram memakai RAM. Kecepatan olah data lebih cepat menggunakan RAM.\nOke, sekarang bagaimana teknisnya?\nBuat file /etc/rc.d/rc.zram. File ini akan dieksekusi segera setelah booting. Contohnya adalah seperti di bawah ini, yang saya dapatkan dari repo gitlabnya walecha (Terima kasih Pak Walesa).\n#!/bin/bash if [ -r /etc/default/zram ]; then . /etc/default/zram else # See /sys/block/zramX/comp_algo for available compression algorithm ZRAMCOMP=zstd # ZRAM device to use ZRAMDEV=/dev/zram0 # Or if you want to use last available zram device #ZRAMDEV=$(/sbin/zramctl -f) # Set it to fixed value in gigabytes, for example 4GB: ZRAMSIZE=\"1G\" # Or calculate by divide total available RAM by DIVNUM. Change it as you wish. #DIVNUM=3 # Use higher priority than on-disk swap, priority is a value between -1 and 32767 SWAPPRIORITY=100 fi f_test() { # Disable zswap if [ \"$(cat /sys/module/zswap/parameters/enabled)\" = \"Y\" ]; then echo 0 \u003e/sys/module/zswap/parameters/enabled fi if /sbin/swaplabel $ZRAMDEV 2\u003e/dev/null | grep -q 'UUID:'; then if cat /proc/swaps | grep -q \"$ZRAMDEV\"; then return 0 else return 1 fi else return 2 fi } f_create() { f_test retval=$? if [ $retval -eq 2 ]; then echo \"Formatting $ZRAMDEV\" /sbin/zramctl -a ${ZRAMCOMP} -s ${ZRAMSIZE} ${ZRAMDEV} /sbin/mkswap -f -L ZRAMSWAP ${ZRAMDEV} \u003e/dev/null fi } f_start() { f_test retval=$? if [ $retval -eq 1 ]; then echo \"Starting $ZRAMDEV\" /sbin/swapon -p ${SWAPPRIORITY} ${ZRAMDEV} fi } f_stop() { f_test retval=$? if [ $retval -eq 0 ]; then echo \"Stopping $ZRAMDEV\" /sbin/swapoff ${ZRAMDEV} fi } f_reset() { f_test retval=$? if [ $retval -eq 1 ]; then echo -n \"Resetting $ZRAMDEV\" echo 1 \u003e/sys/block/$(basename $ZRAMDEV)/reset fi } case \"$1\" in create) f_create ;; start) f_create f_start ;; stop) f_stop ;; restart) f_stop sleep 1 f_start ;; reset) f_reset ;; forcereset) f_stop sleep 1 f_reset ;; status) f_test retval=$? echo -n \"Status $ZRAMDEV: \" if [ $retval -eq 0 ]; then echo \"active\" else echo \"not active\" fi ;; *) echo \"$0: create|start|stop|restart|reset|forcereset|status\" esac Di sini, 50% RAM digunakan untuk zram. Maka ZRAMSIZE 1G.\nJangan lupa beri hak akses eksekusi. Command dijalankan oleh root.\n$ chmod +x /etc/rc.d/rc.zram Kemudian sertakan ke /etc/rc.d/rc.local.\nif [ -x /etc/rc.d/rc.zram ]; then /etc/rc.d/rc.zram start fi Kemudian pastikan kernel modul zram bisa di-load. Secara default modul zram bersifat modular yang tidak secara otomatis load. Ada 2 cara\nMemasukkan ke dalam initrd. Penulis terbiasa membuat initrd dengan bantuan mkinird_command_generator. Di sini ditambahkan -m zram. Sehingga pembuatannya initrd-nya (command dijalankan oleh root. Ini sangat mungkin berbeda dengan milik pembaca. Berbeda dari sisi versi kernel (opsi -k), partisi root (opsi -r), modul yang di-load dan lokasi initrd yang diinginkan. Secara default di /boot (opsi -o). Tapi penulis di /boot/efi/EFI/Slackware. mkinitrd -c -k 5.10.10 -f ext4 -r /dev/sda3 -m xhci-pci:ohci-pci:ehci-pci:xhci-hcd:uhci-hcd:ehci-hcd:hid:usbhid:i2c-hid:hid_generic:hid-asus:hid-cherry:hid-logitech:hid-logitech-dj:hid-logitech-hidpp:hid-lenovo:hid-microsoft:hid_multitouch:jbd2:mbcache:ext4:zram -u -o /boot/initrd.gz Kemudian sertakan initrd ke boot loader. Penulis gunakan boot loader elilo dengan kernel generic, initrd-nya initrd.gz\nimage=generic label=generic initrd=initrd.gz read-only append=\"root=/dev/sda3 vga=normal ro\" Menggunakan modprobe. Modul zram di-load belakangan. Pada bagian awal dari /etc/rc.d/rc.zram (bisa tepat di bawah shebang/baris 2) tambahkan modprobe zram Selesai, selamat menikmati.\nPada kasus ini, tampak bahwa penggunaan zram 24,8 MB (dengan kompresi), sedangkan apabila tanpa dikompres atau tanpa zram membutuhkan memory 177 MB.\n",
+  "wordCount" : "729",
+  "inLanguage": "en",
+  "datePublished": "2021-01-26T00:00:00Z",
+  "dateModified": "2021-01-26T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sasongko.web.id/post/2021-01-26-aktivasi-zram/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Catatan Sasongko",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sasongko.web.id/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-<body>
-<div id="layout">
+</script>
 
-  
-<a href="#menu" id="menuLink" class="menu-link">
-  
-  <span></span>
-</a>
-<div id="menu">
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sasongko.web.id/" title="Home">
+                    <span><i class='fa fa-home fa-fw'></i>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/post/" title="Posts">
+                    <span><i class='fa fa-list fa-fw'></i>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/about/" title="Profil">
+                    <span><i class='fa fa-user fa-fw'></i>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/logo/" title="Logo">
+                    <span><i class='fa fa-user fa-fw'></i>Logo</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
 
-  
-
-  <div class="pure-menu">
-    <ul class="pure-menu-list">
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
-      
-        </li>
-      
-    </ul>
-  </div>
-
-  <div class="pure-menu social">
-  <ul class="pure-menu-list">
-
+<article class="post-single">
+  <header class="post-header">
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://youtube.com/channel/UCY4H1n73aQMB4LZjIJvH0_A" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </ul>
-</div>
-
-
-  <div>
-  <div class="small-print">
-    <small></small>
-  </div>
-  <div class="small-print">
-    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
-    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
-  </div>
-</div>
+    <h1 class="post-title entry-hint-parent">
+      Aktivasi zram
+    </h1>
+    <div class="post-meta"><span title='2021-01-26 00:00:00 +0000 UTC'>26 Jan 2021</span>
 
 </div>
-
-
-  <div id="main">
-
-
-<div class="header">
-  <h1>Aktivasi zram</h1>
-  <h2></h2>
-</div>
-<div class="content">
-
-  <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/zram">zram</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  <p>Beberapa tahun ini perkembangan dunia <em>opensource</em> bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi <em>software</em> berjalan beriringan dengan <em>hardware</em>. Semakin tinggi spesifikasi <em>hardware</em> semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin <em>interface</em> yang aduhai menawan, seyogyanya diimbangi <em>hardware</em> yang mumpuni.</p>
+  </header> 
+  <div class="post-content"><p>Beberapa tahun ini perkembangan dunia <em>opensource</em> bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi <em>software</em> berjalan beriringan dengan <em>hardware</em>. Semakin tinggi spesifikasi <em>hardware</em> semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin <em>interface</em> yang aduhai menawan, seyogyanya diimbangi <em>hardware</em> yang mumpuni.</p>
 <p>Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan. Namun, saat ini, saat kebutuhan <em>multitasking</em> meningkat pesat, terlebih di era <em>work from home</em> (WFH), beberapa aplikasi dijalankan sekaligus bersama-sama, apalagi ditambah dengan faktor U perangkatnya, RAM 2 GB terasa cepat penuh.</p>
 <p><em>Upgrade</em> RAM? RAM-nya <em>onboard</em>. Di sinilah <strong>keuntungan menggunakan linux</strong> penulis rasakan. <strong>Linux</strong> yang <em>opensource</em> dikembangkan banyak orang. Ribuan orang bergotong-royong membuat semakin baik dari masa ke masa untuk semua kalangan. Tak terkecuali kalangan dengan <em>hardware</em> jadul semacam penulis.</p>
 <p>Solusi itu bernama <strong>zram</strong>. Dengan <strong>zram</strong> sebagian proses di RAM akan dikompres sehingga menghemat RAM. RAM lebih lega. Sisa kapasitas RAM masih bisa digunakan untuk yang lainnya. Misal, tanpa <strong>zram</strong> menjalankan <em>zoom meeting</em> dengan <em>share screen</em> <strong>libreoffice impress</strong> yang berjalan dalam DE <strong>Plasma 5</strong>, terasa agak lambat saat pindah <em>slide</em> presentasi. Dengan <strong>zram</strong> tidak lagi terjadi.</p>
@@ -395,133 +347,93 @@ Modul <strong>zram</strong> di-<em>load</em> belakangan. Pada bagian awal dari <
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>modprobe zram
 </span></span></code></pre></div><p>Selesai, selamat menikmati.</p>
-<p><img src="https://sasongko.web.id/gambar/htop-with-zram-battery.png" alt=""></p>
+<p><img loading="lazy" src="https://sasongko.web.id/gambar/htop-with-zram-battery.png"></p>
 <p>Pada kasus ini, tampak bahwa penggunaan zram 24,8 MB (dengan kompresi), sedangkan apabila tanpa dikompres atau tanpa zram membutuhkan <em>memory</em> 177 MB.</p>
 
-  
-  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
-<ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-26-aktivasi-zram%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
-	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-26-aktivasi-zram%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
-	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-26-aktivasi-zram%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
-	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-26-aktivasi-zram%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
-	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-26-aktivasi-zram%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
-	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2021-01-26-aktivasi-zram%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
-	</li>
-</ul>
 
-
-<style>
-	ul.share-buttons{
-	  list-style: none;
-	  padding: 0;
-	}
-
-	ul.share-buttons li{
-	  display: inline;
-	}
-
-	ul.share-buttons .sr-only{
-	  position: absolute;
-	  clip: rect(1px 1px 1px 1px);
-	  clip: rect(1px, 1px, 1px, 1px);
-	  padding: 0;
-	  border: 0;
-	  height: 1px;
-	  width: 1px;
-	  overflow: hidden;
-	}
-</style>
-
-
-  
-<div class="prev-next-post pure-g">
-  <div class="pure-u-1-24" style="text-align: left;">
-    
-    <a href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/"><i class="fa fa-chevron-left"></i></a>
-    
   </div>
-  <div class="pure-u-10-24">
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
+      <li><a href="https://sasongko.web.id/tags/kernel/">Kernel</a></li>
+      <li><a href="https://sasongko.web.id/tags/boot/">Boot</a></li>
+      <li><a href="https://sasongko.web.id/tags/elilo/">Elilo</a></li>
+      <li><a href="https://sasongko.web.id/tags/zram/">Zram</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
     
-    <nav class="prev">
-      <a href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/">Mengembalikan backlight</a>
-    </nav>
-    
-  </div>
-  <div class="pure-u-2-24">
-    &nbsp;
-  </div>
-  <div class="pure-u-10-24">
-    
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/">Pelengkap dnscrypt-proxy</a>
-    </nav>
-    
-  </div>
-  <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/"><i class="fa fa-chevron-right"></i></a>
-    
-  </div>
-</div>
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
-
-
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'catatansasongko';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
-</div>
-
-</div>
-</div>
-<script src="https://sasongko.web.id/js/ui.js"></script>
-<script src="https://sasongko.web.id/js/menus.js"></script>
-
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
 <script>
-  
-  if (window.location.hostname != "localhost") {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
 
-    ga('create', 'UA-49503242-1', 'auto');
-    ga('send', 'pageview');
-  }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
 </script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-
-
-
-<script src="https://sasongko.web.id/js/math-code.js"></script>
-  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-  
-
-
+</script>
 </body>
-</html>
 
+</html>

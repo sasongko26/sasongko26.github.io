@@ -1,874 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.140.1">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>R | Catatan Sasongko</title>
+<meta name="keywords" content="">
+<meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+<meta name="author" content="">
+<link rel="canonical" href="https://sasongko.web.id/tags/r/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://sasongko.web.id/tags/r/index.xml">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/tags/r/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-  <title>R &middot; Catatan Sasongko</title>
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-    
+            .list {
+                background: var(--theme);
+            }
 
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
-  <!--<![endif]-->
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
-  <!--<![endif]-->
-
-  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
-
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-
-  
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
- 
-  
-  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
-    href='https://sasongko.web.id/tags/r/index.xml' />
-  
-
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
-  
-
-  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
-
-  
-    
-        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
-    
-  
-  
-    
-        <script src="https://sasongko.web.id/js/my.js"></script>
-    
-  
+    </style>
+</noscript><meta property="og:url" content="https://sasongko.web.id/tags/r/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="R">
+  <meta property="og:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="R">
+<meta name="twitter:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 
 </head>
 
-
-<body>
-<div id="layout">
-
-  
-<a href="#menu" id="menuLink" class="menu-link">
-  
-  <span></span>
-</a>
-<div id="menu">
-
-  
-
-  <div class="pure-menu">
-    <ul class="pure-menu-list">
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
-      
-        </li>
-      
-    </ul>
-  </div>
-
-  <div class="pure-menu social">
-  <ul class="pure-menu-list">
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://sasongko.web.id/tags/r/index.xml'><i
-          class="fas fa-rss"></i>RSS</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://youtube.com/channel/UCY4H1n73aQMB4LZjIJvH0_A" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </ul>
-</div>
-
-
-  <div>
-  <div class="small-print">
-    <small></small>
-  </div>
-  <div class="small-print">
-    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
-    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
-  </div>
-</div>
-
-</div>
-
-
-  <div id="main">
-
-
-<div class="header">
-  <h1>R</h1>
-</div>
-
-<div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Rebuild R post-upgrade icu4c</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>13 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Pagi ini, saat akan mengeksekusi <strong>R</strong>,</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ R
-</span></span><span style="display:flex;"><span>/usr/lib64/R/bin/exec/R: error <span style="color:#66d9ef">while</span> loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory
-</span></span></code></pre></div><p>Ternyata <strong>R</strong> nya bermasalah. Di atas disebutkan bahwa <strong>libicuuc.so.67</strong> tidak ditemukan. Dari namanya, bisa ditebak itu adalah <em>shared object/library</em> miliknya <strong>icu4c</strong>. Kita pastikan dulu,</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ slackpkg file-search libicuuc.so
-</span></span><span style="display:flex;"><span>Looking <span style="color:#66d9ef">for</span> libicuuc.so in package list. Please wait... DONE
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>The list below shows the packages that contains <span style="color:#e6db74">&#34;libicuuc\.so&#34;</span> file.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> installed <span style="color:#f92672">]</span> - icu4c-68.2-x86_64-1
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>You can search specific packages using <span style="color:#e6db74">&#34;slackpkg search package&#34;</span>.
-</span></span></code></pre></div><p><em>Command</em> tersebut dieksekusi dengan <em>root privileges</em>.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-15-mengenal-r-home/">Mengenal R_HOME</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Aug 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>R_HOME adalah direktori tempat R diinstall. Maksudnya, pada direktori inilah terdapat file <em>binary</em> dan konfigurasinya. Pada linux khususnya <strong>slackware</strong>, R_HOME ada di</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/usr/lib<span style="color:#f92672">{</span>,64<span style="color:#f92672">}</span>/R
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># tergantung arsitekturnya apakah 32bit atau 64bit.</span>
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/">Operasi direktori R</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <h1 id="mengetahui-_working-directory_">Mengetahui <em>working directory</em></h1>
-<p>Secara <em>default, working directory</em> pada <strong>Slackware</strong> adalah home directory user atau di mana <em>command</em> <!-- raw HTML omitted -->R<!-- raw HTML omitted --> dijalankan.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">getwd</span>()
-</span></span></code></pre></div><h1 id="mengganti-_working-directory_">Mengganti <em>working directory</em></h1>
-<p>Misal, akan berpindah <em>working directory</em> ke <!-- raw HTML omitted -->Documents/project<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">setwd</span>(<span style="color:#e6db74">&#39;Documents/project&#39;</span>)
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/">Mengenal objek R factor</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>22 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Factor adalah representasi data kategorik. Factor bisa dibuat dengan fungsi <!-- raw HTML omitted -->factor()<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->cut()<!-- raw HTML omitted -->. Saya lebih sering menggunakan <!-- raw HTML omitted -->cut()<!-- raw HTML omitted --> karena lebih aplikatif saat akan mengubah skala data dari rasio atau interval ke ordinal.</p>
-<p>Contoh, bmi adalah data <em>body mass index</em> (BMI) atau indeks massa tubuh (IMT). Klasifikasi IMT ada 4 macam, yaitu</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">Mengenal Objek R Vector</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 Apr 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-<em>handle</em> data.</p>
-<p>Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.</p>
-<h1 id="apa-sih-vector">Apa sih vector?</h1>
-<p>Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga <em>boolean (TRUE FALSE)</em>.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-04-11-install-jasp/">Install JASP</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Apr 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>JASP, singkatan dari Jeffreys&rsquo;s Amazing Statistic Program, merupakan <em>open source statistics software</em>. Software ini layak dijadikan pilihan utama karena:</p>
-<ol>
-<li><em>Open source</em>. Karena <em>open source</em> semua orang boleh memakai, melihat <em>source code</em>-nya dan berkontribusi (melaporkan masalah, mengusulkan fitur dan perbaikan). Silahkan menuju ke <a href="https://github.com/jasp-stats/jasp-desktop">https://github.com/jasp-stats/jasp-desktop</a> .</li>
-<li>Pengembangan dinaungi oleh akademisi dari University of Amsterdam, Duke University, University of Southampton, UNiversity of Sussex, University of Missouri, Athens University of Economics dan Business, Missouri State University, University of Groningen, Nyenrode Business University, University of Zurich dan Ludwig-Maximilians-Universität München.</li>
-<li>Menyediakan berbagai analisis baik analisis frequentist maupun Bayesian.</li>
-<li>Tabel hasil dalam format APA yang dengan mudahnya di-copas ke <em>word processosr</em> seperti LibreOffice Writer atau Microsoft Word.</li>
-<li>Tersedia untuk Linux, MacOS, dan Microsoft Windows.</li>
-</ol>
-<h1 id="install-jasp">Install JASP</h1>
-<p>Karena saya memakai <strong>Slackware</strong> maka cara yang ditulis di sini tentu saja yang berlaku untuk Slackware dan linux umumnya.
-Install menggunakan flatpak. Flatpak tersedia di SBo. Untuk install membutuhkan download dari repo sekitar 1,4GB.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-04-11-install-jasp/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-04-04-dispersi-data-dengan-r/">Dispersi Data dengan R</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>04 Apr 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Dispersi atau ukuran penyebaran data menunjukkan seberapa bervariasi suatu data.
-Kali ini data yang digunakan diambil dari dataset <strong>ldeaths</strong> yang merupakan bagian dari <strong>UKLungDeaths</strong>. Dataset <strong>UKLungDeaths</strong> berisi data jumlah kematian akibat penyakit bronchitis, emphysema dan asma di Inggris dalam kurun waktu 1974-1979. Data ini disajikan berdasarkan bulan dan jenis kelamin. Secara total untuk kedua jenis kelamin ada di <strong>ldeaths</strong>, laki-laki <strong>mdeaths</strong> dan perempuan <strong>fdeaths</strong>.</p>
-<h1 id="nilai-minimal">Nilai minimal</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">min</span>(ldeaths)
-</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">1300</span>
-</span></span></code></pre></div><h1 id="nilai-maksimal">Nilai maksimal</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">max</span>(ldeaths)
-</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">3891</span>
-</span></span></code></pre></div><h1 id="range">Range</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">range</span>(ldeaths)
-</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">1300</span> <span style="color:#ae81ff">3891</span>
-</span></span></code></pre></div><h1 id="varians">Varians</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">var</span>(ldeaths)
-</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">371911.8</span>
-</span></span></code></pre></div><h1 id="standar-deviasi">Standar deviasi</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">sd</span>(ldeaths)
-</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">609.8457</span>
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/">Tendensi Sentral dengan R</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>21 Mar 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Data yang digunakan :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> nilai
-</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">60</span> <span style="color:#ae81ff">79</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">57</span> <span style="color:#ae81ff">74</span> <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">70</span> <span style="color:#ae81ff">82</span> <span style="color:#ae81ff">36</span> <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">77</span> <span style="color:#ae81ff">81</span> <span style="color:#ae81ff">95</span> <span style="color:#ae81ff">41</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">92</span> <span style="color:#ae81ff">85</span> <span style="color:#ae81ff">55</span> <span style="color:#ae81ff">66</span> <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">78</span>
-</span></span><span style="display:flex;"><span>[26] <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">80</span> <span style="color:#ae81ff">98</span> <span style="color:#ae81ff">81</span> <span style="color:#ae81ff">67</span> <span style="color:#ae81ff">41</span> <span style="color:#ae81ff">71</span> <span style="color:#ae81ff">83</span> <span style="color:#ae81ff">54</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">88</span> <span style="color:#ae81ff">62</span> <span style="color:#ae81ff">74</span> <span style="color:#ae81ff">45</span> <span style="color:#ae81ff">60</span> <span style="color:#ae81ff">78</span> <span style="color:#ae81ff">89</span> <span style="color:#ae81ff">76</span> <span style="color:#ae81ff">48</span> <span style="color:#ae81ff">84</span> <span style="color:#ae81ff">84</span> <span style="color:#ae81ff">90</span> <span style="color:#ae81ff">15</span> <span style="color:#ae81ff">79</span>
-</span></span><span style="display:flex;"><span>[51] <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">67</span> <span style="color:#ae81ff">17</span> <span style="color:#ae81ff">82</span> <span style="color:#ae81ff">69</span> <span style="color:#ae81ff">74</span> <span style="color:#ae81ff">63</span> <span style="color:#ae81ff">80</span> <span style="color:#ae81ff">85</span> <span style="color:#ae81ff">61</span>
-</span></span></code></pre></div><h1 id="mean">Mean</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">mean</span>(nilai)
-</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">65.31667</span>
-</span></span></code></pre></div><p>Rerata nilai adalah 65,31667.</p>
-<h1 id="median">Median</h1>
-<h2 id="cara-1--menggunakan-median">Cara 1 : menggunakan median()</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">median</span>(nilai)
-</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">70.5</span>
-</span></span></code></pre></div><h2 id="cara-2--menggunakan-quantile">Cara 2 : menggunakan quantile()</h2>
-<p>Karena median tak lain adalah kuartil 2 atau dengan kata lain posisinya di tengah-tengah atau pada posisi 50% maka</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">quantile</span>(nilai, <span style="color:#ae81ff">0.5</span>)
-</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">50</span>% 
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">70.5</span>
-</span></span></code></pre></div><p>Median nilai adalah 70,5.</p>
-<h1 id="modus">Modus</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">names</span>(<span style="color:#a6e22e">which.max</span>(<span style="color:#a6e22e">table</span>(nilai)))
-</span></span><span style="display:flex;"><span>[1] <span style="color:#e6db74">&#34;74&#34;</span>
-</span></span></code></pre></div><p>Modus adalah 74.</p>
-<h1 id="kuartil-1">Kuartil 1</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">quantile</span>(nilai, <span style="color:#ae81ff">0.25</span>)
-</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">25</span>% 
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">54.75</span>
-</span></span></code></pre></div><p>Kuartil 1 nya adalah 54,75.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-03-14-input-data-r/">Input Data R</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Mar 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Input data dalam R sangat mudah dan ada beragam cara, yaitu:</p>
-<ol>
-<li>Menuliskan dalam bentuk <em>syntax</em>.  Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100</li>
-<li>Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel.</li>
-<li>Import dari file. Data dibuat tanpa menggunakan R dan disimpan ke dalam bentuk file. Data bisa dibuat menggunakan text editor (contoh vim, gvim, nano, pico, kate), aplikasi perkantoran (LibreOffice Calc dan Microsoft Excel) atau aplikasi statistik lainnya seperti SPSS, Minitab, dan Stata).</li>
-</ol>
-<p>Pada kesempatan ini yang digunakan adalah cara pertama. Misalkan datanya adalah nilai ujian dari 60 mahasiswa sebagai berikut :</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-03-14-input-data-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/">Package bawaan R Slackware</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>13 Feb 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Berikut adalah <em>package</em> atau <em>library</em> <strong>R</strong> yang secara <em>default</em> terinstall di Slackware melalui SBo.</p>
-<ol>
-<li><strong>KernSmooth</strong>.Functions for Kernel Smoothing Supporting Wand &amp; Jones (1995)</li>
-<li><strong>MASS</strong>. Support Functions and Datasets for Venables and Ripley&rsquo;s MASS</li>
-<li><strong>Matrix</strong>. Sparse and Dense Matrix Classes and Methods</li>
-<li><strong>base</strong>. The R Base Package</li>
-<li><strong>boot</strong>. Bootstrap Functions (Originally by Angelo Canty for S)</li>
-<li><strong>class</strong>. Functions for Classification</li>
-<li><strong>cluster</strong>. &ldquo;Finding Groups in Data&rdquo;: Cluster Analysis Extended Rousseeuw et al.</li>
-<li><strong>codetools</strong>. Code Analysis Tools for R</li>
-<li><strong>compiler</strong>. The R Compiler Package</li>
-<li><strong>datasets</strong>. The R Datasets Package</li>
-<li><strong>foreign</strong>. Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka, dBase, &hellip;</li>
-<li><strong>grDevices</strong>. The R Graphics Devices and Support for Colours and Fonts</li>
-<li><strong>graphics</strong>. The R Graphics Package</li>
-<li><strong>grid</strong>. The Grid Graphics Package</li>
-<li><strong>lattice</strong>. Trellis Graphics for R</li>
-<li><strong>methods</strong>. Formal Methods and Classes</li>
-<li><strong>mgcv</strong>. Mixed GAM Computation Vehicle with Automatic Smoothness Estimation</li>
-<li><strong>nlme</strong>. Linear and Nonlinear Mixed Effects Models</li>
-<li><strong>nnet</strong>. Feed-Forward Neural Networks and Multinomial Log-Linear Models</li>
-<li><strong>parallel</strong>. Support for Parallel computation in R</li>
-<li><strong>rpart</strong>. Recursive Partitioning and Regression Trees</li>
-<li><strong>spatial</strong>. Functions for Kriging and Point Pattern Analysis</li>
-<li><strong>splines</strong>. Regression Spline Functions and Classes</li>
-<li><strong>stats</strong>. The R Stats Package</li>
-<li><strong>stats4</strong>. Statistical Functions using S4 Classes</li>
-<li><strong>survival</strong>. Survival Analysis</li>
-<li><strong>tcltk</strong>. Tcl/Tk Interface</li>
-<li><strong>tools</strong>. Tools for Package Development</li>
-<li><strong>utils</strong>. The R Utils Package</li>
-</ol>
-<p><strong>Packages</strong> tersebut bisa dilihat dengan menjalankan pada <!-- raw HTML omitted -->Rconsole<!-- raw HTML omitted --></p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-02-10-mengenal-r/">Mengenal R</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Feb 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>R adalah salah satu bahasa pemrograman yang banyak digunakan dan bersifat <em>open source</em>. R bisa dikatakan sebagai bahasa pemrograman spesialis data. Tidak mengherankan kalau R digunakan untuk keperluan <em>handling data</em> seperti statistik, <em>data mining, data science</em> dan <em>machine learning</em>.</p>
-<p>Meskipun bersifat <em>open source</em>, sampai sekarang belum ada sistem operasi <em>open source</em> yang memasukkan R secara <em>default</em> terinstall dalam sistemnya. Namun demikian beberapa distro linux menyertakan R ke dalam repo resmi. Distro tersebut antara lain Debian, OpenSUSE dan Ubuntu. Bagaimana dengan <strong>Slackware</strong>? <em>Officiall repo</em> tidak ada. Namun, bisa didapatkan dari komunitas <strong>SBo</strong>. Apakah tersedia untuk Windows dan MacOS? Pengembang R sangat baik hati. Mereka juga membuat R untuk Windows dan MacOS. Jadi, R bisa digunakan semua sistem operasi komputer.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-02-10-mengenal-r/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-</div>
-
-</div>
-</div>
-<script src="https://sasongko.web.id/js/ui.js"></script>
-<script src="https://sasongko.web.id/js/menus.js"></script>
-
-
+<body class="list" id="top">
 <script>
-  
-  if (window.location.hostname != "localhost") {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    ga('create', 'UA-49503242-1', 'auto');
-    ga('send', 'pageview');
-  }
 </script>
 
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sasongko.web.id/" title="Home">
+                    <span><i class='fa fa-home fa-fw'></i>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/post/" title="Posts">
+                    <span><i class='fa fa-list fa-fw'></i>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/about/" title="Profil">
+                    <span><i class='fa fa-user fa-fw'></i>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/logo/" title="Logo">
+                    <span><i class='fa fa-user fa-fw'></i>Logo</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    R
+  </h1>
+</header>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Rebuild R post-upgrade icu4c
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Pagi ini, saat akan mengeksekusi R,
+$ R /usr/lib64/R/bin/exec/R: error while loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory Ternyata R nya bermasalah. Di atas disebutkan bahwa libicuuc.so.67 tidak ditemukan. Dari namanya, bisa ditebak itu adalah shared object/library miliknya icu4c. Kita pastikan dulu,
+$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE The list below shows the packages that contains &#34;libicuuc\.so&#34; file. [ installed ] - icu4c-68.2-x86_64-1 You can search specific packages using &#34;slackpkg search package&#34;. Command tersebut dieksekusi dengan root privileges.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-13 00:00:00 +0000 UTC'>13 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Rebuild R post-upgrade icu4c" href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengenal R_HOME
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>R_HOME adalah direktori tempat R diinstall. Maksudnya, pada direktori inilah terdapat file binary dan konfigurasinya. Pada linux khususnya slackware, R_HOME ada di
+/usr/lib{,64}/R # tergantung arsitekturnya apakah 32bit atau 64bit. </p>
+  </div>
+  <footer class="entry-footer"><span title='2020-08-15 00:00:00 +0000 UTC'>15 Aug 2020</span></footer>
+  <a class="entry-link" aria-label="post link to Mengenal R_HOME" href="https://sasongko.web.id/post/2020-08-15-mengenal-r-home/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Operasi direktori R
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Mengetahui working directory Secara default, working directory pada Slackware adalah home directory user atau di mana command R dijalankan.
+getwd() Mengganti working directory Misal, akan berpindah working directory ke Documents/project
+setwd(&#39;Documents/project&#39;) </p>
+  </div>
+  <footer class="entry-footer"><span title='2020-05-29 00:00:00 +0000 UTC'>29 May 2020</span></footer>
+  <a class="entry-link" aria-label="post link to Operasi direktori R" href="https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengenal objek R factor
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Factor adalah representasi data kategorik. Factor bisa dibuat dengan fungsi factor() atau cut(). Saya lebih sering menggunakan cut() karena lebih aplikatif saat akan mengubah skala data dari rasio atau interval ke ordinal.
+Contoh, bmi adalah data body mass index (BMI) atau indeks massa tubuh (IMT). Klasifikasi IMT ada 4 macam, yaitu
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-05-22 00:00:00 +0000 UTC'>22 May 2020</span></footer>
+  <a class="entry-link" aria-label="post link to Mengenal objek R factor" href="https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengenal Objek R Vector
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.
+Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.
+Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-04-29 00:00:00 +0000 UTC'>29 Apr 2020</span></footer>
+  <a class="entry-link" aria-label="post link to Mengenal Objek R Vector" href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://sasongko.web.id/tags/r/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
+
 </html>

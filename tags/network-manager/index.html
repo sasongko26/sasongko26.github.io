@@ -1,760 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.140.1">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Network-Manager | Catatan Sasongko</title>
+<meta name="keywords" content="">
+<meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+<meta name="author" content="">
+<link rel="canonical" href="https://sasongko.web.id/tags/network-manager/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://sasongko.web.id/tags/network-manager/index.xml">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/tags/network-manager/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-  <title>Network-Manager &middot; Catatan Sasongko</title>
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-    
+            .list {
+                background: var(--theme);
+            }
 
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
-  <!--<![endif]-->
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
-  <!--<![endif]-->
-
-  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
-
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-
-  
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
- 
-  
-  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
-    href='https://sasongko.web.id/tags/network-manager/index.xml' />
-  
-
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
-  
-
-  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
-
-  
-    
-        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
-    
-  
-  
-    
-        <script src="https://sasongko.web.id/js/my.js"></script>
-    
-  
+    </style>
+</noscript><meta property="og:url" content="https://sasongko.web.id/tags/network-manager/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Network-Manager">
+  <meta property="og:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Network-Manager">
+<meta name="twitter:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 
 </head>
 
-
-<body>
-<div id="layout">
-
-  
-<a href="#menu" id="menuLink" class="menu-link">
-  
-  <span></span>
-</a>
-<div id="menu">
-
-  
-
-  <div class="pure-menu">
-    <ul class="pure-menu-list">
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
-      
-        </li>
-      
-    </ul>
-  </div>
-
-  <div class="pure-menu social">
-  <ul class="pure-menu-list">
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://sasongko.web.id/tags/network-manager/index.xml'><i
-          class="fas fa-rss"></i>RSS</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://youtube.com/channel/UCY4H1n73aQMB4LZjIJvH0_A" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </ul>
-</div>
-
-
-  <div>
-  <div class="small-print">
-    <small></small>
-  </div>
-  <div class="small-print">
-    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
-    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
-  </div>
-</div>
-
-</div>
-
-
-  <div id="main">
-
-
-<div class="header">
-  <h1>Network-Manager</h1>
-</div>
-
-<div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-07-19-menggunakan-dhclient-networkmanager/">Menggunakan dhclient untuk NetworkManager</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Jul 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network-manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Ada sedikit masalah ketika menggunakan kernel 6.1.38. Masalah tersebut antara lain tidak stabilnya jaringan internet bila konek via NetworkManager, usb dan bluetooth yang kadang suka diskonek sendiri. Solusi untuk masalah jaringan dan bluetooth tersebut adalah mengganti dhcpcd dengan dhclient pada konfigurasi Network Manager /etc/NetworkManager/conf.d/00-dhcp-client.conf, sesuai masukan dari Pak Walesa.</p>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/">nmcli sw disabled</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network-manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Beberapa saat yang lalu penulis terkena <em>prank</em> dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan <strong>flight mode</strong> di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek <strong>nmcli</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ nmcli
-</span></span><span style="display:flex;"><span>p2p-dev-wlan0: disconnected
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;p2p-dev-wlan0&#34;</span>
-</span></span><span style="display:flex;"><span>        wifi-p2p, sw disabled, hw
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>eth0: unavailable
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Realtek RTL810xE&#34;</span>
-</span></span><span style="display:flex;"><span>        ethernet <span style="color:#f92672">(</span>r8169<span style="color:#f92672">)</span>, C8:5B:76:66:51:6C, hw, mtu <span style="color:#ae81ff">1500</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>wlan0: unavailable
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Qualcomm Atheros QCA9377&#34;</span>
-</span></span><span style="display:flex;"><span>        wifi <span style="color:#f92672">(</span>ath10k_pci<span style="color:#f92672">)</span>, 8E:58:C9:8B:64:0F, sw disabled, hw, mtu <span style="color:#ae81ff">1500</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>lo: unmanaged
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;lo&#34;</span>
-</span></span><span style="display:flex;"><span>        loopback <span style="color:#f92672">(</span>unknown<span style="color:#f92672">)</span>, 00:00:00:00:00:00, sw, mtu <span style="color:#ae81ff">65536</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Use <span style="color:#e6db74">&#34;nmcli device show&#34;</span> to get complete information about known devices and
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;nmcli connection show&#34;</span> to get an overview on active connection profiles.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Consult nmcli<span style="color:#f92672">(</span>1<span style="color:#f92672">)</span> and nmcli-examples<span style="color:#f92672">(</span>7<span style="color:#f92672">)</span> manual pages <span style="color:#66d9ef">for</span> complete usage details.
-</span></span></code></pre></div><p>Ada <em>output</em> yang aneh : <strong>sw disabled</strong>. Penulis baru ingat kalau <strong>flight mode</strong>-nya aktif. Setelah dinonaktifkan, semua kembali normal. <strong>sw disabled</strong> enyah dari <em>Output</em> <strong>nmcli</strong>.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/">Mengetahui IP lokal dengan nmcli</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk mengetahui alamat ip lokal tanpa akses <strong>root</strong> dapat menggunakan <strong>nmcli</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ nmcli
-</span></span><span style="display:flex;"><span>wlan0: connected to Anatomi
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Qualcomm Atheros QCA9377&#34;</span>
-</span></span><span style="display:flex;"><span>        wifi <span style="color:#f92672">(</span>ath10k_pci<span style="color:#f92672">)</span>, CC:B0:DA:B5:3B:75, hw, mtu <span style="color:#ae81ff">1500</span>
-</span></span><span style="display:flex;"><span>        ip4 default
-</span></span><span style="display:flex;"><span>        inet4 192.168.120.19/24
-</span></span><span style="display:flex;"><span>        route4 0.0.0.0/0
-</span></span><span style="display:flex;"><span>        route4 192.168.120.0/24
-</span></span><span style="display:flex;"><span>        route4 192.168.120.0/24
-</span></span><span style="display:flex;"><span>        inet6 fe80::1a37:a13:b117:ff74/64
-</span></span><span style="display:flex;"><span>        route6 fe80::/64
-</span></span><span style="display:flex;"><span>        route6 ff00::/8
-</span></span></code></pre></div><p>Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah</p>
-<ol>
-<li>ipv4 192.168.120.19</li>
-<li>ipv6 fe80::1a37:a13:b117:ff74</li>
-</ol>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">NetworkManager device not ready</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Aug 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Baru beberapa hari memakai (lagi) <strong>NetworkManager</strong>, sudah bermasalah (lagi).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>device not ready
-</span></span></code></pre></div><p><img src="https://sasongko.web.id/gambar/networkmanager-device-not-ready.png" alt=""></p>
-<p>begitulah&hellip;.</p>
-<p>Padahal <em>network interface</em>-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai <strong>NetworkManager</strong>.
-Solusinya dari berbagai referensi (lupa mencatat linknya)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;managed=true&#34;</span> &gt;&gt; /etc/NetworkManager/NetworkManager.conf
-</span></span></code></pre></div><p>Tapi, ternyata ini kemudian munculkan <em>warning</em> di <strong>syslog</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Aug  <span style="color:#ae81ff">9</span> 12:04:53 localhost NetworkManager<span style="color:#f92672">[</span>1047<span style="color:#f92672">]</span>: &lt;warn&gt;  <span style="color:#f92672">[</span>1596949493.8398<span style="color:#f92672">]</span> config: unknown key <span style="color:#e6db74">&#39;managed&#39;</span> in section <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> of file <span style="color:#960050;background-color:#1e0010">&#39;</span>/etc/NetworkManager/NetworkManager.conf
-</span></span></code></pre></div><p>Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal). Sampai sekarang belum terjadi lagi (dan semoga tidak akan terjadi lagi. Saya lelah dengan kerewelan <strong>NetworkManager</strong>).</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Bye wicd</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>04 Aug 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan <strong>wicd</strong> dari repo <strong>slackware current</strong>.</p>
-<blockquote>
-<p>extra/wicd/wicd-1.7.4-x86_64-3.txz:  Removed.</p>
-<blockquote>
-<p>This is unmaintained, possibly insecure, and doesn&rsquo;t work with Python
-versions newer than 2.7.18. NetworkManager is a better choice these days.</p>
-</blockquote>
-</blockquote>
-<p>Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan <strong>wicd</strong> daripada <strong>NetworkManager</strong>. Kenyamanan ini sebenarnya karena saya tidak mau repot, <strong>NetworkManager</strong> seringkali timbulkan masalah, salah satunya mengatur <em>hostname</em> dan domain. Keduanya saya kosongi. Mengapa? Saya belum kepikiran nama apa yang cocok. Hehehe&hellip;&hellip;</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-08-04-bye-wicd/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-12-07-nmcli-konek-wifi/">nmcli untuk konek wifi</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Dec 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk konek internet baik itu melalui modem, LAN, maupun wifi, pengguna GNU/Linux lebih sering menggunakan <!-- raw HTML omitted -->network manager<!-- raw HTML omitted --> yang <em>applet</em>-nya biasanya ada di panel sebelah kanan walau sebenarnya ada cara lain seperti <!-- raw HTML omitted -->ifconfig<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->dhcpcd<!-- raw HTML omitted -->. Kalau dalam mode grafis sih saya rasa tidak masalah, tapi bagaimana kalau sedang berada dalam mode teks yang jelas tidak terpampang <em>applet network manager</em>-nya? <!-- raw HTML omitted -->nmcli<!-- raw HTML omitted --> adalah solusinya.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-12-07-nmcli-konek-wifi/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/">Mengatur DNS Default</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Aug 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Secara <em>default</em>, DNS atau <em>Domain Name Server</em> yang digunakan adalah DNS dari operator/penyedia layanan internet. Namun sayangnya, operator tertentu kurang baik dalam penapisan/pemblokiran situs-situs negatif sehingga kadang konten-konten pornografi, judi, dan konten lainnya yang tidak sesuai dengan norma kesusilaan dan budaya Indonesia dapat sampai ke hadapan kita. Oleh karena itulah perlu menggunakan DNS lain.</p>
-<p>Penggantian DNS ini ada 2 cara, yaitu manual dan otomatis.</p>
-<p>Cara manual dengan menyunting berkas <!-- raw HTML omitted -->/etc/resolv.conf<!-- raw HTML omitted -->. Mengganti <em>nameserver</em> yang ada dengan <em>nameserver</em> yang diinginkan. Salah satu penyedia DNS penapisan situs negatif adalah <a href="http://nawala.id">Nawala</a>. <em>Nameserver</em> nya adalah:</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/">Konek Internet dengan nmcli</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Jun 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Menyambung catatan tentang [hilangnya ikon atau NetworkManager]({% post_url 2015-12-26-ikon-networkmanager-hilang %}). Jika <!-- raw HTML omitted -->nm-applet<!-- raw HTML omitted --> tidak mempan untuk menampilkan <em>applet NetworkManager</em>, maka kita bisa gunakan <!-- raw HTML omitted -->nmcli<!-- raw HTML omitted -->.</p>
-<p><!-- raw HTML omitted -->nmcli<!-- raw HTML omitted --> adalah <em>NetworkManager</em> dengan antarmuka teks (<em>command line interface</em>).</p>
-<pre tabindex="0"><code>nmcli
-Usage: nmcli [OPTIONS] OBJECT { COMMAND | help }
-
-OPTIONS
-  -t[erse]                                   terse output
-  -p[retty]                                  pretty output
-  -m[ode] tabular|multiline                  output mode
-  -c[olors] auto|yes|no                      whether to use colors in output
-  -f[ields] &lt;field1,field2,...&gt;|all|common   specify fields to output
-  -e[scape] yes|no                           escape columns separators in values
-  -a[sk]                                     ask for missing parameters
-  -s[how-secrets]                            allow displaying passwords
-  -w[ait] &lt;seconds&gt;                          set timeout waiting for finishing operations
-  -v[ersion]                                 show program version
-  -h[elp]                                    print this help
-
-OBJECT
-  g[eneral]       NetworkManager&#39;s general status and operations
-  n[etworking]    overall networking control
-  r[adio]         NetworkManager radio switches
-  c[onnection]    NetworkManager&#39;s connections
-  d[evice]        devices managed by NetworkManager
-  a[gent]         NetworkManager secret agent or polkit agent
-  m[onitor]       monitor NetworkManager changes
-</code></pre><p>Untuk melihat sambungan/koneksi yang telah dibuat dengan <em>NetworkManager</em> gunakan <!-- raw HTML omitted -->nmcli c<!-- raw HTML omitted -->. Berikut adalah contoh <em>output</em>-nya</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/">Tidak Ada Ikon NetworkManager di Panel</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>26 Dec 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Iseng-iseng install lagi slackware tapi tanpa paket yang ada di kategori <em>ap</em> atau direktori slackware/ap dan <em>xap</em> (slackware64/xap).</p>
-<p>Efek sampingnya adalah, tidak adanya ikon NetworkManager di panel. Di sini saya gunakan DE XFCE. Sementara itu paket direktori slackware/n semuanya terinstall.</p>
-<p>Install dulu appletnya. Karena saya punya berkas ISOnya maka installnya bisa offline asalkan tahu di mana letak paketnya berada. Setelah mount ISOnya ke /mnt/iso,</p>
-<pre tabindex="0"><code>installpkg /mnt/iso/slackware64/xap/network-manager*.txz
-</code></pre><p>Ketika memunculkan ikon/applet NetworkManagernya ke panel,</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-</div>
-
-</div>
-</div>
-<script src="https://sasongko.web.id/js/ui.js"></script>
-<script src="https://sasongko.web.id/js/menus.js"></script>
-
-
+<body class="list" id="top">
 <script>
-  
-  if (window.location.hostname != "localhost") {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    ga('create', 'UA-49503242-1', 'auto');
-    ga('send', 'pageview');
-  }
 </script>
 
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sasongko.web.id/" title="Home">
+                    <span><i class='fa fa-home fa-fw'></i>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/post/" title="Posts">
+                    <span><i class='fa fa-list fa-fw'></i>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/about/" title="Profil">
+                    <span><i class='fa fa-user fa-fw'></i>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/logo/" title="Logo">
+                    <span><i class='fa fa-user fa-fw'></i>Logo</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Network-Manager
+  </h1>
+</header>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Menggunakan dhclient untuk NetworkManager
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Ada sedikit masalah ketika menggunakan kernel 6.1.38. Masalah tersebut antara lain tidak stabilnya jaringan internet bila konek via NetworkManager, usb dan bluetooth yang kadang suka diskonek sendiri. Solusi untuk masalah jaringan dan bluetooth tersebut adalah mengganti dhcpcd dengan dhclient pada konfigurasi Network Manager /etc/NetworkManager/conf.d/00-dhcp-client.conf, sesuai masukan dari Pak Walesa.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-19 00:00:00 +0000 UTC'>19 Jul 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Menggunakan dhclient untuk NetworkManager" href="https://sasongko.web.id/post/2023-07-19-menggunakan-dhclient-networkmanager/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">nmcli sw disabled
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Beberapa saat yang lalu penulis terkena prank dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan flight mode di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek nmcli
+$ nmcli p2p-dev-wlan0: disconnected &#34;p2p-dev-wlan0&#34; wifi-p2p, sw disabled, hw eth0: unavailable &#34;Realtek RTL810xE&#34; ethernet (r8169), C8:5B:76:66:51:6C, hw, mtu 1500 wlan0: unavailable &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), 8E:58:C9:8B:64:0F, sw disabled, hw, mtu 1500 lo: unmanaged &#34;lo&#34; loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536 Use &#34;nmcli device show&#34; to get complete information about known devices and &#34;nmcli connection show&#34; to get an overview on active connection profiles. Consult nmcli(1) and nmcli-examples(7) manual pages for complete usage details. Ada output yang aneh : sw disabled. Penulis baru ingat kalau flight mode-nya aktif. Setelah dinonaktifkan, semua kembali normal. sw disabled enyah dari Output nmcli.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-09 00:00:00 +0000 UTC'>09 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to nmcli sw disabled" href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengetahui IP lokal dengan nmcli
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk mengetahui alamat ip lokal tanpa akses root dapat menggunakan nmcli
+$ nmcli wlan0: connected to Anatomi &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), CC:B0:DA:B5:3B:75, hw, mtu 1500 ip4 default inet4 192.168.120.19/24 route4 0.0.0.0/0 route4 192.168.120.0/24 route4 192.168.120.0/24 inet6 fe80::1a37:a13:b117:ff74/64 route6 fe80::/64 route6 ff00::/8 Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah
+ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74 </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-15 00:00:00 +0000 UTC'>15 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mengetahui IP lokal dengan nmcli" href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">NetworkManager device not ready
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Baru beberapa hari memakai (lagi) NetworkManager, sudah bermasalah (lagi).
+device not ready begitulah….
+Padahal network interface-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai NetworkManager. Solusinya dari berbagai referensi (lupa mencatat linknya)
+echo &#34;managed=true&#34; &gt;&gt; /etc/NetworkManager/NetworkManager.conf Tapi, ternyata ini kemudian munculkan warning di syslog
+Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] config: unknown key &#39;managed&#39; in section [main] of file &#39;/etc/NetworkManager/NetworkManager.conf Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal). Sampai sekarang belum terjadi lagi (dan semoga tidak akan terjadi lagi. Saya lelah dengan kerewelan NetworkManager).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-08-07 00:00:00 +0000 UTC'>07 Aug 2020</span></footer>
+  <a class="entry-link" aria-label="post link to NetworkManager device not ready" href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Bye wicd
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan wicd dari repo slackware current.
+extra/wicd/wicd-1.7.4-x86_64-3.txz: Removed.
+This is unmaintained, possibly insecure, and doesn’t work with Python versions newer than 2.7.18. NetworkManager is a better choice these days.
+Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan wicd daripada NetworkManager. Kenyamanan ini sebenarnya karena saya tidak mau repot, NetworkManager seringkali timbulkan masalah, salah satunya mengatur hostname dan domain. Keduanya saya kosongi. Mengapa? Saya belum kepikiran nama apa yang cocok. Hehehe……
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-08-04 00:00:00 +0000 UTC'>04 Aug 2020</span></footer>
+  <a class="entry-link" aria-label="post link to Bye wicd" href="https://sasongko.web.id/post/2020-08-04-bye-wicd/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://sasongko.web.id/tags/network-manager/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
+
 </html>

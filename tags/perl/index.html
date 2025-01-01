@@ -1,1187 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.140.1">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Perl | Catatan Sasongko</title>
+<meta name="keywords" content="">
+<meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+<meta name="author" content="">
+<link rel="canonical" href="https://sasongko.web.id/tags/perl/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://sasongko.web.id/tags/perl/index.xml">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/tags/perl/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-  <title>Perl &middot; Catatan Sasongko</title>
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-    
+            .list {
+                background: var(--theme);
+            }
 
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
-  <!--<![endif]-->
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
-  <!--<![endif]-->
-
-  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
-
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-
-  
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
- 
-  
-  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
-    href='https://sasongko.web.id/tags/perl/index.xml' />
-  
-
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
-  
-
-  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
-
-  
-    
-        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
-    
-  
-  
-    
-        <script src="https://sasongko.web.id/js/my.js"></script>
-    
-  
+    </style>
+</noscript><meta property="og:url" content="https://sasongko.web.id/tags/perl/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Perl">
+  <meta property="og:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Perl">
+<meta name="twitter:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 
 </head>
 
-
-<body>
-<div id="layout">
-
-  
-<a href="#menu" id="menuLink" class="menu-link">
-  
-  <span></span>
-</a>
-<div id="menu">
-
-  
-
-  <div class="pure-menu">
-    <ul class="pure-menu-list">
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
-      
-        </li>
-      
-    </ul>
-  </div>
-
-  <div class="pure-menu social">
-  <ul class="pure-menu-list">
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://sasongko.web.id/tags/perl/index.xml'><i
-          class="fas fa-rss"></i>RSS</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://youtube.com/channel/UCY4H1n73aQMB4LZjIJvH0_A" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </ul>
-</div>
-
-
-  <div>
-  <div class="small-print">
-    <small></small>
-  </div>
-  <div class="small-print">
-    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
-    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
-  </div>
-</div>
-
-</div>
-
-
-  <div id="main">
-
-
-<div class="header">
-  <h1>Perl</h1>
-</div>
-
-<div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-05-28-if-else-perl/">If else perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>28 May 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Penyeleksian kondisi di <strong>perl</strong> dapat menggunakan <em>syntax</em> <!-- raw HTML omitted -->if&hellip;else<!-- raw HTML omitted --> dengan format</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ( kondisi ) {
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">....</span>
-</span></span><span style="display:flex;"><span>	} <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">....</span>
-</span></span><span style="display:flex;"><span>	}
-</span></span></code></pre></div><p>Contoh</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#39;say&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;user&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ( $username <span style="color:#f92672">eq</span> <span style="color:#e6db74">&#34;nama&#34;</span> ) {
-</span></span><span style="display:flex;"><span>    say <span style="color:#e6db74">&#34;Oke&#34;</span>;
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>    say <span style="color:#e6db74">&#34;Ulangi lagi....&#34;</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/">Operator perbandingan perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Jan 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Operator perbandingan digunakan untuk membandingkan nilai. Data/nilai yang dibandingkan dapat berupa bilangan ataupun string. Namun ada perbedaan notasi.</p>
-<h1 id="perbandingan-bilangan">Perbandingan bilangan</h1>
-<p>|Contoh penulisan	|Penjelasan	|
-|$a &lt; $b	| $a lebih kecil dari $b	|
-|$a &gt; $b	| $a lebih besar dari $b	|
-|$a &lt;= $b	| $a lebih kecil atau sama dengan $b	|
-|$a =&gt; $b	| $a lebih besar atau sama dengan $b	|
-|$a == $b	| $a sama dengan $b	|
-|$a != $b	| $a tidak sama dengan $b	|</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/">Operator penggabungan pengulangan string perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>05 Jan 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Pada <strong>perl</strong>, variabel <strong>scalar</strong> yang berupa <strong>string</strong> dapat dilakukan penggabungan dan pengulangan. Contoh, terdapat 3 variabel sebagai berikut:
-$sapa = &ldquo;Hai&hellip;. &quot;
-$distro = &ldquo;Slackware&rdquo;
-$penilaian = &ldquo;distro terbaik.&rdquo;
-Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan &ldquo;.&rdquo;, sedangkan pengulangan dengan &ldquo;x&rdquo;.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#34;say&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $sapa <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hai.... &#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $distro <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Slackware &#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $penilaian <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;distro terbaik.&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># penggabungan</span>
-</span></span><span style="display:flex;"><span>say($sapa<span style="color:#f92672">.</span>$distro<span style="color:#f92672">.</span>$penilaian);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># pengulangan</span>
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;$distro&#34;</span> x <span style="color:#ae81ff">5</span>);
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/">Penggabungan operator perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>04 Jan 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Penggabungan operator yang dimaksudkan di sini adalah menggabungkan = dan operator lainnya seperti penjumlahan, perkalian, pengurangan, dll. Penggabungan ini biasanya digunakan untuk memperbarui nilai suatu variabel. Contoh di sini adalah penggabungan dengan operator penjumlahan.</p>
-<p>Misalkan, terdapat variabel a dengan nilai awal 10. Nilai a kemudian akan diubah dengan cara ditambah 4. Nilai a yang baru ini dituliskan dengan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span>a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">4</span>;
-</span></span></code></pre></div><p>Sehingga nilai a kemudian berubah dari 10 menjadi 14.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#34;say&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai a awal. a = 10&#34;</span>);
-</span></span><span style="display:flex;"><span>$a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">4</span>;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai a baru setelah ditambah 4. a += 4. a = $a&#34;</span>);
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/">Operator aritmatika scalar perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>03 Jan 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, <em>autoincrement, autodecrement</em>.</p>
-<p>Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#39;say&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $a <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $b <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Angka pertama (a) adalah $a&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Angka kedua (b) adalah $b&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># penjumlahan</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $c <span style="color:#f92672">=</span> $a <span style="color:#f92672">+</span> $b;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a+b = $c&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># pengurangan</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $d <span style="color:#f92672">=</span> $b <span style="color:#f92672">-</span> $a;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b-a = $d&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># perkalian</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $e <span style="color:#f92672">=</span> $a <span style="color:#f92672">*</span> $b;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a*b = $e&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># pembagian</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $f <span style="color:#f92672">=</span> $a <span style="color:#f92672">/</span> $b;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $g <span style="color:#f92672">=</span> $b <span style="color:#f92672">/</span> $a;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a/b = $f&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b/a = $g&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># pemangkatan</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $h <span style="color:#f92672">=</span> $a <span style="color:#f92672">**</span> $b;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $i <span style="color:#f92672">=</span> $b <span style="color:#f92672">**</span> $a;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a^b = $h&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b^a = $i&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># autoincrement</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># tanda + di depan</span>
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai a sebelum autoincrement = $a&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $j <span style="color:#f92672">=</span> <span style="color:#f92672">++</span>$a;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;++a = $j&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai a sesudah autoincrement = $a&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># tanda + di belakang</span>
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai b sebelum autoincrement $b&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $k <span style="color:#f92672">=</span> $b<span style="color:#f92672">++</span>;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;$b++ = $k&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai b setelah autoincrement $b&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># autodecrement</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># tanda - di depan</span>
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;c = a+b. c sebelum autodecrement = $c&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $l <span style="color:#f92672">=</span> <span style="color:#f92672">--</span>$c;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;l = c setelah autodecrement = $l&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># tanda - di belakang</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $m <span style="color:#f92672">=</span> $c<span style="color:#f92672">--</span>;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;c setelah autodecrement = $m&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># modulus (sisa hasil bagi)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $a <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $b <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $n <span style="color:#f92672">=</span> $a % <span style="color:#960050;background-color:#1e0010">$</span>b;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $o <span style="color:#f92672">=</span> $b % <span style="color:#960050;background-color:#1e0010">$</span>a;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a = $a&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b = $b&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a%b = $n&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b%a = $o&#34;</span>);
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-01-02-membuat-array-perl-dari-scalar/">Membuat array perl dari scalar</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>02 Jan 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Array merupakan variabel pada <strong>perl</strong> dengan data yang nilainya majemuk. Sedangkan scalar bernilai tunggal. Catatan kali ini tentang bagaimana cara membuat array dari scalar yang tersedia.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $nama <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sasongko&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $jenis_kelamin <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Laki-laki&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $distro <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Slackware&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $tahun <span style="color:#f92672">=</span> <span style="color:#ae81ff">2021</span>;
-</span></span></code></pre></div><p>Keempat scalar tersebut akan disatukan menjadi array @biodata.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> @biodata <span style="color:#f92672">=</span> ($nama, $jenis_kelamin, $distro, $tahun);
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-12-19-list-module-perl-terinstall/">List semua module perl terinstall</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Dec 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk mengetahui semua modul <strong>perl</strong> yang terinstall bisa menggunakan <strong>instmodsh</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ instmodsh
-</span></span><span style="display:flex;"><span>Available commands are:
-</span></span><span style="display:flex;"><span>   l            - List all installed modules
-</span></span><span style="display:flex;"><span>   m &lt;module&gt;   - Select a module
-</span></span><span style="display:flex;"><span>   q            - Quit the program
-</span></span><span style="display:flex;"><span>cmd?
-</span></span></code></pre></div><p>Kemudian pilih l.</p>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-30-mengetahui-banyaknya-elemen-array-perl/">Mengetahui banyaknya elemen array perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><em>Array</em> adalah salah satu tipe data pada <strong>bahasa pemrograman perl</strong>. Tipe data ini berisi data majemuk. Penulisan <em>array</em> menggunakan notasi @.</p>
-<p>Contoh:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> @buah <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;pepaya&#34;</span>, <span style="color:#e6db74">&#34;manga&#34;</span>, <span style="color:#e6db74">&#34;pisang&#34;</span>, <span style="color:#e6db74">&#34;jambu&#34;</span>, <span style="color:#e6db74">&#34;durian&#34;</span>, <span style="color:#e6db74">&#34;apel&#34;</span>);
-</span></span></code></pre></div><p>Untuk mengetahui berapa banyaknya elemen dari <em>array</em>, bisa menggunakan <strong>scalar()</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">print</span>(scalar(@buah));
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/">Variabel hash perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Jenis variabel ketiga yang dimiliki <strong>perl</strong> adalah <strong>hash</strong>. <strong>Hash</strong> ini merupakan data berpasangan. Penulisan dengan menyertakan tanda %.</p>
-<p>Contoh: akan dideklarasikan data tentang saya, yaitu nama dan distro yang saya gunakan. Nama saya Sasongko, distro Slackware.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> %data <span style="color:#f92672">=</span> (
-</span></span><span style="display:flex;"><span>	nama <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Sasongko&#34;</span>,
-</span></span><span style="display:flex;"><span>	distro <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Slackware&#34;</span>,
-</span></span><span style="display:flex;"><span>	);
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-28-variabel-array-perl/">Variabel array perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>28 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Melanjutkan catatan sebelumnya tentang variabel yang dimiliki bahasa pemrograman <strong>perl</strong>. Sebelumnya membahas tentang variabel <strong>scalar</strong>. Catatan kali ini tentang jenis variabel yang kedua yaitu <strong>array</strong>.</p>
-<p>Berbeda dengan <strong>scalar</strong> yang bernilai tunggal, <strong>array</strong> bernilai majemuk. Array merupakan himpunan. Element <strong>array</strong> <em>zero indexed</em>, artinya, elemen pertama berindeks 0.</p>
-<p>Pendeklarasian array diserta simbol @.</p>
-<p>Contoh: himpunan nama-nama buah dan daftar nilai</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> @buah <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;pisang&#34;</span>, <span style="color:#e6db74">&#34;mangga&#34;</span>, <span style="color:#e6db74">&#34;jeruk&#34;</span>, <span style="color:#e6db74">&#34;pepaya&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> @daftar_nilai <span style="color:#f92672">=</span> (<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">76.5</span>, <span style="color:#ae81ff">21.87</span>);
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">print</span> $buah[<span style="color:#ae81ff">0</span>];
-</span></span></code></pre></div><p>menghasilkan output pisang. Sedangkan</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-11-28-variabel-array-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-27-variabel-scalar-perl/">Variabel scalar perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>27 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><strong>Perl</strong> memiliki 3 jenis variabel, yaitu scalar, array dan hash. Scalar adalah variabel dengan nilai tunggal. Penulisan scalar diawali dengan tanda $.Pendeklarasian variabel dengan my. Nilai dari scalar bisa berupa text/string ataupun angka.
-Contoh: akan dideklarasikan variabel <em>buah</em>. buah ini bernilai &ldquo;mangga&rdquo;.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $buah <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mangga&#34;</span>;
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2019-12-02-perlintro-panduan-pertama-belajar-pemrograman-perl/">perlintro panduan pertama belajar pemrograman perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>02 Dec 2019</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Salah satu keunggulan <strong>perl</strong> dibanding bahasa pemrograman lainnya adalah tersedia dokumentasi atau panduan bagi pemula. Pemula membutuhkan panduan singkat tapi tetap komprehensif dan mudah dipahami. <strong>Perl</strong> sudah memberikannya. Dokumentasi atau panduan ini bisa diakses secara <em>offline</em> setelah menginstall <strong>perl</strong>. Namanya adalah <strong>perlintro</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ perldoc perlintro
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2019-02-01-perl-ide-vim/">Perl IDE dengan vim</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Feb 2019</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Reputasi <strong>vim</strong> sebagai <strong>text editor</strong> sudah teruji berpuluh tahun. Ternyata <strong>Vim</strong> juga memiliki <em>support</em> <strong>plugin</strong> untuk <strong>perl</strong>. Hal ini membuat <strong>vim</strong> bisa dijadikan sebagai <strong>integrated development environment (IDE)</strong> untuk <strong>perl</strong>.</p>
-<p><em>Download plugin</em>-nya kemudian extract</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ wget https://www.vim.org/scripts/download_script.php?src_id<span style="color:#f92672">=</span><span style="color:#ae81ff">24473</span> -O perl-support.zip -O perl-support.zip
-</span></span><span style="display:flex;"><span>$ mkdir -p .vim
-</span></span><span style="display:flex;"><span>$ unzip perl-support.zip -d .vim
-</span></span></code></pre></div><p>Aktifkan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;filetype plugin on&#34;</span> &gt;&gt; .vimrc
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/">Fix sbotools Perl unescaped left brace in regex is deprecated here</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>17 Jul 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Siang ini, sudah agak lama tidak <em>check update</em> paket-paket dari <a href="http://slackbuilds.org">SBo</a>. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sbocheck <span style="color:#75715e"># command ini dijalankan oleh root</span>
-</span></span><span style="display:flex;"><span>Unescaped left brace in regex is deprecated here <span style="color:#f92672">(</span>and will be fatal in Perl 5.32<span style="color:#f92672">)</span>, passed through in regex; marked by &lt;-- HERE in m/<span style="color:#ae81ff">\$</span><span style="color:#f92672">({</span> &lt;-- HERE |<span style="color:#f92672">)[</span>A-Za-z0-9_<span style="color:#f92672">]</span>+<span style="color:#f92672">(}</span>|<span style="color:#f92672">)</span>/ at /usr/share/perl5/SBO/Lib/Build.pm line <span style="color:#ae81ff">244</span>
-</span></span></code></pre></div><p>Ada masalah ternyata dan masalahnya di <a href="http://sasongko.web.id/tags/#perl">Perl</a>. Simpel sih solusinya. Buka file <!-- raw HTML omitted -->/usr/share/perl5/SBO/Lib/Build.pm<!-- raw HTML omitted -->, pada <em>line</em> 244 karakter { diganti {</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/">Pentingnya Shebang</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 Jun 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <h1 id="shebang-itu-apa">Shebang itu apa?</h1>
-<p>Pengguna linux, BSD, ataupun mac yang terbiasa melihat <em>source code</em> sangat mungkin sudah tidak asing lagi dengan <strong>shebang</strong>. Ada yang menyebut shebang sebagai <strong>sh bang</strong>, <strong>shabang</strong>, <strong>hashbang</strong>, <strong>hashpling</strong>, dan <strong>poundbang</strong>. Shebang ini dituliskan di baris pertama, yakni diawali dengan <!-- raw HTML omitted -->#!<!-- raw HTML omitted -->.</p>
-<p>Contoh, untuk <strong>perl</strong> :</p>
-<pre tabindex="0"><code>#!/usr/bin/perl
-</code></pre><p>atau</p>
-<pre tabindex="0"><code>#!/usr/bin/env perl
-</code></pre><p>Sebagai pengguna linux khususnya <strong>Slackware</strong>, <em>user</em> akan merasakan betapa pentingnya shebang ini. Kepentingannya terkait fungsi shebang itu sendiri dan bagaimana <em>user</em> menjalankannya.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-05-08-uninstall-all-perl-modules-manually/">Uninstall Manual Semua Modul Perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>08 May 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Cara <em>uninstall</em> semua modul perl yang dulunya <em>install</em> dari <a href="https://cpan.org">CPAN</a> secara manual :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -r /usr/local/<span style="color:#f92672">{</span>lib<span style="color:#f92672">{</span>,64<span style="color:#f92672">}</span>,share<span style="color:#f92672">}</span>/perl5
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-01-19-install-padre/">Install Padre</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>19 Jan 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><!-- raw HTML omitted -->Padre<!-- raw HTML omitted --> merupakan <strong><em>integrated development environment (IDE)</em> untuk bahasa pemrograman <!-- raw HTML omitted -->perl<!-- raw HTML omitted --></strong>.</p>
-<p><!-- raw HTML omitted -->Padre<!-- raw HTML omitted --> ini belum dimasukkan ke dalam paket resmi <strong>Slackware</strong> maupun <strong>SBo</strong>. Sehingga ada 2 kemungkinan cara menginstallnya.</p>
-<ol>
-<li>
-<p><em>Build</em> sendiri dari <em>source</em></p>
-</li>
-<li>
-<p>Install dari <!-- raw HTML omitted -->cpan<!-- raw HTML omitted --></p>
-</li>
-</ol>
-<p>Cara yang saya gunakan adalah cara kedua, yaitu</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2017-01-19-install-padre/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-</div>
-
-</div>
-</div>
-<script src="https://sasongko.web.id/js/ui.js"></script>
-<script src="https://sasongko.web.id/js/menus.js"></script>
-
-
+<body class="list" id="top">
 <script>
-  
-  if (window.location.hostname != "localhost") {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    ga('create', 'UA-49503242-1', 'auto');
-    ga('send', 'pageview');
-  }
 </script>
 
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sasongko.web.id/" title="Home">
+                    <span><i class='fa fa-home fa-fw'></i>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/post/" title="Posts">
+                    <span><i class='fa fa-list fa-fw'></i>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/about/" title="Profil">
+                    <span><i class='fa fa-user fa-fw'></i>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/logo/" title="Logo">
+                    <span><i class='fa fa-user fa-fw'></i>Logo</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Perl
+  </h1>
+</header>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">If else perl
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Penyeleksian kondisi di perl dapat menggunakan syntax if…else dengan format
+if ( kondisi ) { .... } else { .... } Contoh
+#!/usr/bin/perl use strict; use warnings; use feature &#39;say&#39;; my $username = &#34;user&#34;; if ( $username eq &#34;nama&#34; ) { say &#34;Oke&#34;; } else { say &#34;Ulangi lagi....&#34;; } </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-05-28 00:00:00 +0000 UTC'>28 May 2022</span></footer>
+  <a class="entry-link" aria-label="post link to If else perl" href="https://sasongko.web.id/post/2022-05-28-if-else-perl/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Operator perbandingan perl
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Operator perbandingan digunakan untuk membandingkan nilai. Data/nilai yang dibandingkan dapat berupa bilangan ataupun string. Namun ada perbedaan notasi.
+Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &lt; $b	| $a lebih kecil dari $b	| |$a &gt; $b	| $a lebih besar dari $b	| |$a &lt;= $b	| $a lebih kecil atau sama dengan $b	| |$a =&gt; $b	| $a lebih besar atau sama dengan $b	| |$a == $b	| $a sama dengan $b	| |$a != $b	| $a tidak sama dengan $b	|
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-01-06 00:00:00 +0000 UTC'>06 Jan 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Operator perbandingan perl" href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Operator penggabungan pengulangan string perl
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Pada perl, variabel scalar yang berupa string dapat dilakukan penggabungan dan pengulangan. Contoh, terdapat 3 variabel sebagai berikut: $sapa = “Hai…. &#34; $distro = “Slackware” $penilaian = “distro terbaik.” Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan “.”, sedangkan pengulangan dengan “x”.
+#!/usr/bin/perl use strict; use warnings; use feature &#34;say&#34;; my $sapa = &#34;Hai.... &#34;; my $distro = &#34;Slackware &#34;; my $penilaian = &#34;distro terbaik.&#34;; # penggabungan say($sapa.$distro.$penilaian); # pengulangan say(&#34;$distro&#34; x 5); </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-01-05 00:00:00 +0000 UTC'>05 Jan 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Operator penggabungan pengulangan string perl" href="https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Penggabungan operator perl
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Penggabungan operator yang dimaksudkan di sini adalah menggabungkan = dan operator lainnya seperti penjumlahan, perkalian, pengurangan, dll. Penggabungan ini biasanya digunakan untuk memperbarui nilai suatu variabel. Contoh di sini adalah penggabungan dengan operator penjumlahan.
+Misalkan, terdapat variabel a dengan nilai awal 10. Nilai a kemudian akan diubah dengan cara ditambah 4. Nilai a yang baru ini dituliskan dengan
+a &#43;= 4; Sehingga nilai a kemudian berubah dari 10 menjadi 14.
+#!/usr/bin/perl use strict; use warnings; use feature &#34;say&#34;; my $a = 10; say(&#34;Nilai a awal. a = 10&#34;); $a &#43;= 4; say(&#34;Nilai a baru setelah ditambah 4. a &#43;= 4. a = $a&#34;); </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-01-04 00:00:00 +0000 UTC'>04 Jan 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Penggabungan operator perl" href="https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Operator aritmatika scalar perl
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.
+Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.
+#!/usr/bin/perl use strict; use warnings; use feature &#39;say&#39;; my $a = 2; my $b = 25; say(&#34;Angka pertama (a) adalah $a&#34;); say(&#34;Angka kedua (b) adalah $b&#34;); # penjumlahan my $c = $a &#43; $b; say(&#34;a&#43;b = $c&#34;); # pengurangan my $d = $b - $a; say(&#34;b-a = $d&#34;); # perkalian my $e = $a * $b; say(&#34;a*b = $e&#34;); # pembagian my $f = $a / $b; my $g = $b / $a; say(&#34;a/b = $f&#34;); say(&#34;b/a = $g&#34;); # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(&#34;a^b = $h&#34;); say(&#34;b^a = $i&#34;); # autoincrement # tanda &#43; di depan say(&#34;Nilai a sebelum autoincrement = $a&#34;); my $j = &#43;&#43;$a; say(&#34;&#43;&#43;a = $j&#34;); say(&#34;Nilai a sesudah autoincrement = $a&#34;); # tanda &#43; di belakang say(&#34;Nilai b sebelum autoincrement $b&#34;); my $k = $b&#43;&#43;; say(&#34;$b&#43;&#43; = $k&#34;); say(&#34;Nilai b setelah autoincrement $b&#34;); # autodecrement # tanda - di depan say(&#34;c = a&#43;b. c sebelum autodecrement = $c&#34;); my $l = --$c; say(&#34;l = c setelah autodecrement = $l&#34;); # tanda - di belakang my $m = $c--; say(&#34;c setelah autodecrement = $m&#34;); # modulus (sisa hasil bagi) my $a = 3; my $b = 30; my $n = $a % $b; my $o = $b % $a; say(&#34;a = $a&#34;); say(&#34;b = $b&#34;); say(&#34;a%b = $n&#34;); say(&#34;b%a = $o&#34;); </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-01-03 00:00:00 +0000 UTC'>03 Jan 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Operator aritmatika scalar perl" href="https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://sasongko.web.id/tags/perl/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
+
 </html>

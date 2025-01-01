@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Debug on Catatan Sasongko</title>
     <link>https://sasongko.web.id/tags/debug/</link>
     <description>Recent content in Debug on Catatan Sasongko</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 18 Dec 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/tags/debug/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,17 @@
       <link>https://sasongko.web.id/post/2021-12-18-membuat-coredump/</link>
       <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-12-18-membuat-coredump/</guid>
-      <description>&lt;p&gt;Suatu program gagal dijalankan. Eksekusi via terminal menunjukkan &lt;strong&gt;segmentation fault&lt;/strong&gt; tanpa keterangan lainnya. Pada situasi inilah &lt;strong&gt;core dump&lt;/strong&gt; diperlukan untuk &lt;em&gt;debugging&lt;/em&gt; sehingga diketahui penyebabnya.&lt;/p&gt;&#xA;&lt;p&gt;Contoh, &lt;strong&gt;geeqie&lt;/strong&gt; apabila dijalankan di lingkungan &lt;strong&gt;wayland&lt;/strong&gt; berbuah &lt;strong&gt;segmentation fault&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ geeqie&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Segmentation fault&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Saatnya membuat core dump&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ gcore /usr/bin/geeqie&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Illegal process-id: /usr/bin/geeqie.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;You can&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;t &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; that without a process to debug.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;The program is not being run.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcore: failed to create core./usr/bin/geeqie&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kemudian eksekusi lagi&lt;/p&gt;</description>
+      <description>&lt;p&gt;Suatu program gagal dijalankan. Eksekusi via terminal menunjukkan &lt;strong&gt;segmentation fault&lt;/strong&gt; tanpa keterangan lainnya. Pada situasi inilah &lt;strong&gt;core dump&lt;/strong&gt; diperlukan untuk &lt;em&gt;debugging&lt;/em&gt; sehingga diketahui penyebabnya.&lt;/p&gt;
+&lt;p&gt;Contoh, &lt;strong&gt;geeqie&lt;/strong&gt; apabila dijalankan di lingkungan &lt;strong&gt;wayland&lt;/strong&gt; berbuah &lt;strong&gt;segmentation fault&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ geeqie
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Segmentation fault
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Saatnya membuat core dump&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ gcore /usr/bin/geeqie
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Illegal process-id: /usr/bin/geeqie.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;You can&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;t &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; that without a process to debug.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;The program is not being run.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcore: failed to create core./usr/bin/geeqie
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kemudian eksekusi lagi&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

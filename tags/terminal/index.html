@@ -1,1363 +1,292 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.140.1">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Terminal | Catatan Sasongko</title>
+<meta name="keywords" content="">
+<meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+<meta name="author" content="">
+<link rel="canonical" href="https://sasongko.web.id/tags/terminal/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://sasongko.web.id/tags/terminal/index.xml">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/tags/terminal/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-  <title>Terminal &middot; Catatan Sasongko</title>
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-    
+            .list {
+                background: var(--theme);
+            }
 
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
-  <!--<![endif]-->
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu-old-ie.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://sasongko.web.id/css/side-menu.css">
-  <!--<![endif]-->
-
-  <link rel="stylesheet" href="https://sasongko.web.id/css/blackburn.css">
-
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-
-  
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
- 
-  
-  <link rel="alternate" type="application/rss+xml" title="Catatan Sasongko"
-    href='https://sasongko.web.id/tags/terminal/index.xml' />
-  
-
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
-  
-
-  <link rel="shortcut icon" href="https://sasongko.web.id/img/favicon.ico" type="image/x-icon" />
-
-  
-    
-        <link rel="stylesheet" href="https://sasongko.web.id/css/my.css">
-    
-  
-  
-    
-        <script src="https://sasongko.web.id/js/my.js"></script>
-    
-  
+    </style>
+</noscript><meta property="og:url" content="https://sasongko.web.id/tags/terminal/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Terminal">
+  <meta property="og:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Terminal">
+<meta name="twitter:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 
 </head>
 
-
-<body>
-<div id="layout">
-
-  
-<a href="#menu" id="menuLink" class="menu-link">
-  
-  <span></span>
-</a>
-<div id="menu">
-
-  
-
-  <div class="pure-menu">
-    <ul class="pure-menu-list">
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/about/"><i class='fa fa-user fa-fw'></i>Profil</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://sasongko.web.id/logo/"><i class='fa fa-user fa-fw'></i>Logo</a>
-      
-        </li>
-      
-    </ul>
-  </div>
-
-  <div class="pure-menu social">
-  <ul class="pure-menu-list">
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://sasongko.web.id/tags/terminal/index.xml'><i
-          class="fas fa-rss"></i>RSS</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://youtube.com/channel/UCY4H1n73aQMB4LZjIJvH0_A" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </ul>
-</div>
-
-
-  <div>
-  <div class="small-print">
-    <small></small>
-  </div>
-  <div class="small-print">
-    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
-    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
-  </div>
-</div>
-
-</div>
-
-
-  <div id="main">
-
-
-<div class="header">
-  <h1>Terminal</h1>
-</div>
-
-<div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-06-06-redshift-tty/">Eksekusi redshift di tty</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>06 Jun 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/power-manager">power-manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Mode <strong>tty</strong> di sini maksudnya adalah mode yang hanya ada teks. Mode inilah yang aktif setelah masuk <em>runlevel</em> 3 sebelum masuk ke lingkungan <strong>X</strong> maupun <strong>wayland</strong>.</p>
-<p>Mungkin, ketika sedang melakukan <em>maintenance</em> dalam mode tty, tanpa terasa sudah menghabiskan waktu berjam-jam. Daya yang ada, seperti kecerahan layar, bisa terbuang percuma. Apalagi paparan layar yang terlalu cerah dalam durasi lama berpotensi mengganggu kesehatan. Eksekusi <strong>redshift</strong> di tty adalah solusi yang layak dipertimbangkan. Berikut adalah <em>command</em>-nya</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-06-06-redshift-tty/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/">Copy paste xterm</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><strong>xterm</strong> adalah <strong>X terminal emulator</strong> populer legendaris. Penulis masih  menggunakannya sebagai terminal utama ketika menggunakan <strong>blackbox</strong>. Sesekali saat menggunakan <strong>xfce</strong> atau <strong>kde</strong>.</p>
-<p><strong>xterm</strong> ini khas. Tidak seperti <strong>xfce4-terminal</strong> atau <strong>konsole</strong> yang secara <em>default</em> pengguna bisa melakukan <em>copy paste</em> (Copas) dengan mudah. <strong>Ctrl Shift C, Ctrl Shift V</strong> untuk copas pada terminal emulator lainnya tidak berlaku! Butuh pengaturan khusus untuk melakukannya. Mengatur agar setiap yang diblok akan dimasukkan ke <em>clipboard</em>.</p>
-<p>Untuk bisa melakukan <em>copy</em>:</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/">Menggunakan ratpoison</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/ratpoison">ratpoison</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><strong>Ratpoison</strong> sesuai namanya benar adalah racun! <em>Mouse</em>-nya terkena racun! Penggunaan <em>mouse</em> menjadi minimal. <em>User</em> banyak menggunakan <em>keyboard</em>.</p>
-<p>Memasuki lingkungan <strong>ratpoison</strong> <em>user</em> disambut interface hitam (mungkin dengan disertai bayangannya sendiri). Sudut kanan atas muncul ucapan selamat datang <strong>Welcome to ratpoison! Hit <code>C - t ?</code> for help.</strong>. Bagi yang selalu berpesta dalam gemerlapnya <strong>KDE Plasma, Cinnamon, Xfce, Mate, Budgie</strong>, dll sangat mungkin merasa <em>njegleg</em> atau keheranan bahkan mungkin bingung atau linglung. Tapi slackers insyaallah tetap tenang-tenang saja, bisa beradaptasi. Apalagi kalau <strong>emacs</strong> adalah <em>text editor</em> favoritnya. Apa hubungannya? Keduanya mempunyai <em>keybindings</em> yang serupa.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Mengetahui kondisi baterai</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/power-manager">power-manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Mengecek kondisi baterai laptop melalui terminal atau <em>command line interface</em> sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara <em>default</em> sudah menyertakan <em>desktop environment</em> seperti <strong>xfce, kde, mate, cinnamon, budgie, lumina</strong> dan <strong>manokwari</strong> dengan <em>interface</em> yang cantik dan menarik. DE tersebut sudah mempunyai <em>power manager</em> lengkap dengan <em>applet</em>-nya yang tak pernah bosan nempel di panel.</p>
-<p>Bagaimana kalau &lsquo;hanya&rsquo; menggunakan <em>window manager</em> seperti <strong>GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm</strong> atau <strong>ratpoison</strong> yang tidak mempunyai <em>power manager</em> sendiri? Melalui terminal lah jawabannya. Di sini digunakan <strong>upower</strong> yang secara default ada di <strong>Slackware</strong></p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/">Pentingnya Shebang</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 Jun 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <h1 id="shebang-itu-apa">Shebang itu apa?</h1>
-<p>Pengguna linux, BSD, ataupun mac yang terbiasa melihat <em>source code</em> sangat mungkin sudah tidak asing lagi dengan <strong>shebang</strong>. Ada yang menyebut shebang sebagai <strong>sh bang</strong>, <strong>shabang</strong>, <strong>hashbang</strong>, <strong>hashpling</strong>, dan <strong>poundbang</strong>. Shebang ini dituliskan di baris pertama, yakni diawali dengan <!-- raw HTML omitted -->#!<!-- raw HTML omitted -->.</p>
-<p>Contoh, untuk <strong>perl</strong> :</p>
-<pre tabindex="0"><code>#!/usr/bin/perl
-</code></pre><p>atau</p>
-<pre tabindex="0"><code>#!/usr/bin/env perl
-</code></pre><p>Sebagai pengguna linux khususnya <strong>Slackware</strong>, <em>user</em> akan merasakan betapa pentingnya shebang ini. Kepentingannya terkait fungsi shebang itu sendiri dan bagaimana <em>user</em> menjalankannya.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-06-15-operation-not-possible-due-to-rfkill/">Operation not possible due to RF-kill</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>16 Jun 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop environment</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Pagi ini, <em>refreshing</em> dengan berganti <em>desktop environment (DE)</em> memakai <strong>Window Maker (WM)</strong>. DE yang jarang digunakan karena biasanya memakai <strong>XFCE</strong>. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk <em>tethering</em>. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong <strong>Network Manager</strong> atau <strong>Wicd</strong> aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah <em>root</em>. Di sini <!-- raw HTML omitted -->$<!-- raw HTML omitted --> maksudnya adalah tetap dilakukan oleh <em>root</em>. Untuk memudahkan <em>syntax highlighting</em> karena kalau <em>command</em>-nya ditulis dengan <!-- raw HTML omitted -->#<!-- raw HTML omitted --> akan terbaca sebagai komentar sehingga tidak begitu jelas terbacanya.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2018-06-15-operation-not-possible-due-to-rfkill/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-05-18-convert-video-mp3/">Convert Video Menjadi MP3</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 May 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Ternyata tidak sulit mengkonversi/<em>convert</em> video menjadi audio, dalam hal ini mp3. Misalkan, akan dikonversi file video Gambang_Semarang.mkv menjadi file Gambang_Semarang.mp3</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i Gambang_Semarang.mkv -b:a 128K -vn Gambang_Semarang.mp3
-</span></span></code></pre></div><p>(<em>output</em>) dari <em>command</em> tersebut di atas sengaja tidak ditampilkan di sini karena agak panjang.</p>
-<p>Cara ini juga berlaku untuk mengubah file mp4 ke mp3 atau dengan kata lain, sebenarnya mengekstrak audio yang ada di dalam video.</p>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-04-23-salah-password-terminal/">Salah Password di Terminal</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Apr 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Pengguna GNU/Linux mungkin pernah salah menuliskan <em>password</em> saat login melalui terminal. Apa yang dilakukan?</p>
-<p>Mungkin sebagian ada yang menekan <!-- raw HTML omitted -->backspace<!-- raw HTML omitted --> berkali-kali sampai dirasa cukup. Ya, sampai dirasa cukup. Sampai dirasa kursor sudah kembali ke posisi awal penulisan <em>password</em>. Tapi, tahukah kalau ada cara yang lebih <em>smart</em> ?</p>
-<p>Ya, dengan kombinasi <!-- raw HTML omitted -->Ctrl + u <!-- raw HTML omitted -->.</p>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-07-29-menghapus-dengan-pengecualian/">Menghapus dengan Pengecualian</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>29 Jul 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Sebagai pengguna <em>SBo</em> dan <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->, file yang dihasilkan proses <em>build</em> ditaruh di <!-- raw HTML omitted -->/tmp<!-- raw HTML omitted -->. Folder ini lama-lama semakin banyak isinya. Padahal filenya bisa dikatakan tidak terpakai. <em>Script</em> masih aman tersimpan rapi di <!-- raw HTML omitted -->/var/lib/sbopkg<!-- raw HTML omitted -->. Sedangkan <em>source</em>-nya di <!-- raw HTML omitted -->/var/cache/sbopkg<!-- raw HTML omitted -->.</p>
-<p>Semua yang ada di folder <!-- raw HTML omitted -->/tmp<!-- raw HTML omitted --> akan saya hapus kecuali file yang berekstensi <!-- raw HTML omitted -->txt<!-- raw HTML omitted -->. Saya memang kadang iseng nulis-nulis sesuatu kemudian saya simpan dengan ekstensi <!-- raw HTML omitted -->txt<!-- raw HTML omitted --> dan ditaruh di <!-- raw HTML omitted -->/tmp<!-- raw HTML omitted -->. File-file ini tidak mau saya hapus, buat dibaca jadi hiburan sendiri kelak bahwa dulu pernah iseng nulis seperti itu&hellip; Hahahaha&hellip;..</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2017-07-29-menghapus-dengan-pengecualian/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-01-12-qtfm-segfault-pascaupgrade-changelog12jan17/">qtFM Segmentation Fault Pascaupgrade</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>12 Jan 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><em>Changelog current</em> hari ini 12 Januari 2017 ramai sekali. <em>Upgrade</em> dan <em>rebuilt</em> secara masif seolah menjadi kado tahun baru dari Patrick Volkerding. Dan ternyata berimbas <strong>segfault</strong> alias <!-- raw HTML omitted -->Segmentation fault<!-- raw HTML omitted --> pada <!-- raw HTML omitted -->qtFM<!-- raw HTML omitted --> <em>file manager</em> berbasis <!-- raw HTML omitted -->Qt<!-- raw HTML omitted --> yang saya <em>install</em> dari <!-- raw HTML omitted -->SBo<!-- raw HTML omitted -->.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2017-01-12-qtfm-segfault-pascaupgrade-changelog12jan17/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-12-08-scrolling-xterm/">Scrolling pada XTerm</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>08 Dec 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Di kalangan pengguna GNU/Linux mungkin <!-- raw HTML omitted -->xterm<!-- raw HTML omitted --> kurang familiar. Mengingat <em>desktop environment</em> populer seperti <!-- raw HTML omitted -->GNOME<!-- raw HTML omitted -->, <!-- raw HTML omitted -->KDE<!-- raw HTML omitted -->, <!-- raw HTML omitted -->Xfce<!-- raw HTML omitted -->, <!-- raw HTML omitted -->Mate<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->LXQt<!-- raw HTML omitted --> telah mempunyai <em>terminal emulator</em> sendiri. Selain itu, <!-- raw HTML omitted -->xterm<!-- raw HTML omitted --> dianggap memiliki keterbatasan. Salah satunya adalah tidak bisa <em>scrolling</em> karena tidak adanya <em>scrollbar</em>.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-12-08-scrolling-xterm/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-12-07-nmcli-konek-wifi/">nmcli untuk konek wifi</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Dec 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk konek internet baik itu melalui modem, LAN, maupun wifi, pengguna GNU/Linux lebih sering menggunakan <!-- raw HTML omitted -->network manager<!-- raw HTML omitted --> yang <em>applet</em>-nya biasanya ada di panel sebelah kanan walau sebenarnya ada cara lain seperti <!-- raw HTML omitted -->ifconfig<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->dhcpcd<!-- raw HTML omitted -->. Kalau dalam mode grafis sih saya rasa tidak masalah, tapi bagaimana kalau sedang berada dalam mode teks yang jelas tidak terpampang <em>applet network manager</em>-nya? <!-- raw HTML omitted -->nmcli<!-- raw HTML omitted --> adalah solusinya.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-12-07-nmcli-konek-wifi/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-09-30-copas-terminal/">Copy Paste di Terminal</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Sep 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Bagaimana sih caranya <em>copy paste</em> teks yang ada di Terminal? Untuk <em>copy</em> blok tulisannya kemudian klik kanan pilih <em>Copy</em>, atau setelah diblok tekan Ctrl Shift C. Sedangkan untuk <em>paste</em> ke terminal silahkan klik kanan pilih <em>Paste</em> atau tekan Ctrl Shift V.</p>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-06-01-operasi-direktori/">Operasi Direktori di Linux</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jun 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Operasi direktori/folder adalah suatu hal yang mendasar di linux. Walaupun sekarang banyak desktop environment yang menyebabkan sedikit interaksi dengan terminal langsung karena tinggal klik saja dalam mode grafis (GUI), kami akan tetap sampaikan bagaimana melakukannya dalam mode teks (CLI).</p>
-<h1 id="mengetahui-posisi-direktori-sekarang">Mengetahui posisi direktori sekarang</h1>
-<p>Gunakan</p>
-<pre tabindex="0"><code>pwd
-</code></pre><p>untuk mengetahui saat ini aktif di mana. Contoh</p>
-<pre tabindex="0"><code>$ pwd
-/home/sasongko
-</code></pre><p>Tampak bahwa direktori saat ini adalah di /home/sasongko.</p>
-<h1 id="menampilkan-isi-direktori">Menampilkan isi direktori</h1>
-<pre tabindex="0"><code>ls /direktori
-</code></pre><p>Contoh berikut akan menampilkan isi dari direktori /etc</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-06-01-operasi-direktori/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-05-30-memformat-flashdisk-di-linux/">Memformat Flashdisk di LInux</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 May 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Memformat flashdisk di linux adalah hal yang mudah.</p>
-<p>Pertama, pastikan flashdisknya terdeteksi oleh sistem. Pada kesempatan ini merk flashdisknya adalah Toshiba.</p>
-<pre tabindex="0"><code>$ lsusb
-Bus 001 Device 003: ID 0930:1400 Toshiba Corp. Memory Stick 2GB
-Bus 001 Device 002: ID 04f2:b483 Chicony Electronics Co., Ltd 
-Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
-</code></pre><p>Perhatikan baris 2, flashdisk terdeteksi. Untuk lebih meyakinkan lagi, sekaligus mengetahui flashdisk ini diperlakukan sebagai apa oleh sistem, segera setelah flashdisk ditancapkan,</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-05-30-memformat-flashdisk-di-linux/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-05-13-ekstrak-file-zip/">Ekstrak File zip</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>13 May 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Ekstensi zip adalah salah satu ekstensi file kompresi/<em>archive</em>. File kompresi yang lain adalah [tar.gz]({% post_url 2015-04-28-ekstrak-file-tar-gz %}).</p>
-<h1 id="bagaimana-ekstrak-file-zip">Bagaimana ekstrak file zip?</h1>
-<pre tabindex="0"><code>$ unzip namafile.zip
-</code></pre>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-10-14-konek-internet-recovery/">Konek Internet Recovery Mode</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Oct 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Secara default, saat kita berada dalam mode pemulihan (recovery mode) tidak akan bisa tersambung  internet. Untuk menyambungkannya lakukan langkah berikut. Oya kali ini penggunaan dalam virtual box setting jaringan NAT.
-<img src="https://sasongko.web.id/gambar/konek-internet-recovery-1.png" alt="">
-kemudian
-<img src="https://sasongko.web.id/gambar/konek-internet-recovery-2.png" alt="">
-Lalu kita cek apakah sudah tersambung dengan melakukan ping ke google
-<img src="https://sasongko.web.id/gambar/konek-internet-recovery-3.png" alt="">
-Yak, sudah konek! Alhamdulillah&hellip;&hellip;</p>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-03-24-menggunakan-perintah-echo/">Menggunakan Perintah Echo</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Mar 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Echo merupakan perintah bahasa bash (bahasa yang digunakan terminal) untuk menampilkan  output ke monitor.</p>
-<pre tabindex="0"><code>$ echo “teks yang diinginkan”
-teks yang diinginkan
-</code></pre><p>Contoh:</p>
-<pre tabindex="0"><code>$ echo &#34;halloooo.....&#34; 
-halloooo..... 
-$ echo &#34;BlankOn Linux Indonesia&#34; 
-BlankOn Linux Indonesia
-</code></pre>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/">Menggunakan WGet Linux Download Manager</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Mar 2014</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/internet-download-manager">internet download manager</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/terminal">terminal</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume.
-Cara menggunakannya mudah.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ wget <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span>
-</span></span></code></pre></div><p>untuk mem-pause download tekan Ctrl+C. Dan untuk melanjutkan kembali tambahkan opsi -c.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ wget <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span> -c
-</span></span></code></pre></div><p>Untuk lebih lengkapnya tentang wget ada di manual wget.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ wget -h 
-</span></span><span style="display:flex;"><span>GNU Wget 1.15, adalah sebuah non-interaktif network retriever. 
-</span></span><span style="display:flex;"><span>Penggunaan: wget <span style="color:#f92672">[</span>PILIHAN<span style="color:#f92672">]</span>... <span style="color:#f92672">[</span>URL<span style="color:#f92672">]</span>... 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Argumen yang wajib untuk pilihan panjang juga wajib untuk pilihan yang pendek. 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Memulai: 
-</span></span><span style="display:flex;"><span>  -V,  --version           menampilkan versi dari Wget dan keluar. 
-</span></span><span style="display:flex;"><span>  -h,  --help              menampilkan bantuan ini. 
-</span></span><span style="display:flex;"><span>  -b,  --background        pergi ke background setelah memulai. 
-</span></span><span style="display:flex;"><span>  -e,  --execute<span style="color:#f92672">=</span>COMMAND   menjalankan sebuah perintah <span style="color:#e6db74">`</span>.wgetrc<span style="color:#e6db74">&#39;-style. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Mencatat dan memasukan berkas: 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -o,  --output-file=FILE     pesan log pada FILE. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -a,  --append-output=FILE  tambahkan pesan pada FILE. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -d,  --debug               tampilkan banyak informasi debugging. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -q,  --quiet               diam (tidak ada output). 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -v,  --verbose             jadi verbose (ini yang default). 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   -nv, --no-verbose          matikan verboseness, tanpa menjadi quiet. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --report-speed=TYPE   Output bandwidth as TYPE.  TYPE can be bits. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -i,  --input-file=BERKAS    download URLs ditemukan dalam lokal atau BERKAS eksternal. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -F,  --force-html          perlakukan input file sebagai HTML. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -B,  --base=URL            telusuri berkas masukan HTML (-i -F) 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                             relatif ke URL. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --config=FILE         Specify config file to use. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Download: 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -t,  --tries=NUMBER            set nomor mencoba ke NUMBER (0 untuk tidak terbatas). 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --retry-connrefused       coba lagi walaupun koneksi ditolak. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -O,  --output-document=FILE    tulis document pada FILE. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -nc, --no-clobber              skip downloads that would download to 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                                 existing files (overwriting them). 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -c,  --continue                lanjutkan mengambil file yang terdownload  sebagian. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --progress=TYPE           pilih tipe gauge progress. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -N,  --timestamping            jangan mengambil kembali file kecuali file 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                                 lebih baru dari file local. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  --no-use-server-timestamps     don&#39;</span>t set the local file<span style="color:#e6db74">&#39;s timestamp by 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                                 the one on the server. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -S,  --server-response         tampilkan balasan server. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --spider                  jangan mendownload apapun. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -T,  --timeout=SECONDS         set semua nilai timeout pada SECONDS. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --dns-timeout=SECS        set the DNS lookup timeout pada SECS. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --connect-timeout=SECS    set the connect timeout pada SECS. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --read-timeout=SECS       set the read timeout pada SECS. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -w,  --wait=SECONDS            tunggu SECONDS diantara pengambilan. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --waitretry=SECONDS       tunggu 1..SECONDS diantara pencobaan dari sebuah pengambilan. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --random-wait             wait from 0.5*WAIT...1.5*WAIT secs between retrievals. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --no-proxy                secara eksplisit mematikan proxy. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -Q,  --quota=NUMBER            set pengambilan quota pada NUMBER. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --bind-address=ADDRESS    bind ke ADDRESS (hostname atau IP) pada local host. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --limit-rate=RATE         batasi kecepatan download ke RATE. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --no-dns-cache            matikan caching dari DNS lookups. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --restrict-file-names=OS  restrict karakter dalam nama file ke salah satu dari yang dibolehkan oleh OS. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --ignore-case             abaikan besar/kecil huruf ketika mencocokan files/direktori.. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -4,  --inet4-only              hanya menghubungi ke alamat IPv4 saja. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -6,  --inet6-only              hanya menghubungi ke alamat IPv6 saja. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --prefer-family=FAMILY    hubungi terlebih dahulu alamat dari family  yang dispesifikasikan, 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                                 salah satu dari IPv6, IPv4 atau none. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --user=USER               set kedua ftp dan http user pada USER. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --password=PASS           set kedua ftp dan http password pada PASS. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --ask-password            tanya untuk kata sandi. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --no-iri                  non-aktifkan dukungan IRI. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --local-encoding=ENC      gunakan ENC sebagai pengkodean lokal untuk IRI. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --remote-encoding=ENC     gunakan ENC sebagai pengkodean baku remote. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --unlink                  remove file before clobber. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Direktori: 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -nd,  --no-directories          jangan membuat direktori. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -x,  --force-directories        paksa pembuatan direktori. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -nH, --no-host-directories      jangan buat host directories. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --protocol-directories     gunakan nama protocol dalam direktori. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  -P,  --directory-prefix=PREFIX  simpan file pada PREFIX/... 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --cut-dirs=NUMBER           abaikan NUMBER remote komponen direktori. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Pilihan HTTP: 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --http-user=USER        set http user pada USER. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --http-password=PASS    set http password pada PASS. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --nocache               dissallow server-cached data. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --default-page=NAMA     Ubah nama halaman baku (biasanya 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                               ini `index.html&#39;</span>.<span style="color:#f92672">)</span>. 
-</span></span><span style="display:flex;"><span>  -E,  --adjust-extension      simpan HTML/CSS dokumen dengan ekstensi yang sesuai. 
-</span></span><span style="display:flex;"><span>       --ignore-length         abaikan <span style="color:#e6db74">`</span>Content-Length<span style="color:#e6db74">&#39; bagian header. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --header=STRING         masukkan STRING dalam headers. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --max-redirect          batas maksimal yang diperbolehkan untuk redirection setiap halaman. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --proxy-user=USER       set USER sebagai username proxy. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --proxy-password=PASS   set PASS sebagai password proxy. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --referer=URL           masukkan `Referer: URL&#39;</span> header dalam HTTP request. 
-</span></span><span style="display:flex;"><span>       --save-headers          simpan HTTP headers pada file. 
-</span></span><span style="display:flex;"><span>  -U,  --user-agent<span style="color:#f92672">=</span>AGENT      identifikasi sebagai AGEN daripada sebagai Wget/VERSION. 
-</span></span><span style="display:flex;"><span>       --no-http-keep-alive    disable HTTP keep-alive <span style="color:#f92672">(</span>persistent koneksi<span style="color:#f92672">)</span>. 
-</span></span><span style="display:flex;"><span>       --no-cookies            jangan menggunakan cookies. 
-</span></span><span style="display:flex;"><span>       --load-cookies<span style="color:#f92672">=</span>FILE     load cookies dari FILE sebelum session. 
-</span></span><span style="display:flex;"><span>       --save-cookies<span style="color:#f92672">=</span>FILE     simpan cookies pada FILE sesudah session. 
-</span></span><span style="display:flex;"><span>       --keep-session-cookies  load dan simpan session <span style="color:#f92672">(</span>non-permanen<span style="color:#f92672">)</span> cookies. 
-</span></span><span style="display:flex;"><span>       --post-data<span style="color:#f92672">=</span>STRING      gunakan metoda POST; kirim STRING sebagai data. 
-</span></span><span style="display:flex;"><span>       --post-file<span style="color:#f92672">=</span>FILE        gunakan metoda POST; kirim isi dari FILE. 
-</span></span><span style="display:flex;"><span>       --method<span style="color:#f92672">=</span>HTTPMethod     use method <span style="color:#e6db74">&#34;HTTPMethod&#34;</span> in the header. 
-</span></span><span style="display:flex;"><span>       --body-data<span style="color:#f92672">=</span>STRING      Send STRING as data. --method MUST be set. 
-</span></span><span style="display:flex;"><span>       --body-file<span style="color:#f92672">=</span>FILE        Send contents of FILE. --method MUST be set. 
-</span></span><span style="display:flex;"><span>       --content-disposition   Lihat header Content-Disposition ketika memilih 
-</span></span><span style="display:flex;"><span>                               berkas lokal <span style="color:#f92672">(</span>EKSPERIMEN<span style="color:#f92672">)</span>. 
-</span></span><span style="display:flex;"><span>       --content-on-error      output the received content on server errors. 
-</span></span><span style="display:flex;"><span>       --auth-no-challenge     Kirim informasi otentifikasi standar HTTP tanpa 
-</span></span><span style="display:flex;"><span>                               harus menunggu untuk ditanyai oleh server. 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Pilihan HTTPS <span style="color:#f92672">(</span>SSL/TLS<span style="color:#f92672">)</span>: 
-</span></span><span style="display:flex;"><span>       --secure-protocol<span style="color:#f92672">=</span>PR     choose secure protocol, one of auto, SSLv2, 
-</span></span><span style="display:flex;"><span>                                SSLv3, TLSv1 and PFS. 
-</span></span><span style="display:flex;"><span>       --https-only             only follow secure HTTPS links 
-</span></span><span style="display:flex;"><span>       --no-check-certificate   jangan memvalidasi server certificate. 
-</span></span><span style="display:flex;"><span>       --certificate<span style="color:#f92672">=</span>FILE       client certificate file. 
-</span></span><span style="display:flex;"><span>       --certificate-type<span style="color:#f92672">=</span>TYPE  tipe sertifikate client, PEM atau DER. 
-</span></span><span style="display:flex;"><span>       --private-key<span style="color:#f92672">=</span>FILE       private key file. 
-</span></span><span style="display:flex;"><span>       --private-key-type<span style="color:#f92672">=</span>TYPE  tipe private key, PEM atau DER. 
-</span></span><span style="display:flex;"><span>       --ca-certificate<span style="color:#f92672">=</span>FILE    file yang berisi CA<span style="color:#e6db74">&#39;s. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       --ca-directory=DIR       direktori dimana hash list dari CA&#39;</span>s disimpan 
-</span></span><span style="display:flex;"><span>       --random-file<span style="color:#f92672">=</span>FILE       file dengan data acak untuk seeding SSL PRNG. 
-</span></span><span style="display:flex;"><span>       --egd-file<span style="color:#f92672">=</span>FILE          penamaan file EGD socket dengan data random. 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Pilihan FTP: 
-</span></span><span style="display:flex;"><span>       --ftp-user<span style="color:#f92672">=</span>USER         set ftp user pada USER. 
-</span></span><span style="display:flex;"><span>       --ftp-password<span style="color:#f92672">=</span>PASS     set ftp password pada PASS. 
-</span></span><span style="display:flex;"><span>       --no-remove-listing     jangan hapus file <span style="color:#e6db74">`</span>.listing<span style="color:#960050;background-color:#1e0010">&#39;</span>. 
-</span></span><span style="display:flex;"><span>       --no-glob               matikan FTP nama file globbing. 
-</span></span><span style="display:flex;"><span>       --no-passive-ftp        disable the <span style="color:#e6db74">&#34;passive&#34;</span> mode trasfer. 
-</span></span><span style="display:flex;"><span>       --preserve-permissions  preserver remote file permissions. 
-</span></span><span style="display:flex;"><span>       --retr-symlinks         ketika berekursif, ambil linked-to files <span style="color:#f92672">(</span>bukan dir<span style="color:#f92672">)</span>. 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>WARC options: 
-</span></span><span style="display:flex;"><span>       --warc-file<span style="color:#f92672">=</span>FILENAME      save request/response data to a .warc.gz file. 
-</span></span><span style="display:flex;"><span>       --warc-header<span style="color:#f92672">=</span>STRING      insert STRING into the warcinfo record. 
-</span></span><span style="display:flex;"><span>       --warc-max-size<span style="color:#f92672">=</span>NUMBER    set maximum size of WARC files to NUMBER. 
-</span></span><span style="display:flex;"><span>       --warc-cdx                write CDX index files. 
-</span></span><span style="display:flex;"><span>       --warc-dedup<span style="color:#f92672">=</span>FILENAME     <span style="color:#66d9ef">do</span> not store records listed in this CDX file. 
-</span></span><span style="display:flex;"><span>       --no-warc-compression     <span style="color:#66d9ef">do</span> not compress WARC files with GZIP. 
-</span></span><span style="display:flex;"><span>       --no-warc-digests         <span style="color:#66d9ef">do</span> not calculate SHA1 digests. 
-</span></span><span style="display:flex;"><span>       --no-warc-keep-log        <span style="color:#66d9ef">do</span> not store the log file in a WARC record. 
-</span></span><span style="display:flex;"><span>       --warc-tempdir<span style="color:#f92672">=</span>DIRECTORY  location <span style="color:#66d9ef">for</span> temporary files created by the 
-</span></span><span style="display:flex;"><span>                                 WARC writer. 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Recursive download: 
-</span></span><span style="display:flex;"><span>  -r,  --recursive          spesifikasikan untuk mendownload rekursif. 
-</span></span><span style="display:flex;"><span>  -l,  --level<span style="color:#f92672">=</span>NUMBER      maksimum kedalaman rekursi <span style="color:#f92672">(</span>inf atau <span style="color:#ae81ff">0</span> untuk tak terhingga<span style="color:#f92672">)</span>. 
-</span></span><span style="display:flex;"><span>       --delete-after       delete files locally sesudah mendownloadnya. 
-</span></span><span style="display:flex;"><span>  -k,  --convert-links      buat links dalam HTML yang didownload atau CSS yang 
-</span></span><span style="display:flex;"><span>                            menunjuk ke berkas lokal. 
-</span></span><span style="display:flex;"><span>  --backups<span style="color:#f92672">=</span>N   before writing file X, rotate up to N backup files. 
-</span></span><span style="display:flex;"><span>  -K,  --backup-converted   sebelum mengubah file X, backup sebagai X.orig. 
-</span></span><span style="display:flex;"><span>  -m,  --mirror             shortcut untuk -N -r -l inf --no-remove-listing. 
-</span></span><span style="display:flex;"><span>  -p,  --page-requisites    ambil semua gambar, dll. yang diperlukan untuk menampilkan file HTML. 
-</span></span><span style="display:flex;"><span>       --strict-comments    hidupkan strick <span style="color:#f92672">(</span>SGML<span style="color:#f92672">)</span> handling dari komentar HTML. 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Recursive diterima/ditolak: 
-</span></span><span style="display:flex;"><span>  -A,  --accept<span style="color:#f92672">=</span>LIST               list yang dipisahkan oleh koma yang berisiekstensi yang diterima. 
-</span></span><span style="display:flex;"><span>  -R,  --reject<span style="color:#f92672">=</span>LIST               list yang dipisahkan oleh koma yang berisiekstensi yang ditolak. 
-</span></span><span style="display:flex;"><span>       --accept-regex<span style="color:#f92672">=</span>REGEX        regex matching accepted URLs. 
-</span></span><span style="display:flex;"><span>       --reject-regex<span style="color:#f92672">=</span>REGEX        regex matching rejected URLs. 
-</span></span><span style="display:flex;"><span>       --regex-type<span style="color:#f92672">=</span>TYPE           regex type <span style="color:#f92672">(</span>posix<span style="color:#f92672">)</span>. 
-</span></span><span style="display:flex;"><span>  -D,  --domains<span style="color:#f92672">=</span>LIST              list yang dipisahkan oleh koma yang berisidomains yang dibolehkan. 
-</span></span><span style="display:flex;"><span>       --exclude-domains<span style="color:#f92672">=</span>LIST      list yang dipisahkan oleh koma yang berisidomains yang direject/tolak. 
-</span></span><span style="display:flex;"><span>       --follow-ftp                ikuti link FTP dari dokumen HTML. 
-</span></span><span style="display:flex;"><span>       --follow-tags<span style="color:#f92672">=</span>LIST          list yang dipisahkan oleh koma yang berisitag HTML yang diikuti 
-</span></span><span style="display:flex;"><span>       --ignore-tags<span style="color:#f92672">=</span>LIST          list yang dipisahkan oleh koma yang berisitag HTML yang diabaikan. 
-</span></span><span style="display:flex;"><span>  -H,  --span-hosts                pergi ke host asing ketika recursive. 
-</span></span><span style="display:flex;"><span>  -L,  --relative                  hanya mengikuti links relative saja. 
-</span></span><span style="display:flex;"><span>  -I,  --include-directories<span style="color:#f92672">=</span>LIST  list dari direktori yang dibolehkan. 
-</span></span><span style="display:flex;"><span>  --trust-server-names             use the name specified by the redirection 
-</span></span><span style="display:flex;"><span>                                   url last component. 
-</span></span><span style="display:flex;"><span>  -X,  --exclude-directories<span style="color:#f92672">=</span>LIST   list dari direktori yang diabaikan. 
-</span></span><span style="display:flex;"><span>  -np, --no-parent                 jangan merambah direktori atasnya. 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Laporkan bug dan saran kepada &lt;bug-wget@gnu.org&gt;
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
-</div>
-
-</div>
-</div>
-<script src="https://sasongko.web.id/js/ui.js"></script>
-<script src="https://sasongko.web.id/js/menus.js"></script>
-
-
+<body class="list" id="top">
 <script>
-  
-  if (window.location.hostname != "localhost") {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    ga('create', 'UA-49503242-1', 'auto');
-    ga('send', 'pageview');
-  }
 </script>
 
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sasongko.web.id/" title="Home">
+                    <span><i class='fa fa-home fa-fw'></i>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/post/" title="Posts">
+                    <span><i class='fa fa-list fa-fw'></i>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/about/" title="Profil">
+                    <span><i class='fa fa-user fa-fw'></i>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/logo/" title="Logo">
+                    <span><i class='fa fa-user fa-fw'></i>Logo</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Terminal
+  </h1>
+</header>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Eksekusi redshift di tty
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Mode tty di sini maksudnya adalah mode yang hanya ada teks. Mode inilah yang aktif setelah masuk runlevel 3 sebelum masuk ke lingkungan X maupun wayland.
+Mungkin, ketika sedang melakukan maintenance dalam mode tty, tanpa terasa sudah menghabiskan waktu berjam-jam. Daya yang ada, seperti kecerahan layar, bisa terbuang percuma. Apalagi paparan layar yang terlalu cerah dalam durasi lama berpotensi mengganggu kesehatan. Eksekusi redshift di tty adalah solusi yang layak dipertimbangkan. Berikut adalah command-nya
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-06-06 00:00:00 +0000 UTC'>06 Jun 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Eksekusi redshift di tty" href="https://sasongko.web.id/post/2021-06-06-redshift-tty/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Copy paste xterm
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>xterm adalah X terminal emulator populer legendaris. Penulis masih menggunakannya sebagai terminal utama ketika menggunakan blackbox. Sesekali saat menggunakan xfce atau kde.
+xterm ini khas. Tidak seperti xfce4-terminal atau konsole yang secara default pengguna bisa melakukan copy paste (Copas) dengan mudah. Ctrl Shift C, Ctrl Shift V untuk copas pada terminal emulator lainnya tidak berlaku! Butuh pengaturan khusus untuk melakukannya. Mengatur agar setiap yang diblok akan dimasukkan ke clipboard.
+Untuk bisa melakukan copy:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-11 00:00:00 +0000 UTC'>11 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Copy paste xterm" href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Menggunakan ratpoison
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Ratpoison sesuai namanya benar adalah racun! Mouse-nya terkena racun! Penggunaan mouse menjadi minimal. User banyak menggunakan keyboard.
+Memasuki lingkungan ratpoison user disambut interface hitam (mungkin dengan disertai bayangannya sendiri). Sudut kanan atas muncul ucapan selamat datang Welcome to ratpoison! Hit C - t ? for help.. Bagi yang selalu berpesta dalam gemerlapnya KDE Plasma, Cinnamon, Xfce, Mate, Budgie, dll sangat mungkin merasa njegleg atau keheranan bahkan mungkin bingung atau linglung. Tapi slackers insyaallah tetap tenang-tenang saja, bisa beradaptasi. Apalagi kalau emacs adalah text editor favoritnya. Apa hubungannya? Keduanya mempunyai keybindings yang serupa.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-11 00:00:00 +0000 UTC'>11 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Menggunakan ratpoison" href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengetahui kondisi baterai
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Mengecek kondisi baterai laptop melalui terminal atau command line interface sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara default sudah menyertakan desktop environment seperti xfce, kde, mate, cinnamon, budgie, lumina dan manokwari dengan interface yang cantik dan menarik. DE tersebut sudah mempunyai power manager lengkap dengan applet-nya yang tak pernah bosan nempel di panel.
+Bagaimana kalau ‘hanya’ menggunakan window manager seperti GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm atau ratpoison yang tidak mempunyai power manager sendiri? Melalui terminal lah jawabannya. Di sini digunakan upower yang secara default ada di Slackware
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-10 00:00:00 +0000 UTC'>10 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mengetahui kondisi baterai" href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/"></a>
+</article>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Pentingnya Shebang
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Shebang itu apa? Pengguna linux, BSD, ataupun mac yang terbiasa melihat source code sangat mungkin sudah tidak asing lagi dengan shebang. Ada yang menyebut shebang sebagai sh bang, shabang, hashbang, hashpling, dan poundbang. Shebang ini dituliskan di baris pertama, yakni diawali dengan #!.
+Contoh, untuk perl :
+#!/usr/bin/perl atau
+#!/usr/bin/env perl Sebagai pengguna linux khususnya Slackware, user akan merasakan betapa pentingnya shebang ini. Kepentingannya terkait fungsi shebang itu sendiri dan bagaimana user menjalankannya.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-06-18 00:00:00 +0000 UTC'>18 Jun 2018</span></footer>
+  <a class="entry-link" aria-label="post link to Pentingnya Shebang" href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://sasongko.web.id/tags/terminal/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
+
 </html>

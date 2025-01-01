@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Text-Editor on Catatan Sasongko</title>
     <link>https://sasongko.web.id/tags/text-editor/</link>
     <description>Recent content in Text-Editor on Catatan Sasongko</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 02 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/tags/text-editor/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,19 @@
       <link>https://sasongko.web.id/post/2024-04-02-menambahkan-line-number-vim/</link>
       <pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2024-04-02-menambahkan-line-number-vim/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Vim&lt;/strong&gt; secara &lt;em&gt;default&lt;/em&gt; tidak menampilkan &lt;em&gt;line number&lt;/em&gt;. Adanya &lt;em&gt;line number&lt;/em&gt; ini bisa sangat memudahkan terutama saat proses &lt;em&gt;debugging&lt;/em&gt; atau pengecekan kesalahan. Untuk menampilkannya, tambahkan baris berikut di file konfigurasinya (contoh: ~/.vimrc) :&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;number&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Vim&lt;/strong&gt; secara &lt;em&gt;default&lt;/em&gt; tidak menampilkan &lt;em&gt;line number&lt;/em&gt;. Adanya &lt;em&gt;line number&lt;/em&gt; ini bisa sangat memudahkan terutama saat proses &lt;em&gt;debugging&lt;/em&gt; atau pengecekan kesalahan. Untuk menampilkannya, tambahkan baris berikut di file konfigurasinya (contoh: ~/.vimrc) :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;number&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Mengubah colorscheme vim</title>
       <link>https://sasongko.web.id/post/2023-01-10-ubah-colorscheme-vim/</link>
       <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2023-01-10-ubah-colorscheme-vim/</guid>
-      <description>&lt;p&gt;VIm merupakan teks editor legendaris yang masih aktif dikembangkan. Mudah diubahsuaikan menjadi salah satu alasan vim dan derivatnya digemari banyak kalangan, baik itu programmer maupun pengguna awam seperti kami ini. Salah satu yang mudah diubahsuaikan adalah tampilannya. Lebih spesifik lagi skema warna atau &lt;em&gt;color scheme&lt;/em&gt;-nya.&lt;/p&gt;&#xA;&lt;p&gt;Banyak &lt;em&gt;color scheme&lt;/em&gt; yang disediakan, salah satunya adalah &lt;strong&gt;koehler&lt;/strong&gt;. Untuk mengubah &lt;strong&gt;koehler&lt;/strong&gt; sebagai &lt;em&gt;default&lt;/em&gt; tambahkan ini ke .vimrc&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;colorscheme koehler&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;VIm merupakan teks editor legendaris yang masih aktif dikembangkan. Mudah diubahsuaikan menjadi salah satu alasan vim dan derivatnya digemari banyak kalangan, baik itu programmer maupun pengguna awam seperti kami ini. Salah satu yang mudah diubahsuaikan adalah tampilannya. Lebih spesifik lagi skema warna atau &lt;em&gt;color scheme&lt;/em&gt;-nya.&lt;/p&gt;
+&lt;p&gt;Banyak &lt;em&gt;color scheme&lt;/em&gt; yang disediakan, salah satunya adalah &lt;strong&gt;koehler&lt;/strong&gt;. Untuk mengubah &lt;strong&gt;koehler&lt;/strong&gt; sebagai &lt;em&gt;default&lt;/em&gt; tambahkan ini ke .vimrc&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;colorscheme koehler
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Menambahkan line number kate</title>
@@ -41,28 +46,49 @@
       <link>https://sasongko.web.id/post/2021-02-25-mengatur-ukuran-window-gvim-otomatis/</link>
       <pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-02-25-mengatur-ukuran-window-gvim-otomatis/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;GVIm&lt;/strong&gt; merupakan &lt;em&gt;text editor&lt;/em&gt; legendaris. Simpel dan mudah digunakan adalah alasan utama penulis menyukainya. &lt;strong&gt;GVIm&lt;/strong&gt; juga mudah di-&lt;em&gt;customize&lt;/em&gt;. &lt;em&gt;User&lt;/em&gt; bebas melakukan modifikasi sesuai kebutuhannya. Salah satu yang penulis butuhkan adalah ketika memulai gvim ukuran &lt;em&gt;window&lt;/em&gt; 80x24 (80 kolom, 24 baris). Untuk mewujudkannya, perlu membuat file &lt;strong&gt;~/.gvimrc&lt;/strong&gt; isinya sebagai berikut:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set lines&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;24&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;GVIm&lt;/strong&gt; merupakan &lt;em&gt;text editor&lt;/em&gt; legendaris. Simpel dan mudah digunakan adalah alasan utama penulis menyukainya. &lt;strong&gt;GVIm&lt;/strong&gt; juga mudah di-&lt;em&gt;customize&lt;/em&gt;. &lt;em&gt;User&lt;/em&gt; bebas melakukan modifikasi sesuai kebutuhannya. Salah satu yang penulis butuhkan adalah ketika memulai gvim ukuran &lt;em&gt;window&lt;/em&gt; 80x24 (80 kolom, 24 baris). Untuk mewujudkannya, perlu membuat file &lt;strong&gt;~/.gvimrc&lt;/strong&gt; isinya sebagai berikut:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set lines&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;24&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Copy paste vim mode visual</title>
       <link>https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/</link>
       <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;VIm&lt;/strong&gt; merupakan &lt;em&gt;text editor&lt;/em&gt; legendaris yang sampai saat ini masih memiliki penggemar. Penulis salah satunya. Berbeda dengan &lt;em&gt;text editor&lt;/em&gt; lain, &lt;strong&gt;vim&lt;/strong&gt; tidak menampilkan menu untuk &lt;em&gt;copy/cut paste&lt;/em&gt;. Namun, itu tidak masalah. Semua bisa diatur. Oya, ini semua berada dalam lingkungan &lt;strong&gt;vim&lt;/strong&gt; dengan &lt;strong&gt;mode visual&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Sebelum melakukan &lt;em&gt;copy paste&lt;/em&gt;, tentunya memilih dulu yang akan dicopas.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Tempatkan kursor di awal text yang akan dicops&lt;/li&gt;&#xA;&lt;li&gt;Tekan &lt;strong&gt;v&lt;/strong&gt; untuk memulai blok&lt;/li&gt;&#xA;&lt;li&gt;Jalankan panah kanan kiri atas bawah untuk memilih blok&lt;/li&gt;&#xA;&lt;li&gt;Tekan &lt;strong&gt;y&lt;/strong&gt; untuk &lt;em&gt;copy&lt;/em&gt; (y singkatan dari yank), atau &lt;strong&gt;d&lt;/strong&gt; untuk &lt;em&gt;cut&lt;/em&gt; (d singkatan dari delete)&lt;/li&gt;&#xA;&lt;li&gt;Kalau mau mem-&lt;em&gt;paste&lt;/em&gt;, tekan &lt;strong&gt;p&lt;/strong&gt; di awal tempat tujuan &lt;em&gt;paste&lt;/em&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Nah, selesai.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;VIm&lt;/strong&gt; merupakan &lt;em&gt;text editor&lt;/em&gt; legendaris yang sampai saat ini masih memiliki penggemar. Penulis salah satunya. Berbeda dengan &lt;em&gt;text editor&lt;/em&gt; lain, &lt;strong&gt;vim&lt;/strong&gt; tidak menampilkan menu untuk &lt;em&gt;copy/cut paste&lt;/em&gt;. Namun, itu tidak masalah. Semua bisa diatur. Oya, ini semua berada dalam lingkungan &lt;strong&gt;vim&lt;/strong&gt; dengan &lt;strong&gt;mode visual&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Sebelum melakukan &lt;em&gt;copy paste&lt;/em&gt;, tentunya memilih dulu yang akan dicopas.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Tempatkan kursor di awal text yang akan dicops&lt;/li&gt;
+&lt;li&gt;Tekan &lt;strong&gt;v&lt;/strong&gt; untuk memulai blok&lt;/li&gt;
+&lt;li&gt;Jalankan panah kanan kiri atas bawah untuk memilih blok&lt;/li&gt;
+&lt;li&gt;Tekan &lt;strong&gt;y&lt;/strong&gt; untuk &lt;em&gt;copy&lt;/em&gt; (y singkatan dari yank), atau &lt;strong&gt;d&lt;/strong&gt; untuk &lt;em&gt;cut&lt;/em&gt; (d singkatan dari delete)&lt;/li&gt;
+&lt;li&gt;Kalau mau mem-&lt;em&gt;paste&lt;/em&gt;, tekan &lt;strong&gt;p&lt;/strong&gt; di awal tempat tujuan &lt;em&gt;paste&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Nah, selesai.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Kekuatan Tersembunyi Nano : Menampilkan File Tersembunyi</title>
       <link>https://sasongko.web.id/post/2016-04-28-nano-file-browser/</link>
       <pubDate>Thu, 28 Apr 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-04-28-nano-file-browser/</guid>
-      <description>&lt;p&gt;Bertahun-tahun pakai linux, baru sadar ternyata &lt;strong&gt;nano&lt;/strong&gt; punya kekuatan tersembunyi. Bisa menampilkan file maupun folder yang &lt;em&gt;hidden&lt;/em&gt; secara otomatis.&lt;/p&gt;&#xA;&lt;p&gt;Selama ini, untuk mengetahui apa saja yang &lt;em&gt;hidden&lt;/em&gt; dengan mengetikkan di &lt;strong&gt;terminal&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ls -a&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Atau dengan menekan &lt;!-- raw HTML omitted --&gt;^H&lt;!-- raw HTML omitted --&gt; atau &lt;!-- raw HTML omitted --&gt;Ctrl H&lt;!-- raw HTML omitted --&gt; di &lt;strong&gt;thunar&lt;/strong&gt;, atau &lt;!-- raw HTML omitted --&gt; Alt . &lt;!-- raw HTML omitted --&gt; di &lt;strong&gt;dolphin&lt;/strong&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Bertahun-tahun pakai linux, baru sadar ternyata &lt;strong&gt;nano&lt;/strong&gt; punya kekuatan tersembunyi. Bisa menampilkan file maupun folder yang &lt;em&gt;hidden&lt;/em&gt; secara otomatis.&lt;/p&gt;
+&lt;p&gt;Selama ini, untuk mengetahui apa saja yang &lt;em&gt;hidden&lt;/em&gt; dengan mengetikkan di &lt;strong&gt;terminal&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ls -a
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Atau dengan menekan &lt;!-- raw HTML omitted --&gt;^H&lt;!-- raw HTML omitted --&gt; atau &lt;!-- raw HTML omitted --&gt;Ctrl H&lt;!-- raw HTML omitted --&gt; di &lt;strong&gt;thunar&lt;/strong&gt;, atau &lt;!-- raw HTML omitted --&gt; Alt . &lt;!-- raw HTML omitted --&gt; di &lt;strong&gt;dolphin&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mengatur Indentasi gEdit</title>
       <link>https://sasongko.web.id/post/2014-07-03-mengatur-indentasi-gedit/</link>
       <pubDate>Thu, 03 Jul 2014 08:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2014-07-03-mengatur-indentasi-gedit/</guid>
-      <description>&lt;p&gt;Untuk keperluan coding, bagi pengguna gedit sebagai text editor-nya, pengaturan indentasi sangatlah penting.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Indentasi Otomatis&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gsettings set org.gnome.gedit.preferences.editor auto-indent true&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Jaraknya?&lt;/strong&gt;&#xA;Default-nya 8 spasi, tapi umumnya hanya 4 spasi.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gsettings set org.gnome.gedit.preferences.editor tabs-size 4&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;p&gt;Untuk keperluan coding, bagi pengguna gedit sebagai text editor-nya, pengaturan indentasi sangatlah penting.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Indentasi Otomatis&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gsettings set org.gnome.gedit.preferences.editor auto-indent true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Jaraknya?&lt;/strong&gt;
+Default-nya 8 spasi, tapi umumnya hanya 4 spasi.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gsettings set org.gnome.gedit.preferences.editor tabs-size 4
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
   </channel>
 </rss>

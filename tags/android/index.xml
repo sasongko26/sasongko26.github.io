@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Android on Catatan Sasongko</title>
     <link>https://sasongko.web.id/tags/android/</link>
     <description>Recent content in Android on Catatan Sasongko</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 16 Nov 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/tags/android/index.xml" rel="self" type="application/rss+xml" />
@@ -13,56 +13,99 @@
       <link>https://sasongko.web.id/post/2021-11-16-mount-android-storage-linux/</link>
       <pubDate>Tue, 16 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-11-16-mount-android-storage-linux/</guid>
-      <description>&lt;p&gt;Transfer data antara &lt;em&gt;smartphone android&lt;/em&gt; dan komputer/pc/laptop linux (dalam contoh ini &lt;strong&gt;Slackware&lt;/strong&gt;) dapat dilakukan dengan mudah. Kemudahan tersebut bahkan dapat dilakukan dengan mode text tanpa grafis.&lt;/p&gt;&#xA;&lt;p&gt;Misalkan akan menghubungkan &lt;em&gt;storage&lt;/em&gt; yang ada di &lt;em&gt;android smartphone&lt;/em&gt; dengan linux. &lt;em&gt;Storage&lt;/em&gt; dimount ke direktori mtp. Direktori ini bebas, silahkan pilih sendiri sesuai kebutuhan/keinginan.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ jmtpfs mtp&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Selanjutnya dapat dilakukan transfer file seperti biasa. Jika sudah selesai unmount&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ fusermount mtp&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;Transfer data antara &lt;em&gt;smartphone android&lt;/em&gt; dan komputer/pc/laptop linux (dalam contoh ini &lt;strong&gt;Slackware&lt;/strong&gt;) dapat dilakukan dengan mudah. Kemudahan tersebut bahkan dapat dilakukan dengan mode text tanpa grafis.&lt;/p&gt;
+&lt;p&gt;Misalkan akan menghubungkan &lt;em&gt;storage&lt;/em&gt; yang ada di &lt;em&gt;android smartphone&lt;/em&gt; dengan linux. &lt;em&gt;Storage&lt;/em&gt; dimount ke direktori mtp. Direktori ini bebas, silahkan pilih sendiri sesuai kebutuhan/keinginan.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ jmtpfs mtp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Selanjutnya dapat dilakukan transfer file seperti biasa. Jika sudah selesai unmount&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ fusermount mtp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Screenshot android dengan adb</title>
       <link>https://sasongko.web.id/post/2020-08-21-screenshot-via-adb/</link>
       <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-08-21-screenshot-via-adb/</guid>
-      <description>&lt;p&gt;Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di &lt;em&gt;external memory&lt;/em&gt; (sdcard) dengan nama file screenshot.png&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb shell screencap -p /sdcard/screenshot.png&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di &lt;em&gt;external memory&lt;/em&gt; (sdcard) dengan nama file screenshot.png&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb shell screencap -p /sdcard/screenshot.png
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Aktivasi android GPS via adb</title>
       <link>https://sasongko.web.id/post/2020-05-24-aktivasi-android-gps-adb/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-05-24-aktivasi-android-gps-adb/</guid>
-      <description>&lt;p&gt;Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan &lt;!-- raw HTML omitted --&gt;adb&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb shell settings put secure location_mode &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kalau ingin menonaktifkan, ganti angka 3 dengan 0.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan &lt;!-- raw HTML omitted --&gt;adb&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb shell settings put secure location_mode &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kalau ingin menonaktifkan, ganti angka 3 dengan 0.&lt;/p&gt;</description>
     </item>
     <item>
       <title>MtpErrorCantOpenDevice</title>
       <link>https://sasongko.web.id/post/2020-01-10-mtperrorcantopendevice/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-01-10-mtperrorcantopendevice/</guid>
-      <description>&lt;p&gt;Ketika akan memindahkan data dari HP android ke laptop melalui &lt;!-- raw HTML omitted --&gt;thunar&lt;!-- raw HTML omitted --&gt;, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui &lt;!-- raw HTML omitted --&gt;jmtpfs&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ jmtpfs&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Device &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;VID&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0e8d and PID&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;201d&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; is a MediaTek Inc Elephone P8000.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;error returned by libusb_claim_interface&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; -6LIBMTP PANIC: Unable to initialize device&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;terminate called after throwing an instance of &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;MtpErrorCantOpenDevice&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  what&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;:  Can&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;t open device&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Aborted&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ada masalah di &lt;!-- raw HTML omitted --&gt;libusb&lt;!-- raw HTML omitted --&gt;. Coba reinstall &lt;!-- raw HTML omitted --&gt;libusb&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ketika akan memindahkan data dari HP android ke laptop melalui &lt;!-- raw HTML omitted --&gt;thunar&lt;!-- raw HTML omitted --&gt;, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui &lt;!-- raw HTML omitted --&gt;jmtpfs&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ jmtpfs
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Device &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;VID&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0e8d and PID&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;201d&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; is a MediaTek Inc Elephone P8000.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;error returned by libusb_claim_interface&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; -6LIBMTP PANIC: Unable to initialize device
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;terminate called after throwing an instance of &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;MtpErrorCantOpenDevice&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  what&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;:  Can&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;t open device
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Aborted
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ada masalah di &lt;!-- raw HTML omitted --&gt;libusb&lt;!-- raw HTML omitted --&gt;. Coba reinstall &lt;!-- raw HTML omitted --&gt;libusb&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Restart android via adb</title>
       <link>https://sasongko.web.id/post/2019-08-03-restart-android-via-adb/</link>
       <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2019-08-03-restart-android-via-adb/</guid>
-      <description>&lt;p&gt;Catatan kali ini masih seputar &lt;em&gt;troubleshoot&lt;/em&gt; HP android dengan komputer terutama &lt;strong&gt;Slackware&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Tadi malam, HP yang OS android &lt;em&gt;touchscreen&lt;/em&gt;-nya tidak ada respon. Di semua bagian layar. Tapi tombol power dan volume masih berfungsi. Begitu juga dengan konektivitas internet maupun telepon. Mau mencoba di-&lt;em&gt;restart&lt;/em&gt;, tombol power normal tapi untuk memilih &lt;em&gt;shutdown&lt;/em&gt; atau &lt;em&gt;reboot&lt;/em&gt; tidak bisa karena &lt;em&gt;tochscreen&lt;/em&gt;-nya tidak ada respon. Lepas baterai? Tidak bisa karena baterainya tanam.&lt;/p&gt;&#xA;&lt;p&gt;Solusinya? &lt;em&gt;restart&lt;/em&gt; via komputer. Pastikan sudah terinstall &lt;em&gt;andorid tools&lt;/em&gt; (tersedia di SBo).&lt;/p&gt;</description>
+      <description>&lt;p&gt;Catatan kali ini masih seputar &lt;em&gt;troubleshoot&lt;/em&gt; HP android dengan komputer terutama &lt;strong&gt;Slackware&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Tadi malam, HP yang OS android &lt;em&gt;touchscreen&lt;/em&gt;-nya tidak ada respon. Di semua bagian layar. Tapi tombol power dan volume masih berfungsi. Begitu juga dengan konektivitas internet maupun telepon. Mau mencoba di-&lt;em&gt;restart&lt;/em&gt;, tombol power normal tapi untuk memilih &lt;em&gt;shutdown&lt;/em&gt; atau &lt;em&gt;reboot&lt;/em&gt; tidak bisa karena &lt;em&gt;tochscreen&lt;/em&gt;-nya tidak ada respon. Lepas baterai? Tidak bisa karena baterainya tanam.&lt;/p&gt;
+&lt;p&gt;Solusinya? &lt;em&gt;restart&lt;/em&gt; via komputer. Pastikan sudah terinstall &lt;em&gt;andorid tools&lt;/em&gt; (tersedia di SBo).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Back Up Data HP Android</title>
       <link>https://sasongko.web.id/post/2019-06-09-backup-android/</link>
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2019-06-09-backup-android/</guid>
-      <description>&lt;p&gt;Sebelum berganti ponsel atau HP sangat disarankan untuk mem-&lt;em&gt;back up&lt;/em&gt; data-data penting, seperti dokumen, foto, video, maupun chat &lt;em&gt;WhatsApp&lt;/em&gt;. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi &lt;strong&gt;Slackware&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h1 id=&#34;persiapan-slackware&#34;&gt;Persiapan &lt;strong&gt;Slackware&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;p&gt;Pastikan bisa menjalankan &lt;!-- raw HTML omitted --&gt;adb&lt;!-- raw HTML omitted --&gt; yang merupakan bagian dari &lt;!-- raw HTML omitted --&gt;android tools&lt;!-- raw HTML omitted --&gt;. Kalau belum bisa install dari SBo&lt;/p&gt;&#xA;&lt;h1 id=&#34;mengapa-adb&#34;&gt;Mengapa adb?&lt;/h1&gt;&#xA;&lt;p&gt;Mengapa &lt;!-- raw HTML omitted --&gt;adb&lt;!-- raw HTML omitted --&gt;? Mengapa tidak pakai &lt;em&gt;file manager&lt;/em&gt; saja? Karena transfer pakai &lt;!-- raw HTML omitted --&gt;adb&lt;!-- raw HTML omitted --&gt; bisa lebih cepat&lt;/p&gt;</description>
+      <description>&lt;p&gt;Sebelum berganti ponsel atau HP sangat disarankan untuk mem-&lt;em&gt;back up&lt;/em&gt; data-data penting, seperti dokumen, foto, video, maupun chat &lt;em&gt;WhatsApp&lt;/em&gt;. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi &lt;strong&gt;Slackware&lt;/strong&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;persiapan-slackware&#34;&gt;Persiapan &lt;strong&gt;Slackware&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Pastikan bisa menjalankan &lt;!-- raw HTML omitted --&gt;adb&lt;!-- raw HTML omitted --&gt; yang merupakan bagian dari &lt;!-- raw HTML omitted --&gt;android tools&lt;!-- raw HTML omitted --&gt;. Kalau belum bisa install dari SBo&lt;/p&gt;
+&lt;h1 id=&#34;mengapa-adb&#34;&gt;Mengapa adb?&lt;/h1&gt;
+&lt;p&gt;Mengapa &lt;!-- raw HTML omitted --&gt;adb&lt;!-- raw HTML omitted --&gt;? Mengapa tidak pakai &lt;em&gt;file manager&lt;/em&gt; saja? Karena transfer pakai &lt;!-- raw HTML omitted --&gt;adb&lt;!-- raw HTML omitted --&gt; bisa lebih cepat&lt;/p&gt;</description>
     </item>
     <item>
       <title>Install Android Tools</title>
       <link>https://sasongko.web.id/post/2016-05-07-install-android-tools/</link>
       <pubDate>Sat, 07 May 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-05-07-install-android-tools/</guid>
-      <description>&lt;p&gt;Di catatan kemarin sudah saya sampaikan [cara install &lt;strong&gt;sbopkg&lt;/strong&gt;]({% post_url 2016-05-03-install-sbopkg %}), nah sekarang adalah contoh cara menggunakan &lt;strong&gt;sbopkg&lt;/strong&gt;, untuk install &lt;strong&gt;Android Tools&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Jalankan sebagai &lt;strong&gt;root&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sbopkg&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://sasongko.web.id/gambar/sbopkg-android-tools-1.png&#34; alt=&#34;&#34;&gt;&#xA;Tersedia pilihan &lt;strong&gt;Sync, Changelog, Packages, Updates, Browse, Search, Queue, Utilities, Help&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Pilih &lt;!-- raw HTML omitted --&gt;Search&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;Masukkan kata kuncinya, misalnya &lt;!-- raw HTML omitted --&gt;android&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://sasongko.web.id/gambar/sbopkg-android-tools-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Kemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan &lt;!-- raw HTML omitted --&gt;OK&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Di catatan kemarin sudah saya sampaikan [cara install &lt;strong&gt;sbopkg&lt;/strong&gt;]({% post_url 2016-05-03-install-sbopkg %}), nah sekarang adalah contoh cara menggunakan &lt;strong&gt;sbopkg&lt;/strong&gt;, untuk install &lt;strong&gt;Android Tools&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Jalankan sebagai &lt;strong&gt;root&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sbopkg
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/sbopkg-android-tools-1.png&#34;&gt;
+Tersedia pilihan &lt;strong&gt;Sync, Changelog, Packages, Updates, Browse, Search, Queue, Utilities, Help&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Pilih &lt;!-- raw HTML omitted --&gt;Search&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;Masukkan kata kuncinya, misalnya &lt;!-- raw HTML omitted --&gt;android&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/sbopkg-android-tools-2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Kemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan &lt;!-- raw HTML omitted --&gt;OK&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Install Google Play Downloader</title>
       <link>https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/</link>
       <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/</guid>
-      <description>&lt;p&gt;GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;python-protobuf (&amp;gt;=2.4)&lt;/li&gt;&#xA;&lt;li&gt;python-requests (&amp;gt;=0.12)&lt;/li&gt;&#xA;&lt;li&gt;python-ndg-httpsclient&lt;/li&gt;&#xA;&lt;li&gt;python-pyasn1&lt;/li&gt;&#xA;&lt;li&gt;python-wxgtk2.8 (&amp;gt;=2.8)&lt;/li&gt;&#xA;&lt;li&gt;python 2.5+&lt;/li&gt;&#xA;&lt;li&gt;java (opsional)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;easy_install protobuf requests ndg-httpsclient&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).&#xA;Kemudian, unduh Google Play Downloadernya. Sebenarnya sih mau unduh dulu atau install dependensi dulu terserah. Sebenarnya ada .deb nya, tapi berhubung di sini pakai Slackware maka unduh aja &lt;a href=&#34;http://codingteam.net/project/googleplaydownloader/download/file/googleplaydownloader_1.7.orig.tar.gz&#34;&gt;kode sumbernya&lt;/a&gt; biar lebih asyik.&lt;/p&gt;</description>
+      <description>&lt;p&gt;GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;python-protobuf (&amp;gt;=2.4)&lt;/li&gt;
+&lt;li&gt;python-requests (&amp;gt;=0.12)&lt;/li&gt;
+&lt;li&gt;python-ndg-httpsclient&lt;/li&gt;
+&lt;li&gt;python-pyasn1&lt;/li&gt;
+&lt;li&gt;python-wxgtk2.8 (&amp;gt;=2.8)&lt;/li&gt;
+&lt;li&gt;python 2.5+&lt;/li&gt;
+&lt;li&gt;java (opsional)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;easy_install protobuf requests ndg-httpsclient
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}).
+Kemudian, unduh Google Play Downloadernya. Sebenarnya sih mau unduh dulu atau install dependensi dulu terserah. Sebenarnya ada .deb nya, tapi berhubung di sini pakai Slackware maka unduh aja &lt;a href=&#34;http://codingteam.net/project/googleplaydownloader/download/file/googleplaydownloader_1.7.orig.tar.gz&#34;&gt;kode sumbernya&lt;/a&gt; biar lebih asyik.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

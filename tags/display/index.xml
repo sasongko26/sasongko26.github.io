@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Display on Catatan Sasongko</title>
     <link>https://sasongko.web.id/tags/display/</link>
     <description>Recent content in Display on Catatan Sasongko</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/tags/display/index.xml" rel="self" type="application/rss+xml" />
@@ -13,42 +13,63 @@
       <link>https://sasongko.web.id/post/2024-05-25-seamonkey-in-wayland/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2024-05-25-seamonkey-in-wayland/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Seamonkey&lt;/strong&gt; adalah salah satu &lt;em&gt;web browser&lt;/em&gt; yang secara default terinstall di &lt;strong&gt;slackware&lt;/strong&gt;. Ketika login menggunakan &lt;strong&gt;SDDM&lt;/strong&gt; dan mengaktifkan lingkungan &lt;em&gt;native wayland&lt;/em&gt;, &lt;strong&gt;seamonkey&lt;/strong&gt; tidak bisa dijalankan.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ seamonkey&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: cannot open display: :1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Solusinya&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ GDK_BACKEND&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;x11 seamonkey&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Seamonkey&lt;/strong&gt; adalah salah satu &lt;em&gt;web browser&lt;/em&gt; yang secara default terinstall di &lt;strong&gt;slackware&lt;/strong&gt;. Ketika login menggunakan &lt;strong&gt;SDDM&lt;/strong&gt; dan mengaktifkan lingkungan &lt;em&gt;native wayland&lt;/em&gt;, &lt;strong&gt;seamonkey&lt;/strong&gt; tidak bisa dijalankan.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ seamonkey
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: cannot open display: :1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Solusinya&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ GDK_BACKEND&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;x11 seamonkey
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Mengatur brightness</title>
       <link>https://sasongko.web.id/post/2022-11-16-mengatur-brightness/</link>
       <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-11-16-mengatur-brightness/</guid>
-      <description>&lt;p&gt;Pengaturan &lt;em&gt;brightness&lt;/em&gt; bisa dilakukan dengan melakukan &lt;em&gt;assign&lt;/em&gt; nilai pada&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/sys/class/backlight/intel_backlight/brightness&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Adapun nilai maksimal yang bisa diset ada di&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/sys/class/backlight/intel_backlight/max_brightness&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Oiya, di atas menggunakan &lt;em&gt;graphics&lt;/em&gt; &lt;strong&gt;intel&lt;/strong&gt; jadi &lt;em&gt;intel_backlight&lt;/em&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Pengaturan &lt;em&gt;brightness&lt;/em&gt; bisa dilakukan dengan melakukan &lt;em&gt;assign&lt;/em&gt; nilai pada&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/sys/class/backlight/intel_backlight/brightness
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Adapun nilai maksimal yang bisa diset ada di&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/sys/class/backlight/intel_backlight/max_brightness
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Oiya, di atas menggunakan &lt;em&gt;graphics&lt;/em&gt; &lt;strong&gt;intel&lt;/strong&gt; jadi &lt;em&gt;intel_backlight&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Memindahkan tombol minimize maximize close window fluxbox</title>
       <link>https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/</link>
       <pubDate>Sat, 15 May 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/</guid>
-      <description>&lt;p&gt;Secara &lt;em&gt;default&lt;/em&gt; tombol Minimize/Iconify, Maximize dan Close pada window &lt;strong&gt;fluxbox&lt;/strong&gt; terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;session.screen0.titlebar.right: Minimize Maximize Close&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;session.screen0.titlebar.left:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;Secara &lt;em&gt;default&lt;/em&gt; tombol Minimize/Iconify, Maximize dan Close pada window &lt;strong&gt;fluxbox&lt;/strong&gt; terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;session.screen0.titlebar.right: Minimize Maximize Close
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;session.screen0.titlebar.left:
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>xauth serverauthXXX does not exist</title>
       <link>https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/</link>
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/</guid>
-      <description>&lt;p&gt;Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-&lt;em&gt;charge&lt;/em&gt;. Alhasil laptop mati seketika. Dinyalakan lagi (sambil &lt;em&gt;charging&lt;/em&gt; tentunya) gagal masuk ke &lt;strong&gt;X&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xauth: file /home/xyz/.serverauth.2909 does not exist&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Solusinya simpel&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ rm .serverauth*&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;p&gt;Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-&lt;em&gt;charge&lt;/em&gt;. Alhasil laptop mati seketika. Dinyalakan lagi (sambil &lt;em&gt;charging&lt;/em&gt; tentunya) gagal masuk ke &lt;strong&gt;X&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xauth: file /home/xyz/.serverauth.2909 does not exist
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Solusinya simpel&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ rm .serverauth*
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>Mengetahui lingkungan aktif X11 atau wayland</title>
       <link>https://sasongko.web.id/post/2019-11-30-mengetahui-x11-atau-wayland/</link>
       <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2019-11-30-mengetahui-x11-atau-wayland/</guid>
-      <description>&lt;p&gt;Untuk mengetahui sedang aktif di dalam &lt;em&gt;environment&lt;/em&gt; &lt;strong&gt;X11&lt;/strong&gt; atau &lt;strong&gt;wayland&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ echo $XDG_SESSION_TYPE&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;Untuk mengetahui sedang aktif di dalam &lt;em&gt;environment&lt;/em&gt; &lt;strong&gt;X11&lt;/strong&gt; atau &lt;strong&gt;wayland&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ echo $XDG_SESSION_TYPE
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Set Default Brightness</title>
       <link>https://sasongko.web.id/post/2016-07-10-set-default-brightness/</link>
       <pubDate>Sun, 10 Jul 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-07-10-set-default-brightness/</guid>
-      <description>&lt;p&gt;Kecerahan monitor / &lt;em&gt;brightness&lt;/em&gt; 100% membuat mata cepat lelah. Apalagi kalau secara &lt;em&gt;default&lt;/em&gt; begitu masuk X &lt;em&gt;brightness&lt;/em&gt;-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan &lt;em&gt;Computer Vision Syndrome&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Berapa persen &lt;em&gt;brightness&lt;/em&gt; yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur &lt;em&gt;brightness&lt;/em&gt; bisa gunakan &lt;!-- raw HTML omitted --&gt;xbacklight&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Untuk mengetahui berapa persen &lt;em&gt;brightness&lt;/em&gt; yang digunakan saat ini &lt;!-- raw HTML omitted --&gt;xbacklight&lt;!-- raw HTML omitted --&gt;. Sedangkan untuk mengubahnya &lt;!-- raw HTML omitted --&gt;xbacklight -set persen&lt;!-- raw HTML omitted --&gt;. Contoh akan diatur &lt;em&gt;brightness&lt;/em&gt;-nya 15%:&lt;/p&gt;</description>
+      <description>&lt;p&gt;Kecerahan monitor / &lt;em&gt;brightness&lt;/em&gt; 100% membuat mata cepat lelah. Apalagi kalau secara &lt;em&gt;default&lt;/em&gt; begitu masuk X &lt;em&gt;brightness&lt;/em&gt;-nya 100% dan mata terpajan dalam waktu lama. Hal ini tentunya tidak baik bagi kesehatan mata karena bisa menimbulkan &lt;em&gt;Computer Vision Syndrome&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Berapa persen &lt;em&gt;brightness&lt;/em&gt; yang pas? Silahkan Anda sesuaikan, senyaman Anda. Untuk mengatur &lt;em&gt;brightness&lt;/em&gt; bisa gunakan &lt;!-- raw HTML omitted --&gt;xbacklight&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;Untuk mengetahui berapa persen &lt;em&gt;brightness&lt;/em&gt; yang digunakan saat ini &lt;!-- raw HTML omitted --&gt;xbacklight&lt;!-- raw HTML omitted --&gt;. Sedangkan untuk mengubahnya &lt;!-- raw HTML omitted --&gt;xbacklight -set persen&lt;!-- raw HTML omitted --&gt;. Contoh akan diatur &lt;em&gt;brightness&lt;/em&gt;-nya 15%:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
