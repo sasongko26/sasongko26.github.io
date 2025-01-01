@@ -228,6 +228,54 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/">Variabel hash perl</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Nov 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Jenis variabel ketiga yang dimiliki <strong>perl</strong> adalah <strong>hash</strong>. <strong>Hash</strong> ini merupakan data berpasangan. Penulisan dengan menyertakan tanda %.</p>
+<p>Contoh: akan dideklarasikan data tentang saya, yaitu nama dan distro yang saya gunakan. Nama saya Sasongko, distro Slackware.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> %data <span style="color:#f92672">=</span> (
+</span></span><span style="display:flex;"><span>	nama <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Sasongko&#34;</span>,
+</span></span><span style="display:flex;"><span>	distro <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Slackware&#34;</span>,
+</span></span><span style="display:flex;"><span>	);
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-11-28-variabel-array-perl/">Variabel array perl</a></h2>
 
     <div class="post-meta">
@@ -417,66 +465,6 @@ Contoh: akan dideklarasikan variabel <em>buah</em>. buah ini bernilai &ldquo;man
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-11-14-hapus-docker-image/">Menghapus docker image</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Nov 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><em>Docker image</em> yang suah tidak digunakan sebaiknya dihapus saja, agar <em>storage</em> lebih longgar. Pastikan docker daemon aktif</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dockerd
-</span></span></code></pre></div><p>List docker imagenya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker images
-</span></span><span style="display:flex;"><span>REPOSITORY   TAG            IMAGE ID       CREATED       SIZE
-</span></span><span style="display:flex;"><span>qgis/qgis    release-3_16   ee28ddd8c37a   <span style="color:#ae81ff">4</span> days ago    7.43GB
-</span></span><span style="display:flex;"><span>qgis/qgis    &lt;none&gt;         c84657a1e2f6   <span style="color:#ae81ff">3</span> weeks ago   7.43GB
-</span></span></code></pre></div><p>Hapus</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker rmi -f ee28ddd8c37a c84657a1e2f6
-</span></span></code></pre></div><p>Ingin menghapus semua container, image, dll</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker system prune -a
-</span></span><span style="display:flex;"><span>WARNING! This will remove:
-</span></span><span style="display:flex;"><span>  - all stopped containers
-</span></span><span style="display:flex;"><span>  - all networks not used by at least one container
-</span></span><span style="display:flex;"><span>  - all dangling images
-</span></span><span style="display:flex;"><span>  - all dangling build cache
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Are you sure you want to <span style="color:#66d9ef">continue</span>? <span style="color:#f92672">[</span>y/N<span style="color:#f92672">]</span> y
-</span></span></code></pre></div>
-  </p>
-
-  
-</article>
-
-  
 
   
 
@@ -485,7 +473,7 @@ Contoh: akan dideklarasikan variabel <em>buah</em>. buah ini bernilai &ldquo;man
   
   <a href="https://sasongko.web.id/page/14/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;15 / 66&nbsp;</span>
+  <span>&nbsp;15 / 67&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/16/"><i class="fa fa-chevron-right"></i></a>
   

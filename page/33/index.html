@@ -228,6 +228,48 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-06-20-edit-video-ffmpeg-lossless/">Edit video ffmpeg tanpa menurunkan kualitas</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>20 Jun 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Ketika mengedit video menggunakan <!-- raw HTML omitted -->ffmpeg<!-- raw HTML omitted -->, filter video ataupun filter yang lebih kompleks seperti menambahkan watermark, tanpa pengaturan tambahan kadang hasilnya mengecewakan. Gambar pada video menjadi pecah. Untuk meminimalisirnya, bisa ditambahkan opsi <!-- raw HTML omitted -->-q:v 0<!-- raw HTML omitted -->.</p>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-06-11-memisahkan-halaman-pdf/">Memisahkan halaman PDF</a></h2>
 
     <div class="post-meta">
@@ -434,100 +476,6 @@ Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefo
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/">Mengetahui volume suara video</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>25 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.</p>
-<p>Untuk mengetahui intensitas suara video intro.mkv</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null
-</span></span><span style="display:flex;"><span>Input <span style="color:#75715e">#0, matroska,webm, from &#39;intro.mkv&#39;:</span>
-</span></span><span style="display:flex;"><span>  Metadata:
-</span></span><span style="display:flex;"><span>    COMPATIBLE_BRANDS: isommp42
-</span></span><span style="display:flex;"><span>    COM.ANDROID.VERSION: <span style="color:#ae81ff">9</span>
-</span></span><span style="display:flex;"><span>    MAJOR_BRAND     : mp42
-</span></span><span style="display:flex;"><span>    MINOR_VERSION   : <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>    ENCODER         : Lavf58.29.100
-</span></span><span style="display:flex;"><span>  Duration: 00:00:14.90, start: 0.000000, bitrate: <span style="color:#ae81ff">5559</span> kb/s
-</span></span><span style="display:flex;"><span>    Stream <span style="color:#75715e">#0:0(eng): Video: mpeg4 (Simple Profile), yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 1k tbn, 30 tbc (default)</span>
-</span></span><span style="display:flex;"><span>    Metadata:
-</span></span><span style="display:flex;"><span>      HANDLER_NAME    : VideoHandle
-</span></span><span style="display:flex;"><span>      ENCODER         : Lavc58.54.100 mpeg4
-</span></span><span style="display:flex;"><span>      DURATION        : 00:00:14.900000000
-</span></span><span style="display:flex;"><span>    Stream <span style="color:#75715e">#0:1(eng): Audio: vorbis, 48000 Hz, stereo, fltp (default)</span>
-</span></span><span style="display:flex;"><span>    Metadata:
-</span></span><span style="display:flex;"><span>      HANDLER_NAME    : SoundHandle
-</span></span><span style="display:flex;"><span>      ENCODER         : Lavc58.54.100 libvorbis
-</span></span><span style="display:flex;"><span>      DURATION        : 00:00:14.849000000
-</span></span><span style="display:flex;"><span>Stream mapping:
-</span></span><span style="display:flex;"><span>  Stream <span style="color:#75715e">#0:0 -&gt; #0:0 (mpeg4 (native) -&gt; wrapped_avframe (native))</span>
-</span></span><span style="display:flex;"><span>  Stream <span style="color:#75715e">#0:1 -&gt; #0:1 (vorbis (native) -&gt; pcm_s16le (native))</span>
-</span></span><span style="display:flex;"><span>Press <span style="color:#f92672">[</span>q<span style="color:#f92672">]</span> to stop, <span style="color:#f92672">[</span>?<span style="color:#f92672">]</span> <span style="color:#66d9ef">for</span> help
-</span></span><span style="display:flex;"><span>Output <span style="color:#75715e">#0, null, to &#39;/dev/null&#39;:</span>
-</span></span><span style="display:flex;"><span>  Metadata:
-</span></span><span style="display:flex;"><span>    COMPATIBLE_BRANDS: isommp42
-</span></span><span style="display:flex;"><span>    COM.ANDROID.VERSION: <span style="color:#ae81ff">9</span>
-</span></span><span style="display:flex;"><span>    MAJOR_BRAND     : mp42
-</span></span><span style="display:flex;"><span>    MINOR_VERSION   : <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>    encoder         : Lavf58.29.100
-</span></span><span style="display:flex;"><span>    Stream <span style="color:#75715e">#0:0(eng): Video: wrapped_avframe, yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 30 tbn, 30 tbc (default)</span>
-</span></span><span style="display:flex;"><span>    Metadata:
-</span></span><span style="display:flex;"><span>      HANDLER_NAME    : VideoHandle
-</span></span><span style="display:flex;"><span>      DURATION        : 00:00:14.900000000
-</span></span><span style="display:flex;"><span>      encoder         : Lavc58.54.100 wrapped_avframe
-</span></span><span style="display:flex;"><span>    Stream <span style="color:#75715e">#0:1(eng): Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s (default)</span>
-</span></span><span style="display:flex;"><span>    Metadata:
-</span></span><span style="display:flex;"><span>      HANDLER_NAME    : SoundHandle
-</span></span><span style="display:flex;"><span>      DURATION        : 00:00:14.849000000
-</span></span><span style="display:flex;"><span>      encoder         : Lavc58.54.100 pcm_s16le
-</span></span><span style="display:flex;"><span>frame<span style="color:#f92672">=</span>  <span style="color:#ae81ff">447</span> fps<span style="color:#f92672">=</span> <span style="color:#ae81ff">97</span> q<span style="color:#f92672">=</span>-0.0 Lsize<span style="color:#f92672">=</span>N/A time<span style="color:#f92672">=</span>00:00:14.90 bitrate<span style="color:#f92672">=</span>N/A speed<span style="color:#f92672">=</span>3.24x    
-</span></span><span style="display:flex;"><span>video:234kB audio:2784kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Parsed_volumedetect_0 @ 0x1a28300<span style="color:#f92672">]</span> n_samples: <span style="color:#ae81ff">1425280</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Parsed_volumedetect_0 @ 0x1a28300<span style="color:#f92672">]</span> mean_volume: -12.1 dB
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Parsed_volumedetect_0 @ 0x1a28300<span style="color:#f92672">]</span> max_volume: 0.0 dB
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Parsed_volumedetect_0 @ 0x1a28300<span style="color:#f92672">]</span> histogram_0db: <span style="color:#ae81ff">10593</span>
-</span></span></code></pre></div><p>Dari hasil tersebut di atas, tampak bahwa rata-rata intensitas suara/volumenya -12,1 dB dengan maksimum 0,0 dB.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
 
   
 
@@ -536,7 +484,7 @@ Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefo
   
   <a href="https://sasongko.web.id/page/32/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;33 / 66&nbsp;</span>
+  <span>&nbsp;33 / 67&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/34/"><i class="fa fa-chevron-right"></i></a>
   

@@ -228,6 +228,67 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/">Mengetahui IP lokal dengan nmcli</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/network-manager">network manager</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Untuk mengetahui alamat ip lokal tanpa akses <strong>root</strong> dapat menggunakan <strong>nmcli</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ nmcli
+</span></span><span style="display:flex;"><span>wlan0: connected to Anatomi
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Qualcomm Atheros QCA9377&#34;</span>
+</span></span><span style="display:flex;"><span>        wifi <span style="color:#f92672">(</span>ath10k_pci<span style="color:#f92672">)</span>, CC:B0:DA:B5:3B:75, hw, mtu <span style="color:#ae81ff">1500</span>
+</span></span><span style="display:flex;"><span>        ip4 default
+</span></span><span style="display:flex;"><span>        inet4 192.168.120.19/24
+</span></span><span style="display:flex;"><span>        route4 0.0.0.0/0
+</span></span><span style="display:flex;"><span>        route4 192.168.120.0/24
+</span></span><span style="display:flex;"><span>        route4 192.168.120.0/24
+</span></span><span style="display:flex;"><span>        inet6 fe80::1a37:a13:b117:ff74/64
+</span></span><span style="display:flex;"><span>        route6 fe80::/64
+</span></span><span style="display:flex;"><span>        route6 ff00::/8
+</span></span></code></pre></div><p>Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah</p>
+<ol>
+<li>ipv4 192.168.120.19</li>
+<li>ipv6 fe80::1a37:a13:b117:ff74</li>
+</ol>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Rebuild R post-upgrade icu4c</a></h2>
 
     <div class="post-meta">
@@ -441,61 +502,6 @@
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/">Menggunakan rsync</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jan 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/internet-download-manager">internet-download-manager</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <h1 id="kegunaan-rsync">Kegunaan rsync</h1>
-<p><strong>rsync</strong> berguna untuk transfer file secara efisien. Dibandingkan dengan <strong>cp</strong> atau <strong>mv</strong>, <strong>rsync</strong> memiliki keunggulan :</p>
-<ol>
-<li>Bebas pilih-pilih file maupun direktori yang akan ditransfer karena ada fitur <em>include</em> dan <em>exclude</em></li>
-<li>Apabila gagal, misalnya karena <em>storage</em> penuh atau &ldquo;kecelakaan&rdquo; salah klik sehingga ter-<em>close</em>, dapat dilanjutkan tanpa mengulang dari awal sehingga waktunya tentu lebih cepat</li>
-</ol>
-<p>Dibandingkan <strong>wget</strong>, <strong>rsync</strong> mendukung penggunaan <em>wildcard</em> dan secara <em>default</em> <strong>rsync</strong> <em>resumeable</em>.</p>
-<p>Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
 
   
 
@@ -504,7 +510,7 @@
   
   <a href="https://sasongko.web.id/page/29/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;30 / 66&nbsp;</span>
+  <span>&nbsp;30 / 67&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/31/"><i class="fa fa-chevron-right"></i></a>
   

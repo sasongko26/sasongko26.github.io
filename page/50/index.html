@@ -228,6 +228,59 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackware-142/">Upgrade ke Slackware 14.2</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Jul 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackpkg">slackpkg</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Sehubungan dengan telah rilisnya <strong>Slackware 14.2</strong> maka silahkan melakukan <em>upgrade</em> untuk mendapatkan keamanan yang lebih bagus dan fitur-fitur baru. Saya selama ini melakukan <strong><em>upgrade</em> bertahap demi penghematan kuota internet</strong>. Dimulai dengan upgrade ke <em>current</em> karena saat itu versi <em>stable</em> yang baru (14.2) masih dalam proses pengembangan. <em>Upgrade</em> ini menggunakan <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted -->. Dan tentu saja membutuhkan sambungan internet.</p>
+<ol>
+<li>Pilih cermin atau <em>mirror</em>. Dengan menyunting <!-- raw HTML omitted -->/etc/slackpkg/mirrors<!-- raw HTML omitted -->, menghilangkan tanda komentar/tanda pagar pada repo yang diinginkan. Tersedia banyak repo yang bisa dijadikan rujukan, tetapi sayangnya baru 2 repo lokal yang resmi terdaftar, yaitu <em>UI</em> dan <em>UKDW</em>. Saya gunakan milik UKDW karena lebih dekat (UKDW di Yogyakarta sedangkan saya di Semarang) sehingga harapannya lebih cepat. Bisa juga memilih repo <em>Slackware.com</em> yang secara otomatis akan memilihkan repo terdekat. Pastikan hanya 1 repo yang dipilih.</li>
+<li><em>Update</em> daftar paket dengan melakukan <!-- raw HTML omitted -->slackpkg update<!-- raw HTML omitted --></li>
+<li><em>Upgrade</em> <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --> untuk mendapatkan alamat repo 14.2. <em>Upgrade</em> juga <!-- raw HTML omitted -->glibc-solibs<!-- raw HTML omitted -->. Keduanya dapat dilakukan secara simultan : <!-- raw HTML omitted -->slackpkg upgrade slackpkg glibc-solibs<!-- raw HTML omitted --></li>
+<li>Kalau muncul pertanyaan tentang konfigurasi baru, pilih saja <!-- raw HTML omitted -->O<!-- raw HTML omitted --> alias <!-- raw HTML omitted -->overwrite<!-- raw HTML omitted -->. Kalau tidak muncul lakukan <!-- raw HTML omitted -->slackpkg new-config<!-- raw HTML omitted --></li>
+<li>Setelah <em>upgrade</em> <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --> pilih repo lagi karena ada perubahan alamat/URL repo kemudian <em>update</em> lagi.</li>
+<li>Lanjut install paket-paket baru yang sebelumnya tidak ada : <!-- raw HTML omitted -->slackpkg install-new<!-- raw HTML omitted --></li>
+<li><em>Upgrade</em> sistem : <!-- raw HTML omitted -->slackpkg upgrade-all<!-- raw HTML omitted -->. Akan ditampilkan paket yang bisa di-<em>upgrade</em>. Hilangkan tanda bintangnya dengan menekan tombol <!-- raw HTML omitted -->spasi<!-- raw HTML omitted --> bila tidak ingin paket tersebut di-<em>upgrade</em> kemudian <!-- raw HTML omitted -->OK<!-- raw HTML omitted -->.</li>
+<li>Hapus paket yang tidak berguna. Paket yang perlu dihapus dan berbagai perubahan dari Slackware 14.1 ke 14.2 bisa dilihat <a href="http://repo.ukdw.ac.id/slackware/slackware64-14.2/CHANGES_AND_HINTS.TXT">di sini</a> : <!-- raw HTML omitted -->slackpkg remove    <!-- raw HTML omitted --></li>
+<li>Karena ada pergantian kernel, jangan lupa konfigurasi ulang <em>boot loader</em> itu <!-- raw HTML omitted -->lilo<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->elilo<!-- raw HTML omitted -->. Kalau menggunakan <!-- raw HTML omitted -->lilo<!-- raw HTML omitted --> : <!-- raw HTML omitted -->liloconfig<!-- raw HTML omitted -->. Kalau menggunakan <!-- raw HTML omitted -->elilo<!-- raw HTML omitted --> : <!-- raw HTML omitted -->eliloconfig<!-- raw HTML omitted --></li>
+</ol>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/">Upgrade Slackbuilds Slackware 14.2</a></h2>
 
     <div class="post-meta">
@@ -471,60 +524,6 @@ OBJECT
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-05-07-install-android-tools/">Install Android Tools</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 May 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Di catatan kemarin sudah saya sampaikan [cara install <strong>sbopkg</strong>]({% post_url 2016-05-03-install-sbopkg %}), nah sekarang adalah contoh cara menggunakan <strong>sbopkg</strong>, untuk install <strong>Android Tools</strong>.</p>
-<p>Jalankan sebagai <strong>root</strong></p>
-<pre tabindex="0"><code>sbopkg
-</code></pre><p><img src="https://sasongko.web.id/gambar/sbopkg-android-tools-1.png" alt="">
-Tersedia pilihan <strong>Sync, Changelog, Packages, Updates, Browse, Search, Queue, Utilities, Help</strong>.</p>
-<p>Pilih <!-- raw HTML omitted -->Search<!-- raw HTML omitted --></p>
-<p>Masukkan kata kuncinya, misalnya <!-- raw HTML omitted -->android<!-- raw HTML omitted --></p>
-<p><img src="https://sasongko.web.id/gambar/sbopkg-android-tools-2.png" alt=""></p>
-<p>Kemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan <!-- raw HTML omitted -->OK<!-- raw HTML omitted -->.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-05-07-install-android-tools/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
 
   
 
@@ -533,7 +532,7 @@ Tersedia pilihan <strong>Sync, Changelog, Packages, Updates, Browse, Search, Que
   
   <a href="https://sasongko.web.id/page/49/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;50 / 66&nbsp;</span>
+  <span>&nbsp;50 / 67&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/51/"><i class="fa fa-chevron-right"></i></a>
   

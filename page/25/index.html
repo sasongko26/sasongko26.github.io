@@ -228,6 +228,65 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/">Aktivasi apache webserver slackware</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>24 Feb 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/cloud">cloud</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <h1 id="install-apache-webserver-slackware-linux">Install apache webserver slackware linux</h1>
+<p>Secara <em>default</em>, <strong>apache webserver</strong> sudah ter-<em>install</em> di <strong>slackware</strong>. Namun, jika saat meng-<em>install</em> <strong>slackware</strong> tidak memilih <em>full installation</em>, <strong>apache webserver</strong> dapat di-<em>install</em> dengan mudah, yaitu dengan meng-<em>install</em> <strong>httpd</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>slackpkg install httpd
+</span></span></code></pre></div><h1 id="aktivasi-apache-webserver-slackware-linux">Aktivasi apache webserver slackware linux</h1>
+<p>Setelah diinstall, bisa diaktifkan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd start
+</span></span></code></pre></div><p>Untuk menonaktifkan atau mematikan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd stop
+</span></span></code></pre></div><p>Untuk <em>restart</em> webserver:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/rc.d/rc.httpd restart
+</span></span></code></pre></div><h1 id="mengaktifkan-apache-webserver-otomatis">Mengaktifkan apache webserver otomatis</h1>
+<p>Untuk dapat <em>running</em> atau mengaktifkan <em>apache</em> secara otomatis setelah <em>booting</em>, pastikan /etc/rc.d/rc.httpd <em>executable</em>.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-02-19-set-background-blackbox/">Set background blackbox</a></h2>
 
     <div class="post-meta">
@@ -437,61 +496,6 @@
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/">Copy paste vim mode visual</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>08 Feb 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text-editor</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><strong>VIm</strong> merupakan <em>text editor</em> legendaris yang sampai saat ini masih memiliki penggemar. Penulis salah satunya. Berbeda dengan <em>text editor</em> lain, <strong>vim</strong> tidak menampilkan menu untuk <em>copy/cut paste</em>. Namun, itu tidak masalah. Semua bisa diatur. Oya, ini semua berada dalam lingkungan <strong>vim</strong> dengan <strong>mode visual</strong>.</p>
-<p>Sebelum melakukan <em>copy paste</em>, tentunya memilih dulu yang akan dicopas.</p>
-<ol>
-<li>Tempatkan kursor di awal text yang akan dicops</li>
-<li>Tekan <strong>v</strong> untuk memulai blok</li>
-<li>Jalankan panah kanan kiri atas bawah untuk memilih blok</li>
-<li>Tekan <strong>y</strong> untuk <em>copy</em> (y singkatan dari yank), atau <strong>d</strong> untuk <em>cut</em> (d singkatan dari delete)</li>
-<li>Kalau mau mem-<em>paste</em>, tekan <strong>p</strong> di awal tempat tujuan <em>paste</em></li>
-</ol>
-<p>Nah, selesai.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
 
   
 
@@ -500,7 +504,7 @@
   
   <a href="https://sasongko.web.id/page/24/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;25 / 66&nbsp;</span>
+  <span>&nbsp;25 / 67&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/26/"><i class="fa fa-chevron-right"></i></a>
   

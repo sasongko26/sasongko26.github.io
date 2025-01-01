@@ -228,6 +228,54 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/">Pipewire di WindowMaker</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Apr 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Lama tidak menggunakan, hati ini rindu pada <strong>WindowMaker</strong>. Segera mengalihkan <strong>.xinitrc</strong> ke <strong>xinitrc.wmaker</strong>. Beberapa hari kemudian, merasa ada yang janggal. Suasana menjadi sunyi senyap. Tanpa suara. Padahal ketika menggunakan <strong>KDE Plasma</strong> tidak ada masalah dengan <em>sound system</em>.</p>
+<p>Hati ini baru sadar bahwa <em>sound</em>-nya telah diserahterimakan dari <strong>pulseaudio</strong> kepada <strong>pipewire</strong>. Baiklah, mari tambahkan beberapa baris berikut ke ~/GNUstep/Library/WindowMaker/autostart</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#pipewire</span>
+</span></span><span style="display:flex;"><span>/usr/bin/daemon -frB --pidfiles<span style="color:#f92672">=</span>~/.run --name<span style="color:#f92672">=</span>pipewire /usr/bin/pipewire &amp;
+</span></span><span style="display:flex;"><span>/usr/bin/daemon -frB --pidfiles<span style="color:#f92672">=</span>~/.run --name<span style="color:#f92672">=</span>pipewire-pulse /usr/bin/pipewire-pulse &amp;
+</span></span><span style="display:flex;"><span>/usr/bin/daemon -frB --pidfiles<span style="color:#f92672">=</span>~/.run --name<span style="color:#f92672">=</span>pipewire-media-session /usr/bin/pipewire-media-session &amp;
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/">Kenggulan elilo dibanding grub</a></h2>
 
     <div class="post-meta">
@@ -443,51 +491,6 @@ MOUNTPOINT	where the device is mounted</p>
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-03-05-mount-media-read-write-mode/">Mount media read write mode</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>05 Mar 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><em>Mount</em> media (kasus kali ini pada <em>flashdisk</em>)  melalui <em>command line</em> secara default membuat <em>ownership</em> filenya menjadi milik <strong>root</strong>. Hal ini berakibat media tersebut berjalan pada mode <strong>read-only</strong>. Hanya <em>user</em> setingkat <strong>root</strong> yang bisa melakukan <em>write on</em>.</p>
-<p>Kasus ini bisa disiasati dengan mendefinisikan <em>id</em> user yang akan melakukan <em>write on</em>.</p>
-<pre tabindex="0"><code>mount -o rw,uid=1020,gid=120 /dev/sdb1 /media/hd0/
-</code></pre><p>uid dan gid di sini hanya contoh, silakan disesuaikan.</p>
-  </p>
-
-  
-</article>
-
-  
 
   
 
@@ -496,7 +499,7 @@ MOUNTPOINT	where the device is mounted</p>
   
   <a href="https://sasongko.web.id/page/9/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;10 / 66&nbsp;</span>
+  <span>&nbsp;10 / 67&nbsp;</span>
   
   <a href="https://sasongko.web.id/page/11/"><i class="fa fa-chevron-right"></i></a>
   
