@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,60 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-06-24-query-sql/">Query SQL</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>24 Jun 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p><em>Relational Database Management System (RDBMS)</em> adalah salah satu sistem database populer. Sistem pengolahan database ini menggunakan bahasa <strong>SQL</strong> (dibaca sekuel atau es kiu el). <em>Tool</em> yang dapat digunakan antara lain <strong>mariadb, mysql, postgresql</strong>.</p>
+<p>Pada RDBMS dikenal adanya hirarki atau struktur, yaitu dari tertinggi <strong>database</strong> yang terdiri atas <strong>tabel</strong>. Tabel dibentuk oleh <strong>kolom</strong> dengan data sejumlah barisnya.</p>
+<p>Perintah SQL ada 2</p>
+<ol>
+<li><em>Data Definition Language (DDL)</em> untuk membuat, menghapus atau modifikasi struktur database</li>
+<li><em>Data Manipulation Language (DML)</em> untuk insert data, query, hapus, edit data</li>
+</ol>
+<h1 id="query-sql">QUERY SQL</h1>
+<p>Query adalah pengambilan data dari database. Menggunakan perintah <strong>SELECT</strong>.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-06-24-query-sql/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-06-23-menyusupkan-mate-ke-xfce/">Menyusupkan mate ke xfce</a></h2>
 
     <div class="post-meta">
@@ -425,60 +479,6 @@
   
   <footer>
     <a href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-05-27-list-ip-aktif-sejaringan/">Mengetahui ip aktif sejaringan</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>27 May 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/networking">networking</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Sebelum mengetahui alamat IP aktif dalam 1 jaringan yang sama, tentu saja harus konek atau masuk ke jaringan tersebut dulu. Setelah masuk, cek IP kita sendiri. Karena konek ke wifi maka <em>interface</em>-nya wlan0</p>
-<pre tabindex="0"><code># ip addr show wlan0
-3: wlan0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
-    link/ether cc:b0:da:b5:3b:75 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.43.20/24 brd 192.168.43.255 scope global dynamic noprefixroute wlan0
-       valid_lft 1574sec preferred_lft 1574sec
-    inet6 fe80::7f1b:2f4d:b98e:6500/64 scope link noprefixroute 
-       valid_lft forever preferred_lft forever
-</code></pre><p>Atau bisa juga dengan</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-05-27-list-ip-aktif-sejaringan/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,62 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/">Konfigurasi mirror slackware</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Mar 2022</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackpkg">slackpkg</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p><strong>Slackpkg</strong> merupakan salah satu <strong>official slackware package manager</strong>. Fitur yang dimilikinya antara lain</p>
+<ol>
+<li>Cek apakah ada update</li>
+<li>Baca changelog</li>
+<li>Install, upgrade, reinstall, remove, blacklist packages</li>
+</ol>
+<p>Sebelum menggunakannya, pilih dahulu <em>mirror</em> yang akan digunakan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># vi /etc/slackpkg/mirrors</span>
+</span></span></code></pre></div><p>Pada file tersebut sudah tersedia list mirror yang bisa digunakan. Apakah menggunakan <strong>current</strong> atau <strong>stable</strong> (saat ini 15.0). Pilih mirrornya dengan cara <em>uncomment</em> baris alamat mirrornya. Contoh</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>https://mirrors.slackware.com/slackware/slackware64-15.0/
+</span></span></code></pre></div><p>untuk menggunakan mirror terdekat versi <strong>slackware 15.0</strong></p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-02-23-disable-fortune-postlogin/">Disable fortune postlogin</a></h2>
 
     <div class="post-meta">
@@ -414,68 +470,6 @@
   <footer>
     <a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/">Operator penggabungan pengulangan string perl</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>05 Jan 2022</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Pada <strong>perl</strong>, variabel <strong>scalar</strong> yang berupa <strong>string</strong> dapat dilakukan penggabungan dan pengulangan. Contoh, terdapat 3 variabel sebagai berikut:
-$sapa = &ldquo;Hai&hellip;. &quot;
-$distro = &ldquo;Slackware&rdquo;
-$penilaian = &ldquo;distro terbaik.&rdquo;
-Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan &ldquo;.&rdquo;, sedangkan pengulangan dengan &ldquo;x&rdquo;.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#34;say&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $sapa <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hai.... &#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $distro <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Slackware &#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $penilaian <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;distro terbaik.&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># penggabungan</span>
-</span></span><span style="display:flex;"><span>say($sapa<span style="color:#f92672">.</span>$distro<span style="color:#f92672">.</span>$penilaian);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># pengulangan</span>
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;$distro&#34;</span> x <span style="color:#ae81ff">5</span>);
-</span></span></code></pre></div>
-  </p>
-
   
 </article>
 

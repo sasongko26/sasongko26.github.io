@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,50 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-08-21-screenshot-via-adb/">Screenshot android dengan adb</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>21 Aug 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di <em>external memory</em> (sdcard) dengan nama file screenshot.png</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell screencap -p /sdcard/screenshot.png
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-08-15-mengenal-r-home/">Mengenal R_HOME</a></h2>
 
     <div class="post-meta">
@@ -420,50 +464,6 @@ versions newer than 2.7.18. NetworkManager is a better choice these days.</p>
 
   <p>
   <p>Ketika mengedit video menggunakan <!-- raw HTML omitted -->ffmpeg<!-- raw HTML omitted -->, filter video ataupun filter yang lebih kompleks seperti menambahkan watermark, tanpa pengaturan tambahan kadang hasilnya mengecewakan. Gambar pada video menjadi pecah. Untuk meminimalisirnya, bisa ditambahkan opsi <!-- raw HTML omitted -->-q:v 0<!-- raw HTML omitted -->.</p>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-06-11-memisahkan-halaman-pdf/">Memisahkan halaman PDF</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Jun 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Kadang kita perlu mengambil beberapa halaman dari <em>e-book</em> atau sejenisnya yang bertipe pdf. Kita bisa gunakan <!-- raw HTML omitted -->pdfjam<!-- raw HTML omitted -->. Misalkan akan mengambil halaman 10-21 dari file buku.pdf.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pdfjam buku.pdf <span style="color:#e6db74">&#39;10-21&#39;</span>
-</span></span></code></pre></div>
   </p>
 
   

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,50 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2024-04-02-menambahkan-line-number-vim/">Menampilkan line number vim</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Apr 2024</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/text-editor">text-editor</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p><strong>Vim</strong> secara <em>default</em> tidak menampilkan <em>line number</em>. Adanya <em>line number</em> ini bisa sangat memudahkan terutama saat proses <em>debugging</em> atau pengecekan kesalahan. Untuk menampilkannya, tambahkan baris berikut di file konfigurasinya (contoh: ~/.vimrc) :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vim" data-lang="vim"><span style="display:flex;"><span><span style="color:#66d9ef">set</span> <span style="color:#a6e22e">number</span>
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2024-04-01-install-kooha-slackware/">Install Kooha di Slackware</a></h2>
 
     <div class="post-meta">
@@ -443,48 +487,6 @@ Graphics Processor: Mesa Intel® UHD Graphics 600
   <footer>
     <a href="https://sasongko.web.id/post/2024-01-15-sintaks-komentar-rust/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-11-20-hapus-spasi-libreoffice-calc/">Hapus spasi libreoffice calc</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>20 Nov 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/office">office</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Untuk menghapus spasi pada <strong>libreoffice calc</strong> menggunakan fitur <em>Find &amp; Replace</em>. Pada bagian <em>Find</em> isikan \s+ dengan \s adalah regex untuk spasi sedangkan + untuk menerapkan regex ke semua yang ditemukan. <em>Replace</em> kosongkan. Centang <em>RegularExpressions</em>.</p>
-  </p>
-
   
 </article>
 

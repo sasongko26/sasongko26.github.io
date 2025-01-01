@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -225,6 +225,70 @@
 </div>
 
 <div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/">Upgrade Slackbuilds Slackware 14.2</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Jul 2016</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackbuild">slackbuild</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/sbopkg">sbopkg</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Setelah melakukan [ <em>upgrade</em> sistem ke <em>Slackware 14.2</em>]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya <em>upgrade</em> juga paket yang diinstal dari slackbuilds.org.</p>
+<ol>
+<li><em>Upgrade</em> <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> : <!-- raw HTML omitted -->sbopkg -u<!-- raw HTML omitted --></li>
+<li>Versi <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> terbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik <!-- raw HTML omitted -->D<!-- raw HTML omitted --></li>
+<li>Hasil unduhan : <!-- raw HTML omitted -->/tmp/sbopkg-0.38.0-noarch-1_wsr.tgz<!-- raw HTML omitted --></li>
+<li>Setelah diunduh, <em>upgrade</em> : <!-- raw HTML omitted -->upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz<!-- raw HTML omitted --></li>
+<li>Karena menghasilkan konfigurasi baru, lakukan <!-- raw HTML omitted -->slackpkg new-config<!-- raw HTML omitted --> dan pilih overwrite saja.</li>
+<li>Kemudian <em>update</em> ke repo 14.2 : <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> pilih <!-- raw HTML omitted -->Utilities<!-- raw HTML omitted --> lalu <!-- raw HTML omitted -->Repository<!-- raw HTML omitted -->. Kemudian pilih <!-- raw HTML omitted -->SBo (14.2)<!-- raw HTML omitted --></li>
+<li>Muncul konfirmasi, apakah akan membuat baru, pilih <!-- raw HTML omitted -->C<!-- raw HTML omitted --> untuk <!-- raw HTML omitted -->Create<!-- raw HTML omitted -->.</li>
+<li>Kemudian <!-- raw HTML omitted -->Back<!-- raw HTML omitted --> ke awal <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->, pilih <!-- raw HTML omitted -->Sync<!-- raw HTML omitted --> untuk <em>update</em> repo.</li>
+<li>Setelah <em>sync</em>-nya selesai, pilih <!-- raw HTML omitted -->EXIT<!-- raw HTML omitted --> kembali ke awal <!-- raw HTML omitted -->sbopk<!-- raw HTML omitted --></li>
+<li>Kemudian pilih <!-- raw HTML omitted -->Updates<!-- raw HTML omitted --> untuk mengecek paket apa saja yang bisa di-<em>upgrade</em>.</li>
+<li><!-- raw HTML omitted -->EXIT<!-- raw HTML omitted --> keluar konfirmasi apakah paket-paket tersebut akan dimasukkan ke dalam <!-- raw HTML omitted -->queue<!-- raw HTML omitted --> untuk bisa diinstall kemudian.<!-- raw HTML omitted -->YES<!-- raw HTML omitted --> untuk memasukkannya.</li>
+<li>Kembali di awal <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->. Pilih <!-- raw HTML omitted -->Queue<!-- raw HTML omitted --></li>
+<li>PIlih <!-- raw HTML omitted -->Process<!-- raw HTML omitted --> akan muncul daftar paket langkah no.11</li>
+<li>Silahkan pilih paketnya kemudian <!-- raw HTML omitted -->OK<!-- raw HTML omitted --> Kemudian <!-- raw HTML omitted -->Install<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->OK<!-- raw HTML omitted --></li>
+<li>Tunggu sampai selesai.</li>
+<li>Keluar dialog apakah akan menghapus yang ada di <!-- raw HTML omitted -->queue<!-- raw HTML omitted -->. Pilih <!-- raw HTML omitted -->Clear<!-- raw HTML omitted --> untuk menghapus. Kemudian keluar info bahwa queue sudah dihapus, keudian <!-- raw HTML omitted -->OK<!-- raw HTML omitted --></li>
+<li>Kembali ke <!-- raw HTML omitted -->Queue Menu<!-- raw HTML omitted --> pilih <!-- raw HTML omitted -->Back<!-- raw HTML omitted --></li>
+<li>Kembali ke awal <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->, karena sudah selesai, silahkan <!-- raw HTML omitted -->Exit<!-- raw HTML omitted --></li>
+</ol>
+  </p>
+
+  
+</article>
+
   
     <article>
   <header>
@@ -456,56 +520,6 @@ Tersedia pilihan <strong>Sync, Changelog, Packages, Updates, Browse, Search, Que
   
   <footer>
     <a href="https://sasongko.web.id/post/2016-05-07-install-android-tools/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/">[SOLVED] Slackware Current Susah Booting dan Shutdown</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>05 May 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/boot">boot</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kernel">kernel</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Tiga bulan lalu saya <em>sambat</em> <strong><em>Slackware current</em></strong> [hang]({% post_url 2016-02-08-slackware-current-hang %}) saat <em>booting</em> dan <em>shutdown</em>. Sekarang  masalah tersebut teratasi.</p>
-<p>Secara <em>default</em> <a href="http://www.bhinneka.com/Associate/asc_clicks.aspx?BARef=BATL150600397&amp;BATrcID=linfocatatansas225204&amp;CatID=02no&amp;Link=http%3a%2f%2fwww.bhinneka.com%2fcategory%2fnotebook___laptop.aspx"><strong>laptop</strong></a> <a href="http://www.bhinneka.com/Associate/asc_clicks.aspx?BARef=BATL150600398&amp;BATrcID=linfocatatansas225204&amp;Link=http%3a%2f%2fwww.bhinneka.com%2fproducts%2fsku00215793%2fasus_notebook_x453ma-bing-wx320b_-_black.aspx">Asus X453MA</a> diperuntukkan bagi pengguna <em>Microsoft Windows</em>. Hal ini terlihat dari web resminya yang menyediakan <em>driver</em> hanya untuk <em>Windows</em> khususnya <strong>Windows 8.1</strong> dan <strong>Windows 10</strong>. Juga terlihat dari &ldquo;paket bundling&rdquo;-nya yang menyediakan <em>Windows preinstalled</em>.</p>
-<p>Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.1 oleh pihak toko. Awalnya saya pilih kosongan aja sesuai aslinya. Tapi berhubung pihak toko menawarkan <em>Windows 8.1 trial</em> 6 bulan dan saya kepengen icip-icip Windows 8.1 jadilah laptopnya ada Windowsnya. Nah, karena Windowsnya cuma trial, saya belum sanggup beli orinya (bajakan sih banyak yang jual) dan lebih suka pakai <strong>Linux</strong>, Jadilah laptopnya ber-<strong>Slackware</strong>.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

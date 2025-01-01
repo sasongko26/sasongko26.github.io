@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,50 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2020-05-24-aktivasi-android-gps-adb/">Aktivasi android GPS via adb</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>24 May 2020</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/android">android</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan <!-- raw HTML omitted -->adb<!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell settings put secure location_mode <span style="color:#ae81ff">3</span>
+</span></span></code></pre></div><p>Kalau ingin menonaktifkan, ganti angka 3 dengan 0.</p>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2020-05-21-menambah-watermark-gambar-video/">Menambah watermark gambar ke video dengan ffmpeg</a></h2>
 
     <div class="post-meta">
@@ -429,56 +473,6 @@
   
   <footer>
     <a href="https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/">Edit volume suara</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>14 May 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><em>Editing</em> kali ini adalah bagaimana mengubah volume default audio/suara menggunakan <strong>ffmpeg</strong>. Misal, file yang akan diinput/diedit adalah video.mp4. Karena suaranya terlalu pelan, akan dinaikkan menjadi 5x semula melalui filter audio. File hasil editan diberi nama video-louder.webm.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i video.mp4 -filter:a <span style="color:#e6db74">&#34;volume=5&#34;</span> video-louder.webm
-</span></span></code></pre></div><p>Apabila suara terlalu nyaring bisa dipelankan. Berikut akan dipelankan menjadi setengahnya dari volume semula dan file baru diberi nama new.webm</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i video.mp4 -filter:a <span style="color:#e6db74">&#34;volume=0.5&#34;</span> new.webm
-</span></span></code></pre></div><p>Atau, dengan menuliskan volume suaranya secara langsung. Default aslinya 256. Misalkan akan dinaikkan menjadi 300 kemudian disimpan sebagai anyar.mkv</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

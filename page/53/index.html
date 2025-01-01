@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,56 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2015-12-12-install-bzr/">Install Bazaar</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Dec 2015</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/blankon">blankon</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/control-version-system">control version system</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Bazaar atau disingkat bzr adalah salah 1 jenis <em>control version system</em> seperti <em>git</em>.</p>
+<p>Git secara <em>default</em> sudah terinstall tapi bzr harus diinstal sendiri.</p>
+<pre tabindex="0"><code>$ wget http://launchpad.net/bzr/2.6/2.6.0/+download/bzr-2.6.0.tar.gz
+$ tar xzf bzr-2.6.0.tar.gz
+$ cd bzr-2.6.0
+# python setup.py install
+</code></pre>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2015-11-06-ganti-de/">Ganti Desktop Environment</a></h2>
 
     <div class="post-meta">
@@ -432,57 +482,6 @@ make install
   
   <footer>
     <a href="https://sasongko.web.id/post/2015-10-29-install-testdisk/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2015-10-01-download-video-youtube/">Download Video Youtube</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Oct 2015</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/multimedia">multimedia</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Download video dari <em>Youtube</em> adalah hal yang mudah bagi pengguna <em>Slackware</em>. Paling tidak ada 2 cara. Cara pertama menggunakan peramban web, dan cara kedua menggunakan <em>youtube-dl</em> yang berantar muka teks. Di sini menggunakan cara kedua. Untuk menginstall <em>youtube-dl</em> silahkan [klik di sini]({% post_url 2015-10-01-install-youtubedl %}).</p>
-<p>Cara menggunakannya</p>
-<pre tabindex="0"><code>youtube-dl url_video_youtube
-</code></pre><p>Contoh, akan URL video yang akan di download adalah <a href="https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54">https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54</a>.</p>
-<pre tabindex="0"><code>youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54
-</code></pre><p>Kalau ada beberapa video yang ingin didownload, masukkan saja URLnya ke satu file, tiap baris 1 URL, kemudian cara downloadnya tambahkan opsi -a</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2015-10-01-download-video-youtube/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

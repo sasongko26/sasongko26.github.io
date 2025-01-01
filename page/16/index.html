@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,58 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/">Jalankan QGIS docker</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>07 Nov 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/gis">gis</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/virtualisasi">virtualisasi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.</p>
+<h1 id="install-docker-dan-docker-cli">Install docker dan docker-cli</h1>
+<p>QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.</p>
+<h1 id="install-docker-qgis">Install docker QGIS</h1>
+<p>Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.04 LTS. Yang harus diperhatikan, versi qgis yang digunakan adalah versi 3.16 LTR, sedangkan yang disediakan repo resmi ubuntu 20.04 masihi versi 3.10.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/">Install Fedora di Slackware</a></h2>
 
     <div class="post-meta">
@@ -417,60 +469,6 @@
   
   <footer>
     <a href="https://sasongko.web.id/post/2021-08-01-dolphin-wastebin-reached-maximum-size/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-06-24-query-sql/">Query SQL</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Jun 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/database">database</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><em>Relational Database Management System (RDBMS)</em> adalah salah satu sistem database populer. Sistem pengolahan database ini menggunakan bahasa <strong>SQL</strong> (dibaca sekuel atau es kiu el). <em>Tool</em> yang dapat digunakan antara lain <strong>mariadb, mysql, postgresql</strong>.</p>
-<p>Pada RDBMS dikenal adanya hirarki atau struktur, yaitu dari tertinggi <strong>database</strong> yang terdiri atas <strong>tabel</strong>. Tabel dibentuk oleh <strong>kolom</strong> dengan data sejumlah barisnya.</p>
-<p>Perintah SQL ada 2</p>
-<ol>
-<li><em>Data Definition Language (DDL)</em> untuk membuat, menghapus atau modifikasi struktur database</li>
-<li><em>Data Manipulation Language (DML)</em> untuk insert data, query, hapus, edit data</li>
-</ol>
-<h1 id="query-sql">QUERY SQL</h1>
-<p>Query adalah pengambilan data dari database. Menggunakan perintah <strong>SELECT</strong>.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-06-24-query-sql/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

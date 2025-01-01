@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,50 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2024-12-22-mengetahui-kapasitas-terpakai-direktori/">Mengetahui kapasitas terpakai direktori</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>22 Dec 2024</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Untuk mengetahui kapasitas terpakai suatu direktori, misalnya ~/ bisa dengan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ du -s ~/
+</span></span></code></pre></div><p>Akan terlihat berapa byte penggunaannya.</p>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2024-12-18-reset-pengaturan-audio-default/">Reset pengaturan audio ke default</a></h2>
 
     <div class="post-meta">
@@ -409,50 +453,6 @@
   <footer>
     <a href="https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2024-09-13-convert-png-ke-pdf/">Convert png ke pdf</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>13 Sep 2024</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Melengkapi catatan yang sudah ada tentang konversi file. Kali ini adalah konversi  atau convert file dari berformat png menjadi pdf. Misalkan file gambar.png akan dikonversi menjadi pdf, maka <em>command</em>-nya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mogrify -format pdf gambar.png
-</span></span></code></pre></div><p><em>Command</em> tersebut di atas adalah bagian dari <strong>imagemagick</strong> yang secara default sudah terinstall di <strong>slackware</strong>.</p>
-  </p>
-
   
 </article>
 

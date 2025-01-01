@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,53 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2017-12-08-libsodium-masuk-current/">Libsodium Masuk -Current</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 Dec 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Pada hari Rabu 6 Desember 2017 jam 14.13.48 UTC, Patrick Volkerding selaku BDFL <strong>Slackware</strong>, memberikan <em>update</em> di kanal <!-- raw HTML omitted -->-current<!-- raw HTML omitted -->. Salah satunya adalah menambahkan <!-- raw HTML omitted -->libsodium-1.0.15<!-- raw HTML omitted -->. Libsodium merupakan <em>library</em> atau pustaka untuk enkripsi, dekripsi, <em>signature</em> (tanda tangan digital), dlsb.</p>
+<p>Bagi saya, masuknya <!-- raw HTML omitted -->libsodium<!-- raw HTML omitted --> membawa konsekwensi untuk <em>rebuild</em> <!-- raw HTML omitted -->dnscrypt-proxy<!-- raw HTML omitted --> yang menggunakan <!-- raw HTML omitted -->libsodium<!-- raw HTML omitted -->. <!-- raw HTML omitted -->libsodium<!-- raw HTML omitted --> yang sebelumnya adalah versi 1.0.13 dari <a href="http://slackbuilds.org/repository/14.2/libraries/libsodium/">SBo</a> sedangkan versi baru dari <em>official</em> <strong>Slackware</strong> 1.0.15. Hal ini diketahui dari gagalnya men-<em>start service</em> <!-- raw HTML omitted -->dnscrypt-proxy <!-- raw HTML omitted -->.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2017-12-08-libsodium-masuk-current/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/">Menggunakan Kernel Huge 4.14.0</a></h2>
 
     <div class="post-meta">
@@ -411,54 +458,6 @@
 </span></span></code></pre></div>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2017-07-31-multi-slackware-elilo/">Multi Slackware dengan elilo</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>31 Jul 2017</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/elilo">elilo</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/btrfs">btrfs</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Posting kali ini terinspirasi dari Pak Walesa yang menulis <a href="http://walecha.web.id/node/57">di sini</a> dan <a href="http://walecha.web.id/node/58">ini</a>. Perbedaannya adalah pada <em>boot loader</em> yang digunakan. Saya gunakan <!-- raw HTML omitted -->elilo<!-- raw HTML omitted -->. Selain itu, sudah ada <em>existing</em> Slackware64 current dan Slackware64 14.2. Keduanya dengan filesystem ext4. Mau ditambahkan yang stable (Slackware64 14.2 dan Slackware 14.2) tetapi dengan <em>filesystem btrfs</em>. Jadi dual Slackware stable ini akan ditempatkan di dalam partisi yang sama. Sebenarnya <em>tripleboot</em> dengan Windows 10, tetapi Windows 10 sangat jarang dipakai. Jadi abaikan saja Windowsnya.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2017-07-31-multi-slackware-elilo/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

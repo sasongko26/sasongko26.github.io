@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.140.1">
 
-  <title>Operator penggabungan pengulangan string perl &middot; Catatan Sasongko</title>
+  <title>Mengetahui kapasitas terpakai direktori &middot; Catatan Sasongko</title>
 
     
 
@@ -212,7 +212,7 @@
 
 
 <div class="header">
-  <h1>Operator penggabungan pengulangan string perl</h1>
+  <h1>Mengetahui kapasitas terpakai direktori</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>05 Jan 2022</time>
+    <time>22 Dec 2024</time>
   </div>
 
   
@@ -236,7 +236,7 @@
     
       <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
     
   </div>
   
@@ -245,41 +245,24 @@
 </div>
 
 
-  <p>Pada <strong>perl</strong>, variabel <strong>scalar</strong> yang berupa <strong>string</strong> dapat dilakukan penggabungan dan pengulangan. Contoh, terdapat 3 variabel sebagai berikut:
-$sapa = &ldquo;Hai&hellip;. &quot;
-$distro = &ldquo;Slackware&rdquo;
-$penilaian = &ldquo;distro terbaik.&rdquo;
-Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan &ldquo;.&rdquo;, sedangkan pengulangan dengan &ldquo;x&rdquo;.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#34;say&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $sapa <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hai.... &#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $distro <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Slackware &#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $penilaian <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;distro terbaik.&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># penggabungan</span>
-</span></span><span style="display:flex;"><span>say($sapa<span style="color:#f92672">.</span>$distro<span style="color:#f92672">.</span>$penilaian);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># pengulangan</span>
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;$distro&#34;</span> x <span style="color:#ae81ff">5</span>);
-</span></span></code></pre></div>
+  <p>Untuk mengetahui kapasitas terpakai suatu direktori, misalnya ~/ bisa dengan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ du -s ~/
+</span></span></code></pre></div><p>Akan terlihat berapa byte penggunaannya.</p>
+
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2022-01-05-operator-penggabungan-pengulangan-string-perl%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsasongko.web.id%2fpost%2f2024-12-22-mengetahui-kapasitas-terpakai-direktori%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2022-01-05-operator-penggabungan-pengulangan-string-perl%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fsasongko.web.id%2fpost%2f2024-12-22-mengetahui-kapasitas-terpakai-direktori%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2022-01-05-operator-penggabungan-pengulangan-string-perl%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2024-12-22-mengetahui-kapasitas-terpakai-direktori%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2022-01-05-operator-penggabungan-pengulangan-string-perl%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fsasongko.web.id%2fpost%2f2024-12-22-mengetahui-kapasitas-terpakai-direktori%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2022-01-05-operator-penggabungan-pengulangan-string-perl%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2024-12-22-mengetahui-kapasitas-terpakai-direktori%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2022-01-05-operator-penggabungan-pengulangan-string-perl%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fsasongko.web.id%2fpost%2f2024-12-22-mengetahui-kapasitas-terpakai-direktori%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -311,13 +294,13 @@ Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampi
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://sasongko.web.id/post/2024-12-18-reset-pengaturan-audio-default/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/">Penggabungan operator perl</a>
+      <a href="https://sasongko.web.id/post/2024-12-18-reset-pengaturan-audio-default/">Reset pengaturan audio ke default</a>
     </nav>
     
   </div>
@@ -326,14 +309,8 @@ Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampi
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/">Operator perbandingan perl</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>

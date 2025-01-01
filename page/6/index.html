@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,48 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2022-06-10-tiling-window-kde-plasma/">Menggunakan tiling window KDE Plasma</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Jun 2023</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/desktop-environment">desktop-environment</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>KDE Plasma semakin seru setelah adanya <em>built in window tiling</em>. Untuk menggunakan, tekan shift sambil <em>drag</em> <em>window</em> ke bilah yang diinginkan. Untuk mengedit layout tiling pastikan <em>Tiling Editor</em> pada pengaturan/setting sudah <em>enable</em>/tercentang.</p>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2022-06-03-spdlog-build-error-basic-runtime/">spdlog build error basic runtime</a></h2>
 
     <div class="post-meta">
@@ -425,57 +467,6 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/usr/sbin/pipewire-enable.sh
 </span></span><span style="display:flex;"><span>/usr/sbin/pipewire-disable.sh
 </span></span></code></pre></div><p>Silakan dieksekusi sesuai kebutuhan.</p>
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2023-03-30-two-fer-bash/">Two fer bash</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Mar 2023</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/bash">bash</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p><em>Two fer</em> merupakan salah satu soal latihan pemrograman yang ada di <strong>exercism</strong>. Latihan ini meminta untuk dibuatkan suatu <em>script</em> yang apabila script tersebut dieksekusi tanpa argumen apapun maka akan mengeluarkan output &ldquo;One for you, one for me.&rdquo;. Apabila diberikan suatu argumen yang merupakan nama seseorang misalnya Sasongko, maka outputnya &ldquo;One for Sasongko, one for me.&rdquo;.</p>
-<p>Berikut adalah <em>script bash</em>-nya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/bash
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>main <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>	NAME<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>you<span style="color:#e6db74">}</span>
-</span></span><span style="display:flex;"><span>	echo <span style="color:#e6db74">&#34;One for </span>$NAME<span style="color:#e6db74">, one for me.&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>main <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span>
-</span></span></code></pre></div>
   </p>
 
   

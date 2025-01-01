@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,56 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/">Enkripsi File dengan gnupg</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 Jan 2017</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/kriptografi">kriptografi</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/forensik">forensik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/security">security</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan <!-- raw HTML omitted -->gnupg<!-- raw HTML omitted --> atau yang biasa disebut dengan <!-- raw HTML omitted -->gpg<!-- raw HTML omitted -->.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi
+</span></span></code></pre></div><p>Sedangkan untuk dekripsi</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
+</span></span></code></pre></div>
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2017-01-12-qtfm-segfault-pascaupgrade-changelog12jan17/">qtFM Segmentation Fault Pascaupgrade</a></h2>
 
     <div class="post-meta">
@@ -412,55 +462,6 @@
   
   <footer>
     <a href="https://sasongko.web.id/post/2017-01-01-blankon-wallpapers-slackbuild/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/">Notifikasi Baterai Lemah i3</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>24 Dec 2016</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/battery">battery</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/i3">i3</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Salah satu keistimewaan <!-- raw HTML omitted -->i3<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->i3wm<!-- raw HTML omitted --> adalah belum adanya notifikasi/pemberitahuan saat baterai lemah perlu di-<em>charge</em>. Status baterai sudah ada di bar/panel yang ditampilkan oleh <!-- raw HTML omitted -->i3status<!-- raw HTML omitted -->.</p>
-<p>Berikut adalah <em>script</em> sederhana untuk menampilkan notifikasi saat baterai sedang lemah dan tidak sedang di-<em>charge</em>. Jika baterai telah mencapai batas (di sini saya gunakan 5%) maka setiap 30 detik akan tampil notifikasi untuk segera dilakukan <em>charging</em> <!-- raw HTML omitted -->Wayahe dicas bro&hellip;.!<!-- raw HTML omitted -->. Dan ketika baterai sudah terisi full 100% tetapi masih dalam kondisi dicas akan tampil notifikasi tiap 30 detik bahwa baterai sudah full.</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,55 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2019-04-01-membuat-user-baru/">Membuat User Baru</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Apr 2019</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-user">manajemen user</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Secara <em>default</em>, pascainstalasi <strong>Slackware</strong> hanya ada 1 <em>user</em> yaitu <strong>root</strong>. <strong>Slackware</strong> mempercayakan sepenuhnya apa yang akan dilakukan para penggunanya, karena memang hampir semua pengguna <strong>Slackware</strong> adalah pengguna yang telah berpengalaman. Namun, tak ada salahnya saya tuliskan di sini bagaimana cara membuat akun <em>user</em> baru di <strong>Slackware</strong> sebagai pengingat buat saya pribadi maupun pengguna lainnya.</p>
+<p><em>Command</em>-nya simpel saja</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>R/ adduser <span style="color:#75715e"># saya gunakan R/ sebagai pengganti shell prompt untuk root</span>
+</span></span></code></pre></div><p>kemudian isi sesuai petunjuk yang diberikan.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2019-04-01-membuat-user-baru/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2019-03-30-memulai-mariadb/">Memulai MariaDB</a></h2>
 
     <div class="post-meta">
@@ -412,55 +461,6 @@
 <p>Untuk memainkannya tekan tombol <!-- raw HTML omitted -->P<!-- raw HTML omitted --> untuk <em>pause</em> dan melanjutkannya, panah kanan-kiri untuk menggeser, panah bawah untuk mempercepat dan panah atas untuk merotasi atau mengubah bentuk.</p>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/">Fix sbotools Perl unescaped left brace in regex is deprecated here</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>17 Jul 2018</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/perl">perl</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Siang ini, sudah agak lama tidak <em>check update</em> paket-paket dari <a href="http://slackbuilds.org">SBo</a>. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sbocheck <span style="color:#75715e"># command ini dijalankan oleh root</span>
-</span></span><span style="display:flex;"><span>Unescaped left brace in regex is deprecated here <span style="color:#f92672">(</span>and will be fatal in Perl 5.32<span style="color:#f92672">)</span>, passed through in regex; marked by &lt;-- HERE in m/<span style="color:#ae81ff">\$</span><span style="color:#f92672">({</span> &lt;-- HERE |<span style="color:#f92672">)[</span>A-Za-z0-9_<span style="color:#f92672">]</span>+<span style="color:#f92672">(}</span>|<span style="color:#f92672">)</span>/ at /usr/share/perl5/SBO/Lib/Build.pm line <span style="color:#ae81ff">244</span>
-</span></span></code></pre></div><p>Ada masalah ternyata dan masalahnya di <a href="http://sasongko.web.id/tags/#perl">Perl</a>. Simpel sih solusinya. Buka file <!-- raw HTML omitted -->/usr/share/perl5/SBO/Lib/Build.pm<!-- raw HTML omitted -->, pada <em>line</em> 244 karakter { diganti {</p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

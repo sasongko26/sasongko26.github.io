@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -225,6 +225,63 @@
 </div>
 
 <div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/">Uji normalitas dengan python</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 May 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/statistik">statistik</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Uji normalitas data dapat dilakukan dengan beberapa cara antara lain</p>
+<ol>
+<li>Visual dengan grafik salah satunya histogram</li>
+<li>Uji statistik seperti Kolmogorov-Smirnov atau Shapiro-Wilk</li>
+</ol>
+<p>Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari <a href="https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv">https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</a> dengan pengubahan nama variabel menjadi lebih singkat.</p>
+<h1 id="uji-normalitas-dengan-histogram">Uji normalitas dengan histogram</h1>
+<p>Histogramnya</p>
+<p><img src="https://sasongko.web.id/gambar/histogram-beer-servings-2010.png" alt=""></p>
+<p>Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
   
     <article>
   <header>
@@ -486,72 +543,6 @@
 </code></pre>
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/">sbocheck /usr/sbo/repo exists and is not empty</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>10 Apr 2021</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/manajemen-file">manajemen-file</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Malam ini, ketika akan <em>update</em> SBo, ternyata tanpa disadari internet <em>disconnect</em> sebelumnya.</p>
-<pre tabindex="0"><code>bash-5.1# sbocheck
-Updating SlackBuilds tree...
-fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution)
-Could not sync from git://github.com/Ponce/slackbuilds.git.
-</code></pre><p>Setelah internet tidak ada masalah, gantian <strong>sbotools</strong>-nya yang masalah</p>
-<pre tabindex="0"><code>bash-5.1# sbocheck
-/usr/sbo/repo exists and is not empty. Exiting.
-</code></pre><p>Baiklah, <em>local repository</em>-nya minta dikosongkan dulu</p>
-<pre tabindex="0"><code>bash-5.1# rm -r /usr/sbo/repo
-bash-5.1# sbosnap fetch
-Pulling SlackBuilds tree...
-Cloning into &#39;/usr/sbo/repo&#39;...
-remote: Enumerating objects: 42, done.
-remote: Counting objects: 100% (42/42), done.
-remote: Compressing objects: 100% (42/42), done.
-remote: Total 498277 (delta 8), reused 12 (delta 0), pack-reused 498235
-Receiving objects: 100% (498277/498277), 142.33 MiB | 199.00 KiB/s, done.
-Resolving deltas: 100% (345959/345959), done.
-Updating files: 100% (40245/40245), done.
-</code></pre><p><em>Recheck</em></p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 

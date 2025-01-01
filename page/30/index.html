@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
-  <meta name="generator" content="Hugo 0.139.0">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Catatan Sasongko</title>
 
@@ -228,6 +228,64 @@
   
     <article>
   <header>
+    <h2><a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Rebuild R post-upgrade icu4c</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Jan 2021</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/r">r</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  </header>
+
+  <p>
+  <p>Pagi ini, saat akan mengeksekusi <strong>R</strong>,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ R
+</span></span><span style="display:flex;"><span>/usr/lib64/R/bin/exec/R: error <span style="color:#66d9ef">while</span> loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory
+</span></span></code></pre></div><p>Ternyata <strong>R</strong> nya bermasalah. Di atas disebutkan bahwa <strong>libicuuc.so.67</strong> tidak ditemukan. Dari namanya, bisa ditebak itu adalah <em>shared object/library</em> miliknya <strong>icu4c</strong>. Kita pastikan dulu,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ slackpkg file-search libicuuc.so
+</span></span><span style="display:flex;"><span>Looking <span style="color:#66d9ef">for</span> libicuuc.so in package list. Please wait... DONE
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>The list below shows the packages that contains <span style="color:#e6db74">&#34;libicuuc\.so&#34;</span> file.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> installed <span style="color:#f92672">]</span> - icu4c-68.2-x86_64-1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>You can search specific packages using <span style="color:#e6db74">&#34;slackpkg search package&#34;</span>.
+</span></span></code></pre></div><p><em>Command</em> tersebut dieksekusi dengan <em>root privileges</em>.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/">Ekstraksi waktu pada changelog dengan sed</a></h2>
 
     <div class="post-meta">
@@ -433,62 +491,6 @@
   
   <footer>
     <a href="https://sasongko.web.id/post/2021-01-01-menggunakan-rsync/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/">Xfce 4.16 Masuk Current</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>28 Dec 2020</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/slackware">slackware</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://sasongko.web.id/tags/xfce">xfce</a>
-    
-  </div>
-  
-  
-
-</div>
-
-
-  </header>
-
-  <p>
-  <p>Pagi ini, Patrick memasukkan <strong>xfce 4.16</strong> ke <em>slackware current main tree</em> tanpa singgah di /testing. <em>Interface</em> <strong>xfce 4.16</strong> lebih cantik dan menarik dibanding sebelumnya. Demikian pula <em>icons</em>-nya.</p>
-<p>Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown <strong>xfce</strong> stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses <em>development</em>.</p>
-<p>Ada beberapa hal yang menjadi catatan buat penulis terkait <strong>xfce 4.16</strong> ini, yaitu</p>
-<ol>
-<li><em>Interface</em> lebih cantik dan menarik</li>
-<li>Penambahan <strong>xfce4-panel-profiles</strong> yang memungkinkan untuk menyimpan profil/konfigurasi panel. Sangat bermanfaat bagi mereka yang suka berganti-ganti tampilan panel, ukuran dan letak panel, serta <em>shortcut</em> apa saja yang berada di panel.</li>
-<li>Perubahan letak tombol <strong>Open</strong> atau <strong>Save</strong> pada <em>dialog box</em> yang sebelumnya di bawah menjadi di atas. Ini memudahkan pengguna. Tidak usah geser <em>mouse</em> terlalu jauh atau repot <strong>tab</strong> berkali-kali.</li>
-<li>Penambahan <strong>libgtop</strong> yang memungkinkan <em>user</em> mengetahui informasi singkat sistem melalui tab <strong>System</strong> pada <strong>About Xfce</strong></li>
-</ol>
-<p><img src="https://sasongko.web.id/gambar/about-xfce-4.14.png" alt="about xfce 4.14">
-<img src="https://sasongko.web.id/gambar/about-xfce-4.16.png" alt="about xfce 4.16"></p>
-  </p>
-
-  
-  <footer>
-    <a href="https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>
