@@ -155,6 +155,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Migrasi dari elilo ke grub
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Aktif di-maintain pengembang merupakan salah satu kriteria preferensi software yang penulis gunakan. elilo sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. Slackware adalah distro yang masih bertahan menyediakan elilo. Terima kasih PV.
+Sejak pertama menggunakan slackware dengan sistem UEFI sekitar 2016, elilo penulis jadikan pilihan utama boot loader. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini elilo sudah tidak dikembangkan developer aslinya. Mengangkat grub sebagai suksesor elilo bukanlah hal buruk. Grub ini sebenarnya sudah lama terinstall dan rutin ikut di-upgrade juga, tapi memang tidak digunakan. Sekarang saatnya mengaktifkannya.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-03-26 00:00:00 +0000 UTC'>26 Mar 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Migrasi dari elilo ke grub" href="https://sasongko.web.id/post/2022-03-26-migrasi-elilo-ke-grub/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Mount media read write mode
     </h2>
   </header>
@@ -208,22 +222,6 @@ id:4:initdefault: </p>
   </div>
   <footer class="entry-footer"><span title='2022-02-22 00:00:00 +0000 UTC'>22 Feb 2022</span></footer>
   <a class="entry-link" aria-label="post link to Mengaktifkan runlevel 4" href="https://sasongko.web.id/post/2023-02-22-aktivasi-runlevel4/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Menggunakan pipewire
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Salah satu fitur baru yang dihadirkan Slackware 15.0 adalah masuknya pipewire sebagai alternatif dari pulseaudio. Bagaimana penggunaanya? Silakan simak catatan berikut ini.
-Pertama, edit /etc/pulse/client.conf. Ubah autospawn dari yes menjadi no.
-Hapus /etc/xdg/autostart/pulseaudio.desktop atau rename menjadi file yang “tidak penting”.
-Rename file berikut menjadi .desktop saja
-/etc/xdg/autostart/pipewire-media-session.desktop.sample /etc/xdg/autostart/pipewire-pulse.desktop.sample /etc/xdg/autostart/pipewire.desktop </p>
-  </div>
-  <footer class="entry-footer"><span title='2022-02-19 00:00:00 +0000 UTC'>19 Feb 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Menggunakan pipewire" href="https://sasongko.web.id/post/2022-02-19-menggunakan-pipewire/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
