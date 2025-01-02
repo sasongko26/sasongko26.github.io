@@ -212,11 +212,11 @@ Penjelasan command">
 </div>
   </header> 
   <div class="post-content"><p>Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam <em>main tree</em> <strong>slackware current</strong>. Saat catatan ini dituliskan, sudah &ldquo;mendarat&rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk <em>start up</em>. Yang dimaksud <em>start up</em> di sini adalah kondisi dari eksekusi <strong>elilo</strong> dan <strong>initrd</strong> sampai muncul <em>login prompt</em>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ dmesg | tail -5
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   20.687205<span style="color:#f92672">]</span> Segment Routing with IPv6
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   20.687213<span style="color:#f92672">]</span> RPL Segment Routing with IPv6
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   32.472700<span style="color:#f92672">]</span> RTL8208 Fast Ethernet r8169-300:00: attached PHY driver <span style="color:#f92672">[</span>RTL8208 Fast Ethernet<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>mii_bus:phy_addr<span style="color:#f92672">=</span>r8169-300:00, irq<span style="color:#f92672">=</span>IGNORE<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>   32.750379<span style="color:#f92672">]</span> r8169 0000:03:00.0 eth0: Link is Down
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ dmesg <span class="p">|</span> tail -5
+</span></span><span class="line"><span class="cl"><span class="o">[</span>   20.687205<span class="o">]</span> Segment Routing with IPv6
+</span></span><span class="line"><span class="cl"><span class="o">[</span>   20.687213<span class="o">]</span> RPL Segment Routing with IPv6
+</span></span><span class="line"><span class="cl"><span class="o">[</span>   32.472700<span class="o">]</span> RTL8208 Fast Ethernet r8169-300:00: attached PHY driver <span class="o">[</span>RTL8208 Fast Ethernet<span class="o">]</span> <span class="o">(</span>mii_bus:phy_addr<span class="o">=</span>r8169-300:00, <span class="nv">irq</span><span class="o">=</span>IGNORE<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>   32.750379<span class="o">]</span> r8169 0000:03:00.0 eth0: Link is Down
 </span></span></code></pre></div><p>Penjelasan <em>command</em></p>
 <ol>
 <li>perintah ini dieksekusi sebagai root walaupun prompt sign-nya user biasa</li>

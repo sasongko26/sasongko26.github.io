@@ -155,6 +155,50 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">[SOLVED] Slackware Current Susah Booting dan Shutdown
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Tiga bulan lalu saya sambat Slackware current [hang]({% post_url 2016-02-08-slackware-current-hang %}) saat booting dan shutdown. Sekarang masalah tersebut teratasi.
+Secara default laptop Asus X453MA diperuntukkan bagi pengguna Microsoft Windows. Hal ini terlihat dari web resminya yang menyediakan driver hanya untuk Windows khususnya Windows 8.1 dan Windows 10. Juga terlihat dari “paket bundling”-nya yang menyediakan Windows preinstalled.
+Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.1 oleh pihak toko. Awalnya saya pilih kosongan aja sesuai aslinya. Tapi berhubung pihak toko menawarkan Windows 8.1 trial 6 bulan dan saya kepengen icip-icip Windows 8.1 jadilah laptopnya ada Windowsnya. Nah, karena Windowsnya cuma trial, saya belum sanggup beli orinya (bajakan sih banyak yang jual) dan lebih suka pakai Linux, Jadilah laptopnya ber-Slackware.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-05-05 00:00:00 +0000 UTC'>05 May 2016</span></footer>
+  <a class="entry-link" aria-label="post link to [SOLVED] Slackware Current Susah Booting dan Shutdown" href="https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Install sbopkg
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Adakalanya pengguna Slackware membutuhkan paket/aplikasi di luar yang dirilis secara resmi oleh Slackware tapi tidak mau repot install dari kode sumber (source code). SlackBuilds.org (SBo) inilah yang mewujudkannya. Di SBo tersedia ribuan paket yang dapat dijalankan dengan baik di Slackware.
+Kecuali dalam bentuk web interface SBo juga bisa dinikmati dalam bentuk command line interface yang dinamakan sbopkg. Sbopkg secara default tidak ter-install karena paket ini memang paket third party.
+Untuk install-nya mudah. Tersedia kode sumber maupun paket binernya. Biar lebih praktis install dari binernya saja. Pastikan tersambung internet untuk mengunduh.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-05-03 00:00:00 +0000 UTC'>03 May 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Install sbopkg" href="https://sasongko.web.id/post/2016-05-03-install-sbopkg/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Install Tor Browser
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Tor Browser adalah peramban web yang sangat memerhatikan privasi. Kita bisa mengakses web secara anonim/ anonymous karena melewati jaringan Tor yang beraneka jalur.
+Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slackware 14.1 download link-nya expired. Tor Stable terbaru adalah versi 5.5.5 dan ini belum tersedia SBo resminya untuk Slackware. Jadi kita akan install mandiri. Tentu saja kita butuh koneksi internet untuk mengunduh berkasnya. Tor tersedia untuk Linux, Windows maupun Mac Os X, baik arsitektur 32 bit maupun 64 bit. Ini tidak hanya berlaku untuk Slackware tapi juga BlankOn. Di sini digunakan 64 bit. Proses instalasi dengan bukan root.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-04-29 00:00:00 +0000 UTC'>29 Apr 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Install Tor Browser" href="https://sasongko.web.id/post/2016-04-29-install-tor/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Kekuatan Tersembunyi Nano : Menampilkan File Tersembunyi
     </h2>
   </header>
@@ -180,48 +224,6 @@ Dengan akses root copas /lib/modprobe.d/psmouse.conf ke /etc/modprobe.d. Kemudia
   </div>
   <footer class="entry-footer"><span title='2016-02-26 00:00:00 +0000 UTC'>26 Feb 2016</span></footer>
   <a class="entry-link" aria-label="post link to Mouse Stuck" href="https://sasongko.web.id/post/2016-02-26-mouse-stuck/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Slackware Current Susah Booting dan Shutdown
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering stuck saat boot dan shutdown.
-Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis ID-Slackware, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.4.1 pun belum ada perubahan berarti.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-02-08 00:00:00 +0000 UTC'>08 Feb 2016</span></footer>
-  <a class="entry-link" aria-label="post link to Slackware Current Susah Booting dan Shutdown" href="https://sasongko.web.id/post/2016-02-08-slackware-current-hang/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">pip InsecurePlatformWarning
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Saat melakukan pencarian dengan pip, muncul pesan
-/usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:315: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning. SNIMissingWarning /usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:120: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning. InsecurePlatformWarning Biar peringatan ini tidak muncul lagi, ndg-httpsclient harus diupgrade.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-01-21 00:00:00 +0000 UTC'>21 Jan 2016</span></footer>
-  <a class="entry-link" aria-label="post link to pip InsecurePlatformWarning" href="https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Cara Menggunakan gdrv
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>gdrv adalah salah satu command line interface tool berbasis python untuk Google Drive. Cara menginstallnya silahkan buka [catatan ini]({% post_url 2015-07-26-install-gdrv %}). Adapun cara penggunaannya adalah sebagai berikut:
-$ gdrv -h usage: gdrv [-h] [-v] [-w] [-V] {ftp,pull,search,url,push,mkdir,share,trash,list,init} ... YMK google drive command line tool positional arguments: {ftp,pull,search,url,push,mkdir,share,trash,list,init} drive sub command ftp interactive mode like sftp, lftp pull command pull help search command search help url command url help push command push help mkdir command mkdir help share command share help trash command trash help list command list help init command init help optional arguments: -h, --help show this help message and exit -v, --verbose increse verbosity/logging level -w, --write-config write a default config -V, --version show version infomation Pertama, inisiasi dulu,
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-12-26 00:00:00 +0000 UTC'>26 Dec 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Cara Menggunakan gdrv" href="https://sasongko.web.id/post/2015-12-26-menggunakan-gdrv/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

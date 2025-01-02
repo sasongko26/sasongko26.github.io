@@ -149,6 +149,50 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Set background blackbox
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Menggunakan blackbox yang ‘hanya’ window manager tentunya berbeda dengan ketika menggunakan desktop environment (DE) seperti kde atau xfce. Pengaturan background atau wallpaper dalam DE menggunakan tampilan grafis.
+Untuk meng-set background pada blackbox menggunakan bsetbg
+$ bsetbg nama_file_background Atau, kalau menghendaki background-nya adalah warna (solid color) juga bisa. Contoh, akan mengganti background-nya dengan warna hijau.
+$ bsetbg -solid green </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-19 00:00:00 +0000 UTC'>19 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Set background blackbox" href="https://sasongko.web.id/post/2021-02-19-set-background-blackbox/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Copy paste xterm
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>xterm adalah X terminal emulator populer legendaris. Penulis masih menggunakannya sebagai terminal utama ketika menggunakan blackbox. Sesekali saat menggunakan xfce atau kde.
+xterm ini khas. Tidak seperti xfce4-terminal atau konsole yang secara default pengguna bisa melakukan copy paste (Copas) dengan mudah. Ctrl Shift C, Ctrl Shift V untuk copas pada terminal emulator lainnya tidak berlaku! Butuh pengaturan khusus untuk melakukannya. Mengatur agar setiap yang diblok akan dimasukkan ke clipboard.
+Untuk bisa melakukan copy:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-11 00:00:00 +0000 UTC'>11 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Copy paste xterm" href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">xauth serverauthXXX does not exist
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-charge. Alhasil laptop mati seketika. Dinyalakan lagi (sambil charging tentunya) gagal masuk ke X.
+xauth: file /home/xyz/.serverauth.2909 does not exist Solusinya simpel
+$ rm .serverauth* </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-10 00:00:00 +0000 UTC'>10 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to xauth serverauthXXX does not exist" href="https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">nmcli sw disabled
     </h2>
   </header>
@@ -174,54 +218,6 @@ Tempatkan kursor di awal text yang akan dicops Tekan v untuk memulai blok Jalank
   </div>
   <footer class="entry-footer"><span title='2021-02-08 00:00:00 +0000 UTC'>08 Feb 2021</span></footer>
   <a class="entry-link" aria-label="post link to Copy paste vim mode visual" href="https://sasongko.web.id/post/2021-02-08-copy-paste-vim-mode-visual/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Impor library python
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Dengan adanya library, programmer python dimudahkan. Lebih efisien. Contoh : untuk mencari nilai akar kuadrat, tidak perlu menuliskan bertele-tele menuliskan rumus. Tinggal impor dan gunakan fungsi yang ada saja Misalkan akan mencari nilai akar kuadrat dari 100.
-import math print(math.sqrt(100)) Baris 1, deklarasi untuk mengimpor library. Nama library-nya math.
-Baris 2, fungsi print() untuk menampilkan ke layar. sqrt() adalah fungsi untuk mencari nilai akar kuadrat. Karena fungsi ini ada di library atau modul math, maka dituliskan juga librarynya.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-02-07 00:00:00 +0000 UTC'>07 Feb 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Impor library python" href="https://sasongko.web.id/post/2021-02-07-impor-library-python/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Comments python
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Comments atau komentar adalah sekumpulan teks yang dituliskan dalam program tetapi tidak akan dieksekusi. Ada 2 jenis comments dalam bahasa python, yaitu
-Single line comment. Hanya terdiri dari 1 baris comments. Untuk menuliskannya, beri tanda # di awal comments. Contoh :
-# ini adalah single line comment Multiline comments. Terdiri dari lebih dari 1 baris. Dibuka dan ditutup dengan &#39;&#39;&#39; Contoh :
-&#39;&#39;&#39; ini adalah program python untuk mengetahui sesuatu &#39;&#39;&#39; </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-02-05 00:00:00 +0000 UTC'>05 Feb 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Comments python" href="https://sasongko.web.id/post/2021-02-05-comments-python/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Tipe data python
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Python memiliki beberapa tipe data, yaitu :
-None Numeric Boolean Sequence Set Map Tipe data python none Hanya memiliki 1 nilai yaitu None
-Tipe data numeric Tipe data numeric terdiri atas tipe data integer dan float. Integer merupakan bilangan bulat. Float merupakan bilangan desimal.
-Tipe data boolean Terdiri dari 2 nilai yaitu True dan False
-Tipe data sequence Ada 3 macam yaitu string, list dan tuple
-Tipe data string Data ini diapit oleh &#39; atau &#34;. Contoh :
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-02-05 00:00:00 +0000 UTC'>05 Feb 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Tipe data python" href="https://sasongko.web.id/post/2021-02-06-tipe-data-python/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

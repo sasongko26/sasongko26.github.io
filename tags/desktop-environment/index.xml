@@ -37,7 +37,7 @@
       <guid>https://sasongko.web.id/post/2021-06-23-menyusupkan-mate-ke-xfce/</guid>
       <description>&lt;p&gt;Secara &lt;em&gt;default, window manager&lt;/em&gt; yang digunakan xfce adalah xfwm4. Tetapi, ini bisa diganti menjadi &lt;em&gt;window manager&lt;/em&gt; lain seperti &lt;strong&gt;fluxbox&lt;/strong&gt; ataupun &lt;strong&gt;marco&lt;/strong&gt; milik &lt;strong&gt;mate&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Kali ini kita akan ganti &lt;strong&gt;xfwm4&lt;/strong&gt; dengan &lt;strong&gt;marco&lt;/strong&gt;. Caranya, membuat &lt;strong&gt;startup&lt;/strong&gt; baru berisikan &lt;em&gt;command&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ /usr/bin/marco --replace
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ /usr/bin/marco --replace
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -46,9 +46,9 @@
       <pubDate>Sat, 15 May 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/</guid>
       <description>&lt;p&gt;Secara &lt;em&gt;default&lt;/em&gt; tombol Minimize/Iconify, Maximize dan Close pada window &lt;strong&gt;fluxbox&lt;/strong&gt; terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;session.screen0.titlebar.right: Minimize Maximize Close
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;session.screen0.titlebar.right: Minimize Maximize Close
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;session.screen0.titlebar.left:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;session.screen0.titlebar.left:
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -57,8 +57,8 @@
       <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-03-18-disable-recent-documents-mate/</guid>
       <description>&lt;p&gt;Masalah &lt;em&gt;security&lt;/em&gt; saat penggunaan &lt;em&gt;desktop environment&lt;/em&gt; &lt;strong&gt;mate&lt;/strong&gt; adalah adanya &lt;strong&gt;recent documents&lt;/strong&gt; pada menu. Ini terletak pada menu di bagian bawah menu &lt;strong&gt;Places&lt;/strong&gt;. Bagi &lt;em&gt;user&lt;/em&gt; yang &lt;em&gt;concern&lt;/em&gt; dengan privasi dan menghendaki untuk menonaktifkannya alih-alih membersihkannya &amp;ldquo;setiap saat&amp;rdquo;,&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &amp;gt; ~/.local/share/recently-used.xbel 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ chattr -i ~/.local/share/recently-used.xbel &lt;span style=&#34;color:#75715e&#34;&gt;# dijalankan oleh root&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &amp;gt; ~/.local/share/recently-used.xbel 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ chattr -i ~/.local/share/recently-used.xbel &lt;span class=&#34;c1&#34;&gt;# dijalankan oleh root&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -76,7 +76,7 @@
       <guid>https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/</guid>
       <description>&lt;p&gt;Masih adakah pengguna linux di Indonesia yang menggunakan &lt;strong&gt;blackbox&lt;/strong&gt; sebagai &lt;strong&gt;window manager&lt;/strong&gt; sehari-hari? Masih, minimal seorang yaitu yang menulis catatan ini. Hehehehe&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;Secara &lt;em&gt;default, toolbar&lt;/em&gt; &lt;strong&gt;blackbox&lt;/strong&gt; tidak menyertakan tanggal walau menampilkan jam. Jam ditampilkan dalam format 12 jam AM/PM. Untuk menambahkannya, dan menggunakan jam format 24 jam sebagaimana lazimnya di Indonesia, diatur sebagai berikut pada ~/.blackboxrc&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;session.screen0.strftimeFormat : %d/%m/%Y %H:%M
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;session.screen0.strftimeFormat : %d/%m/%Y %H:%M
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Untuk menerapkan perubahan tersebut secara langsung, restart &lt;strong&gt;blackbox&lt;/strong&gt; (tidak perlu restart komputer!)&lt;/p&gt;</description>
     </item>
     <item>
@@ -93,9 +93,9 @@
       <guid>https://sasongko.web.id/post/2021-02-19-set-background-blackbox/</guid>
       <description>&lt;p&gt;Menggunakan &lt;strong&gt;blackbox&lt;/strong&gt; yang &amp;lsquo;hanya&amp;rsquo; &lt;strong&gt;window manager&lt;/strong&gt; tentunya berbeda dengan ketika menggunakan &lt;strong&gt;desktop environment&lt;/strong&gt; (DE) seperti &lt;strong&gt;kde&lt;/strong&gt; atau &lt;strong&gt;xfce&lt;/strong&gt;. Pengaturan &lt;em&gt;background&lt;/em&gt; atau &lt;em&gt;wallpaper&lt;/em&gt; dalam DE menggunakan tampilan grafis.&lt;/p&gt;
 &lt;p&gt;Untuk meng-&lt;em&gt;set background&lt;/em&gt; pada &lt;strong&gt;blackbox&lt;/strong&gt; menggunakan &lt;strong&gt;bsetbg&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ bsetbg nama_file_background
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ bsetbg nama_file_background
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Atau, kalau menghendaki &lt;em&gt;background&lt;/em&gt;-nya adalah warna (solid color) juga bisa. Contoh, akan mengganti &lt;em&gt;background&lt;/em&gt;-nya dengan warna hijau.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ bsetbg -solid green
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ bsetbg -solid green
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -104,7 +104,7 @@
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/</guid>
       <description>&lt;p&gt;Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-&lt;em&gt;charge&lt;/em&gt;. Alhasil laptop mati seketika. Dinyalakan lagi (sambil &lt;em&gt;charging&lt;/em&gt; tentunya) gagal masuk ke &lt;strong&gt;X&lt;/strong&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xauth: file /home/xyz/.serverauth.2909 does not exist
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xauth: file /home/xyz/.serverauth.2909 does not exist
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Solusinya simpel&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ rm .serverauth*
 &lt;/code&gt;&lt;/pre&gt;</description>

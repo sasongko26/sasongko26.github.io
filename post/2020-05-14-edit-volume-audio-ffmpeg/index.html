@@ -208,13 +208,13 @@ Atau, dengan menuliskan volume suaranya secara langsung. Default aslinya 256. Mi
 </div>
   </header> 
   <div class="post-content"><p><em>Editing</em> kali ini adalah bagaimana mengubah volume default audio/suara menggunakan <strong>ffmpeg</strong>. Misal, file yang akan diinput/diedit adalah video.mp4. Karena suaranya terlalu pelan, akan dinaikkan menjadi 5x semula melalui filter audio. File hasil editan diberi nama video-louder.webm.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i video.mp4 -filter:a <span style="color:#e6db74">&#34;volume=5&#34;</span> video-louder.webm
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i video.mp4 -filter:a <span class="s2">&#34;volume=5&#34;</span> video-louder.webm
 </span></span></code></pre></div><p>Apabila suara terlalu nyaring bisa dipelankan. Berikut akan dipelankan menjadi setengahnya dari volume semula dan file baru diberi nama new.webm</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i video.mp4 -filter:a <span style="color:#e6db74">&#34;volume=0.5&#34;</span> new.webm
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i video.mp4 -filter:a <span class="s2">&#34;volume=0.5&#34;</span> new.webm
 </span></span></code></pre></div><p>Atau, dengan menuliskan volume suaranya secara langsung. Default aslinya 256. Misalkan akan dinaikkan menjadi 300 kemudian disimpan sebagai anyar.mkv</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i video.mp4 -vol <span style="color:#ae81ff">300</span> anyar.mkv
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i video.mp4 -vol <span class="m">300</span> anyar.mkv
 </span></span></code></pre></div><p>Atau, bila dari mp4 kemudian tetap menjadi mp4 dan dengan kualitas video yang tidak jauh berbeda, dan untuk suara/audionya menggunakan codec opus (karena default mp4 codec audionya aac yang merupakan paten) nilai crf bisa diubah antara 0 - 51. 0 kualitas terbaik dengan konsekwensi ukuran lebih besar. Biasanya crf 17 bisa dikatakan aman, tidak terlalu tampak penurunan kualitasnya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i video.mp4 -af <span style="color:#e6db74">&#34;volume=25.1dB&#34;</span> -acodec opus -strict -2 -vcodec copy -crf <span style="color:#ae81ff">17</span> video-suaranya-keras.mp4
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i video.mp4 -af <span class="s2">&#34;volume=25.1dB&#34;</span> -acodec opus -strict -2 -vcodec copy -crf <span class="m">17</span> video-suaranya-keras.mp4
 </span></span></code></pre></div>
 
   </div>

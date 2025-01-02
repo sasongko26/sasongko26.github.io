@@ -155,6 +155,47 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Enkripsi File dengan gnupg
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupg atau yang biasa disebut dengan gpg.
+$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
+$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi </p>
+  </div>
+  <footer class="entry-footer"><span title='2017-01-14 00:00:00 +0000 UTC'>14 Jan 2017</span></footer>
+  <a class="entry-link" aria-label="post link to Enkripsi File dengan gnupg" href="https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">qtFM Segmentation Fault Pascaupgrade
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Changelog current hari ini 12 Januari 2017 ramai sekali. Upgrade dan rebuilt secara masif seolah menjadi kado tahun baru dari Patrick Volkerding. Dan ternyata berimbas segfault alias Segmentation fault pada qtFM file manager berbasis Qt yang saya install dari SBo.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-01-12 00:00:00 +0000 UTC'>12 Jan 2017</span></footer>
+  <a class="entry-link" aria-label="post link to qtFM Segmentation Fault Pascaupgrade" href="https://sasongko.web.id/post/2017-01-12-qtfm-segfault-pascaupgrade-changelog12jan17/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Enkripsi File dengan OpenSSL
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
+Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssl dengan cipher rc4. File hasil enkripsi saya namai rahasia.odt yang saya taruh di fd dan fd saya mount di /media/hd0. Kemudian akan ditanya password enkripsinya.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-01-08 00:00:00 +0000 UTC'>08 Jan 2017</span></footer>
+  <a class="entry-link" aria-label="post link to Enkripsi File dengan OpenSSL" href="https://sasongko.web.id/post/2017-01-08-enkripsi-dg-openssl/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">KBBI Qt SlackBuild
     </h2>
   </header>
@@ -179,47 +220,6 @@ Tujuan pembuatan slackbuild ini adalah untuk memasyarakatkan ke-Indonesia-an. Bl
   </div>
   <footer class="entry-footer"><span title='2017-01-01 00:00:00 +0000 UTC'>01 Jan 2017</span></footer>
   <a class="entry-link" aria-label="post link to blankon-wallpapers slackbuild" href="https://sasongko.web.id/post/2017-01-01-blankon-wallpapers-slackbuild/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Notifikasi Baterai Lemah i3
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Salah satu keistimewaan i3 atau i3wm adalah belum adanya notifikasi/pemberitahuan saat baterai lemah perlu di-charge. Status baterai sudah ada di bar/panel yang ditampilkan oleh i3status.
-Berikut adalah script sederhana untuk menampilkan notifikasi saat baterai sedang lemah dan tidak sedang di-charge. Jika baterai telah mencapai batas (di sini saya gunakan 5%) maka setiap 30 detik akan tampil notifikasi untuk segera dilakukan charging Wayahe dicas bro….!. Dan ketika baterai sudah terisi full 100% tetapi masih dalam kondisi dicas akan tampil notifikasi tiap 30 detik bahwa baterai sudah full.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-12-24 00:00:00 +0000 UTC'>24 Dec 2016</span></footer>
-  <a class="entry-link" aria-label="post link to Notifikasi Baterai Lemah i3" href="https://sasongko.web.id/post/2016-12-24-notif-lowbat-i3/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Enable TLP on i3wm
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Beberapa hari yang lalu install i3 (i3wm) menggunakan sbopkg. Biasanya, dengan desktop environment lain seperti Mate, baterai bisa bertahan 4 - 6 jam. Namun, dengan i3 belum 3 jam sudah minta dicas, padahal penggunaannya seperti biasa tidak ada perbedaan signifikan.
-Cek powertop ternyata banyak yang Bad seperti default-nya tanpa TLP. Padahal service TLP saat booting jalan, Tunable di powertop hanya 1 yang Bad lainnya Good semua.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-12-12 00:00:00 +0000 UTC'>12 Dec 2016</span></footer>
-  <a class="entry-link" aria-label="post link to Enable TLP on i3wm" href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Scrolling pada XTerm
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Di kalangan pengguna GNU/Linux mungkin xterm kurang familiar. Mengingat desktop environment populer seperti GNOME, KDE, Xfce, Mate dan LXQt telah mempunyai terminal emulator sendiri. Selain itu, xterm dianggap memiliki keterbatasan. Salah satunya adalah tidak bisa scrolling karena tidak adanya scrollbar.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-12-08 00:00:00 +0000 UTC'>08 Dec 2016</span></footer>
-  <a class="entry-link" aria-label="post link to Scrolling pada XTerm" href="https://sasongko.web.id/post/2016-12-08-scrolling-xterm/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

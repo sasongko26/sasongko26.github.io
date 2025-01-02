@@ -207,73 +207,73 @@ Deteksi menggunakan nmap yang secara default sudah tertanam di slackware. Kasus 
   <div class="post-content"><p>Judul catatan kali ini sedikit berbeda dibanding sebelumnya. Ada <strong>hacking</strong>-nya. Hehehehe&hellip;. Tapi itu tidak menunjukkan bahwa kemampuan penulis dalam ilmu <strong>hacking</strong> bagus. Hanya bisa itu tok.</p>
 <p><em>Information gathering</em> merupakan tahap krusial dalam proses <strong>hacking</strong> maupun <strong>cracking</strong>. Salah satu kegiatan <em>information gathering</em> adalah <em>scanning</em> atau deteksi sistem operasi yang digunakan pada target. Deteksi ini perlu karena berbeda sistem operasi mungkin membutuhkan teknik yang berbeda.</p>
 <p>Deteksi menggunakan <strong>nmap</strong> yang secara <em>default</em> sudah tertanam di <strong>slackware</strong>. Kasus kali ini alamat target adalah 192.168.106.250. Hasil <em>scanning</em> menunjukkan beberapa informasi, antara lain sistem operasi, port yang terbuka dan webserver yang digunakan.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># nmap -A 192.168.106.250</span>
-</span></span><span style="display:flex;"><span>Starting Nmap 7.92 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2021-12-17 13:26 WIB
-</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> 192.168.106.250
-</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.0071s latency<span style="color:#f92672">)</span>.
-</span></span><span style="display:flex;"><span>Not shown: <span style="color:#ae81ff">985</span> closed tcp ports <span style="color:#f92672">(</span>reset<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>PORT      STATE SERVICE     VERSION
-</span></span><span style="display:flex;"><span>21/tcp    open  ftp         Microsoft ftpd
-</span></span><span style="display:flex;"><span>| ftp-syst:
-</span></span><span style="display:flex;"><span>|_  SYST: Windows_NT
-</span></span><span style="display:flex;"><span>80/tcp    open  http        Apache httpd 2.4.12 <span style="color:#f92672">((</span>Win32<span style="color:#f92672">)</span> OpenSSL/1.0.1l PHP/5.6.8<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>|_http-server-header: Apache/2.4.12 <span style="color:#f92672">(</span>Win32<span style="color:#f92672">)</span> OpenSSL/1.0.1l PHP/5.6.8
-</span></span><span style="display:flex;"><span>| http-title: XAMPP 5.6.8
-</span></span><span style="display:flex;"><span>|_Requested resource was http://192.168.106.250/xampp/
-</span></span><span style="display:flex;"><span>135/tcp   open  msrpc       Microsoft Windows RPC
-</span></span><span style="display:flex;"><span>139/tcp   open  netbios-ssn Microsoft Windows netbios-ssn
-</span></span><span style="display:flex;"><span>443/tcp   open  ssl/http    Apache httpd 2.4.12 <span style="color:#f92672">((</span>Win32<span style="color:#f92672">)</span> OpenSSL/1.0.1l PHP/5.6.8<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>|_http-server-header: Apache/2.4.12 <span style="color:#f92672">(</span>Win32<span style="color:#f92672">)</span> OpenSSL/1.0.1l PHP/5.6.8
-</span></span><span style="display:flex;"><span>| http-title: XAMPP 5.6.8
-</span></span><span style="display:flex;"><span>|_Requested resource was https://192.168.106.250/xampp/
-</span></span><span style="display:flex;"><span>|_ssl-date: TLS randomness does not represent time
-</span></span><span style="display:flex;"><span>| ssl-cert: Subject: commonName<span style="color:#f92672">=</span>localhost
-</span></span><span style="display:flex;"><span>| Not valid before: 2009-11-10T23:48:47
-</span></span><span style="display:flex;"><span>|_Not valid after:  2019-11-08T23:48:47
-</span></span><span style="display:flex;"><span>554/tcp   open  rtsp?
-</span></span><span style="display:flex;"><span>2869/tcp  open  http        Microsoft HTTPAPI httpd 2.0 <span style="color:#f92672">(</span>SSDP/UPnP<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>2968/tcp  open  enpp?
-</span></span><span style="display:flex;"><span>3389/tcp  open  tcpwrapped
-</span></span><span style="display:flex;"><span>|_ssl-date: 2021-12-17T06:30:56+00:00; +22s from scanner time.
-</span></span><span style="display:flex;"><span>| ssl-cert: Subject: commonName<span style="color:#f92672">=</span>Usr-PC
-</span></span><span style="display:flex;"><span>| Not valid before: 2021-10-20T00:50:03
-</span></span><span style="display:flex;"><span>|_Not valid after:  2022-04-21T00:50:03
-</span></span><span style="display:flex;"><span>| rdp-ntlm-info:
-</span></span><span style="display:flex;"><span>|   Target_Name: USR-PC
-</span></span><span style="display:flex;"><span>|   NetBIOS_Domain_Name: USR-PC
-</span></span><span style="display:flex;"><span>|   NetBIOS_Computer_Name: USR-PC
-</span></span><span style="display:flex;"><span>|   DNS_Domain_Name: Usr-PC
-</span></span><span style="display:flex;"><span>|   DNS_Computer_Name: Usr-PC
-</span></span><span style="display:flex;"><span>|   Product_Version: 6.1.7600
-</span></span><span style="display:flex;"><span>|_  System_Time: 2021-12-17T06:29:50+00:00
-</span></span><span style="display:flex;"><span>10243/tcp open  http        Microsoft HTTPAPI httpd 2.0 <span style="color:#f92672">(</span>SSDP/UPnP<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>|_http-server-header: Microsoft-HTTPAPI/2.0
-</span></span><span style="display:flex;"><span>|_http-title: Not Found
-</span></span><span style="display:flex;"><span>49152/tcp open  msrpc       Microsoft Windows RPC
-</span></span><span style="display:flex;"><span>49153/tcp open  msrpc       Microsoft Windows RPC
-</span></span><span style="display:flex;"><span>49154/tcp open  msrpc       Microsoft Windows RPC
-</span></span><span style="display:flex;"><span>49155/tcp open  msrpc       Microsoft Windows RPC
-</span></span><span style="display:flex;"><span>49156/tcp open  msrpc       Microsoft Windows RPC
-</span></span><span style="display:flex;"><span>MAC Address: 50:3E:AA:33:D2:BD <span style="color:#f92672">(</span>Tp-link Technologies<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>Device type: general purpose
-</span></span><span style="display:flex;"><span>Running: Microsoft Windows 7|2008|8.1
-</span></span><span style="display:flex;"><span>OS CPE: cpe:/o:microsoft:windows_7::- cpe:/o:microsoft:windows_7::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_8.1
-</span></span><span style="display:flex;"><span>OS details: Microsoft Windows <span style="color:#ae81ff">7</span> SP0 - SP1, Windows Server <span style="color:#ae81ff">2008</span> SP1, Windows Server <span style="color:#ae81ff">2008</span> R2, Windows 8, or Windows 8.1 Update <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>Network Distance: <span style="color:#ae81ff">1</span> hop
-</span></span><span style="display:flex;"><span>Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Host script results:
-</span></span><span style="display:flex;"><span>|_clock-skew: mean: 21s, deviation: 0s, median: 21s
-</span></span><span style="display:flex;"><span>|_smb2-security-mode: SMB: Couldn<span style="color:#ae81ff">\&#39;</span>t find a NetBIOS name that works <span style="color:#66d9ef">for</span> the server. Sorry!
-</span></span><span style="display:flex;"><span>|_nbstat: NetBIOS name: nil, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 50:3e:aa:33:d2:bd <span style="color:#f92672">(</span>Tp-link Technologies<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>|_smb2-time: ERROR: Script execution failed <span style="color:#f92672">(</span>use -d to debug<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>TRACEROUTE
-</span></span><span style="display:flex;"><span>HOP RTT     ADDRESS
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>   7.10 ms 192.168.106.250
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-</span></span><span style="display:flex;"><span>Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">1</span> IP address <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> host up<span style="color:#f92672">)</span> scanned in 247.54 seconds
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># nmap -A 192.168.106.250</span>
+</span></span><span class="line"><span class="cl">Starting Nmap 7.92 <span class="o">(</span> https://nmap.org <span class="o">)</span> at 2021-12-17 13:26 WIB
+</span></span><span class="line"><span class="cl">Nmap scan report <span class="k">for</span> 192.168.106.250
+</span></span><span class="line"><span class="cl">Host is up <span class="o">(</span>0.0071s latency<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">Not shown: <span class="m">985</span> closed tcp ports <span class="o">(</span>reset<span class="o">)</span>
+</span></span><span class="line"><span class="cl">PORT      STATE SERVICE     VERSION
+</span></span><span class="line"><span class="cl">21/tcp    open  ftp         Microsoft ftpd
+</span></span><span class="line"><span class="cl"><span class="p">|</span> ftp-syst:
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_  SYST: Windows_NT
+</span></span><span class="line"><span class="cl">80/tcp    open  http        Apache httpd 2.4.12 <span class="o">((</span>Win32<span class="o">)</span> OpenSSL/1.0.1l PHP/5.6.8<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_http-server-header: Apache/2.4.12 <span class="o">(</span>Win32<span class="o">)</span> OpenSSL/1.0.1l PHP/5.6.8
+</span></span><span class="line"><span class="cl"><span class="p">|</span> http-title: XAMPP 5.6.8
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_Requested resource was http://192.168.106.250/xampp/
+</span></span><span class="line"><span class="cl">135/tcp   open  msrpc       Microsoft Windows RPC
+</span></span><span class="line"><span class="cl">139/tcp   open  netbios-ssn Microsoft Windows netbios-ssn
+</span></span><span class="line"><span class="cl">443/tcp   open  ssl/http    Apache httpd 2.4.12 <span class="o">((</span>Win32<span class="o">)</span> OpenSSL/1.0.1l PHP/5.6.8<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_http-server-header: Apache/2.4.12 <span class="o">(</span>Win32<span class="o">)</span> OpenSSL/1.0.1l PHP/5.6.8
+</span></span><span class="line"><span class="cl"><span class="p">|</span> http-title: XAMPP 5.6.8
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_Requested resource was https://192.168.106.250/xampp/
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_ssl-date: TLS randomness does not represent <span class="nb">time</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> ssl-cert: Subject: <span class="nv">commonName</span><span class="o">=</span>localhost
+</span></span><span class="line"><span class="cl"><span class="p">|</span> Not valid before: 2009-11-10T23:48:47
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_Not valid after:  2019-11-08T23:48:47
+</span></span><span class="line"><span class="cl">554/tcp   open  rtsp?
+</span></span><span class="line"><span class="cl">2869/tcp  open  http        Microsoft HTTPAPI httpd 2.0 <span class="o">(</span>SSDP/UPnP<span class="o">)</span>
+</span></span><span class="line"><span class="cl">2968/tcp  open  enpp?
+</span></span><span class="line"><span class="cl">3389/tcp  open  tcpwrapped
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_ssl-date: 2021-12-17T06:30:56+00:00<span class="p">;</span> +22s from scanner time.
+</span></span><span class="line"><span class="cl"><span class="p">|</span> ssl-cert: Subject: <span class="nv">commonName</span><span class="o">=</span>Usr-PC
+</span></span><span class="line"><span class="cl"><span class="p">|</span> Not valid before: 2021-10-20T00:50:03
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_Not valid after:  2022-04-21T00:50:03
+</span></span><span class="line"><span class="cl"><span class="p">|</span> rdp-ntlm-info:
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   Target_Name: USR-PC
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   NetBIOS_Domain_Name: USR-PC
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   NetBIOS_Computer_Name: USR-PC
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   DNS_Domain_Name: Usr-PC
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   DNS_Computer_Name: Usr-PC
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   Product_Version: 6.1.7600
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_  System_Time: 2021-12-17T06:29:50+00:00
+</span></span><span class="line"><span class="cl">10243/tcp open  http        Microsoft HTTPAPI httpd 2.0 <span class="o">(</span>SSDP/UPnP<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_http-server-header: Microsoft-HTTPAPI/2.0
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_http-title: Not Found
+</span></span><span class="line"><span class="cl">49152/tcp open  msrpc       Microsoft Windows RPC
+</span></span><span class="line"><span class="cl">49153/tcp open  msrpc       Microsoft Windows RPC
+</span></span><span class="line"><span class="cl">49154/tcp open  msrpc       Microsoft Windows RPC
+</span></span><span class="line"><span class="cl">49155/tcp open  msrpc       Microsoft Windows RPC
+</span></span><span class="line"><span class="cl">49156/tcp open  msrpc       Microsoft Windows RPC
+</span></span><span class="line"><span class="cl">MAC Address: 50:3E:AA:33:D2:BD <span class="o">(</span>Tp-link Technologies<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Device type: general purpose
+</span></span><span class="line"><span class="cl">Running: Microsoft Windows 7<span class="p">|</span>2008<span class="p">|</span>8.1
+</span></span><span class="line"><span class="cl">OS CPE: cpe:/o:microsoft:windows_7::- cpe:/o:microsoft:windows_7::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_8.1
+</span></span><span class="line"><span class="cl">OS details: Microsoft Windows <span class="m">7</span> SP0 - SP1, Windows Server <span class="m">2008</span> SP1, Windows Server <span class="m">2008</span> R2, Windows 8, or Windows 8.1 Update <span class="m">1</span>
+</span></span><span class="line"><span class="cl">Network Distance: <span class="m">1</span> hop
+</span></span><span class="line"><span class="cl">Service Info: OS: Windows<span class="p">;</span> CPE: cpe:/o:microsoft:windows
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Host script results:
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_clock-skew: mean: 21s, deviation: 0s, median: 21s
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_smb2-security-mode: SMB: Couldn<span class="se">\&#39;</span>t find a NetBIOS name that works <span class="k">for</span> the server. Sorry!
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_nbstat: NetBIOS name: nil, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 50:3e:aa:33:d2:bd <span class="o">(</span>Tp-link Technologies<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_smb2-time: ERROR: Script execution failed <span class="o">(</span>use -d to debug<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TRACEROUTE
+</span></span><span class="line"><span class="cl">HOP RTT     ADDRESS
+</span></span><span class="line"><span class="cl"><span class="m">1</span>   7.10 ms 192.168.106.250
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+</span></span><span class="line"><span class="cl">Nmap <span class="k">done</span>: <span class="m">1</span> IP address <span class="o">(</span><span class="m">1</span> host up<span class="o">)</span> scanned in 247.54 seconds
 </span></span></code></pre></div>
 
   </div>

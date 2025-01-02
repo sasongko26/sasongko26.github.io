@@ -21,13 +21,13 @@
       <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-08-13-install-sof/</guid>
       <description>&lt;p&gt;Langsung saja&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd /opt
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/thesofproject/sof-bin.git
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd sof-bin
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /opt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/thesofproject/sof-bin.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; sof-bin
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Masuk ke direktori rilis terbaru, contoh kali ini v2.2&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd v2.2.x
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rsync -a sof-v2.2/ /lib/firmware/intel/sof/
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; v2.2.x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -a sof-v2.2/ /lib/firmware/intel/sof/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -51,10 +51,10 @@
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/</guid>
       <description>&lt;p&gt;Untuk menampilkan status penggunaan zram bisa dengan menjalankan&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# zramctl --output-all&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;NAME     DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/dev/zram0
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               1G   4K   74B lzo-rle         &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;          &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;   12K        0B      12K       0B &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;SWAP&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# zramctl --output-all&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NAME     DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/zram0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               1G   4K   74B lzo-rle         &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   12K        0B      12K       0B &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;SWAP&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Berikut penjelasan masing-masing kolomnya&lt;/p&gt;
 &lt;p&gt;NAME	zram device name
 DISKSIZE	limit on the uncompressed amount of data
@@ -101,8 +101,8 @@ MOUNTPOINT	where the device is mounted&lt;/p&gt;</description>
       <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/</guid>
       <description>&lt;p&gt;&lt;em&gt;Upgrade&lt;/em&gt; kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. &lt;em&gt;Backlight&lt;/em&gt; menjadi tidak berfungsi.  Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah &lt;code&gt;xbacklight&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ xbacklight
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;No outputs have backlight property
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ xbacklight
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;No outputs have backlight property
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img alt=&#34;&lt;em&gt;Brightness&lt;/em&gt; 100%. Mentok kanan!&#34; loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/brightness-100.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Backlight&lt;/em&gt; atau &lt;em&gt;brightness&lt;/em&gt; 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).&lt;/p&gt;
 &lt;p&gt;Kebetulan, salah 1 situs yang sering penulis kunjungi, &lt;strong&gt;LinuxQuestions.Org&lt;/strong&gt; ada &lt;em&gt;thread&lt;/em&gt; yang &lt;a href=&#34;https://www.linuxquestions.org/questions/slackware-14/intel_backlight-not-working-on-current-4175688981/&#34;&gt;membahas masalah ini&lt;/a&gt;.&lt;/p&gt;</description>
@@ -113,8 +113,8 @@ MOUNTPOINT	where the device is mounted&lt;/p&gt;</description>
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</guid>
       <description>&lt;p&gt;Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan &lt;strong&gt;dmesg&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ dmesg -T | head -1 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;Fri Dec &lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt; 00:39:42 2020&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Linux version 5.10.2 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ dmesg -T &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; head -1 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Fri Dec &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; 00:39:42 2020&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Linux version 5.10.2 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Penjelasan command :&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;eksekusi sebagai root&lt;/li&gt;
@@ -131,11 +131,11 @@ MOUNTPOINT	where the device is mounted&lt;/p&gt;</description>
       <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</guid>
       <description>&lt;p&gt;Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam &lt;em&gt;main tree&lt;/em&gt; &lt;strong&gt;slackware current&lt;/strong&gt;. Saat catatan ini dituliskan, sudah &amp;ldquo;mendarat&amp;rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk &lt;em&gt;start up&lt;/em&gt;. Yang dimaksud &lt;em&gt;start up&lt;/em&gt; di sini adalah kondisi dari eksekusi &lt;strong&gt;elilo&lt;/strong&gt; dan &lt;strong&gt;initrd&lt;/strong&gt; sampai muncul &lt;em&gt;login prompt&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ dmesg | tail -5
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;   20.687205&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Segment Routing with IPv6
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;   20.687213&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; RPL Segment Routing with IPv6
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;   32.472700&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; RTL8208 Fast Ethernet r8169-300:00: attached PHY driver &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;RTL8208 Fast Ethernet&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;mii_bus:phy_addr&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;r8169-300:00, irq&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;IGNORE&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;   32.750379&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; r8169 0000:03:00.0 eth0: Link is Down
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ dmesg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tail -5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;   20.687205&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Segment Routing with IPv6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;   20.687213&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; RPL Segment Routing with IPv6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;   32.472700&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; RTL8208 Fast Ethernet r8169-300:00: attached PHY driver &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;RTL8208 Fast Ethernet&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;mii_bus:phy_addr&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;r8169-300:00, &lt;span class=&#34;nv&#34;&gt;irq&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;IGNORE&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;   32.750379&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; r8169 0000:03:00.0 eth0: Link is Down
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Penjelasan &lt;em&gt;command&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
@@ -145,7 +145,7 @@ MOUNTPOINT	where the device is mounted&lt;/p&gt;</description>
       <guid>https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/</guid>
       <description>&lt;p&gt;Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang &lt;em&gt;bootloop&lt;/em&gt; apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. &lt;em&gt;Update&lt;/em&gt; terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui &lt;em&gt;rebuilt&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;elilo&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;p&gt;Setelah &lt;em&gt;upgrade&lt;/em&gt; terutama untuk &lt;!-- raw HTML omitted --&gt;elilo&lt;!-- raw HTML omitted --&gt; jangan lupa menjalankan&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;eliloconfig
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;eliloconfig
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;yang secara otomatis juga akan meng- &lt;em&gt;generate&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;elilo.conf&lt;!-- raw HTML omitted --&gt; yang berisi pengaturan &lt;em&gt;boot&lt;/em&gt; dengan kernel huge.&lt;/p&gt;</description>
     </item>
     <item>

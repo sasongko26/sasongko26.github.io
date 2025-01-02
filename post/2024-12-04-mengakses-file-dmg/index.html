@@ -207,12 +207,12 @@ Kemudian, atur apel.img sebagai loop device.">
   </header> 
   <div class="post-content"><p>File .dmg biasanya adalah <em>software installer</em> yang berlaku untuk MacOs. Scara <em>default</em> pengguna linux tidak bisa mengakses isi dari .dmg ini. Namun, dengan <em>software</em> dan teknik tertentu hal ini bisa dilakukan.</p>
 <p>Pertama, <em>convert</em> .dmg ke .img. Ini membutuhkan <strong>dmg2img</strong>. Khusus pengguna slackware dan derivatnya ini tersedia di SBo. Setelah dmg2img terinstall, konversi bisa dilakukan, dengan <em>root privileges</em> tentunya. Misalnya file .dmg nya adalah apel.dmg yang kemudian dikonversi menjadi apel.img.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ dmg2img apel.dmg apel.img
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ dmg2img apel.dmg apel.img
 </span></span></code></pre></div><p>Kemudian, atur apel.img sebagai <em>loop device</em>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ losetup -Pf apel.img
-</span></span><span style="display:flex;"><span>/dev/loop0p1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ losetup -Pf apel.img
+</span></span><span class="line"><span class="cl">/dev/loop0p1
 </span></span></code></pre></div><p>Nah, apel.img sekarang menjadi <em>loop device</em> dengan nama /dev/loop0p1. Device ini kemudian bisa di-<em>mount</em>, misalkan ke /mnt/mac</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mount /dev/loop0p1 /mnt/mac
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mount /dev/loop0p1 /mnt/mac
 </span></span></code></pre></div><p>Selesai, selanjutnya kita bisa membaca apa isi file .dmg tersebut.</p>
 
 

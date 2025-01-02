@@ -208,7 +208,7 @@ Dengan cara tersebut bisa diketahui suatu paket/package itu menjadi dependensi d
   </header> 
   <div class="post-content"><p>Secara <em>default</em> <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> tidak menyediakan fitur <strong>reverse dependency</strong>. Adapun untuk butuh <em>dependency</em>-nya apa saja bisa menggunakan <!-- raw HTML omitted -->sqg<!-- raw HTML omitted -->. Bagaimana tahu <em>reverse dependency</em>-nya?</p>
 <p>Ini cara sederhana yang saya gunakan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info <span class="p">|</span> grep -w nama_paket
 </span></span></code></pre></div><p>Dengan cara tersebut bisa diketahui suatu paket/<em>package</em> itu menjadi dependensi dari paket apa. Tapi, salah 1 dari <em>output</em> tersebut tidak lain adalah paket itu sendiri. Dan, <em>package</em> yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah <em>packages</em> tersebut terinstall atau tidak.</p>
 
 

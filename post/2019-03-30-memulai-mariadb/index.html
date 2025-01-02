@@ -215,12 +215,12 @@ Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjal
 <p>Secara <em>default</em>, apabila Slackware diisnntall <em>full system</em> maka MariaDB akan terinstall. Jadi tidak usah repot-repot untuk insytallnya.</p>
 <h1 id="memulai-mariadb">Memulai MariaDB<a hidden class="anchor" aria-hidden="true" href="#memulai-mariadb">#</a></h1>
 <p>Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. <em>prompt</em> <!-- raw HTML omitted -->R/<!-- raw HTML omitted --> menunjukkan dilakukan dengan <em>priviledge</em> <!-- raw HTML omitted -->root<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>R/ mysql_install_db
-</span></span><span style="display:flex;"><span>R/ chown -R mysql:mysql /var/lib/mysql
-</span></span><span style="display:flex;"><span>R/ chmod +x /etc/rc.d/rc.mysqld <span style="color:#75715e"># kalau ingin service mariadb langsung saat booting</span>
-</span></span><span style="display:flex;"><span>R/ mysqladmin -u root password <span style="color:#75715e"># set password root</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R/ mysql_install_db
+</span></span><span class="line"><span class="cl">R/ chown -R mysql:mysql /var/lib/mysql
+</span></span><span class="line"><span class="cl">R/ chmod +x /etc/rc.d/rc.mysqld <span class="c1"># kalau ingin service mariadb langsung saat booting</span>
+</span></span><span class="line"><span class="cl">R/ mysqladmin -u root password <span class="c1"># set password root</span>
 </span></span></code></pre></div><p>Untuk masuk ke mariadb</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysql -u <span style="color:#f92672">[</span>namauser<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mysql -u <span class="o">[</span>namauser<span class="o">]</span>
 </span></span></code></pre></div>
 
   </div>

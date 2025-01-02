@@ -223,15 +223,15 @@ Atau bisa juga dengan">
     inet6 fe80::7f1b:2f4d:b98e:6500/64 scope link noprefixroute 
        valid_lft forever preferred_lft forever
 </code></pre><p>Atau bisa juga dengan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ nmcli
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ nmcli
 </span></span></code></pre></div><p>Dari <em>output</em> tersebut tampak bahwa ip lokal kita 192.168.43.20 dan <em>range</em> ip 1-255. Maka untuk me-<em>list</em> ip sejaringan yang aktif</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ nmap -sn 192.168.43.1-255
-</span></span><span style="display:flex;"><span>Starting Nmap 7.91 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2021-05-28 19:36 WIB
-</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> xkariote 192.168.43.1
-</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.098s latency<span style="color:#f92672">)</span>.
-</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span>  <span style="color:#f92672">(</span>192.168.43.20<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.00033s latency<span style="color:#f92672">)</span>.
-</span></span><span style="display:flex;"><span>Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">255</span> IP addresses <span style="color:#f92672">(</span><span style="color:#ae81ff">2</span> hosts up<span style="color:#f92672">)</span> scanned in 16.62 seconds
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ nmap -sn 192.168.43.1-255
+</span></span><span class="line"><span class="cl">Starting Nmap 7.91 <span class="o">(</span> https://nmap.org <span class="o">)</span> at 2021-05-28 19:36 WIB
+</span></span><span class="line"><span class="cl">Nmap scan report <span class="k">for</span> xkariote 192.168.43.1
+</span></span><span class="line"><span class="cl">Host is up <span class="o">(</span>0.098s latency<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">Nmap scan report <span class="k">for</span>  <span class="o">(</span>192.168.43.20<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Host is up <span class="o">(</span>0.00033s latency<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">Nmap <span class="k">done</span>: <span class="m">255</span> IP addresses <span class="o">(</span><span class="m">2</span> hosts up<span class="o">)</span> scanned in 16.62 seconds
 </span></span></code></pre></div><p>Dari <em>output</em> tersebut diketahui bahwa hanya 2 ip atau host yang aktif atau up, yaitu 192.168.43.1 dan 192.168.43.20. Tidak ada yang lain!</p>
 
 

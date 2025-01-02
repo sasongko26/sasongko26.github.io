@@ -140,6 +140,49 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Install Fedora di Slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Tiba-tiba terlintas keinginan mencoba fedora. Sejak mengenal linux tahun 2005an, saya belum pernah menggunakan fedora. Entah kalau saat itu warnetnya pakai fedora wkwkwkwk. Pertama memakai linux memang di warnet. Saat itu warnetnya menawarkan pakai Windows atau linux, saya pilih linux karena tarifnya 50% lebih murah.
+Kembali ke topik. Berikut akan install fedora secara virtual via lxc.
+$ lxc-create -n fedora -t download Opsi n adalah untuk memberi nama containernya, t template yang digunakan. Karena akan mendownload dari reponya gunakan template download.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-10-24 00:00:00 +0000 UTC'>24 Oct 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Install Fedora di Slackware" href="https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Install QGIS via flatpak
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>QGIS adalah aplikasi sistem informasi geografis populer dan mudah digunakan. QGIS sudah ada di SBo, tetapi build-nya lama. Jadi saya install via flatpak saja.
+flatpak install --from https://flathub.org/repo/appstream/org.qgis.qgis.flatpakref Untuk menjalankannya, bisa klik dari menu atau
+flatpak run org.qgis.qgis Untuk meng-update
+flatpak update </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-09-10 00:00:00 +0000 UTC'>10 Sep 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Install QGIS via flatpak" href="https://sasongko.web.id/post/2021-09-10-install-qgis-via-flatpak/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Kate disable swap
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Secara default, kate membuat swap file secara otomatis setiap 15 detik. File ini sangat berguna untuk berjaga-jaga apabila sistem mendadak crash, maka file yang disunting dengan kate dapat di-recover. Tapi fitur ini bisa dibuat disable. Caranya klik menu Settings –&gt; Configure Kate. Pada bagian Open/Save klik tab Advanced. Opsi Swap file pilih Disable kemudian OK.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-08-02 00:00:00 +0000 UTC'>02 Aug 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Kate disable swap" href="https://sasongko.web.id/post/2021-08-02-kate-disable-swap/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Dolphin the wastebin has reached its maximum size
     </h2>
   </header>
@@ -167,48 +210,6 @@ Data Definition Language (DDL) untuk membuat, menghapus atau modifikasi struktur
   </div>
   <footer class="entry-footer"><span title='2021-06-24 00:00:00 +0000 UTC'>24 Jun 2021</span></footer>
   <a class="entry-link" aria-label="post link to Query SQL" href="https://sasongko.web.id/post/2021-06-24-query-sql/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Menyusupkan mate ke xfce
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Secara default, window manager yang digunakan xfce adalah xfwm4. Tetapi, ini bisa diganti menjadi window manager lain seperti fluxbox ataupun marco milik mate.
-Kali ini kita akan ganti xfwm4 dengan marco. Caranya, membuat startup baru berisikan command
-$ /usr/bin/marco --replace </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-06-23 00:00:00 +0000 UTC'>23 Jun 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Menyusupkan mate ke xfce" href="https://sasongko.web.id/post/2021-06-23-menyusupkan-mate-ke-xfce/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Eksekusi redshift di tty
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Mode tty di sini maksudnya adalah mode yang hanya ada teks. Mode inilah yang aktif setelah masuk runlevel 3 sebelum masuk ke lingkungan X maupun wayland.
-Mungkin, ketika sedang melakukan maintenance dalam mode tty, tanpa terasa sudah menghabiskan waktu berjam-jam. Daya yang ada, seperti kecerahan layar, bisa terbuang percuma. Apalagi paparan layar yang terlalu cerah dalam durasi lama berpotensi mengganggu kesehatan. Eksekusi redshift di tty adalah solusi yang layak dipertimbangkan. Berikut adalah command-nya
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-06-06 00:00:00 +0000 UTC'>06 Jun 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Eksekusi redshift di tty" href="https://sasongko.web.id/post/2021-06-06-redshift-tty/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Hapus awalan apostrofe libreoffice calc
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Mengunduh file spreadsheet dari google sheets di setiap selnya yang berisi data angka diawali oleh tanda apostrofe atau kutip tunggal. Tanda ini tidak terlihat langsung. Ketika kita klik selnya dan lihat formula bar, baru tanda ini terlihat.
-Untuk menghapusnya melalui libreofiice calc tentu saja. Klik Find &amp; Replace. Search for inputkan .* dan Replace with inputkan &amp;. Centang atau piih opsi Regular expressions. Kemudian Replace atau Replace all sesuai kebutuhan.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-06-02 00:00:00 +0000 UTC'>02 Jun 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Hapus awalan apostrofe libreoffice calc" href="https://sasongko.web.id/post/2021-06-02-hapus-awalan-apostrofe-libreoffice-calc/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

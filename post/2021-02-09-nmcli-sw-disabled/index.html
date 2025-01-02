@@ -243,27 +243,27 @@ Ada output yang aneh : sw disabled. Penulis baru ingat kalau flight mode-nya akt
 </div>
   </header> 
   <div class="post-content"><p>Beberapa saat yang lalu penulis terkena <em>prank</em> dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan <strong>flight mode</strong> di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek <strong>nmcli</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ nmcli
-</span></span><span style="display:flex;"><span>p2p-dev-wlan0: disconnected
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;p2p-dev-wlan0&#34;</span>
-</span></span><span style="display:flex;"><span>        wifi-p2p, sw disabled, hw
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>eth0: unavailable
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Realtek RTL810xE&#34;</span>
-</span></span><span style="display:flex;"><span>        ethernet <span style="color:#f92672">(</span>r8169<span style="color:#f92672">)</span>, C8:5B:76:66:51:6C, hw, mtu <span style="color:#ae81ff">1500</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>wlan0: unavailable
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Qualcomm Atheros QCA9377&#34;</span>
-</span></span><span style="display:flex;"><span>        wifi <span style="color:#f92672">(</span>ath10k_pci<span style="color:#f92672">)</span>, 8E:58:C9:8B:64:0F, sw disabled, hw, mtu <span style="color:#ae81ff">1500</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>lo: unmanaged
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;lo&#34;</span>
-</span></span><span style="display:flex;"><span>        loopback <span style="color:#f92672">(</span>unknown<span style="color:#f92672">)</span>, 00:00:00:00:00:00, sw, mtu <span style="color:#ae81ff">65536</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Use <span style="color:#e6db74">&#34;nmcli device show&#34;</span> to get complete information about known devices and
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;nmcli connection show&#34;</span> to get an overview on active connection profiles.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Consult nmcli<span style="color:#f92672">(</span>1<span style="color:#f92672">)</span> and nmcli-examples<span style="color:#f92672">(</span>7<span style="color:#f92672">)</span> manual pages <span style="color:#66d9ef">for</span> complete usage details.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ nmcli
+</span></span><span class="line"><span class="cl">p2p-dev-wlan0: disconnected
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;p2p-dev-wlan0&#34;</span>
+</span></span><span class="line"><span class="cl">        wifi-p2p, sw disabled, hw
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">eth0: unavailable
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Realtek RTL810xE&#34;</span>
+</span></span><span class="line"><span class="cl">        ethernet <span class="o">(</span>r8169<span class="o">)</span>, C8:5B:76:66:51:6C, hw, mtu <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">wlan0: unavailable
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Qualcomm Atheros QCA9377&#34;</span>
+</span></span><span class="line"><span class="cl">        wifi <span class="o">(</span>ath10k_pci<span class="o">)</span>, 8E:58:C9:8B:64:0F, sw disabled, hw, mtu <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">lo: unmanaged
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;lo&#34;</span>
+</span></span><span class="line"><span class="cl">        loopback <span class="o">(</span>unknown<span class="o">)</span>, 00:00:00:00:00:00, sw, mtu <span class="m">65536</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Use <span class="s2">&#34;nmcli device show&#34;</span> to get <span class="nb">complete</span> information about known devices and
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;nmcli connection show&#34;</span> to get an overview on active connection profiles.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Consult nmcli<span class="o">(</span>1<span class="o">)</span> and nmcli-examples<span class="o">(</span>7<span class="o">)</span> manual pages <span class="k">for</span> <span class="nb">complete</span> usage details.
 </span></span></code></pre></div><p>Ada <em>output</em> yang aneh : <strong>sw disabled</strong>. Penulis baru ingat kalau <strong>flight mode</strong>-nya aktif. Setelah dinonaktifkan, semua kembali normal. <strong>sw disabled</strong> enyah dari <em>Output</em> <strong>nmcli</strong>.</p>
 
 

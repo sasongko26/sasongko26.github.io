@@ -235,42 +235,42 @@ Cek qemu apakah masih terinstall atau tidak. Harusnya sih memang terinstall kare
 </div>
   </header> 
   <div class="post-content"><p>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata <!-- raw HTML omitted -->Virtual Manager<!-- raw HTML omitted --> belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka <em>graphical front-end</em>-nya, tapi ternyata kemudian muncul kotak dialog <!-- raw HTML omitted -->Virtual Machine Manager Connection Failure<!-- raw HTML omitted --> dengan detail sebagai berikut</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Unable to connect to libvirt.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>internal error: Cannot find suitable emulator <span style="color:#66d9ef">for</span> x86_64
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Libvirt URI is: qemu:///system
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtManager/connection.py&#34;</span>, line 979, in _open_thread
-</span></span><span style="display:flex;"><span>    self._populate_initial_state<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtManager/connection.py&#34;</span>, line 941, in _populate_initial_state
-</span></span><span style="display:flex;"><span>    logging.debug<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;conn version=%s&#34;</span>, self._backend.conn_version<span style="color:#f92672">())</span>
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/share/virt-manager/virtinst/connection.py&#34;</span>, line 316, in conn_version
-</span></span><span style="display:flex;"><span>    self._conn_version <span style="color:#f92672">=</span> self._libvirtconn.getVersion<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/usr/lib64/python2.7/site-packages/libvirt.py&#34;</span>, line 3984, in getVersion
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ret <span style="color:#f92672">==</span> -1: raise libvirtError <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;virConnectGetVersion() failed&#39;</span>, conn<span style="color:#f92672">=</span>self<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>libvirtError: internal error: Cannot find suitable emulator <span style="color:#66d9ef">for</span> x86_64
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Unable to connect to libvirt.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">internal error: Cannot find suitable emulator <span class="k">for</span> x86_64
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Libvirt URI is: qemu:///system
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;/usr/share/virt-manager/virtManager/connection.py&#34;</span>, line 979, in _open_thread
+</span></span><span class="line"><span class="cl">    self._populate_initial_state<span class="o">()</span>
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;/usr/share/virt-manager/virtManager/connection.py&#34;</span>, line 941, in _populate_initial_state
+</span></span><span class="line"><span class="cl">    logging.debug<span class="o">(</span><span class="s2">&#34;conn version=%s&#34;</span>, self._backend.conn_version<span class="o">())</span>
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;/usr/share/virt-manager/virtinst/connection.py&#34;</span>, line 316, in conn_version
+</span></span><span class="line"><span class="cl">    self._conn_version <span class="o">=</span> self._libvirtconn.getVersion<span class="o">()</span>
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;/usr/lib64/python2.7/site-packages/libvirt.py&#34;</span>, line 3984, in getVersion
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nv">ret</span> <span class="o">==</span> -1: raise libvirtError <span class="o">(</span><span class="s1">&#39;virConnectGetVersion() failed&#39;</span>, <span class="nv">conn</span><span class="o">=</span>self<span class="o">)</span>
+</span></span><span class="line"><span class="cl">libvirtError: internal error: Cannot find suitable emulator <span class="k">for</span> x86_64
 </span></span></code></pre></div><p>Cek <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> apakah masih terinstall atau tidak. Harusnya sih memang terinstall karena saya belum pernah menghapusnya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls /var/log/packages|grep qemu
-</span></span><span style="display:flex;"><span>qemu-2.6.0-x86_64-1_SBo
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ls /var/log/packages<span class="p">|</span>grep qemu
+</span></span><span class="line"><span class="cl">qemu-2.6.0-x86_64-1_SBo
 </span></span></code></pre></div><p>Disebutkan <!-- raw HTML omitted -->Unable to connect to libvirt<!-- raw HTML omitted --> dengan <!-- raw HTML omitted -->Libvirt URI is: qemu:///system<!-- raw HTML omitted -->, dan <!-- raw HTML omitted -->internal error: Cannot find suitable emulator for x86_64<!-- raw HTML omitted -->, padahal terinstall <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> ini kan aneh. Pasti ada masalah dengan <!-- raw HTML omitted -->qemu<!-- raw HTML omitted -->-nya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ qemu-system-x86_64
-</span></span><span style="display:flex;"><span>qemu-system-x86_64: error <span style="color:#66d9ef">while</span> loading shared libraries: libcacard.so.0: cannot open shared object file: No such file or directory
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ qemu-system-x86_64
+</span></span><span class="line"><span class="cl">qemu-system-x86_64: error <span class="k">while</span> loading shared libraries: libcacard.so.0: cannot open shared object file: No such file or directory
 </span></span></code></pre></div><p>Nah, ada titik terang. Masalah dependensi. <!-- raw HTML omitted -->libcacard<!-- raw HTML omitted --> tidak ada, berarti harus diinstall. Tapi installnya dari mana?</p>
 <p>Pertama, asumsikan <!-- raw HTML omitted -->libcacard<!-- raw HTML omitted --> ini paket resmi dari <strong>Slackware</strong>. Cek dengan <!-- raw HTML omitted -->slackpkg<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>slackpkg search libcacard
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Looking <span style="color:#66d9ef">for</span> libcacard in package list. Please wait... DONE
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>No package name matches the pattern.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">slackpkg search libcacard
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Looking <span class="k">for</span> libcacard in package list. Please wait... DONE
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">No package name matches the pattern.
 </span></span></code></pre></div><p>Karena tidak ada, cek <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --> karena <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> installnya dari <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sbopkg -g libcacard
-</span></span><span style="display:flex;"><span>Searching <span style="color:#66d9ef">for</span> libcacard
-</span></span><span style="display:flex;"><span>Found the following matches <span style="color:#66d9ef">for</span> libcacard:
-</span></span><span style="display:flex;"><span>libraries/libcacard
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sbopkg -g libcacard
+</span></span><span class="line"><span class="cl">Searching <span class="k">for</span> libcacard
+</span></span><span class="line"><span class="cl">Found the following matches <span class="k">for</span> libcacard:
+</span></span><span class="line"><span class="cl">libraries/libcacard
 </span></span></code></pre></div><p>OK, ketemu. Ada <!-- raw HTML omitted -->sbopkg<!-- raw HTML omitted -->-nya, install!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sbopkg -i libcacard
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sbopkg -i libcacard
 </span></span></code></pre></div><p>install selesai. Konfirmasi <!-- raw HTML omitted -->qemu<!-- raw HTML omitted --> dengan <!-- raw HTML omitted -->qemu-system-x86_64<!-- raw HTML omitted --> apakah masih bermasalah. Ternyata ok. Lanjut buka <!-- raw HTML omitted -->virt-manager<!-- raw HTML omitted -->-nya. Ok. Done! Alhamdulillah&hellip;</p>
 
 

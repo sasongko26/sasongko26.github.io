@@ -140,6 +140,54 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Konek Internet Slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Di catatan yang lalu sudah pernah dibahas cara konek internet di Slackware dengan [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}). Sekarang masih tentang cara konek internet melalui modem di Slackware, hanya saja caranya berbeda. Kali ini menggunakan pppsetup yang secara default sudah dimiliki Slackware.
+Perangkat yang kami gunakan:
+laptop Asus X453MA modem USB Huawei E1550 simcard dengan internet service provider 3. Cara-cara berikut ini dijalankan oleh root.
+pppsetup Tekan enter.
+Isi phone number dengan
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-28 00:00:00 +0000 UTC'>28 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Konek Internet Slackware" href="https://sasongko.web.id/post/2015-06-28-konek-internet-menggunakan-pppsetup/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Install Unrar
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Di antara file kompresi/arsip yang ada, kompresi yang tidak saya utamakan adalah rar. Simpel sih alasannya, karena secara default baik BlankOn maupun Slackware tidak meng-embed ekstraktornya :D. Harus install dulu. Pastikan tersambung internet untuk mengunduh berkas.
+Untuk BlankOn bisa install dari repo.
+$ sudo apt-get install unrar Sedangkan untuk Slackware install slackbuildnya saja.
+# cd /usr/local/src # wget http://slackbuilds.org/slackbuilds/14.1/system/unrar.tar.gz # tar xzf unrar.tgr.gz # cd unrar # wget http://www.rarlab.com/rar/unrarsrc-5.2.6.tar.gz # sh unrar.SlackBuild # installpkg /tmp/unrar-5.2.6-x86_64-1_SBo.tgz Install unrar selesai.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-25 00:00:00 +0000 UTC'>25 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Install Unrar" href="https://sasongko.web.id/post/2015-06-25-install-unrar/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">InstalL Sleuth Kit Slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The Sleuth Kit atau disingkat TSK adalah tools digital forensik yang bersifat open source, multiplatform dan text-mode (command line interface). TSK bisa digunakan untuk melakukan analisis pada barang bukti, atau lebih tepatnya citra disk (raw image). Misalnya untuk mengetahui berkas apa saja yang ada di dalam hardisk dan adakah berkas yang dihapus dari hardisk itu.
+Dependensi:
+autoconf, automake, libtool C/C&#43;&#43; compiler (gcc, gcc&#43;&#43;) [JDK (opsional)]({% post_url 2015-06-07-install-jdk-slackware %}) Install cukup mudah, kita akan install langsung TSK dari source code yang ada di github
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-18 00:00:00 +0000 UTC'>18 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to InstalL Sleuth Kit Slackware" href="https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Install Xfburn Slackware
     </h2>
   </header>
@@ -173,54 +221,6 @@ sh libburn.SlackBuild Install paketnya
   </div>
   <footer class="entry-footer"><span title='2015-06-16 00:00:00 +0000 UTC'>16 Jun 2015</span></footer>
   <a class="entry-link" aria-label="post link to Install libburn Slackware" href="https://sasongko.web.id/post/2015-06-16-install-libburn-slackware/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install libisofs Slackware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Libisofs adalah pustaka untuk membuat filesystem ISO-9660.
-Berikut cara install libisofs-1.4.0 di slackware melalui slackbuild. Pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas yang diperlukan.
-Unduh slackbuild libisofs
-$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libisofs.tar.gz Ekstrak
-$ tar xzf libisofs.tar.gz Terbentuk folder libisofs, pindah direktori ke folder itu kemudain unduh kode sumbernya.
-$ cd libisofs $ wget http://files.libburnia-project.org/releases/libisofs-1.4.0.tar.gz Install slackbuildnya
-# sh libisofs.SlackBuild Install paketnya
-# installpkg /tmp/libisofs-1.4.0-x86_64-1_SBo.tgz Selesai.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-16 00:00:00 +0000 UTC'>16 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Install libisofs Slackware" href="https://sasongko.web.id/post/2015-06-16-install-libisofs-slackware/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Jalankan Sudo Tanpa Password
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Idealnya perintah sudo memang memerlukan password/kata sandi karena hakikat sudo itu pengguna “meminjam” hak super user / root. Tapi, password itu bisa saja kita hilangkan. Maksudnya, tidak perlu menuliskan password, contoh
-$ wvdial 3 bash: wvdial: command not found Baris 2, command not found menunjukkan 2 kemungkinan. Kemungkinan pertama, perintah yang diketikkan memang tidak ada. Kemungkinan kedua, perintah itu memerlukan hak root. Nah perintah [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) ini yang bisa menjalankan adalah root atau sudoers (pengguna yang bisa menjalankan perintah hak root tapi dengan syarat memasukkan passwordnya root.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-14 00:00:00 +0000 UTC'>14 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Jalankan Sudo Tanpa Password" href="https://sasongko.web.id/post/2015-06-14-jalankan-sudo-tanpa-password/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Download Seluruh Isi Website
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Melanjutkan [catatan yang lalu]({% post_url 2014-03-23-wget-linux-download-manager %}), kali ini adalah penggunaan wget untuk mengunduh/download website secara keseluruhan/rekursif.
-$ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url silahkan diganti dengan alamat websitenya.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-09 00:00:00 +0000 UTC'>09 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Download Seluruh Isi Website" href="https://sasongko.web.id/post/2015-06-06-download-seluruh-website/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

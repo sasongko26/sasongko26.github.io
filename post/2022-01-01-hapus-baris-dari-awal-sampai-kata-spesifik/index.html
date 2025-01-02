@@ -225,18 +225,18 @@ Teks tersebut dihapus sebagian, yaitu mulai baris pertama sampai dengan pagi-pag
   </header> 
   <div class="post-content"><p>Mungkin ini adalah catatan dengan judul terpanjang yang pernah kami tulis. Catatan ini berisi tentang bagaimana cara menghapus baris dari awal sampai dengan baris yang berawalan dengan kata-kata spesifik.</p>
 <p>Contoh, punya file teks lagu.txt berisi sebagai berikut</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>kelelawar
-</span></span><span style="display:flex;"><span>by koes plus
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>kelelawar sayapnya hitam
-</span></span><span style="display:flex;"><span>terbang rendah di tengah malam
-</span></span><span style="display:flex;"><span>pagi-pagi mereka pulang
-</span></span><span style="display:flex;"><span>di dahan pohon bergelantungan
-</span></span><span style="display:flex;"><span>hitam
-</span></span><span style="display:flex;"><span>hitam
-</span></span><span style="display:flex;"><span>hitam
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">kelelawar
+</span></span><span class="line"><span class="cl">by koes plus
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">kelelawar sayapnya hitam
+</span></span><span class="line"><span class="cl">terbang rendah di tengah malam
+</span></span><span class="line"><span class="cl">pagi-pagi mereka pulang
+</span></span><span class="line"><span class="cl">di dahan pohon bergelantungan
+</span></span><span class="line"><span class="cl">hitam
+</span></span><span class="line"><span class="cl">hitam
+</span></span><span class="line"><span class="cl">hitam
 </span></span></code></pre></div><p>Teks tersebut dihapus sebagian, yaitu mulai baris pertama sampai dengan pagi-pagi. Dengan kata lain hanya tersisa di dahan pohon dst.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sed -i <span style="color:#e6db74">&#34;1,/^pagi/d&#34;</span> lagu.txt
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sed -i <span class="s2">&#34;1,/^pagi/d&#34;</span> lagu.txt
 </span></span></code></pre></div>
 
   </div>

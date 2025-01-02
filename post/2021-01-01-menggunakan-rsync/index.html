@@ -222,7 +222,7 @@ Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1">
 </ol>
 <p>Dibandingkan <strong>wget</strong>, <strong>rsync</strong> mendukung penggunaan <em>wildcard</em> dan secara <em>default</em> <strong>rsync</strong> <em>resumeable</em>.</p>
 <p>Akan dilakukan transfer/copas semua yang ada di /media/hd0 ke /media/hd1</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ rsync -arvz --progress /media/hd0/ /media/hd1/
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ rsync -arvz --progress /media/hd0/ /media/hd1/
 </span></span></code></pre></div><p>Opsi <strong>-arvz</strong> diberikan untuk archive, recursive, verbose dan kompres(z). Sementara <strong>&ndash;progress</strong> untuk menampilkan progress sejauh mana file tersebut ditransfer. Bila asal hanya /media/hd0 (tanpa diakhiri /), maka artinya sama saja dengan tujuannya adalah /media/hd1/hd0/</p>
 
 

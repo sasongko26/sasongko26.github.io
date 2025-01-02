@@ -155,6 +155,47 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Operation not possible due to RF-kill
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Pagi ini, refreshing dengan berganti desktop environment (DE) memakai Window Maker (WM). DE yang jarang digunakan karena biasanya memakai XFCE. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk tethering. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong Network Manager atau Wicd aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah root. Di sini $ maksudnya adalah tetap dilakukan oleh root. Untuk memudahkan syntax highlighting karena kalau command-nya ditulis dengan # akan terbaca sebagai komentar sehingga tidak begitu jelas terbacanya.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-06-16 00:00:00 +0000 UTC'>16 Jun 2018</span></footer>
+  <a class="entry-link" aria-label="post link to Operation not possible due to RF-kill" href="https://sasongko.web.id/post/2018-06-15-operation-not-possible-due-to-rfkill/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengapa Enkripsi dengan OpenSSL?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Mengapa saya suka mengenkripsi file dengan openssl? Karena
+Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha…. </p>
+  </div>
+  <footer class="entry-footer"><span title='2018-06-12 00:00:00 +0000 UTC'>12 Jun 2018</span></footer>
+  <a class="entry-link" aria-label="post link to Mengapa Enkripsi dengan OpenSSL?" href="https://sasongko.web.id/post/2018-06-12-mengapa-openssl/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Convert Video Menjadi MP3
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Ternyata tidak sulit mengkonversi/convert video menjadi audio, dalam hal ini mp3. Misalkan, akan dikonversi file video Gambang_Semarang.mkv menjadi file Gambang_Semarang.mp3
+ffmpeg -i Gambang_Semarang.mkv -b:a 128K -vn Gambang_Semarang.mp3 (output) dari command tersebut di atas sengaja tidak ditampilkan di sini karena agak panjang.
+Cara ini juga berlaku untuk mengubah file mp4 ke mp3 atau dengan kata lain, sebenarnya mengekstrak audio yang ada di dalam video.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-05-18 00:00:00 +0000 UTC'>18 May 2018</span></footer>
+  <a class="entry-link" aria-label="post link to Convert Video Menjadi MP3" href="https://sasongko.web.id/post/2018-05-18-convert-video-mp3/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Uninstall Manual Semua Modul Perl
     </h2>
   </header>
@@ -179,51 +220,6 @@ Ya, dengan kombinasi Ctrl &#43; u .
   </div>
   <footer class="entry-footer"><span title='2018-04-23 00:00:00 +0000 UTC'>23 Apr 2018</span></footer>
   <a class="entry-link" aria-label="post link to Salah Password di Terminal" href="https://sasongko.web.id/post/2018-04-23-salah-password-terminal/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengubah Nama Jalan OSM
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Ketika [menggunakan OpenStreetMap (OSM)]({% post_url 2018-04-13-cari-lokasi-osm %}) dan menjumpai ada data/informasi yang kita tahu tidak benar, kita diijinkan untuk memperbaikinya. Inilah kelebihan OSM yang bersifat open source.
-Kali ini memperbaiki kesalahan nama jalan. Jalan yang keliru penamaannya adalah Jalan Wonosari IV yang seharusnya Jalan Widosari IV. Jalan ini terletak di sebelah barat laut SMP Negeri 3 Semarang.
-Kesalahan tersebut sudah saya perbaiki, sehingga kalau Pembaca membukanya di OSM peta di atas sudah tidak berlaku.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2018-04-21 00:00:00 +0000 UTC'>21 Apr 2018</span></footer>
-  <a class="entry-link" aria-label="post link to Mengubah Nama Jalan OSM" href="https://sasongko.web.id/post/2018-04-21-mengubah-nama-jalan-osm/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mencari Lokasi dengan OpenStreetMap
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Dari [catatan sebelumnya]({% post_url 2018-04-12-mengenal-josm %}) diketahui bahwa OSM adalah layanan peta digital. Berikut cara menggunakannya.
-Misalkan, kita akan mencari di mana SMP Negeri 3 Semarang. Pertama, pastikan komputer terhubung ke internet dan buka web OSM. Pada kotak pencarian masukkan tempat yang dicari, (yang saya beri elips merah), dalam contoh ini saya tuliskan smp negeri 3 semarang.
-Apabila ditemukan akan ditampilkan seperti di bawah ini
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2018-04-13 00:00:00 +0000 UTC'>13 Apr 2018</span></footer>
-  <a class="entry-link" aria-label="post link to Mencari Lokasi dengan OpenStreetMap" href="https://sasongko.web.id/post/2018-04-13-cari-lokasi-osm/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengenal JOSM dan OpenStreetMap
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Sebenarnya sudah lama ingin menulis dengan topik Geographical Information System (GIS) tapi baru sempat sekarang.
-OSM Apakah OSM itu? OpenStreetMap (OSM) adalah salah satu layanan peta digital seperti Google Maps dan Here Maps yang dapat diakses melalui https://openstreetmap.org/ . OSM bersifat free &amp; open source sehingga mempersilakan kita untuk berkontribusi secara luas, baik itu menambah/edit data maupun koreksi peta. Mengapa saya lebih suka OSM daripada layanan peta digital lainnya?
-Open source. Inilah alasan utama. Karena open source memungkinkan kita untuk berkontribusi. Masih berhubungan dengan alasan pertama, OSM memberikan kepercayaan (trust) kepada penggunanya dan ini membuat saya nyaman. Ada pengalaman tidak mengenakkan ketika saya mencoba memperbaiki peta digital lainnya. Saya usulkan perubahan/perbaikan agar peta tersebut sesuai kenyataan di lapangan. Sebagian kecil diterima, sedangkan sebagian lainnya bernasib antah-berantah yang meminjam kosa kata dalam lagu Gereja Tua-nya Panbers : tak tahu di mana rimbanya. Yang menyakitkan adalah perbaikan yang saya usulkan yang bernasib ga jelas itu lokasinya sangat dekat dengan rumah saya sendiri! Saya merasa dia kurang ajar dan sok tahu. Dia datang ke sana paling cuma 1x saja di tahun 2015 saat pemotretan dan tracking GPS (pembuatan peta). Lha saya bertahun-tahun lewat sana! Saya rasa cukup curcolnya. Mari lanjutkan!
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2018-04-12 00:00:00 +0000 UTC'>12 Apr 2018</span></footer>
-  <a class="entry-link" aria-label="post link to Mengenal JOSM dan OpenStreetMap" href="https://sasongko.web.id/post/2018-04-12-mengenal-josm/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

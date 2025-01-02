@@ -203,7 +203,7 @@ ffmpeg -i VID20200509135621.mp4 -vf &#34;scale=1920:1080, setdar=16:9, setsar=1:
 </div>
   </header> 
   <div class="post-content"><p>Misalkan terdapat video VID20200509135621.mp4, dengan resolusi 3840x2160 SAR 1:1 DAR 16:9. Akan diubah resolusinya menjadi 1920x1080 dengan tetap memperhatikan SAR dan DAR. Video hasil <em>scaling</em> ini diberi nama VID20200509135621-1080p.mkv. Perubahan ini sekaligus konversi ke mkv agar menghemat <em>space</em>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i VID20200509135621.mp4 -vf <span style="color:#e6db74">&#34;scale=1920:1080, setdar=16:9, setsar=1:1&#34;</span> VID20200509135621-1080p.mkv
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i VID20200509135621.mp4 -vf <span class="s2">&#34;scale=1920:1080, setdar=16:9, setsar=1:1&#34;</span> VID20200509135621-1080p.mkv
 </span></span></code></pre></div>
 
   </div>

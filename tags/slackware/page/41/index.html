@@ -140,6 +140,50 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Hapus Trash via Command Line
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Iseng-iseng buka hidden folder ada yang menarik. File yang ada di Trash (bisa buka di Thunar dengan path trash:/// sama dengan yang ada di ~/.local/share/Trash/files/. Sehingga kalau ingin mengosongkan Trash dan posisi sedang di CLI dan tidak membuka file manager ataupun lagi aras-arasen, sangat bisa.
+rm -rv ~/.local/share/Trash/* </p>
+  </div>
+  <footer class="entry-footer"><span title='2018-06-23 00:00:00 +0000 UTC'>23 Jun 2018</span></footer>
+  <a class="entry-link" aria-label="post link to Hapus Trash via Command Line" href="https://sasongko.web.id/post/2018-06-23-kosongkan-trash/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mencoba Manokwari
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Beberapa waktu yang lalu mencoba install manokwari dan berhasil dengan beberapa kekurangan.
+Proses install berjalan lancar walau sempat terhambat sebentar. Apalagi kalau bukan karena dependensi. Untuk compile menggunakan meson yang disediakan Pengembang dan prosesnya lebih cepat. Oiya, ini saya hanya lakukan di slackware64-current.
+Tentang dependensi, saya bagi menjadi 3 bagian.
+Sudah terinstall secara default atau tersedia di official repo Slackware
+meson glib2 gtk&#43;3 atk cairo x11 libnotify Tersedia di SBo
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-06-19 00:00:00 +0000 UTC'>19 Jun 2018</span></footer>
+  <a class="entry-link" aria-label="post link to Mencoba Manokwari" href="https://sasongko.web.id/post/2018-06-19-mencoba-manokwari/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengganti Kata Secara Massal
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Dulu, saat masih menggunakan BlankOn, ternyata pada beberapa postingan di blog ini ada ketidakseragaman, yaitu tag blankOn dan blankon yang sebenarnya secara esensial sama saja.
+Sekarang sudah diperbaiki. Kata “blankOn” yang ada di tiap file diganti “blankon”. Penggantian ini secara massal saja biar lebih praktis. Filenya di direktori _posts.
+sed -i &#39;s/blankOn/blankon/g&#39; _posts/*.md </p>
+  </div>
+  <footer class="entry-footer"><span title='2018-06-19 00:00:00 +0000 UTC'>19 Jun 2018</span></footer>
+  <a class="entry-link" aria-label="post link to Mengganti Kata Secara Massal" href="https://sasongko.web.id/post/2018-06-19-mengganti-kata-secara-massal/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Pentingnya Shebang
     </h2>
   </header>
@@ -165,47 +209,6 @@ Contoh, untuk perl :
   </div>
   <footer class="entry-footer"><span title='2018-06-16 00:00:00 +0000 UTC'>16 Jun 2018</span></footer>
   <a class="entry-link" aria-label="post link to Operation not possible due to RF-kill" href="https://sasongko.web.id/post/2018-06-15-operation-not-possible-due-to-rfkill/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengapa Enkripsi dengan OpenSSL?
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Mengapa saya suka mengenkripsi file dengan openssl? Karena
-Tersedia sebagai official package Slackware sehingga sangat mudah untuk install/remove/upgrade Tingkat keamanannya berlapis. Untuk melakukan dekripsi harus tahu jenis cipher enkripsi yang digunakan dan password-nya Mudah digunakan Bisa mengecoh orang lain karena isinya dienkripsi seakan-akan menjadi sesuatu yang tidak penting sehingga diabaikan bahkan dihapus. Hahahaha…. </p>
-  </div>
-  <footer class="entry-footer"><span title='2018-06-12 00:00:00 +0000 UTC'>12 Jun 2018</span></footer>
-  <a class="entry-link" aria-label="post link to Mengapa Enkripsi dengan OpenSSL?" href="https://sasongko.web.id/post/2018-06-12-mengapa-openssl/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Convert Video Menjadi MP3
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Ternyata tidak sulit mengkonversi/convert video menjadi audio, dalam hal ini mp3. Misalkan, akan dikonversi file video Gambang_Semarang.mkv menjadi file Gambang_Semarang.mp3
-ffmpeg -i Gambang_Semarang.mkv -b:a 128K -vn Gambang_Semarang.mp3 (output) dari command tersebut di atas sengaja tidak ditampilkan di sini karena agak panjang.
-Cara ini juga berlaku untuk mengubah file mp4 ke mp3 atau dengan kata lain, sebenarnya mengekstrak audio yang ada di dalam video.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2018-05-18 00:00:00 +0000 UTC'>18 May 2018</span></footer>
-  <a class="entry-link" aria-label="post link to Convert Video Menjadi MP3" href="https://sasongko.web.id/post/2018-05-18-convert-video-mp3/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Uninstall Manual Semua Modul Perl
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Cara uninstall semua modul perl yang dulunya install dari CPAN secara manual :
-rm -r /usr/local/{lib{,64},share}/perl5 </p>
-  </div>
-  <footer class="entry-footer"><span title='2018-05-08 00:00:00 +0000 UTC'>08 May 2018</span></footer>
-  <a class="entry-link" aria-label="post link to Uninstall Manual Semua Modul Perl" href="https://sasongko.web.id/post/2018-05-08-uninstall-all-perl-modules-manually/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

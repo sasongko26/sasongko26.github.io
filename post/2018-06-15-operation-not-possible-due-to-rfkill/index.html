@@ -201,98 +201,98 @@
   </header> 
   <div class="post-content"><p>Pagi ini, <em>refreshing</em> dengan berganti <em>desktop environment (DE)</em> memakai <strong>Window Maker (WM)</strong>. DE yang jarang digunakan karena biasanya memakai <strong>XFCE</strong>. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk <em>tethering</em>. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong <strong>Network Manager</strong> atau <strong>Wicd</strong> aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah <em>root</em>. Di sini <!-- raw HTML omitted -->$<!-- raw HTML omitted --> maksudnya adalah tetap dilakukan oleh <em>root</em>. Untuk memudahkan <em>syntax highlighting</em> karena kalau <em>command</em>-nya ditulis dengan <!-- raw HTML omitted -->#<!-- raw HTML omitted --> akan terbaca sebagai komentar sehingga tidak begitu jelas terbacanya.</p>
 <p>Pertama, cek wifi adapter dan interfacenya. Sebenarnya saya sudah hafal interfacenya wlan0, tapi karena jarang pakai WM ya lakukan &ldquo;prosedur standar&rdquo; untuk memudahkan <em>troubleshoot</em> siapa tahu beda atau ada masalah. Firasat ini ternyata benar.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ iw dev
-</span></span><span style="display:flex;"><span>phy#0
-</span></span><span style="display:flex;"><span>	Interface wlan0
-</span></span><span style="display:flex;"><span>		ifindex <span style="color:#ae81ff">3</span>
-</span></span><span style="display:flex;"><span>		wdev 0x1
-</span></span><span style="display:flex;"><span>		addr cc:b0:da:b5:yy:xx
-</span></span><span style="display:flex;"><span>		type managed
-</span></span><span style="display:flex;"><span>		txpower 0.00 dBm
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ iw dev
+</span></span><span class="line"><span class="cl">phy#0
+</span></span><span class="line"><span class="cl">	Interface wlan0
+</span></span><span class="line"><span class="cl">		ifindex <span class="m">3</span>
+</span></span><span class="line"><span class="cl">		wdev 0x1
+</span></span><span class="line"><span class="cl">		addr cc:b0:da:b5:yy:xx
+</span></span><span class="line"><span class="cl">		<span class="nb">type</span> managed
+</span></span><span class="line"><span class="cl">		txpower 0.00 dBm
 </span></span></code></pre></div><p>Ok, masih tetap sama wlan0 dengan <em>device adapter</em> terdaftar sebagai phy#0.</p>
 <p><em>Next</em>, cek <em>wifi</em> statusnya apakah kondisi <em>up</em> atau <em>down</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ip link show wlan0
-</span></span><span style="display:flex;"><span>3: wlan0: &lt;BROADCAST,MULTICAST&gt; mtu <span style="color:#ae81ff">1500</span> qdisc noop state DOWN mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
-</span></span><span style="display:flex;"><span>    link/ether cc:b0:da:b5:yy:xx brd ff:ff:ff:ff:bb:aa
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ip link show wlan0
+</span></span><span class="line"><span class="cl">3: wlan0: &lt;BROADCAST,MULTICAST&gt; mtu <span class="m">1500</span> qdisc noop state DOWN mode DEFAULT group default qlen <span class="m">1000</span>
+</span></span><span class="line"><span class="cl">    link/ether cc:b0:da:b5:yy:xx brd ff:ff:ff:ff:bb:aa
 </span></span></code></pre></div><p>Masih <em>down</em>. Ok, kita <em>up</em>-kan.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ip link set wlan0 up
-</span></span><span style="display:flex;"><span>RTNETLINK answers: Operation not possible due to RF-kill
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ip link <span class="nb">set</span> wlan0 up
+</span></span><span class="line"><span class="cl">RTNETLINK answers: Operation not possible due to RF-kill
 </span></span></code></pre></div><p>O&rsquo;o&hellip;.</p>
 <p>Ini mengagetkan! Sudah 5 tahun lebih tidak <em>ngutak-atik</em> RF-kill dan selama pakai <strong>Slackware</strong> <em>fine fine</em> aja. FYI, terakhir mengetikkan <em>command</em> <!-- raw HTML omitted -->rfkill<!-- raw HTML omitted --> ya sekitar 5 tahunan yang lalu, saat &ldquo;membelot&rdquo; sejenak memakai <strong>Kali Linux</strong>. Ya, sejenak. Hanya sejenak, tapi persisnya berapa lama mbuh&hellip;.. Yang penting terus tetap <strong>Slackware</strong>.</p>
 <p>Karena kaget, seakan tak percaya, kontan mencari <em>2nd opinion</em> memakai <!-- raw HTML omitted -->ifconfig<!-- raw HTML omitted -->.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ifconfig wlan0 up
-</span></span><span style="display:flex;"><span>SIOCSIFFLAGS: Operation not possible due to RF-kill
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ifconfig wlan0 up
+</span></span><span class="line"><span class="cl">SIOCSIFFLAGS: Operation not possible due to RF-kill
 </span></span></code></pre></div><p>Ternyata sama saja.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rfkill list
-</span></span><span style="display:flex;"><span>0: ideapad_wlan: Wireless LAN
-</span></span><span style="display:flex;"><span>	Soft blocked: yes
-</span></span><span style="display:flex;"><span>	Hard blocked: no
-</span></span><span style="display:flex;"><span>1: ideapad_bluetooth: Bluetooth
-</span></span><span style="display:flex;"><span>	Soft blocked: yes
-</span></span><span style="display:flex;"><span>	Hard blocked: no
-</span></span><span style="display:flex;"><span>2: phy0: Wireless LAN
-</span></span><span style="display:flex;"><span>	Soft blocked: yes
-</span></span><span style="display:flex;"><span>	Hard blocked: no
-</span></span><span style="display:flex;"><span>3: hci0: Bluetooth
-</span></span><span style="display:flex;"><span>	Soft blocked: yes
-</span></span><span style="display:flex;"><span>	Hard blocked: no
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rfkill list
+</span></span><span class="line"><span class="cl">0: ideapad_wlan: Wireless LAN
+</span></span><span class="line"><span class="cl">	Soft blocked: yes
+</span></span><span class="line"><span class="cl">	Hard blocked: no
+</span></span><span class="line"><span class="cl">1: ideapad_bluetooth: Bluetooth
+</span></span><span class="line"><span class="cl">	Soft blocked: yes
+</span></span><span class="line"><span class="cl">	Hard blocked: no
+</span></span><span class="line"><span class="cl">2: phy0: Wireless LAN
+</span></span><span class="line"><span class="cl">	Soft blocked: yes
+</span></span><span class="line"><span class="cl">	Hard blocked: no
+</span></span><span class="line"><span class="cl">3: hci0: Bluetooth
+</span></span><span class="line"><span class="cl">	Soft blocked: yes
+</span></span><span class="line"><span class="cl">	Hard blocked: no
 </span></span></code></pre></div><p>Ternyata terblokir. Entah mengapa dan bagaimana prosesnya bisa terblokir.
 Yo wislah, di-<em>unblock</em> saja.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rfkill unblock <span style="color:#ae81ff">2</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rfkill unblock <span class="m">2</span>
 </span></span></code></pre></div><p>Cek lagi apakah masih terblokir.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rfkill list <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>2: phy0: Wireless LAN
-</span></span><span style="display:flex;"><span>	Soft blocked: no
-</span></span><span style="display:flex;"><span>	Hard blocked: no
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rfkill list <span class="m">2</span>
+</span></span><span class="line"><span class="cl">2: phy0: Wireless LAN
+</span></span><span class="line"><span class="cl">	Soft blocked: no
+</span></span><span class="line"><span class="cl">	Hard blocked: no
 </span></span></code></pre></div><p>Selanjutnya, coba <em>up</em>-kan lagi.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ip link set wlan0 up
-</span></span><span style="display:flex;"><span>$ ip link show wlan0
-</span></span><span style="display:flex;"><span>3: wlan0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc mq state DOWN mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
-</span></span><span style="display:flex;"><span>    link/ether cc:b0:da:b5:xx:yy brd ff:ff:ff:ff:bb:aa
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ip link <span class="nb">set</span> wlan0 up
+</span></span><span class="line"><span class="cl">$ ip link show wlan0
+</span></span><span class="line"><span class="cl">3: wlan0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu <span class="m">1500</span> qdisc mq state DOWN mode DEFAULT group default qlen <span class="m">1000</span>
+</span></span><span class="line"><span class="cl">    link/ether cc:b0:da:b5:xx:yy brd ff:ff:ff:ff:bb:aa
 </span></span></code></pre></div><p>Alhamdulillah sudah ada tanda kehidupan. Sudah <em>up</em> walaupun belum tersambung ke mana pun. tahu darimana?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ iw wlan0 link
-</span></span><span style="display:flex;"><span>Not connected
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ iw wlan0 link
+</span></span><span class="line"><span class="cl">Not connected
 </span></span></code></pre></div><p><em>Next</em>, scan apa ada wifi</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ iw wlan0 scan | egrep <span style="color:#e6db74">&#39;(SSID|Authentication)&#39;</span>
-</span></span><span style="display:flex;"><span>	SSID: EN <span style="color:#ae81ff">262</span> XY
-</span></span><span style="display:flex;"><span>		 * Authentication suites: PSK
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ iw wlan0 scan <span class="p">|</span> egrep <span class="s1">&#39;(SSID|Authentication)&#39;</span>
+</span></span><span class="line"><span class="cl">	SSID: EN <span class="m">262</span> XY
+</span></span><span class="line"><span class="cl">		 * Authentication suites: PSK
 </span></span></code></pre></div><p>Sebenarnya <em>output</em>-nya panjang, tapi berhubung hanya butuh SSID sama autentikasinya ya sudah di egrep aja.</p>
 <p>Dan karena ada passwordnya, perlu diatur terlebih dulu</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi /etc/wpa_supplicant.conf
-</span></span><span style="display:flex;"><span>network<span style="color:#f92672">={</span>
-</span></span><span style="display:flex;"><span>    ssid<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;EN 262 XY&#34;</span>
-</span></span><span style="display:flex;"><span>    psk<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;indcncniub&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vi /etc/wpa_supplicant.conf
+</span></span><span class="line"><span class="cl"><span class="nv">network</span><span class="o">={</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">ssid</span><span class="o">=</span><span class="s2">&#34;EN 262 XY&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">psk</span><span class="o">=</span><span class="s2">&#34;indcncniub&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span></code></pre></div><p>Coba konekkan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant.conf
-</span></span><span style="display:flex;"><span>Successfully initialized wpa_supplicant
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant.conf
+</span></span><span class="line"><span class="cl">Successfully initialized wpa_supplicant
 </span></span></code></pre></div><p>Konfirmasi,</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ iw wlan0 link
-</span></span><span style="display:flex;"><span>Connected to 20:5e:f7:cb:jj:hh <span style="color:#f92672">(</span>on wlan0<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>	SSID: EN <span style="color:#ae81ff">262</span> XY
-</span></span><span style="display:flex;"><span>	freq: <span style="color:#ae81ff">2437</span>
-</span></span><span style="display:flex;"><span>	RX: <span style="color:#ae81ff">11111</span> bytes <span style="color:#f92672">(</span><span style="color:#ae81ff">126</span> packets<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>	TX: <span style="color:#ae81ff">1438</span> bytes <span style="color:#f92672">(</span><span style="color:#ae81ff">14</span> packets<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>	signal: -29 dBm
-</span></span><span style="display:flex;"><span>	tx bitrate: 1.0 MBit/s
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	bss flags:	short-preamble short-slot-time
-</span></span><span style="display:flex;"><span>	dtim period:	<span style="color:#ae81ff">3</span>
-</span></span><span style="display:flex;"><span>	beacon int:	<span style="color:#ae81ff">100</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ iw wlan0 link
+</span></span><span class="line"><span class="cl">Connected to 20:5e:f7:cb:jj:hh <span class="o">(</span>on wlan0<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	SSID: EN <span class="m">262</span> XY
+</span></span><span class="line"><span class="cl">	freq: <span class="m">2437</span>
+</span></span><span class="line"><span class="cl">	RX: <span class="m">11111</span> bytes <span class="o">(</span><span class="m">126</span> packets<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	TX: <span class="m">1438</span> bytes <span class="o">(</span><span class="m">14</span> packets<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	signal: -29 dBm
+</span></span><span class="line"><span class="cl">	tx bitrate: 1.0 MBit/s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	bss flags:	short-preamble short-slot-time
+</span></span><span class="line"><span class="cl">	dtim period:	<span class="m">3</span>
+</span></span><span class="line"><span class="cl">	beacon int:	<span class="m">100</span>
 </span></span></code></pre></div><p>Sipp. Konek. Saatnya minta ip.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ dhclient wlan0
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ dhclient wlan0
 </span></span></code></pre></div><p>Test koneksi</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ping -c <span style="color:#ae81ff">5</span> google.com
-</span></span><span style="display:flex;"><span>PING google.com <span style="color:#f92672">(</span>172.217.194.100<span style="color:#f92672">)</span> 56<span style="color:#f92672">(</span>84<span style="color:#f92672">)</span> bytes of data.
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">64</span> bytes from 172.217.194.100: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">41</span> time<span style="color:#f92672">=</span>52.5 ms
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">64</span> bytes from 172.217.194.100: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">41</span> time<span style="color:#f92672">=</span><span style="color:#ae81ff">377</span> ms
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">64</span> bytes from 172.217.194.100: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">41</span> time<span style="color:#f92672">=</span>54.0 ms
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">64</span> bytes from 172.217.194.100: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">41</span> time<span style="color:#f92672">=</span><span style="color:#ae81ff">217</span> ms
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">64</span> bytes from 172.217.194.100: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">41</span> time<span style="color:#f92672">=</span><span style="color:#ae81ff">445</span> ms
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>--- google.com ping statistics ---
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> packets transmitted, <span style="color:#ae81ff">5</span> received, 0% packet loss, time 13070ms
-</span></span><span style="display:flex;"><span>rtt min/avg/max/mdev <span style="color:#f92672">=</span> 52.536/229.255/445.066/161.638 ms
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ping -c <span class="m">5</span> google.com
+</span></span><span class="line"><span class="cl">PING google.com <span class="o">(</span>172.217.194.100<span class="o">)</span> 56<span class="o">(</span>84<span class="o">)</span> bytes of data.
+</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.217.194.100: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">1</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">41</span> <span class="nv">time</span><span class="o">=</span>52.5 ms
+</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.217.194.100: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">2</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">41</span> <span class="nv">time</span><span class="o">=</span><span class="m">377</span> ms
+</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.217.194.100: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">3</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">41</span> <span class="nv">time</span><span class="o">=</span>54.0 ms
+</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.217.194.100: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">4</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">41</span> <span class="nv">time</span><span class="o">=</span><span class="m">217</span> ms
+</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.217.194.100: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">5</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">41</span> <span class="nv">time</span><span class="o">=</span><span class="m">445</span> ms
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--- google.com ping statistics ---
+</span></span><span class="line"><span class="cl"><span class="m">5</span> packets transmitted, <span class="m">5</span> received, 0% packet loss, <span class="nb">time</span> 13070ms
+</span></span><span class="line"><span class="cl">rtt min/avg/max/mdev <span class="o">=</span> 52.536/229.255/445.066/161.638 ms
 </span></span></code></pre></div><p>Ok. Beres!</p>
 
 

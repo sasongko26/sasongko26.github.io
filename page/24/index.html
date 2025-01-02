@@ -149,6 +149,45 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Load dataset csv dengan python
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Misalkan ada dataset dalam format csv. Data tersebut dapat di-load atau diimpor dengan python dengan library pandas. Berikut script untuk load file data.csv.
+import pandas as pd data = pd.read_csv(&#34;data.csv&#34;) </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-16 00:00:00 +0000 UTC'>16 Mar 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Load dataset csv dengan python" href="https://sasongko.web.id/post/2021-03-16-load-csv-python/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Library python untuk statistika
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Beberapa library atau module python yang sering digunakan untuk statistika adalah
+numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis vektor atau matriks pandas: digunakan untuk melakukan pengolahan data tabular matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat digunakan sebagai alat bantu dalam analisa data statsmodels: digunakan untuk melakukan uji hipotesa, eksplorasi data maupun pemodelan statistika scipy: digunakan untuk melakukan uji statistika, juga dapat digunakan untuk melakukan pemodelan statistika </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-15 00:00:00 +0000 UTC'>15 Mar 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Library python untuk statistika" href="https://sasongko.web.id/post/2021-03-15-library-python-statistika/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Menggabungkan file pdf
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Misalkan mempunyai 2 file ebook yaitu ebook1.pdf dan ebook2.pdf. Kedua file ini akan digabung menjadi ebook.pdf. Maka untuk menggabungkannya
+$ pdfunite ebook1.pdf ebook2.pdf ebook.pdf </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-13 00:00:00 +0000 UTC'>13 Mar 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Menggabungkan file pdf" href="https://sasongko.web.id/post/2021-03-13-menggabungkan-file-pdf/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Menambahkan tanggal toolbar blackbox
     </h2>
   </header>
@@ -176,48 +215,6 @@ Cara mengganti UA Untuk mengubahnya, contoh kali ini akan diubah dengan UA Chrom
   </div>
   <footer class="entry-footer"><span title='2021-03-10 00:00:00 +0000 UTC'>10 Mar 2021</span></footer>
   <a class="entry-link" aria-label="post link to Mengubah user agent firefox" href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mount partisi hibernated windows
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Lima tahun yang lalu ketika membeli laptop yang saat ini digunakan untuk menulis catatan ini, toko memberikan OS Windows 10 tanpa lisensinya. Penulis tetap mempertahankannya untuk jaga-jaga jika di kemudian hari kepepet sangat membutuhkan Windows.
-Tadi pagi iseng ingin melihat-lihat adakah file di partisi tempat Windows diinstall yang bisa dihapus sehingga storage harddisk lebih lega?
-Partisi Windows teridentifikasi sebagai /dev/sda2. Akan di-mount ke /media/hd0
-$ mount /dev/sda2 /media/hd0 Windows is hibernated, refused to mount. Falling back to read-only mount because the NTFS partition is in an unsafe state. Please resume and shutdown Windows fully (no hibernation or fast restarting.) What? Windows is hibernate? Seingat penulis selalu tertib dalam menjalankan SOP shutdown (close semua window aplikasi yang terbuka, shutdown melalui menu, tidak ada warning apapun yang muncul di monitor). Jadi ya dianggap baik-baik saja. Ternyata tidak.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-03-09 00:00:00 +0000 UTC'>09 Mar 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Mount partisi hibernated windows" href="https://sasongko.web.id/post/2021-03-09-mount-partisi-hibernated-windows/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Resize window blackbox
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Untuk resize atau mengubah ukuran window saat menggunakan blackbox caranya mudah. Arahkan pointer pada ujung kiri bawah atau kanan bawah window sampai tampilan pointer berganti menjadi sudut siku-siku dengan panah ke sudutnya. Kemudia klik dan drag sesuai keinginan seberapa ukuran windownya. Cara lain, adalah dengan mengarahkan menekan Alt klik kanan kemudian ubah ukuran windownya.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-03-08 00:00:00 +0000 UTC'>08 Mar 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Resize window blackbox" href="https://sasongko.web.id/post/2021-03-08-resize-window-blackbox/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Menghapus file berdasarkan pencarian
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Misalkan akan menghapus semua file berekstensi .rtf di direktori /tmp. Pada direktori /tmp terdapat banyak direktori dan file lainnya. File yang akan dihapus hanya pada direktor induk, tidak termasuk subdirektorinya (maxdepth=1).
-$ find /tmp -maxdepth 1 -name *.rtf -delete </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-02-26 00:00:00 +0000 UTC'>26 Feb 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Menghapus file berdasarkan pencarian" href="https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -211,15 +211,15 @@ Untuk menampilkan variabel tersebut, misalkan dengan macro println!() maka harus
   </header> 
   <div class="post-content"><p><strong>Rust</strong> mempunyai cara tersendiri untuk mendeklarasikan variabel, yaitu dengan diawali <!-- raw HTML omitted -->let<!-- raw HTML omitted -->. Kemudian, nama variabel dituliskan dengan huruf kecil semua dengan separator pemisah antarkata adalah <em>underscore</em> (_). Contoh nama, kota_kelahiran, hasil_kali, dll.</p>
 <p>Misalkan data kota kelahiran, akan kita deklarasikan sebagai kota_kelahiran</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>(){
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> kota_kelahiran <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Jayapura&#34;</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Untuk menampilkan variabel tersebut, misalkan dengan macro <!-- raw HTML omitted -->println!()<!-- raw HTML omitted --> maka harus dengan <em>formatted print</em> yang mengandung <strong>string literal</strong>. String literal yang dimaksud adalah <!-- raw HTML omitted -->&quot;{}&quot;<!-- raw HTML omitted -->,</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>(){
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> kota_kelahiran <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Jayapura&#34;</span>;
-</span></span><span style="display:flex;"><span>    println!(<span style="color:#e6db74">&#34;Kota Kelahiran adalah </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, kota_kelahiran);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">kota_kelahiran</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Jayapura&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Untuk menampilkan variabel tersebut, misalkan dengan macro <!-- raw HTML omitted -->println!()<!-- raw HTML omitted --> maka harus dengan <em>formatted print</em> yang mengandung <strong>string literal</strong>. String literal yang dimaksud adalah <!-- raw HTML omitted -->&quot;{}&quot;<!-- raw HTML omitted -->,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">kota_kelahiran</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Jayapura&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Kota Kelahiran adalah </span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">kota_kelahiran</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div>
 
   </div>
 

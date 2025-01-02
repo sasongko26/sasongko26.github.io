@@ -149,6 +149,49 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengetahui lingkungan aktif X11 atau wayland
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk mengetahui sedang aktif di dalam environment X11 atau wayland
+$ echo $XDG_SESSION_TYPE </p>
+  </div>
+  <footer class="entry-footer"><span title='2019-11-30 00:00:00 +0000 UTC'>30 Nov 2019</span></footer>
+  <a class="entry-link" aria-label="post link to Mengetahui lingkungan aktif X11 atau wayland" href="https://sasongko.web.id/post/2019-11-30-mengetahui-x11-atau-wayland/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Restart android via adb
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Catatan kali ini masih seputar troubleshoot HP android dengan komputer terutama Slackware.
+Tadi malam, HP yang OS android touchscreen-nya tidak ada respon. Di semua bagian layar. Tapi tombol power dan volume masih berfungsi. Begitu juga dengan konektivitas internet maupun telepon. Mau mencoba di-restart, tombol power normal tapi untuk memilih shutdown atau reboot tidak bisa karena tochscreen-nya tidak ada respon. Lepas baterai? Tidak bisa karena baterainya tanam.
+Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersedia di SBo).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-08-03 00:00:00 +0000 UTC'>03 Aug 2019</span></footer>
+  <a class="entry-link" aria-label="post link to Restart android via adb" href="https://sasongko.web.id/post/2019-08-03-restart-android-via-adb/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Back Up Data HP Android
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sebelum berganti ponsel atau HP sangat disarankan untuk mem-back up data-data penting, seperti dokumen, foto, video, maupun chat WhatsApp. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi Slackware.
+Persiapan Slackware Pastikan bisa menjalankan adb yang merupakan bagian dari android tools. Kalau belum bisa install dari SBo
+Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer pakai adb bisa lebih cepat
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-06-09 00:00:00 +0000 UTC'>09 Jun 2019</span></footer>
+  <a class="entry-link" aria-label="post link to Back Up Data HP Android" href="https://sasongko.web.id/post/2019-06-09-backup-android/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Reverse Dependency sbopkg
     </h2>
   </header>
@@ -174,51 +217,6 @@ CHROMIUM_FLAGS=&#34;--password-store=basic&#34; </p>
   </div>
   <footer class="entry-footer"><span title='2019-04-19 00:00:00 +0000 UTC'>19 Apr 2019</span></footer>
   <a class="entry-link" aria-label="post link to Chromium Disable Unlock Keyring" href="https://sasongko.web.id/post/2019-04-19-chromium-disable-unlock-keyring/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Membuat User Baru
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Secara default, pascainstalasi Slackware hanya ada 1 user yaitu root. Slackware mempercayakan sepenuhnya apa yang akan dilakukan para penggunanya, karena memang hampir semua pengguna Slackware adalah pengguna yang telah berpengalaman. Namun, tak ada salahnya saya tuliskan di sini bagaimana cara membuat akun user baru di Slackware sebagai pengingat buat saya pribadi maupun pengguna lainnya.
-Command-nya simpel saja
-R/ adduser # saya gunakan R/ sebagai pengganti shell prompt untuk root kemudian isi sesuai petunjuk yang diberikan.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2019-04-01 00:00:00 +0000 UTC'>01 Apr 2019</span></footer>
-  <a class="entry-link" aria-label="post link to Membuat User Baru" href="https://sasongko.web.id/post/2019-04-01-membuat-user-baru/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Memulai MariaDB
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Apa itu MariaDB MariaDB adalah software untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.
-Install MariaDB Secara default, apabila Slackware diisnntall full system maka MariaDB akan terinstall. Jadi tidak usah repot-repot untuk insytallnya.
-Memulai MariaDB Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. prompt R/ menunjukkan dilakukan dengan priviledge root
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2019-03-30 00:00:00 +0000 UTC'>30 Mar 2019</span></footer>
-  <a class="entry-link" aria-label="post link to Memulai MariaDB" href="https://sasongko.web.id/post/2019-03-30-memulai-mariadb/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Perl IDE dengan vim
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Reputasi vim sebagai text editor sudah teruji berpuluh tahun. Ternyata Vim juga memiliki support plugin untuk perl. Hal ini membuat vim bisa dijadikan sebagai integrated development environment (IDE) untuk perl.
-Download plugin-nya kemudian extract
-$ wget https://www.vim.org/scripts/download_script.php?src_id=24473 -O perl-support.zip -O perl-support.zip $ mkdir -p .vim $ unzip perl-support.zip -d .vim Aktifkan
-$ echo &#34;filetype plugin on&#34; &gt;&gt; .vimrc </p>
-  </div>
-  <footer class="entry-footer"><span title='2019-02-01 00:00:00 +0000 UTC'>01 Feb 2019</span></footer>
-  <a class="entry-link" aria-label="post link to Perl IDE dengan vim" href="https://sasongko.web.id/post/2019-02-01-perl-ide-vim/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

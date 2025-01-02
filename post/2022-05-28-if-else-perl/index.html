@@ -238,24 +238,24 @@ if ( $username eq &#34;nama&#34; ) {
 </div>
   </header> 
   <div class="post-content"><p>Penyeleksian kondisi di <strong>perl</strong> dapat menggunakan <em>syntax</em> <!-- raw HTML omitted -->if&hellip;else<!-- raw HTML omitted --> dengan format</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ( kondisi ) {
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">....</span>
-</span></span><span style="display:flex;"><span>	} <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">....</span>
-</span></span><span style="display:flex;"><span>	}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span> <span class="n">kondisi</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="o">....</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="o">....</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span></code></pre></div><p>Contoh</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#39;say&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;user&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ( $username <span style="color:#f92672">eq</span> <span style="color:#e6db74">&#34;nama&#34;</span> ) {
-</span></span><span style="display:flex;"><span>    say <span style="color:#e6db74">&#34;Oke&#34;</span>;
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>    say <span style="color:#e6db74">&#34;Ulangi lagi....&#34;</span>;
-</span></span><span style="display:flex;"><span>    }
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/perl</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">strict</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">warnings</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">feature</span> <span class="s">&#39;say&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$username</span> <span class="o">=</span> <span class="s">&#34;user&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span> <span class="nv">$username</span> <span class="ow">eq</span> <span class="s">&#34;nama&#34;</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">say</span> <span class="s">&#34;Oke&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">say</span> <span class="s">&#34;Ulangi lagi....&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span></code></pre></div>
 
   </div>

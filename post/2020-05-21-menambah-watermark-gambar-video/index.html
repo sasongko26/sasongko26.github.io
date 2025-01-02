@@ -222,16 +222,16 @@ overlay_w : lebar gambar yang akan dijadikan watermark
 </div>
   </header> 
   <div class="post-content"><p>Misalkan kita akan memberikan <em>watermark</em> berupa gambar logo.png ke video ramadhan.mkv. <em>Watermark</em> ditempatkan di pojok kiri bawah. Video dengan <em>watermark</em> diberi nama ramadhan-fix.mkv</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i ramadhan.mkv -i logo.png -filter_complex <span style="color:#e6db74">&#34;overlay=x=0:y=(main_h-overlay-h)&#34;</span> ramadhan-fix.mkv
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i ramadhan.mkv -i logo.png -filter_complex <span class="s2">&#34;overlay=x=0:y=(main_h-overlay-h)&#34;</span> ramadhan-fix.mkv
 </span></span></code></pre></div><p>Keterangan opsi dan parameternya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>-filter_complex : menggunakan filter yang kompleks
-</span></span><span style="display:flex;"><span>overlay : menambahkan watermark
-</span></span><span style="display:flex;"><span>x : posisi pada sumbu x, dihitung dari ujung kiri
-</span></span><span style="display:flex;"><span>y : posisi pada sumbu y, dihitung dari ujung atas
-</span></span><span style="display:flex;"><span>main_h : tinggi video
-</span></span><span style="display:flex;"><span>main_w : lebar video
-</span></span><span style="display:flex;"><span>overlay_h : tinggi gambar yang akan dijadikan watermark
-</span></span><span style="display:flex;"><span>overlay_w : lebar gambar yang akan dijadikan watermark
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">-filter_complex : menggunakan filter yang kompleks
+</span></span><span class="line"><span class="cl">overlay : menambahkan watermark
+</span></span><span class="line"><span class="cl">x : posisi pada sumbu x, dihitung dari ujung kiri
+</span></span><span class="line"><span class="cl">y : posisi pada sumbu y, dihitung dari ujung atas
+</span></span><span class="line"><span class="cl">main_h : tinggi video
+</span></span><span class="line"><span class="cl">main_w : lebar video
+</span></span><span class="line"><span class="cl">overlay_h : tinggi gambar yang akan dijadikan watermark
+</span></span><span class="line"><span class="cl">overlay_w : lebar gambar yang akan dijadikan watermark
 </span></span></code></pre></div>
 
   </div>

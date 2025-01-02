@@ -149,6 +149,51 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Sinkronisasi official repo slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Package management atas packages yang ada di official repo pda slackware dapat dilakukan dengan dengan slackpkg. Sinkronisasi perlu dilakukan agar packages yang diinstall merupakan versi terbaru sesuai yang disediakan di repo. Sinkronisasi ini meliputi 2 kegiatan, yaitu sinkronisasi database packages dan versi packages.
+Sinkronisasi database packages meliputi list apa saja file yang ada di repo, checksum, dll. Dilakukan dengan
+slackpkg update Khusus untuk versi packages, menyamakan versi terinstall dengan versi repo untuk semua packages
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-05-26 00:00:00 +0000 UTC'>26 May 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Sinkronisasi official repo slackware" href="https://sasongko.web.id/post/2022-05-26-sinkronisasi-official-repo/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengetahui spek RAM
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Identifikasi RAM yang ada di komputer merupakan hal mutlak untuk penggantian, upgrade ataupun sekedar membersihkan RAM. Informasi awal tentang RAM bisa diperoleh tanpa membongkar komputer ataupun laptop. Hal ini sangat bermanfaat bagi pengguna yang tidak punya keterampilan bongkar pasang komputer. Apalagi kalau masih garansi, kalau dibongkar bukan teknisi service center resminya maka garansinya hangus.
+Untuk mengetahui spek RAM mudah. Bagi slackers (pengguna Slackware) tidak perlu repot menginstall macam-macam. Tool-nya sudah tersedia.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-05-25 00:00:00 +0000 UTC'>25 May 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Mengetahui spek RAM" href="https://sasongko.web.id/post/2022-05-25-mengetahui-spek-ram/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Syntax PSPP Membuka File
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>PSPP merupakan software statistika yang open source, ringan tetapi sangat fungsional dan powerful. Ringan karena installer-nya hanya beberapa MB. Jauh lebih kecil daripada software sejenis yang proprietary. Fungsional dan powerful karena berbagai analisis dapat dilakukan dengan PSPP.
+PSPP bisa dijalankan dengan tampilan text ataupun grafis. Uktuk memulai pspp tampilan text
+$ pspp PSPP&gt; Untuk membuka file, pada PSPP prompt
+PSPP&gt; get file=&#39;tulis-nama-filenya yang berekstensi sav&#39;. Bagian dalam tanda kutip adalah file yang akan dibuka.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-05-25 00:00:00 +0000 UTC'>25 May 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Syntax PSPP Membuka File" href="https://sasongko.web.id/post/2023-05-25-syntax-pspp-membuka-file-sav/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Menampilkan progress dd
     </h2>
   </header>
@@ -172,48 +217,6 @@ Hati ini baru sadar bahwa sound-nya telah diserahterimakan dari pulseaudio kepad
   </div>
   <footer class="entry-footer"><span title='2022-04-10 00:00:00 +0000 UTC'>10 Apr 2022</span></footer>
   <a class="entry-link" aria-label="post link to Pipewire di WindowMaker" href="https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Kenggulan elilo dibanding grub
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Pascamigrasi dari elilo ke grub ada hal yang dirindukan. Zram dengan komresi zstd. Entah masalahnya di mana, zstd tidak bisa digunakan untuk zram apabila menggunakan grub. Menggunakan elilo aman damai sentosa lanjcar jaya. Padahal kernel dan initrd-nya sama.
-Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-rle. Alhamdulillah. Dengan adanya zram aktivitas komputasi di laptop dengan RAM hanya 2GB masih bisa dijalankan dengan lancar.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-04-08 00:00:00 +0000 UTC'>08 Apr 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Kenggulan elilo dibanding grub" href="https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengubah timeout grub
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Secara default, timeout grub adalah 10 detik. Menurut penulis, 10 detik ini terlalu lama. Untuk mengubahnya ganti angka 10 ke detik yang diinginkan pada baris dengan GRUB_TIMEOUT pada file /etc/default/grub
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-03-28 00:00:00 +0000 UTC'>28 Mar 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Mengubah timeout grub" href="https://sasongko.web.id/post/2022-03-28-mengubah-grub-timeout/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Menampilkan status penggunaan zram
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Untuk menampilkan status penggunaan zram bisa dengan menjalankan
-# zramctl --output-all NAME DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT /dev/zram0 1G 4K 74B lzo-rle 4 0 12K 0B 12K 0B [SWAP] Berikut penjelasan masing-masing kolomnya
-NAME	zram device name DISKSIZE	limit on the uncompressed amount of data DATA	uncompressed size of stored data COMPR	compressed size of stored data ALGORITHM	the selected compression algorithm STREAMS	number of concurrent compress operations ZERO-PAGES	empty pages with no allocated memory TOTAL	all memory including allocator fragmentation and metadata overhead MEM-LIMIT	memory limit used to store compressed data MEM-USED	memory zram have been consumed to store compressed data MIGRATED	number of objects migrated by compaction MOUNTPOINT	where the device is mounted
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-03-27 00:00:00 +0000 UTC'>27 Mar 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Menampilkan status penggunaan zram" href="https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

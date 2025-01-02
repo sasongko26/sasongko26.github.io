@@ -140,6 +140,45 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Resize window blackbox
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk resize atau mengubah ukuran window saat menggunakan blackbox caranya mudah. Arahkan pointer pada ujung kiri bawah atau kanan bawah window sampai tampilan pointer berganti menjadi sudut siku-siku dengan panah ke sudutnya. Kemudia klik dan drag sesuai keinginan seberapa ukuran windownya. Cara lain, adalah dengan mengarahkan menekan Alt klik kanan kemudian ubah ukuran windownya.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-08 00:00:00 +0000 UTC'>08 Mar 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Resize window blackbox" href="https://sasongko.web.id/post/2021-03-08-resize-window-blackbox/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Menghapus file berdasarkan pencarian
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Misalkan akan menghapus semua file berekstensi .rtf di direktori /tmp. Pada direktori /tmp terdapat banyak direktori dan file lainnya. File yang akan dihapus hanya pada direktor induk, tidak termasuk subdirektorinya (maxdepth=1).
+$ find /tmp -maxdepth 1 -name *.rtf -delete </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-26 00:00:00 +0000 UTC'>26 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Menghapus file berdasarkan pencarian" href="https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengatur ukuran window gvim
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>GVIm merupakan text editor legendaris. Simpel dan mudah digunakan adalah alasan utama penulis menyukainya. GVIm juga mudah di-customize. User bebas melakukan modifikasi sesuai kebutuhannya. Salah satu yang penulis butuhkan adalah ketika memulai gvim ukuran window 80x24 (80 kolom, 24 baris). Untuk mewujudkannya, perlu membuat file ~/.gvimrc isinya sebagai berikut:
+set columns=80 set lines=24 </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-25 00:00:00 +0000 UTC'>25 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mengatur ukuran window gvim" href="https://sasongko.web.id/post/2021-02-25-mengatur-ukuran-window-gvim-otomatis/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Aktivasi apache webserver slackware
     </h2>
   </header>
@@ -168,49 +207,6 @@ $ bsetbg -solid green </p>
   </div>
   <footer class="entry-footer"><span title='2021-02-19 00:00:00 +0000 UTC'>19 Feb 2021</span></footer>
   <a class="entry-link" aria-label="post link to Set background blackbox" href="https://sasongko.web.id/post/2021-02-19-set-background-blackbox/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Copy paste xterm
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>xterm adalah X terminal emulator populer legendaris. Penulis masih menggunakannya sebagai terminal utama ketika menggunakan blackbox. Sesekali saat menggunakan xfce atau kde.
-xterm ini khas. Tidak seperti xfce4-terminal atau konsole yang secara default pengguna bisa melakukan copy paste (Copas) dengan mudah. Ctrl Shift C, Ctrl Shift V untuk copas pada terminal emulator lainnya tidak berlaku! Butuh pengaturan khusus untuk melakukannya. Mengatur agar setiap yang diblok akan dimasukkan ke clipboard.
-Untuk bisa melakukan copy:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-02-11 00:00:00 +0000 UTC'>11 Feb 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Copy paste xterm" href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">xauth serverauthXXX does not exist
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-charge. Alhasil laptop mati seketika. Dinyalakan lagi (sambil charging tentunya) gagal masuk ke X.
-xauth: file /home/xyz/.serverauth.2909 does not exist Solusinya simpel
-$ rm .serverauth* </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-02-10 00:00:00 +0000 UTC'>10 Feb 2021</span></footer>
-  <a class="entry-link" aria-label="post link to xauth serverauthXXX does not exist" href="https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">nmcli sw disabled
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Beberapa saat yang lalu penulis terkena prank dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan flight mode di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek nmcli
-$ nmcli p2p-dev-wlan0: disconnected &#34;p2p-dev-wlan0&#34; wifi-p2p, sw disabled, hw eth0: unavailable &#34;Realtek RTL810xE&#34; ethernet (r8169), C8:5B:76:66:51:6C, hw, mtu 1500 wlan0: unavailable &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), 8E:58:C9:8B:64:0F, sw disabled, hw, mtu 1500 lo: unmanaged &#34;lo&#34; loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536 Use &#34;nmcli device show&#34; to get complete information about known devices and &#34;nmcli connection show&#34; to get an overview on active connection profiles. Consult nmcli(1) and nmcli-examples(7) manual pages for complete usage details. Ada output yang aneh : sw disabled. Penulis baru ingat kalau flight mode-nya aktif. Setelah dinonaktifkan, semua kembali normal. sw disabled enyah dari Output nmcli.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-02-09 00:00:00 +0000 UTC'>09 Feb 2021</span></footer>
-  <a class="entry-link" aria-label="post link to nmcli sw disabled" href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

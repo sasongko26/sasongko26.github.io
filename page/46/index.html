@@ -149,6 +149,47 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Rilis Lumina 1.3.0
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Di suasana Idul Fitri, 26 Juni 2017, Ken Moore selaku project leader Lumina mengumumkan perihal rilisnya Lumina Desktop 1.3.0. Selang 4 hari kemudian dirilis patch yang pertama untuk 1.3.0. Catatan rilis resmi silahkan dibaca di sini.
+Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini tergolong istimewa. Mulai versi 1.3.0 ini lumina semakin powerfull untuk digunakan di Slackware. Sampai dengan versi 1.2.0_p1 (1.2.0 patchset 1), Restart dan Power Off pada menu sama sekali tidak berfungsi. Namun mulai 1.3.0 reboot dan shutdown sudah bisa dijalankan melalui menu.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-07-02 00:00:00 +0000 UTC'>02 Jul 2017</span></footer>
+  <a class="entry-link" aria-label="post link to Rilis Lumina 1.3.0" href="https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Disable Command&#39;s History
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Secara default, perintah/command yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan command history atau membaca isi ~/.bash_history. Ini bisa di-disable. Caranya, membuat file di /etc/profile.d/, yang isinya
+export HISTFILE=/dev/null export HISTSIZE=0 </p>
+  </div>
+  <footer class="entry-footer"><span title='2017-03-27 00:00:00 +0000 UTC'>27 Mar 2017</span></footer>
+  <a class="entry-link" aria-label="post link to Disable Command&#39;s History" href="https://sasongko.web.id/post/2017-03-27-disable-commands-history/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Konek Internet USB Tethering
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Salah satu keunggulan GNU/Linux terutama Slackware adalah berlakunya banyak jalan menuju Roma. Contohnya untuk konek/menyambung ke internet, ada beberapa cara antara lain :
+nmcli, contohnya [di sini]({% post_url 2016-06-26-konek-inet-nmcli %}) dan [di sini]({% post_url 2016-12-07-nmcli-konek-wifi %}). pppsetup, caranya [seperti ini]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) dan [ini]({% post_url 2015-08-17-setting-internet-xl-slackware %}) [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) wpa_supplicant wicd Cara lainnya yang saya pakai adalah dengan dhcpcd.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-03-25 00:00:00 +0000 UTC'>25 Mar 2017</span></footer>
+  <a class="entry-link" aria-label="post link to Konek Internet USB Tethering" href="https://sasongko.web.id/post/2017-03-25-konek-internet-usb-tethering/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Install BlankOn dengan Debootstrap
     </h2>
   </header>
@@ -176,47 +217,6 @@ Cara yang saya gunakan adalah cara kedua, yaitu
   </div>
   <footer class="entry-footer"><span title='2017-01-19 00:00:00 +0000 UTC'>19 Jan 2017</span></footer>
   <a class="entry-link" aria-label="post link to Install Padre" href="https://sasongko.web.id/post/2017-01-19-install-padre/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Enkripsi File dengan gnupg
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan gnupg atau yang biasa disebut dengan gpg.
-$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi Sedangkan untuk dekripsi
-$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi </p>
-  </div>
-  <footer class="entry-footer"><span title='2017-01-14 00:00:00 +0000 UTC'>14 Jan 2017</span></footer>
-  <a class="entry-link" aria-label="post link to Enkripsi File dengan gnupg" href="https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">qtFM Segmentation Fault Pascaupgrade
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Changelog current hari ini 12 Januari 2017 ramai sekali. Upgrade dan rebuilt secara masif seolah menjadi kado tahun baru dari Patrick Volkerding. Dan ternyata berimbas segfault alias Segmentation fault pada qtFM file manager berbasis Qt yang saya install dari SBo.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2017-01-12 00:00:00 +0000 UTC'>12 Jan 2017</span></footer>
-  <a class="entry-link" aria-label="post link to qtFM Segmentation Fault Pascaupgrade" href="https://sasongko.web.id/post/2017-01-12-qtfm-segfault-pascaupgrade-changelog12jan17/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Enkripsi File dengan OpenSSL
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan openssl. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).
-Contoh, saya punya file yang perlu diamankan. Katakanlah filenya indonesia-raya.odt. Saya enkripsi menggunakan openssl dengan cipher rc4. File hasil enkripsi saya namai rahasia.odt yang saya taruh di fd dan fd saya mount di /media/hd0. Kemudian akan ditanya password enkripsinya.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2017-01-08 00:00:00 +0000 UTC'>08 Jan 2017</span></footer>
-  <a class="entry-link" aria-label="post link to Enkripsi File dengan OpenSSL" href="https://sasongko.web.id/post/2017-01-08-enkripsi-dg-openssl/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

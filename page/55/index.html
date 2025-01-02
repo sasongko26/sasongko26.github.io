@@ -149,6 +149,48 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Download Video Youtube
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Download video dari Youtube adalah hal yang mudah bagi pengguna Slackware. Paling tidak ada 2 cara. Cara pertama menggunakan peramban web, dan cara kedua menggunakan youtube-dl yang berantar muka teks. Di sini menggunakan cara kedua. Untuk menginstall youtube-dl silahkan [klik di sini]({% post_url 2015-10-01-install-youtubedl %}).
+Cara menggunakannya
+youtube-dl url_video_youtube Contoh, akan URL video yang akan di download adalah https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54.
+youtube-dl https://www.youtube.com/watch?v=lGRQIBJ5FBE&amp;index=1&amp;list=PLB9F411241A111B54 Kalau ada beberapa video yang ingin didownload, masukkan saja URLnya ke satu file, tiap baris 1 URL, kemudian cara downloadnya tambahkan opsi -a
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-10-01 00:00:00 +0000 UTC'>01 Oct 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Download Video Youtube" href="https://sasongko.web.id/post/2015-10-01-download-video-youtube/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Install Youtube Downloader
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Siapa bilang pakai Slackware ga bisa download video dari Youtube? Bisa kok pakai youtube-dl.Cara installnya gampang. Pastikan terhubung ke internet untuk mengunduh berkasnya. Dan untuk install butuh hak akses root. Di sini kita pakai cara yang mudah saja, install dari slackbuilds.org.
+cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-dl.tar.gz tar xzf youtube-dl.tar.gz cd youtube-dl wget https://github.com/rg3/youtube-dl/archive/2015.09.22.tar.gz sh youtube-dl.SlackBuild installpkg /tmp/youtube-dl-2015.09.22-x86_64-1_SBo.tgz </p>
+  </div>
+  <footer class="entry-footer"><span title='2015-10-01 00:00:00 +0000 UTC'>01 Oct 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Install Youtube Downloader" href="https://sasongko.web.id/post/2015-10-01-install-youtubedl/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Copy Paste di Terminal
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Bagaimana sih caranya copy paste teks yang ada di Terminal? Untuk copy blok tulisannya kemudian klik kanan pilih Copy, atau setelah diblok tekan Ctrl Shift C. Sedangkan untuk paste ke terminal silahkan klik kanan pilih Paste atau tekan Ctrl Shift V.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-09-30 00:00:00 +0000 UTC'>30 Sep 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Copy Paste di Terminal" href="https://sasongko.web.id/post/2015-09-30-copas-terminal/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Setting Internet XL Slackware
     </h2>
   </header>
@@ -176,47 +218,6 @@ $ rsync ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/ drwxr-x
   </div>
   <footer class="entry-footer"><span title='2015-08-01 00:00:00 +0000 UTC'>01 Aug 2015</span></footer>
   <a class="entry-link" aria-label="post link to Unduh ISO Slackware Current" href="https://sasongko.web.id/post/2015-08-01-unduh-iso-slackware-current/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install gdrv
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>gdrv adalah command line tool berbasis python untuk Google Drive. Cara menginstallnya
-pip install gdrv </p>
-  </div>
-  <footer class="entry-footer"><span title='2015-07-26 00:00:00 +0000 UTC'>26 Jul 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Install gdrv" href="https://sasongko.web.id/post/2015-07-26-install-gdrv/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install Google Play Downloader
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:
-python-protobuf (&gt;=2.4) python-requests (&gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&gt;=2.8) python 2.5&#43; java (opsional) Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
-easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}). Kemudian, unduh Google Play Downloadernya. Sebenarnya sih mau unduh dulu atau install dependensi dulu terserah. Sebenarnya ada .deb nya, tapi berhubung di sini pakai Slackware maka unduh aja kode sumbernya biar lebih asyik.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-07-18 00:00:00 +0000 UTC'>18 Jul 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Install Google Play Downloader" href="https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install wxPython
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>wxPython adalah salah satu toolkit untuk membuat aplikasi grafis dengan python. Untuk menginstallnya mudah, kita install saja slackbuildnya. Pastikan tersambung internet.
-wget http://slackbuilds.org/slackbuilds/14.1/libraries/wxPython.tar.gz tar xzf wxPython.tar.gz cd wxPython wget http://downloads.sourceforge.net/wxpython/wxPython-src-2.8.12.1.tar.bz2 sh wxPython.SlackBuild installpkg /tmp/wxPython-2.8.12.1-x86_64-2_SBo.tgz </p>
-  </div>
-  <footer class="entry-footer"><span title='2015-07-18 00:00:00 +0000 UTC'>18 Jul 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Install wxPython" href="https://sasongko.web.id/post/2015-07-18-install-wxpython/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

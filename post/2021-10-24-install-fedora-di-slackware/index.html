@@ -207,11 +207,11 @@ Opsi n adalah untuk memberi nama containernya, t template yang digunakan. Karena
   </header> 
   <div class="post-content"><p>Tiba-tiba terlintas keinginan mencoba <strong>fedora</strong>. Sejak mengenal linux tahun 2005an, saya belum pernah menggunakan <strong>fedora</strong>. Entah kalau saat itu warnetnya pakai <strong>fedora</strong> wkwkwkwk. Pertama memakai linux memang di warnet. Saat itu warnetnya menawarkan pakai Windows atau linux, saya pilih linux karena tarifnya 50% lebih murah.</p>
 <p>Kembali ke topik. Berikut akan install <strong>fedora</strong> secara virtual via <strong>lxc</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ lxc-create -n fedora -t download
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ lxc-create -n fedora -t download
 </span></span></code></pre></div><p>Opsi n adalah untuk memberi nama containernya, t template yang digunakan. Karena akan mendownload dari reponya gunakan template download.</p>
 <p>Pilih <em>Distribution, Release</em> dan <em>Architecture</em> yang diinginkan. Tunggu sampai selesai.</p>
 <p>Untuk menghapusnya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ lxc-destroy -n fedora
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ lxc-destroy -n fedora
 </span></span></code></pre></div>
 
   </div>

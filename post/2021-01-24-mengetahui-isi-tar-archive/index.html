@@ -221,14 +221,14 @@ Dapat diketahui bahwa file screenshot2.tar.xz berisi 7 file png screenshot sebag
   </header> 
   <div class="post-content"><p>Catatan ini merupakan lanjutan dari sebelumnya yang membuat <em>tar archive</em>. Kali ini tentang bagaimana mengetahui apa saja file ada di dalam <em>archive</em> tersebut tanpa harus mengekstrak.</p>
 <p>Contoh, terdapat file screenshot2.tar.xz. Untuk mengetahui apa saja isinya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ tar tvf screenshot2.tar.xz
-</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">580563</span> 2020-07-15 10:17 Screenshot_2020-07-15_10-17-33.png
-</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">851743</span> 2020-08-03 10:31 Screenshot_2020-08-03_10-31-47.png
-</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users   <span style="color:#ae81ff">9958</span> 2020-08-04 16:33 Screenshot_2020-08-04_16-33-18.png
-</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">822389</span> 2020-08-06 08:23 Screenshot_2020-08-06_08-22-59.png
-</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">737008</span> 2020-08-06 08:31 Screenshot_2020-08-06_08-31-22.png
-</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">243660</span> 2020-12-04 18:44 Screenshot_2020-12-04_18-44-18.png
-</span></span><span style="display:flex;"><span>-rw-r--r-- user1/users <span style="color:#ae81ff">122966</span> 2021-01-12 01:21 Screenshot_2021-01-12_01-21-31.png
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ tar tvf screenshot2.tar.xz
+</span></span><span class="line"><span class="cl">-rw-r--r-- user1/users <span class="m">580563</span> 2020-07-15 10:17 Screenshot_2020-07-15_10-17-33.png
+</span></span><span class="line"><span class="cl">-rw-r--r-- user1/users <span class="m">851743</span> 2020-08-03 10:31 Screenshot_2020-08-03_10-31-47.png
+</span></span><span class="line"><span class="cl">-rw-r--r-- user1/users   <span class="m">9958</span> 2020-08-04 16:33 Screenshot_2020-08-04_16-33-18.png
+</span></span><span class="line"><span class="cl">-rw-r--r-- user1/users <span class="m">822389</span> 2020-08-06 08:23 Screenshot_2020-08-06_08-22-59.png
+</span></span><span class="line"><span class="cl">-rw-r--r-- user1/users <span class="m">737008</span> 2020-08-06 08:31 Screenshot_2020-08-06_08-31-22.png
+</span></span><span class="line"><span class="cl">-rw-r--r-- user1/users <span class="m">243660</span> 2020-12-04 18:44 Screenshot_2020-12-04_18-44-18.png
+</span></span><span class="line"><span class="cl">-rw-r--r-- user1/users <span class="m">122966</span> 2021-01-12 01:21 Screenshot_2021-01-12_01-21-31.png
 </span></span></code></pre></div><p>Dapat diketahui bahwa file screenshot2.tar.xz berisi 7 file png screenshot sebagaimana tersebut di atas.</p>
 <p>Opsi yang menjadi kunci atau khas dari operasi ini adalah t. v opsional. Apabila tanpa v maka akan ditampilkan nama file saja tanpa keterangan <em>permissions, owner, size</em> dan <em>date &amp; time</em></p>
 

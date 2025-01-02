@@ -213,10 +213,10 @@ Hati ini baru sadar bahwa sound-nya telah diserahterimakan dari pulseaudio kepad
   </header> 
   <div class="post-content"><p>Lama tidak menggunakan, hati ini rindu pada <strong>WindowMaker</strong>. Segera mengalihkan <strong>.xinitrc</strong> ke <strong>xinitrc.wmaker</strong>. Beberapa hari kemudian, merasa ada yang janggal. Suasana menjadi sunyi senyap. Tanpa suara. Padahal ketika menggunakan <strong>KDE Plasma</strong> tidak ada masalah dengan <em>sound system</em>.</p>
 <p>Hati ini baru sadar bahwa <em>sound</em>-nya telah diserahterimakan dari <strong>pulseaudio</strong> kepada <strong>pipewire</strong>. Baiklah, mari tambahkan beberapa baris berikut ke ~/GNUstep/Library/WindowMaker/autostart</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#pipewire</span>
-</span></span><span style="display:flex;"><span>/usr/bin/daemon -frB --pidfiles<span style="color:#f92672">=</span>~/.run --name<span style="color:#f92672">=</span>pipewire /usr/bin/pipewire &amp;
-</span></span><span style="display:flex;"><span>/usr/bin/daemon -frB --pidfiles<span style="color:#f92672">=</span>~/.run --name<span style="color:#f92672">=</span>pipewire-pulse /usr/bin/pipewire-pulse &amp;
-</span></span><span style="display:flex;"><span>/usr/bin/daemon -frB --pidfiles<span style="color:#f92672">=</span>~/.run --name<span style="color:#f92672">=</span>pipewire-media-session /usr/bin/pipewire-media-session &amp;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#pipewire</span>
+</span></span><span class="line"><span class="cl">/usr/bin/daemon -frB --pidfiles<span class="o">=</span>~/.run --name<span class="o">=</span>pipewire /usr/bin/pipewire <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">/usr/bin/daemon -frB --pidfiles<span class="o">=</span>~/.run --name<span class="o">=</span>pipewire-pulse /usr/bin/pipewire-pulse <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">/usr/bin/daemon -frB --pidfiles<span class="o">=</span>~/.run --name<span class="o">=</span>pipewire-media-session /usr/bin/pipewire-media-session <span class="p">&amp;</span>
 </span></span></code></pre></div>
 
   </div>

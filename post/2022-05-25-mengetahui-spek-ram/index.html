@@ -202,159 +202,159 @@ Untuk mengetahui spek RAM mudah. Bagi slackers (pengguna Slackware) tidak perlu 
   </header> 
   <div class="post-content"><p>Identifikasi RAM yang ada di komputer merupakan hal mutlak untuk penggantian, upgrade ataupun sekedar membersihkan RAM. Informasi awal tentang RAM bisa diperoleh tanpa membongkar komputer ataupun laptop. Hal ini sangat bermanfaat bagi pengguna yang tidak punya keterampilan bongkar pasang komputer. Apalagi kalau masih garansi, kalau dibongkar bukan teknisi <em>service center</em> resminya maka garansinya hangus.</p>
 <p>Untuk mengetahui spek RAM mudah. Bagi <strong>slackers</strong> (pengguna <strong>Slackware</strong>) tidak perlu repot menginstall macam-macam. <em>Tool</em>-nya sudah tersedia.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bash-5.1# dmidecode -t memory
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># dmidecode 3.3</span>
-</span></span><span style="display:flex;"><span>Getting SMBIOS data from sysfs.
-</span></span><span style="display:flex;"><span>SMBIOS 3.2.0 present.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Handle 0x0023, DMI type 16, <span style="color:#ae81ff">23</span> bytes
-</span></span><span style="display:flex;"><span>Physical Memory Array
-</span></span><span style="display:flex;"><span>        Location: System Board Or Motherboard
-</span></span><span style="display:flex;"><span>        Use: System Memory
-</span></span><span style="display:flex;"><span>        Error Correction Type: None
-</span></span><span style="display:flex;"><span>        Maximum Capacity: <span style="color:#ae81ff">64</span> GB
-</span></span><span style="display:flex;"><span>        Error Information Handle: Not Provided
-</span></span><span style="display:flex;"><span>        Number Of Devices: <span style="color:#ae81ff">4</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Handle 0x0025, DMI type 17, <span style="color:#ae81ff">84</span> bytes
-</span></span><span style="display:flex;"><span>Memory Device
-</span></span><span style="display:flex;"><span>        Array Handle: 0x0023
-</span></span><span style="display:flex;"><span>        Error Information Handle: Not Provided
-</span></span><span style="display:flex;"><span>        Total Width: <span style="color:#ae81ff">16</span> bits
-</span></span><span style="display:flex;"><span>        Data Width: <span style="color:#ae81ff">16</span> bits
-</span></span><span style="display:flex;"><span>        Size: <span style="color:#ae81ff">3</span> GB
-</span></span><span style="display:flex;"><span>        Form Factor: DIMM
-</span></span><span style="display:flex;"><span>        Set: None
-</span></span><span style="display:flex;"><span>        Locator: A1_DIMM0
-</span></span><span style="display:flex;"><span>        Bank Locator: A1_BANK0
-</span></span><span style="display:flex;"><span>        Type: LPDDR4
-</span></span><span style="display:flex;"><span>        Type Detail: Synchronous
-</span></span><span style="display:flex;"><span>        Speed: <span style="color:#ae81ff">2133</span> MT/s
-</span></span><span style="display:flex;"><span>        Manufacturer: ABCD
-</span></span><span style="display:flex;"><span>        Serial Number: <span style="color:#ae81ff">1234</span>
-</span></span><span style="display:flex;"><span>        Asset Tag: <span style="color:#ae81ff">9876543210</span>
-</span></span><span style="display:flex;"><span>        Part Number: <span style="color:#ae81ff">123456789012345678</span>
-</span></span><span style="display:flex;"><span>        Rank: Unknown
-</span></span><span style="display:flex;"><span>        Configured Memory Speed: <span style="color:#ae81ff">2133</span> MT/s
-</span></span><span style="display:flex;"><span>        Minimum Voltage: 1.1 V
-</span></span><span style="display:flex;"><span>        Maximum Voltage: 1.5 V
-</span></span><span style="display:flex;"><span>        Configured Voltage: 1.1 V
-</span></span><span style="display:flex;"><span>        Memory Technology: DRAM
-</span></span><span style="display:flex;"><span>        Memory Operating Mode Capability: Volatile memory
-</span></span><span style="display:flex;"><span>        Firmware Version: Not Specified
-</span></span><span style="display:flex;"><span>        Module Manufacturer ID: Unknown
-</span></span><span style="display:flex;"><span>        Module Product ID: Unknown
-</span></span><span style="display:flex;"><span>        Memory Subsystem Controller Manufacturer ID: Unknown
-</span></span><span style="display:flex;"><span>        Memory Subsystem Controller Product ID: Unknown
-</span></span><span style="display:flex;"><span>        Non-Volatile Size: None
-</span></span><span style="display:flex;"><span>        Volatile Size: <span style="color:#ae81ff">3</span> GB
-</span></span><span style="display:flex;"><span>        Cache Size: None
-</span></span><span style="display:flex;"><span>        Logical Size: None
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Handle 0x0027, DMI type 17, <span style="color:#ae81ff">84</span> bytes
-</span></span><span style="display:flex;"><span>Memory Device
-</span></span><span style="display:flex;"><span>        Array Handle: 0x0023
-</span></span><span style="display:flex;"><span>        Error Information Handle: Not Provided
-</span></span><span style="display:flex;"><span>        Total Width: <span style="color:#ae81ff">16</span> bits
-</span></span><span style="display:flex;"><span>        Data Width: <span style="color:#ae81ff">16</span> bits
-</span></span><span style="display:flex;"><span>        Size: <span style="color:#ae81ff">3</span> GB
-</span></span><span style="display:flex;"><span>        Form Factor: DIMM
-</span></span><span style="display:flex;"><span>        Set: None
-</span></span><span style="display:flex;"><span>        Locator: A1_DIMM1
-</span></span><span style="display:flex;"><span>        Bank Locator: A1_BANK1
-</span></span><span style="display:flex;"><span>        Type: LPDDR4
-</span></span><span style="display:flex;"><span>        Type Detail: Synchronous
-</span></span><span style="display:flex;"><span>        Speed: <span style="color:#ae81ff">2133</span> MT/s
-</span></span><span style="display:flex;"><span>        Manufacturer: ABCD
-</span></span><span style="display:flex;"><span>        Serial Number: <span style="color:#ae81ff">1234</span>
-</span></span><span style="display:flex;"><span>        Asset Tag: <span style="color:#ae81ff">9876543210</span>
-</span></span><span style="display:flex;"><span>        Part Number: <span style="color:#ae81ff">123456789012345678</span>
-</span></span><span style="display:flex;"><span>        Rank: Unknown
-</span></span><span style="display:flex;"><span>        Configured Memory Speed: <span style="color:#ae81ff">2133</span> MT/s
-</span></span><span style="display:flex;"><span>        Minimum Voltage: 1.1 V
-</span></span><span style="display:flex;"><span>        Maximum Voltage: 1.5 V
-</span></span><span style="display:flex;"><span>        Configured Voltage: 1.1 V
-</span></span><span style="display:flex;"><span>        Memory Technology: DRAM
-</span></span><span style="display:flex;"><span>        Memory Operating Mode Capability: Volatile memory
-</span></span><span style="display:flex;"><span>        Firmware Version: Not Specified
-</span></span><span style="display:flex;"><span>        Module Manufacturer ID: Unknown
-</span></span><span style="display:flex;"><span>        Module Product ID: Unknown
-</span></span><span style="display:flex;"><span>        Memory Subsystem Controller Manufacturer ID: Unknown
-</span></span><span style="display:flex;"><span>        Memory Subsystem Controller Product ID: Unknown
-</span></span><span style="display:flex;"><span>        Non-Volatile Size: None
-</span></span><span style="display:flex;"><span>        Volatile Size: <span style="color:#ae81ff">3</span> GB
-</span></span><span style="display:flex;"><span>        Cache Size: None
-</span></span><span style="display:flex;"><span>        Logical Size: None
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Handle 0x0029, DMI type 17, <span style="color:#ae81ff">84</span> bytes
-</span></span><span style="display:flex;"><span>Memory Device
-</span></span><span style="display:flex;"><span>        Array Handle: 0x0023
-</span></span><span style="display:flex;"><span>        Error Information Handle: Not Provided
-</span></span><span style="display:flex;"><span>        Total Width: <span style="color:#ae81ff">16</span> bits
-</span></span><span style="display:flex;"><span>        Data Width: <span style="color:#ae81ff">16</span> bits
-</span></span><span style="display:flex;"><span>        Size: <span style="color:#ae81ff">3</span> GB
-</span></span><span style="display:flex;"><span>        Form Factor: DIMM
-</span></span><span style="display:flex;"><span>        Set: None
-</span></span><span style="display:flex;"><span>        Locator: A1_DIMM2
-</span></span><span style="display:flex;"><span>        Bank Locator: A1_BANK2
-</span></span><span style="display:flex;"><span>        Type: LPDDR4
-</span></span><span style="display:flex;"><span>        Type Detail: Synchronous
-</span></span><span style="display:flex;"><span>        Speed: <span style="color:#ae81ff">2133</span> MT/s
-</span></span><span style="display:flex;"><span>        Manufacturer: ABCD
-</span></span><span style="display:flex;"><span>        Serial Number: <span style="color:#ae81ff">1234</span>
-</span></span><span style="display:flex;"><span>        Asset Tag: <span style="color:#ae81ff">9876543210</span>
-</span></span><span style="display:flex;"><span>        Part Number: <span style="color:#ae81ff">123456789012345678</span>
-</span></span><span style="display:flex;"><span>        Rank: Unknown
-</span></span><span style="display:flex;"><span>        Configured Memory Speed: <span style="color:#ae81ff">2133</span> MT/s
-</span></span><span style="display:flex;"><span>        Minimum Voltage: 1.1 V
-</span></span><span style="display:flex;"><span>        Maximum Voltage: 1.5 V
-</span></span><span style="display:flex;"><span>        Configured Voltage: 1.1 V
-</span></span><span style="display:flex;"><span>        Memory Technology: DRAM
-</span></span><span style="display:flex;"><span>        Memory Operating Mode Capability: Volatile memory
-</span></span><span style="display:flex;"><span>        Firmware Version: Not Specified
-</span></span><span style="display:flex;"><span>        Module Manufacturer ID: Unknown
-</span></span><span style="display:flex;"><span>        Module Product ID: Unknown
-</span></span><span style="display:flex;"><span>        Memory Subsystem Controller Manufacturer ID: Unknown
-</span></span><span style="display:flex;"><span>        Memory Subsystem Controller Product ID: Unknown
-</span></span><span style="display:flex;"><span>        Non-Volatile Size: None
-</span></span><span style="display:flex;"><span>        Volatile Size: <span style="color:#ae81ff">3</span> GB
-</span></span><span style="display:flex;"><span>        Cache Size: None
-</span></span><span style="display:flex;"><span>        Logical Size: None
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Handle 0x002B, DMI type 17, <span style="color:#ae81ff">84</span> bytes
-</span></span><span style="display:flex;"><span>Memory Device
-</span></span><span style="display:flex;"><span>        Array Handle: 0x0023
-</span></span><span style="display:flex;"><span>        Error Information Handle: Not Provided
-</span></span><span style="display:flex;"><span>        Total Width: <span style="color:#ae81ff">16</span> bits
-</span></span><span style="display:flex;"><span>        Data Width: <span style="color:#ae81ff">16</span> bits
-</span></span><span style="display:flex;"><span>        Size: <span style="color:#ae81ff">3</span> GB
-</span></span><span style="display:flex;"><span>        Form Factor: DIMM
-</span></span><span style="display:flex;"><span>        Set: None
-</span></span><span style="display:flex;"><span>        Locator: A1_DIMM3
-</span></span><span style="display:flex;"><span>        Bank Locator: A1_BANK3
-</span></span><span style="display:flex;"><span>        Type: LPDDR4
-</span></span><span style="display:flex;"><span>        Type Detail: Synchronous
-</span></span><span style="display:flex;"><span>        Speed: <span style="color:#ae81ff">2133</span> MT/s
-</span></span><span style="display:flex;"><span>        Manufacturer: ABCD
-</span></span><span style="display:flex;"><span>        Serial Number: <span style="color:#ae81ff">1234</span>
-</span></span><span style="display:flex;"><span>        Asset Tag: <span style="color:#ae81ff">9876543210</span>
-</span></span><span style="display:flex;"><span>        Part Number: <span style="color:#ae81ff">123456789012345678</span>
-</span></span><span style="display:flex;"><span>        Rank: Unknown
-</span></span><span style="display:flex;"><span>        Configured Memory Speed: <span style="color:#ae81ff">2133</span> MT/s
-</span></span><span style="display:flex;"><span>        Minimum Voltage: 1.1 V
-</span></span><span style="display:flex;"><span>        Maximum Voltage: 1.5 V
-</span></span><span style="display:flex;"><span>        Configured Voltage: 1.1 V
-</span></span><span style="display:flex;"><span>        Memory Technology: DRAM
-</span></span><span style="display:flex;"><span>        Memory Operating Mode Capability: Volatile memory
-</span></span><span style="display:flex;"><span>        Firmware Version: Not Specified
-</span></span><span style="display:flex;"><span>        Module Manufacturer ID: Unknown
-</span></span><span style="display:flex;"><span>        Module Product ID: Unknown
-</span></span><span style="display:flex;"><span>        Memory Subsystem Controller Manufacturer ID: Unknown
-</span></span><span style="display:flex;"><span>        Memory Subsystem Controller Product ID: Unknown
-</span></span><span style="display:flex;"><span>        Non-Volatile Size: None
-</span></span><span style="display:flex;"><span>        Volatile Size: <span style="color:#ae81ff">3</span> GB
-</span></span><span style="display:flex;"><span>        Cache Size: None
-</span></span><span style="display:flex;"><span>        Logical Size: None
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bash-5.1# dmidecode -t memory
+</span></span><span class="line"><span class="cl"><span class="c1"># dmidecode 3.3</span>
+</span></span><span class="line"><span class="cl">Getting SMBIOS data from sysfs.
+</span></span><span class="line"><span class="cl">SMBIOS 3.2.0 present.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Handle 0x0023, DMI <span class="nb">type</span> 16, <span class="m">23</span> bytes
+</span></span><span class="line"><span class="cl">Physical Memory Array
+</span></span><span class="line"><span class="cl">        Location: System Board Or Motherboard
+</span></span><span class="line"><span class="cl">        Use: System Memory
+</span></span><span class="line"><span class="cl">        Error Correction Type: None
+</span></span><span class="line"><span class="cl">        Maximum Capacity: <span class="m">64</span> GB
+</span></span><span class="line"><span class="cl">        Error Information Handle: Not Provided
+</span></span><span class="line"><span class="cl">        Number Of Devices: <span class="m">4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Handle 0x0025, DMI <span class="nb">type</span> 17, <span class="m">84</span> bytes
+</span></span><span class="line"><span class="cl">Memory Device
+</span></span><span class="line"><span class="cl">        Array Handle: 0x0023
+</span></span><span class="line"><span class="cl">        Error Information Handle: Not Provided
+</span></span><span class="line"><span class="cl">        Total Width: <span class="m">16</span> bits
+</span></span><span class="line"><span class="cl">        Data Width: <span class="m">16</span> bits
+</span></span><span class="line"><span class="cl">        Size: <span class="m">3</span> GB
+</span></span><span class="line"><span class="cl">        Form Factor: DIMM
+</span></span><span class="line"><span class="cl">        Set: None
+</span></span><span class="line"><span class="cl">        Locator: A1_DIMM0
+</span></span><span class="line"><span class="cl">        Bank Locator: A1_BANK0
+</span></span><span class="line"><span class="cl">        Type: LPDDR4
+</span></span><span class="line"><span class="cl">        Type Detail: Synchronous
+</span></span><span class="line"><span class="cl">        Speed: <span class="m">2133</span> MT/s
+</span></span><span class="line"><span class="cl">        Manufacturer: ABCD
+</span></span><span class="line"><span class="cl">        Serial Number: <span class="m">1234</span>
+</span></span><span class="line"><span class="cl">        Asset Tag: <span class="m">9876543210</span>
+</span></span><span class="line"><span class="cl">        Part Number: <span class="m">123456789012345678</span>
+</span></span><span class="line"><span class="cl">        Rank: Unknown
+</span></span><span class="line"><span class="cl">        Configured Memory Speed: <span class="m">2133</span> MT/s
+</span></span><span class="line"><span class="cl">        Minimum Voltage: 1.1 V
+</span></span><span class="line"><span class="cl">        Maximum Voltage: 1.5 V
+</span></span><span class="line"><span class="cl">        Configured Voltage: 1.1 V
+</span></span><span class="line"><span class="cl">        Memory Technology: DRAM
+</span></span><span class="line"><span class="cl">        Memory Operating Mode Capability: Volatile memory
+</span></span><span class="line"><span class="cl">        Firmware Version: Not Specified
+</span></span><span class="line"><span class="cl">        Module Manufacturer ID: Unknown
+</span></span><span class="line"><span class="cl">        Module Product ID: Unknown
+</span></span><span class="line"><span class="cl">        Memory Subsystem Controller Manufacturer ID: Unknown
+</span></span><span class="line"><span class="cl">        Memory Subsystem Controller Product ID: Unknown
+</span></span><span class="line"><span class="cl">        Non-Volatile Size: None
+</span></span><span class="line"><span class="cl">        Volatile Size: <span class="m">3</span> GB
+</span></span><span class="line"><span class="cl">        Cache Size: None
+</span></span><span class="line"><span class="cl">        Logical Size: None
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Handle 0x0027, DMI <span class="nb">type</span> 17, <span class="m">84</span> bytes
+</span></span><span class="line"><span class="cl">Memory Device
+</span></span><span class="line"><span class="cl">        Array Handle: 0x0023
+</span></span><span class="line"><span class="cl">        Error Information Handle: Not Provided
+</span></span><span class="line"><span class="cl">        Total Width: <span class="m">16</span> bits
+</span></span><span class="line"><span class="cl">        Data Width: <span class="m">16</span> bits
+</span></span><span class="line"><span class="cl">        Size: <span class="m">3</span> GB
+</span></span><span class="line"><span class="cl">        Form Factor: DIMM
+</span></span><span class="line"><span class="cl">        Set: None
+</span></span><span class="line"><span class="cl">        Locator: A1_DIMM1
+</span></span><span class="line"><span class="cl">        Bank Locator: A1_BANK1
+</span></span><span class="line"><span class="cl">        Type: LPDDR4
+</span></span><span class="line"><span class="cl">        Type Detail: Synchronous
+</span></span><span class="line"><span class="cl">        Speed: <span class="m">2133</span> MT/s
+</span></span><span class="line"><span class="cl">        Manufacturer: ABCD
+</span></span><span class="line"><span class="cl">        Serial Number: <span class="m">1234</span>
+</span></span><span class="line"><span class="cl">        Asset Tag: <span class="m">9876543210</span>
+</span></span><span class="line"><span class="cl">        Part Number: <span class="m">123456789012345678</span>
+</span></span><span class="line"><span class="cl">        Rank: Unknown
+</span></span><span class="line"><span class="cl">        Configured Memory Speed: <span class="m">2133</span> MT/s
+</span></span><span class="line"><span class="cl">        Minimum Voltage: 1.1 V
+</span></span><span class="line"><span class="cl">        Maximum Voltage: 1.5 V
+</span></span><span class="line"><span class="cl">        Configured Voltage: 1.1 V
+</span></span><span class="line"><span class="cl">        Memory Technology: DRAM
+</span></span><span class="line"><span class="cl">        Memory Operating Mode Capability: Volatile memory
+</span></span><span class="line"><span class="cl">        Firmware Version: Not Specified
+</span></span><span class="line"><span class="cl">        Module Manufacturer ID: Unknown
+</span></span><span class="line"><span class="cl">        Module Product ID: Unknown
+</span></span><span class="line"><span class="cl">        Memory Subsystem Controller Manufacturer ID: Unknown
+</span></span><span class="line"><span class="cl">        Memory Subsystem Controller Product ID: Unknown
+</span></span><span class="line"><span class="cl">        Non-Volatile Size: None
+</span></span><span class="line"><span class="cl">        Volatile Size: <span class="m">3</span> GB
+</span></span><span class="line"><span class="cl">        Cache Size: None
+</span></span><span class="line"><span class="cl">        Logical Size: None
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Handle 0x0029, DMI <span class="nb">type</span> 17, <span class="m">84</span> bytes
+</span></span><span class="line"><span class="cl">Memory Device
+</span></span><span class="line"><span class="cl">        Array Handle: 0x0023
+</span></span><span class="line"><span class="cl">        Error Information Handle: Not Provided
+</span></span><span class="line"><span class="cl">        Total Width: <span class="m">16</span> bits
+</span></span><span class="line"><span class="cl">        Data Width: <span class="m">16</span> bits
+</span></span><span class="line"><span class="cl">        Size: <span class="m">3</span> GB
+</span></span><span class="line"><span class="cl">        Form Factor: DIMM
+</span></span><span class="line"><span class="cl">        Set: None
+</span></span><span class="line"><span class="cl">        Locator: A1_DIMM2
+</span></span><span class="line"><span class="cl">        Bank Locator: A1_BANK2
+</span></span><span class="line"><span class="cl">        Type: LPDDR4
+</span></span><span class="line"><span class="cl">        Type Detail: Synchronous
+</span></span><span class="line"><span class="cl">        Speed: <span class="m">2133</span> MT/s
+</span></span><span class="line"><span class="cl">        Manufacturer: ABCD
+</span></span><span class="line"><span class="cl">        Serial Number: <span class="m">1234</span>
+</span></span><span class="line"><span class="cl">        Asset Tag: <span class="m">9876543210</span>
+</span></span><span class="line"><span class="cl">        Part Number: <span class="m">123456789012345678</span>
+</span></span><span class="line"><span class="cl">        Rank: Unknown
+</span></span><span class="line"><span class="cl">        Configured Memory Speed: <span class="m">2133</span> MT/s
+</span></span><span class="line"><span class="cl">        Minimum Voltage: 1.1 V
+</span></span><span class="line"><span class="cl">        Maximum Voltage: 1.5 V
+</span></span><span class="line"><span class="cl">        Configured Voltage: 1.1 V
+</span></span><span class="line"><span class="cl">        Memory Technology: DRAM
+</span></span><span class="line"><span class="cl">        Memory Operating Mode Capability: Volatile memory
+</span></span><span class="line"><span class="cl">        Firmware Version: Not Specified
+</span></span><span class="line"><span class="cl">        Module Manufacturer ID: Unknown
+</span></span><span class="line"><span class="cl">        Module Product ID: Unknown
+</span></span><span class="line"><span class="cl">        Memory Subsystem Controller Manufacturer ID: Unknown
+</span></span><span class="line"><span class="cl">        Memory Subsystem Controller Product ID: Unknown
+</span></span><span class="line"><span class="cl">        Non-Volatile Size: None
+</span></span><span class="line"><span class="cl">        Volatile Size: <span class="m">3</span> GB
+</span></span><span class="line"><span class="cl">        Cache Size: None
+</span></span><span class="line"><span class="cl">        Logical Size: None
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Handle 0x002B, DMI <span class="nb">type</span> 17, <span class="m">84</span> bytes
+</span></span><span class="line"><span class="cl">Memory Device
+</span></span><span class="line"><span class="cl">        Array Handle: 0x0023
+</span></span><span class="line"><span class="cl">        Error Information Handle: Not Provided
+</span></span><span class="line"><span class="cl">        Total Width: <span class="m">16</span> bits
+</span></span><span class="line"><span class="cl">        Data Width: <span class="m">16</span> bits
+</span></span><span class="line"><span class="cl">        Size: <span class="m">3</span> GB
+</span></span><span class="line"><span class="cl">        Form Factor: DIMM
+</span></span><span class="line"><span class="cl">        Set: None
+</span></span><span class="line"><span class="cl">        Locator: A1_DIMM3
+</span></span><span class="line"><span class="cl">        Bank Locator: A1_BANK3
+</span></span><span class="line"><span class="cl">        Type: LPDDR4
+</span></span><span class="line"><span class="cl">        Type Detail: Synchronous
+</span></span><span class="line"><span class="cl">        Speed: <span class="m">2133</span> MT/s
+</span></span><span class="line"><span class="cl">        Manufacturer: ABCD
+</span></span><span class="line"><span class="cl">        Serial Number: <span class="m">1234</span>
+</span></span><span class="line"><span class="cl">        Asset Tag: <span class="m">9876543210</span>
+</span></span><span class="line"><span class="cl">        Part Number: <span class="m">123456789012345678</span>
+</span></span><span class="line"><span class="cl">        Rank: Unknown
+</span></span><span class="line"><span class="cl">        Configured Memory Speed: <span class="m">2133</span> MT/s
+</span></span><span class="line"><span class="cl">        Minimum Voltage: 1.1 V
+</span></span><span class="line"><span class="cl">        Maximum Voltage: 1.5 V
+</span></span><span class="line"><span class="cl">        Configured Voltage: 1.1 V
+</span></span><span class="line"><span class="cl">        Memory Technology: DRAM
+</span></span><span class="line"><span class="cl">        Memory Operating Mode Capability: Volatile memory
+</span></span><span class="line"><span class="cl">        Firmware Version: Not Specified
+</span></span><span class="line"><span class="cl">        Module Manufacturer ID: Unknown
+</span></span><span class="line"><span class="cl">        Module Product ID: Unknown
+</span></span><span class="line"><span class="cl">        Memory Subsystem Controller Manufacturer ID: Unknown
+</span></span><span class="line"><span class="cl">        Memory Subsystem Controller Product ID: Unknown
+</span></span><span class="line"><span class="cl">        Non-Volatile Size: None
+</span></span><span class="line"><span class="cl">        Volatile Size: <span class="m">3</span> GB
+</span></span><span class="line"><span class="cl">        Cache Size: None
+</span></span><span class="line"><span class="cl">        Logical Size: None
 </span></span></code></pre></div><p>Dari hasil tersebut bisa diketahui beberapa hal penting antara lain :</p>
 <ol>
 <li>Fisik RAM di <em>motherboard</em> (Location: System Board Or Motherboard)</li>

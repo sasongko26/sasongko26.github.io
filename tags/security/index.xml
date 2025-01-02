@@ -15,14 +15,14 @@
       <guid>https://sasongko.web.id/post/2021-12-18-membuat-coredump/</guid>
       <description>&lt;p&gt;Suatu program gagal dijalankan. Eksekusi via terminal menunjukkan &lt;strong&gt;segmentation fault&lt;/strong&gt; tanpa keterangan lainnya. Pada situasi inilah &lt;strong&gt;core dump&lt;/strong&gt; diperlukan untuk &lt;em&gt;debugging&lt;/em&gt; sehingga diketahui penyebabnya.&lt;/p&gt;
 &lt;p&gt;Contoh, &lt;strong&gt;geeqie&lt;/strong&gt; apabila dijalankan di lingkungan &lt;strong&gt;wayland&lt;/strong&gt; berbuah &lt;strong&gt;segmentation fault&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ geeqie
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Segmentation fault
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ geeqie
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Segmentation fault
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Saatnya membuat core dump&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ gcore /usr/bin/geeqie
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Illegal process-id: /usr/bin/geeqie.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;You can&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;t &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; that without a process to debug.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;The program is not being run.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcore: failed to create core./usr/bin/geeqie
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ gcore /usr/bin/geeqie
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Illegal process-id: /usr/bin/geeqie.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;You can&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; that without a process to debug.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The program is not being run.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcore: failed to create core./usr/bin/geeqie
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kemudian eksekusi lagi&lt;/p&gt;</description>
     </item>
     <item>
@@ -49,11 +49,11 @@
       <guid>https://sasongko.web.id/post/2021-12-16-mitigasi-log4shell/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Log4shell&lt;/strong&gt; menjadi topik yang hangat dibicarakan sepekan ini. &lt;em&gt;Bugs&lt;/em&gt; &lt;strong&gt;JNDI lookup&lt;/strong&gt; pada &lt;strong&gt;log4j&lt;/strong&gt; membuat komputer atau pc (terutama server) semakin mudah diambil alih tanpa ijin. Syukur alhamdulillah sudah dirilis versi terbaru untuk menangkalnya, yaitu versi 2.16.0.&lt;/p&gt;
 &lt;p&gt;Bagaimana dengan &lt;strong&gt;slackware&lt;/strong&gt;? Mari kita cek apakah &lt;strong&gt;log4j&lt;/strong&gt; ini tersedia sebagai bagian dari &lt;em&gt;default packages&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# slackpkg file-search log4j&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Looking &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; log4j in package list. Please wait... DONE
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;No packages contains &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;log4j&amp;#34;&lt;/span&gt; file.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# slackpkg file-search log4j&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Looking &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; log4j in package list. Please wait... DONE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;No packages contains &lt;span class=&#34;s2&#34;&gt;&amp;#34;log4j&amp;#34;&lt;/span&gt; file.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tidak ditemukan. Aman!&lt;/p&gt;</description>
     </item>
     <item>
@@ -62,7 +62,7 @@
       <pubDate>Tue, 23 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-11-23-ubah-timestamp/</guid>
       <description>&lt;p&gt;Untuk mengubah &lt;em&gt;timestamp&lt;/em&gt; akses dan modifikasi pada file&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ touch -t YYYYMMDDHHmm.ss dokumen
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ touch -t YYYYMMDDHHmm.ss dokumen
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;di mana dokumen adalah &lt;em&gt;filename&lt;/em&gt;, waktu yang diinginkan dalam format YYYYMMDDHHmm.ss&lt;/p&gt;</description>
     </item>
     <item>
@@ -71,8 +71,8 @@
       <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-03-18-disable-recent-documents-mate/</guid>
       <description>&lt;p&gt;Masalah &lt;em&gt;security&lt;/em&gt; saat penggunaan &lt;em&gt;desktop environment&lt;/em&gt; &lt;strong&gt;mate&lt;/strong&gt; adalah adanya &lt;strong&gt;recent documents&lt;/strong&gt; pada menu. Ini terletak pada menu di bagian bawah menu &lt;strong&gt;Places&lt;/strong&gt;. Bagi &lt;em&gt;user&lt;/em&gt; yang &lt;em&gt;concern&lt;/em&gt; dengan privasi dan menghendaki untuk menonaktifkannya alih-alih membersihkannya &amp;ldquo;setiap saat&amp;rdquo;,&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &amp;gt; ~/.local/share/recently-used.xbel 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ chattr -i ~/.local/share/recently-used.xbel &lt;span style=&#34;color:#75715e&#34;&gt;# dijalankan oleh root&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &amp;gt; ~/.local/share/recently-used.xbel 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ chattr -i ~/.local/share/recently-used.xbel &lt;span class=&#34;c1&#34;&gt;# dijalankan oleh root&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -83,7 +83,7 @@
       <description>&lt;p&gt;Mungkin ada yang merasa bosan setiap membuka &lt;strong&gt;Chromium&lt;/strong&gt; muncul kotak dialog &lt;em&gt;Unlock Keyring&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/chromium-unlock-keyring.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Itu bisa diatasi, agar tidak muncul lagi. Aktifkan &lt;!-- raw HTML omitted --&gt;CHROMIUM_FLAGS&lt;!-- raw HTML omitted --&gt; pada &lt;!-- raw HTML omitted --&gt;/etc/chromium/00-default.conf&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CHROMIUM_FLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;--password-store=basic&amp;#34;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;CHROMIUM_FLAGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;--password-store=basic&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -120,8 +120,8 @@
       <pubDate>Mon, 27 Mar 2017 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2017-03-27-disable-commands-history/</guid>
       <description>&lt;p&gt;Secara &lt;em&gt;default&lt;/em&gt;, perintah/&lt;em&gt;command&lt;/em&gt; yang dijalankan via terminal emulator dapat diakses lagi dengan klik tombol panah atas. Bisa juga dilihat dengan &lt;em&gt;command&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;history&lt;!-- raw HTML omitted --&gt; atau membaca isi &lt;!-- raw HTML omitted --&gt;~/.bash_history&lt;!-- raw HTML omitted --&gt;. Ini bisa di-&lt;em&gt;disable&lt;/em&gt;. Caranya, membuat file di &lt;!-- raw HTML omitted --&gt;/etc/profile.d/&lt;!-- raw HTML omitted --&gt;, yang isinya&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export HISTFILE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/dev/null
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export HISTSIZE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HISTFILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/null
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HISTSIZE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -130,9 +130,9 @@
       <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/</guid>
       <description>&lt;p&gt;Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan &lt;!-- raw HTML omitted --&gt;gnupg&lt;!-- raw HTML omitted --&gt; atau yang biasa disebut dengan &lt;!-- raw HTML omitted --&gt;gpg&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Sedangkan untuk dekripsi&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>

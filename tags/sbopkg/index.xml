@@ -15,7 +15,7 @@
       <guid>https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/</guid>
       <description>&lt;p&gt;Secara &lt;em&gt;default&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;sbopkg&lt;!-- raw HTML omitted --&gt; tidak menyediakan fitur &lt;strong&gt;reverse dependency&lt;/strong&gt;. Adapun untuk butuh &lt;em&gt;dependency&lt;/em&gt;-nya apa saja bisa menggunakan &lt;!-- raw HTML omitted --&gt;sqg&lt;!-- raw HTML omitted --&gt;. Bagaimana tahu &lt;em&gt;reverse dependency&lt;/em&gt;-nya?&lt;/p&gt;
 &lt;p&gt;Ini cara sederhana yang saya gunakan&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -w nama_paket
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Dengan cara tersebut bisa diketahui suatu paket/&lt;em&gt;package&lt;/em&gt; itu menjadi dependensi dari paket apa. Tapi, salah 1 dari &lt;em&gt;output&lt;/em&gt; tersebut tidak lain adalah paket itu sendiri. Dan, &lt;em&gt;package&lt;/em&gt; yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah &lt;em&gt;packages&lt;/em&gt; tersebut terinstall atau tidak.&lt;/p&gt;</description>
     </item>
     <item>

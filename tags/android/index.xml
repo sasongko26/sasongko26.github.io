@@ -15,9 +15,9 @@
       <guid>https://sasongko.web.id/post/2021-11-16-mount-android-storage-linux/</guid>
       <description>&lt;p&gt;Transfer data antara &lt;em&gt;smartphone android&lt;/em&gt; dan komputer/pc/laptop linux (dalam contoh ini &lt;strong&gt;Slackware&lt;/strong&gt;) dapat dilakukan dengan mudah. Kemudahan tersebut bahkan dapat dilakukan dengan mode text tanpa grafis.&lt;/p&gt;
 &lt;p&gt;Misalkan akan menghubungkan &lt;em&gt;storage&lt;/em&gt; yang ada di &lt;em&gt;android smartphone&lt;/em&gt; dengan linux. &lt;em&gt;Storage&lt;/em&gt; dimount ke direktori mtp. Direktori ini bebas, silahkan pilih sendiri sesuai kebutuhan/keinginan.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ jmtpfs mtp
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ jmtpfs mtp
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Selanjutnya dapat dilakukan transfer file seperti biasa. Jika sudah selesai unmount&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ fusermount mtp
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ fusermount mtp
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-08-21-screenshot-via-adb/</guid>
       <description>&lt;p&gt;Misalkan akan mengambil screenshot layar hp berbasis android. Screenshot disimpan di &lt;em&gt;external memory&lt;/em&gt; (sdcard) dengan nama file screenshot.png&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb shell screencap -p /sdcard/screenshot.png
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell screencap -p /sdcard/screenshot.png
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-05-24-aktivasi-android-gps-adb/</guid>
       <description>&lt;p&gt;Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan &lt;!-- raw HTML omitted --&gt;adb&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb shell settings put secure location_mode &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell settings put secure location_mode &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kalau ingin menonaktifkan, ganti angka 3 dengan 0.&lt;/p&gt;</description>
     </item>
     <item>
@@ -44,12 +44,12 @@
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-01-10-mtperrorcantopendevice/</guid>
       <description>&lt;p&gt;Ketika akan memindahkan data dari HP android ke laptop melalui &lt;!-- raw HTML omitted --&gt;thunar&lt;!-- raw HTML omitted --&gt;, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui &lt;!-- raw HTML omitted --&gt;jmtpfs&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ jmtpfs
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Device &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;VID&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0e8d and PID&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;201d&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; is a MediaTek Inc Elephone P8000.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;error returned by libusb_claim_interface&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; -6LIBMTP PANIC: Unable to initialize device
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;terminate called after throwing an instance of &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;MtpErrorCantOpenDevice&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  what&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;:  Can&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;t open device
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Aborted
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ jmtpfs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Device &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;VID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0e8d and &lt;span class=&#34;nv&#34;&gt;PID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;201d&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; is a MediaTek Inc Elephone P8000.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;error returned by libusb_claim_interface&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; -6LIBMTP PANIC: Unable to initialize device
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;terminate called after throwing an instance of &lt;span class=&#34;s1&#34;&gt;&amp;#39;MtpErrorCantOpenDevice&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  what&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;:  Can&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t open device
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Aborted
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ada masalah di &lt;!-- raw HTML omitted --&gt;libusb&lt;!-- raw HTML omitted --&gt;. Coba reinstall &lt;!-- raw HTML omitted --&gt;libusb&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>

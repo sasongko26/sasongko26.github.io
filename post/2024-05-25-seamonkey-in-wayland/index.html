@@ -210,10 +210,10 @@ $ GDK_BACKEND=x11 seamonkey
 </div>
   </header> 
   <div class="post-content"><p><strong>Seamonkey</strong> adalah salah satu <em>web browser</em> yang secara default terinstall di <strong>slackware</strong>. Ketika login menggunakan <strong>SDDM</strong> dan mengaktifkan lingkungan <em>native wayland</em>, <strong>seamonkey</strong> tidak bisa dijalankan.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ seamonkey
-</span></span><span style="display:flex;"><span>Error: cannot open display: :1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ seamonkey
+</span></span><span class="line"><span class="cl">Error: cannot open display: :1
 </span></span></code></pre></div><p>Solusinya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ GDK_BACKEND<span style="color:#f92672">=</span>x11 seamonkey
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nv">GDK_BACKEND</span><span class="o">=</span>x11 seamonkey
 </span></span></code></pre></div>
 
   </div>

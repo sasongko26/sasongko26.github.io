@@ -228,19 +228,19 @@ print(&#39;median konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#3
 </div>
   </header> 
   <div class="post-content"><p>Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi <strong>describe()</strong> atau <strong>median()</strong> yang dimiliki <strong>pandas</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># dengan editing header variabel </span>
-</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;../dataset/drinks.csv&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># median</span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;median konsumsi bir adalah &#39;</span>,data[<span style="color:#e6db74">&#39;beer_servings&#39;</span>]<span style="color:#f92672">.</span>median(),<span style="color:#e6db74">&#39;kaleng&#39;</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;median konsumsi spirit adalah &#39;</span>, data[<span style="color:#e6db74">&#39;spirit_servings&#39;</span>]<span style="color:#f92672">.</span>median())
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;median konsumsi anggur adalah &#39;</span>, data[<span style="color:#e6db74">&#39;wine_servings&#39;</span>]<span style="color:#f92672">.</span>median(), <span style="color:#e6db74">&#39;gelas&#39;</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;median konsumsi alkohol murni adalah &#39;</span>, data[<span style="color:#e6db74">&#39;pure_alcohol&#39;</span>]<span style="color:#f92672">.</span>median(), <span style="color:#e6db74">&#39;liter&#39;</span>)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># dengan editing header variabel </span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&#34;../dataset/drinks.csv&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># median</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;median konsumsi bir adalah &#39;</span><span class="p">,</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;beer_servings&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span><span class="s1">&#39;kaleng&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;median konsumsi spirit adalah &#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;spirit_servings&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;median konsumsi anggur adalah &#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;wine_servings&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> <span class="s1">&#39;gelas&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;median konsumsi alkohol murni adalah &#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;pure_alcohol&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> <span class="s1">&#39;liter&#39;</span><span class="p">)</span>
 </span></span></code></pre></div>
 
   </div>

@@ -219,13 +219,13 @@ main &#34;$@&#34;
   </header> 
   <div class="post-content"><p><em>Two fer</em> merupakan salah satu soal latihan pemrograman yang ada di <strong>exercism</strong>. Latihan ini meminta untuk dibuatkan suatu <em>script</em> yang apabila script tersebut dieksekusi tanpa argumen apapun maka akan mengeluarkan output &ldquo;One for you, one for me.&rdquo;. Apabila diberikan suatu argumen yang merupakan nama seseorang misalnya Sasongko, maka outputnya &ldquo;One for Sasongko, one for me.&rdquo;.</p>
 <p>Berikut adalah <em>script bash</em>-nya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/bash
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>main <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>	NAME<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>1<span style="color:#66d9ef">:-</span>you<span style="color:#e6db74">}</span>
-</span></span><span style="display:flex;"><span>	echo <span style="color:#e6db74">&#34;One for </span>$NAME<span style="color:#e6db74">, one for me.&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>main <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/usr/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">main <span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">NAME</span><span class="o">=</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="nv">you</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">echo</span> <span class="s2">&#34;One for </span><span class="nv">$NAME</span><span class="s2">, one for me.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">main <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
 </span></span></code></pre></div>
 
   </div>

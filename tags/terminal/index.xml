@@ -67,7 +67,7 @@
       <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2018-05-18-convert-video-mp3/</guid>
       <description>&lt;p&gt;Ternyata tidak sulit mengkonversi/&lt;em&gt;convert&lt;/em&gt; video menjadi audio, dalam hal ini mp3. Misalkan, akan dikonversi file video Gambang_Semarang.mkv menjadi file Gambang_Semarang.mp3&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i Gambang_Semarang.mkv -b:a 128K -vn Gambang_Semarang.mp3
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ffmpeg -i Gambang_Semarang.mkv -b:a 128K -vn Gambang_Semarang.mp3
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(&lt;em&gt;output&lt;/em&gt;) dari &lt;em&gt;command&lt;/em&gt; tersebut di atas sengaja tidak ditampilkan di sini karena agak panjang.&lt;/p&gt;
 &lt;p&gt;Cara ini juga berlaku untuk mengubah file mp4 ke mp3 atau dengan kata lain, sebenarnya mengekstrak audio yang ada di dalam video.&lt;/p&gt;</description>
     </item>
@@ -192,182 +192,182 @@ BlankOn Linux Indonesia
       <guid>https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/</guid>
       <description>&lt;p&gt;Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume.
 Cara menggunakannya mudah.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ wget &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;url&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ wget &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;url&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;untuk mem-pause download tekan Ctrl+C. Dan untuk melanjutkan kembali tambahkan opsi -c.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ wget &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;url&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; -c
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ wget &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;url&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -c
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Untuk lebih lengkapnya tentang wget ada di manual wget.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ wget -h 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;GNU Wget 1.15, adalah sebuah non-interaktif network retriever. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Penggunaan: wget &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;PILIHAN&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;... &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;URL&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;... 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Argumen yang wajib untuk pilihan panjang juga wajib untuk pilihan yang pendek. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Memulai: 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -V,  --version           menampilkan versi dari Wget dan keluar. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -h,  --help              menampilkan bantuan ini. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -b,  --background        pergi ke background setelah memulai. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -e,  --execute&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;COMMAND   menjalankan sebuah perintah &lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;.wgetrc&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;-style. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Mencatat dan memasukan berkas: 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -o,  --output-file=FILE     pesan log pada FILE. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -a,  --append-output=FILE  tambahkan pesan pada FILE. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -d,  --debug               tampilkan banyak informasi debugging. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -q,  --quiet               diam (tidak ada output). 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -v,  --verbose             jadi verbose (ini yang default). 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;   -nv, --no-verbose          matikan verboseness, tanpa menjadi quiet. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --report-speed=TYPE   Output bandwidth as TYPE.  TYPE can be bits. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -i,  --input-file=BERKAS    download URLs ditemukan dalam lokal atau BERKAS eksternal. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -F,  --force-html          perlakukan input file sebagai HTML. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -B,  --base=URL            telusuri berkas masukan HTML (-i -F) 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                             relatif ke URL. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --config=FILE         Specify config file to use. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Download: 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -t,  --tries=NUMBER            set nomor mencoba ke NUMBER (0 untuk tidak terbatas). 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --retry-connrefused       coba lagi walaupun koneksi ditolak. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -O,  --output-document=FILE    tulis document pada FILE. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -nc, --no-clobber              skip downloads that would download to 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                                 existing files (overwriting them). 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -c,  --continue                lanjutkan mengambil file yang terdownload  sebagian. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --progress=TYPE           pilih tipe gauge progress. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -N,  --timestamping            jangan mengambil kembali file kecuali file 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                                 lebih baru dari file local. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  --no-use-server-timestamps     don&amp;#39;&lt;/span&gt;t set the local file&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s timestamp by 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                                 the one on the server. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -S,  --server-response         tampilkan balasan server. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --spider                  jangan mendownload apapun. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -T,  --timeout=SECONDS         set semua nilai timeout pada SECONDS. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --dns-timeout=SECS        set the DNS lookup timeout pada SECS. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --connect-timeout=SECS    set the connect timeout pada SECS. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --read-timeout=SECS       set the read timeout pada SECS. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -w,  --wait=SECONDS            tunggu SECONDS diantara pengambilan. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --waitretry=SECONDS       tunggu 1..SECONDS diantara pencobaan dari sebuah pengambilan. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --random-wait             wait from 0.5*WAIT...1.5*WAIT secs between retrievals. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --no-proxy                secara eksplisit mematikan proxy. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -Q,  --quota=NUMBER            set pengambilan quota pada NUMBER. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --bind-address=ADDRESS    bind ke ADDRESS (hostname atau IP) pada local host. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --limit-rate=RATE         batasi kecepatan download ke RATE. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --no-dns-cache            matikan caching dari DNS lookups. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --restrict-file-names=OS  restrict karakter dalam nama file ke salah satu dari yang dibolehkan oleh OS. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --ignore-case             abaikan besar/kecil huruf ketika mencocokan files/direktori.. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -4,  --inet4-only              hanya menghubungi ke alamat IPv4 saja. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -6,  --inet6-only              hanya menghubungi ke alamat IPv6 saja. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --prefer-family=FAMILY    hubungi terlebih dahulu alamat dari family  yang dispesifikasikan, 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                                 salah satu dari IPv6, IPv4 atau none. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --user=USER               set kedua ftp dan http user pada USER. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --password=PASS           set kedua ftp dan http password pada PASS. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --ask-password            tanya untuk kata sandi. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --no-iri                  non-aktifkan dukungan IRI. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --local-encoding=ENC      gunakan ENC sebagai pengkodean lokal untuk IRI. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --remote-encoding=ENC     gunakan ENC sebagai pengkodean baku remote. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --unlink                  remove file before clobber. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Direktori: 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -nd,  --no-directories          jangan membuat direktori. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -x,  --force-directories        paksa pembuatan direktori. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -nH, --no-host-directories      jangan buat host directories. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --protocol-directories     gunakan nama protocol dalam direktori. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  -P,  --directory-prefix=PREFIX  simpan file pada PREFIX/... 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --cut-dirs=NUMBER           abaikan NUMBER remote komponen direktori. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Pilihan HTTP: 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --http-user=USER        set http user pada USER. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --http-password=PASS    set http password pada PASS. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --nocache               dissallow server-cached data. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --default-page=NAMA     Ubah nama halaman baku (biasanya 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                               ini `index.html&amp;#39;&lt;/span&gt;.&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -E,  --adjust-extension      simpan HTML/CSS dokumen dengan ekstensi yang sesuai. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --ignore-length         abaikan &lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;Content-Length&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39; bagian header. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --header=STRING         masukkan STRING dalam headers. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --max-redirect          batas maksimal yang diperbolehkan untuk redirection setiap halaman. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --proxy-user=USER       set USER sebagai username proxy. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --proxy-password=PASS   set PASS sebagai password proxy. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --referer=URL           masukkan `Referer: URL&amp;#39;&lt;/span&gt; header dalam HTTP request. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --save-headers          simpan HTTP headers pada file. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -U,  --user-agent&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;AGENT      identifikasi sebagai AGEN daripada sebagai Wget/VERSION. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --no-http-keep-alive    disable HTTP keep-alive &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;persistent koneksi&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --no-cookies            jangan menggunakan cookies. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --load-cookies&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;FILE     load cookies dari FILE sebelum session. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --save-cookies&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;FILE     simpan cookies pada FILE sesudah session. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --keep-session-cookies  load dan simpan session &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;non-permanen&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; cookies. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --post-data&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;STRING      gunakan metoda POST; kirim STRING sebagai data. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --post-file&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;FILE        gunakan metoda POST; kirim isi dari FILE. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --method&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;HTTPMethod     use method &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;HTTPMethod&amp;#34;&lt;/span&gt; in the header. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --body-data&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;STRING      Send STRING as data. --method MUST be set. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --body-file&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;FILE        Send contents of FILE. --method MUST be set. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --content-disposition   Lihat header Content-Disposition ketika memilih 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                               berkas lokal &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;EKSPERIMEN&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --content-on-error      output the received content on server errors. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --auth-no-challenge     Kirim informasi otentifikasi standar HTTP tanpa 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                               harus menunggu untuk ditanyai oleh server. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Pilihan HTTPS &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;SSL/TLS&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;: 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --secure-protocol&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;PR     choose secure protocol, one of auto, SSLv2, 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                SSLv3, TLSv1 and PFS. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --https-only             only follow secure HTTPS links 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --no-check-certificate   jangan memvalidasi server certificate. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --certificate&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;FILE       client certificate file. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --certificate-type&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;TYPE  tipe sertifikate client, PEM atau DER. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --private-key&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;FILE       private key file. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --private-key-type&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;TYPE  tipe private key, PEM atau DER. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --ca-certificate&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;FILE    file yang berisi CA&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s. 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       --ca-directory=DIR       direktori dimana hash list dari CA&amp;#39;&lt;/span&gt;s disimpan 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --random-file&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;FILE       file dengan data acak untuk seeding SSL PRNG. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --egd-file&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;FILE          penamaan file EGD socket dengan data random. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Pilihan FTP: 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --ftp-user&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;USER         set ftp user pada USER. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --ftp-password&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;PASS     set ftp password pada PASS. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --no-remove-listing     jangan hapus file &lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;.listing&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --no-glob               matikan FTP nama file globbing. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --no-passive-ftp        disable the &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;passive&amp;#34;&lt;/span&gt; mode trasfer. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --preserve-permissions  preserver remote file permissions. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --retr-symlinks         ketika berekursif, ambil linked-to files &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;bukan dir&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;WARC options: 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --warc-file&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;FILENAME      save request/response data to a .warc.gz file. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --warc-header&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;STRING      insert STRING into the warcinfo record. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --warc-max-size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;NUMBER    set maximum size of WARC files to NUMBER. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --warc-cdx                write CDX index files. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --warc-dedup&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;FILENAME     &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; not store records listed in this CDX file. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --no-warc-compression     &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; not compress WARC files with GZIP. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --no-warc-digests         &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; not calculate SHA1 digests. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --no-warc-keep-log        &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; not store the log file in a WARC record. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --warc-tempdir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;DIRECTORY  location &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; temporary files created by the 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                 WARC writer. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Recursive download: 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -r,  --recursive          spesifikasikan untuk mendownload rekursif. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -l,  --level&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;NUMBER      maksimum kedalaman rekursi &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;inf atau &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; untuk tak terhingga&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --delete-after       delete files locally sesudah mendownloadnya. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -k,  --convert-links      buat links dalam HTML yang didownload atau CSS yang 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            menunjuk ke berkas lokal. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --backups&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;N   before writing file X, rotate up to N backup files. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -K,  --backup-converted   sebelum mengubah file X, backup sebagai X.orig. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -m,  --mirror             shortcut untuk -N -r -l inf --no-remove-listing. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -p,  --page-requisites    ambil semua gambar, dll. yang diperlukan untuk menampilkan file HTML. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --strict-comments    hidupkan strick &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;SGML&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; handling dari komentar HTML. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Recursive diterima/ditolak: 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -A,  --accept&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;LIST               list yang dipisahkan oleh koma yang berisiekstensi yang diterima. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -R,  --reject&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;LIST               list yang dipisahkan oleh koma yang berisiekstensi yang ditolak. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --accept-regex&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;REGEX        regex matching accepted URLs. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --reject-regex&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;REGEX        regex matching rejected URLs. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --regex-type&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;TYPE           regex type &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;posix&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -D,  --domains&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;LIST              list yang dipisahkan oleh koma yang berisidomains yang dibolehkan. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --exclude-domains&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;LIST      list yang dipisahkan oleh koma yang berisidomains yang direject/tolak. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --follow-ftp                ikuti link FTP dari dokumen HTML. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --follow-tags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;LIST          list yang dipisahkan oleh koma yang berisitag HTML yang diikuti 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       --ignore-tags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;LIST          list yang dipisahkan oleh koma yang berisitag HTML yang diabaikan. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -H,  --span-hosts                pergi ke host asing ketika recursive. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -L,  --relative                  hanya mengikuti links relative saja. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -I,  --include-directories&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;LIST  list dari direktori yang dibolehkan. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  --trust-server-names             use the name specified by the redirection 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                   url last component. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -X,  --exclude-directories&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;LIST   list dari direktori yang diabaikan. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -np, --no-parent                 jangan merambah direktori atasnya. 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Laporkan bug dan saran kepada &amp;lt;bug-wget@gnu.org&amp;gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ wget -h 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GNU Wget 1.15, adalah sebuah non-interaktif network retriever. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Penggunaan: wget &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;PILIHAN&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;... &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;URL&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;... 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Argumen yang wajib untuk pilihan panjang juga wajib untuk pilihan yang pendek. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Memulai: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -V,  --version           menampilkan versi dari Wget dan keluar. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -h,  --help              menampilkan bantuan ini. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -b,  --background        pergi ke background setelah memulai. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -e,  --execute&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;COMMAND   menjalankan sebuah perintah &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;.wgetrc&lt;span class=&#34;s1&#34;&gt;&amp;#39;-style. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Mencatat dan memasukan berkas: 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -o,  --output-file=FILE     pesan log pada FILE. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -a,  --append-output=FILE  tambahkan pesan pada FILE. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -d,  --debug               tampilkan banyak informasi debugging. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -q,  --quiet               diam (tidak ada output). 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -v,  --verbose             jadi verbose (ini yang default). 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;   -nv, --no-verbose          matikan verboseness, tanpa menjadi quiet. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --report-speed=TYPE   Output bandwidth as TYPE.  TYPE can be bits. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -i,  --input-file=BERKAS    download URLs ditemukan dalam lokal atau BERKAS eksternal. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -F,  --force-html          perlakukan input file sebagai HTML. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -B,  --base=URL            telusuri berkas masukan HTML (-i -F) 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;                             relatif ke URL. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --config=FILE         Specify config file to use. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Download: 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -t,  --tries=NUMBER            set nomor mencoba ke NUMBER (0 untuk tidak terbatas). 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --retry-connrefused       coba lagi walaupun koneksi ditolak. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -O,  --output-document=FILE    tulis document pada FILE. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -nc, --no-clobber              skip downloads that would download to 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;                                 existing files (overwriting them). 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -c,  --continue                lanjutkan mengambil file yang terdownload  sebagian. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --progress=TYPE           pilih tipe gauge progress. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -N,  --timestamping            jangan mengambil kembali file kecuali file 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;                                 lebih baru dari file local. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  --no-use-server-timestamps     don&amp;#39;&lt;/span&gt;t &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; the &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; file&lt;span class=&#34;s1&#34;&gt;&amp;#39;s timestamp by 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;                                 the one on the server. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -S,  --server-response         tampilkan balasan server. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --spider                  jangan mendownload apapun. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -T,  --timeout=SECONDS         set semua nilai timeout pada SECONDS. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --dns-timeout=SECS        set the DNS lookup timeout pada SECS. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --connect-timeout=SECS    set the connect timeout pada SECS. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --read-timeout=SECS       set the read timeout pada SECS. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -w,  --wait=SECONDS            tunggu SECONDS diantara pengambilan. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --waitretry=SECONDS       tunggu 1..SECONDS diantara pencobaan dari sebuah pengambilan. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --random-wait             wait from 0.5*WAIT...1.5*WAIT secs between retrievals. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --no-proxy                secara eksplisit mematikan proxy. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -Q,  --quota=NUMBER            set pengambilan quota pada NUMBER. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --bind-address=ADDRESS    bind ke ADDRESS (hostname atau IP) pada local host. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --limit-rate=RATE         batasi kecepatan download ke RATE. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --no-dns-cache            matikan caching dari DNS lookups. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --restrict-file-names=OS  restrict karakter dalam nama file ke salah satu dari yang dibolehkan oleh OS. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --ignore-case             abaikan besar/kecil huruf ketika mencocokan files/direktori.. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -4,  --inet4-only              hanya menghubungi ke alamat IPv4 saja. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -6,  --inet6-only              hanya menghubungi ke alamat IPv6 saja. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --prefer-family=FAMILY    hubungi terlebih dahulu alamat dari family  yang dispesifikasikan, 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;                                 salah satu dari IPv6, IPv4 atau none. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --user=USER               set kedua ftp dan http user pada USER. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --password=PASS           set kedua ftp dan http password pada PASS. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --ask-password            tanya untuk kata sandi. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --no-iri                  non-aktifkan dukungan IRI. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --local-encoding=ENC      gunakan ENC sebagai pengkodean lokal untuk IRI. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --remote-encoding=ENC     gunakan ENC sebagai pengkodean baku remote. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --unlink                  remove file before clobber. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Direktori: 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -nd,  --no-directories          jangan membuat direktori. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -x,  --force-directories        paksa pembuatan direktori. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -nH, --no-host-directories      jangan buat host directories. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --protocol-directories     gunakan nama protocol dalam direktori. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  -P,  --directory-prefix=PREFIX  simpan file pada PREFIX/... 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --cut-dirs=NUMBER           abaikan NUMBER remote komponen direktori. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Pilihan HTTP: 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --http-user=USER        set http user pada USER. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --http-password=PASS    set http password pada PASS. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --nocache               dissallow server-cached data. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --default-page=NAMA     Ubah nama halaman baku (biasanya 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;                               ini `index.html&amp;#39;&lt;/span&gt;.&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -E,  --adjust-extension      simpan HTML/CSS dokumen dengan ekstensi yang sesuai. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --ignore-length         abaikan &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;Content-Length&lt;span class=&#34;s1&#34;&gt;&amp;#39; bagian header. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --header=STRING         masukkan STRING dalam headers. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --max-redirect          batas maksimal yang diperbolehkan untuk redirection setiap halaman. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --proxy-user=USER       set USER sebagai username proxy. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --proxy-password=PASS   set PASS sebagai password proxy. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --referer=URL           masukkan `Referer: URL&amp;#39;&lt;/span&gt; header dalam HTTP request. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --save-headers          simpan HTTP headers pada file. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -U,  --user-agent&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;AGENT      identifikasi sebagai AGEN daripada sebagai Wget/VERSION. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --no-http-keep-alive    disable HTTP keep-alive &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;persistent koneksi&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --no-cookies            jangan menggunakan cookies. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --load-cookies&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FILE     load cookies dari FILE sebelum session. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --save-cookies&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FILE     simpan cookies pada FILE sesudah session. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --keep-session-cookies  load dan simpan session &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;non-permanen&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; cookies. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --post-data&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;STRING      gunakan metoda POST&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; kirim STRING sebagai data. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --post-file&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FILE        gunakan metoda POST&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; kirim isi dari FILE. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --method&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;HTTPMethod     use method &lt;span class=&#34;s2&#34;&gt;&amp;#34;HTTPMethod&amp;#34;&lt;/span&gt; in the header. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --body-data&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;STRING      Send STRING as data. --method MUST be set. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --body-file&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FILE        Send contents of FILE. --method MUST be set. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --content-disposition   Lihat header Content-Disposition ketika memilih 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                               berkas lokal &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;EKSPERIMEN&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --content-on-error      output the received content on server errors. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --auth-no-challenge     Kirim informasi otentifikasi standar HTTP tanpa 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                               harus menunggu untuk ditanyai oleh server. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pilihan HTTPS &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;SSL/TLS&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --secure-protocol&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;PR     choose secure protocol, one of auto, SSLv2, 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                SSLv3, TLSv1 and PFS. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --https-only             only follow secure HTTPS links 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --no-check-certificate   jangan memvalidasi server certificate. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --certificate&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FILE       client certificate file. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --certificate-type&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;TYPE  tipe sertifikate client, PEM atau DER. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --private-key&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FILE       private key file. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --private-key-type&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;TYPE  tipe private key, PEM atau DER. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --ca-certificate&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FILE    file yang berisi CA&lt;span class=&#34;s1&#34;&gt;&amp;#39;s. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;       --ca-directory=DIR       direktori dimana hash list dari CA&amp;#39;&lt;/span&gt;s disimpan 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --random-file&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FILE       file dengan data acak untuk seeding SSL PRNG. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --egd-file&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FILE          penamaan file EGD socket dengan data random. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pilihan FTP: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --ftp-user&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;USER         &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; ftp user pada USER. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --ftp-password&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;PASS     &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; ftp password pada PASS. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --no-remove-listing     jangan hapus file &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;.listing&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --no-glob               matikan FTP nama file globbing. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --no-passive-ftp        disable the &lt;span class=&#34;s2&#34;&gt;&amp;#34;passive&amp;#34;&lt;/span&gt; mode trasfer. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --preserve-permissions  preserver remote file permissions. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --retr-symlinks         ketika berekursif, ambil linked-to files &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;bukan dir&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WARC options: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --warc-file&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FILENAME      save request/response data to a .warc.gz file. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --warc-header&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;STRING      insert STRING into the warcinfo record. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --warc-max-size&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NUMBER    &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; maximum size of WARC files to NUMBER. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --warc-cdx                write CDX index files. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --warc-dedup&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FILENAME     &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; not store records listed in this CDX file. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --no-warc-compression     &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; not compress WARC files with GZIP. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --no-warc-digests         &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; not calculate SHA1 digests. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --no-warc-keep-log        &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; not store the log file in a WARC record. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --warc-tempdir&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;DIRECTORY  location &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; temporary files created by the 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                 WARC writer. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive download: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -r,  --recursive          spesifikasikan untuk mendownload rekursif. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -l,  --level&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NUMBER      maksimum kedalaman rekursi &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;inf atau &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; untuk tak terhingga&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --delete-after       delete files locally sesudah mendownloadnya. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -k,  --convert-links      buat links dalam HTML yang didownload atau CSS yang 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                            menunjuk ke berkas lokal. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --backups&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;N   before writing file X, rotate up to N backup files. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -K,  --backup-converted   sebelum mengubah file X, backup sebagai X.orig. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -m,  --mirror             shortcut untuk -N -r -l inf --no-remove-listing. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -p,  --page-requisites    ambil semua gambar, dll. yang diperlukan untuk menampilkan file HTML. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --strict-comments    hidupkan strick &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;SGML&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; handling dari komentar HTML. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive diterima/ditolak: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -A,  --accept&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;LIST               list yang dipisahkan oleh koma yang berisiekstensi yang diterima. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -R,  --reject&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;LIST               list yang dipisahkan oleh koma yang berisiekstensi yang ditolak. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --accept-regex&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;REGEX        regex matching accepted URLs. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --reject-regex&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;REGEX        regex matching rejected URLs. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --regex-type&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;TYPE           regex &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;posix&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -D,  --domains&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;LIST              list yang dipisahkan oleh koma yang berisidomains yang dibolehkan. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --exclude-domains&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;LIST      list yang dipisahkan oleh koma yang berisidomains yang direject/tolak. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --follow-ftp                ikuti link FTP dari dokumen HTML. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --follow-tags&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;LIST          list yang dipisahkan oleh koma yang berisitag HTML yang diikuti 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       --ignore-tags&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;LIST          list yang dipisahkan oleh koma yang berisitag HTML yang diabaikan. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -H,  --span-hosts                pergi ke host asing ketika recursive. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -L,  --relative                  hanya mengikuti links relative saja. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -I,  --include-directories&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;LIST  list dari direktori yang dibolehkan. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --trust-server-names             use the name specified by the redirection 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                   url last component. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -X,  --exclude-directories&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;LIST   list dari direktori yang diabaikan. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -np, --no-parent                 jangan merambah direktori atasnya. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Laporkan bug dan saran kepada &amp;lt;bug-wget@gnu.org&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>

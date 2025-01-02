@@ -214,12 +214,12 @@ my @biodata = ($nama, $jenis_kelamin, $distro, $tahun);
 </div>
   </header> 
   <div class="post-content"><p>Array merupakan variabel pada <strong>perl</strong> dengan data yang nilainya majemuk. Sedangkan scalar bernilai tunggal. Catatan kali ini tentang bagaimana cara membuat array dari scalar yang tersedia.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $nama <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sasongko&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $jenis_kelamin <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Laki-laki&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $distro <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Slackware&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $tahun <span style="color:#f92672">=</span> <span style="color:#ae81ff">2021</span>;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$nama</span> <span class="o">=</span> <span class="s">&#34;Sasongko&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$jenis_kelamin</span> <span class="o">=</span> <span class="s">&#34;Laki-laki&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$distro</span> <span class="o">=</span> <span class="s">&#34;Slackware&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$tahun</span> <span class="o">=</span> <span class="mi">2021</span><span class="p">;</span>
 </span></span></code></pre></div><p>Keempat scalar tersebut akan disatukan menjadi array @biodata.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">my</span> @biodata <span style="color:#f92672">=</span> ($nama, $jenis_kelamin, $distro, $tahun);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">@biodata</span> <span class="o">=</span> <span class="p">(</span><span class="nv">$nama</span><span class="p">,</span> <span class="nv">$jenis_kelamin</span><span class="p">,</span> <span class="nv">$distro</span><span class="p">,</span> <span class="nv">$tahun</span><span class="p">);</span>
 </span></span></code></pre></div>
 
   </div>

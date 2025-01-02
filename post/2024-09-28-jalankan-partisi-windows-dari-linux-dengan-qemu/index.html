@@ -204,12 +204,12 @@ Qemu memungkinkan sistem operasi windows dipanggil atau dijalankan dari linux. U
   <div class="post-content"><p>Sebagian masyarakat memilih untuk <em>dualboot</em> atau bahkan <em>multiboot</em> dalam berkomputer. Satu Perangkat komputer diinstall lebih dari satu sistem operasi. Alhasil, harddisk pasti terbagi menjadi paling sedikit 2 partisi. Tak jarang, sistem operasi tersebut adalah linux dan windows. Kelemahan dari model seperti ini adalah pengguna harus memilih salah satu, mana sistem yang akan dijalankan. Namun, tidak demikian bila ada qemu.</p>
 <p>Qemu memungkinkan sistem operasi windows dipanggil atau dijalankan dari linux. Untuk dapat menjalankannya perlu install qemu (tentu saja) dan edk2-ovmf. Keduanya tersedia di SBo.</p>
 <p>Misalkan linux dan windows terinstall di harddisk /dev/sda, menggunakan cpu sama seperti pada host dan dengan memori 6144 MB, maka windows bisa dijalankan dengan perintah:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ qemu-system-x86_64 <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	--bios /usr/share/edk2-ovmf-x64/OVMF_CODE.fd <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	--enable-kvm <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	--cpu host <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	-m <span style="color:#ae81ff">6144</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	-drive format<span style="color:#f92672">=</span>raw,file<span style="color:#f92672">=</span>/dev/sda
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ qemu-system-x86_64 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>	--bios /usr/share/edk2-ovmf-x64/OVMF_CODE.fd <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>	--enable-kvm <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>	--cpu host <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>	-m <span class="m">6144</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>	-drive <span class="nv">format</span><span class="o">=</span>raw,file<span class="o">=</span>/dev/sda
 </span></span></code></pre></div>
 
   </div>

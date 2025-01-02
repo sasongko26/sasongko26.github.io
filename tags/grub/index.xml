@@ -14,7 +14,7 @@
       <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2023-06-02-masuk-uefi-firmware-settings-via-grub/</guid>
       <description>&lt;p&gt;Kadang kita perlu mengubah pengaturan pada UEFI. Pengaturan tersebut misalnya pengaturan waktu, &lt;em&gt;secure boot&lt;/em&gt;, urutan &lt;em&gt;boot&lt;/em&gt; dan lain sebagainya. Untuk  masuk ke &lt;strong&gt;UEFI Firmware Settings&lt;/strong&gt; bisa dilakukan dari &lt;strong&gt;grub&lt;/strong&gt;. Yaitu dengan cara ketika menampilkan &lt;em&gt;bootloader&lt;/em&gt;, biasanya ada jeda waktu. Manfaatkan jeda waktu tersebut dengan segera menekan tombol &lt;strong&gt;c&lt;/strong&gt; untuk masuk ke &lt;em&gt;grub shell&lt;/em&gt;, kemudian pada &lt;em&gt;prompt&lt;/em&gt; yang disediakan ketik &lt;strong&gt;fwsetup&lt;/strong&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;grub&amp;gt; fwsetup
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grub&amp;gt; fwsetup
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -38,10 +38,10 @@
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/</guid>
       <description>&lt;p&gt;Untuk menampilkan status penggunaan zram bisa dengan menjalankan&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# zramctl --output-all&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;NAME     DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/dev/zram0
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               1G   4K   74B lzo-rle         &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;          &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;   12K        0B      12K       0B &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;SWAP&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# zramctl --output-all&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NAME     DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/zram0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               1G   4K   74B lzo-rle         &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   12K        0B      12K       0B &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;SWAP&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Berikut penjelasan masing-masing kolomnya&lt;/p&gt;
 &lt;p&gt;NAME	zram device name
 DISKSIZE	limit on the uncompressed amount of data

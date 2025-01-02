@@ -149,6 +149,51 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Menampilkan data baris terakhir python
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk menampilkan data baris terakhir dengan python dapat menggunakan fungsi tail() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
+Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
+import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.tail(7)) Output :
+RowId ... Report 178532 2019~2019~9004~Q41~AGE~AGE_OVERALL~RACE~NAA ... NaN 178533 2019~2019~9002~Q41~AGE~AGE_OVERALL~GENDER~MALE ... NaN 178534 2019~2019~9002~Q42~AGE~5064~RACE~HIS ... NaN 178535 2019~2019~9003~Q42~AGE~65PLUS~RACE~ASN ... NaN 178536 2019~2019~9002~Q42~AGE~65PLUS~RACE~HIS ... NaN 178537 2019~2019~9003~Q42~AGE~5064~RACE~BLK ... NaN 178538 2019~2019~9004~Q42~AGE~5064~RACE~NAA ... NaN [7 rows x 39 columns] Dari output tersebut juga dapat diperoleh informasi jumlah baris dan kolomnya yaitu 178539 baris dan 39 kolom.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-21 00:00:00 +0000 UTC'>21 Mar 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Menampilkan data baris terakhir python" href="https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Menampilkan data baris pertama python
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk menampilkan data baris pertama dengan python dapat menggunakan fungsi head() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
+Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
+import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.head()) Output :
+RowId ... Report 0 2016~2016~12~Q27~AGE~AGE_OVERALL~GENDER~MALE ... NaN 1 2015~2015~66~Q43~AGE~5064~GENDER~MALE ... NaN 2 2018~2018~66~Q18~AGE~5064~GENDER~MALE ... NaN 3 2018~2018~66~Q34~AGE~5064~GENDER~FEMALE ... NaN 4 2015~2015~16~Q43~AGE~65PLUS~GENDER~FEMALE ... NaN [5 rows x 39 columns] Dari output tersebut juga dapat diperoleh informasi jumlah kolomnya, yaitu 39 yang tidak semua kolom ditampilkan.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-20 00:00:00 +0000 UTC'>20 Mar 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Menampilkan data baris pertama python" href="https://sasongko.web.id/post/2021-03-20-menampilkan-data-baris-pertama-python/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Enumerasi packages terinstall
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk mengenumerasi atau mengetahui packages apa saja yang terinstall dapat menggunakan command untuk menampilkan isi directory /var/lib/pkgtools/packages
+$ ls /var/lib/pkgtools/packages </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-19 00:00:00 +0000 UTC'>19 Mar 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Enumerasi packages terinstall" href="https://sasongko.web.id/post/2021-03-19-enumerasi-packages-terinstall/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Disable recent documents mate
     </h2>
   </header>
@@ -172,45 +217,6 @@ Redshift tersedia di SBo, sehingga bisa diinstal dengan mudah melalui sbotools, 
   </div>
   <footer class="entry-footer"><span title='2021-03-17 00:00:00 +0000 UTC'>17 Mar 2021</span></footer>
   <a class="entry-link" aria-label="post link to Mengatur pencahayaan monitor dengan redshift" href="https://sasongko.web.id/post/2021-03-17-layar-merah-kuning-redshift/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Load dataset csv dengan python
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Misalkan ada dataset dalam format csv. Data tersebut dapat di-load atau diimpor dengan python dengan library pandas. Berikut script untuk load file data.csv.
-import pandas as pd data = pd.read_csv(&#34;data.csv&#34;) </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-03-16 00:00:00 +0000 UTC'>16 Mar 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Load dataset csv dengan python" href="https://sasongko.web.id/post/2021-03-16-load-csv-python/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Library python untuk statistika
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Beberapa library atau module python yang sering digunakan untuk statistika adalah
-numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis vektor atau matriks pandas: digunakan untuk melakukan pengolahan data tabular matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat digunakan sebagai alat bantu dalam analisa data statsmodels: digunakan untuk melakukan uji hipotesa, eksplorasi data maupun pemodelan statistika scipy: digunakan untuk melakukan uji statistika, juga dapat digunakan untuk melakukan pemodelan statistika </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-03-15 00:00:00 +0000 UTC'>15 Mar 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Library python untuk statistika" href="https://sasongko.web.id/post/2021-03-15-library-python-statistika/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Menggabungkan file pdf
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Misalkan mempunyai 2 file ebook yaitu ebook1.pdf dan ebook2.pdf. Kedua file ini akan digabung menjadi ebook.pdf. Maka untuk menggabungkannya
-$ pdfunite ebook1.pdf ebook2.pdf ebook.pdf </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-03-13 00:00:00 +0000 UTC'>13 Mar 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Menggabungkan file pdf" href="https://sasongko.web.id/post/2021-03-13-menggabungkan-file-pdf/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

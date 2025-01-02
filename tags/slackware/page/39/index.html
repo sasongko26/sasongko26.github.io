@@ -140,6 +140,51 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Restart android via adb
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Catatan kali ini masih seputar troubleshoot HP android dengan komputer terutama Slackware.
+Tadi malam, HP yang OS android touchscreen-nya tidak ada respon. Di semua bagian layar. Tapi tombol power dan volume masih berfungsi. Begitu juga dengan konektivitas internet maupun telepon. Mau mencoba di-restart, tombol power normal tapi untuk memilih shutdown atau reboot tidak bisa karena tochscreen-nya tidak ada respon. Lepas baterai? Tidak bisa karena baterainya tanam.
+Solusinya? restart via komputer. Pastikan sudah terinstall andorid tools (tersedia di SBo).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-08-03 00:00:00 +0000 UTC'>03 Aug 2019</span></footer>
+  <a class="entry-link" aria-label="post link to Restart android via adb" href="https://sasongko.web.id/post/2019-08-03-restart-android-via-adb/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Back Up Data HP Android
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sebelum berganti ponsel atau HP sangat disarankan untuk mem-back up data-data penting, seperti dokumen, foto, video, maupun chat WhatsApp. Berikut cara menyalin file dari HP android ke laptop yang tentu saja laptopnya bersistem operasi Slackware.
+Persiapan Slackware Pastikan bisa menjalankan adb yang merupakan bagian dari android tools. Kalau belum bisa install dari SBo
+Mengapa adb? Mengapa adb? Mengapa tidak pakai file manager saja? Karena transfer pakai adb bisa lebih cepat
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-06-09 00:00:00 +0000 UTC'>09 Jun 2019</span></footer>
+  <a class="entry-link" aria-label="post link to Back Up Data HP Android" href="https://sasongko.web.id/post/2019-06-09-backup-android/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Reverse Dependency sbopkg
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Secara default sbopkg tidak menyediakan fitur reverse dependency. Adapun untuk butuh dependency-nya apa saja bisa menggunakan sqg. Bagaimana tahu reverse dependency-nya?
+Ini cara sederhana yang saya gunakan
+grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info | grep -w nama_paket Dengan cara tersebut bisa diketahui suatu paket/package itu menjadi dependensi dari paket apa. Tapi, salah 1 dari output tersebut tidak lain adalah paket itu sendiri. Dan, package yang ditampilkan adalah semua yang ada di SBo. Kita masih perlu memeriksa apakah packages tersebut terinstall atau tidak.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-04-20 00:00:00 +0000 UTC'>20 Apr 2019</span></footer>
+  <a class="entry-link" aria-label="post link to Reverse Dependency sbopkg" href="https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Chromium Disable Unlock Keyring
     </h2>
   </header>
@@ -165,50 +210,6 @@ R/ adduser # saya gunakan R/ sebagai pengganti shell prompt untuk root kemudian 
   </div>
   <footer class="entry-footer"><span title='2019-04-01 00:00:00 +0000 UTC'>01 Apr 2019</span></footer>
   <a class="entry-link" aria-label="post link to Membuat User Baru" href="https://sasongko.web.id/post/2019-04-01-membuat-user-baru/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Memulai MariaDB
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Apa itu MariaDB MariaDB adalah software untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.
-Install MariaDB Secara default, apabila Slackware diisnntall full system maka MariaDB akan terinstall. Jadi tidak usah repot-repot untuk insytallnya.
-Memulai MariaDB Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. prompt R/ menunjukkan dilakukan dengan priviledge root
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2019-03-30 00:00:00 +0000 UTC'>30 Mar 2019</span></footer>
-  <a class="entry-link" aria-label="post link to Memulai MariaDB" href="https://sasongko.web.id/post/2019-03-30-memulai-mariadb/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Perl IDE dengan vim
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Reputasi vim sebagai text editor sudah teruji berpuluh tahun. Ternyata Vim juga memiliki support plugin untuk perl. Hal ini membuat vim bisa dijadikan sebagai integrated development environment (IDE) untuk perl.
-Download plugin-nya kemudian extract
-$ wget https://www.vim.org/scripts/download_script.php?src_id=24473 -O perl-support.zip -O perl-support.zip $ mkdir -p .vim $ unzip perl-support.zip -d .vim Aktifkan
-$ echo &#34;filetype plugin on&#34; &gt;&gt; .vimrc </p>
-  </div>
-  <footer class="entry-footer"><span title='2019-02-01 00:00:00 +0000 UTC'>01 Feb 2019</span></footer>
-  <a class="entry-link" aria-label="post link to Perl IDE dengan vim" href="https://sasongko.web.id/post/2019-02-01-perl-ide-vim/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Hapus Aplikasi yang Diinstall Tanggal Tertentu
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Tiga hari ini mencoba-coba install kdenlive, aplikasi editor video yang konon handal. Sengaja disebut konon karena belum membuktikannya secara langsung. Setelah semua beres diinstall ternyata malah berubah pikiran. Apa perlu saya pakai editor video? Toh selama ini tidak pernah edit video dan pekerjaan sehari-hari juga tidak bersentuhan langsung dengan pembuatan maupun editing video. Jadi hapus sajalah.
-kdenlive-nya sukses di-uninstall, tapi bagaimana dengan seabrek dependensinya? Hapus juga deh! Kalau besok-besok diperlukan tinggal install lagi.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2018-12-08 00:00:00 +0000 UTC'>08 Dec 2018</span></footer>
-  <a class="entry-link" aria-label="post link to Hapus Aplikasi yang Diinstall Tanggal Tertentu" href="https://sasongko.web.id/post/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

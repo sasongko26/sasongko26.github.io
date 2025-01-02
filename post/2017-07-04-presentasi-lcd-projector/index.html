@@ -201,68 +201,68 @@ Pertama, identifikasi monitor/screen primer yang aktif tersambung saat ini, jang
   </header> 
   <div class="post-content"><p><em>Tools</em> yang digunakan adalah <!-- raw HTML omitted -->xrandr<!-- raw HTML omitted -->. Sebenarnya bisa menggunakan aplikasi GUI yang disediakan <em>desktop environment</em> masing-masing, tapi saya lebih suka menggunakan <!-- raw HTML omitted -->xrandr<!-- raw HTML omitted --> agar universal bisa digunakan di lingkungan desktop apapun, entah itu <!-- raw HTML omitted -->Fluxbox, FVWM, TWM, Xfce, KDE, Lumina, LXQt, Mate, Cinnamon<!-- raw HTML omitted -->, dsb.</p>
 <p>Pertama, identifikasi monitor/<em>screen</em> primer yang aktif tersambung saat ini, jangan sambungkan proyektor dulu</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ xrandr
-</span></span><span style="display:flex;"><span>Screen 0: minimum <span style="color:#ae81ff">8</span> x 8, current <span style="color:#ae81ff">1366</span> x 768, maximum <span style="color:#ae81ff">32767</span> x <span style="color:#ae81ff">32767</span>
-</span></span><span style="display:flex;"><span>eDP1 connected primary 1366x768+0+0 <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span> 310mm x 170mm
-</span></span><span style="display:flex;"><span>   1366x768      59.97*+
-</span></span><span style="display:flex;"><span>   1024x768      60.00  
-</span></span><span style="display:flex;"><span>   1024x576      60.00  
-</span></span><span style="display:flex;"><span>   960x540       60.00  
-</span></span><span style="display:flex;"><span>   800x600       60.32    56.25  
-</span></span><span style="display:flex;"><span>   864x486       60.00  
-</span></span><span style="display:flex;"><span>   640x480       59.94  
-</span></span><span style="display:flex;"><span>   720x405       60.00  
-</span></span><span style="display:flex;"><span>   680x384       60.00  
-</span></span><span style="display:flex;"><span>   640x360       60.00  
-</span></span><span style="display:flex;"><span>DP1 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>DP2 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>HDMI1 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>HDMI2 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>VIRTUAL1 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ xrandr
+</span></span><span class="line"><span class="cl">Screen 0: minimum <span class="m">8</span> x 8, current <span class="m">1366</span> x 768, maximum <span class="m">32767</span> x <span class="m">32767</span>
+</span></span><span class="line"><span class="cl">eDP1 connected primary 1366x768+0+0 <span class="o">(</span>normal left inverted right x axis y axis<span class="o">)</span> 310mm x 170mm
+</span></span><span class="line"><span class="cl">   1366x768      59.97*+
+</span></span><span class="line"><span class="cl">   1024x768      60.00  
+</span></span><span class="line"><span class="cl">   1024x576      60.00  
+</span></span><span class="line"><span class="cl">   960x540       60.00  
+</span></span><span class="line"><span class="cl">   800x600       60.32    56.25  
+</span></span><span class="line"><span class="cl">   864x486       60.00  
+</span></span><span class="line"><span class="cl">   640x480       59.94  
+</span></span><span class="line"><span class="cl">   720x405       60.00  
+</span></span><span class="line"><span class="cl">   680x384       60.00  
+</span></span><span class="line"><span class="cl">   640x360       60.00  
+</span></span><span class="line"><span class="cl">DP1 disconnected <span class="o">(</span>normal left inverted right x axis y axis<span class="o">)</span>
+</span></span><span class="line"><span class="cl">DP2 disconnected <span class="o">(</span>normal left inverted right x axis y axis<span class="o">)</span>
+</span></span><span class="line"><span class="cl">HDMI1 disconnected <span class="o">(</span>normal left inverted right x axis y axis<span class="o">)</span>
+</span></span><span class="line"><span class="cl">HDMI2 disconnected <span class="o">(</span>normal left inverted right x axis y axis<span class="o">)</span>
+</span></span><span class="line"><span class="cl">VIRTUAL1 disconnected <span class="o">(</span>normal left inverted right x axis y axis<span class="o">)</span>
 </span></span></code></pre></div><p>Monitor primer saat ini terdeteksi sebagai <!-- raw HTML omitted -->eDP1<!-- raw HTML omitted --> dengan resolusi/mode 1366x768.</p>
 <p>Kemudian, sambungkan dengan proyektor</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ xrandr
-</span></span><span style="display:flex;"><span>Screen 0: minimum <span style="color:#ae81ff">8</span> x 8, current <span style="color:#ae81ff">1366</span> x 768, maximum <span style="color:#ae81ff">32767</span> x <span style="color:#ae81ff">32767</span>
-</span></span><span style="display:flex;"><span>eDP1 connected primary 1366x768+0+0 <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span> 310mm x 170mm
-</span></span><span style="display:flex;"><span>   1366x768      59.97*+
-</span></span><span style="display:flex;"><span>   1024x768      60.00  
-</span></span><span style="display:flex;"><span>   1024x576      60.00  
-</span></span><span style="display:flex;"><span>   960x540       60.00  
-</span></span><span style="display:flex;"><span>   800x600       60.32    56.25  
-</span></span><span style="display:flex;"><span>   864x486       60.00  
-</span></span><span style="display:flex;"><span>   640x480       59.94  
-</span></span><span style="display:flex;"><span>   720x405       60.00  
-</span></span><span style="display:flex;"><span>   680x384       60.00  
-</span></span><span style="display:flex;"><span>   640x360       60.00  
-</span></span><span style="display:flex;"><span>DP1 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>DP2 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>HDMI1 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>HDMI2 connected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>   1024x768      70.07 +  85.00    75.03    60.00  
-</span></span><span style="display:flex;"><span>   1920x1080     60.00    59.94  
-</span></span><span style="display:flex;"><span>   1600x1200     60.00  
-</span></span><span style="display:flex;"><span>   1280x1024     85.02    75.02  
-</span></span><span style="display:flex;"><span>   1440x900      59.89  
-</span></span><span style="display:flex;"><span>   1280x960      85.00  
-</span></span><span style="display:flex;"><span>   1280x800      59.81  
-</span></span><span style="display:flex;"><span>   1152x864      75.00  
-</span></span><span style="display:flex;"><span>   1280x720      60.00    59.94  
-</span></span><span style="display:flex;"><span>   1024x768i     86.96  
-</span></span><span style="display:flex;"><span>   832x624       74.55  
-</span></span><span style="display:flex;"><span>   800x600       85.06    72.19    75.00    60.32    56.25  
-</span></span><span style="display:flex;"><span>   640x480       85.01    75.00    72.81    66.67    60.00    59.94  
-</span></span><span style="display:flex;"><span>   720x400       87.85    70.08  
-</span></span><span style="display:flex;"><span>VIRTUAL1 disconnected <span style="color:#f92672">(</span>normal left inverted right x axis y axis<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ xrandr
+</span></span><span class="line"><span class="cl">Screen 0: minimum <span class="m">8</span> x 8, current <span class="m">1366</span> x 768, maximum <span class="m">32767</span> x <span class="m">32767</span>
+</span></span><span class="line"><span class="cl">eDP1 connected primary 1366x768+0+0 <span class="o">(</span>normal left inverted right x axis y axis<span class="o">)</span> 310mm x 170mm
+</span></span><span class="line"><span class="cl">   1366x768      59.97*+
+</span></span><span class="line"><span class="cl">   1024x768      60.00  
+</span></span><span class="line"><span class="cl">   1024x576      60.00  
+</span></span><span class="line"><span class="cl">   960x540       60.00  
+</span></span><span class="line"><span class="cl">   800x600       60.32    56.25  
+</span></span><span class="line"><span class="cl">   864x486       60.00  
+</span></span><span class="line"><span class="cl">   640x480       59.94  
+</span></span><span class="line"><span class="cl">   720x405       60.00  
+</span></span><span class="line"><span class="cl">   680x384       60.00  
+</span></span><span class="line"><span class="cl">   640x360       60.00  
+</span></span><span class="line"><span class="cl">DP1 disconnected <span class="o">(</span>normal left inverted right x axis y axis<span class="o">)</span>
+</span></span><span class="line"><span class="cl">DP2 disconnected <span class="o">(</span>normal left inverted right x axis y axis<span class="o">)</span>
+</span></span><span class="line"><span class="cl">HDMI1 disconnected <span class="o">(</span>normal left inverted right x axis y axis<span class="o">)</span>
+</span></span><span class="line"><span class="cl">HDMI2 connected <span class="o">(</span>normal left inverted right x axis y axis<span class="o">)</span>
+</span></span><span class="line"><span class="cl">   1024x768      70.07 +  85.00    75.03    60.00  
+</span></span><span class="line"><span class="cl">   1920x1080     60.00    59.94  
+</span></span><span class="line"><span class="cl">   1600x1200     60.00  
+</span></span><span class="line"><span class="cl">   1280x1024     85.02    75.02  
+</span></span><span class="line"><span class="cl">   1440x900      59.89  
+</span></span><span class="line"><span class="cl">   1280x960      85.00  
+</span></span><span class="line"><span class="cl">   1280x800      59.81  
+</span></span><span class="line"><span class="cl">   1152x864      75.00  
+</span></span><span class="line"><span class="cl">   1280x720      60.00    59.94  
+</span></span><span class="line"><span class="cl">   1024x768i     86.96  
+</span></span><span class="line"><span class="cl">   832x624       74.55  
+</span></span><span class="line"><span class="cl">   800x600       85.06    72.19    75.00    60.32    56.25  
+</span></span><span class="line"><span class="cl">   640x480       85.01    75.00    72.81    66.67    60.00    59.94  
+</span></span><span class="line"><span class="cl">   720x400       87.85    70.08  
+</span></span><span class="line"><span class="cl">VIRTUAL1 disconnected <span class="o">(</span>normal left inverted right x axis y axis<span class="o">)</span>
 </span></span></code></pre></div><p>Proyektor terdeteksi sebagai <!-- raw HTML omitted -->HDMI2<!-- raw HTML omitted --> dengan mode aktif 1024x768.</p>
 <p><!-- raw HTML omitted -->eDP1<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->HDMI2<!-- raw HTML omitted --> sama-sama mempunyai mode 1024x768. Mode inilah yang akan dipakai.</p>
 <p>Karena mode pada <!-- raw HTML omitted -->eDP1<!-- raw HTML omitted --> sekarang adalah 1366x768, maka harus disesuaikan menjadi 1024x768.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ xrandr -s 1024x768
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ xrandr -s 1024x768
 </span></span></code></pre></div><p>Selanjutnya apa yang tampil di monitor <!-- raw HTML omitted -->eDP1<!-- raw HTML omitted --> juga akan ditampilkan di proyektor (<!-- raw HTML omitted -->HDMI2<!-- raw HTML omitted -->) sama persis.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ xrandr --output HDMI2 --mode 1024x768 --same-as eDP1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ xrandr --output HDMI2 --mode 1024x768 --same-as eDP1
 </span></span></code></pre></div><p>Kalau ingin menonaktifkan sambungan ke <!-- raw HTML omitted -->HDMI2<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ xrandr --output HDMI2 --off
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ xrandr --output HDMI2 --off
 </span></span></code></pre></div><p>Nah, setelah presentasi selesai, jangan lupa ubah lagi mode monitor <!-- raw HTML omitted -->eDP1<!-- raw HTML omitted --> ke 1366x768</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ xrandr -s 1366x768
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ xrandr -s 1366x768
 </span></span></code></pre></div>
 
   </div>

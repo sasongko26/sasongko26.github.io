@@ -203,7 +203,7 @@ Perintah tersebut akan membuat semua file di direktori_asli berpindah ke direkto
 </div>
   </header> 
   <div class="post-content"><p>Salah satu keunggulan linux adalah mudahnya untuk melakukan otomatisasi yang dapat dilakukan dengan mengetikkan sebaris perintah. Sebagai contoh, apabila ingin melakukan pencadangan semua file tanpa melihat struktur direktorinya ke media penyimpanan eksternal bisa mengetikkan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find direktori_asli -iname <span style="color:#e6db74">&#39;*&#39;</span> -exec cp <span style="color:#e6db74">&#39;{}&#39;</span> direktori_cadangan <span style="color:#ae81ff">\;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ find direktori_asli -iname <span class="s1">&#39;*&#39;</span> -exec cp <span class="s1">&#39;{}&#39;</span> direktori_cadangan <span class="se">\;</span>
 </span></span></code></pre></div><p>Perintah tersebut akan membuat semua file di direktori_asli berpindah ke direktori_cadangan.</p>
 
 

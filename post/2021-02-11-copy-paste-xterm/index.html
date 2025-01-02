@@ -206,9 +206,9 @@ Untuk bisa melakukan copy:">
   <div class="post-content"><p><strong>xterm</strong> adalah <strong>X terminal emulator</strong> populer legendaris. Penulis masih  menggunakannya sebagai terminal utama ketika menggunakan <strong>blackbox</strong>. Sesekali saat menggunakan <strong>xfce</strong> atau <strong>kde</strong>.</p>
 <p><strong>xterm</strong> ini khas. Tidak seperti <strong>xfce4-terminal</strong> atau <strong>konsole</strong> yang secara <em>default</em> pengguna bisa melakukan <em>copy paste</em> (Copas) dengan mudah. <strong>Ctrl Shift C, Ctrl Shift V</strong> untuk copas pada terminal emulator lainnya tidak berlaku! Butuh pengaturan khusus untuk melakukannya. Mengatur agar setiap yang diblok akan dimasukkan ke <em>clipboard</em>.</p>
 <p>Untuk bisa melakukan <em>copy</em>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;xterm*selectToClipboard : true&#34;</span> &gt;&gt; ~/.Xresources
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;xterm*selectToClipboard : true&#34;</span> &gt;&gt; ~/.Xresources
 </span></span></code></pre></div><p>Karena ~/.Xresources ada perubahan, agar bisa segera diterapkan tanpa <em>reboot</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ xrdb -merge ~/.Xresources
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ xrdb -merge ~/.Xresources
 </span></span></code></pre></div><p>Selanjutnya, untuk melakukan <em>copy</em> tinggal blok saja teks yang akan di-<em>copy</em>. Kemudian, <em>paste</em>-nya tekan <strong>Shift Insert</strong></p>
 
 

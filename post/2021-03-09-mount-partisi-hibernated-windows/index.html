@@ -219,29 +219,29 @@ What? Windows is hibernate? Seingat penulis selalu tertib dalam menjalankan SOP 
   <div class="post-content"><p>Lima tahun yang lalu ketika membeli laptop yang saat ini digunakan untuk menulis catatan ini, toko memberikan OS Windows 10 tanpa lisensinya. Penulis tetap mempertahankannya untuk jaga-jaga jika di kemudian hari kepepet sangat membutuhkan Windows.</p>
 <p>Tadi pagi iseng ingin melihat-lihat adakah file di partisi tempat Windows diinstall yang bisa dihapus sehingga storage harddisk lebih lega?</p>
 <p>Partisi Windows teridentifikasi sebagai /dev/sda2. Akan di-<em>mount</em> ke /media/hd0</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ mount /dev/sda2 /media/hd0
-</span></span><span style="display:flex;"><span>Windows is hibernated, refused to mount.
-</span></span><span style="display:flex;"><span>Falling back to read-only mount because the NTFS partition is in an
-</span></span><span style="display:flex;"><span>unsafe state. Please resume and shutdown Windows fully <span style="color:#f92672">(</span>no hibernation
-</span></span><span style="display:flex;"><span>or fast restarting.<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ mount /dev/sda2 /media/hd0
+</span></span><span class="line"><span class="cl">Windows is hibernated, refused to mount.
+</span></span><span class="line"><span class="cl">Falling back to read-only mount because the NTFS partition is in an
+</span></span><span class="line"><span class="cl">unsafe state. Please resume and shutdown Windows fully <span class="o">(</span>no hibernation
+</span></span><span class="line"><span class="cl">or fast restarting.<span class="o">)</span>
 </span></span></code></pre></div><p>What? Windows is hibernate? Seingat penulis selalu tertib dalam menjalankan SOP shutdown (<em>close</em> semua window aplikasi yang terbuka, shutdown melalui menu, tidak ada <em>warning</em> apapun yang muncul di monitor). Jadi ya dianggap baik-baik saja. Ternyata tidak.</p>
 <p>Kemudian coba difixkan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ntfsfix /dev/sda2
-</span></span><span style="display:flex;"><span>Mounting volume... Windows is hibernated, refused to mount.
-</span></span><span style="display:flex;"><span>FAILED
-</span></span><span style="display:flex;"><span>Attempting to correct errors... 
-</span></span><span style="display:flex;"><span>Processing $MFT and $MFTMirr...
-</span></span><span style="display:flex;"><span>Reading $MFT... OK
-</span></span><span style="display:flex;"><span>Reading $MFTMirr... OK
-</span></span><span style="display:flex;"><span>Comparing $MFTMirr to $MFT... OK
-</span></span><span style="display:flex;"><span>Processing of $MFT and $MFTMirr completed successfully.
-</span></span><span style="display:flex;"><span>Setting required flags on partition... OK
-</span></span><span style="display:flex;"><span>Going to empty the journal <span style="color:#f92672">(</span>$LogFile<span style="color:#f92672">)</span>... OK
-</span></span><span style="display:flex;"><span>Windows is hibernated, refused to mount.
-</span></span><span style="display:flex;"><span>Remount failed: Operation not permitted
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ntfsfix /dev/sda2
+</span></span><span class="line"><span class="cl">Mounting volume... Windows is hibernated, refused to mount.
+</span></span><span class="line"><span class="cl">FAILED
+</span></span><span class="line"><span class="cl">Attempting to correct errors... 
+</span></span><span class="line"><span class="cl">Processing <span class="nv">$MFT</span> and <span class="nv">$MFTMirr</span>...
+</span></span><span class="line"><span class="cl">Reading <span class="nv">$MFT</span>... OK
+</span></span><span class="line"><span class="cl">Reading <span class="nv">$MFTMirr</span>... OK
+</span></span><span class="line"><span class="cl">Comparing <span class="nv">$MFTMirr</span> to <span class="nv">$MFT</span>... OK
+</span></span><span class="line"><span class="cl">Processing of <span class="nv">$MFT</span> and <span class="nv">$MFTMirr</span> completed successfully.
+</span></span><span class="line"><span class="cl">Setting required flags on partition... OK
+</span></span><span class="line"><span class="cl">Going to empty the journal <span class="o">(</span><span class="nv">$LogFile</span><span class="o">)</span>... OK
+</span></span><span class="line"><span class="cl">Windows is hibernated, refused to mount.
+</span></span><span class="line"><span class="cl">Remount failed: Operation not permitted
 </span></span></code></pre></div><p>Masih gagal ternyata. Ok, lanjut.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bash-5.0# ntfs-3g -o remove_hiberfile /dev/sda2 /media/hd0
-</span></span><span style="display:flex;"><span>bash-5.0# 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">bash-5.0# ntfs-3g -o remove_hiberfile /dev/sda2 /media/hd0
+</span></span><span class="line"><span class="cl">bash-5.0# 
 </span></span></code></pre></div><p>Alhamdulillah clear. Sudah ter-<em>mount</em> dengan baik.</p>
 
 

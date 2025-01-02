@@ -140,6 +140,50 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Memulai MariaDB
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Apa itu MariaDB MariaDB adalah software untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.
+Install MariaDB Secara default, apabila Slackware diisnntall full system maka MariaDB akan terinstall. Jadi tidak usah repot-repot untuk insytallnya.
+Memulai MariaDB Sebelum memulai, ada beberapa konfigurasi yang perlu dilakukan agar semua berjalan dengan baik. prompt R/ menunjukkan dilakukan dengan priviledge root
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-03-30 00:00:00 +0000 UTC'>30 Mar 2019</span></footer>
+  <a class="entry-link" aria-label="post link to Memulai MariaDB" href="https://sasongko.web.id/post/2019-03-30-memulai-mariadb/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Perl IDE dengan vim
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Reputasi vim sebagai text editor sudah teruji berpuluh tahun. Ternyata Vim juga memiliki support plugin untuk perl. Hal ini membuat vim bisa dijadikan sebagai integrated development environment (IDE) untuk perl.
+Download plugin-nya kemudian extract
+$ wget https://www.vim.org/scripts/download_script.php?src_id=24473 -O perl-support.zip -O perl-support.zip $ mkdir -p .vim $ unzip perl-support.zip -d .vim Aktifkan
+$ echo &#34;filetype plugin on&#34; &gt;&gt; .vimrc </p>
+  </div>
+  <footer class="entry-footer"><span title='2019-02-01 00:00:00 +0000 UTC'>01 Feb 2019</span></footer>
+  <a class="entry-link" aria-label="post link to Perl IDE dengan vim" href="https://sasongko.web.id/post/2019-02-01-perl-ide-vim/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Hapus Aplikasi yang Diinstall Tanggal Tertentu
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Tiga hari ini mencoba-coba install kdenlive, aplikasi editor video yang konon handal. Sengaja disebut konon karena belum membuktikannya secara langsung. Setelah semua beres diinstall ternyata malah berubah pikiran. Apa perlu saya pakai editor video? Toh selama ini tidak pernah edit video dan pekerjaan sehari-hari juga tidak bersentuhan langsung dengan pembuatan maupun editing video. Jadi hapus sajalah.
+kdenlive-nya sukses di-uninstall, tapi bagaimana dengan seabrek dependensinya? Hapus juga deh! Kalau besok-besok diperlukan tinggal install lagi.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-12-08 00:00:00 +0000 UTC'>08 Dec 2018</span></footer>
+  <a class="entry-link" aria-label="post link to Hapus Aplikasi yang Diinstall Tanggal Tertentu" href="https://sasongko.web.id/post/2018-12-08-hapus-aplikasi-diinstall-tanggal-tertentu/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Bermain Tetris dengan Emacs
     </h2>
   </header>
@@ -165,50 +209,6 @@ $ sbocheck # command ini dijalankan oleh root Unescaped left brace in regex is d
   </div>
   <footer class="entry-footer"><span title='2018-07-17 00:00:00 +0000 UTC'>17 Jul 2018</span></footer>
   <a class="entry-link" aria-label="post link to Fix sbotools Perl unescaped left brace in regex is deprecated here" href="https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Hapus Trash via Command Line
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Iseng-iseng buka hidden folder ada yang menarik. File yang ada di Trash (bisa buka di Thunar dengan path trash:/// sama dengan yang ada di ~/.local/share/Trash/files/. Sehingga kalau ingin mengosongkan Trash dan posisi sedang di CLI dan tidak membuka file manager ataupun lagi aras-arasen, sangat bisa.
-rm -rv ~/.local/share/Trash/* </p>
-  </div>
-  <footer class="entry-footer"><span title='2018-06-23 00:00:00 +0000 UTC'>23 Jun 2018</span></footer>
-  <a class="entry-link" aria-label="post link to Hapus Trash via Command Line" href="https://sasongko.web.id/post/2018-06-23-kosongkan-trash/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mencoba Manokwari
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Beberapa waktu yang lalu mencoba install manokwari dan berhasil dengan beberapa kekurangan.
-Proses install berjalan lancar walau sempat terhambat sebentar. Apalagi kalau bukan karena dependensi. Untuk compile menggunakan meson yang disediakan Pengembang dan prosesnya lebih cepat. Oiya, ini saya hanya lakukan di slackware64-current.
-Tentang dependensi, saya bagi menjadi 3 bagian.
-Sudah terinstall secara default atau tersedia di official repo Slackware
-meson glib2 gtk&#43;3 atk cairo x11 libnotify Tersedia di SBo
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2018-06-19 00:00:00 +0000 UTC'>19 Jun 2018</span></footer>
-  <a class="entry-link" aria-label="post link to Mencoba Manokwari" href="https://sasongko.web.id/post/2018-06-19-mencoba-manokwari/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengganti Kata Secara Massal
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Dulu, saat masih menggunakan BlankOn, ternyata pada beberapa postingan di blog ini ada ketidakseragaman, yaitu tag blankOn dan blankon yang sebenarnya secara esensial sama saja.
-Sekarang sudah diperbaiki. Kata “blankOn” yang ada di tiap file diganti “blankon”. Penggantian ini secara massal saja biar lebih praktis. Filenya di direktori _posts.
-sed -i &#39;s/blankOn/blankon/g&#39; _posts/*.md </p>
-  </div>
-  <footer class="entry-footer"><span title='2018-06-19 00:00:00 +0000 UTC'>19 Jun 2018</span></footer>
-  <a class="entry-link" aria-label="post link to Mengganti Kata Secara Massal" href="https://sasongko.web.id/post/2018-06-19-mengganti-kata-secara-massal/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

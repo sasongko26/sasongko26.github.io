@@ -140,6 +140,49 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Copy paste xterm
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>xterm adalah X terminal emulator populer legendaris. Penulis masih menggunakannya sebagai terminal utama ketika menggunakan blackbox. Sesekali saat menggunakan xfce atau kde.
+xterm ini khas. Tidak seperti xfce4-terminal atau konsole yang secara default pengguna bisa melakukan copy paste (Copas) dengan mudah. Ctrl Shift C, Ctrl Shift V untuk copas pada terminal emulator lainnya tidak berlaku! Butuh pengaturan khusus untuk melakukannya. Mengatur agar setiap yang diblok akan dimasukkan ke clipboard.
+Untuk bisa melakukan copy:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-11 00:00:00 +0000 UTC'>11 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Copy paste xterm" href="https://sasongko.web.id/post/2021-02-11-copy-paste-xterm/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">xauth serverauthXXX does not exist
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Beberapa saat yang lalu, saking asyiknya menyelesaikan pekerjaan, tidak ngeh kalau baterai laptop kritis harus segera di-charge. Alhasil laptop mati seketika. Dinyalakan lagi (sambil charging tentunya) gagal masuk ke X.
+xauth: file /home/xyz/.serverauth.2909 does not exist Solusinya simpel
+$ rm .serverauth* </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-10 00:00:00 +0000 UTC'>10 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to xauth serverauthXXX does not exist" href="https://sasongko.web.id/post/2021-02-10-xauth-serverauth-xxx-does-not-exist/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">nmcli sw disabled
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Beberapa saat yang lalu penulis terkena prank dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan flight mode di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek nmcli
+$ nmcli p2p-dev-wlan0: disconnected &#34;p2p-dev-wlan0&#34; wifi-p2p, sw disabled, hw eth0: unavailable &#34;Realtek RTL810xE&#34; ethernet (r8169), C8:5B:76:66:51:6C, hw, mtu 1500 wlan0: unavailable &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), 8E:58:C9:8B:64:0F, sw disabled, hw, mtu 1500 lo: unmanaged &#34;lo&#34; loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536 Use &#34;nmcli device show&#34; to get complete information about known devices and &#34;nmcli connection show&#34; to get an overview on active connection profiles. Consult nmcli(1) and nmcli-examples(7) manual pages for complete usage details. Ada output yang aneh : sw disabled. Penulis baru ingat kalau flight mode-nya aktif. Setelah dinonaktifkan, semua kembali normal. sw disabled enyah dari Output nmcli.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-09 00:00:00 +0000 UTC'>09 Feb 2021</span></footer>
+  <a class="entry-link" aria-label="post link to nmcli sw disabled" href="https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Copy paste vim mode visual
     </h2>
   </header>
@@ -166,52 +209,6 @@ Baris 2, fungsi print() untuk menampilkan ke layar. sqrt() adalah fungsi untuk m
   </div>
   <footer class="entry-footer"><span title='2021-02-07 00:00:00 +0000 UTC'>07 Feb 2021</span></footer>
   <a class="entry-link" aria-label="post link to Impor library python" href="https://sasongko.web.id/post/2021-02-07-impor-library-python/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Comments python
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Comments atau komentar adalah sekumpulan teks yang dituliskan dalam program tetapi tidak akan dieksekusi. Ada 2 jenis comments dalam bahasa python, yaitu
-Single line comment. Hanya terdiri dari 1 baris comments. Untuk menuliskannya, beri tanda # di awal comments. Contoh :
-# ini adalah single line comment Multiline comments. Terdiri dari lebih dari 1 baris. Dibuka dan ditutup dengan &#39;&#39;&#39; Contoh :
-&#39;&#39;&#39; ini adalah program python untuk mengetahui sesuatu &#39;&#39;&#39; </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-02-05 00:00:00 +0000 UTC'>05 Feb 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Comments python" href="https://sasongko.web.id/post/2021-02-05-comments-python/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Tipe data python
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Python memiliki beberapa tipe data, yaitu :
-None Numeric Boolean Sequence Set Map Tipe data python none Hanya memiliki 1 nilai yaitu None
-Tipe data numeric Tipe data numeric terdiri atas tipe data integer dan float. Integer merupakan bilangan bulat. Float merupakan bilangan desimal.
-Tipe data boolean Terdiri dari 2 nilai yaitu True dan False
-Tipe data sequence Ada 3 macam yaitu string, list dan tuple
-Tipe data string Data ini diapit oleh &#39; atau &#34;. Contoh :
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-02-05 00:00:00 +0000 UTC'>05 Feb 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Tipe data python" href="https://sasongko.web.id/post/2021-02-06-tipe-data-python/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Penamaan variabel python
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Dalam bahasa python, ada 4 ketentuan pemberian nama variabel, yaitu :
-Harus dimulai dengan huruf (a-z, A-Z) atau garis bawah underscore (_) dan tidak boleh diawali dengan angka (0-9). Boleh mengandung karakter huruf, angka dan underscore (a-z, A-Z, 0-9, _) Bersifat sensitive case yang mengartikan bahwa variabel Nama, nama dan NAMA adalah variabel yang berbeda Tidak boleh menggunakan reserved words seperti for, while, return </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-02-04 00:00:00 +0000 UTC'>04 Feb 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Penamaan variabel python" href="https://sasongko.web.id/post/2021-02-04-penamaan-variabel-python/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

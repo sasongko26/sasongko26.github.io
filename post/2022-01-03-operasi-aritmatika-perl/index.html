@@ -339,73 +339,73 @@ say(&#34;b%a = $o&#34;);
   </header> 
   <div class="post-content"><p>Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, <em>autoincrement, autodecrement</em>.</p>
 <p>Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#39;say&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $a <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $b <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Angka pertama (a) adalah $a&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Angka kedua (b) adalah $b&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># penjumlahan</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $c <span style="color:#f92672">=</span> $a <span style="color:#f92672">+</span> $b;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a+b = $c&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># pengurangan</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $d <span style="color:#f92672">=</span> $b <span style="color:#f92672">-</span> $a;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b-a = $d&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># perkalian</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $e <span style="color:#f92672">=</span> $a <span style="color:#f92672">*</span> $b;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a*b = $e&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># pembagian</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $f <span style="color:#f92672">=</span> $a <span style="color:#f92672">/</span> $b;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $g <span style="color:#f92672">=</span> $b <span style="color:#f92672">/</span> $a;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a/b = $f&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b/a = $g&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># pemangkatan</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $h <span style="color:#f92672">=</span> $a <span style="color:#f92672">**</span> $b;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $i <span style="color:#f92672">=</span> $b <span style="color:#f92672">**</span> $a;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a^b = $h&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b^a = $i&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># autoincrement</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># tanda + di depan</span>
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai a sebelum autoincrement = $a&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $j <span style="color:#f92672">=</span> <span style="color:#f92672">++</span>$a;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;++a = $j&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai a sesudah autoincrement = $a&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># tanda + di belakang</span>
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai b sebelum autoincrement $b&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $k <span style="color:#f92672">=</span> $b<span style="color:#f92672">++</span>;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;$b++ = $k&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;Nilai b setelah autoincrement $b&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># autodecrement</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># tanda - di depan</span>
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;c = a+b. c sebelum autodecrement = $c&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $l <span style="color:#f92672">=</span> <span style="color:#f92672">--</span>$c;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;l = c setelah autodecrement = $l&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># tanda - di belakang</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $m <span style="color:#f92672">=</span> $c<span style="color:#f92672">--</span>;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;c setelah autodecrement = $m&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># modulus (sisa hasil bagi)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $a <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $b <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $n <span style="color:#f92672">=</span> $a % <span style="color:#960050;background-color:#1e0010">$</span>b;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $o <span style="color:#f92672">=</span> $b % <span style="color:#960050;background-color:#1e0010">$</span>a;
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a = $a&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b = $b&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;a%b = $n&#34;</span>);
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;b%a = $o&#34;</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/perl</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">strict</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">warnings</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">feature</span> <span class="s">&#39;say&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$b</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;Angka pertama (a) adalah $a&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;Angka kedua (b) adalah $b&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># penjumlahan</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$c</span> <span class="o">=</span> <span class="nv">$a</span> <span class="o">+</span> <span class="nv">$b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;a+b = $c&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># pengurangan</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$d</span> <span class="o">=</span> <span class="nv">$b</span> <span class="o">-</span> <span class="nv">$a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;b-a = $d&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># perkalian</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$e</span> <span class="o">=</span> <span class="nv">$a</span> <span class="o">*</span> <span class="nv">$b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;a*b = $e&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># pembagian</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$f</span> <span class="o">=</span> <span class="nv">$a</span> <span class="o">/</span> <span class="nv">$b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$g</span> <span class="o">=</span> <span class="nv">$b</span> <span class="o">/</span> <span class="nv">$a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;a/b = $f&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;b/a = $g&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># pemangkatan</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$h</span> <span class="o">=</span> <span class="nv">$a</span> <span class="o">**</span> <span class="nv">$b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$i</span> <span class="o">=</span> <span class="nv">$b</span> <span class="o">**</span> <span class="nv">$a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;a^b = $h&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;b^a = $i&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># autoincrement</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># tanda + di depan</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;Nilai a sebelum autoincrement = $a&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$j</span> <span class="o">=</span> <span class="o">++</span><span class="nv">$a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;++a = $j&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;Nilai a sesudah autoincrement = $a&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># tanda + di belakang</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;Nilai b sebelum autoincrement $b&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$k</span> <span class="o">=</span> <span class="nv">$b</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;$b++ = $k&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;Nilai b setelah autoincrement $b&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># autodecrement</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># tanda - di depan</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;c = a+b. c sebelum autodecrement = $c&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$l</span> <span class="o">=</span> <span class="o">--</span><span class="nv">$c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;l = c setelah autodecrement = $l&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># tanda - di belakang</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$m</span> <span class="o">=</span> <span class="nv">$c</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;c setelah autodecrement = $m&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># modulus (sisa hasil bagi)</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$b</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$n</span> <span class="o">=</span> <span class="nv">$a</span> <span class="nv">%</span> <span class="err">$</span><span class="nv">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$o</span> <span class="o">=</span> <span class="nv">$b</span> <span class="nv">%</span> <span class="err">$</span><span class="nv">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;a = $a&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;b = $b&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;a%b = $n&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;b%a = $o&#34;</span><span class="p">);</span>
 </span></span></code></pre></div>
 
   </div>

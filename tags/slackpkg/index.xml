@@ -15,7 +15,7 @@
       <guid>https://sasongko.web.id/post/2022-05-26-sinkronisasi-official-repo/</guid>
       <description>&lt;p&gt;&lt;em&gt;Package management&lt;/em&gt; atas &lt;em&gt;packages&lt;/em&gt; yang ada di &lt;em&gt;official repo&lt;/em&gt; pda &lt;strong&gt;slackware&lt;/strong&gt; dapat dilakukan dengan dengan &lt;strong&gt;slackpkg&lt;/strong&gt;. Sinkronisasi perlu dilakukan agar &lt;em&gt;packages&lt;/em&gt; yang diinstall merupakan versi terbaru sesuai yang disediakan di repo. Sinkronisasi ini meliputi 2 kegiatan, yaitu sinkronisasi &lt;em&gt;database packages&lt;/em&gt; dan versi &lt;em&gt;packages&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Sinkronisasi &lt;em&gt;database packages&lt;/em&gt; meliputi &lt;em&gt;list&lt;/em&gt; apa saja file yang ada di repo, checksum, dll. Dilakukan dengan&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;slackpkg update
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slackpkg update
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Khusus untuk versi &lt;em&gt;packages&lt;/em&gt;, menyamakan versi terinstall dengan versi repo untuk semua &lt;em&gt;packages&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
@@ -30,9 +30,9 @@
 &lt;li&gt;Install, upgrade, reinstall, remove, blacklist packages&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Sebelum menggunakannya, pilih dahulu &lt;em&gt;mirror&lt;/em&gt; yang akan digunakan&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# vi /etc/slackpkg/mirrors&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# vi /etc/slackpkg/mirrors&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pada file tersebut sudah tersedia list mirror yang bisa digunakan. Apakah menggunakan &lt;strong&gt;current&lt;/strong&gt; atau &lt;strong&gt;stable&lt;/strong&gt; (saat ini 15.0). Pilih mirrornya dengan cara &lt;em&gt;uncomment&lt;/em&gt; baris alamat mirrornya. Contoh&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;https://mirrors.slackware.com/slackware/slackware64-15.0/
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https://mirrors.slackware.com/slackware/slackware64-15.0/
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;untuk menggunakan mirror terdekat versi &lt;strong&gt;slackware 15.0&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
@@ -49,7 +49,7 @@
       <pubDate>Sat, 10 Sep 2016 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2016-09-10-nonaktif-delall-slackpkg/</guid>
       <description>&lt;p&gt;Secara &lt;em&gt;default&lt;/em&gt;, &lt;!-- raw HTML omitted --&gt;slackpkg&lt;!-- raw HTML omitted --&gt; akan menghapus semua file yang di- &lt;em&gt;download&lt;/em&gt; / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di &lt;!-- raw HTML omitted --&gt;/etc/slackpkg/slackpkg.conf&lt;!-- raw HTML omitted --&gt; pada baris 77&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;DELALL&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;on
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;DELALL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;on
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Keuntungan dari konfigurasi ini menghemat &lt;em&gt;ruang harddisk&lt;/em&gt;. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah &lt;!-- raw HTML omitted --&gt;on&lt;!-- raw HTML omitted --&gt; menjadi &lt;!-- raw HTML omitted --&gt;off&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
     </item>
     <item>

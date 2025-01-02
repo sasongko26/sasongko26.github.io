@@ -243,21 +243,21 @@ $sapa = &ldquo;Hai&hellip;. &quot;
 $distro = &ldquo;Slackware&rdquo;
 $penilaian = &ldquo;distro terbaik.&rdquo;
 Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan &ldquo;.&rdquo;, sedangkan pengulangan dengan &ldquo;x&rdquo;.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/perl</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> strict;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> warnings;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> feature <span style="color:#e6db74">&#34;say&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $sapa <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hai.... &#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $distro <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Slackware &#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $penilaian <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;distro terbaik.&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># penggabungan</span>
-</span></span><span style="display:flex;"><span>say($sapa<span style="color:#f92672">.</span>$distro<span style="color:#f92672">.</span>$penilaian);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># pengulangan</span>
-</span></span><span style="display:flex;"><span>say(<span style="color:#e6db74">&#34;$distro&#34;</span> x <span style="color:#ae81ff">5</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/perl</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">strict</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">warnings</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">feature</span> <span class="s">&#34;say&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$sapa</span> <span class="o">=</span> <span class="s">&#34;Hai.... &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$distro</span> <span class="o">=</span> <span class="s">&#34;Slackware &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$penilaian</span> <span class="o">=</span> <span class="s">&#34;distro terbaik.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># penggabungan</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="nv">$sapa</span><span class="o">.</span><span class="nv">$distro</span><span class="o">.</span><span class="nv">$penilaian</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># pengulangan</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="s">&#34;$distro&#34;</span> <span class="n">x</span> <span class="mi">5</span><span class="p">);</span>
 </span></span></code></pre></div>
 
   </div>

@@ -204,12 +204,12 @@ Atau untuk tampilan grafisnya gunakan dconf-editor / penyunting dconf yang mana 
 </div>
   </header> 
   <div class="post-content"><p>Walaupun diturunkan dari <a href="http://www.debian.org">debian</a>, <strong>BlankOn Suroboyo</strong> berbeda dengan debian karena pada Suroboyo secara default akan secara otomatis membuka media simpan (<em>flashdisk</em> misalnya) setelah media disambungkan ke komputer/laptop. Fitur ini dinamakan <em>automount-open media</em> yang agak mirip dengan <em>autorun</em> pada <em>windows</em>. Beberapa orang mungkin merasa terganggu dan ingin mematikan. Atau sebaliknya, pengguna debian justru ingin mengaktifkan fitur ini. Bagaimana cara mengaturnya?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gsettings set org.gnome.desktop.media-handling automount false
-</span></span><span style="display:flex;"><span>$ gsettings set org.gnome.desktop.media-handling automount-open false
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ gsettings <span class="nb">set</span> org.gnome.desktop.media-handling automount <span class="nb">false</span>
+</span></span><span class="line"><span class="cl">$ gsettings <span class="nb">set</span> org.gnome.desktop.media-handling automount-open <span class="nb">false</span>
 </span></span></code></pre></div><p>Atau untuk tampilan grafisnya gunakan <strong>dconf-editor / penyunting dconf</strong> yang mana harus install dulu, sedangkan debian tidak usah karena <strong>dconf-editor</strong> sudah terpasang.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-get  install dconf-editor
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo apt-get  install dconf-editor
 </span></span></code></pre></div><p>Kemudian jalankan <strong>dconf-editor</strong> melalui menu <em>Aplikasi &gt; Rupa-rupa &gt; Penyunting dconf</em>. Pilih</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>org.gnome.desktop.media-handling
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">org.gnome.desktop.media-handling
 </span></span></code></pre></div><p>Opsi <strong>Automount</strong> memberikan pilihan apakah akan mengaitkan/<em>mount</em> media secara otomatis. Jika diaktifkan (diberi tanda centang), maka <em>Nautilus</em> akan mengait otomatis media seperti <em>flashdisk</em> begitu ditancapkan. Sedangkan <em>Automount-open</em> memberikan pilihan apakah akan mengaitkan sekaligus membuka media begitu ditancapkan.
 <img loading="lazy" src="https://sasongko.web.id/gambar/disableautomount.png"></p>
 

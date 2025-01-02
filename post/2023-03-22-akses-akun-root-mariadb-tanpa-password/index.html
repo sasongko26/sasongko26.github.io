@@ -231,20 +231,20 @@ Oiya, 3 command pertama dijalankan dengan privilege root yang ada di sistem di m
 </div>
   </header> 
   <div class="post-content"><p>Untuk akses root mariadb biasanya memerlukan password. Tapi sebenarnya root bisa diakses tanpa password. Pertama, hentikan dulu <em>service</em> <strong>mariadb</strong>-nya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ /etc/rc.d/rc.mysqld stop
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ /etc/rc.d/rc.mysqld stop
 </span></span></code></pre></div><p>Kemudian, restart database server tanpa peduli otentikasinya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mariadbd-safe --skip-grant-tables --skip-networking &amp;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mariadbd-safe --skip-grant-tables --skip-networking <span class="p">&amp;</span>
 </span></span></code></pre></div><p>Nah, akun root <strong>mariadb</strong> sudah bisa diakses tanpa <em>password</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mariadb -u root
-</span></span><span style="display:flex;"><span>Welcome to the MariaDB monitor.  Commands end with ; or <span style="color:#ae81ff">\g</span>.
-</span></span><span style="display:flex;"><span>Your MariaDB connection id is <span style="color:#ae81ff">3</span>
-</span></span><span style="display:flex;"><span>Server version: 10.11.2-MariaDB Source distribution
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Copyright <span style="color:#f92672">(</span>c<span style="color:#f92672">)</span> 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#39;help;&#39;</span> or <span style="color:#e6db74">&#39;\h&#39;</span> <span style="color:#66d9ef">for</span> help. Type <span style="color:#e6db74">&#39;\c&#39;</span> to clear the current input statement.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>MariaDB <span style="color:#f92672">[(</span>none<span style="color:#f92672">)]</span>&gt; 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mariadb -u root
+</span></span><span class="line"><span class="cl">Welcome to the MariaDB monitor.  Commands end with <span class="p">;</span> or <span class="se">\g</span>.
+</span></span><span class="line"><span class="cl">Your MariaDB connection id is <span class="m">3</span>
+</span></span><span class="line"><span class="cl">Server version: 10.11.2-MariaDB Source distribution
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Copyright <span class="o">(</span>c<span class="o">)</span> 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Type <span class="s1">&#39;help;&#39;</span> or <span class="s1">&#39;\h&#39;</span> <span class="k">for</span> help. Type <span class="s1">&#39;\c&#39;</span> to clear the current input statement.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">MariaDB <span class="o">[(</span>none<span class="o">)]</span>&gt; 
 </span></span></code></pre></div><p>Oiya, 3 <em>command</em> pertama dijalankan dengan <em>privilege</em> <strong>root</strong> yang ada di sistem di mana <strong>mariadb</strong> tersebut diinstall.</p>
 
 

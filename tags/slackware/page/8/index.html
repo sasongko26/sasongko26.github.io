@@ -140,6 +140,50 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Two fer bash
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Two fer merupakan salah satu soal latihan pemrograman yang ada di exercism. Latihan ini meminta untuk dibuatkan suatu script yang apabila script tersebut dieksekusi tanpa argumen apapun maka akan mengeluarkan output “One for you, one for me.”. Apabila diberikan suatu argumen yang merupakan nama seseorang misalnya Sasongko, maka outputnya “One for Sasongko, one for me.”.
+Berikut adalah script bash-nya
+#!/usr/bin/bash main () { NAME=${1:-you} echo &#34;One for $NAME, one for me.&#34; } main &#34;$@&#34; </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-03-30 00:00:00 +0000 UTC'>30 Mar 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Two fer bash" href="https://sasongko.web.id/post/2023-03-30-two-fer-bash/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Akses akun root mariadb tanpa password
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk akses root mariadb biasanya memerlukan password. Tapi sebenarnya root bisa diakses tanpa password. Pertama, hentikan dulu service mariadb-nya.
+$ /etc/rc.d/rc.mysqld stop Kemudian, restart database server tanpa peduli otentikasinya.
+$ mariadbd-safe --skip-grant-tables --skip-networking &amp; Nah, akun root mariadb sudah bisa diakses tanpa password
+$ mariadb -u root Welcome to the MariaDB monitor. Commands end with ; or \g. Your MariaDB connection id is 3 Server version: 10.11.2-MariaDB Source distribution Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others. Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement. MariaDB [(none)]&gt; Oiya, 3 command pertama dijalankan dengan privilege root yang ada di sistem di mana mariadb tersebut diinstall.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-03-22 00:00:00 +0000 UTC'>22 Mar 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Akses akun root mariadb tanpa password" href="https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Restore rc.local
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sudah beberapa minggu kernel tidak di-upgrade. Akhirnya semalam memutuskan untuk upgrade kernel dari 6.1.4 ke 6.1.13. Sebenarnya tidak ada hal khusus yang menjadi alasan pasti mengapa di-upgrade. Tidak ada fitur khusus yang diincar. Namun, selayaknya peningkatan versi, biasanya ada perbaikan bugs ataupun performance improvement, maka tidak masalah juga kalau di-upgrade.
+Upgrade kernel sesuai prosedur menggunakan slackpkg. Proses berjalan lancar aman terkendali. Baru menyadari ada yang terlupakan, ketika menyalakan kembali laptop: brightness-nya terang sekali! Olala, pengaturan brightness yang semula tersimpan di /etc/rc.d/rc.local hilang, karena baru ingat, setelah upgrade kernel, opsi untuk rc.*.new yang dipilih adalah overwrite.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-02-25 00:00:00 +0000 UTC'>25 Feb 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Restore rc.local" href="https://sasongko.web.id/post/2023-02-26-restore-rc-local/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Coding pertama rust
     </h2>
   </header>
@@ -164,49 +208,6 @@ colorscheme koehler </p>
   </div>
   <footer class="entry-footer"><span title='2023-01-10 00:00:00 +0000 UTC'>10 Jan 2023</span></footer>
   <a class="entry-link" aria-label="post link to Mengubah colorscheme vim" href="https://sasongko.web.id/post/2023-01-10-ubah-colorscheme-vim/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengatur brightness
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Pengaturan brightness bisa dilakukan dengan melakukan assign nilai pada
-/sys/class/backlight/intel_backlight/brightness Adapun nilai maksimal yang bisa diset ada di
-/sys/class/backlight/intel_backlight/max_brightness Oiya, di atas menggunakan graphics intel jadi intel_backlight.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-16 00:00:00 +0000 UTC'>16 Nov 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Mengatur brightness" href="https://sasongko.web.id/post/2022-11-16-mengatur-brightness/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Virtualbox cannot register existing type NMAgentManagerError
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Setelah install virtualbox menggunakan binary .run, ketika dijalankan via terminal mengalami sgfault:
-bash-5.2$ virtualbox (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot register existing type &#39;NMAgentManagerError&#39; (process:7040): GLib-CRITICAL **: 00:53:14.710: g_once_init_leave: assertion &#39;result != 0&#39; failed (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot retrieve class for invalid (unclassed) type &#39;invalid&#39; Segmentation fault Solusinya:
-bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never </p>
-  </div>
-  <footer class="entry-footer"><span title='2022-10-30 00:00:00 +0000 UTC'>30 Oct 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Virtualbox cannot register existing type NMAgentManagerError" href="https://sasongko.web.id/post/2022-10-30-virtualbox-updater-segfault/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install Sound Open Firmware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Langsung saja
-cd /opt git clone https://github.com/thesofproject/sof-bin.git cd sof-bin Masuk ke direktori rilis terbaru, contoh kali ini v2.2
-cd v2.2.x rsync -a sof-v2.2/ /lib/firmware/intel/sof/ rsync -a sof-tplg-v2.2 /lib/firmware/intel/sof-tplg/ </p>
-  </div>
-  <footer class="entry-footer"><span title='2022-08-13 00:00:00 +0000 UTC'>13 Aug 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Install Sound Open Firmware" href="https://sasongko.web.id/post/2022-08-13-install-sof/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

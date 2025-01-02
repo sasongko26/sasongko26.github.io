@@ -213,12 +213,12 @@ Ada masalah di libusb. Coba reinstall libusb">
 </div>
   </header> 
   <div class="post-content"><p>Ketika akan memindahkan data dari HP android ke laptop melalui <!-- raw HTML omitted -->thunar<!-- raw HTML omitted -->, menunggu lama dan berujung gagal. Setelah dicek dengan mencoba melalui <!-- raw HTML omitted -->jmtpfs<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ jmtpfs
-</span></span><span style="display:flex;"><span>Device <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>VID<span style="color:#f92672">=</span>0e8d and PID<span style="color:#f92672">=</span>201d<span style="color:#f92672">)</span> is a MediaTek Inc Elephone P8000.
-</span></span><span style="display:flex;"><span>error returned by libusb_claim_interface<span style="color:#f92672">()</span> <span style="color:#f92672">=</span> -6LIBMTP PANIC: Unable to initialize device
-</span></span><span style="display:flex;"><span>terminate called after throwing an instance of <span style="color:#e6db74">&#39;MtpErrorCantOpenDevice&#39;</span>
-</span></span><span style="display:flex;"><span>  what<span style="color:#f92672">()</span>:  Can<span style="color:#960050;background-color:#1e0010">&#39;</span>t open device
-</span></span><span style="display:flex;"><span>Aborted
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ jmtpfs
+</span></span><span class="line"><span class="cl">Device <span class="m">0</span> <span class="o">(</span><span class="nv">VID</span><span class="o">=</span>0e8d and <span class="nv">PID</span><span class="o">=</span>201d<span class="o">)</span> is a MediaTek Inc Elephone P8000.
+</span></span><span class="line"><span class="cl">error returned by libusb_claim_interface<span class="o">()</span> <span class="o">=</span> -6LIBMTP PANIC: Unable to initialize device
+</span></span><span class="line"><span class="cl">terminate called after throwing an instance of <span class="s1">&#39;MtpErrorCantOpenDevice&#39;</span>
+</span></span><span class="line"><span class="cl">  what<span class="o">()</span>:  Can<span class="err">&#39;</span>t open device
+</span></span><span class="line"><span class="cl">Aborted
 </span></span></code></pre></div><p>Ada masalah di <!-- raw HTML omitted -->libusb<!-- raw HTML omitted -->. Coba reinstall <!-- raw HTML omitted -->libusb<!-- raw HTML omitted --></p>
 <pre tabindex="0"><code># slackpkg reinstall libusb
 </code></pre><p>Alhamdulillah sukses.</p>

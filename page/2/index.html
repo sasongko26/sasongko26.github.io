@@ -149,6 +149,49 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengetahui kapasitas terpakai direktori
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk mengetahui kapasitas terpakai suatu direktori, misalnya ~/ bisa dengan
+$ du -s ~/ Akan terlihat berapa byte penggunaannya.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-22 00:00:00 +0000 UTC'>22 Dec 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Mengetahui kapasitas terpakai direktori" href="https://sasongko.web.id/post/2024-12-22-mengetahui-kapasitas-terpakai-direktori/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Reset pengaturan audio ke default
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Secara default, apabila komputer dihidupkan (atau dihidupkan ulang), audio akan mengikuti pengaturan terakhir yang digunakan. Keunggulan dari sistem ini adalah pengguna tidak perlu repot mengatur kalau sudah menemukan konfigurasi yang cocok. Tapi hal ini buat sebgaian orang, terutama kami bisa menjadi masalah.
+Soundcard yang saat ini digunakan adalah ES8336 yang problematik. Problem yang kami catat adalah tidak adanya suara yang terdengar, yang disebabkan oleh ketidakcocokan konfigurasi default alsa sehingga kami gunakan konfigurasi dari junocomp. Namun, konfigurasi dari junocomp ini ternyata juga masih ada masalah, yaitu selalu kembali ke pengaturan terakhir dalam pemilihan _audio device_nya. Contoh kasus: Kami pasang headset. Suara keluar dari headset. Laptop kami shutdown kemudian dihidupkan kembali dalam kondisi headset tidak lagi terpasang. Audio menjadi mati sempurna. Untuk mengatasi hal ini kami perlu mengembalikan ke pengaturan awal.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-18 00:00:00 +0000 UTC'>18 Dec 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Reset pengaturan audio ke default" href="https://sasongko.web.id/post/2024-12-18-reset-pengaturan-audio-default/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengakses file .dmg
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>File .dmg biasanya adalah software installer yang berlaku untuk MacOs. Scara default pengguna linux tidak bisa mengakses isi dari .dmg ini. Namun, dengan software dan teknik tertentu hal ini bisa dilakukan.
+Pertama, convert .dmg ke .img. Ini membutuhkan dmg2img. Khusus pengguna slackware dan derivatnya ini tersedia di SBo. Setelah dmg2img terinstall, konversi bisa dilakukan, dengan root privileges tentunya. Misalnya file .dmg nya adalah apel.dmg yang kemudian dikonversi menjadi apel.img.
+$ dmg2img apel.dmg apel.img Kemudian, atur apel.img sebagai loop device.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-04 00:00:00 +0000 UTC'>04 Dec 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Mengakses file .dmg" href="https://sasongko.web.id/post/2024-12-04-mengakses-file-dmg/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Disable direct cursor mode libreoffice writer
     </h2>
   </header>
@@ -172,48 +215,6 @@ Qemu memungkinkan sistem operasi windows dipanggil atau dijalankan dari linux. U
   </div>
   <footer class="entry-footer"><span title='2024-09-28 00:00:00 +0000 UTC'>28 Sep 2024</span></footer>
   <a class="entry-link" aria-label="post link to Jalankan windows dari linux dengan qemu" href="https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Convert png ke pdf
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Melengkapi catatan yang sudah ada tentang konversi file. Kali ini adalah konversi atau convert file dari berformat png menjadi pdf. Misalkan file gambar.png akan dikonversi menjadi pdf, maka command-nya
-$ mogrify -format pdf gambar.png Command tersebut di atas adalah bagian dari imagemagick yang secara default sudah terinstall di slackware.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-09-13 00:00:00 +0000 UTC'>13 Sep 2024</span></footer>
-  <a class="entry-link" aria-label="post link to Convert png ke pdf" href="https://sasongko.web.id/post/2024-09-13-convert-png-ke-pdf/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Convert pdf ke png secara massal
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Salah satu hal yang saya sukai dari keunggulan linux adalah kemudahannya dalam melakukan sesuatu secara massal dengan mudah, termasuk di antaranya konversi file. Hanya dengan mengetikkan atau bahkan cukup copy paste edit kita bisa menghemat waktu dan tenaga dalam mengubah format file.
-Kali ini kita akan mengubah atau convert file dari pdf menjadi gambar png. Tool yang digunakan adalah pdftopng. Tool ini secara default sudah ter-install di Slackware menjadi bagian dari package xpdf.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-07-19 00:00:00 +0000 UTC'>19 Jul 2024</span></footer>
-  <a class="entry-link" aria-label="post link to Convert pdf ke png secara massal" href="https://sasongko.web.id/post/2024-07-19-convert-pdf-to-png/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Seamonkey in wayland Error cannot open display
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Seamonkey adalah salah satu web browser yang secara default terinstall di slackware. Ketika login menggunakan SDDM dan mengaktifkan lingkungan native wayland, seamonkey tidak bisa dijalankan.
-$ seamonkey Error: cannot open display: :1 Solusinya
-$ GDK_BACKEND=x11 seamonkey </p>
-  </div>
-  <footer class="entry-footer"><span title='2024-05-25 00:00:00 +0000 UTC'>25 May 2024</span></footer>
-  <a class="entry-link" aria-label="post link to Seamonkey in wayland Error cannot open display" href="https://sasongko.web.id/post/2024-05-25-seamonkey-in-wayland/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

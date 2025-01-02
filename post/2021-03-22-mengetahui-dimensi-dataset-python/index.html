@@ -213,9 +213,9 @@ Dari output tersebut diketahui dataset mempunyai 178539 baris dan 39 kolom.">
 </div>
   </header> 
   <div class="post-content"><p>Untuk mengetahui dimensi atau jumlah baris dan kolom dataset dapat menggunakan shape dari pandas. Data diambil dari <a href="https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/">https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;</span>)
-</span></span><span style="display:flex;"><span>print(data<span style="color:#f92672">.</span>shape)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </span></span></code></pre></div><p>Output:</p>
 <pre tabindex="0"><code>(178539, 39)
 </code></pre><p>Dari output tersebut diketahui dataset mempunyai 178539 baris dan 39 kolom.</p>

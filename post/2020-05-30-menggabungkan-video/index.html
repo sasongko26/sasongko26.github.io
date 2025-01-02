@@ -239,13 +239,13 @@ Untuk menggabungnya">
 <p>Keempat file tersebut berada dalam folder yang sama.
 Kemudian mereka akan digabungkan menjadi piknik.mkv.
 Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vim list-piknik
-</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-1.mkv&#39;</span>
-</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-2.mkv&#39;</span>
-</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-3.mkv&#39;</span>
-</span></span><span style="display:flex;"><span>file <span style="color:#e6db74">&#39;piknik-4.mkv&#39;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim list-piknik
+</span></span><span class="line"><span class="cl">file <span class="s1">&#39;piknik-1.mkv&#39;</span>
+</span></span><span class="line"><span class="cl">file <span class="s1">&#39;piknik-2.mkv&#39;</span>
+</span></span><span class="line"><span class="cl">file <span class="s1">&#39;piknik-3.mkv&#39;</span>
+</span></span><span class="line"><span class="cl">file <span class="s1">&#39;piknik-4.mkv&#39;</span>
 </span></span></code></pre></div><p>Untuk menggabungnya</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg f concat -i list-piknik piknik.mkv
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg f concat -i list-piknik piknik.mkv
 </span></span></code></pre></div>
 
   </div>

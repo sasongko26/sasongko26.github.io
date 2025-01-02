@@ -235,18 +235,18 @@ ipv6 fe80::1a37:a13:b117:ff74
 </div>
   </header> 
   <div class="post-content"><p>Untuk mengetahui alamat ip lokal tanpa akses <strong>root</strong> dapat menggunakan <strong>nmcli</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ nmcli
-</span></span><span style="display:flex;"><span>wlan0: connected to Anatomi
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Qualcomm Atheros QCA9377&#34;</span>
-</span></span><span style="display:flex;"><span>        wifi <span style="color:#f92672">(</span>ath10k_pci<span style="color:#f92672">)</span>, CC:B0:DA:B5:3B:75, hw, mtu <span style="color:#ae81ff">1500</span>
-</span></span><span style="display:flex;"><span>        ip4 default
-</span></span><span style="display:flex;"><span>        inet4 192.168.120.19/24
-</span></span><span style="display:flex;"><span>        route4 0.0.0.0/0
-</span></span><span style="display:flex;"><span>        route4 192.168.120.0/24
-</span></span><span style="display:flex;"><span>        route4 192.168.120.0/24
-</span></span><span style="display:flex;"><span>        inet6 fe80::1a37:a13:b117:ff74/64
-</span></span><span style="display:flex;"><span>        route6 fe80::/64
-</span></span><span style="display:flex;"><span>        route6 ff00::/8
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ nmcli
+</span></span><span class="line"><span class="cl">wlan0: connected to Anatomi
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Qualcomm Atheros QCA9377&#34;</span>
+</span></span><span class="line"><span class="cl">        wifi <span class="o">(</span>ath10k_pci<span class="o">)</span>, CC:B0:DA:B5:3B:75, hw, mtu <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">        ip4 default
+</span></span><span class="line"><span class="cl">        inet4 192.168.120.19/24
+</span></span><span class="line"><span class="cl">        route4 0.0.0.0/0
+</span></span><span class="line"><span class="cl">        route4 192.168.120.0/24
+</span></span><span class="line"><span class="cl">        route4 192.168.120.0/24
+</span></span><span class="line"><span class="cl">        inet6 fe80::1a37:a13:b117:ff74/64
+</span></span><span class="line"><span class="cl">        route6 fe80::/64
+</span></span><span class="line"><span class="cl">        route6 ff00::/8
 </span></span></code></pre></div><p>Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah</p>
 <ol>
 <li>ipv4 192.168.120.19</li>

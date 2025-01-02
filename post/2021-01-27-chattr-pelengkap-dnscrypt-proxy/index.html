@@ -217,8 +217,8 @@ Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi maintaine
 <li>Memasukkan <strong>dnscryp-proxy</strong> ke /etc/rc.d/rc.local{,_shutdown}</li>
 </ol>
 <p>Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi <em>maintainer</em> <strong>dnscrypt-proxy</strong> tidak mengikutsertakan langkah ini. Penulis menggunakan <strong>NetworkManager</strong>, setelah <em>check &amp; recheck</em>, <code>dnscrypt-proxy</code> tidak bekerja karena file /etc/resolv.conf terkena <em>overwrite</em> oleh <strong>NetworkManager</strong>. Ini adalah langkah untuk memberikan imunisasi/mencegah <em>overwrite</em>. <em>Command</em> berikut dijalankan dengan <em>root privilege</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ cp /etc/resolv.conf.head /etc/resolv.conf
-</span></span><span style="display:flex;"><span>$ chattr +i /etc/resolv.conf
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ cp /etc/resolv.conf.head /etc/resolv.conf
+</span></span><span class="line"><span class="cl">$ chattr +i /etc/resolv.conf
 </span></span></code></pre></div>
 
   </div>

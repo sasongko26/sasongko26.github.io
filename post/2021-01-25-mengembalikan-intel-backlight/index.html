@@ -210,17 +210,17 @@ Kebetulan, salah 1 situs yang sering penulis kunjungi, LinuxQuestions.Org ada th
 </div>
   </header> 
   <div class="post-content"><p><em>Upgrade</em> kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. <em>Backlight</em> menjadi tidak berfungsi.  Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah <code>xbacklight</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ xbacklight
-</span></span><span style="display:flex;"><span>No outputs have backlight property
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ xbacklight
+</span></span><span class="line"><span class="cl">No outputs have backlight property
 </span></span></code></pre></div><p><img alt="<em>Brightness</em> 100%. Mentok kanan!" loading="lazy" src="https://sasongko.web.id/gambar/brightness-100.png"></p>
 <p><em>Backlight</em> atau <em>brightness</em> 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).</p>
 <p>Kebetulan, salah 1 situs yang sering penulis kunjungi, <strong>LinuxQuestions.Org</strong> ada <em>thread</em> yang <a href="https://www.linuxquestions.org/questions/slackware-14/intel_backlight-not-working-on-current-4175688981/">membahas masalah ini</a>.</p>
 <p>Cara yang dipakai di sini adalah dengan membuat <code>/etc/X11/xorg.conf.d/20-intel-backlight.conf</code> yang berisi</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Section <span style="color:#e6db74">&#34;Device&#34;</span>
-</span></span><span style="display:flex;"><span>		Identifier <span style="color:#e6db74">&#34;Intel Graphics&#34;</span>
-</span></span><span style="display:flex;"><span>		Driver <span style="color:#e6db74">&#34;Intel&#34;</span>
-</span></span><span style="display:flex;"><span>		Option <span style="color:#e6db74">&#34;Backlight&#34;</span> <span style="color:#e6db74">&#34;intel_backlight&#34;</span>
-</span></span><span style="display:flex;"><span>EndSection
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Section <span class="s2">&#34;Device&#34;</span>
+</span></span><span class="line"><span class="cl">		Identifier <span class="s2">&#34;Intel Graphics&#34;</span>
+</span></span><span class="line"><span class="cl">		Driver <span class="s2">&#34;Intel&#34;</span>
+</span></span><span class="line"><span class="cl">		Option <span class="s2">&#34;Backlight&#34;</span> <span class="s2">&#34;intel_backlight&#34;</span>
+</span></span><span class="line"><span class="cl">EndSection
 </span></span></code></pre></div><p>Alhamdulillah <em>solved</em>.</p>
 
 

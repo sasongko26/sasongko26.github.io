@@ -155,6 +155,47 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Download Seluruh Isi Website
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Melanjutkan [catatan yang lalu]({% post_url 2014-03-23-wget-linux-download-manager %}), kali ini adalah penggunaan wget untuk mengunduh/download website secara keseluruhan/rekursif.
+$ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url silahkan diganti dengan alamat websitenya.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-09 00:00:00 +0000 UTC'>09 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Download Seluruh Isi Website" href="https://sasongko.web.id/post/2015-06-06-download-seluruh-website/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Install Libre Office di Slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Secara default aplikasi perkantoran yang disediakan Slackware bukan Libre Office. Kalau pada saat instalasi Slackware (yang penulis gunakan arsitektur 64 bit) memilih full install maka aplikasi perkantoran yang terpasang adalah Calligra. Dibandingkan dengan Calligra, saya merasa lebih sreg menggunakan LibreOffice karena kompatibilitasnya yang lebih baik terhadap dokumen yang dibuat dengan Ms Office (harap maklum, masih banyak saudara-saudara kita yang belum bisa move on ke open source dan tidak semua menggunakan Ms Office bajakan).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-09 00:00:00 +0000 UTC'>09 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Install Libre Office di Slackware" href="https://sasongko.web.id/post/2015-06-09-install-libreoffice-slackbuild/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Uninstall Calligra Office Suite
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Calligra adalah office suite atau aplikasi perkantoran yang dikembangkan KDE yang dulu bernama KOffice. Kalau memasang KDE secara full kita akan mendapatinya.
+Calligra memang layak digunakan untuk keperluan perkantoran. Performanya dalam mengolah dokumen terbuka (open document format/ODF) cukup bagus. Namun sayangnya, Calligra tidak kompatibel dengan dokumen OOXML (dokumen yang dibuat dengan Microsoft Office). Tak jarang Calligra menjadi hang saat membuka atau mengolah dokumen dengan format docx (Ms Word), xlsx (Ms Excel) dan pptx (Ms PowerPoint). Penulis sering bekerja dengan dokumen OOXML karena rekan-rekan di kantor dan para mahasiswa belum bisa lepas dari OOXML. Maka demi kemaslahatan bersama, penulis tinggalkan Calligra dan beralih ke LibreOffice.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-09 00:00:00 +0000 UTC'>09 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Uninstall Calligra Office Suite" href="https://sasongko.web.id/post/2015-06-09-uninstall-calligra/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Install JDK Slackware
     </h2>
   </header>
@@ -181,51 +222,6 @@ Pertama yang harus diketahui adalah niat. Niat ini akan sangat menentukan apalag
   </div>
   <footer class="entry-footer"><span title='2015-06-06 00:00:00 +0000 UTC'>06 Jun 2015</span></footer>
   <a class="entry-link" aria-label="post link to Hal-hal yang Harus Diketahui Sebelum Menginstall Linux" href="https://sasongko.web.id/post/2015-06-06-sebelum-install-linux/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Operasi Direktori di Linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Operasi direktori/folder adalah suatu hal yang mendasar di linux. Walaupun sekarang banyak desktop environment yang menyebabkan sedikit interaksi dengan terminal langsung karena tinggal klik saja dalam mode grafis (GUI), kami akan tetap sampaikan bagaimana melakukannya dalam mode teks (CLI).
-Mengetahui posisi direktori sekarang Gunakan
-pwd untuk mengetahui saat ini aktif di mana. Contoh
-$ pwd /home/sasongko Tampak bahwa direktori saat ini adalah di /home/sasongko.
-Menampilkan isi direktori ls /direktori Contoh berikut akan menampilkan isi dari direktori /etc
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-01 00:00:00 +0000 UTC'>01 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Operasi Direktori di Linux" href="https://sasongko.web.id/post/2015-06-01-operasi-direktori/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Memformat Flashdisk di LInux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Memformat flashdisk di linux adalah hal yang mudah.
-Pertama, pastikan flashdisknya terdeteksi oleh sistem. Pada kesempatan ini merk flashdisknya adalah Toshiba.
-$ lsusb Bus 001 Device 003: ID 0930:1400 Toshiba Corp. Memory Stick 2GB Bus 001 Device 002: ID 04f2:b483 Chicony Electronics Co., Ltd Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub Perhatikan baris 2, flashdisk terdeteksi. Untuk lebih meyakinkan lagi, sekaligus mengetahui flashdisk ini diperlakukan sebagai apa oleh sistem, segera setelah flashdisk ditancapkan,
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-05-30 00:00:00 +0000 UTC'>30 May 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Memformat Flashdisk di LInux" href="https://sasongko.web.id/post/2015-05-30-memformat-flashdisk-di-linux/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengubah LiveDVD Menjadi ISO
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Beberapa waktu lalu lihat DVD BlankOn 8 Rote nganggur di seonggok kumpulan CD/DVD. Enaknya diapain ya itu DVD? Kalau dibiarkan khawatirnya kotor malah ngga bisa digunakan lagi. Ya udah mending dibuat file ISO aja. Kalau dibuat file ISO insya Allah manfaatnya lebih banyak karena tersimpan di hardisk bisa lebih tahan lama daripada dalam bentuk DVD, dan suatu saat nanti kalau dibutuhkan tapi DVDnya ngga bisa dipakai tinggal dibakar aja ISOnya entah itu jadi DVD atau ke flashdisk. Jadi misalnya besok mau install BlankOn Rote ke netbook ga usah download lagi ISOnya cukup jadikan liveUSB aja.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-05-23 00:00:00 +0000 UTC'>23 May 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Mengubah LiveDVD Menjadi ISO" href="https://sasongko.web.id/post/2015-05-23-konversi-livedvd-iso/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

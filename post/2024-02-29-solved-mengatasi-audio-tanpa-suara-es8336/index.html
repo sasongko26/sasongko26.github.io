@@ -243,106 +243,106 @@ Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari spea
 Memory: 11,5 GiB of RAM
 Graphics Processor: Mesa Intel® UHD Graphics 600
 </code></pre><p>dengan audio awalnya berupa <em>dummy output</em> alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ aplay -l
-</span></span><span style="display:flex;"><span>**** List of PLAYBACK Hardware Devices ****
-</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 0: ES8336 <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>  Subdevices: 1/1
-</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
-</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 5: HDMI <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>  Subdevices: 1/1
-</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
-</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 6: HDMI <span style="color:#ae81ff">2</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>  Subdevices: 1/1
-</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
-</span></span><span style="display:flex;"><span>card 0: sofessx8336 <span style="color:#f92672">[</span>sof-essx8336<span style="color:#f92672">]</span>, device 7: HDMI <span style="color:#ae81ff">3</span> <span style="color:#f92672">(</span>*<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>  Subdevices: 1/1
-</span></span><span style="display:flex;"><span>  Subdevice <span style="color:#75715e">#0: subdevice #0</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ aplay -l
+</span></span><span class="line"><span class="cl">**** List of PLAYBACK Hardware Devices ****
+</span></span><span class="line"><span class="cl">card 0: sofessx8336 <span class="o">[</span>sof-essx8336<span class="o">]</span>, device 0: ES8336 <span class="o">(</span>*<span class="o">)</span> <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">  Subdevices: 1/1
+</span></span><span class="line"><span class="cl">  Subdevice <span class="c1">#0: subdevice #0</span>
+</span></span><span class="line"><span class="cl">card 0: sofessx8336 <span class="o">[</span>sof-essx8336<span class="o">]</span>, device 5: HDMI <span class="m">1</span> <span class="o">(</span>*<span class="o">)</span> <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">  Subdevices: 1/1
+</span></span><span class="line"><span class="cl">  Subdevice <span class="c1">#0: subdevice #0</span>
+</span></span><span class="line"><span class="cl">card 0: sofessx8336 <span class="o">[</span>sof-essx8336<span class="o">]</span>, device 6: HDMI <span class="m">2</span> <span class="o">(</span>*<span class="o">)</span> <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">  Subdevices: 1/1
+</span></span><span class="line"><span class="cl">  Subdevice <span class="c1">#0: subdevice #0</span>
+</span></span><span class="line"><span class="cl">card 0: sofessx8336 <span class="o">[</span>sof-essx8336<span class="o">]</span>, device 7: HDMI <span class="m">3</span> <span class="o">(</span>*<span class="o">)</span> <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">  Subdevices: 1/1
+</span></span><span class="line"><span class="cl">  Subdevice <span class="c1">#0: subdevice #0</span>
 </span></span></code></pre></div><p>Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker. Yah, laptop masih diam seribu bahasa. <strong>Sound Open Firmware</strong> memberikan secercah harapan. Apalagi kemudian <strong>sof-firmware</strong> masuk ke repo <em>current</em>. Namun sayang, laptop masih membisu. Beberapa kali upgrade kernel, alsa, pulseaudio dan pipewire, masih saja tak terdengar. Alhamdulillah kemudian menemukan solusi dari <em>issue</em> yang dibuat oleh junocom di github alsa-project/alsa-ucm-conf.</p>
 <p>Solusinya adalah mengganti /usr/share/alsa/ucm2/Intel/sof-essx8336/HiFi.conf yang tersedia secara default dari alsa, dengan yang diberikan junocomp, yaitu</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SectionVerb <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>	EnableSequence <span style="color:#f92672">[</span>
-</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#disdevall &#34;&#34;</span>
-</span></span><span style="display:flex;"><span>		<span style="color:#75715e"># Disable all inputs / outputs</span>
-</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#   (may be duplicated with disdevall)</span>
-</span></span><span style="display:flex;"><span>		cset <span style="color:#e6db74">&#34;name=&#39;Left Headphone Mixer Left DAC Switch&#39; on&#34;</span>
-</span></span><span style="display:flex;"><span>		cset <span style="color:#e6db74">&#34;name=&#39;Right Headphone Mixer Right DAC Switch&#39; on&#34;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SectionDevice.<span style="color:#e6db74">&#34;Mic&#34;</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>		Comment <span style="color:#e6db74">&#34;Analog Microphone&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		EnableSequence <span style="color:#f92672">[</span>
-</span></span><span style="display:flex;"><span>			cset <span style="color:#e6db74">&#34;name=&#39;Internal Mic Switch&#39; on&#34;</span>
-</span></span><span style="display:flex;"><span>			cset <span style="color:#e6db74">&#34;name=&#39;Headset Mic Switch&#39; on&#34;</span>
-</span></span><span style="display:flex;"><span>		<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		DisableSequence <span style="color:#f92672">[</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>				<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		Value <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>			CapturePriority <span style="color:#ae81ff">100</span>
-</span></span><span style="display:flex;"><span>			CapturePCM <span style="color:#e6db74">&#34;hw:</span><span style="color:#e6db74">${</span>CardId<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span>			CaptureMixerElem <span style="color:#e6db74">&#34;ADC PGA Gain&#34;</span>
-</span></span><span style="display:flex;"><span>			CaptureMasterElem <span style="color:#e6db74">&#34;ADC&#34;</span>
-</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SectionDevice.<span style="color:#e6db74">&#34;Speaker&#34;</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>	Comment <span style="color:#e6db74">&#34;Speakers&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	ConflictingDevice <span style="color:#f92672">[</span>
-</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;Headphones&#34;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	EnableSequence <span style="color:#f92672">[</span>
-</span></span><span style="display:flex;"><span>		cset <span style="color:#e6db74">&#34;name=&#39;Speaker Switch&#39; on&#34;</span>
-</span></span><span style="display:flex;"><span>		cset <span style="color:#e6db74">&#34;name=&#39;Differential Mux&#39; lin1-rin1&#34;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	DisableSequence <span style="color:#f92672">[</span>
-</span></span><span style="display:flex;"><span>		cset <span style="color:#e6db74">&#34;name=&#39;Speaker Switch&#39; off&#34;</span>
-</span></span><span style="display:flex;"><span>		cset <span style="color:#e6db74">&#34;name=&#39;Differential Mux&#39; lin2-rin2&#34;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>	Value <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>		PlaybackPriority <span style="color:#ae81ff">100</span>
-</span></span><span style="display:flex;"><span>		PlaybackPCM <span style="color:#e6db74">&#34;hw:</span><span style="color:#e6db74">${</span>CardId<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span>		<span style="color:#75715e"># The es8316 only has a HP-amp which is muxed to the speaker</span>
-</span></span><span style="display:flex;"><span>		<span style="color:#75715e"># or to the headpones output</span>
-</span></span><span style="display:flex;"><span>		PlaybackMixerElem <span style="color:#e6db74">&#34;Headphone Mixer&#34;</span>
-</span></span><span style="display:flex;"><span>		PlaybackMasterElem <span style="color:#e6db74">&#34;DAC&#34;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SectionDevice.<span style="color:#e6db74">&#34;Headphones&#34;</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>	Comment <span style="color:#e6db74">&#34;Headphones&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	ConflictingDevice <span style="color:#f92672">[</span>
-</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;Speaker&#34;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>	
-</span></span><span style="display:flex;"><span>	EnableSequence <span style="color:#f92672">[</span>
-</span></span><span style="display:flex;"><span>                cset <span style="color:#e6db74">&#34;name=&#39;Headset Mic Switch&#39; on&#34;</span>
-</span></span><span style="display:flex;"><span>                cset <span style="color:#e6db74">&#34;name=&#39;Speaker Switch&#39; off&#34;</span>
-</span></span><span style="display:flex;"><span>                cset <span style="color:#e6db74">&#34;name=&#39;Differential Mux&#39; lin2-rin2&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        DisableSequence <span style="color:#f92672">[</span>
-</span></span><span style="display:flex;"><span>		cset <span style="color:#e6db74">&#34;name=&#39;Differential Mux&#39; lin1-rin1&#34;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	Value <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>		PlaybackPriority <span style="color:#ae81ff">300</span>
-</span></span><span style="display:flex;"><span>		PlaybackPCM <span style="color:#e6db74">&#34;hw:</span><span style="color:#e6db74">${</span>CardId<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span>		PlaybackMixerElem <span style="color:#e6db74">&#34;Headphone Mixer&#34;</span>
-</span></span><span style="display:flex;"><span>		PlaybackMasterElem <span style="color:#e6db74">&#34;DAC&#34;</span>
-</span></span><span style="display:flex;"><span>		JackControl <span style="color:#e6db74">&#34;Headphone Jack&#34;</span>
-</span></span><span style="display:flex;"><span>		JackHWMute <span style="color:#e6db74">&#34;Speaker&#34;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Include.hdmi.File <span style="color:#e6db74">&#34;/Intel/sof-essx8336/Hdmi.conf&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">SectionVerb <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	EnableSequence <span class="o">[</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">#disdevall &#34;&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="c1"># Disable all inputs / outputs</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">#   (may be duplicated with disdevall)</span>
+</span></span><span class="line"><span class="cl">		cset <span class="s2">&#34;name=&#39;Left Headphone Mixer Left DAC Switch&#39; on&#34;</span>
+</span></span><span class="line"><span class="cl">		cset <span class="s2">&#34;name=&#39;Right Headphone Mixer Right DAC Switch&#39; on&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SectionDevice.<span class="s2">&#34;Mic&#34;</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		Comment <span class="s2">&#34;Analog Microphone&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		EnableSequence <span class="o">[</span>
+</span></span><span class="line"><span class="cl">			cset <span class="s2">&#34;name=&#39;Internal Mic Switch&#39; on&#34;</span>
+</span></span><span class="line"><span class="cl">			cset <span class="s2">&#34;name=&#39;Headset Mic Switch&#39; on&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		DisableSequence <span class="o">[</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">				<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		Value <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			CapturePriority <span class="m">100</span>
+</span></span><span class="line"><span class="cl">			CapturePCM <span class="s2">&#34;hw:</span><span class="si">${</span><span class="nv">CardId</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">			CaptureMixerElem <span class="s2">&#34;ADC PGA Gain&#34;</span>
+</span></span><span class="line"><span class="cl">			CaptureMasterElem <span class="s2">&#34;ADC&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SectionDevice.<span class="s2">&#34;Speaker&#34;</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	Comment <span class="s2">&#34;Speakers&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	ConflictingDevice <span class="o">[</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;Headphones&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	EnableSequence <span class="o">[</span>
+</span></span><span class="line"><span class="cl">		cset <span class="s2">&#34;name=&#39;Speaker Switch&#39; on&#34;</span>
+</span></span><span class="line"><span class="cl">		cset <span class="s2">&#34;name=&#39;Differential Mux&#39; lin1-rin1&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	DisableSequence <span class="o">[</span>
+</span></span><span class="line"><span class="cl">		cset <span class="s2">&#34;name=&#39;Speaker Switch&#39; off&#34;</span>
+</span></span><span class="line"><span class="cl">		cset <span class="s2">&#34;name=&#39;Differential Mux&#39; lin2-rin2&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">]</span>
+</span></span><span class="line"><span class="cl">	Value <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		PlaybackPriority <span class="m">100</span>
+</span></span><span class="line"><span class="cl">		PlaybackPCM <span class="s2">&#34;hw:</span><span class="si">${</span><span class="nv">CardId</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="c1"># The es8316 only has a HP-amp which is muxed to the speaker</span>
+</span></span><span class="line"><span class="cl">		<span class="c1"># or to the headpones output</span>
+</span></span><span class="line"><span class="cl">		PlaybackMixerElem <span class="s2">&#34;Headphone Mixer&#34;</span>
+</span></span><span class="line"><span class="cl">		PlaybackMasterElem <span class="s2">&#34;DAC&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SectionDevice.<span class="s2">&#34;Headphones&#34;</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	Comment <span class="s2">&#34;Headphones&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	ConflictingDevice <span class="o">[</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;Speaker&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">]</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	EnableSequence <span class="o">[</span>
+</span></span><span class="line"><span class="cl">                cset <span class="s2">&#34;name=&#39;Headset Mic Switch&#39; on&#34;</span>
+</span></span><span class="line"><span class="cl">                cset <span class="s2">&#34;name=&#39;Speaker Switch&#39; off&#34;</span>
+</span></span><span class="line"><span class="cl">                cset <span class="s2">&#34;name=&#39;Differential Mux&#39; lin2-rin2&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">]</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        DisableSequence <span class="o">[</span>
+</span></span><span class="line"><span class="cl">		cset <span class="s2">&#34;name=&#39;Differential Mux&#39; lin1-rin1&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	Value <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		PlaybackPriority <span class="m">300</span>
+</span></span><span class="line"><span class="cl">		PlaybackPCM <span class="s2">&#34;hw:</span><span class="si">${</span><span class="nv">CardId</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">		PlaybackMixerElem <span class="s2">&#34;Headphone Mixer&#34;</span>
+</span></span><span class="line"><span class="cl">		PlaybackMasterElem <span class="s2">&#34;DAC&#34;</span>
+</span></span><span class="line"><span class="cl">		JackControl <span class="s2">&#34;Headphone Jack&#34;</span>
+</span></span><span class="line"><span class="cl">		JackHWMute <span class="s2">&#34;Speaker&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Include.hdmi.File <span class="s2">&#34;/Intel/sof-essx8336/Hdmi.conf&#34;</span>
 </span></span></code></pre></div><p>Dengan konfigurasi tersebut audio bisa terdengar.</p>
 
 

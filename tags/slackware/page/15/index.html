@@ -140,6 +140,49 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Menambahkan line number kate
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Kate adalah text editor bawaan KDE Plasma yang powerfull. Namun, secara default tidak menampilkan line number. Cara untuk menampilkan line number pada kate adalah klik menu Settings pada Kate, kemudian klik Configure Kate. Pada bagian Appearance, klik tab Borders, centang Show line numbers. KLik Apply atau Ok untuk menerapkan perubahan pengaturan.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-12-14 00:00:00 +0000 UTC'>14 Dec 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Menambahkan line number kate" href="https://sasongko.web.id/post/2021-12-14-show-line-number-kate/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Menambahkan scanner
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Instalasi scanner di linux terutama slackware sangat mudah. Biasanya scanner terdeteksi secara otomatis dan langsung bisa dijalankan. Pengaturan hanya dibutuhkan jika scanner tidak terdeteksi.
+Catatan kali ini tentang menambahkan scanner yang tidak terdeteksi secara otomatis. Scanner seperangkat dengan printer, yaitu Epson L3110. Printer terdeteksi otomatis dan langsun bisa digunakan, tetapi scanner-nya belum. Software untuk scan seperti xsane atau skanlite salah mendeteksi. Keduanya mendeteksi scanner yang digunakan adalah webcam.
+Scanner terhubung melalui usb, sehingga perlu dicek terlebih dahulu apakah usbnya terdeteksi.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-12-10 00:00:00 +0000 UTC'>10 Dec 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Menambahkan scanner" href="https://sasongko.web.id/post/2021-12-10-install-scanner-linux/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengetahui banyaknya elemen array perl
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Array adalah salah satu tipe data pada bahasa pemrograman perl. Tipe data ini berisi data majemuk. Penulisan array menggunakan notasi @.
+Contoh:
+my @buah = (&#34;pepaya&#34;, &#34;manga&#34;, &#34;pisang&#34;, &#34;jambu&#34;, &#34;durian&#34;, &#34;apel&#34;); Untuk mengetahui berapa banyaknya elemen dari array, bisa menggunakan scalar().
+print(scalar(@buah)); </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-11-30 00:00:00 +0000 UTC'>30 Nov 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mengetahui banyaknya elemen array perl" href="https://sasongko.web.id/post/2021-11-30-mengetahui-banyaknya-elemen-array-perl/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Variabel hash perl
     </h2>
   </header>
@@ -163,52 +206,11 @@ Berbeda dengan scalar yang bernilai tunggal, array bernilai majemuk. Array merup
 Pendeklarasian array diserta simbol @.
 Contoh: himpunan nama-nama buah dan daftar nilai
 my @buah = (&#34;pisang&#34;, &#34;mangga&#34;, &#34;jeruk&#34;, &#34;pepaya&#34;); my @daftar_nilai = (80, 100, 76.5, 21.87); print $buah[0]; menghasilkan output pisang. Sedangkan
+print $daftar_nilai[2]; menghasilkan output 76.5.
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2021-11-28 00:00:00 +0000 UTC'>28 Nov 2021</span></footer>
   <a class="entry-link" aria-label="post link to Variabel array perl" href="https://sasongko.web.id/post/2021-11-28-variabel-array-perl/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Variabel scalar perl
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Perl memiliki 3 jenis variabel, yaitu scalar, array dan hash. Scalar adalah variabel dengan nilai tunggal. Penulisan scalar diawali dengan tanda $.Pendeklarasian variabel dengan my. Nilai dari scalar bisa berupa text/string ataupun angka. Contoh: akan dideklarasikan variabel buah. buah ini bernilai “mangga”.
-my $buah = &#34;mangga&#34;; </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-11-27 00:00:00 +0000 UTC'>27 Nov 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Variabel scalar perl" href="https://sasongko.web.id/post/2021-11-27-variabel-scalar-perl/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengubah timestamp akses dan modifikasi
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Untuk mengubah timestamp akses dan modifikasi pada file
-$ touch -t YYYYMMDDHHmm.ss dokumen di mana dokumen adalah filename, waktu yang diinginkan dalam format YYYYMMDDHHmm.ss
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-11-23 00:00:00 +0000 UTC'>23 Nov 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Mengubah timestamp akses dan modifikasi" href="https://sasongko.web.id/post/2021-11-23-ubah-timestamp/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mount smartphone ke linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Transfer data antara smartphone android dan komputer/pc/laptop linux (dalam contoh ini Slackware) dapat dilakukan dengan mudah. Kemudahan tersebut bahkan dapat dilakukan dengan mode text tanpa grafis.
-Misalkan akan menghubungkan storage yang ada di android smartphone dengan linux. Storage dimount ke direktori mtp. Direktori ini bebas, silahkan pilih sendiri sesuai kebutuhan/keinginan.
-$ jmtpfs mtp Selanjutnya dapat dilakukan transfer file seperti biasa. Jika sudah selesai unmount
-$ fusermount mtp </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-11-16 00:00:00 +0000 UTC'>16 Nov 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Mount smartphone ke linux" href="https://sasongko.web.id/post/2021-11-16-mount-android-storage-linux/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

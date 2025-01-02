@@ -199,42 +199,42 @@
 </div>
   </header> 
   <div class="post-content"><p>Kemarin melihat <em>ChangeLog</em> ada beberapa <em>update</em> yang sebagian di antaranya adalah <em>security fix</em>. Salah satu <em>update</em> adalah kernel. Melakukan <em>upgrade</em> semuanya baik-baik saja dan lanjut <!-- raw HTML omitted -->shutdown<!-- raw HTML omitted -->. Siang ini, <!-- raw HTML omitted -->booting<!-- raw HTML omitted --> pun masih <em>fine</em> dan <em>no problem</em>. Begitu juga <!-- raw HTML omitted -->login<!-- raw HTML omitted -->. Baru terasa saat ingin masuk <em>desktop</em> malah gagal.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ startx
-</span></span><span style="display:flex;"><span>xauth:  file /home/sasongko/.serverauth.2717 does not exist
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>X.Org X Server 1.19.3
-</span></span><span style="display:flex;"><span>Release Date: 2017-03-15
-</span></span><span style="display:flex;"><span>X Protocol Version 11, Revision <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>Build Operating System: Slackware 14.2 Slackware Linux Project
-</span></span><span style="display:flex;"><span>Current Operating System: Linux darkstar 4.9.34 <span style="color:#75715e">#2 SMP Sat Jun 24 13:00:18 CDT 2017 x86_64</span>
-</span></span><span style="display:flex;"><span>Kernel command line: BOOT_IMAGE<span style="color:#f92672">=</span>dev000:<span style="color:#ae81ff">\E</span>FI<span style="color:#ae81ff">\S</span>lackware<span style="color:#ae81ff">\v</span>mlinuz  root<span style="color:#f92672">=</span>/dev/sda3 vga<span style="color:#f92672">=</span>normal ro ro
-</span></span><span style="display:flex;"><span>Build Date: <span style="color:#ae81ff">15</span> March <span style="color:#ae81ff">2017</span>  04:19:30PM
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>Current version of pixman: 0.34.0
-</span></span><span style="display:flex;"><span>	Before reporting problems, check http://wiki.x.org
-</span></span><span style="display:flex;"><span>	to make sure that you have the latest version.
-</span></span><span style="display:flex;"><span>Markers: <span style="color:#f92672">(</span>--<span style="color:#f92672">)</span> probed, <span style="color:#f92672">(</span>**<span style="color:#f92672">)</span> from config file, <span style="color:#f92672">(==)</span> default setting,
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">(</span>++<span style="color:#f92672">)</span> from command line, <span style="color:#f92672">(</span>!!<span style="color:#f92672">)</span> notice, <span style="color:#f92672">(</span>II<span style="color:#f92672">)</span> informational,
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">(</span>WW<span style="color:#f92672">)</span> warning, <span style="color:#f92672">(</span>EE<span style="color:#f92672">)</span> error, <span style="color:#f92672">(</span>NI<span style="color:#f92672">)</span> not implemented, <span style="color:#f92672">(</span>??<span style="color:#f92672">)</span> unknown.
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(==)</span> Log file: <span style="color:#e6db74">&#34;/var/log/Xorg.0.log&#34;</span>, Time: Wed Jul  <span style="color:#ae81ff">5</span> 13:03:09 <span style="color:#ae81ff">2017</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(==)</span> Using config file: <span style="color:#e6db74">&#34;/etc/X11/xorg.conf&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(==)</span> Using system config directory <span style="color:#e6db74">&#34;/usr/share/X11/xorg.conf.d&#34;</span>
-</span></span><span style="display:flex;"><span>modprobe: FATAL: Module i915 not found in directory /lib/modules/4.9.34
-</span></span><span style="display:flex;"><span>modprobe: FATAL: Module i915 not found in directory /lib/modules/4.9.34
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>EE<span style="color:#f92672">)</span> 
-</span></span><span style="display:flex;"><span>Fatal server error:
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>EE<span style="color:#f92672">)</span> no screens found<span style="color:#f92672">(</span>EE<span style="color:#f92672">)</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>EE<span style="color:#f92672">)</span> 
-</span></span><span style="display:flex;"><span>Please consult the The X.Org Foundation support 
-</span></span><span style="display:flex;"><span>	 at http://wiki.x.org
-</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">for</span> help. 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>EE<span style="color:#f92672">)</span> Please also check the log file at <span style="color:#e6db74">&#34;/var/log/Xorg.0.log&#34;</span> <span style="color:#66d9ef">for</span> additional information.
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>EE<span style="color:#f92672">)</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>EE<span style="color:#f92672">)</span> Server terminated with error <span style="color:#f92672">(</span>1<span style="color:#f92672">)</span>. Closing log file.
-</span></span><span style="display:flex;"><span>xinit: giving up
-</span></span><span style="display:flex;"><span>xinit: unable to connect to X server: Connection refused
-</span></span><span style="display:flex;"><span>xinit: server error
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ startx
+</span></span><span class="line"><span class="cl">xauth:  file /home/sasongko/.serverauth.2717 does not exist
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">X.Org X Server 1.19.3
+</span></span><span class="line"><span class="cl">Release Date: 2017-03-15
+</span></span><span class="line"><span class="cl">X Protocol Version 11, Revision <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Build Operating System: Slackware 14.2 Slackware Linux Project
+</span></span><span class="line"><span class="cl">Current Operating System: Linux darkstar 4.9.34 <span class="c1">#2 SMP Sat Jun 24 13:00:18 CDT 2017 x86_64</span>
+</span></span><span class="line"><span class="cl">Kernel <span class="nb">command</span> line: <span class="nv">BOOT_IMAGE</span><span class="o">=</span>dev000:<span class="se">\E</span>FI<span class="se">\S</span>lackware<span class="se">\v</span>mlinuz  <span class="nv">root</span><span class="o">=</span>/dev/sda3 <span class="nv">vga</span><span class="o">=</span>normal ro ro
+</span></span><span class="line"><span class="cl">Build Date: <span class="m">15</span> March <span class="m">2017</span>  04:19:30PM
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">Current version of pixman: 0.34.0
+</span></span><span class="line"><span class="cl">	Before reporting problems, check http://wiki.x.org
+</span></span><span class="line"><span class="cl">	to make sure that you have the latest version.
+</span></span><span class="line"><span class="cl">Markers: <span class="o">(</span>--<span class="o">)</span> probed, <span class="o">(</span>**<span class="o">)</span> from config file, <span class="o">(==)</span> default setting,
+</span></span><span class="line"><span class="cl">	<span class="o">(</span>++<span class="o">)</span> from <span class="nb">command</span> line, <span class="o">(</span>!!<span class="o">)</span> notice, <span class="o">(</span>II<span class="o">)</span> informational,
+</span></span><span class="line"><span class="cl">	<span class="o">(</span>WW<span class="o">)</span> warning, <span class="o">(</span>EE<span class="o">)</span> error, <span class="o">(</span>NI<span class="o">)</span> not implemented, <span class="o">(</span>??<span class="o">)</span> unknown.
+</span></span><span class="line"><span class="cl"><span class="o">(==)</span> Log file: <span class="s2">&#34;/var/log/Xorg.0.log&#34;</span>, Time: Wed Jul  <span class="m">5</span> 13:03:09 <span class="m">2017</span>
+</span></span><span class="line"><span class="cl"><span class="o">(==)</span> Using config file: <span class="s2">&#34;/etc/X11/xorg.conf&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">(==)</span> Using system config directory <span class="s2">&#34;/usr/share/X11/xorg.conf.d&#34;</span>
+</span></span><span class="line"><span class="cl">modprobe: FATAL: Module i915 not found in directory /lib/modules/4.9.34
+</span></span><span class="line"><span class="cl">modprobe: FATAL: Module i915 not found in directory /lib/modules/4.9.34
+</span></span><span class="line"><span class="cl"><span class="o">(</span>EE<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">Fatal server error:
+</span></span><span class="line"><span class="cl"><span class="o">(</span>EE<span class="o">)</span> no screens found<span class="o">(</span>EE<span class="o">)</span> 
+</span></span><span class="line"><span class="cl"><span class="o">(</span>EE<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">Please consult the The X.Org Foundation support 
+</span></span><span class="line"><span class="cl">	 at http://wiki.x.org
+</span></span><span class="line"><span class="cl"> <span class="k">for</span> help. 
+</span></span><span class="line"><span class="cl"><span class="o">(</span>EE<span class="o">)</span> Please also check the log file at <span class="s2">&#34;/var/log/Xorg.0.log&#34;</span> <span class="k">for</span> additional information.
+</span></span><span class="line"><span class="cl"><span class="o">(</span>EE<span class="o">)</span> 
+</span></span><span class="line"><span class="cl"><span class="o">(</span>EE<span class="o">)</span> Server terminated with error <span class="o">(</span>1<span class="o">)</span>. Closing log file.
+</span></span><span class="line"><span class="cl">xinit: giving up
+</span></span><span class="line"><span class="cl">xinit: unable to connect to X server: Connection refused
+</span></span><span class="line"><span class="cl">xinit: server error
 </span></span></code></pre></div><p>Weits, kernelnya masih 4.9.34, padahal kan kemarin sudah <em>upgrade</em> ke 4.9.35. Baru ingat ternyata belum menjalankan <!-- raw HTML omitted -->eliloconfig<!-- raw HTML omitted -->. Setelah dijalankan dan <!-- raw HTML omitted -->reboot<!-- raw HTML omitted --> masalah selesai.</p>
 
 

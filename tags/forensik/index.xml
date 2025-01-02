@@ -14,8 +14,8 @@
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</guid>
       <description>&lt;p&gt;Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan &lt;strong&gt;dmesg&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ dmesg -T | head -1 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;Fri Dec &lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt; 00:39:42 2020&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Linux version 5.10.2 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ dmesg -T &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; head -1 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Fri Dec &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; 00:39:42 2020&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Linux version 5.10.2 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Penjelasan command :&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;eksekusi sebagai root&lt;/li&gt;
@@ -32,11 +32,11 @@
       <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</guid>
       <description>&lt;p&gt;Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam &lt;em&gt;main tree&lt;/em&gt; &lt;strong&gt;slackware current&lt;/strong&gt;. Saat catatan ini dituliskan, sudah &amp;ldquo;mendarat&amp;rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk &lt;em&gt;start up&lt;/em&gt;. Yang dimaksud &lt;em&gt;start up&lt;/em&gt; di sini adalah kondisi dari eksekusi &lt;strong&gt;elilo&lt;/strong&gt; dan &lt;strong&gt;initrd&lt;/strong&gt; sampai muncul &lt;em&gt;login prompt&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ dmesg | tail -5
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;   20.687205&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Segment Routing with IPv6
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;   20.687213&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; RPL Segment Routing with IPv6
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;   32.472700&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; RTL8208 Fast Ethernet r8169-300:00: attached PHY driver &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;RTL8208 Fast Ethernet&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;mii_bus:phy_addr&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;r8169-300:00, irq&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;IGNORE&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;   32.750379&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; r8169 0000:03:00.0 eth0: Link is Down
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ dmesg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tail -5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;   20.687205&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Segment Routing with IPv6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;   20.687213&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; RPL Segment Routing with IPv6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;   32.472700&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; RTL8208 Fast Ethernet r8169-300:00: attached PHY driver &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;RTL8208 Fast Ethernet&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;mii_bus:phy_addr&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;r8169-300:00, &lt;span class=&#34;nv&#34;&gt;irq&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;IGNORE&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;   32.750379&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; r8169 0000:03:00.0 eth0: Link is Down
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Penjelasan &lt;em&gt;command&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
@@ -72,9 +72,9 @@
       <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/</guid>
       <description>&lt;p&gt;Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan &lt;!-- raw HTML omitted --&gt;gnupg&lt;!-- raw HTML omitted --&gt; atau yang biasa disebut dengan &lt;!-- raw HTML omitted --&gt;gpg&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Sedangkan untuk dekripsi&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ gpg -o file_hasil_dekripsi -d file_yang_akan_didekripsi
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>

@@ -14,7 +14,7 @@
       <pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2024-04-02-menambahkan-line-number-vim/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Vim&lt;/strong&gt; secara &lt;em&gt;default&lt;/em&gt; tidak menampilkan &lt;em&gt;line number&lt;/em&gt;. Adanya &lt;em&gt;line number&lt;/em&gt; ini bisa sangat memudahkan terutama saat proses &lt;em&gt;debugging&lt;/em&gt; atau pengecekan kesalahan. Untuk menampilkannya, tambahkan baris berikut di file konfigurasinya (contoh: ~/.vimrc) :&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;number&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;number&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -24,7 +24,7 @@
       <guid>https://sasongko.web.id/post/2023-01-10-ubah-colorscheme-vim/</guid>
       <description>&lt;p&gt;VIm merupakan teks editor legendaris yang masih aktif dikembangkan. Mudah diubahsuaikan menjadi salah satu alasan vim dan derivatnya digemari banyak kalangan, baik itu programmer maupun pengguna awam seperti kami ini. Salah satu yang mudah diubahsuaikan adalah tampilannya. Lebih spesifik lagi skema warna atau &lt;em&gt;color scheme&lt;/em&gt;-nya.&lt;/p&gt;
 &lt;p&gt;Banyak &lt;em&gt;color scheme&lt;/em&gt; yang disediakan, salah satunya adalah &lt;strong&gt;koehler&lt;/strong&gt;. Untuk mengubah &lt;strong&gt;koehler&lt;/strong&gt; sebagai &lt;em&gt;default&lt;/em&gt; tambahkan ini ke .vimrc&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;colorscheme koehler
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;colorscheme koehler
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -47,8 +47,8 @@
       <pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-02-25-mengatur-ukuran-window-gvim-otomatis/</guid>
       <description>&lt;p&gt;&lt;strong&gt;GVIm&lt;/strong&gt; merupakan &lt;em&gt;text editor&lt;/em&gt; legendaris. Simpel dan mudah digunakan adalah alasan utama penulis menyukainya. &lt;strong&gt;GVIm&lt;/strong&gt; juga mudah di-&lt;em&gt;customize&lt;/em&gt;. &lt;em&gt;User&lt;/em&gt; bebas melakukan modifikasi sesuai kebutuhannya. Salah satu yang penulis butuhkan adalah ketika memulai gvim ukuran &lt;em&gt;window&lt;/em&gt; 80x24 (80 kolom, 24 baris). Untuk mewujudkannya, perlu membuat file &lt;strong&gt;~/.gvimrc&lt;/strong&gt; isinya sebagai berikut:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set lines&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;24&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;columns&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;lines&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>

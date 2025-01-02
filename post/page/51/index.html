@@ -155,6 +155,48 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Upgrade Slackbuilds Slackware 14.2
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Setelah melakukan [ upgrade sistem ke Slackware 14.2]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya upgrade juga paket yang diinstal dari slackbuilds.org.
+Upgrade sbopkg : sbopkg -u Versi sbopkg terbaru adalah 0.38.0 sedangkan yang terinstall 0.37.1. Untuk mengunduh versi terbaru ketik D Hasil unduhan : /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Setelah diunduh, upgrade : upgradepkg /tmp/sbopkg-0.38.0-noarch-1_wsr.tgz Karena menghasilkan konfigurasi baru, lakukan slackpkg new-config dan pilih overwrite saja. Kemudian update ke repo 14.2 : sbopkg pilih Utilities lalu Repository. Kemudian pilih SBo (14.2) Muncul konfirmasi, apakah akan membuat baru, pilih C untuk Create. Kemudian Back ke awal sbopkg, pilih Sync untuk update repo. Setelah sync-nya selesai, pilih EXIT kembali ke awal sbopk Kemudian pilih Updates untuk mengecek paket apa saja yang bisa di-upgrade. EXIT keluar konfirmasi apakah paket-paket tersebut akan dimasukkan ke dalam queue untuk bisa diinstall kemudian.YES untuk memasukkannya. Kembali di awal sbopkg. Pilih Queue PIlih Process akan muncul daftar paket langkah no.11 Silahkan pilih paketnya kemudian OK Kemudian Install dan OK Tunggu sampai selesai. Keluar dialog apakah akan menghapus yang ada di queue. Pilih Clear untuk menghapus. Kemudian keluar info bahwa queue sudah dihapus, keudian OK Kembali ke Queue Menu pilih Back Kembali ke awal sbopkg, karena sudah selesai, silahkan Exit </p>
+  </div>
+  <footer class="entry-footer"><span title='2016-07-03 00:00:00 +0000 UTC'>03 Jul 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Upgrade Slackbuilds Slackware 14.2" href="https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Ganti Theme Xfce
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Bosan dengan tampilan theme yang itu-itu aja? Tenang, theme-nya bisa diganti kok, bahkan diganti agar tampilannya mirip Mac OS X. Sebagai contoh akan kita install theme GlossyP3 yang membuat tampilan menjadi mirip Mac OS X.
+Download terlebih dahulu berkasnya dari sini (pastikan tersambung internet). Berkas dalam bentuk arsip .tar.bz2 ekstrak ke direktori /usr/share/themes dengan hak administrator atau root.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-06-30 00:00:00 +0000 UTC'>30 Jun 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Ganti Theme Xfce" href="https://sasongko.web.id/post/2016-06-30-ganti-theme-xfce/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Konek Internet dengan nmcli
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Menyambung catatan tentang [hilangnya ikon atau NetworkManager]({% post_url 2015-12-26-ikon-networkmanager-hilang %}). Jika nm-applet tidak mempan untuk menampilkan applet NetworkManager, maka kita bisa gunakan nmcli.
+nmcli adalah NetworkManager dengan antarmuka teks (command line interface).
+nmcli Usage: nmcli [OPTIONS] OBJECT { COMMAND | help } OPTIONS -t[erse] terse output -p[retty] pretty output -m[ode] tabular|multiline output mode -c[olors] auto|yes|no whether to use colors in output -f[ields] &lt;field1,field2,...&gt;|all|common specify fields to output -e[scape] yes|no escape columns separators in values -a[sk] ask for missing parameters -s[how-secrets] allow displaying passwords -w[ait] &lt;seconds&gt; set timeout waiting for finishing operations -v[ersion] show program version -h[elp] print this help OBJECT g[eneral] NetworkManager&#39;s general status and operations n[etworking] overall networking control r[adio] NetworkManager radio switches c[onnection] NetworkManager&#39;s connections d[evice] devices managed by NetworkManager a[gent] NetworkManager secret agent or polkit agent m[onitor] monitor NetworkManager changes Untuk melihat sambungan/koneksi yang telah dibuat dengan NetworkManager gunakan nmcli c. Berikut adalah contoh output-nya
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-06-26 00:00:00 +0000 UTC'>26 Jun 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Konek Internet dengan nmcli" href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Download Kitab Fathul Muin Maktabah Elkirtas
     </h2>
   </header>
@@ -189,50 +231,6 @@ Kemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket y
   </div>
   <footer class="entry-footer"><span title='2016-05-07 00:00:00 +0000 UTC'>07 May 2016</span></footer>
   <a class="entry-link" aria-label="post link to Install Android Tools" href="https://sasongko.web.id/post/2016-05-07-install-android-tools/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">[SOLVED] Slackware Current Susah Booting dan Shutdown
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Tiga bulan lalu saya sambat Slackware current [hang]({% post_url 2016-02-08-slackware-current-hang %}) saat booting dan shutdown. Sekarang masalah tersebut teratasi.
-Secara default laptop Asus X453MA diperuntukkan bagi pengguna Microsoft Windows. Hal ini terlihat dari web resminya yang menyediakan driver hanya untuk Windows khususnya Windows 8.1 dan Windows 10. Juga terlihat dari “paket bundling”-nya yang menyediakan Windows preinstalled.
-Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.1 oleh pihak toko. Awalnya saya pilih kosongan aja sesuai aslinya. Tapi berhubung pihak toko menawarkan Windows 8.1 trial 6 bulan dan saya kepengen icip-icip Windows 8.1 jadilah laptopnya ada Windowsnya. Nah, karena Windowsnya cuma trial, saya belum sanggup beli orinya (bajakan sih banyak yang jual) dan lebih suka pakai Linux, Jadilah laptopnya ber-Slackware.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-05-05 00:00:00 +0000 UTC'>05 May 2016</span></footer>
-  <a class="entry-link" aria-label="post link to [SOLVED] Slackware Current Susah Booting dan Shutdown" href="https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install sbopkg
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Adakalanya pengguna Slackware membutuhkan paket/aplikasi di luar yang dirilis secara resmi oleh Slackware tapi tidak mau repot install dari kode sumber (source code). SlackBuilds.org (SBo) inilah yang mewujudkannya. Di SBo tersedia ribuan paket yang dapat dijalankan dengan baik di Slackware.
-Kecuali dalam bentuk web interface SBo juga bisa dinikmati dalam bentuk command line interface yang dinamakan sbopkg. Sbopkg secara default tidak ter-install karena paket ini memang paket third party.
-Untuk install-nya mudah. Tersedia kode sumber maupun paket binernya. Biar lebih praktis install dari binernya saja. Pastikan tersambung internet untuk mengunduh.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-05-03 00:00:00 +0000 UTC'>03 May 2016</span></footer>
-  <a class="entry-link" aria-label="post link to Install sbopkg" href="https://sasongko.web.id/post/2016-05-03-install-sbopkg/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install Tor Browser
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Tor Browser adalah peramban web yang sangat memerhatikan privasi. Kita bisa mengakses web secara anonim/ anonymous karena melewati jaringan Tor yang beraneka jalur.
-Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slackware 14.1 download link-nya expired. Tor Stable terbaru adalah versi 5.5.5 dan ini belum tersedia SBo resminya untuk Slackware. Jadi kita akan install mandiri. Tentu saja kita butuh koneksi internet untuk mengunduh berkasnya. Tor tersedia untuk Linux, Windows maupun Mac Os X, baik arsitektur 32 bit maupun 64 bit. Ini tidak hanya berlaku untuk Slackware tapi juga BlankOn. Di sini digunakan 64 bit. Proses instalasi dengan bukan root.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-04-29 00:00:00 +0000 UTC'>29 Apr 2016</span></footer>
-  <a class="entry-link" aria-label="post link to Install Tor Browser" href="https://sasongko.web.id/post/2016-04-29-install-tor/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

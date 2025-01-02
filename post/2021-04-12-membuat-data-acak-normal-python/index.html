@@ -302,13 +302,13 @@ Secara default data yang dihasilkan bertipe float. Apabila menghendaki data inte
   </header> 
   <div class="post-content"><p>Catatan sebelumnya tentang bagaimana membuat data secara acak dengan python, kali ini hampir sama. Bedanya, data yang dibuat berasal dari distribusi Gaussian (distribusi normal).</p>
 <p>Akan dibuat data dengan besar sampel 200, mean 165, standar deviasi 12.5.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-</span></span><span style="display:flex;"><span>sampel <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>
-</span></span><span style="display:flex;"><span>rerata <span style="color:#f92672">=</span> <span style="color:#ae81ff">165</span>
-</span></span><span style="display:flex;"><span>deviasi <span style="color:#f92672">=</span> <span style="color:#ae81ff">12.5</span>
-</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(rerata, deviasi, sampel)
-</span></span><span style="display:flex;"><span>print(data)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/python3</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="n">sampel</span> <span class="o">=</span> <span class="mi">200</span>
+</span></span><span class="line"><span class="cl"><span class="n">rerata</span> <span class="o">=</span> <span class="mi">165</span>
+</span></span><span class="line"><span class="cl"><span class="n">deviasi</span> <span class="o">=</span> <span class="mf">12.5</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">rerata</span><span class="p">,</span> <span class="n">deviasi</span><span class="p">,</span> <span class="n">sampel</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </span></span></code></pre></div><p>Hasilnya</p>
 <pre tabindex="0"><code>[169.9036172  158.13190825 156.9590178  167.74827264 168.62534857
  171.69140206 161.65434678 187.34374928 150.29836841 152.49471216
@@ -351,8 +351,8 @@ Secara default data yang dihasilkan bertipe float. Apabila menghendaki data inte
  164.21584719 164.01339793 151.90799391 168.24579668 169.70043163
  164.26476352 170.30071889 162.32963983 172.41727919 156.12259096]
 </code></pre><p>Secara <em>default</em> data yang dihasilkan bertipe <em>float</em>. Apabila menghendaki data integer bisa tambahkan <strong>.astype(int)</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>data_int <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(rerata, deviasi, sampel)<span style="color:#f92672">.</span>astype(int)
-</span></span><span style="display:flex;"><span>print(data_int)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">data_int</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">rerata</span><span class="p">,</span> <span class="n">deviasi</span><span class="p">,</span> <span class="n">sampel</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">data_int</span><span class="p">)</span>
 </span></span></code></pre></div><p>Hasilnya</p>
 <pre tabindex="0"><code>[162 155 171 185 143 176 157 158 187 167 179 163 156 173 160 175 151 166
  181 151 171 151 156 159 179 160 159 140 158 147 154 162 175 158 146 168

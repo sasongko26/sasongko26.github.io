@@ -140,6 +140,51 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Menambah file archive tar
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk menambahkan file ke dalam tar archive mudah. Gunakan opsi -r atau –append pada command tar.
+Misalkan, file photo_2020-08-22_19-03-32.jpg yang ada di ~/Documents akan dimasukkan atau ditambahkan ke dalam file archive screenshot.tar.xz
+$ tar rf screenshot.tar.xz photo_2020-08-22_19-03-32.jpg Atau
+$ tar f screenshot.tar.xz --append photo_2020-08-22_19-03-32.jpg Apabila file photo_2020-08-22_19-03-32.jpg ingin langsung dihapus dari lokasi aslinya setelah ditambahkan ke tar, beri opsi –remove-files
+$ tar f screenshot.tar.xz --append --remove-files photo_2020-08-22_19-03-32.jpg </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-29 00:00:00 +0000 UTC'>29 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Menambah file archive tar" href="https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">(Video) Mengenal main window libreoffice calc
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Libre office calc merupakan aplikasi spreadsheet pengolah data. Pada jendela utama atau main window terdapat beberapa bagian, antara lain
+Name bar Title bar Menu bar Tool bar Namebox Formula bar Sheet tab Untuk ulasan lebih lengkap bisa disimak video berikut ini
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-28 00:00:00 +0000 UTC'>28 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to (Video) Mengenal main window libreoffice calc" href="https://sasongko.web.id/post/2021-01-28-video-mengenal-main-window-calc/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Modifikasi htop
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Htop merupakan system monitoring tool yang cukup lengkap, bukan sekedar process viewer yang menampilkan proses apa saja yang berjalan. Dengan htop user dapat melihat running process, mencari process ataupun mengakhirinya.
+Secara default tampilan htop sebagai berikut
+Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin menambahkan persentase baterai dan penggunaan zram. Caranya, tekan F2. Perhatikan kolom paling kanan Available Meters. Letakkan kursor di kolom tersebut, scroll sampai ketemu yang diinginkan. Tekan Enter untuk memilih atau menambahkan. Di sini dicontohkan Battery. Meter tersebut telah berpindah ke Right column/kolom sebelah kanan. Atur posisinya, apakah akan ditempatkan di kanan atau kiri (pada contoh ini kanan). Setelah itu tekan Enter lagi untuk mengunci posisinya.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-28 00:00:00 +0000 UTC'>28 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Modifikasi htop" href="https://sasongko.web.id/post/2021-01-28-modifikasi-htop/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Pelengkap dnscrypt-proxy
     </h2>
   </header>
@@ -164,51 +209,6 @@ Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 
   </div>
   <footer class="entry-footer"><span title='2021-01-26 00:00:00 +0000 UTC'>26 Jan 2021</span></footer>
   <a class="entry-link" aria-label="post link to Aktivasi zram" href="https://sasongko.web.id/post/2021-01-26-aktivasi-zram/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengembalikan backlight
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Upgrade kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. Backlight menjadi tidak berfungsi. Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah xbacklight.
-$ xbacklight No outputs have backlight property Backlight atau brightness 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).
-Kebetulan, salah 1 situs yang sering penulis kunjungi, LinuxQuestions.Org ada thread yang membahas masalah ini.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-01-25 00:00:00 +0000 UTC'>25 Jan 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Mengembalikan backlight" href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengetahui isi file tar archive
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Catatan ini merupakan lanjutan dari sebelumnya yang membuat tar archive. Kali ini tentang bagaimana mengetahui apa saja file ada di dalam archive tersebut tanpa harus mengekstrak.
-Contoh, terdapat file screenshot2.tar.xz. Untuk mengetahui apa saja isinya
-$ tar tvf screenshot2.tar.xz -rw-r--r-- user1/users 580563 2020-07-15 10:17 Screenshot_2020-07-15_10-17-33.png -rw-r--r-- user1/users 851743 2020-08-03 10:31 Screenshot_2020-08-03_10-31-47.png -rw-r--r-- user1/users 9958 2020-08-04 16:33 Screenshot_2020-08-04_16-33-18.png -rw-r--r-- user1/users 822389 2020-08-06 08:23 Screenshot_2020-08-06_08-22-59.png -rw-r--r-- user1/users 737008 2020-08-06 08:31 Screenshot_2020-08-06_08-31-22.png -rw-r--r-- user1/users 243660 2020-12-04 18:44 Screenshot_2020-12-04_18-44-18.png -rw-r--r-- user1/users 122966 2021-01-12 01:21 Screenshot_2021-01-12_01-21-31.png Dapat diketahui bahwa file screenshot2.tar.xz berisi 7 file png screenshot sebagaimana tersebut di atas.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-01-24 00:00:00 +0000 UTC'>24 Jan 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Mengetahui isi file tar archive" href="https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Membuat archive tar
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Terdapat file sebagai berikut:
-Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Ketujuh file tersebut akan disatukan dalam 1 archive dengan nama file screenshot.tar.gz.
-$ tar cvf screenshot.tar.gz Screen* Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Penjelasan command
-tar : manajemen archive yang digunakan aalah tar c : wajib dituliskan untuk create atau membuat archive v : opsi untuk verbose, menampilkan list file yang diproses f : wajib dituliskan dalam semua penggunaan tar karena f adalah file, identifier untuk file yang akan diproses screenshot.tar.gz : nama file archive. Ekstensi bisa .tar, .tar.gz, atau .tar.xz. Ketika ekstensi ini sering dipakai di dunia open source. Screen* : file yang akan di-archive. Karena filenya banyak dan mempunyai kemiripan pola maka digunakan regex agar lebih praktis. File ini juga bisa dituliskan satu persatu. </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-01-23 00:00:00 +0000 UTC'>23 Jan 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Membuat archive tar" href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

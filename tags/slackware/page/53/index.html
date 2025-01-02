@@ -140,6 +140,50 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Cara Menggunakan gdrv
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>gdrv adalah salah satu command line interface tool berbasis python untuk Google Drive. Cara menginstallnya silahkan buka [catatan ini]({% post_url 2015-07-26-install-gdrv %}). Adapun cara penggunaannya adalah sebagai berikut:
+$ gdrv -h usage: gdrv [-h] [-v] [-w] [-V] {ftp,pull,search,url,push,mkdir,share,trash,list,init} ... YMK google drive command line tool positional arguments: {ftp,pull,search,url,push,mkdir,share,trash,list,init} drive sub command ftp interactive mode like sftp, lftp pull command pull help search command search help url command url help push command push help mkdir command mkdir help share command share help trash command trash help list command list help init command init help optional arguments: -h, --help show this help message and exit -v, --verbose increse verbosity/logging level -w, --write-config write a default config -V, --version show version infomation Pertama, inisiasi dulu,
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-12-26 00:00:00 +0000 UTC'>26 Dec 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Cara Menggunakan gdrv" href="https://sasongko.web.id/post/2015-12-26-menggunakan-gdrv/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mount ISO Image
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Mempunyai berkas citra ISO/ISO image ada manfaatnya. Pertama, sebagai cadangan kalau FD/DVD installernya tidak dapat digunakan. Kedua, untuk melakukan remaster. Bagaimana caranya mengetahui isi dari ISO tersebut? Paket apa saja yang ada di dalamnya? Untuk distro tertentu seperti slackware misalnya, paket yang disertakan bisa dilihat dengan mudah dari ISO tanpa harus membakarnya. Kita mount saja ISOnya.
+Misalkan berkas ISO yang akan di mount adalah slackware64-14.1-install-dvd.iso, dan akan di-mount di /mnt/iso
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-12-26 00:00:00 +0000 UTC'>26 Dec 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Mount ISO Image" href="https://sasongko.web.id/post/2015-12-26-mount-iso-image/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Tidak Ada Ikon NetworkManager di Panel
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Iseng-iseng install lagi slackware tapi tanpa paket yang ada di kategori ap atau direktori slackware/ap dan xap (slackware64/xap).
+Efek sampingnya adalah, tidak adanya ikon NetworkManager di panel. Di sini saya gunakan DE XFCE. Sementara itu paket direktori slackware/n semuanya terinstall.
+Install dulu appletnya. Karena saya punya berkas ISOnya maka installnya bisa offline asalkan tahu di mana letak paketnya berada. Setelah mount ISOnya ke /mnt/iso,
+installpkg /mnt/iso/slackware64/xap/network-manager*.txz Ketika memunculkan ikon/applet NetworkManagernya ke panel,
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-12-26 00:00:00 +0000 UTC'>26 Dec 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Tidak Ada Ikon NetworkManager di Panel" href="https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Install Bazaar
     </h2>
   </header>
@@ -164,50 +208,6 @@ xwmconfig Pilih X Windows (atau DE)-nya. Kemudian Ok atau tekan Enter, Log out d
   </div>
   <footer class="entry-footer"><span title='2015-11-06 00:00:00 +0000 UTC'>06 Nov 2015</span></footer>
   <a class="entry-link" aria-label="post link to Ganti Desktop Environment" href="https://sasongko.web.id/post/2015-11-06-ganti-de/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install Mate Desktop
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Walaupun desktop environment resmi Slackware adalah KDE dan Xfce, kita tetap bisa menggunakan DE lain, mate contohnya. Mate punya tampilan menarik tapi tetap ringan. Installnya mudah kok, seperti biasa pakai slackbuilds. Pastikan tersambung internet untuk mengunduh berkasnya, oya kita butuh kira-kira 500 MB untuk download mate.
-Pertama, dengan peramban web buka github mate slackbuilds. Nah, karena di sini menggunakan 14.1 (bukan current) maka pilih branch 14.1-mate-1.10. Setelah itu unduh tarball/zipnya kemudian ekstrak. Atau bisa juga git nya di-clone.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-11-06 00:00:00 +0000 UTC'>06 Nov 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Install Mate Desktop" href="https://sasongko.web.id/post/2015-11-06-install-mate-desktop/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengembalikan File yang Terhapus dengan Testdisk
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/recovery file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.
-Sebagai root jalankan
-testdisk kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih No Log karena merasa log ini tidak terlalu penting. Selanjutnya akan terdeteksi media simpan yang terpasang di komputer. Di sini flashdisknya terdeteksi sebagai /dev/sdc. pilih Disk /dev/sdc kemudian Proceed untuk melanjutkan.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-10-30 00:00:00 +0000 UTC'>30 Oct 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Mengembalikan File yang Terhapus dengan Testdisk" href="https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install Testdisk
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Testdisk adalah salah satu aplikasi digital forensik multiplatform. Bisa dijalankan di Windows (NT4, 2000, 2003, XP, Vista dan 7), Linux, FreeBSD, OpenBSD, NetBSD, SunOS, dan MacOS. Adapun kegunaannya untuk mengembalikan partisi yang terhapus beserta file-file yang ada di dalamnya. Informasi lebih lengkap tentang testdisk bisa didapatkan di sini.
-Sebenarnya untuk Slackware sudah ada slackbuild-nya, tapi tidak ada salahnya kalau install dari kode sumber. Penginstallan dijalankan dengan level root.
-wget http://www.cgsecurity.org/testdisk-7.0.tar.bz2 tar xjvf testdisk-7.0.tar.bz2 cd testdisk-7.0 ./configure make make install Oke, testdisk sudah diinstall. Untuk mulai menjalankannya (harus level root)
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-10-29 00:00:00 +0000 UTC'>29 Oct 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Install Testdisk" href="https://sasongko.web.id/post/2015-10-29-install-testdisk/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

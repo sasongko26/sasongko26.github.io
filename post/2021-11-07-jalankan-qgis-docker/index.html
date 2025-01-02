@@ -213,18 +213,18 @@ Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ub
 <p>QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.</p>
 <h1 id="install-docker-qgis">Install docker QGIS<a hidden class="anchor" aria-hidden="true" href="#install-docker-qgis">#</a></h1>
 <p>Install image qgis dari repo docker. OS yang digunakan dalam image ini adalah ubuntu 20.04 LTS. Yang harus diperhatikan, versi qgis yang digunakan adalah versi 3.16 LTR, sedangkan yang disediakan repo resmi ubuntu 20.04 masihi versi 3.10.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker pull qgis/qgis:release-3_16
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ docker pull qgis/qgis:release-3_16
 </span></span></code></pre></div><h1 id="jalankan-qgis">Jalankan QGIS<a hidden class="anchor" aria-hidden="true" href="#jalankan-qgis">#</a></h1>
 <p>Perintah untuk menjalankan qgis dengan docker ternyata panjang. Lebih enak menjadikannya script.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/bash
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>xhost +
-</span></span><span style="display:flex;"><span>docker run --rm --name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;qgis-desktop&#34;</span> -it <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	-v <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>:/home/<span style="color:#e6db74">${</span>USER<span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	-v /tmp/.X11-unix:/tmp/.X11-unix <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	-e DISPLAY<span style="color:#f92672">=</span>$DISPLAY <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	qgis/qgis:release-3_16 qgis
-</span></span><span style="display:flex;"><span>xhost -
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/usr/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">xhost +
+</span></span><span class="line"><span class="cl">docker run --rm --name<span class="o">=</span><span class="s2">&#34;qgis-desktop&#34;</span> -it <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>	-v <span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>:/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>	-v /tmp/.X11-unix:/tmp/.X11-unix <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>	-e <span class="nv">DISPLAY</span><span class="o">=</span><span class="nv">$DISPLAY</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>	qgis/qgis:release-3_16 qgis
+</span></span><span class="line"><span class="cl">xhost -
 </span></span></code></pre></div>
 
   </div>

@@ -140,6 +140,48 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Variabel scalar perl
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Perl memiliki 3 jenis variabel, yaitu scalar, array dan hash. Scalar adalah variabel dengan nilai tunggal. Penulisan scalar diawali dengan tanda $.Pendeklarasian variabel dengan my. Nilai dari scalar bisa berupa text/string ataupun angka. Contoh: akan dideklarasikan variabel buah. buah ini bernilai “mangga”.
+my $buah = &#34;mangga&#34;; </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-11-27 00:00:00 +0000 UTC'>27 Nov 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Variabel scalar perl" href="https://sasongko.web.id/post/2021-11-27-variabel-scalar-perl/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengubah timestamp akses dan modifikasi
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk mengubah timestamp akses dan modifikasi pada file
+$ touch -t YYYYMMDDHHmm.ss dokumen di mana dokumen adalah filename, waktu yang diinginkan dalam format YYYYMMDDHHmm.ss
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-11-23 00:00:00 +0000 UTC'>23 Nov 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mengubah timestamp akses dan modifikasi" href="https://sasongko.web.id/post/2021-11-23-ubah-timestamp/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mount smartphone ke linux
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Transfer data antara smartphone android dan komputer/pc/laptop linux (dalam contoh ini Slackware) dapat dilakukan dengan mudah. Kemudahan tersebut bahkan dapat dilakukan dengan mode text tanpa grafis.
+Misalkan akan menghubungkan storage yang ada di android smartphone dengan linux. Storage dimount ke direktori mtp. Direktori ini bebas, silahkan pilih sendiri sesuai kebutuhan/keinginan.
+$ jmtpfs mtp Selanjutnya dapat dilakukan transfer file seperti biasa. Jika sudah selesai unmount
+$ fusermount mtp </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-11-16 00:00:00 +0000 UTC'>16 Nov 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mount smartphone ke linux" href="https://sasongko.web.id/post/2021-11-16-mount-android-storage-linux/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Menghapus docker image
     </h2>
   </header>
@@ -167,49 +209,6 @@ Install docker QGIS Install image qgis dari repo docker. OS yang digunakan dalam
   </div>
   <footer class="entry-footer"><span title='2021-11-07 00:00:00 +0000 UTC'>07 Nov 2021</span></footer>
   <a class="entry-link" aria-label="post link to Jalankan QGIS docker" href="https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install Fedora di Slackware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Tiba-tiba terlintas keinginan mencoba fedora. Sejak mengenal linux tahun 2005an, saya belum pernah menggunakan fedora. Entah kalau saat itu warnetnya pakai fedora wkwkwkwk. Pertama memakai linux memang di warnet. Saat itu warnetnya menawarkan pakai Windows atau linux, saya pilih linux karena tarifnya 50% lebih murah.
-Kembali ke topik. Berikut akan install fedora secara virtual via lxc.
-$ lxc-create -n fedora -t download Opsi n adalah untuk memberi nama containernya, t template yang digunakan. Karena akan mendownload dari reponya gunakan template download.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-10-24 00:00:00 +0000 UTC'>24 Oct 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Install Fedora di Slackware" href="https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install QGIS via flatpak
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>QGIS adalah aplikasi sistem informasi geografis populer dan mudah digunakan. QGIS sudah ada di SBo, tetapi build-nya lama. Jadi saya install via flatpak saja.
-flatpak install --from https://flathub.org/repo/appstream/org.qgis.qgis.flatpakref Untuk menjalankannya, bisa klik dari menu atau
-flatpak run org.qgis.qgis Untuk meng-update
-flatpak update </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-09-10 00:00:00 +0000 UTC'>10 Sep 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Install QGIS via flatpak" href="https://sasongko.web.id/post/2021-09-10-install-qgis-via-flatpak/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Kate disable swap
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Secara default, kate membuat swap file secara otomatis setiap 15 detik. File ini sangat berguna untuk berjaga-jaga apabila sistem mendadak crash, maka file yang disunting dengan kate dapat di-recover. Tapi fitur ini bisa dibuat disable. Caranya klik menu Settings –&gt; Configure Kate. Pada bagian Open/Save klik tab Advanced. Opsi Swap file pilih Disable kemudian OK.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-08-02 00:00:00 +0000 UTC'>02 Aug 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Kate disable swap" href="https://sasongko.web.id/post/2021-08-02-kate-disable-swap/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

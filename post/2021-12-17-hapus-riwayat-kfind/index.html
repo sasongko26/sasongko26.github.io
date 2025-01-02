@@ -202,7 +202,7 @@ Fitur yang sangat bagus dari kfind adalah bisa menyimpan hasil pencarian. Namun,
   </header> 
   <div class="post-content"><p><strong>Kfind</strong> adalah <em>tool</em> pencarian dari KDE Plasma. Bagi pengguna linux yang kurang familiar dengan <em>command line</em> bisa menggunakan <strong>kfind</strong> yang berpenampilan mode grafis.</p>
 <p>Fitur yang sangat bagus dari <strong>kfind</strong> adalah bisa menyimpan hasil pencarian. Namun, catatan kali ini tidak tentang bagaimana cara penggunaan <strong>kfind</strong>. Kali ini justru cara menghapus riwayat pencarian. Riwayat ini ada di file ~/.config/kfindrc pada segmen [History]. Riwayat yang dicatat adalah <em>Patterns</em> dan <em>Directories</em> pencariannya. Sehingga, penghapusan riwayat pencarian dapat dilakukan dengan menghapus ketiganya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sed -i <span style="color:#e6db74">&#34;/History\|Directories\|Patterns/d&#34;</span> ~/.config/kfindrc
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sed -i <span class="s2">&#34;/History\|Directories\|Patterns/d&#34;</span> ~/.config/kfindrc
 </span></span></code></pre></div>
 
   </div>

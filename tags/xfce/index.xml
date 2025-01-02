@@ -15,7 +15,7 @@
       <guid>https://sasongko.web.id/post/2021-06-23-menyusupkan-mate-ke-xfce/</guid>
       <description>&lt;p&gt;Secara &lt;em&gt;default, window manager&lt;/em&gt; yang digunakan xfce adalah xfwm4. Tetapi, ini bisa diganti menjadi &lt;em&gt;window manager&lt;/em&gt; lain seperti &lt;strong&gt;fluxbox&lt;/strong&gt; ataupun &lt;strong&gt;marco&lt;/strong&gt; milik &lt;strong&gt;mate&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Kali ini kita akan ganti &lt;strong&gt;xfwm4&lt;/strong&gt; dengan &lt;strong&gt;marco&lt;/strong&gt;. Caranya, membuat &lt;strong&gt;startup&lt;/strong&gt; baru berisikan &lt;em&gt;command&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ /usr/bin/marco --replace
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ /usr/bin/marco --replace
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
@@ -48,7 +48,7 @@
       <pubDate>Sat, 23 Jun 2018 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2018-06-23-kosongkan-trash/</guid>
       <description>&lt;p&gt;Iseng-iseng buka &lt;em&gt;hidden folder&lt;/em&gt; ada yang menarik. File yang ada di &lt;strong&gt;Trash&lt;/strong&gt; (bisa buka di &lt;strong&gt;Thunar&lt;/strong&gt; dengan path &lt;!-- raw HTML omitted --&gt;trash:///&lt;!-- raw HTML omitted --&gt; sama dengan yang ada di &lt;!-- raw HTML omitted --&gt;~/.local/share/Trash/files/&lt;!-- raw HTML omitted --&gt;. Sehingga kalau ingin mengosongkan &lt;strong&gt;Trash&lt;/strong&gt; dan posisi sedang di CLI dan tidak membuka &lt;strong&gt;file manager&lt;/strong&gt; ataupun lagi &lt;em&gt;aras-arasen&lt;/em&gt;, sangat bisa.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rm -rv ~/.local/share/Trash/*
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -rv ~/.local/share/Trash/*
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>

@@ -14,10 +14,10 @@
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/</guid>
       <description>&lt;p&gt;Untuk menampilkan status penggunaan zram bisa dengan menjalankan&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# zramctl --output-all&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;NAME     DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/dev/zram0
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               1G   4K   74B lzo-rle         &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;          &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;   12K        0B      12K       0B &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;SWAP&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# zramctl --output-all&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NAME     DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/zram0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               1G   4K   74B lzo-rle         &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   12K        0B      12K       0B &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;SWAP&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Berikut penjelasan masing-masing kolomnya&lt;/p&gt;
 &lt;p&gt;NAME	zram device name
 DISKSIZE	limit on the uncompressed amount of data
@@ -55,7 +55,7 @@ MOUNTPOINT	where the device is mounted&lt;/p&gt;</description>
       <guid>https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/</guid>
       <description>&lt;p&gt;Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang &lt;em&gt;bootloop&lt;/em&gt; apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. &lt;em&gt;Update&lt;/em&gt; terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui &lt;em&gt;rebuilt&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;elilo&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;p&gt;Setelah &lt;em&gt;upgrade&lt;/em&gt; terutama untuk &lt;!-- raw HTML omitted --&gt;elilo&lt;!-- raw HTML omitted --&gt; jangan lupa menjalankan&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;eliloconfig
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;eliloconfig
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;yang secara otomatis juga akan meng- &lt;em&gt;generate&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;elilo.conf&lt;!-- raw HTML omitted --&gt; yang berisi pengaturan &lt;em&gt;boot&lt;/em&gt; dengan kernel huge.&lt;/p&gt;</description>
     </item>
     <item>

@@ -224,26 +224,26 @@ Cara lainnya yang saya pakai adalah dengan dhcpcd.">
 <p>Cara lainnya yang saya pakai adalah dengan <!-- raw HTML omitted -->dhcpcd<!-- raw HTML omitted -->.</p>
 <p>Misalkan akan menyambungkan internet melalui <em>USB tethering</em> - cara melakukan <em>USB tethering</em> tidak saya bahas,</p>
 <p>Cek <em>network interface</em>, ternyata di sini <em>interface</em>-nya dikenali sebagai <!-- raw HTML omitted -->usb0<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bash-4.4# ifconfig -a
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bash-4.4# ifconfig -a
 </span></span></code></pre></div><p>Contoh <em>output</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>usb0: flags<span style="color:#f92672">=</span>4098&lt;BROADCAST,MULTICAST&gt;  mtu <span style="color:#ae81ff">1500</span>
-</span></span><span style="display:flex;"><span>        ether 92:60:82:2c:9d:2c  txqueuelen <span style="color:#ae81ff">1000</span>  <span style="color:#f92672">(</span>Ethernet<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>        TX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">usb0: <span class="nv">flags</span><span class="o">=</span>4098&lt;BROADCAST,MULTICAST&gt;  mtu <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">        ether 92:60:82:2c:9d:2c  txqueuelen <span class="m">1000</span>  <span class="o">(</span>Ethernet<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX packets <span class="m">0</span>  bytes <span class="m">0</span> <span class="o">(</span>0.0 B<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX errors <span class="m">0</span>  dropped <span class="m">0</span>  overruns <span class="m">0</span>  frame <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        TX packets <span class="m">0</span>  bytes <span class="m">0</span> <span class="o">(</span>0.0 B<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        TX errors <span class="m">0</span>  dropped <span class="m">0</span> overruns <span class="m">0</span>  carrier <span class="m">0</span>  collisions <span class="m">0</span>
 </span></span></code></pre></div><p>Aktifkan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bash-4.4# ifconfig usb0 up
-</span></span><span style="display:flex;"><span>bash-4.4# dhcpcd usb0
-</span></span><span style="display:flex;"><span>DUID 00:01:00:01:1f:c6:eb:38:32:6a:34:71:ab:80
-</span></span><span style="display:flex;"><span>usb0: IAID 82:2c:9d:2c
-</span></span><span style="display:flex;"><span>usb0: soliciting an IPv6 router
-</span></span><span style="display:flex;"><span>usb0: soliciting a DHCP lease
-</span></span><span style="display:flex;"><span>usb0: offered 192.168.42.180 from 192.168.42.129
-</span></span><span style="display:flex;"><span>usb0: leased 192.168.42.180 <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">3600</span> seconds
-</span></span><span style="display:flex;"><span>usb0: adding route to 192.168.42.0/24
-</span></span><span style="display:flex;"><span>usb0: adding default route via 192.168.42.129
-</span></span><span style="display:flex;"><span>forked to background, child pid <span style="color:#ae81ff">5980</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bash-4.4# ifconfig usb0 up
+</span></span><span class="line"><span class="cl">bash-4.4# dhcpcd usb0
+</span></span><span class="line"><span class="cl">DUID 00:01:00:01:1f:c6:eb:38:32:6a:34:71:ab:80
+</span></span><span class="line"><span class="cl">usb0: IAID 82:2c:9d:2c
+</span></span><span class="line"><span class="cl">usb0: soliciting an IPv6 router
+</span></span><span class="line"><span class="cl">usb0: soliciting a DHCP lease
+</span></span><span class="line"><span class="cl">usb0: offered 192.168.42.180 from 192.168.42.129
+</span></span><span class="line"><span class="cl">usb0: leased 192.168.42.180 <span class="k">for</span> <span class="m">3600</span> seconds
+</span></span><span class="line"><span class="cl">usb0: adding route to 192.168.42.0/24
+</span></span><span class="line"><span class="cl">usb0: adding default route via 192.168.42.129
+</span></span><span class="line"><span class="cl">forked to background, child pid <span class="m">5980</span>
 </span></span></code></pre></div><p>Done.</p>
 
 

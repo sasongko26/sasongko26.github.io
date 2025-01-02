@@ -203,29 +203,29 @@ Berikut adalah script sederhana untuk menampilkan notifikasi saat baterai sedang
   </header> 
   <div class="post-content"><p>Salah satu keistimewaan <!-- raw HTML omitted -->i3<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->i3wm<!-- raw HTML omitted --> adalah belum adanya notifikasi/pemberitahuan saat baterai lemah perlu di-<em>charge</em>. Status baterai sudah ada di bar/panel yang ditampilkan oleh <!-- raw HTML omitted -->i3status<!-- raw HTML omitted -->.</p>
 <p>Berikut adalah <em>script</em> sederhana untuk menampilkan notifikasi saat baterai sedang lemah dan tidak sedang di-<em>charge</em>. Jika baterai telah mencapai batas (di sini saya gunakan 5%) maka setiap 30 detik akan tampil notifikasi untuk segera dilakukan <em>charging</em> <!-- raw HTML omitted -->Wayahe dicas bro&hellip;.!<!-- raw HTML omitted -->. Dan ketika baterai sudah terisi full 100% tetapi masih dalam kondisi dicas akan tampil notifikasi tiap 30 detik bahwa baterai sudah full.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#! /bin/bash
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>status<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat /sys/class/power_supply/BAT0/status<span style="color:#66d9ef">)</span>
-</span></span><span style="display:flex;"><span>persen<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat /sys/class/power_supply/BAT0/capacity<span style="color:#66d9ef">)</span>
-</span></span><span style="display:flex;"><span>kritis<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
-</span></span><span style="display:flex;"><span>full<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$status<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Discharging&#34;</span> <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $persen -le $kritis <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">then</span>
-</span></span><span style="display:flex;"><span>		notify-send <span style="color:#e6db74">&#34;Wayahe dicas bro....!&#34;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">fi</span>
-</span></span><span style="display:flex;"><span>	sleep <span style="color:#ae81ff">30</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$status<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Charging&#34;</span> <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $persen -ge $full <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">then</span>
-</span></span><span style="display:flex;"><span>		notify-send <span style="color:#e6db74">&#34;Wis full bro...&#34;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">fi</span>
-</span></span><span style="display:flex;"><span>	sleep <span style="color:#ae81ff">30</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#! /bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">status</span><span class="o">=</span><span class="k">$(</span>cat /sys/class/power_supply/BAT0/status<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">persen</span><span class="o">=</span><span class="k">$(</span>cat /sys/class/power_supply/BAT0/capacity<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">kritis</span><span class="o">=</span><span class="m">5</span>
+</span></span><span class="line"><span class="cl"><span class="nv">full</span><span class="o">=</span><span class="m">100</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$status</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;Discharging&#34;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="o">[</span> <span class="nv">$persen</span> -le <span class="nv">$kritis</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">then</span>
+</span></span><span class="line"><span class="cl">		notify-send <span class="s2">&#34;Wayahe dicas bro....!&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">fi</span>
+</span></span><span class="line"><span class="cl">	sleep <span class="m">30</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$status</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;Charging&#34;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="o">[</span> <span class="nv">$persen</span> -ge <span class="nv">$full</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">then</span>
+</span></span><span class="line"><span class="cl">		notify-send <span class="s2">&#34;Wis full bro...&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">fi</span>
+</span></span><span class="line"><span class="cl">	sleep <span class="m">30</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
 </span></span></code></pre></div><p>Simpan file ini (contoh saja) <!-- raw HTML omitted -->/usr/local/bin/notiflowbatt<!-- raw HTML omitted --> dan berikan hak eksekusi (<!-- raw HTML omitted -->chmod +x<!-- raw HTML omitted -->). Jadikan <em>startup</em> masukkan ke <!-- raw HTML omitted -->i3config<!-- raw HTML omitted --> atau ke <!-- raw HTML omitted -->~/.config/i3/config<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;exec_always /usr/local/bin/notiflowbatt&#34;</span> &gt;&gt; ~/.config/i3/config
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;exec_always /usr/local/bin/notiflowbatt&#34;</span> &gt;&gt; ~/.config/i3/config
 </span></span></code></pre></div>
 
   </div>

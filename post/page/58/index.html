@@ -155,6 +155,63 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Install Xfburn Slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Xfburn adalah aplikasi burning CD/DVD/BD dari XFCE. Versi terbaru saat ini 0.5.4, dengan dependensi:
+Exo-0.10.6 libxfce4util-4.12.1 libisoburn-1.4.0 Tapi untuk memudahkan instalasi, kita gunakan saja yang versi 0.5.2 yang ada slackbuildnya, dependensinya
+[libburn]({% post_url 2015-06-16-install-libburn-slackware %}) [libisofs]({% post_url 2015-06-16-install-libisofs-slackware %}) Untuk menginstall pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas.
+$ wget http://slackbuilds.org/slackbuilds/14.1/system/xfburn.tar.gz Ekstrak kemudian pindah direktori ke folder hasil ekstrak
+$ tar xzf xfburn.tar.gz ; cd xfburn Unduh kode sumber xfburn
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-17 00:00:00 +0000 UTC'>17 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Install Xfburn Slackware" href="https://sasongko.web.id/post/2015-06-17-install-xfburn-slackware/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Install libburn Slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Libburn adalah pustaka (library) untuk menulis ke CD, DVD, dan blueray.
+Berikut langkah-langkah installnya di slackware melalui slackbuild. Adapun versi libburn yang diinstall adalah 1.4.0.
+Pertama, pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh paket. Kemudian unduh slackbuild libburn.
+$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libburn.tar.gz Ekstrak
+$ tar xzf libburn.tar.gz Akan terbentuk folder libburn. Pindah direktori ke folder itu.
+$ cd libburn Kemudian unduh kode sumber libburn.
+$ wget http://files.libburnia-project.org/releases/libburn-1.4.0.tar.gz Install slackbuildnya
+sh libburn.SlackBuild Install paketnya
+# installpkg /tmp/libburn-1.4.0-x86_64-1_SBo.tgz </p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-16 00:00:00 +0000 UTC'>16 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Install libburn Slackware" href="https://sasongko.web.id/post/2015-06-16-install-libburn-slackware/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Install libisofs Slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Libisofs adalah pustaka untuk membuat filesystem ISO-9660.
+Berikut cara install libisofs-1.4.0 di slackware melalui slackbuild. Pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas yang diperlukan.
+Unduh slackbuild libisofs
+$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libisofs.tar.gz Ekstrak
+$ tar xzf libisofs.tar.gz Terbentuk folder libisofs, pindah direktori ke folder itu kemudain unduh kode sumbernya.
+$ cd libisofs $ wget http://files.libburnia-project.org/releases/libisofs-1.4.0.tar.gz Install slackbuildnya
+# sh libisofs.SlackBuild Install paketnya
+# installpkg /tmp/libisofs-1.4.0-x86_64-1_SBo.tgz Selesai.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-16 00:00:00 +0000 UTC'>16 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Install libisofs Slackware" href="https://sasongko.web.id/post/2015-06-16-install-libisofs-slackware/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Cek Paket Terinstall di Slackware
     </h2>
   </header>
@@ -180,47 +237,6 @@ $ wvdial 3 bash: wvdial: command not found Baris 2, command not found menunjukka
   </div>
   <footer class="entry-footer"><span title='2015-06-14 00:00:00 +0000 UTC'>14 Jun 2015</span></footer>
   <a class="entry-link" aria-label="post link to Jalankan Sudo Tanpa Password" href="https://sasongko.web.id/post/2015-06-14-jalankan-sudo-tanpa-password/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Download Seluruh Isi Website
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Melanjutkan [catatan yang lalu]({% post_url 2014-03-23-wget-linux-download-manager %}), kali ini adalah penggunaan wget untuk mengunduh/download website secara keseluruhan/rekursif.
-$ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url silahkan diganti dengan alamat websitenya.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-09 00:00:00 +0000 UTC'>09 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Download Seluruh Isi Website" href="https://sasongko.web.id/post/2015-06-06-download-seluruh-website/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install Libre Office di Slackware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Secara default aplikasi perkantoran yang disediakan Slackware bukan Libre Office. Kalau pada saat instalasi Slackware (yang penulis gunakan arsitektur 64 bit) memilih full install maka aplikasi perkantoran yang terpasang adalah Calligra. Dibandingkan dengan Calligra, saya merasa lebih sreg menggunakan LibreOffice karena kompatibilitasnya yang lebih baik terhadap dokumen yang dibuat dengan Ms Office (harap maklum, masih banyak saudara-saudara kita yang belum bisa move on ke open source dan tidak semua menggunakan Ms Office bajakan).
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-09 00:00:00 +0000 UTC'>09 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Install Libre Office di Slackware" href="https://sasongko.web.id/post/2015-06-09-install-libreoffice-slackbuild/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Uninstall Calligra Office Suite
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Calligra adalah office suite atau aplikasi perkantoran yang dikembangkan KDE yang dulu bernama KOffice. Kalau memasang KDE secara full kita akan mendapatinya.
-Calligra memang layak digunakan untuk keperluan perkantoran. Performanya dalam mengolah dokumen terbuka (open document format/ODF) cukup bagus. Namun sayangnya, Calligra tidak kompatibel dengan dokumen OOXML (dokumen yang dibuat dengan Microsoft Office). Tak jarang Calligra menjadi hang saat membuka atau mengolah dokumen dengan format docx (Ms Word), xlsx (Ms Excel) dan pptx (Ms PowerPoint). Penulis sering bekerja dengan dokumen OOXML karena rekan-rekan di kantor dan para mahasiswa belum bisa lepas dari OOXML. Maka demi kemaslahatan bersama, penulis tinggalkan Calligra dan beralih ke LibreOffice.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-09 00:00:00 +0000 UTC'>09 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Uninstall Calligra Office Suite" href="https://sasongko.web.id/post/2015-06-09-uninstall-calligra/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

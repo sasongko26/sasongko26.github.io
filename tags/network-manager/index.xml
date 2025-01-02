@@ -21,27 +21,27 @@
       <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/</guid>
       <description>&lt;p&gt;Beberapa saat yang lalu penulis terkena &lt;em&gt;prank&lt;/em&gt; dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan &lt;strong&gt;flight mode&lt;/strong&gt; di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek &lt;strong&gt;nmcli&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ nmcli
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p2p-dev-wlan0: disconnected
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;p2p-dev-wlan0&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        wifi-p2p, sw disabled, hw
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;eth0: unavailable
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Realtek RTL810xE&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ethernet &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;r8169&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, C8:5B:76:66:51:6C, hw, mtu &lt;span style=&#34;color:#ae81ff&#34;&gt;1500&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wlan0: unavailable
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Qualcomm Atheros QCA9377&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        wifi &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ath10k_pci&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, 8E:58:C9:8B:64:0F, sw disabled, hw, mtu &lt;span style=&#34;color:#ae81ff&#34;&gt;1500&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lo: unmanaged
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lo&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        loopback &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;unknown&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, 00:00:00:00:00:00, sw, mtu &lt;span style=&#34;color:#ae81ff&#34;&gt;65536&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Use &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;nmcli device show&amp;#34;&lt;/span&gt; to get complete information about known devices and
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;nmcli connection show&amp;#34;&lt;/span&gt; to get an overview on active connection profiles.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Consult nmcli&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; and nmcli-examples&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;7&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; manual pages &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; complete usage details.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ nmcli
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;p2p-dev-wlan0: disconnected
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;p2p-dev-wlan0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        wifi-p2p, sw disabled, hw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;eth0: unavailable
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;Realtek RTL810xE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ethernet &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;r8169&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, C8:5B:76:66:51:6C, hw, mtu &lt;span class=&#34;m&#34;&gt;1500&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wlan0: unavailable
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;Qualcomm Atheros QCA9377&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        wifi &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;ath10k_pci&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, 8E:58:C9:8B:64:0F, sw disabled, hw, mtu &lt;span class=&#34;m&#34;&gt;1500&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lo: unmanaged
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;lo&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        loopback &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;unknown&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, 00:00:00:00:00:00, sw, mtu &lt;span class=&#34;m&#34;&gt;65536&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Use &lt;span class=&#34;s2&#34;&gt;&amp;#34;nmcli device show&amp;#34;&lt;/span&gt; to get &lt;span class=&#34;nb&#34;&gt;complete&lt;/span&gt; information about known devices and
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;nmcli connection show&amp;#34;&lt;/span&gt; to get an overview on active connection profiles.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Consult nmcli&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; and nmcli-examples&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;7&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; manual pages &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;complete&lt;/span&gt; usage details.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ada &lt;em&gt;output&lt;/em&gt; yang aneh : &lt;strong&gt;sw disabled&lt;/strong&gt;. Penulis baru ingat kalau &lt;strong&gt;flight mode&lt;/strong&gt;-nya aktif. Setelah dinonaktifkan, semua kembali normal. &lt;strong&gt;sw disabled&lt;/strong&gt; enyah dari &lt;em&gt;Output&lt;/em&gt; &lt;strong&gt;nmcli&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
@@ -50,18 +50,18 @@
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/</guid>
       <description>&lt;p&gt;Untuk mengetahui alamat ip lokal tanpa akses &lt;strong&gt;root&lt;/strong&gt; dapat menggunakan &lt;strong&gt;nmcli&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ nmcli
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wlan0: connected to Anatomi
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Qualcomm Atheros QCA9377&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        wifi &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ath10k_pci&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, CC:B0:DA:B5:3B:75, hw, mtu &lt;span style=&#34;color:#ae81ff&#34;&gt;1500&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ip4 default
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        inet4 192.168.120.19/24
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        route4 0.0.0.0/0
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        route4 192.168.120.0/24
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        route4 192.168.120.0/24
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        inet6 fe80::1a37:a13:b117:ff74/64
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        route6 fe80::/64
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        route6 ff00::/8
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ nmcli
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wlan0: connected to Anatomi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;Qualcomm Atheros QCA9377&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        wifi &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;ath10k_pci&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, CC:B0:DA:B5:3B:75, hw, mtu &lt;span class=&#34;m&#34;&gt;1500&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ip4 default
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        inet4 192.168.120.19/24
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        route4 0.0.0.0/0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        route4 192.168.120.0/24
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        route4 192.168.120.0/24
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        inet6 fe80::1a37:a13:b117:ff74/64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        route6 fe80::/64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        route6 ff00::/8
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;ipv4 192.168.120.19&lt;/li&gt;
@@ -74,14 +74,14 @@
       <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/</guid>
       <description>&lt;p&gt;Baru beberapa hari memakai (lagi) &lt;strong&gt;NetworkManager&lt;/strong&gt;, sudah bermasalah (lagi).&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;device not ready
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;device not ready
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/networkmanager-device-not-ready.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;begitulah&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;Padahal &lt;em&gt;network interface&lt;/em&gt;-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai &lt;strong&gt;NetworkManager&lt;/strong&gt;.
 Solusinya dari berbagai referensi (lupa mencatat linknya)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;managed=true&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; /etc/NetworkManager/NetworkManager.conf
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;managed=true&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; /etc/NetworkManager/NetworkManager.conf
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tapi, ternyata ini kemudian munculkan &lt;em&gt;warning&lt;/em&gt; di &lt;strong&gt;syslog&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Aug  &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt; 12:04:53 localhost NetworkManager&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;1047&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: &amp;lt;warn&amp;gt;  &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;1596949493.8398&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; config: unknown key &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;managed&amp;#39;&lt;/span&gt; in section &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;main&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; of file &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;/etc/NetworkManager/NetworkManager.conf
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Aug  &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt; 12:04:53 localhost NetworkManager&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1047&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: &amp;lt;warn&amp;gt;  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1596949493.8398&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; config: unknown key &lt;span class=&#34;s1&#34;&gt;&amp;#39;managed&amp;#39;&lt;/span&gt; in section &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;main&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; of file &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;/etc/NetworkManager/NetworkManager.conf
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal). Sampai sekarang belum terjadi lagi (dan semoga tidak akan terjadi lagi. Saya lelah dengan kerewelan &lt;strong&gt;NetworkManager&lt;/strong&gt;).&lt;/p&gt;</description>
     </item>
     <item>

@@ -205,8 +205,8 @@ Sejak pertama menggunakan slackware dengan sistem UEFI sekitar 2016, elilo penul
   </header> 
   <div class="post-content"><p>Aktif di-<em>maintain</em> pengembang merupakan salah satu kriteria preferensi <em>software</em> yang penulis gunakan. <em>elilo</em> sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. <strong>Slackware</strong> adalah distro yang masih bertahan menyediakan <strong>elilo</strong>. Terima kasih PV.</p>
 <p>Sejak pertama menggunakan <strong>slackware</strong> dengan sistem <strong>UEFI</strong> sekitar 2016, <strong>elilo</strong> penulis jadikan pilihan utama <em>boot loader</em>. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini <strong>elilo</strong> sudah tidak dikembangkan <em>developer</em> aslinya. Mengangkat <strong>grub</strong> sebagai suksesor <strong>elilo</strong> bukanlah hal buruk. <strong>Grub</strong> ini sebenarnya sudah lama terinstall dan rutin ikut di-<em>upgrade</em> juga, tapi memang tidak digunakan. Sekarang saatnya mengaktifkannya.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># grub-install /dev/sda</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># grub-mkconfig -o /boot/grub/grub.cfg</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># grub-install /dev/sda</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># grub-mkconfig -o /boot/grub/grub.cfg</span>
 </span></span></code></pre></div><p>Lalu, bagaimana dengan nasib <strong>elilo</strong>? Sementara tidak digunakan. Kami akan <em>uninstall</em> <strong>elilo</strong> jika PV menghapusnya dari <em>official repo</em>.Kalau ada sumur di ladang boleh kita menumpang mandi. Kalau <strong>elilo</strong> kembali dikembangkan mari gunakan lagi.</p>
 
 

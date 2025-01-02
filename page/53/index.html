@@ -149,6 +149,48 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Slackware Current Susah Booting dan Shutdown
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering stuck saat boot dan shutdown.
+Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis ID-Slackware, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.4.1 pun belum ada perubahan berarti.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-02-08 00:00:00 +0000 UTC'>08 Feb 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Slackware Current Susah Booting dan Shutdown" href="https://sasongko.web.id/post/2016-02-08-slackware-current-hang/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">pip InsecurePlatformWarning
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Saat melakukan pencarian dengan pip, muncul pesan
+/usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:315: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning. SNIMissingWarning /usr/lib64/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:120: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning. InsecurePlatformWarning Biar peringatan ini tidak muncul lagi, ndg-httpsclient harus diupgrade.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-01-21 00:00:00 +0000 UTC'>21 Jan 2016</span></footer>
+  <a class="entry-link" aria-label="post link to pip InsecurePlatformWarning" href="https://sasongko.web.id/post/2016-01-21-pip-insecureplatformwarning/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Cara Menggunakan gdrv
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>gdrv adalah salah satu command line interface tool berbasis python untuk Google Drive. Cara menginstallnya silahkan buka [catatan ini]({% post_url 2015-07-26-install-gdrv %}). Adapun cara penggunaannya adalah sebagai berikut:
+$ gdrv -h usage: gdrv [-h] [-v] [-w] [-V] {ftp,pull,search,url,push,mkdir,share,trash,list,init} ... YMK google drive command line tool positional arguments: {ftp,pull,search,url,push,mkdir,share,trash,list,init} drive sub command ftp interactive mode like sftp, lftp pull command pull help search command search help url command url help push command push help mkdir command mkdir help share command share help trash command trash help list command list help init command init help optional arguments: -h, --help show this help message and exit -v, --verbose increse verbosity/logging level -w, --write-config write a default config -V, --version show version infomation Pertama, inisiasi dulu,
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-12-26 00:00:00 +0000 UTC'>26 Dec 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Cara Menggunakan gdrv" href="https://sasongko.web.id/post/2015-12-26-menggunakan-gdrv/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Mount ISO Image
     </h2>
   </header>
@@ -175,48 +217,6 @@ installpkg /mnt/iso/slackware64/xap/network-manager*.txz Ketika memunculkan ikon
   </div>
   <footer class="entry-footer"><span title='2015-12-26 00:00:00 +0000 UTC'>26 Dec 2015</span></footer>
   <a class="entry-link" aria-label="post link to Tidak Ada Ikon NetworkManager di Panel" href="https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install Bazaar
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Bazaar atau disingkat bzr adalah salah 1 jenis control version system seperti git.
-Git secara default sudah terinstall tapi bzr harus diinstal sendiri.
-$ wget http://launchpad.net/bzr/2.6/2.6.0/&#43;download/bzr-2.6.0.tar.gz $ tar xzf bzr-2.6.0.tar.gz $ cd bzr-2.6.0 # python setup.py install </p>
-  </div>
-  <footer class="entry-footer"><span title='2015-12-12 00:00:00 +0000 UTC'>12 Dec 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Install Bazaar" href="https://sasongko.web.id/post/2015-12-12-install-bzr/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Ganti Desktop Environment
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Biar tidak membosankan, kadangkala kita butuh ganti desktop environment (DE). Caranya (root privileges),
-xwmconfig Pilih X Windows (atau DE)-nya. Kemudian Ok atau tekan Enter, Log out dan Log in kembali.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-11-06 00:00:00 +0000 UTC'>06 Nov 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Ganti Desktop Environment" href="https://sasongko.web.id/post/2015-11-06-ganti-de/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install Mate Desktop
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Walaupun desktop environment resmi Slackware adalah KDE dan Xfce, kita tetap bisa menggunakan DE lain, mate contohnya. Mate punya tampilan menarik tapi tetap ringan. Installnya mudah kok, seperti biasa pakai slackbuilds. Pastikan tersambung internet untuk mengunduh berkasnya, oya kita butuh kira-kira 500 MB untuk download mate.
-Pertama, dengan peramban web buka github mate slackbuilds. Nah, karena di sini menggunakan 14.1 (bukan current) maka pilih branch 14.1-mate-1.10. Setelah itu unduh tarball/zipnya kemudian ekstrak. Atau bisa juga git nya di-clone.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-11-06 00:00:00 +0000 UTC'>06 Nov 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Install Mate Desktop" href="https://sasongko.web.id/post/2015-11-06-install-mate-desktop/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

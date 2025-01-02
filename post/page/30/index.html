@@ -155,6 +155,50 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Aktivasi zram
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.
+Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan. Namun, saat ini, saat kebutuhan multitasking meningkat pesat, terlebih di era work from home (WFH), beberapa aplikasi dijalankan sekaligus bersama-sama, apalagi ditambah dengan faktor U perangkatnya, RAM 2 GB terasa cepat penuh.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-26 00:00:00 +0000 UTC'>26 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Aktivasi zram" href="https://sasongko.web.id/post/2021-01-26-aktivasi-zram/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengembalikan backlight
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Upgrade kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. Backlight menjadi tidak berfungsi. Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah xbacklight.
+$ xbacklight No outputs have backlight property Backlight atau brightness 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).
+Kebetulan, salah 1 situs yang sering penulis kunjungi, LinuxQuestions.Org ada thread yang membahas masalah ini.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-25 00:00:00 +0000 UTC'>25 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mengembalikan backlight" href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengetahui isi file tar archive
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Catatan ini merupakan lanjutan dari sebelumnya yang membuat tar archive. Kali ini tentang bagaimana mengetahui apa saja file ada di dalam archive tersebut tanpa harus mengekstrak.
+Contoh, terdapat file screenshot2.tar.xz. Untuk mengetahui apa saja isinya
+$ tar tvf screenshot2.tar.xz -rw-r--r-- user1/users 580563 2020-07-15 10:17 Screenshot_2020-07-15_10-17-33.png -rw-r--r-- user1/users 851743 2020-08-03 10:31 Screenshot_2020-08-03_10-31-47.png -rw-r--r-- user1/users 9958 2020-08-04 16:33 Screenshot_2020-08-04_16-33-18.png -rw-r--r-- user1/users 822389 2020-08-06 08:23 Screenshot_2020-08-06_08-22-59.png -rw-r--r-- user1/users 737008 2020-08-06 08:31 Screenshot_2020-08-06_08-31-22.png -rw-r--r-- user1/users 243660 2020-12-04 18:44 Screenshot_2020-12-04_18-44-18.png -rw-r--r-- user1/users 122966 2021-01-12 01:21 Screenshot_2021-01-12_01-21-31.png Dapat diketahui bahwa file screenshot2.tar.xz berisi 7 file png screenshot sebagaimana tersebut di atas.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-24 00:00:00 +0000 UTC'>24 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mengetahui isi file tar archive" href="https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Membuat archive tar
     </h2>
   </header>
@@ -180,52 +224,6 @@ ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74 </p>
   </div>
   <footer class="entry-footer"><span title='2021-01-15 00:00:00 +0000 UTC'>15 Jan 2021</span></footer>
   <a class="entry-link" aria-label="post link to Mengetahui IP lokal dengan nmcli" href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Rebuild R post-upgrade icu4c
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Pagi ini, saat akan mengeksekusi R,
-$ R /usr/lib64/R/bin/exec/R: error while loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory Ternyata R nya bermasalah. Di atas disebutkan bahwa libicuuc.so.67 tidak ditemukan. Dari namanya, bisa ditebak itu adalah shared object/library miliknya icu4c. Kita pastikan dulu,
-$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE The list below shows the packages that contains &#34;libicuuc\.so&#34; file. [ installed ] - icu4c-68.2-x86_64-1 You can search specific packages using &#34;slackpkg search package&#34;. Command tersebut dieksekusi dengan root privileges.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-01-13 00:00:00 +0000 UTC'>13 Jan 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Rebuild R post-upgrade icu4c" href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Ekstraksi waktu pada changelog dengan sed
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Ini adalah keisengan di kala WFH alias work from home. Melakukan ekstraksi waktu pada changelog slackware64-current yang terakhir kami update 8 Januari 2021.
-Changelognya terdiri dari 4 bagian:
-Waktu Packages yang mengalami perubahan (Upgraded, Removed, Added, Rebuilt) Keterangan perubahan Pembatas update antarwaktu (&#43;————————–&#43;) Akan diambil yang no.1 saja.
-Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.txt.
-$ sed &#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!d&#39; /var/lib/slackpkg/ChangeLog.txt &gt; changelog-date.txt Hapus semua baris yang berakhiran dengan tanda titik.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-01-12 00:00:00 +0000 UTC'>12 Jan 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Ekstraksi waktu pada changelog dengan sed" href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Menggunakan ratpoison
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Ratpoison sesuai namanya benar adalah racun! Mouse-nya terkena racun! Penggunaan mouse menjadi minimal. User banyak menggunakan keyboard.
-Memasuki lingkungan ratpoison user disambut interface hitam (mungkin dengan disertai bayangannya sendiri). Sudut kanan atas muncul ucapan selamat datang Welcome to ratpoison! Hit C - t ? for help.. Bagi yang selalu berpesta dalam gemerlapnya KDE Plasma, Cinnamon, Xfce, Mate, Budgie, dll sangat mungkin merasa njegleg atau keheranan bahkan mungkin bingung atau linglung. Tapi slackers insyaallah tetap tenang-tenang saja, bisa beradaptasi. Apalagi kalau emacs adalah text editor favoritnya. Apa hubungannya? Keduanya mempunyai keybindings yang serupa.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-01-11 00:00:00 +0000 UTC'>11 Jan 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Menggunakan ratpoison" href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -14,7 +14,7 @@
       <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2022-02-23-disable-fortune-postlogin/</guid>
       <description>&lt;p&gt;Secara &lt;em&gt;default&lt;/em&gt;, setelah berhasil &lt;em&gt;login&lt;/em&gt; di &lt;strong&gt;tty&lt;/strong&gt; muncul pesan-pesan berupa kata-kata mutiara dari para tokoh. &lt;strong&gt;Fortune&lt;/strong&gt; ini menjadi sepaket dengan &lt;strong&gt;bsd-games&lt;/strong&gt;. Jadi kalau ingin di-&lt;em&gt;disable&lt;/em&gt; bisa uninstall &lt;strong&gt;bsd-games&lt;/strong&gt;. Kalau masih butuh &lt;strong&gt;bsd-games&lt;/strong&gt; tinggal jadikan file /etc/profile.d/bsd-games-login-fortune.*sh &lt;em&gt;nonexecutable&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod -x /etc/profile.d/bsd-games-login-fortune.*sh
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod -x /etc/profile.d/bsd-games-login-fortune.*sh
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>

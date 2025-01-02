@@ -202,7 +202,7 @@ Misalkan, dipunyai 1000 file docx yang tersimpan di /Documents. Masing-masing fi
   </header> 
   <div class="post-content"><p><!-- raw HTML omitted -->LibreOffice<!-- raw HTML omitted --> sudah lama mendukung konversi file dari Word/Writer (doc, docx dan odt) ke file pdf. Keunggulannya adalah bisa melakukan konversi secara massal.</p>
 <p>Misalkan, dipunyai 1000 file <!-- raw HTML omitted -->docx<!-- raw HTML omitted --> yang tersimpan di <!-- raw HTML omitted --><del>/Documents<!-- raw HTML omitted -->. Masing-masing file ini akan dikonversi menjadi <!-- raw HTML omitted -->pdf<!-- raw HTML omitted --> di <!-- raw HTML omitted --></del>/convert<!-- raw HTML omitted -->.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ soffice --headless --nologo --convert-to pdf:writer_pdf_Export --outdir ~/convert Documents/*.docx
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ soffice --headless --nologo --convert-to pdf:writer_pdf_Export --outdir ~/convert Documents/*.docx
 </span></span></code></pre></div><p>Opsi <!-- raw HTML omitted -->&ndash;headless &ndash;nologo<!-- raw HTML omitted --> diberikan agar lebih cepat, lebih hemat waktu, karena tidak menampilkan <em>splash screen</em>.</p>
 
 
