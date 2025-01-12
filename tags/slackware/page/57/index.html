@@ -140,6 +140,20 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Membuat Partisi dengan cgdisk
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Partitioning atau pemartisian atau pembuatan partisi adalah pengetahuan yang harus dimiliki sebelum menginstall linux. Jika harddisk dianalogikan dengan rumah, maka partisi adalah kamar atau ruangan yang ada di dalam rumah itu. Kita bisa mengatur berapa jumlah kamar beserta ukuran dan fungsinya.
+Skema partisi yang digunakan adalah GPT, bukan MBR, jadi pemartisian menggunakan cgdisk saja biar lebih mudah. Selain cgdisk bisa menggunakan gdisk. Sedangkan untuk MBR menggunakan cfdisk atau fdisk. Keempatnya berantarmuka text dan dijalankan oleh root. Oya, untuk antarmuka grafis (GUI) bisa menggunakan gparted.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-07-11 00:00:00 +0000 UTC'>11 Jul 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Membuat Partisi dengan cgdisk" href="https://sasongko.web.id/post/2015-07-11-membuat-partisi-dengan-cgdisk/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Konek Internet Slackware
     </h2>
   </header>
@@ -201,26 +215,6 @@ $ tar xzf xfburn.tar.gz ; cd xfburn Unduh kode sumber xfburn
   </div>
   <footer class="entry-footer"><span title='2015-06-17 00:00:00 +0000 UTC'>17 Jun 2015</span></footer>
   <a class="entry-link" aria-label="post link to Install Xfburn Slackware" href="https://sasongko.web.id/post/2015-06-17-install-xfburn-slackware/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install libburn Slackware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Libburn adalah pustaka (library) untuk menulis ke CD, DVD, dan blueray.
-Berikut langkah-langkah installnya di slackware melalui slackbuild. Adapun versi libburn yang diinstall adalah 1.4.0.
-Pertama, pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh paket. Kemudian unduh slackbuild libburn.
-$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libburn.tar.gz Ekstrak
-$ tar xzf libburn.tar.gz Akan terbentuk folder libburn. Pindah direktori ke folder itu.
-$ cd libburn Kemudian unduh kode sumber libburn.
-$ wget http://files.libburnia-project.org/releases/libburn-1.4.0.tar.gz Install slackbuildnya
-sh libburn.SlackBuild Install paketnya
-# installpkg /tmp/libburn-1.4.0-x86_64-1_SBo.tgz </p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-16 00:00:00 +0000 UTC'>16 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Install libburn Slackware" href="https://sasongko.web.id/post/2015-06-16-install-libburn-slackware/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

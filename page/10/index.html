@@ -149,6 +149,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">If else perl
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Penyeleksian kondisi di perl dapat menggunakan syntax if…else dengan format
+if ( kondisi ) { .... } else { .... } Contoh
+#!/usr/bin/perl use strict; use warnings; use feature &#39;say&#39;; my $username = &#34;user&#34;; if ( $username eq &#34;nama&#34; ) { say &#34;Oke&#34;; } else { say &#34;Ulangi lagi....&#34;; } </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-05-28 00:00:00 +0000 UTC'>28 May 2022</span></footer>
+  <a class="entry-link" aria-label="post link to If else perl" href="https://sasongko.web.id/post/2022-05-28-if-else-perl/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Sinkronisasi official repo slackware
     </h2>
   </header>
@@ -203,20 +217,6 @@ status=progress </p>
   </div>
   <footer class="entry-footer"><span title='2022-04-25 00:00:00 +0000 UTC'>25 Apr 2022</span></footer>
   <a class="entry-link" aria-label="post link to Menampilkan progress dd" href="https://sasongko.web.id/post/2022-04-25-menampilkan-progress-dd/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Pipewire di WindowMaker
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Lama tidak menggunakan, hati ini rindu pada WindowMaker. Segera mengalihkan .xinitrc ke xinitrc.wmaker. Beberapa hari kemudian, merasa ada yang janggal. Suasana menjadi sunyi senyap. Tanpa suara. Padahal ketika menggunakan KDE Plasma tidak ada masalah dengan sound system.
-Hati ini baru sadar bahwa sound-nya telah diserahterimakan dari pulseaudio kepada pipewire. Baiklah, mari tambahkan beberapa baris berikut ke ~/GNUstep/Library/WindowMaker/autostart
-#pipewire /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire /usr/bin/pipewire &amp; /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire-pulse /usr/bin/pipewire-pulse &amp; /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire-media-session /usr/bin/pipewire-media-session &amp; </p>
-  </div>
-  <footer class="entry-footer"><span title='2022-04-10 00:00:00 +0000 UTC'>10 Apr 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Pipewire di WindowMaker" href="https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

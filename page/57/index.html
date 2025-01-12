@@ -149,6 +149,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mount Partisi Otomatis
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Masih melanjutkan catatan yang kemarin tentang pemartisian. Setelah [membuat partisi]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) kemudian [diformat]({% post_url 2015-07-12-memformat-partisi %}), langkah selanjutnya adalah memutuskan apakah partisi itu akan di-mount secara otomatis saat boot atau tidak.
+Nah, karena partisi /dev/sda9 yang bersistem ext4 kemarin akan saya jadikan sebagai tempat source code paket/aplikasi, seperti untuk menyimpan berkas slackbuild, saya putuskan untuk mengaitkannya secara otomatis di /usr/local/src. Caranya adalah dengan menambahkan baris berikut ke /etc/fstab
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-07-13 00:00:00 +0000 UTC'>13 Jul 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Mount Partisi Otomatis" href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Memformat Partisi
     </h2>
   </header>
@@ -206,21 +220,6 @@ $ sudo apt-get install unrar Sedangkan untuk Slackware install slackbuildnya saj
   </div>
   <footer class="entry-footer"><span title='2015-06-25 00:00:00 +0000 UTC'>25 Jun 2015</span></footer>
   <a class="entry-link" aria-label="post link to Install Unrar" href="https://sasongko.web.id/post/2015-06-25-install-unrar/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">InstalL Sleuth Kit Slackware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The Sleuth Kit atau disingkat TSK adalah tools digital forensik yang bersifat open source, multiplatform dan text-mode (command line interface). TSK bisa digunakan untuk melakukan analisis pada barang bukti, atau lebih tepatnya citra disk (raw image). Misalnya untuk mengetahui berkas apa saja yang ada di dalam hardisk dan adakah berkas yang dihapus dari hardisk itu.
-Dependensi:
-autoconf, automake, libtool C/C&#43;&#43; compiler (gcc, gcc&#43;&#43;) [JDK (opsional)]({% post_url 2015-06-07-install-jdk-slackware %}) Install cukup mudah, kita akan install langsung TSK dari source code yang ada di github
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-18 00:00:00 +0000 UTC'>18 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to InstalL Sleuth Kit Slackware" href="https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

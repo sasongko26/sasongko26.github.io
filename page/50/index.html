@@ -149,6 +149,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengatur DNS Default
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Secara default, DNS atau Domain Name Server yang digunakan adalah DNS dari operator/penyedia layanan internet. Namun sayangnya, operator tertentu kurang baik dalam penapisan/pemblokiran situs-situs negatif sehingga kadang konten-konten pornografi, judi, dan konten lainnya yang tidak sesuai dengan norma kesusilaan dan budaya Indonesia dapat sampai ke hadapan kita. Oleh karena itulah perlu menggunakan DNS lain.
+Penggantian DNS ini ada 2 cara, yaitu manual dan otomatis.
+Cara manual dengan menyunting berkas /etc/resolv.conf. Mengganti nameserver yang ada dengan nameserver yang diinginkan. Salah satu penyedia DNS penapisan situs negatif adalah Nawala. Nameserver nya adalah:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-08-07 00:00:00 +0000 UTC'>07 Aug 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Mengatur DNS Default" href="https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Terperangkap WindowMaker
     </h2>
   </header>
@@ -202,19 +217,6 @@ $ virt-manager Traceback (most recent call last): File &#34;/usr/share/virt-mana
   </div>
   <footer class="entry-footer"><span title='2016-07-04 00:00:00 +0000 UTC'>04 Jul 2016</span></footer>
   <a class="entry-link" aria-label="post link to Virt-Manager ImportError: No module named requests" href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Upgrade ke Slackware 14.2
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Sehubungan dengan telah rilisnya Slackware 14.2 maka silahkan melakukan upgrade untuk mendapatkan keamanan yang lebih bagus dan fitur-fitur baru. Saya selama ini melakukan upgrade bertahap demi penghematan kuota internet. Dimulai dengan upgrade ke current karena saat itu versi stable yang baru (14.2) masih dalam proses pengembangan. Upgrade ini menggunakan slackpkg. Dan tentu saja membutuhkan sambungan internet.
-Pilih cermin atau mirror. Dengan menyunting /etc/slackpkg/mirrors, menghilangkan tanda komentar/tanda pagar pada repo yang diinginkan. Tersedia banyak repo yang bisa dijadikan rujukan, tetapi sayangnya baru 2 repo lokal yang resmi terdaftar, yaitu UI dan UKDW. Saya gunakan milik UKDW karena lebih dekat (UKDW di Yogyakarta sedangkan saya di Semarang) sehingga harapannya lebih cepat. Bisa juga memilih repo Slackware.com yang secara otomatis akan memilihkan repo terdekat. Pastikan hanya 1 repo yang dipilih. Update daftar paket dengan melakukan slackpkg update Upgrade slackpkg untuk mendapatkan alamat repo 14.2. Upgrade juga glibc-solibs. Keduanya dapat dilakukan secara simultan : slackpkg upgrade slackpkg glibc-solibs Kalau muncul pertanyaan tentang konfigurasi baru, pilih saja O alias overwrite. Kalau tidak muncul lakukan slackpkg new-config Setelah upgrade slackpkg pilih repo lagi karena ada perubahan alamat/URL repo kemudian update lagi. Lanjut install paket-paket baru yang sebelumnya tidak ada : slackpkg install-new Upgrade sistem : slackpkg upgrade-all. Akan ditampilkan paket yang bisa di-upgrade. Hilangkan tanda bintangnya dengan menekan tombol spasi bila tidak ingin paket tersebut di-upgrade kemudian OK. Hapus paket yang tidak berguna. Paket yang perlu dihapus dan berbagai perubahan dari Slackware 14.1 ke 14.2 bisa dilihat di sini : slackpkg remove Karena ada pergantian kernel, jangan lupa konfigurasi ulang boot loader itu lilo atau elilo. Kalau menggunakan lilo : liloconfig. Kalau menggunakan elilo : eliloconfig </p>
-  </div>
-  <footer class="entry-footer"><span title='2016-07-03 00:00:00 +0000 UTC'>03 Jul 2016</span></footer>
-  <a class="entry-link" aria-label="post link to Upgrade ke Slackware 14.2" href="https://sasongko.web.id/post/2016-07-03-upgrade-slackware-142/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -149,6 +149,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mariadb error 2002
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.
+$ mariadb -u root -p Enter password: ERROR 2002 (HY000): Can&#39;t connect to local server through socket &#39;/var/run/mysql/mysql.sock&#39; (2) Setelah dicek, ternyata service-nya belum jalan karena tidak executable.
+$ ls -l /etc/rc.d|grep -iE &#34;(maria|mysql)&#34; -rw-r--r-- 1 root root 2517 May 2 09:08 rc.mysqld -rw-r--r-- 1 root root 2943 Aug 4 2020 rc.mysqld.orig Mari aktifkan
+# chmod &#43;x /etc/rc.d/rc.mysqld # /etc/rc.d/rc.mysqld start 210530 10:36:21 mysqld_safe Logging to &#39;/var/lib/mysql/bumi.bumi.err&#39;. 210530 10:36:21 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql Done. Alhamdulillah
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-06-01 00:00:00 +0000 UTC'>01 Jun 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mariadb error 2002" href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Mengetahui ip aktif sejaringan
     </h2>
   </header>
@@ -200,20 +216,6 @@ $ efibootmgr -t 2 </p>
   </div>
   <footer class="entry-footer"><span title='2021-05-17 00:00:00 +0000 UTC'>17 May 2021</span></footer>
   <a class="entry-link" aria-label="post link to Mengubah boot timeout efibootmgr" href="https://sasongko.web.id/post/2021-05-17-mengubah-boot-timeout-efibootmgr/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Memindahkan tombol minimize maximize close window fluxbox
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Secara default tombol Minimize/Iconify, Maximize dan Close pada window fluxbox terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian
-session.screen0.titlebar.right: Minimize Maximize Close Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian
-session.screen0.titlebar.left: </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-05-15 00:00:00 +0000 UTC'>15 May 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Memindahkan tombol minimize maximize close window fluxbox" href="https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -149,6 +149,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Unduh ISO Slackware Current
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Slackware adalah distro yang istimewa. Tak seperti distro lainnya yang menyediakan ISO versi terbaru atau current yang masih dalam pengembangan, slackware tidak merilis current ISO secara resmi. Walaupun demikian, ada yang menyediakannya bagi yang berminat, salah satunya bisa didapatkan di repo ftp://ftp.slackware.no.
+Kali ini coba mengunduh slackware current ISO. Pakai rsync saja yang gampang dan bisa dilanjut kalau internetnya putus.
+Sebelumnya cek dulu ISO terbaru
+$ rsync ftp.slackware.no::slackware/slackware-iso/slackware-current-iso/ drwxr-xr-x 4,096 2015/07/28 10:00:29 . -rw-r--r-- 146 2015/07/28 10:00:29 CHECKSUMS.md5 -rw-r--r-- 146,519 2015/07/18 02:38:53 ChangeLog-current.txt -rw-r--r-- 146,370 2015/07/18 02:38:53 ChangeLog64-current.txt -rw-r--r-- 371 2015/07/28 10:00:29 README.TXT -rw-r--r-- 2,703,075,328 2015/07/28 10:00:11 slackware-current-28_Jul_2015-DVD.iso -rw-r--r-- 2,633,039,872 2015/07/28 10:00:15 slackware64-current-28_Jul_2015-DVD.iso ISO terbaru tertanggal 28 Juli 2015.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-08-01 00:00:00 +0000 UTC'>01 Aug 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Unduh ISO Slackware Current" href="https://sasongko.web.id/post/2015-08-01-unduh-iso-slackware-current/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Install gdrv
     </h2>
   </header>
@@ -199,20 +215,6 @@ wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py python get-pip.
   </div>
   <footer class="entry-footer"><span title='2015-07-13 00:00:00 +0000 UTC'>13 Jul 2015</span></footer>
   <a class="entry-link" aria-label="post link to Install pip" href="https://sasongko.web.id/post/2015-07-13-install-pip/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mount Partisi Otomatis
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Masih melanjutkan catatan yang kemarin tentang pemartisian. Setelah [membuat partisi]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) kemudian [diformat]({% post_url 2015-07-12-memformat-partisi %}), langkah selanjutnya adalah memutuskan apakah partisi itu akan di-mount secara otomatis saat boot atau tidak.
-Nah, karena partisi /dev/sda9 yang bersistem ext4 kemarin akan saya jadikan sebagai tempat source code paket/aplikasi, seperti untuk menyimpan berkas slackbuild, saya putuskan untuk mengaitkannya secara otomatis di /usr/local/src. Caranya adalah dengan menambahkan baris berikut ke /etc/fstab
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-07-13 00:00:00 +0000 UTC'>13 Jul 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Mount Partisi Otomatis" href="https://sasongko.web.id/post/2015-07-13-mount-partisi-otomatis/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

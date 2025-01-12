@@ -140,6 +140,20 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Fix sbotools Perl unescaped left brace in regex is deprecated here
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Siang ini, sudah agak lama tidak check update paket-paket dari SBo. Sudah 3 - 5 mingguan lah kira-kira. Kebetulan juga hari ini tadi agak longgar.
+$ sbocheck # command ini dijalankan oleh root Unescaped left brace in regex is deprecated here (and will be fatal in Perl 5.32), passed through in regex; marked by &lt;-- HERE in m/\$({ &lt;-- HERE |)[A-Za-z0-9_]&#43;(}|)/ at /usr/share/perl5/SBO/Lib/Build.pm line 244 Ada masalah ternyata dan masalahnya di Perl. Simpel sih solusinya. Buka file /usr/share/perl5/SBO/Lib/Build.pm, pada line 244 karakter { diganti {
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-07-17 00:00:00 +0000 UTC'>17 Jul 2018</span></footer>
+  <a class="entry-link" aria-label="post link to Fix sbotools Perl unescaped left brace in regex is deprecated here" href="https://sasongko.web.id/post/2018-07-17-fix-sbotools-perl-unescaped-left-brace-inregex/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Hapus Trash via Command Line
     </h2>
   </header>
@@ -196,19 +210,6 @@ Contoh, untuk perl :
   </div>
   <footer class="entry-footer"><span title='2018-06-18 00:00:00 +0000 UTC'>18 Jun 2018</span></footer>
   <a class="entry-link" aria-label="post link to Pentingnya Shebang" href="https://sasongko.web.id/post/2018-06-18-pentingnya-shebang/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Operation not possible due to RF-kill
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Pagi ini, refreshing dengan berganti desktop environment (DE) memakai Window Maker (WM). DE yang jarang digunakan karena biasanya memakai XFCE. Tampilannya sederhana, sampai-sampai panel pun tak ada. Sementara HP sudah siap untuk tethering. Tinggal konekkan! Eh tapi, bagaimana ini konek internetnya kalau panel tempat nongkrong Network Manager atau Wicd aja tak ada? Ya mau ga mau pakai CLI. Ok lah. Oh iya, untuk konek internet via CLI yang punya hak adalah root. Di sini $ maksudnya adalah tetap dilakukan oleh root. Untuk memudahkan syntax highlighting karena kalau command-nya ditulis dengan # akan terbaca sebagai komentar sehingga tidak begitu jelas terbacanya.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2018-06-16 00:00:00 +0000 UTC'>16 Jun 2018</span></footer>
-  <a class="entry-link" aria-label="post link to Operation not possible due to RF-kill" href="https://sasongko.web.id/post/2018-06-15-operation-not-possible-due-to-rfkill/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

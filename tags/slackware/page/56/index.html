@@ -140,6 +140,21 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Install Google Play Downloader
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>GooglePlayDownloader adalah aplikasi berantar muka grafis (GUI) untuk mengunduh berkas APK dari Google Play Store. Dependensi:
+python-protobuf (&gt;=2.4) python-requests (&gt;=0.12) python-ndg-httpsclient python-pyasn1 python-wxgtk2.8 (&gt;=2.8) python 2.5&#43; java (opsional) Itu yang tertulis di README.txt nya GooglePlayDownloader, tapi ternyata, khusus python-wxgtk2.8 diganti saja dengan wxpython. Oke kita install dependensinya dulu (pastikan tersambung internet).
+easy_install protobuf requests ndg-httpsclient Nah, karena wxpython diinstall dengan easy_install ga berhasil, maka install saja pakai [slackbuildnya]({% post_url 2015-07-18-install-wxpython %}). Kemudian, unduh Google Play Downloadernya. Sebenarnya sih mau unduh dulu atau install dependensi dulu terserah. Sebenarnya ada .deb nya, tapi berhubung di sini pakai Slackware maka unduh aja kode sumbernya biar lebih asyik.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-07-18 00:00:00 +0000 UTC'>18 Jul 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Install Google Play Downloader" href="https://sasongko.web.id/post/2015-07-18-install-googleplaydownloader/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Install wxPython
     </h2>
   </header>
@@ -190,20 +205,6 @@ Partisi yang akan diformat ext4 adalah /dev/sda9 dan akan diberi label sebagai s
   </div>
   <footer class="entry-footer"><span title='2015-07-12 00:00:00 +0000 UTC'>12 Jul 2015</span></footer>
   <a class="entry-link" aria-label="post link to Memformat Partisi" href="https://sasongko.web.id/post/2015-07-12-memformat-partisi/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Membuat Partisi dengan cgdisk
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Partitioning atau pemartisian atau pembuatan partisi adalah pengetahuan yang harus dimiliki sebelum menginstall linux. Jika harddisk dianalogikan dengan rumah, maka partisi adalah kamar atau ruangan yang ada di dalam rumah itu. Kita bisa mengatur berapa jumlah kamar beserta ukuran dan fungsinya.
-Skema partisi yang digunakan adalah GPT, bukan MBR, jadi pemartisian menggunakan cgdisk saja biar lebih mudah. Selain cgdisk bisa menggunakan gdisk. Sedangkan untuk MBR menggunakan cfdisk atau fdisk. Keempatnya berantarmuka text dan dijalankan oleh root. Oya, untuk antarmuka grafis (GUI) bisa menggunakan gparted.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-07-11 00:00:00 +0000 UTC'>11 Jul 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Membuat Partisi dengan cgdisk" href="https://sasongko.web.id/post/2015-07-11-membuat-partisi-dengan-cgdisk/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

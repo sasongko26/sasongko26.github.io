@@ -155,6 +155,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Menghapus docker image
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Docker image yang suah tidak digunakan sebaiknya dihapus saja, agar storage lebih longgar. Pastikan docker daemon aktif
+dockerd List docker imagenya
+$ docker images REPOSITORY TAG IMAGE ID CREATED SIZE qgis/qgis release-3_16 ee28ddd8c37a 4 days ago 7.43GB qgis/qgis &lt;none&gt; c84657a1e2f6 3 weeks ago 7.43GB Hapus
+$ docker rmi -f ee28ddd8c37a c84657a1e2f6 Ingin menghapus semua container, image, dll
+$ docker system prune -a WARNING! This will remove: - all stopped containers - all networks not used by at least one container - all dangling images - all dangling build cache Are you sure you want to continue? [y/N] y </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-11-14 00:00:00 +0000 UTC'>14 Nov 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Menghapus docker image" href="https://sasongko.web.id/post/2021-11-14-hapus-docker-image/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Jalankan QGIS docker
     </h2>
   </header>
@@ -209,21 +225,6 @@ flatpak update </p>
   </div>
   <footer class="entry-footer"><span title='2021-08-02 00:00:00 +0000 UTC'>02 Aug 2021</span></footer>
   <a class="entry-link" aria-label="post link to Kate disable swap" href="https://sasongko.web.id/post/2021-08-02-kate-disable-swap/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Dolphin the wastebin has reached its maximum size
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Efek samping work from home, harddisk laptop lebih cepat penuh. Saat menghapus file-file yang sudah tidak diperlukan, Dolphin mengeluarkan warning
-Job Failed The wastebin has reached its maximum size! Cleanup the wastebin manually Ada 2 alternatif solusi:
-Sesuai yang ada di warning untuk menghapus file-file di wastebin secara manual. Mengatur ulang wastebin pada Dolphin. Wastebin diatur melalui menu Settings –&gt; Configure Dolphin klik Wastebin. Di sini kita bisa mengatur apakah file di wastebin akan dihapus secara otomatis setelah tenggat yang ditentukan. Kemudian bisa diatur pula limit kapasitas wastebin. Lalu, apakah yang akan dilakukan Dolphin ketika wastebin sudah penuh, apakah hanya memunculkan warning, menghapus file paling lawas atau menghapus file paling besar size-nya. Silakan dipilih sesuai kebutuhan.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-08-01 00:00:00 +0000 UTC'>01 Aug 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Dolphin the wastebin has reached its maximum size" href="https://sasongko.web.id/post/2021-08-01-dolphin-wastebin-reached-maximum-size/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
