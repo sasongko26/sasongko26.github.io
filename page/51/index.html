@@ -149,6 +149,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Virt-Manager ImportError: No module named requests
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.
+$ virt-manager Traceback (most recent call last): File &#34;/usr/share/virt-manager/virt-manager&#34;, line 33, in &lt;module&gt; from virtinst import util as util File &#34;/usr/share/virt-manager/virtinst/__init__.py&#34;, line 89, in &lt;module&gt; from virtinst.distroinstaller import DistroInstaller File &#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;, line 23, in &lt;module&gt; from . import urlfetcher File &#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;, line 34, in &lt;module&gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests. Ini dibuktikan dengan output ls /var/log/packages|grep python-request yang kosong.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-07-04 00:00:00 +0000 UTC'>04 Jul 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Virt-Manager ImportError: No module named requests" href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Upgrade ke Slackware 14.2
     </h2>
   </header>
@@ -200,26 +214,6 @@ nmcli Usage: nmcli [OPTIONS] OBJECT { COMMAND | help } OPTIONS -t[erse] terse ou
   </div>
   <footer class="entry-footer"><span title='2016-06-26 00:00:00 +0000 UTC'>26 Jun 2016</span></footer>
   <a class="entry-link" aria-label="post link to Konek Internet dengan nmcli" href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Download Kitab Fathul Muin Maktabah Elkirtas
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Pertama, buka Maktabah Elkirtasnya dulu dan pastikan tersambung internet.
-Kemudian klik gambar kitabnya akan muncul daftar kategori kitabnya.
-Scroll ke bawah pilih فقة شافعي
-Scroll ke bawah dan pilih فتع المعين
-Muncul konfirmasi untuk men- download
-Yes akan melanjutkan dan tunggu sampai selesai
-Selesai download muncul pemberitahuan
-Klik Yes Kitab Fathul Muin siap dikaji.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-05-12 00:00:00 +0000 UTC'>12 May 2016</span></footer>
-  <a class="entry-link" aria-label="post link to Download Kitab Fathul Muin Maktabah Elkirtas" href="https://sasongko.web.id/post/2016-05-12-download-fathul-muin-maktabah-elkirtas/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

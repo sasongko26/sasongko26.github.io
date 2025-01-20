@@ -140,6 +140,20 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Pipewire di WindowMaker
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Lama tidak menggunakan, hati ini rindu pada WindowMaker. Segera mengalihkan .xinitrc ke xinitrc.wmaker. Beberapa hari kemudian, merasa ada yang janggal. Suasana menjadi sunyi senyap. Tanpa suara. Padahal ketika menggunakan KDE Plasma tidak ada masalah dengan sound system.
+Hati ini baru sadar bahwa sound-nya telah diserahterimakan dari pulseaudio kepada pipewire. Baiklah, mari tambahkan beberapa baris berikut ke ~/GNUstep/Library/WindowMaker/autostart
+#pipewire /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire /usr/bin/pipewire &amp; /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire-pulse /usr/bin/pipewire-pulse &amp; /usr/bin/daemon -frB --pidfiles=~/.run --name=pipewire-media-session /usr/bin/pipewire-media-session &amp; </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-04-10 00:00:00 +0000 UTC'>10 Apr 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Pipewire di WindowMaker" href="https://sasongko.web.id/post/2022-04-10-pipewire-windowmaker/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Kenggulan elilo dibanding grub
     </h2>
   </header>
@@ -192,21 +206,6 @@ Sejak pertama menggunakan slackware dengan sistem UEFI sekitar 2016, elilo penul
   </div>
   <footer class="entry-footer"><span title='2022-03-26 00:00:00 +0000 UTC'>26 Mar 2022</span></footer>
   <a class="entry-link" aria-label="post link to Migrasi dari elilo ke grub" href="https://sasongko.web.id/post/2022-03-26-migrasi-elilo-ke-grub/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mount media read write mode
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Mount media (kasus kali ini pada flashdisk) melalui command line secara default membuat ownership filenya menjadi milik root. Hal ini berakibat media tersebut berjalan pada mode read-only. Hanya user setingkat root yang bisa melakukan write on.
-Kasus ini bisa disiasati dengan mendefinisikan id user yang akan melakukan write on.
-mount -o rw,uid=1020,gid=120 /dev/sdb1 /media/hd0/ uid dan gid di sini hanya contoh, silakan disesuaikan.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-03-05 00:00:00 +0000 UTC'>05 Mar 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Mount media read write mode" href="https://sasongko.web.id/post/2022-03-05-mount-media-read-write-mode/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
