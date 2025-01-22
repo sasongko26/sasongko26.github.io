@@ -149,6 +149,26 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Install libisofs Slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Libisofs adalah pustaka untuk membuat filesystem ISO-9660.
+Berikut cara install libisofs-1.4.0 di slackware melalui slackbuild. Pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas yang diperlukan.
+Unduh slackbuild libisofs
+$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libisofs.tar.gz Ekstrak
+$ tar xzf libisofs.tar.gz Terbentuk folder libisofs, pindah direktori ke folder itu kemudain unduh kode sumbernya.
+$ cd libisofs $ wget http://files.libburnia-project.org/releases/libisofs-1.4.0.tar.gz Install slackbuildnya
+# sh libisofs.SlackBuild Install paketnya
+# installpkg /tmp/libisofs-1.4.0-x86_64-1_SBo.tgz Selesai.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-16 00:00:00 +0000 UTC'>16 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Install libisofs Slackware" href="https://sasongko.web.id/post/2015-06-16-install-libisofs-slackware/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Cek Paket Terinstall di Slackware
     </h2>
   </header>
@@ -201,20 +221,6 @@ $ wget -r url opsi -r adalah untuk mengunduh secara rekursif. Sedangkan url sila
   </div>
   <footer class="entry-footer"><span title='2015-06-09 00:00:00 +0000 UTC'>09 Jun 2015</span></footer>
   <a class="entry-link" aria-label="post link to Install Libre Office di Slackware" href="https://sasongko.web.id/post/2015-06-09-install-libreoffice-slackbuild/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Uninstall Calligra Office Suite
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Calligra adalah office suite atau aplikasi perkantoran yang dikembangkan KDE yang dulu bernama KOffice. Kalau memasang KDE secara full kita akan mendapatinya.
-Calligra memang layak digunakan untuk keperluan perkantoran. Performanya dalam mengolah dokumen terbuka (open document format/ODF) cukup bagus. Namun sayangnya, Calligra tidak kompatibel dengan dokumen OOXML (dokumen yang dibuat dengan Microsoft Office). Tak jarang Calligra menjadi hang saat membuka atau mengolah dokumen dengan format docx (Ms Word), xlsx (Ms Excel) dan pptx (Ms PowerPoint). Penulis sering bekerja dengan dokumen OOXML karena rekan-rekan di kantor dan para mahasiswa belum bisa lepas dari OOXML. Maka demi kemaslahatan bersama, penulis tinggalkan Calligra dan beralih ke LibreOffice.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-09 00:00:00 +0000 UTC'>09 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Uninstall Calligra Office Suite" href="https://sasongko.web.id/post/2015-06-09-uninstall-calligra/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

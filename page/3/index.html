@@ -149,6 +149,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengakses file .dmg
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>File .dmg biasanya adalah software installer yang berlaku untuk MacOs. Scara default pengguna linux tidak bisa mengakses isi dari .dmg ini. Namun, dengan software dan teknik tertentu hal ini bisa dilakukan.
+Pertama, convert .dmg ke .img. Ini membutuhkan dmg2img. Khusus pengguna slackware dan derivatnya ini tersedia di SBo. Setelah dmg2img terinstall, konversi bisa dilakukan, dengan root privileges tentunya. Misalnya file .dmg nya adalah apel.dmg yang kemudian dikonversi menjadi apel.img.
+$ dmg2img apel.dmg apel.img Kemudian, atur apel.img sebagai loop device.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-04 00:00:00 +0000 UTC'>04 Dec 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Mengakses file .dmg" href="https://sasongko.web.id/post/2024-12-04-mengakses-file-dmg/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Disable direct cursor mode libreoffice writer
     </h2>
   </header>
@@ -200,20 +215,6 @@ Kali ini kita akan mengubah atau convert file dari pdf menjadi gambar png. Tool 
   </div>
   <footer class="entry-footer"><span title='2024-07-19 00:00:00 +0000 UTC'>19 Jul 2024</span></footer>
   <a class="entry-link" aria-label="post link to Convert pdf ke png secara massal" href="https://sasongko.web.id/post/2024-07-19-convert-pdf-to-png/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Seamonkey in wayland Error cannot open display
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Seamonkey adalah salah satu web browser yang secara default terinstall di slackware. Ketika login menggunakan SDDM dan mengaktifkan lingkungan native wayland, seamonkey tidak bisa dijalankan.
-$ seamonkey Error: cannot open display: :1 Solusinya
-$ GDK_BACKEND=x11 seamonkey </p>
-  </div>
-  <footer class="entry-footer"><span title='2024-05-25 00:00:00 +0000 UTC'>25 May 2024</span></footer>
-  <a class="entry-link" aria-label="post link to Seamonkey in wayland Error cannot open display" href="https://sasongko.web.id/post/2024-05-25-seamonkey-in-wayland/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

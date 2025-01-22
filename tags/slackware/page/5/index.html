@@ -140,6 +140,21 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengatasi Audio Tanpa Suara ES8336
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi
+Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz Memory: 11,5 GiB of RAM Graphics Processor: Mesa Intel® UHD Graphics 600 dengan audio awalnya berupa dummy output alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.
+$ aplay -l **** List of PLAYBACK Hardware Devices **** card 0: sofessx8336 [sof-essx8336], device 0: ES8336 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 5: HDMI 1 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 6: HDMI 2 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 7: HDMI 3 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker. Yah, laptop masih diam seribu bahasa. Sound Open Firmware memberikan secercah harapan. Apalagi kemudian sof-firmware masuk ke repo current. Namun sayang, laptop masih membisu. Beberapa kali upgrade kernel, alsa, pulseaudio dan pipewire, masih saja tak terdengar. Alhamdulillah kemudian menemukan solusi dari issue yang dibuat oleh junocom di github alsa-project/alsa-ucm-conf.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-02-29 00:00:00 +0000 UTC'>29 Feb 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Mengatasi Audio Tanpa Suara ES8336" href="https://sasongko.web.id/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Variabel rust
     </h2>
   </header>
@@ -194,20 +209,6 @@ Compositor: labwc atau hyprland Status bar/panel : nwg-panel Gamma/night mode : 
   </div>
   <footer class="entry-footer"><span title='2023-10-28 00:00:00 +0000 UTC'>28 Oct 2023</span></footer>
   <a class="entry-link" aria-label="post link to Menggunakan wayland" href="https://sasongko.web.id/post/2023-10-28-menggunakan-wayland/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Aktifkan Touchpad untuk Klik
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Catatan ini sebenarnya sudah ditulis beberapa bulan yang lalu atau bahkan bertahun lalu, tetapi karena kesibukan baru sempat di-commit sekarang. Saat menggunakan wayland pertama kalinya, ada masalah. Touchpad tidak bisa digunakan untuk klik sebagai ganti klik pada mouse. Ternyata secara default memang demikian. Keunggulan linux salah satunya adalah penggunanya bebas melakukan modifikasi sesuai kemampuan dan kebutuhannya.
-Untuk membuat touchpad bisa melakukan tap sebagai klik, masuk ke Settings kemudian search touchpad. Di sini kami lebih suka menggunakan fitur search karena tidak ingat betul lokasi spesifik pengaturannya. Pada hasil yang muncul, klik Touchpad, pada bagian Tapping centang Tap-to-click.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-09-25 00:00:00 +0000 UTC'>25 Sep 2023</span></footer>
-  <a class="entry-link" aria-label="post link to Aktifkan Touchpad untuk Klik" href="https://sasongko.web.id/post/2023-09-25-touchpad-tap-to-click/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -155,6 +155,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengaktifkan runlevel 4
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Runlevel 4 bisa dikatakan sebagai runlevel multiuser dengan graphical user interface saat loginnya. Secara default, Runlevel slackware adalah 3. Untuk mengubahnya ke 4 edit file /etc/inittab, ganti angka 3 pada baris berikut dengan angka 4
+id:4:initdefault: </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-02-22 00:00:00 +0000 UTC'>22 Feb 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Mengaktifkan runlevel 4" href="https://sasongko.web.id/post/2023-02-22-aktivasi-runlevel4/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Menggunakan pipewire
     </h2>
   </header>
@@ -209,20 +222,6 @@ a &#43;= 4; Sehingga nilai a kemudian berubah dari 10 menjadi 14.
   </div>
   <footer class="entry-footer"><span title='2022-01-04 00:00:00 +0000 UTC'>04 Jan 2022</span></footer>
   <a class="entry-link" aria-label="post link to Penggabungan operator perl" href="https://sasongko.web.id/post/2022-01-04-penggabungan-operator-perl/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Operator aritmatika scalar perl
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.
-Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.
-#!/usr/bin/perl use strict; use warnings; use feature &#39;say&#39;; my $a = 2; my $b = 25; say(&#34;Angka pertama (a) adalah $a&#34;); say(&#34;Angka kedua (b) adalah $b&#34;); # penjumlahan my $c = $a &#43; $b; say(&#34;a&#43;b = $c&#34;); # pengurangan my $d = $b - $a; say(&#34;b-a = $d&#34;); # perkalian my $e = $a * $b; say(&#34;a*b = $e&#34;); # pembagian my $f = $a / $b; my $g = $b / $a; say(&#34;a/b = $f&#34;); say(&#34;b/a = $g&#34;); # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(&#34;a^b = $h&#34;); say(&#34;b^a = $i&#34;); # autoincrement # tanda &#43; di depan say(&#34;Nilai a sebelum autoincrement = $a&#34;); my $j = &#43;&#43;$a; say(&#34;&#43;&#43;a = $j&#34;); say(&#34;Nilai a sesudah autoincrement = $a&#34;); # tanda &#43; di belakang say(&#34;Nilai b sebelum autoincrement $b&#34;); my $k = $b&#43;&#43;; say(&#34;$b&#43;&#43; = $k&#34;); say(&#34;Nilai b setelah autoincrement $b&#34;); # autodecrement # tanda - di depan say(&#34;c = a&#43;b. c sebelum autodecrement = $c&#34;); my $l = --$c; say(&#34;l = c setelah autodecrement = $l&#34;); # tanda - di belakang my $m = $c--; say(&#34;c setelah autodecrement = $m&#34;); # modulus (sisa hasil bagi) my $a = 3; my $b = 30; my $n = $a % $b; my $o = $b % $a; say(&#34;a = $a&#34;); say(&#34;b = $b&#34;); say(&#34;a%b = $n&#34;); say(&#34;b%a = $o&#34;); </p>
-  </div>
-  <footer class="entry-footer"><span title='2022-01-03 00:00:00 +0000 UTC'>03 Jan 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Operator aritmatika scalar perl" href="https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

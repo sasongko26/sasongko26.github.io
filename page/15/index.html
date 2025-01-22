@@ -149,6 +149,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Membuat dan analisis core dump
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Suatu program gagal dijalankan. Eksekusi via terminal menunjukkan segmentation fault tanpa keterangan lainnya. Pada situasi inilah core dump diperlukan untuk debugging sehingga diketahui penyebabnya.
+Contoh, geeqie apabila dijalankan di lingkungan wayland berbuah segmentation fault
+$ geeqie Segmentation fault Saatnya membuat core dump
+$ gcore /usr/bin/geeqie Illegal process-id: /usr/bin/geeqie. You can&#39;t do that without a process to debug. The program is not being run. gcore: failed to create core./usr/bin/geeqie Kemudian eksekusi lagi
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-12-18 00:00:00 +0000 UTC'>18 Dec 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Membuat dan analisis core dump" href="https://sasongko.web.id/post/2021-12-18-membuat-coredump/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Deteksi Sistem Operasi Target Hacking
     </h2>
   </header>
@@ -202,21 +218,6 @@ Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagi
   </div>
   <footer class="entry-footer"><span title='2021-12-14 00:00:00 +0000 UTC'>14 Dec 2021</span></footer>
   <a class="entry-link" aria-label="post link to Menambahkan line number kate" href="https://sasongko.web.id/post/2021-12-14-show-line-number-kate/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Menambahkan scanner
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Instalasi scanner di linux terutama slackware sangat mudah. Biasanya scanner terdeteksi secara otomatis dan langsung bisa dijalankan. Pengaturan hanya dibutuhkan jika scanner tidak terdeteksi.
-Catatan kali ini tentang menambahkan scanner yang tidak terdeteksi secara otomatis. Scanner seperangkat dengan printer, yaitu Epson L3110. Printer terdeteksi otomatis dan langsun bisa digunakan, tetapi scanner-nya belum. Software untuk scan seperti xsane atau skanlite salah mendeteksi. Keduanya mendeteksi scanner yang digunakan adalah webcam.
-Scanner terhubung melalui usb, sehingga perlu dicek terlebih dahulu apakah usbnya terdeteksi.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-12-10 00:00:00 +0000 UTC'>10 Dec 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Menambahkan scanner" href="https://sasongko.web.id/post/2021-12-10-install-scanner-linux/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
