@@ -140,6 +140,22 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Install Unrar
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Di antara file kompresi/arsip yang ada, kompresi yang tidak saya utamakan adalah rar. Simpel sih alasannya, karena secara default baik BlankOn maupun Slackware tidak meng-embed ekstraktornya :D. Harus install dulu. Pastikan tersambung internet untuk mengunduh berkas.
+Untuk BlankOn bisa install dari repo.
+$ sudo apt-get install unrar Sedangkan untuk Slackware install slackbuildnya saja.
+# cd /usr/local/src # wget http://slackbuilds.org/slackbuilds/14.1/system/unrar.tar.gz # tar xzf unrar.tgr.gz # cd unrar # wget http://www.rarlab.com/rar/unrarsrc-5.2.6.tar.gz # sh unrar.SlackBuild # installpkg /tmp/unrar-5.2.6-x86_64-1_SBo.tgz Install unrar selesai.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-25 00:00:00 +0000 UTC'>25 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Install Unrar" href="https://sasongko.web.id/post/2015-06-25-install-unrar/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">InstalL Sleuth Kit Slackware
     </h2>
   </header>
@@ -208,20 +224,6 @@ $ cd libisofs $ wget http://files.libburnia-project.org/releases/libisofs-1.4.0.
   </div>
   <footer class="entry-footer"><span title='2015-06-16 00:00:00 +0000 UTC'>16 Jun 2015</span></footer>
   <a class="entry-link" aria-label="post link to Install libisofs Slackware" href="https://sasongko.web.id/post/2015-06-16-install-libisofs-slackware/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Jalankan Sudo Tanpa Password
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Idealnya perintah sudo memang memerlukan password/kata sandi karena hakikat sudo itu pengguna “meminjam” hak super user / root. Tapi, password itu bisa saja kita hilangkan. Maksudnya, tidak perlu menuliskan password, contoh
-$ wvdial 3 bash: wvdial: command not found Baris 2, command not found menunjukkan 2 kemungkinan. Kemungkinan pertama, perintah yang diketikkan memang tidak ada. Kemungkinan kedua, perintah itu memerlukan hak root. Nah perintah [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) ini yang bisa menjalankan adalah root atau sudoers (pengguna yang bisa menjalankan perintah hak root tapi dengan syarat memasukkan passwordnya root.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-14 00:00:00 +0000 UTC'>14 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Jalankan Sudo Tanpa Password" href="https://sasongko.web.id/post/2015-06-14-jalankan-sudo-tanpa-password/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -6,14 +6,25 @@
     <description>Recent content in Slackware on Catatan Sasongko</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/tags/slackware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deklarasi variabel rust</title>
+      <link>https://sasongko.web.id/post/2025-01-09-deklarasi-variabel-rust/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2025-01-09-deklarasi-variabel-rust/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Rust&lt;/strong&gt; menyediakan 2 cara mendeklarasikan variabel. Cara pertama dengan inferensi, yaitu dengan tidak menuliskan tipe datanya. Cara ini seperti yang selama ini sudah ada di contoh-contoh catatan kami tentang &lt;strong&gt;rust&lt;/strong&gt;. &lt;strong&gt;Rust&lt;/strong&gt; akan menebak dan mengatur secara otomatis. Jika tidak didefinisikan, bilangan bulat akan diberikan tipe i32, sedangkan bilangan rasional f64. Cara kedua dengan manifes yaitu menuliskan tipe datanya.&lt;/p&gt;
+&lt;p&gt;Contoh dengan inferensi:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nama&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Sasongko&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jumlah_rumah&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Contoh dengan manifes:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Gagal memulai eclipse</title>
       <link>https://sasongko.web.id/post/2025-01-08-gagal-memulai-eclipse/</link>
       <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2025-01-08-gagal-memulai-eclipse/</guid>
-      <description>&lt;p&gt;Ketika akan membuka &lt;strong&gt;Eclipse&lt;/strong&gt; muncul &lt;em&gt;error dialog&lt;/em&gt; dengan pesan &lt;strong&gt;The Eclipse executable launcher was unable to locate its companion shared library.&lt;/strong&gt; Hal ini biasanya terjadi setelah &lt;em&gt;upgrade&lt;/em&gt; &lt;strong&gt;Eclipse&lt;/strong&gt;. Solusinya dengan melakukan &lt;em&gt;overwrite&lt;/em&gt; pada file konfigurasinya. Walaupun ini nantinya menimbulkan konsekuensi &lt;em&gt;reinstall plugin&lt;/em&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Ketika akan membuka &lt;strong&gt;Eclipse&lt;/strong&gt; muncul &lt;em&gt;error dialog&lt;/em&gt; dengan pesan &lt;strong&gt;The Eclipse executable launcher was unable to locate its companion shared library.&lt;/strong&gt; Hal ini biasanya terjadi setelah &lt;em&gt;upgrade&lt;/em&gt; &lt;strong&gt;Eclipse&lt;/strong&gt;. Solusinya dengan melakukan &lt;em&gt;overwrite&lt;/em&gt; pada file konfigurasinya. Walaupun ini nantinya menimbulkan konsekuensi &lt;em&gt;reinstall plugin&lt;/em&gt;. Dalam kasus ini kami gunakan &lt;strong&gt;Eclipse CDT&lt;/strong&gt; atau &lt;strong&gt;eclipse-cpp&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv -fv /opt/eclipse-cpp/configuration/config.ini&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;.new,&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv -fv /opt/eclipse-cpp/eclipse.ini&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;.new,&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>

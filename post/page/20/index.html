@@ -155,6 +155,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Aktivasi fancy indexing directory listing apache
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Secara default, indexing pada apache hanya menampilkan nama direktori dan file yang berada dalam direktori tersebut dengan format unordered list. Bagi yang menganggap tampilan ini tidak menarik, bisa mengaktifkan fancy indexing dengan cara edit file /etc/httpd/httpd.conf, uncomment baris
+#Include /etc/httpd/extra/httpd-autoindex.conf kemudian restart apache
+# /etc/rc.d/rc.httpd restart </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-05-23 00:00:00 +0000 UTC'>23 May 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Aktivasi fancy indexing directory listing apache" href="https://sasongko.web.id/post/2021-05-23-aktivasi-fancy-indexing-directory-listing-apache/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Menghapus history QtAV Player
     </h2>
   </header>
@@ -208,20 +222,6 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
   </div>
   <footer class="entry-footer"><span title='2021-05-02 00:00:00 +0000 UTC'>02 May 2021</span></footer>
   <a class="entry-link" aria-label="post link to Uji normalitas dengan python" href="https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Membuat histogram dengan python
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Untuk membuat histogram dengan python dibutuhkan library pandas dan matplotlib dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:
-#!/usr/bin/python3 import pandas as pd import matplotlib.pyplot as plt # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # histogram plt.hist(x=&#39;beer_servings&#39;, data=alkohol) plt.xlabel(&#39;Kaleng&#39;) plt.ylabel(&#39;Jumlah&#39;) plt.title(&#39;Konsumsi bir tahun 2010 (kaleng)&#39;) plt.tight_layout() plt.show() Hasilnya:
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-05-01 00:00:00 +0000 UTC'>01 May 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Membuat histogram dengan python" href="https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

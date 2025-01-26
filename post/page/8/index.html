@@ -155,6 +155,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">spdlog build error basic runtime
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Ketika build spdlog dari SBo ditemukan error
+n file included from /tmp/SBo/spdlog-1.11.0/include/spdlog/spdlog.h:12, from /tmp/SBo/spdlog-1.11.0/include/spdlog/spdlog-inl.h:7, from /tmp/SBo/spdlog-1.11.0/src/spdlog.cpp:8: /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:111: error: ‘basic_runtime’ is not a member of ‘fmt’ 168 | nvertible&lt;T, fmt::basic_string_view&lt;Char&gt;&gt;::value || std::is_same&lt;remove_cvref_t&lt;T&gt;, fmt::basic_runtime&lt;Char&gt;&gt;::value&gt; | ^~~~~~~~~~~~~ /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:111: error: ‘basic_runtime’ is not a member of ‘fmt’ /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:125: error: template argument 2 is invalid 168 | mt::basic_string_view&lt;Char&gt;&gt;::value || std::is_same&lt;remove_cvref_t&lt;T&gt;, fmt::basic_runtime&lt;Char&gt;&gt;::value&gt; | ^~~~ /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:138: error: expected ‘{’ before ‘&gt;’ token 168 | :basic_string_view&lt;Char&gt;&gt;::value || std::is_same&lt;remove_cvref_t&lt;T&gt;, fmt::basic_runtime&lt;Char&gt;&gt;::value&gt; | ^ make[2]: *** [CMakeFiles/spdlog.dir/build.make:76: CMakeFiles/spdlog.dir/src/spdlog.cpp.o] Error 1 make[1]: *** [CMakeFiles/Makefile2:100: CMakeFiles/spdlog.dir/all] Error 2 make: *** [Makefile:166: all] Error 2 Failures: spdlog: spdlog.SlackBuild return non-zero Spdlog ini mempunyai dependensi fmt. Fmt yang tersedia di current versi 10.0.0. Tapi versi ini gagal untuk build spdlog. Maka mt yang ada di current ini dihapus dan ganti dengan yang disediakan SBo (9.1.0).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-06-03 00:00:00 +0000 UTC'>03 Jun 2023</span></footer>
+  <a class="entry-link" aria-label="post link to spdlog build error basic runtime" href="https://sasongko.web.id/post/2022-06-03-spdlog-build-error-basic-runtime/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Masuk UEFI Firmware Settings dari GRUB
     </h2>
   </header>
@@ -207,22 +221,6 @@ Berikut adalah script bash-nya
   </div>
   <footer class="entry-footer"><span title='2023-03-30 00:00:00 +0000 UTC'>30 Mar 2023</span></footer>
   <a class="entry-link" aria-label="post link to Two fer bash" href="https://sasongko.web.id/post/2023-03-30-two-fer-bash/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Akses akun root mariadb tanpa password
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Untuk akses root mariadb biasanya memerlukan password. Tapi sebenarnya root bisa diakses tanpa password. Pertama, hentikan dulu service mariadb-nya.
-$ /etc/rc.d/rc.mysqld stop Kemudian, restart database server tanpa peduli otentikasinya.
-$ mariadbd-safe --skip-grant-tables --skip-networking &amp; Nah, akun root mariadb sudah bisa diakses tanpa password
-$ mariadb -u root Welcome to the MariaDB monitor. Commands end with ; or \g. Your MariaDB connection id is 3 Server version: 10.11.2-MariaDB Source distribution Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others. Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement. MariaDB [(none)]&gt; Oiya, 3 command pertama dijalankan dengan privilege root yang ada di sistem di mana mariadb tersebut diinstall.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-03-22 00:00:00 +0000 UTC'>22 Mar 2023</span></footer>
-  <a class="entry-link" aria-label="post link to Akses akun root mariadb tanpa password" href="https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
