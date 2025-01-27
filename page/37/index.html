@@ -149,6 +149,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Edit volume suara
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Editing kali ini adalah bagaimana mengubah volume default audio/suara menggunakan ffmpeg. Misal, file yang akan diinput/diedit adalah video.mp4. Karena suaranya terlalu pelan, akan dinaikkan menjadi 5x semula melalui filter audio. File hasil editan diberi nama video-louder.webm.
+ffmpeg -i video.mp4 -filter:a &#34;volume=5&#34; video-louder.webm Apabila suara terlalu nyaring bisa dipelankan. Berikut akan dipelankan menjadi setengahnya dari volume semula dan file baru diberi nama new.webm
+ffmpeg -i video.mp4 -filter:a &#34;volume=0.5&#34; new.webm Atau, dengan menuliskan volume suaranya secara langsung. Default aslinya 256. Misalkan akan dinaikkan menjadi 300 kemudian disimpan sebagai anyar.mkv
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-05-14 00:00:00 +0000 UTC'>14 May 2020</span></footer>
+  <a class="entry-link" aria-label="post link to Edit volume suara" href="https://sasongko.web.id/post/2020-05-14-edit-volume-audio-ffmpeg/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Convert jpg ke pdf
     </h2>
   </header>
@@ -199,20 +214,6 @@ Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini ber
   </div>
   <footer class="entry-footer"><span title='2020-04-29 00:00:00 +0000 UTC'>29 Apr 2020</span></footer>
   <a class="entry-link" aria-label="post link to Mengenal Objek R Vector" href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install JASP
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>JASP, singkatan dari Jeffreys’s Amazing Statistic Program, merupakan open source statistics software. Software ini layak dijadikan pilihan utama karena:
-Open source. Karena open source semua orang boleh memakai, melihat source code-nya dan berkontribusi (melaporkan masalah, mengusulkan fitur dan perbaikan). Silahkan menuju ke https://github.com/jasp-stats/jasp-desktop . Pengembangan dinaungi oleh akademisi dari University of Amsterdam, Duke University, University of Southampton, UNiversity of Sussex, University of Missouri, Athens University of Economics dan Business, Missouri State University, University of Groningen, Nyenrode Business University, University of Zurich dan Ludwig-Maximilians-Universität München. Menyediakan berbagai analisis baik analisis frequentist maupun Bayesian. Tabel hasil dalam format APA yang dengan mudahnya di-copas ke word processosr seperti LibreOffice Writer atau Microsoft Word. Tersedia untuk Linux, MacOS, dan Microsoft Windows. Install JASP Karena saya memakai Slackware maka cara yang ditulis di sini tentu saja yang berlaku untuk Slackware dan linux umumnya. Install menggunakan flatpak. Flatpak tersedia di SBo. Untuk install membutuhkan download dari repo sekitar 1,4GB.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-04-11 00:00:00 +0000 UTC'>11 Apr 2020</span></footer>
-  <a class="entry-link" aria-label="post link to Install JASP" href="https://sasongko.web.id/post/2020-04-11-install-jasp/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

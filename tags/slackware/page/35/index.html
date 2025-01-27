@@ -140,6 +140,20 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Deteksi duplikasi file
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Walau sudah ada tools yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan tools bawaan Slackware. Tools yang umum digunakan antara lain fslint, fdupes atau jdupes. Adapun tools yang biasa saya gunakan
+sha512sum awk uniq grep Misalkan, akan mencari adakah duplikasi file di folder Downloads. Pertama, catat dulu hash-nya. Di sini saya gunakan sha512. Kumpulan sha512 tersebut disatukan dalam file downloads.sha512. File ini terdiri dari 2 kolom. Kolom pertama berisi hash, sedangkan kolom kedua nama filenya.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-06-01 00:00:00 +0000 UTC'>01 Jun 2020</span></footer>
+  <a class="entry-link" aria-label="post link to Deteksi duplikasi file" href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Menggabungkan video ffmpeg
     </h2>
   </header>
@@ -194,20 +208,6 @@ adb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti a
   </div>
   <footer class="entry-footer"><span title='2020-05-24 00:00:00 +0000 UTC'>24 May 2020</span></footer>
   <a class="entry-link" aria-label="post link to Aktivasi android GPS via adb" href="https://sasongko.web.id/post/2020-05-24-aktivasi-android-gps-adb/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Menambah watermark gambar ke video dengan ffmpeg
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Misalkan kita akan memberikan watermark berupa gambar logo.png ke video ramadhan.mkv. Watermark ditempatkan di pojok kiri bawah. Video dengan watermark diberi nama ramadhan-fix.mkv
-ffmpeg -i ramadhan.mkv -i logo.png -filter_complex &#34;overlay=x=0:y=(main_h-overlay-h)&#34; ramadhan-fix.mkv Keterangan opsi dan parameternya
--filter_complex : menggunakan filter yang kompleks overlay : menambahkan watermark x : posisi pada sumbu x, dihitung dari ujung kiri y : posisi pada sumbu y, dihitung dari ujung atas main_h : tinggi video main_w : lebar video overlay_h : tinggi gambar yang akan dijadikan watermark overlay_w : lebar gambar yang akan dijadikan watermark </p>
-  </div>
-  <footer class="entry-footer"><span title='2020-05-24 00:00:00 +0000 UTC'>24 May 2020</span></footer>
-  <a class="entry-link" aria-label="post link to Menambah watermark gambar ke video dengan ffmpeg" href="https://sasongko.web.id/post/2020-05-21-menambah-watermark-gambar-video/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

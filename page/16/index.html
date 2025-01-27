@@ -149,6 +149,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Deteksi log4shell
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Log4shell menjadi topik yang hangat dibicarakan sepekan ini. Bugs JNDI lookup pada log4j membuat komputer atau pc (terutama server) semakin mudah diambil alih tanpa ijin. Syukur alhamdulillah sudah dirilis versi terbaru untuk menangkalnya, yaitu versi 2.16.0.
+Bagaimana dengan slackware? Mari kita cek apakah log4j ini tersedia sebagai bagian dari default packages.
+# slackpkg file-search log4j Looking for log4j in package list. Please wait... DONE No packages contains &#34;log4j&#34; file. Tidak ditemukan. Aman!
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-12-16 00:00:00 +0000 UTC'>16 Dec 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Deteksi log4shell" href="https://sasongko.web.id/post/2021-12-16-mitigasi-log4shell/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Menambahkan line number kate
     </h2>
   </header>
@@ -202,24 +217,6 @@ my %data = ( nama =&gt; &#34;Sasongko&#34;, distro =&gt; &#34;Slackware&#34;, );
   </div>
   <footer class="entry-footer"><span title='2021-11-29 00:00:00 +0000 UTC'>29 Nov 2021</span></footer>
   <a class="entry-link" aria-label="post link to Variabel hash perl" href="https://sasongko.web.id/post/2021-11-29-variabel-hash-perl/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Variabel array perl
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Melanjutkan catatan sebelumnya tentang variabel yang dimiliki bahasa pemrograman perl. Sebelumnya membahas tentang variabel scalar. Catatan kali ini tentang jenis variabel yang kedua yaitu array.
-Berbeda dengan scalar yang bernilai tunggal, array bernilai majemuk. Array merupakan himpunan. Element array zero indexed, artinya, elemen pertama berindeks 0.
-Pendeklarasian array diserta simbol @.
-Contoh: himpunan nama-nama buah dan daftar nilai
-my @buah = (&#34;pisang&#34;, &#34;mangga&#34;, &#34;jeruk&#34;, &#34;pepaya&#34;); my @daftar_nilai = (80, 100, 76.5, 21.87); print $buah[0]; menghasilkan output pisang. Sedangkan
-print $daftar_nilai[2]; menghasilkan output 76.5.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-11-28 00:00:00 +0000 UTC'>28 Nov 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Variabel array perl" href="https://sasongko.web.id/post/2021-11-28-variabel-array-perl/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

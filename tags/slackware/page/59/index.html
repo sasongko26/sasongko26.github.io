@@ -140,6 +140,26 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Install libisofs Slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Libisofs adalah pustaka untuk membuat filesystem ISO-9660.
+Berikut cara install libisofs-1.4.0 di slackware melalui slackbuild. Pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh berkas yang diperlukan.
+Unduh slackbuild libisofs
+$ wget http://slackbuilds.org/slackbuilds/14.1/libraries/libisofs.tar.gz Ekstrak
+$ tar xzf libisofs.tar.gz Terbentuk folder libisofs, pindah direktori ke folder itu kemudain unduh kode sumbernya.
+$ cd libisofs $ wget http://files.libburnia-project.org/releases/libisofs-1.4.0.tar.gz Install slackbuildnya
+# sh libisofs.SlackBuild Install paketnya
+# installpkg /tmp/libisofs-1.4.0-x86_64-1_SBo.tgz Selesai.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-16 00:00:00 +0000 UTC'>16 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Install libisofs Slackware" href="https://sasongko.web.id/post/2015-06-16-install-libisofs-slackware/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Jalankan Sudo Tanpa Password
     </h2>
   </header>
@@ -191,22 +211,6 @@ Calligra memang layak digunakan untuk keperluan perkantoran. Performanya dalam m
   </div>
   <footer class="entry-footer"><span title='2015-06-09 00:00:00 +0000 UTC'>09 Jun 2015</span></footer>
   <a class="entry-link" aria-label="post link to Uninstall Calligra Office Suite" href="https://sasongko.web.id/post/2015-06-09-uninstall-calligra/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install JDK Slackware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Java Development Kit atau yang biasa disingkat JDK ini berguna untuk membuat/mengembangkan aplikasi berbasis Java. Selain itu, untuk menginstall dan/atau menjalankan aplikasi tertentu disyaratkan JDK, seperti LibreOffice, Netbeans dan Aptana. Sebelum install kita unduh dulu dari http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html .
-Karena Slackware yang digunakan adalah 64 bit maka pilih untuk yang LInux x64 format rpm.
-Untuk bisa mengunduh harus menyetujui perjanjian lisensi dulu (Accept License Agreement).
-Kemudian pindahkan hasil unduhan ke /usr/local/src dilanjutkan dengan pindah ke direktori /usr/local/src
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-07 00:00:00 +0000 UTC'>07 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Install JDK Slackware" href="https://sasongko.web.id/post/2015-06-07-install-jdk-slackware/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

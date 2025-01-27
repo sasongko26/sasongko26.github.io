@@ -5,18 +5,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Tipe data string literal rust | Catatan Sasongko</title>
+<title>Konstanta rust | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, rust">
-<meta name="description" content="Rust mengenal tipe data string literal (&amp;str) atau string slice. Tipe data ini mirip dengan char, tetapi lebih banyak karakter yang bisa disimpan tidak hanya 1. Assignment dengan mengapit nilai variabel dengan tanda kutip.
-Contoh:
+<meta name="description" content="Konstanta dalam bahasa rust seperti variabel yang kita bisa mendeklarasikannya. Konstanta bisa mempunyai lingkup global; lebih luas dari pada variabel. Deklarasi konstanta harus dengan manifes yang menyebutkan eksplisit tipe datanya. Nama konstanta ditulis huruf kapital. Keyword-nya const atau static.
+const NEGARA: &amp;str = &#34;Indonesia&#34;;
 fn main(){
-	let nama = &#34;Sasongko&#34;;
-	println!(&#34;Halo, {}&#34;, nama);
-	println!(&#34;Selamat belajar rust. Tetap semangat!&#34;);
+    const TANGGAL: u8 = 17;
+    static BULAN: &amp;str = &#34;Agustus&#34;;
+    static TAHUN: u16 = 1945;
+    println!(&#34;Negara {} merdeka pada {} {} {}&#34;, NEGARA, TANGGAL, BULAN, TAHUN);
 }
 ">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/2025-01-07-tipe-data-string-literal-rust/">
+<link rel="canonical" href="https://sasongko.web.id/post/2025-01-10-konstanta-rust/">
 <link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://sasongko.web.id/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
@@ -25,7 +26,7 @@ fn main(){
 <link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2025-01-07-tipe-data-string-literal-rust/">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2025-01-10-konstanta-rust/">
 <noscript>
     <style>
         #theme-toggle,
@@ -62,27 +63,27 @@ fn main(){
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/2025-01-07-tipe-data-string-literal-rust/">
+</noscript><meta property="og:url" content="https://sasongko.web.id/post/2025-01-10-konstanta-rust/">
   <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Tipe data string literal rust">
-  <meta property="og:description" content="Rust mengenal tipe data string literal (&amp;str) atau string slice. Tipe data ini mirip dengan char, tetapi lebih banyak karakter yang bisa disimpan tidak hanya 1. Assignment dengan mengapit nilai variabel dengan tanda kutip.
-Contoh:
-fn main(){ let nama = &#34;Sasongko&#34;; println!(&#34;Halo, {}&#34;, nama); println!(&#34;Selamat belajar rust. Tetap semangat!&#34;); } ">
+  <meta property="og:title" content="Konstanta rust">
+  <meta property="og:description" content="Konstanta dalam bahasa rust seperti variabel yang kita bisa mendeklarasikannya. Konstanta bisa mempunyai lingkup global; lebih luas dari pada variabel. Deklarasi konstanta harus dengan manifes yang menyebutkan eksplisit tipe datanya. Nama konstanta ditulis huruf kapital. Keyword-nya const atau static.
+const NEGARA: &amp;str = &#34;Indonesia&#34;; fn main(){ const TANGGAL: u8 = 17; static BULAN: &amp;str = &#34;Agustus&#34;; static TAHUN: u16 = 1945; println!(&#34;Negara {} merdeka pada {} {} {}&#34;, NEGARA, TANGGAL, BULAN, TAHUN); } ">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2025-01-07T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-01-07T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-01-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-01-10T00:00:00+00:00">
     <meta property="article:tag" content="Slackware">
     <meta property="article:tag" content="Rust">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tipe data string literal rust">
-<meta name="twitter:description" content="Rust mengenal tipe data string literal (&amp;str) atau string slice. Tipe data ini mirip dengan char, tetapi lebih banyak karakter yang bisa disimpan tidak hanya 1. Assignment dengan mengapit nilai variabel dengan tanda kutip.
-Contoh:
+<meta name="twitter:title" content="Konstanta rust">
+<meta name="twitter:description" content="Konstanta dalam bahasa rust seperti variabel yang kita bisa mendeklarasikannya. Konstanta bisa mempunyai lingkup global; lebih luas dari pada variabel. Deklarasi konstanta harus dengan manifes yang menyebutkan eksplisit tipe datanya. Nama konstanta ditulis huruf kapital. Keyword-nya const atau static.
+const NEGARA: &amp;str = &#34;Indonesia&#34;;
 fn main(){
-	let nama = &#34;Sasongko&#34;;
-	println!(&#34;Halo, {}&#34;, nama);
-	println!(&#34;Selamat belajar rust. Tetap semangat!&#34;);
+    const TANGGAL: u8 = 17;
+    static BULAN: &amp;str = &#34;Agustus&#34;;
+    static TAHUN: u16 = 1945;
+    println!(&#34;Negara {} merdeka pada {} {} {}&#34;, NEGARA, TANGGAL, BULAN, TAHUN);
 }
 ">
 
@@ -101,8 +102,8 @@ fn main(){
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Tipe data string literal rust",
-      "item": "https://sasongko.web.id/post/2025-01-07-tipe-data-string-literal-rust/"
+      "name": "Konstanta rust",
+      "item": "https://sasongko.web.id/post/2025-01-10-konstanta-rust/"
     }
   ]
 }
@@ -111,20 +112,20 @@ fn main(){
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Tipe data string literal rust",
-  "name": "Tipe data string literal rust",
-  "description": "Rust mengenal tipe data string literal (\u0026amp;str) atau string slice. Tipe data ini mirip dengan char, tetapi lebih banyak karakter yang bisa disimpan tidak hanya 1. Assignment dengan mengapit nilai variabel dengan tanda kutip.\nContoh:\nfn main(){ let nama = \u0026#34;Sasongko\u0026#34;; println!(\u0026#34;Halo, {}\u0026#34;, nama); println!(\u0026#34;Selamat belajar rust. Tetap semangat!\u0026#34;); } ",
+  "headline": "Konstanta rust",
+  "name": "Konstanta rust",
+  "description": "Konstanta dalam bahasa rust seperti variabel yang kita bisa mendeklarasikannya. Konstanta bisa mempunyai lingkup global; lebih luas dari pada variabel. Deklarasi konstanta harus dengan manifes yang menyebutkan eksplisit tipe datanya. Nama konstanta ditulis huruf kapital. Keyword-nya const atau static.\nconst NEGARA: \u0026amp;str = \u0026#34;Indonesia\u0026#34;; fn main(){ const TANGGAL: u8 = 17; static BULAN: \u0026amp;str = \u0026#34;Agustus\u0026#34;; static TAHUN: u16 = 1945; println!(\u0026#34;Negara {} merdeka pada {} {} {}\u0026#34;, NEGARA, TANGGAL, BULAN, TAHUN); } ",
   "keywords": [
     "slackware", "rust"
   ],
-  "articleBody": "Rust mengenal tipe data string literal (\u0026str) atau string slice. Tipe data ini mirip dengan char, tetapi lebih banyak karakter yang bisa disimpan tidak hanya 1. Assignment dengan mengapit nilai variabel dengan tanda kutip.\nContoh:\nfn main(){ let nama = \"Sasongko\"; println!(\"Halo, {}\", nama); println!(\"Selamat belajar rust. Tetap semangat!\"); } ",
-  "wordCount" : "50",
+  "articleBody": "Konstanta dalam bahasa rust seperti variabel yang kita bisa mendeklarasikannya. Konstanta bisa mempunyai lingkup global; lebih luas dari pada variabel. Deklarasi konstanta harus dengan manifes yang menyebutkan eksplisit tipe datanya. Nama konstanta ditulis huruf kapital. Keyword-nya const atau static.\nconst NEGARA: \u0026str = \"Indonesia\"; fn main(){ const TANGGAL: u8 = 17; static BULAN: \u0026str = \"Agustus\"; static TAHUN: u16 = 1945; println!(\"Negara {} merdeka pada {} {} {}\", NEGARA, TANGGAL, BULAN, TAHUN); } ",
+  "wordCount" : "73",
   "inLanguage": "en",
-  "datePublished": "2025-01-07T00:00:00Z",
-  "dateModified": "2025-01-07T00:00:00Z",
+  "datePublished": "2025-01-10T00:00:00Z",
+  "dateModified": "2025-01-10T00:00:00Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://sasongko.web.id/post/2025-01-07-tipe-data-string-literal-rust/"
+    "@id": "https://sasongko.web.id/post/2025-01-10-konstanta-rust/"
   },
   "publisher": {
     "@type": "Organization",
@@ -207,18 +208,19 @@ fn main(){
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      Tipe data string literal rust
+      Konstanta rust
     </h1>
-    <div class="post-meta"><span title='2025-01-07 00:00:00 +0000 UTC'>07 Jan 2025</span>
+    <div class="post-meta"><span title='2025-01-10 00:00:00 +0000 UTC'>10 Jan 2025</span>
 
 </div>
   </header> 
-  <div class="post-content"><p><strong>Rust</strong> mengenal tipe data <em>string literal</em> (&amp;str) atau <em>string slice</em>. Tipe data ini mirip dengan <em>char</em>, tetapi lebih banyak karakter yang bisa disimpan tidak hanya 1. <em>Assignment</em> dengan mengapit nilai variabel dengan tanda kutip.</p>
-<p>Contoh:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">(){</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">let</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Sasongko&#34;</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Halo, </span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">nama</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Selamat belajar rust. Tetap semangat!&#34;</span><span class="p">);</span><span class="w">
+  <div class="post-content"><p>Konstanta dalam bahasa <strong>rust</strong> seperti variabel yang kita bisa mendeklarasikannya. Konstanta bisa mempunyai lingkup global; lebih luas dari pada variabel. Deklarasi konstanta harus dengan manifes yang menyebutkan eksplisit tipe datanya. Nama konstanta ditulis huruf kapital. <em>Keyword</em>-nya <strong>const</strong> atau <strong>static</strong>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">const</span><span class="w"> </span><span class="no">NEGARA</span>: <span class="kp">&amp;</span><span class="kt">str</span> <span class="o">=</span><span class="w"> </span><span class="s">&#34;Indonesia&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="no">TANGGAL</span>: <span class="kt">u8</span> <span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="no">BULAN</span>: <span class="kp">&amp;</span><span class="kt">str</span> <span class="o">=</span><span class="w"> </span><span class="s">&#34;Agustus&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="no">TAHUN</span>: <span class="kt">u16</span> <span class="o">=</span><span class="w"> </span><span class="mi">1945</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Negara </span><span class="si">{}</span><span class="s"> merdeka pada </span><span class="si">{}</span><span class="s"> </span><span class="si">{}</span><span class="s"> </span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="no">NEGARA</span><span class="p">,</span><span class="w"> </span><span class="no">TANGGAL</span><span class="p">,</span><span class="w"> </span><span class="no">BULAN</span><span class="p">,</span><span class="w"> </span><span class="no">TAHUN</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div>
 
