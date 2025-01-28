@@ -149,6 +149,33 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Virt-Manager ImportError: No module named requests
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.
+$ virt-manager Traceback (most recent call last): File &#34;/usr/share/virt-manager/virt-manager&#34;, line 33, in &lt;module&gt; from virtinst import util as util File &#34;/usr/share/virt-manager/virtinst/__init__.py&#34;, line 89, in &lt;module&gt; from virtinst.distroinstaller import DistroInstaller File &#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;, line 23, in &lt;module&gt; from . import urlfetcher File &#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;, line 34, in &lt;module&gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests. Ini dibuktikan dengan output ls /var/log/packages|grep python-request yang kosong.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-07-04 00:00:00 +0000 UTC'>04 Jul 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Virt-Manager ImportError: No module named requests" href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Upgrade ke Slackware 14.2
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sehubungan dengan telah rilisnya Slackware 14.2 maka silahkan melakukan upgrade untuk mendapatkan keamanan yang lebih bagus dan fitur-fitur baru. Saya selama ini melakukan upgrade bertahap demi penghematan kuota internet. Dimulai dengan upgrade ke current karena saat itu versi stable yang baru (14.2) masih dalam proses pengembangan. Upgrade ini menggunakan slackpkg. Dan tentu saja membutuhkan sambungan internet.
+Pilih cermin atau mirror. Dengan menyunting /etc/slackpkg/mirrors, menghilangkan tanda komentar/tanda pagar pada repo yang diinginkan. Tersedia banyak repo yang bisa dijadikan rujukan, tetapi sayangnya baru 2 repo lokal yang resmi terdaftar, yaitu UI dan UKDW. Saya gunakan milik UKDW karena lebih dekat (UKDW di Yogyakarta sedangkan saya di Semarang) sehingga harapannya lebih cepat. Bisa juga memilih repo Slackware.com yang secara otomatis akan memilihkan repo terdekat. Pastikan hanya 1 repo yang dipilih. Update daftar paket dengan melakukan slackpkg update Upgrade slackpkg untuk mendapatkan alamat repo 14.2. Upgrade juga glibc-solibs. Keduanya dapat dilakukan secara simultan : slackpkg upgrade slackpkg glibc-solibs Kalau muncul pertanyaan tentang konfigurasi baru, pilih saja O alias overwrite. Kalau tidak muncul lakukan slackpkg new-config Setelah upgrade slackpkg pilih repo lagi karena ada perubahan alamat/URL repo kemudian update lagi. Lanjut install paket-paket baru yang sebelumnya tidak ada : slackpkg install-new Upgrade sistem : slackpkg upgrade-all. Akan ditampilkan paket yang bisa di-upgrade. Hilangkan tanda bintangnya dengan menekan tombol spasi bila tidak ingin paket tersebut di-upgrade kemudian OK. Hapus paket yang tidak berguna. Paket yang perlu dihapus dan berbagai perubahan dari Slackware 14.1 ke 14.2 bisa dilihat di sini : slackpkg remove Karena ada pergantian kernel, jangan lupa konfigurasi ulang boot loader itu lilo atau elilo. Kalau menggunakan lilo : liloconfig. Kalau menggunakan elilo : eliloconfig </p>
+  </div>
+  <footer class="entry-footer"><span title='2016-07-03 00:00:00 +0000 UTC'>03 Jul 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Upgrade ke Slackware 14.2" href="https://sasongko.web.id/post/2016-07-03-upgrade-slackware-142/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Upgrade Slackbuilds Slackware 14.2
     </h2>
   </header>
@@ -187,44 +214,6 @@ nmcli Usage: nmcli [OPTIONS] OBJECT { COMMAND | help } OPTIONS -t[erse] terse ou
   </div>
   <footer class="entry-footer"><span title='2016-06-26 00:00:00 +0000 UTC'>26 Jun 2016</span></footer>
   <a class="entry-link" aria-label="post link to Konek Internet dengan nmcli" href="https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Download Kitab Fathul Muin Maktabah Elkirtas
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Pertama, buka Maktabah Elkirtasnya dulu dan pastikan tersambung internet.
-Kemudian klik gambar kitabnya akan muncul daftar kategori kitabnya.
-Scroll ke bawah pilih فقة شافعي
-Scroll ke bawah dan pilih فتع المعين
-Muncul konfirmasi untuk men- download
-Yes akan melanjutkan dan tunggu sampai selesai
-Selesai download muncul pemberitahuan
-Klik Yes Kitab Fathul Muin siap dikaji.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-05-12 00:00:00 +0000 UTC'>12 May 2016</span></footer>
-  <a class="entry-link" aria-label="post link to Download Kitab Fathul Muin Maktabah Elkirtas" href="https://sasongko.web.id/post/2016-05-12-download-fathul-muin-maktabah-elkirtas/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install Android Tools
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Di catatan kemarin sudah saya sampaikan [cara install sbopkg]({% post_url 2016-05-03-install-sbopkg %}), nah sekarang adalah contoh cara menggunakan sbopkg, untuk install Android Tools.
-Jalankan sebagai root
-sbopkg Tersedia pilihan Sync, Changelog, Packages, Updates, Browse, Search, Queue, Utilities, Help.
-Pilih Search
-Masukkan kata kuncinya, misalnya android
-Kemudian akan muncul paket yang sesuai dengan kata kunci. Kemudian pilih paket yang diinginkan dengan OK.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-05-07 00:00:00 +0000 UTC'>07 May 2016</span></footer>
-  <a class="entry-link" aria-label="post link to Install Android Tools" href="https://sasongko.web.id/post/2016-05-07-install-android-tools/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

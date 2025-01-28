@@ -149,6 +149,37 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Menambahkan tanggal toolbar blackbox
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Masih adakah pengguna linux di Indonesia yang menggunakan blackbox sebagai window manager sehari-hari? Masih, minimal seorang yaitu yang menulis catatan ini. Hehehehe….
+Secara default, toolbar blackbox tidak menyertakan tanggal walau menampilkan jam. Jam ditampilkan dalam format 12 jam AM/PM. Untuk menambahkannya, dan menggunakan jam format 24 jam sebagaimana lazimnya di Indonesia, diatur sebagai berikut pada ~/.blackboxrc
+session.screen0.strftimeFormat : %d/%m/%Y %H:%M Untuk menerapkan perubahan tersebut secara langsung, restart blackbox (tidak perlu restart komputer!)
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-11 00:00:00 +0000 UTC'>11 Mar 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Menambahkan tanggal toolbar blackbox" href="https://sasongko.web.id/post/2021-03-11-menampilkan-tanggal-toolbar-blackbox/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengubah user agent firefox
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Pengertian user agent User agent (UA) adalah identitas web browser yang dikirimkan ke website yang diakses. Identitas tersebut antara lain nama web browser dan versinya.
+Default UA firefox Firefox yang saat ini digunakan adalah versi 78.6.1esr. Versi ini memiliki UA Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Mengetahui UA firefox Pada address bar ketik about:support. Perhatikan bagian User Agent.
+Cara mengganti UA Untuk mengubahnya, contoh kali ini akan diubah dengan UA Chrome pada Mac.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-10 00:00:00 +0000 UTC'>10 Mar 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mengubah user agent firefox" href="https://sasongko.web.id/post/2021-03-10-mengubah-user-agent-firefox/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Mount partisi hibernated windows
     </h2>
   </header>
@@ -187,36 +218,6 @@ $ find /tmp -maxdepth 1 -name *.rtf -delete </p>
   </div>
   <footer class="entry-footer"><span title='2021-02-26 00:00:00 +0000 UTC'>26 Feb 2021</span></footer>
   <a class="entry-link" aria-label="post link to Menghapus file berdasarkan pencarian" href="https://sasongko.web.id/post/2021-02-26-menghapus-berdasarkan-pencarian/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengatur ukuran window gvim
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>GVIm merupakan text editor legendaris. Simpel dan mudah digunakan adalah alasan utama penulis menyukainya. GVIm juga mudah di-customize. User bebas melakukan modifikasi sesuai kebutuhannya. Salah satu yang penulis butuhkan adalah ketika memulai gvim ukuran window 80x24 (80 kolom, 24 baris). Untuk mewujudkannya, perlu membuat file ~/.gvimrc isinya sebagai berikut:
-set columns=80 set lines=24 </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-02-25 00:00:00 +0000 UTC'>25 Feb 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Mengatur ukuran window gvim" href="https://sasongko.web.id/post/2021-02-25-mengatur-ukuran-window-gvim-otomatis/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Aktivasi apache webserver slackware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Install apache webserver slackware linux Secara default, apache webserver sudah ter-install di slackware. Namun, jika saat meng-install slackware tidak memilih full installation, apache webserver dapat di-install dengan mudah, yaitu dengan meng-install httpd.
-slackpkg install httpd Aktivasi apache webserver slackware linux Setelah diinstall, bisa diaktifkan:
-/etc/rc.d/rc.httpd start Untuk menonaktifkan atau mematikan:
-/etc/rc.d/rc.httpd stop Untuk restart webserver:
-/etc/rc.d/rc.httpd restart Mengaktifkan apache webserver otomatis Untuk dapat running atau mengaktifkan apache secara otomatis setelah booting, pastikan /etc/rc.d/rc.httpd executable.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-02-24 00:00:00 +0000 UTC'>24 Feb 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Aktivasi apache webserver slackware" href="https://sasongko.web.id/post/2021-02-24-aktivasi-apache-slackware/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

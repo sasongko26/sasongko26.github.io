@@ -140,6 +140,37 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mount media read write mode
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Mount media (kasus kali ini pada flashdisk) melalui command line secara default membuat ownership filenya menjadi milik root. Hal ini berakibat media tersebut berjalan pada mode read-only. Hanya user setingkat root yang bisa melakukan write on.
+Kasus ini bisa disiasati dengan mendefinisikan id user yang akan melakukan write on.
+mount -o rw,uid=1020,gid=120 /dev/sdb1 /media/hd0/ uid dan gid di sini hanya contoh, silakan disesuaikan.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-03-05 00:00:00 +0000 UTC'>05 Mar 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Mount media read write mode" href="https://sasongko.web.id/post/2022-03-05-mount-media-read-write-mode/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Konfigurasi mirror slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Slackpkg merupakan salah satu official slackware package manager. Fitur yang dimilikinya antara lain
+Cek apakah ada update Baca changelog Install, upgrade, reinstall, remove, blacklist packages Sebelum menggunakannya, pilih dahulu mirror yang akan digunakan
+# vi /etc/slackpkg/mirrors Pada file tersebut sudah tersedia list mirror yang bisa digunakan. Apakah menggunakan current atau stable (saat ini 15.0). Pilih mirrornya dengan cara uncomment baris alamat mirrornya. Contoh
+https://mirrors.slackware.com/slackware/slackware64-15.0/ untuk menggunakan mirror terdekat versi slackware 15.0
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-03-01 00:00:00 +0000 UTC'>01 Mar 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Konfigurasi mirror slackware" href="https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Disable fortune postlogin
     </h2>
   </header>
@@ -178,33 +209,6 @@ Rename file berikut menjadi .desktop saja
   </div>
   <footer class="entry-footer"><span title='2022-02-19 00:00:00 +0000 UTC'>19 Feb 2022</span></footer>
   <a class="entry-link" aria-label="post link to Menggunakan pipewire" href="https://sasongko.web.id/post/2022-02-19-menggunakan-pipewire/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Operator perbandingan perl
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Operator perbandingan digunakan untuk membandingkan nilai. Data/nilai yang dibandingkan dapat berupa bilangan ataupun string. Namun ada perbedaan notasi.
-Perbandingan bilangan |Contoh penulisan	|Penjelasan	| |$a &lt; $b	| $a lebih kecil dari $b	| |$a &gt; $b	| $a lebih besar dari $b	| |$a &lt;= $b	| $a lebih kecil atau sama dengan $b	| |$a =&gt; $b	| $a lebih besar atau sama dengan $b	| |$a == $b	| $a sama dengan $b	| |$a != $b	| $a tidak sama dengan $b	|
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-01-06 00:00:00 +0000 UTC'>06 Jan 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Operator perbandingan perl" href="https://sasongko.web.id/post/2022-01-06-operator-perbandingan-perl/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Operator penggabungan pengulangan string perl
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Pada perl, variabel scalar yang berupa string dapat dilakukan penggabungan dan pengulangan. Contoh, terdapat 3 variabel sebagai berikut: $sapa = “Hai…. &#34; $distro = “Slackware” $penilaian = “distro terbaik.” Ketiga variabel tersebut akan digabungkan. Kemudian di baris selanjutnya,penampilan variabel $distro akan diulang 5x. Untuk penggabungan digunakan “.”, sedangkan pengulangan dengan “x”.
-#!/usr/bin/perl use strict; use warnings; use feature &#34;say&#34;; my $sapa = &#34;Hai.... &#34;; my $distro = &#34;Slackware &#34;; my $penilaian = &#34;distro terbaik.&#34;; # penggabungan say($sapa.$distro.$penilaian); # pengulangan say(&#34;$distro&#34; x 5); </p>
-  </div>
-  <footer class="entry-footer"><span title='2022-01-05 00:00:00 +0000 UTC'>05 Jan 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Operator penggabungan pengulangan string perl" href="https://sasongko.web.id/post/2022-01-05-operator-penggabungan-pengulangan-string-perl/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

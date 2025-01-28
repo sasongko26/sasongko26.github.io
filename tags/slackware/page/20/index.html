@@ -140,6 +140,36 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mariadb error 2002
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.
+$ mariadb -u root -p Enter password: ERROR 2002 (HY000): Can&#39;t connect to local server through socket &#39;/var/run/mysql/mysql.sock&#39; (2) Setelah dicek, ternyata service-nya belum jalan karena tidak executable.
+$ ls -l /etc/rc.d|grep -iE &#34;(maria|mysql)&#34; -rw-r--r-- 1 root root 2517 May 2 09:08 rc.mysqld -rw-r--r-- 1 root root 2943 Aug 4 2020 rc.mysqld.orig Mari aktifkan
+# chmod &#43;x /etc/rc.d/rc.mysqld # /etc/rc.d/rc.mysqld start 210530 10:36:21 mysqld_safe Logging to &#39;/var/lib/mysql/bumi.bumi.err&#39;. 210530 10:36:21 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql Done. Alhamdulillah
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-06-01 00:00:00 +0000 UTC'>01 Jun 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mariadb error 2002" href="https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengetahui ip aktif sejaringan
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sebelum mengetahui alamat IP aktif dalam 1 jaringan yang sama, tentu saja harus konek atau masuk ke jaringan tersebut dulu. Setelah masuk, cek IP kita sendiri. Karena konek ke wifi maka interface-nya wlan0
+# ip addr show wlan0 3: wlan0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000 link/ether cc:b0:da:b5:3b:75 brd ff:ff:ff:ff:ff:ff inet 192.168.43.20/24 brd 192.168.43.255 scope global dynamic noprefixroute wlan0 valid_lft 1574sec preferred_lft 1574sec inet6 fe80::7f1b:2f4d:b98e:6500/64 scope link noprefixroute valid_lft forever preferred_lft forever Atau bisa juga dengan
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-05-27 00:00:00 +0000 UTC'>27 May 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mengetahui ip aktif sejaringan" href="https://sasongko.web.id/post/2021-05-27-list-ip-aktif-sejaringan/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Aktivasi fancy indexing directory listing apache
     </h2>
   </header>
@@ -177,36 +207,6 @@ $ efibootmgr -t 2 </p>
   </div>
   <footer class="entry-footer"><span title='2021-05-17 00:00:00 +0000 UTC'>17 May 2021</span></footer>
   <a class="entry-link" aria-label="post link to Mengubah boot timeout efibootmgr" href="https://sasongko.web.id/post/2021-05-17-mengubah-boot-timeout-efibootmgr/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Memindahkan tombol minimize maximize close window fluxbox
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Secara default tombol Minimize/Iconify, Maximize dan Close pada window fluxbox terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian
-session.screen0.titlebar.right: Minimize Maximize Close Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian
-session.screen0.titlebar.left: </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-05-15 00:00:00 +0000 UTC'>15 May 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Memindahkan tombol minimize maximize close window fluxbox" href="https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Uji normalitas dengan python
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Uji normalitas data dapat dilakukan dengan beberapa cara antara lain
-Visual dengan grafik salah satunya histogram Uji statistik seperti Kolmogorov-Smirnov atau Shapiro-Wilk Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv dengan pengubahan nama variabel menjadi lebih singkat.
-Uji normalitas dengan histogram Histogramnya
-Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-05-02 00:00:00 +0000 UTC'>02 May 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Uji normalitas dengan python" href="https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

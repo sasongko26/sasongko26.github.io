@@ -140,6 +140,34 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Pelengkap dnscrypt-proxy
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Catatan ini merupakan catatan tambahan untuk melengkapi README.Slackware pada skrip dnscrypt-proxy yang ada di SBo. Yang ada di SBo :
+Membuat grup dnscrypt dan usernya Mengkonfigurasi dns /etc/resolv.conf.head Memasukkan dnscryp-proxy ke /etc/rc.d/rc.local{,_shutdown} Nah, berikut ini tambahannya. Mungkin tidak semuanya membutuhkan, jadi maintainer dnscrypt-proxy tidak mengikutsertakan langkah ini. Penulis menggunakan NetworkManager, setelah check &amp; recheck, dnscrypt-proxy tidak bekerja karena file /etc/resolv.conf terkena overwrite oleh NetworkManager. Ini adalah langkah untuk memberikan imunisasi/mencegah overwrite. Command berikut dijalankan dengan root privilege
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-27 00:00:00 +0000 UTC'>27 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Pelengkap dnscrypt-proxy" href="https://sasongko.web.id/post/2021-01-27-chattr-pelengkap-dnscrypt-proxy/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Aktivasi zram
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Beberapa tahun ini perkembangan dunia opensource bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi software berjalan beriringan dengan hardware. Semakin tinggi spesifikasi hardware semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin interface yang aduhai menawan, seyogyanya diimbangi hardware yang mumpuni.
+Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan. Namun, saat ini, saat kebutuhan multitasking meningkat pesat, terlebih di era work from home (WFH), beberapa aplikasi dijalankan sekaligus bersama-sama, apalagi ditambah dengan faktor U perangkatnya, RAM 2 GB terasa cepat penuh.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-26 00:00:00 +0000 UTC'>26 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Aktivasi zram" href="https://sasongko.web.id/post/2021-01-26-aktivasi-zram/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Mengembalikan backlight
     </h2>
   </header>
@@ -181,35 +209,6 @@ tar : manajemen archive yang digunakan aalah tar c : wajib dituliskan untuk crea
   </div>
   <footer class="entry-footer"><span title='2021-01-23 00:00:00 +0000 UTC'>23 Jan 2021</span></footer>
   <a class="entry-link" aria-label="post link to Membuat archive tar" href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengetahui IP lokal dengan nmcli
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Untuk mengetahui alamat ip lokal tanpa akses root dapat menggunakan nmcli
-$ nmcli wlan0: connected to Anatomi &#34;Qualcomm Atheros QCA9377&#34; wifi (ath10k_pci), CC:B0:DA:B5:3B:75, hw, mtu 1500 ip4 default inet4 192.168.120.19/24 route4 0.0.0.0/0 route4 192.168.120.0/24 route4 192.168.120.0/24 inet6 fe80::1a37:a13:b117:ff74/64 route6 fe80::/64 route6 ff00::/8 Dari hasil tersebut dapat diketahui bahwa ip address lokalnya adalah
-ipv4 192.168.120.19 ipv6 fe80::1a37:a13:b117:ff74 </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-01-15 00:00:00 +0000 UTC'>15 Jan 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Mengetahui IP lokal dengan nmcli" href="https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Rebuild R post-upgrade icu4c
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Pagi ini, saat akan mengeksekusi R,
-$ R /usr/lib64/R/bin/exec/R: error while loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory Ternyata R nya bermasalah. Di atas disebutkan bahwa libicuuc.so.67 tidak ditemukan. Dari namanya, bisa ditebak itu adalah shared object/library miliknya icu4c. Kita pastikan dulu,
-$ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Please wait... DONE The list below shows the packages that contains &#34;libicuuc\.so&#34; file. [ installed ] - icu4c-68.2-x86_64-1 You can search specific packages using &#34;slackpkg search package&#34;. Command tersebut dieksekusi dengan root privileges.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-01-13 00:00:00 +0000 UTC'>13 Jan 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Rebuild R post-upgrade icu4c" href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

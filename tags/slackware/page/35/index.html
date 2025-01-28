@@ -140,6 +140,32 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Edit video ffmpeg tanpa menurunkan kualitas
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Ketika mengedit video menggunakan ffmpeg, filter video ataupun filter yang lebih kompleks seperti menambahkan watermark, tanpa pengaturan tambahan kadang hasilnya mengecewakan. Gambar pada video menjadi pecah. Untuk meminimalisirnya, bisa ditambahkan opsi -q:v 0.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-06-20 00:00:00 +0000 UTC'>20 Jun 2020</span></footer>
+  <a class="entry-link" aria-label="post link to Edit video ffmpeg tanpa menurunkan kualitas" href="https://sasongko.web.id/post/2020-06-20-edit-video-ffmpeg-lossless/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Memisahkan halaman PDF
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Kadang kita perlu mengambil beberapa halaman dari e-book atau sejenisnya yang bertipe pdf. Kita bisa gunakan pdfjam. Misalkan akan mengambil halaman 10-21 dari file buku.pdf.
+pdfjam buku.pdf &#39;10-21&#39; </p>
+  </div>
+  <footer class="entry-footer"><span title='2020-06-11 00:00:00 +0000 UTC'>11 Jun 2020</span></footer>
+  <a class="entry-link" aria-label="post link to Memisahkan halaman PDF" href="https://sasongko.web.id/post/2020-06-11-memisahkan-halaman-pdf/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Deteksi duplikasi file
     </h2>
   </header>
@@ -179,35 +205,6 @@ setwd(&#39;Documents/project&#39;) </p>
   </div>
   <footer class="entry-footer"><span title='2020-05-29 00:00:00 +0000 UTC'>29 May 2020</span></footer>
   <a class="entry-link" aria-label="post link to Operasi direktori R" href="https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengetahui volume suara video
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Sebelum menggabung-gabungkan beberapa video menjadi 1, penting untuk mengetahui berapa intensitas suara/volumenya, agar beberapa video itu bisa diatur sedemikian rupa sehingga suaranya seragam volumenya atau hampir sama dari awal sampai akhir.
-Untuk mengetahui intensitas suara video intro.mkv
-$ ffmpeg -i intro.mkv -filter:a volumedetect -f null /dev/null Input #0, matroska,webm, from &#39;intro.mkv&#39;: Metadata: COMPATIBLE_BRANDS: isommp42 COM.ANDROID.VERSION: 9 MAJOR_BRAND : mp42 MINOR_VERSION : 0 ENCODER : Lavf58.29.100 Duration: 00:00:14.90, start: 0.000000, bitrate: 5559 kb/s Stream #0:0(eng): Video: mpeg4 (Simple Profile), yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 1k tbn, 30 tbc (default) Metadata: HANDLER_NAME : VideoHandle ENCODER : Lavc58.54.100 mpeg4 DURATION : 00:00:14.900000000 Stream #0:1(eng): Audio: vorbis, 48000 Hz, stereo, fltp (default) Metadata: HANDLER_NAME : SoundHandle ENCODER : Lavc58.54.100 libvorbis DURATION : 00:00:14.849000000 Stream mapping: Stream #0:0 -&gt; #0:0 (mpeg4 (native) -&gt; wrapped_avframe (native)) Stream #0:1 -&gt; #0:1 (vorbis (native) -&gt; pcm_s16le (native)) Press [q] to stop, [?] for help Output #0, null, to &#39;/dev/null&#39;: Metadata: COMPATIBLE_BRANDS: isommp42 COM.ANDROID.VERSION: 9 MAJOR_BRAND : mp42 MINOR_VERSION : 0 encoder : Lavf58.29.100 Stream #0:0(eng): Video: wrapped_avframe, yuv420p, 3840x2160 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 30 tbn, 30 tbc (default) Metadata: HANDLER_NAME : VideoHandle DURATION : 00:00:14.900000000 encoder : Lavc58.54.100 wrapped_avframe Stream #0:1(eng): Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s (default) Metadata: HANDLER_NAME : SoundHandle DURATION : 00:00:14.849000000 encoder : Lavc58.54.100 pcm_s16le frame= 447 fps= 97 q=-0.0 Lsize=N/A time=00:00:14.90 bitrate=N/A speed=3.24x video:234kB audio:2784kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown [Parsed_volumedetect_0 @ 0x1a28300] n_samples: 1425280 [Parsed_volumedetect_0 @ 0x1a28300] mean_volume: -12.1 dB [Parsed_volumedetect_0 @ 0x1a28300] max_volume: 0.0 dB [Parsed_volumedetect_0 @ 0x1a28300] histogram_0db: 10593 Dari hasil tersebut di atas, tampak bahwa rata-rata intensitas suara/volumenya -12,1 dB dengan maksimum 0,0 dB.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-05-25 00:00:00 +0000 UTC'>25 May 2020</span></footer>
-  <a class="entry-link" aria-label="post link to Mengetahui volume suara video" href="https://sasongko.web.id/post/2020-05-25-mengetahui-volume-suara-video/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Aktivasi android GPS via adb
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Untuk mengaktifkan lokasi android, dengan mode akurasi tertinggi (GPS dan network/jaringan) menggunakan adb
-adb shell settings put secure location_mode 3 Kalau ingin menonaktifkan, ganti angka 3 dengan 0.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-05-24 00:00:00 +0000 UTC'>24 May 2020</span></footer>
-  <a class="entry-link" aria-label="post link to Aktivasi android GPS via adb" href="https://sasongko.web.id/post/2020-05-24-aktivasi-android-gps-adb/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

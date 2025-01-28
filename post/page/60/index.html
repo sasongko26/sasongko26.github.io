@@ -155,6 +155,35 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Cek Paket Terinstall di Slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk mengetahui apakah suatu paket atau aplikasi telah terpasang di Slackware kita atau belum caranya mudah.
+$ ls /var/log/packages | grep nama_paket Contoh, mencari paket yang di nama paketnya ada kata xfce
+$ ls /var/log/packages | grep xfce gtk-xfce-engine-3.0.1-x86_64-1 libxfce4ui-4.10.0-x86_64-2 libxfce4util-4.10.1-x86_64-1 libxfcegui4-4.10.0-x86_64-2 xfce4-clipman-plugin-1.2.3-x86_64-2 xfce4-dev-tools-4.10.0-x86_64-1 xfce4-mixer-4.8.0-x86_64-1 xfce4-notifyd-0.2.4-x86_64-1 xfce4-panel-4.10.1-x86_64-2 xfce4-power-manager-1.2.0-x86_64-2 xfce4-screenshooter-1.8.1-x86_64-2 xfce4-session-4.10.1-x86_64-3 xfce4-settings-4.10.1-x86_64-1 xfce4-systemload-plugin-1.1.1-x86_64-2 xfce4-taskmanager-1.0.0-x86_64-2 xfce4-terminal-0.6.2-x86_64-1 xfce4-volumed-0.1.13-x86_64-1 xfce4-weather-plugin-0.8.3-x86_64-2 Jika tidak ada keluaran berarti paket tersebut belum diinstall.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-15 00:00:00 +0000 UTC'>15 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Cek Paket Terinstall di Slackware" href="https://sasongko.web.id/post/2015-06-15-cek-paket-terinstall-slackware/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Jalankan Sudo Tanpa Password
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Idealnya perintah sudo memang memerlukan password/kata sandi karena hakikat sudo itu pengguna “meminjam” hak super user / root. Tapi, password itu bisa saja kita hilangkan. Maksudnya, tidak perlu menuliskan password, contoh
+$ wvdial 3 bash: wvdial: command not found Baris 2, command not found menunjukkan 2 kemungkinan. Kemungkinan pertama, perintah yang diketikkan memang tidak ada. Kemungkinan kedua, perintah itu memerlukan hak root. Nah perintah [wvdial]({% post_url 2015-04-01-install-wvdial-slackware %}) ini yang bisa menjalankan adalah root atau sudoers (pengguna yang bisa menjalankan perintah hak root tapi dengan syarat memasukkan passwordnya root.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-14 00:00:00 +0000 UTC'>14 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Jalankan Sudo Tanpa Password" href="https://sasongko.web.id/post/2015-06-14-jalankan-sudo-tanpa-password/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Download Seluruh Isi Website
     </h2>
   </header>
@@ -192,36 +221,6 @@ Calligra memang layak digunakan untuk keperluan perkantoran. Performanya dalam m
   </div>
   <footer class="entry-footer"><span title='2015-06-09 00:00:00 +0000 UTC'>09 Jun 2015</span></footer>
   <a class="entry-link" aria-label="post link to Uninstall Calligra Office Suite" href="https://sasongko.web.id/post/2015-06-09-uninstall-calligra/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install JDK Slackware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Java Development Kit atau yang biasa disingkat JDK ini berguna untuk membuat/mengembangkan aplikasi berbasis Java. Selain itu, untuk menginstall dan/atau menjalankan aplikasi tertentu disyaratkan JDK, seperti LibreOffice, Netbeans dan Aptana. Sebelum install kita unduh dulu dari http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html .
-Karena Slackware yang digunakan adalah 64 bit maka pilih untuk yang LInux x64 format rpm.
-Untuk bisa mengunduh harus menyetujui perjanjian lisensi dulu (Accept License Agreement).
-Kemudian pindahkan hasil unduhan ke /usr/local/src dilanjutkan dengan pindah ke direktori /usr/local/src
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-07 00:00:00 +0000 UTC'>07 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Install JDK Slackware" href="https://sasongko.web.id/post/2015-06-07-install-jdk-slackware/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Hal-hal yang Harus Diketahui Sebelum Menginstall Linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Memang sudah seharusnya sebelum menginstall linux kita memiliki beberapa pengetahuan yang memadai. Imam Bukhari mengatakan “al ilmu qablal qawl wal amal” yang maksudnya sebelum melakukan sesuatu harus dilandasi dengan ilmu/pengetahuan tentang apa yang akan dilakukannya itu. Dan dalam ilmu fiqh / hukum Islam dikenal kaidah “al umuru bimaqashidiha” yang artinya setiap perkara itu tergantung maksud/niatnya. Kaidah ini diambil dari hadits “innamal a’malu binniyat” segala sesuatu tergantung niatnya.
-Pertama yang harus diketahui adalah niat. Niat ini akan sangat menentukan apalagi kalau menemui kesulitan. Pastikan niat menginstall linux adalah untuk menggunakan linux, entah itu untuk belajar linux ataupun kegiatan komputasi sehari-hari seperti menonton film/video, mendengarkan musik, mengetik dokumen, browsing, dll untuk kebaikan. Jangan sampai install linux hanya untuk pamer ataupun kesombongan diri. Misalnya,
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-06 00:00:00 +0000 UTC'>06 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Hal-hal yang Harus Diketahui Sebelum Menginstall Linux" href="https://sasongko.web.id/post/2015-06-06-sebelum-install-linux/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

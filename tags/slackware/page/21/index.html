@@ -140,6 +140,36 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Memindahkan tombol minimize maximize close window fluxbox
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Secara default tombol Minimize/Iconify, Maximize dan Close pada window fluxbox terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian
+session.screen0.titlebar.right: Minimize Maximize Close Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian
+session.screen0.titlebar.left: </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-05-15 00:00:00 +0000 UTC'>15 May 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Memindahkan tombol minimize maximize close window fluxbox" href="https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Uji normalitas dengan python
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Uji normalitas data dapat dilakukan dengan beberapa cara antara lain
+Visual dengan grafik salah satunya histogram Uji statistik seperti Kolmogorov-Smirnov atau Shapiro-Wilk Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv dengan pengubahan nama variabel menjadi lebih singkat.
+Uji normalitas dengan histogram Histogramnya
+Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-05-02 00:00:00 +0000 UTC'>02 May 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Uji normalitas dengan python" href="https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Membuat histogram dengan python
     </h2>
   </header>
@@ -180,37 +210,6 @@ Akan dibuat data dengan besar sampel 200, mean 165, standar deviasi 12.5.
   </div>
   <footer class="entry-footer"><span title='2021-04-12 00:00:00 +0000 UTC'>12 Apr 2021</span></footer>
   <a class="entry-link" aria-label="post link to Membuat data acak berdistribusi normal" href="https://sasongko.web.id/post/2021-04-12-membuat-data-acak-normal-python/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Membuat data integer acak python
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Bingung membuat data? Gampang, python dengan library numpy punya solusinya!
-Akan dibuat data acak bertipe integer (bilangan bulat). Banyaknya data 200, nilai minimal 145, maksimal 180.
-#!/usr/bin/python3 import numpy as np data = np.random.randint(size=200, low=145, high=180) print(data) Berikut datanya
-[160 147 160 177 147 149 170 149 166 153 154 156 160 165 161 154 168 173 151 145 158 148 163 178 164 166 159 159 172 147 153 170 174 159 152 170 151 159 168 167 147 156 177 168 176 151 153 146 163 156 149 145 152 173 151 162 165 164 179 173 168 172 158 177 148 177 157 150 145 164 171 166 175 164 159 158 178 173 155 162 178 171 146 145 158 151 150 151 165 166 148 168 159 175 165 173 167 178 150 173 147 161 175 158 150 150 159 168 172 159 160 165 156 150 170 175 171 174 149 175 165 168 155 179 161 162 160 146 151 172 171 179 157 171 170 157 149 147 169 151 172 148 164 169 160 158 168 163 153 154 179 163 174 172 176 166 172 166 173 179 155 158 176 151 152 157 164 175 164 165 179 177 175 164 162 164 172 152 172 154 179 162 171 162 149 149 154 163 168 163 178 179 166 166 167 156 158 155 171 148] </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-04-11 00:00:00 +0000 UTC'>11 Apr 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Membuat data integer acak python" href="https://sasongko.web.id/post/2021-04-11-membuat-data-integer-acak-python/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">sbocheck /usr/sbo/repo exists and is not empty
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Malam ini, ketika akan update SBo, ternyata tanpa disadari internet disconnect sebelumnya.
-bash-5.1# sbocheck Updating SlackBuilds tree... fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution) Could not sync from git://github.com/Ponce/slackbuilds.git. Setelah internet tidak ada masalah, gantian sbotools-nya yang masalah
-bash-5.1# sbocheck /usr/sbo/repo exists and is not empty. Exiting. Baiklah, local repository-nya minta dikosongkan dulu
-bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree... Cloning into &#39;/usr/sbo/repo&#39;... remote: Enumerating objects: 42, done. remote: Counting objects: 100% (42/42), done. remote: Compressing objects: 100% (42/42), done. remote: Total 498277 (delta 8), reused 12 (delta 0), pack-reused 498235 Receiving objects: 100% (498277/498277), 142.33 MiB | 199.00 KiB/s, done. Resolving deltas: 100% (345959/345959), done. Updating files: 100% (40245/40245), done. Recheck
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-04-10 00:00:00 +0000 UTC'>10 Apr 2021</span></footer>
-  <a class="entry-link" aria-label="post link to sbocheck /usr/sbo/repo exists and is not empty" href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

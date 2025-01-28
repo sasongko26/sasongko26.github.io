@@ -155,6 +155,34 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Slackpkg packages database error
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Siang ini, upgrade beberapa paket SBo, salah satunya adalah nodejs. Tetapi terjadi insiden di sela-sela prosesnya : lowbatt sehingga laptop mati. Kejadian ini awalnya tidak saya ketahui, karena banyak paket yang di-upgrade sehingga lama kemudian saya tinggal mengerjakan pekerjaan yang lain.
+Singkat cerita, saya ingin upgrade paket-paket official melalui slackpkg
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-04-03 00:00:00 +0000 UTC'>03 Apr 2018</span></footer>
+  <a class="entry-link" aria-label="post link to Slackpkg packages database error" href="https://sasongko.web.id/post/2018-04-03-slackpkg-packages-database-error/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Rename Network Interface
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Entah mengapa tadi kepikiran untuk jalankan ifconfig -a. Ternyata kemudian ada output yang menarik
+eth0: flags=4099&lt;UP,BROADCAST,MULTICAST&gt; mtu 1500 ether c8:5b:76:66:51:6a txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt; mtu 65536 inet 127.0.0.1 netmask 255.0.0.0 inet6 ::1 prefixlen 128 scopeid 0x10&lt;host&gt; loop txqueuelen 1000 (Local Loopback) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 wlan1: flags=4098&lt;BROADCAST,MULTICAST&gt; mtu 1500 ether ca:b0:da:b5:3d:75 txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 Menariknya adalah angka index interface-nya. Semua 0 kecuali wlan yang 1 sendiri. Sebenarnya no problem sih, cuma ga sedap dipandang aja. Kalau indexnya kompak 0 kan cakep. Hahahaha…..
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-02-18 00:00:00 +0000 UTC'>18 Feb 2018</span></footer>
+  <a class="entry-link" aria-label="post link to Rename Network Interface" href="https://sasongko.web.id/post/2018-02-18-rename-network-interface/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Libsodium Masuk -Current
     </h2>
   </header>
@@ -194,32 +222,6 @@ Setelah upgrade dan eliloconfig kemudian restart, ternyata muncul masalah! Bootl
   </div>
   <footer class="entry-footer"><span title='2017-11-18 00:00:00 +0000 UTC'>18 Nov 2017</span></footer>
   <a class="entry-link" aria-label="post link to Kernel 4.14.0 Masuk -Current, Beralih ke Kernel Generic" href="https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengamankan File Folder
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Salah satu hal yang membuat saya menggunakan linux khususnya Slackware adalah perlindungan terhadap privasi. Data-data sensitif dan rahasia terlindungi dengan aman. Perlindungan ini ada beberapa bentuk/teknik antara lain penyembunyian, hak akses dan enkripsi. Penyembunyian sederhana dengan menambahkan . pada nama file/folder sangat tidak dianjurkan karena akan mudah dibobol. Teknik penyembunyian yang kami sarankan adalah dengan steganografi tetapi itu akan kami sampaikan besok-besok, insyaallah. Yang sekarang adalah menggunakan hak akses. Adapun dengan enkripsi bisa menggunakan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}) atau [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}).
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2017-11-15 00:00:00 +0000 UTC'>15 Nov 2017</span></footer>
-  <a class="entry-link" aria-label="post link to Mengamankan File Folder" href="https://sasongko.web.id/post/2017-11-15-mengamankan-file-folder/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengatur Clang Sebagai C Compiler Utama
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Secara default, C Compiler yang digunakan adalah gcc. Namun, apabila diinginkan, bisa dialihkan menggunakan clang. Caranya, buat file di /etc/profile.d misalnya c-compiler.sh, yang isinya
-export CC=/usr/bin/clang export CXX=/usr/bin/clang&#43;&#43; </p>
-  </div>
-  <footer class="entry-footer"><span title='2017-08-08 00:00:00 +0000 UTC'>08 Aug 2017</span></footer>
-  <a class="entry-link" aria-label="post link to Mengatur Clang Sebagai C Compiler Utama" href="https://sasongko.web.id/post/2017-08-08-set-clang-as-default-c-compiler/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

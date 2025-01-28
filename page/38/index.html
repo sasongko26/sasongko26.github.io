@@ -149,6 +149,34 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Trimming Video ffmpeg
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Misalkan, kita akan mencuplik sebagian (trimming) video video-asli.mp4 dari menit ke 57 lebih 34 detik sampai durasi ke 1 jam 2 menit 5 detik. Fila hasil trimming adalah cuplikan.mp4
+ffmpeg -i video-asli.mp4 -ss 00:57:34 -to 01:02:05 -c copy cuplikan.mp4 </p>
+  </div>
+  <footer class="entry-footer"><span title='2020-05-05 00:00:00 +0000 UTC'>05 May 2020</span></footer>
+  <a class="entry-link" aria-label="post link to Trimming Video ffmpeg" href="https://sasongko.web.id/post/2020-05-05-trimming-video-ffmpeg/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengenal Objek R Vector
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.
+Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.
+Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-04-29 00:00:00 +0000 UTC'>29 Apr 2020</span></footer>
+  <a class="entry-link" aria-label="post link to Mengenal Objek R Vector" href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Install JASP
     </h2>
   </header>
@@ -191,34 +219,6 @@ Kuartil 3 &gt; quantile(nilai, 0.75) 75% 80.25 Kuartil 3 adalah 80,25.
   </div>
   <footer class="entry-footer"><span title='2020-03-21 00:00:00 +0000 UTC'>21 Mar 2020</span></footer>
   <a class="entry-link" aria-label="post link to Tendensi Sentral dengan R" href="https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Input Data R
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Input data dalam R sangat mudah dan ada beragam cara, yaitu:
-Menuliskan dalam bentuk syntax. Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100 Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel. Import dari file. Data dibuat tanpa menggunakan R dan disimpan ke dalam bentuk file. Data bisa dibuat menggunakan text editor (contoh vim, gvim, nano, pico, kate), aplikasi perkantoran (LibreOffice Calc dan Microsoft Excel) atau aplikasi statistik lainnya seperti SPSS, Minitab, dan Stata). Pada kesempatan ini yang digunakan adalah cara pertama. Misalkan datanya adalah nilai ujian dari 60 mahasiswa sebagai berikut :
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-03-14 00:00:00 +0000 UTC'>14 Mar 2020</span></footer>
-  <a class="entry-link" aria-label="post link to Input Data R" href="https://sasongko.web.id/post/2020-03-14-input-data-r/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Package bawaan R Slackware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Berikut adalah package atau library R yang secara default terinstall di Slackware melalui SBo.
-KernSmooth.Functions for Kernel Smoothing Supporting Wand &amp; Jones (1995) MASS. Support Functions and Datasets for Venables and Ripley’s MASS Matrix. Sparse and Dense Matrix Classes and Methods base. The R Base Package boot. Bootstrap Functions (Originally by Angelo Canty for S) class. Functions for Classification cluster. “Finding Groups in Data”: Cluster Analysis Extended Rousseeuw et al. codetools. Code Analysis Tools for R compiler. The R Compiler Package datasets. The R Datasets Package foreign. Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka, dBase, … grDevices. The R Graphics Devices and Support for Colours and Fonts graphics. The R Graphics Package grid. The Grid Graphics Package lattice. Trellis Graphics for R methods. Formal Methods and Classes mgcv. Mixed GAM Computation Vehicle with Automatic Smoothness Estimation nlme. Linear and Nonlinear Mixed Effects Models nnet. Feed-Forward Neural Networks and Multinomial Log-Linear Models parallel. Support for Parallel computation in R rpart. Recursive Partitioning and Regression Trees spatial. Functions for Kriging and Point Pattern Analysis splines. Regression Spline Functions and Classes stats. The R Stats Package stats4. Statistical Functions using S4 Classes survival. Survival Analysis tcltk. Tcl/Tk Interface tools. Tools for Package Development utils. The R Utils Package Packages tersebut bisa dilihat dengan menjalankan pada Rconsole
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-02-13 00:00:00 +0000 UTC'>13 Feb 2020</span></footer>
-  <a class="entry-link" aria-label="post link to Package bawaan R Slackware" href="https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -149,6 +149,34 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Menggunakan wget prefix directory
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Secara default, apabila menggunakan wget, file di-download ke direktori aktif. Dengan mengaktifkan prefix directory (-P), file tersebut bisa disimpan ke direktori lain.
+$ wget [url] -P [direktori] [url] : URL / alamat lengkap file yang akan di-download [direktori] : direktori tujuan </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-23 00:00:00 +0000 UTC'>23 Mar 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Menggunakan wget prefix directory" href="https://sasongko.web.id/post/2021-03-23-menggunakan-wget-prefix-directory/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengetahui dimensi dataset python
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk mengetahui dimensi atau jumlah baris dan kolom dataset dapat menggunakan shape dari pandas. Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
+import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.shape) Output:
+(178539, 39) Dari output tersebut diketahui dataset mempunyai 178539 baris dan 39 kolom.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-22 00:00:00 +0000 UTC'>22 Mar 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mengetahui dimensi dataset python" href="https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Menampilkan data baris terakhir python
     </h2>
   </header>
@@ -190,33 +218,6 @@ $ ls /var/lib/pkgtools/packages </p>
   </div>
   <footer class="entry-footer"><span title='2021-03-19 00:00:00 +0000 UTC'>19 Mar 2021</span></footer>
   <a class="entry-link" aria-label="post link to Enumerasi packages terinstall" href="https://sasongko.web.id/post/2021-03-19-enumerasi-packages-terinstall/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Disable recent documents mate
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Masalah security saat penggunaan desktop environment mate adalah adanya recent documents pada menu. Ini terletak pada menu di bagian bawah menu Places. Bagi user yang concern dengan privasi dan menghendaki untuk menonaktifkannya alih-alih membersihkannya “setiap saat”,
-$ echo &#34;&#34; &gt; ~/.local/share/recently-used.xbel $ chattr -i ~/.local/share/recently-used.xbel # dijalankan oleh root </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-03-18 00:00:00 +0000 UTC'>18 Mar 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Disable recent documents mate" href="https://sasongko.web.id/post/2021-03-18-disable-recent-documents-mate/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengatur pencahayaan monitor dengan redshift
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Beberapa bulan ini mata menjadi lebih cepat lelah apabila malam-malam berlama-lama menatap monitor. Padahal backlight/brightness sudah diset 15%. Mungkin karena faktor U dan pagi/siang sebelumnya sudah memandangi layar komputer. Maka, jadilah penulis menginstal redshift untuk “memerah/kuningkan brightness monitor.
-Redshift tersedia di SBo, sehingga bisa diinstal dengan mudah melalui sbotools, sbopkg, sboui, slpkg, atau yang lainnya.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-03-17 00:00:00 +0000 UTC'>17 Mar 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Mengatur pencahayaan monitor dengan redshift" href="https://sasongko.web.id/post/2021-03-17-layar-merah-kuning-redshift/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

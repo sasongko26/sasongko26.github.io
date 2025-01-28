@@ -149,6 +149,33 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengubah boot timeout efibootmgr
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk mengubah boot timeout efibootmgr menjadi 2 detik:
+$ efibootmgr -t 2 </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-05-17 00:00:00 +0000 UTC'>17 May 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mengubah boot timeout efibootmgr" href="https://sasongko.web.id/post/2021-05-17-mengubah-boot-timeout-efibootmgr/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Memindahkan tombol minimize maximize close window fluxbox
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Secara default tombol Minimize/Iconify, Maximize dan Close pada window fluxbox terletak di sebelah kanan. Untuk mengubahnya dapat melalui file ~/.fluxbox/init. Pada bagian
+session.screen0.titlebar.right: Minimize Maximize Close Untuk memindahkannya ke kiri, pindahkan Minimize Maximize Close tersebut ke bagian
+session.screen0.titlebar.left: </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-05-15 00:00:00 +0000 UTC'>15 May 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Memindahkan tombol minimize maximize close window fluxbox" href="https://sasongko.web.id/post/2021-05-15-memindahkan-tombol-window-fluxbox/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Uji normalitas dengan python
     </h2>
   </header>
@@ -189,37 +216,6 @@ dvd&#43;rw-format -f /dev/sr0 </p>
   </div>
   <footer class="entry-footer"><span title='2021-04-30 00:00:00 +0000 UTC'>30 Apr 2021</span></footer>
   <a class="entry-link" aria-label="post link to Memformat dvdrw" href="https://sasongko.web.id/post/2021-04-30-memformat-dvdrw/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Membuat data acak berdistribusi normal
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Catatan sebelumnya tentang bagaimana membuat data secara acak dengan python, kali ini hampir sama. Bedanya, data yang dibuat berasal dari distribusi Gaussian (distribusi normal).
-Akan dibuat data dengan besar sampel 200, mean 165, standar deviasi 12.5.
-#!/usr/bin/python3 import numpy as np sampel = 200 rerata = 165 deviasi = 12.5 data = np.random.normal(rerata, deviasi, sampel) print(data) Hasilnya
-[169.9036172 158.13190825 156.9590178 167.74827264 168.62534857 171.69140206 161.65434678 187.34374928 150.29836841 152.49471216 160.69172875 173.22405024 171.53443046 159.89375268 170.59784794 158.46572357 168.20110897 131.00882242 169.37660362 172.71471591 162.34684852 159.31860527 156.87505418 152.25881337 173.94068172 134.98130158 146.94872437 159.80322766 176.60094913 173.111627 166.68329084 161.23836143 170.69908908 152.20927403 159.85371294 160.92108223 174.01411013 145.55719871 179.99900982 180.02266499 152.10976505 164.51292664 157.8864326 170.85776142 160.73666817 174.51669873 149.72123539 164.06125902 165.84558021 170.64970455 173.35880599 153.86472607 186.08708782 163.16383892 168.79688713 161.76180346 159.76044878 152.08482654 170.20465648 175.60900504 162.92716486 177.19471848 171.2871681 144.971927 164.3188071 162.15660742 180.74130005 160.39323975 139.65007794 157.81802319 156.85566358 166.50332995 177.2953798 158.30680384 177.13544237 164.38845426 179.17517071 175.87660328 179.5223744 161.40472123 174.16465527 168.58063922 159.48342785 190.17379458 168.96513379 171.72529799 155.25957095 183.97047167 157.56975133 188.34529069 170.38858718 143.31405164 185.9190679 169.51101188 155.36181972 144.61623691 181.3892726 163.22218044 134.37177323 154.19044256 160.45700363 142.59563772 160.37605357 171.44273535 169.70640078 153.59534214 152.29849613 177.73804824 162.62462227 196.5989286 162.765947 155.38582305 177.19867532 177.71711759 167.58320205 172.24747986 165.12620889 176.47353528 187.94811592 172.89502868 158.11438788 181.9815273 194.18043935 166.29368658 171.40764381 178.04726676 142.06688725 159.72220239 168.75140017 171.79149347 158.87557205 155.78707993 161.47244798 153.4709923 147.64848437 170.51523267 173.77590858 178.25774495 140.32563393 162.97639238 163.90251236 184.85207452 176.66444031 180.65892624 163.03595927 151.77083121 179.13141898 171.70632128 169.38558184 172.38264989 157.08041456 155.24917828 184.10916072 168.50840784 174.18864833 163.74798374 158.54818729 183.45911273 159.49934259 162.99057938 167.15176222 152.19491374 165.46079737 157.79831857 149.42032516 178.66081158 171.26776676 178.47832146 183.10797135 141.55075244 163.33402213 177.31821748 168.56905941 188.02853802 163.44916488 168.17361967 179.70875574 156.75504417 160.78535928 149.1140051 172.12819615 173.66107973 162.21543281 173.87079486 161.03824355 175.80570369 162.87110577 161.26534934 143.54189568 175.43542171 164.21584719 164.01339793 151.90799391 168.24579668 169.70043163 164.26476352 170.30071889 162.32963983 172.41727919 156.12259096] Secara default data yang dihasilkan bertipe float. Apabila menghendaki data integer bisa tambahkan .astype(int)
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-04-12 00:00:00 +0000 UTC'>12 Apr 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Membuat data acak berdistribusi normal" href="https://sasongko.web.id/post/2021-04-12-membuat-data-acak-normal-python/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Membuat data integer acak python
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Bingung membuat data? Gampang, python dengan library numpy punya solusinya!
-Akan dibuat data acak bertipe integer (bilangan bulat). Banyaknya data 200, nilai minimal 145, maksimal 180.
-#!/usr/bin/python3 import numpy as np data = np.random.randint(size=200, low=145, high=180) print(data) Berikut datanya
-[160 147 160 177 147 149 170 149 166 153 154 156 160 165 161 154 168 173 151 145 158 148 163 178 164 166 159 159 172 147 153 170 174 159 152 170 151 159 168 167 147 156 177 168 176 151 153 146 163 156 149 145 152 173 151 162 165 164 179 173 168 172 158 177 148 177 157 150 145 164 171 166 175 164 159 158 178 173 155 162 178 171 146 145 158 151 150 151 165 166 148 168 159 175 165 173 167 178 150 173 147 161 175 158 150 150 159 168 172 159 160 165 156 150 170 175 171 174 149 175 165 168 155 179 161 162 160 146 151 172 171 179 157 171 170 157 149 147 169 151 172 148 164 169 160 158 168 163 153 154 179 163 174 172 176 166 172 166 173 179 155 158 176 151 152 157 164 175 164 165 179 177 175 164 162 164 172 152 172 154 179 162 171 162 149 149 154 163 168 163 178 179 166 166 167 156 158 155 171 148] </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-04-11 00:00:00 +0000 UTC'>11 Apr 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Membuat data integer acak python" href="https://sasongko.web.id/post/2021-04-11-membuat-data-integer-acak-python/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
