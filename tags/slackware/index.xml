@@ -6,8 +6,18 @@
     <description>Recent content in Slackware on Catatan Sasongko</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/tags/slackware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menggunakan named argument pada println</title>
+      <link>https://sasongko.web.id/post/2025-01-12-menggunakan-named-argument-println-rust/</link>
+      <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2025-01-12-menggunakan-named-argument-println-rust/</guid>
+      <description>&lt;p&gt;Untuk menampilkan pesan ke &lt;em&gt;standard output&lt;/em&gt; yang biasanya adalah terminal emulator seperti konsole, xterm, alacritty, xfce-terminal, dll; &lt;strong&gt;rust&lt;/strong&gt; menggunakan &lt;strong&gt;println!&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nama&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Rustacean&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hai &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;, selamat pagi!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nama&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;output tersebut juga bisa dengan cara menggunakan &lt;em&gt;named argument&lt;/em&gt;. &lt;em&gt;Named argument&lt;/em&gt; kita memanggil variabel dengan memasukkannya ke dalam kurung kurawal. Hal ini berbeda dengan contoh-contoh sebelumnya, yang mana kurung kurawalnya kosong kemudian variabelnya disebutkan di akhir. Contoh di atas kalau diubah memakai &lt;em&gt;named argument&lt;/em&gt; menjadi&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Deklarasi banyak variabel rust</title>
       <link>https://sasongko.web.id/post/2025-01-11-deklarasi-banyak-variabel-rust/</link>
