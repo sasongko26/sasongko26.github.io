@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Operator perbandingan rust | Catatan Sasongko</title>
+<meta name="keywords" content="slackware, rust">
+<meta name="description" content="Rust mengenal beberapa operator perbandingan, yaitu sama dengan (==), tidak sama dengan (!=), lebih kecil dari (&lt;), lebih kecil atau sama dengan (&lt;=), lebih besar dari (&gt;), lebih besar atau sama dengan (&gt;=). Hasil dari perbandingan ini adalah bool.
+Contoh:
+fn main(){
+    let a = 5;
+    let b = 10;
+    let c = a == b;
+    let d = a != b;
+    let e = a &lt; b;
+    let f = a &lt;= b;
+    let g = a &gt; b;
+    let h = a &gt;= b;
+    println!(&#34;a = b ? {c}&#34;);
+    println!(&#34;a != b ? {d}&#34;);
+    println!(&#34;a &lt; b ? {e}&#34;);
+    println!(&#34;a &lt;= b ? {f}&#34;);
+    println!(&#34;a &gt; b ? {g}&#34;);
+    println!(&#34;a &gt;= b ? {h}&#34;);
+}
+">
+<meta name="author" content="">
+<link rel="canonical" href="https://sasongko.web.id/post/2025-01-13-operator-perbandingan-rust/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2025-01-13-operator-perbandingan-rust/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://sasongko.web.id/post/2025-01-13-operator-perbandingan-rust/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Operator perbandingan rust">
+  <meta property="og:description" content="Rust mengenal beberapa operator perbandingan, yaitu sama dengan (==), tidak sama dengan (!=), lebih kecil dari (&lt;), lebih kecil atau sama dengan (&lt;=), lebih besar dari (&gt;), lebih besar atau sama dengan (&gt;=). Hasil dari perbandingan ini adalah bool.
+Contoh:
+fn main(){ let a = 5; let b = 10; let c = a == b; let d = a != b; let e = a &lt; b; let f = a &lt;= b; let g = a &gt; b; let h = a &gt;= b; println!(&#34;a = b ? {c}&#34;); println!(&#34;a != b ? {d}&#34;); println!(&#34;a &lt; b ? {e}&#34;); println!(&#34;a &lt;= b ? {f}&#34;); println!(&#34;a &gt; b ? {g}&#34;); println!(&#34;a &gt;= b ? {h}&#34;); } ">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2025-01-13T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-01-13T00:00:00+00:00">
+    <meta property="article:tag" content="Slackware">
+    <meta property="article:tag" content="Rust">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Operator perbandingan rust">
+<meta name="twitter:description" content="Rust mengenal beberapa operator perbandingan, yaitu sama dengan (==), tidak sama dengan (!=), lebih kecil dari (&lt;), lebih kecil atau sama dengan (&lt;=), lebih besar dari (&gt;), lebih besar atau sama dengan (&gt;=). Hasil dari perbandingan ini adalah bool.
+Contoh:
+fn main(){
+    let a = 5;
+    let b = 10;
+    let c = a == b;
+    let d = a != b;
+    let e = a &lt; b;
+    let f = a &lt;= b;
+    let g = a &gt; b;
+    let h = a &gt;= b;
+    println!(&#34;a = b ? {c}&#34;);
+    println!(&#34;a != b ? {d}&#34;);
+    println!(&#34;a &lt; b ? {e}&#34;);
+    println!(&#34;a &lt;= b ? {f}&#34;);
+    println!(&#34;a &gt; b ? {g}&#34;);
+    println!(&#34;a &gt;= b ? {h}&#34;);
+}
+">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://sasongko.web.id/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Operator perbandingan rust",
+      "item": "https://sasongko.web.id/post/2025-01-13-operator-perbandingan-rust/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Operator perbandingan rust",
+  "name": "Operator perbandingan rust",
+  "description": "Rust mengenal beberapa operator perbandingan, yaitu sama dengan (==), tidak sama dengan (!=), lebih kecil dari (\u0026lt;), lebih kecil atau sama dengan (\u0026lt;=), lebih besar dari (\u0026gt;), lebih besar atau sama dengan (\u0026gt;=). Hasil dari perbandingan ini adalah bool.\nContoh:\nfn main(){ let a = 5; let b = 10; let c = a == b; let d = a != b; let e = a \u0026lt; b; let f = a \u0026lt;= b; let g = a \u0026gt; b; let h = a \u0026gt;= b; println!(\u0026#34;a = b ? {c}\u0026#34;); println!(\u0026#34;a != b ? {d}\u0026#34;); println!(\u0026#34;a \u0026lt; b ? {e}\u0026#34;); println!(\u0026#34;a \u0026lt;= b ? {f}\u0026#34;); println!(\u0026#34;a \u0026gt; b ? {g}\u0026#34;); println!(\u0026#34;a \u0026gt;= b ? {h}\u0026#34;); } ",
+  "keywords": [
+    "slackware", "rust"
+  ],
+  "articleBody": "Rust mengenal beberapa operator perbandingan, yaitu sama dengan (==), tidak sama dengan (!=), lebih kecil dari (\u003c), lebih kecil atau sama dengan (\u003c=), lebih besar dari (\u003e), lebih besar atau sama dengan (\u003e=). Hasil dari perbandingan ini adalah bool.\nContoh:\nfn main(){ let a = 5; let b = 10; let c = a == b; let d = a != b; let e = a \u003c b; let f = a \u003c= b; let g = a \u003e b; let h = a \u003e= b; println!(\"a = b ? {c}\"); println!(\"a != b ? {d}\"); println!(\"a \u003c b ? {e}\"); println!(\"a \u003c= b ? {f}\"); println!(\"a \u003e b ? {g}\"); println!(\"a \u003e= b ? {h}\"); } ",
+  "wordCount" : "117",
+  "inLanguage": "en",
+  "datePublished": "2025-01-13T00:00:00Z",
+  "dateModified": "2025-01-13T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sasongko.web.id/post/2025-01-13-operator-perbandingan-rust/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Catatan Sasongko",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sasongko.web.id/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sasongko.web.id/" title="Home">
+                    <span><i class='fa fa-home fa-fw'></i>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/post/" title="Posts">
+                    <span><i class='fa fa-list fa-fw'></i>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/about/" title="Profil">
+                    <span><i class='fa fa-user fa-fw'></i>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/logo/" title="Logo">
+                    <span><i class='fa fa-user fa-fw'></i>Logo</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Operator perbandingan rust
+    </h1>
+    <div class="post-meta"><span title='2025-01-13 00:00:00 +0000 UTC'>13 Jan 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><strong>Rust</strong> mengenal beberapa operator perbandingan, yaitu sama dengan (==), tidak sama dengan (!=), lebih kecil dari (&lt;), lebih kecil atau sama dengan (&lt;=), lebih besar dari (&gt;), lebih besar atau sama dengan (&gt;=). Hasil dari perbandingan ini adalah <em>bool</em>.</p>
+<p>Contoh:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;a = b ? </span><span class="si">{c}</span><span class="s">&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;a != b ? </span><span class="si">{d}</span><span class="s">&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;a &lt; b ? </span><span class="si">{e}</span><span class="s">&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;a &lt;= b ? </span><span class="si">{f}</span><span class="s">&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;a &gt; b ? </span><span class="si">{g}</span><span class="s">&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;a &gt;= b ? </span><span class="si">{h}</span><span class="s">&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
+      <li><a href="https://sasongko.web.id/tags/rust/">Rust</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

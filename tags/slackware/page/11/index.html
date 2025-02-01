@@ -140,6 +140,20 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Virtualbox cannot register existing type NMAgentManagerError
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Setelah install virtualbox menggunakan binary .run, ketika dijalankan via terminal mengalami sgfault:
+bash-5.2$ virtualbox (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot register existing type &#39;NMAgentManagerError&#39; (process:7040): GLib-CRITICAL **: 00:53:14.710: g_once_init_leave: assertion &#39;result != 0&#39; failed (process:7040): GLib-GObject-WARNING **: 00:53:14.710: cannot retrieve class for invalid (unclassed) type &#39;invalid&#39; Segmentation fault Solusinya:
+bash-5.2$ VBoxManage setextradata global GUI/UpdateDate never </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-10-30 00:00:00 +0000 UTC'>30 Oct 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Virtualbox cannot register existing type NMAgentManagerError" href="https://sasongko.web.id/post/2022-10-30-virtualbox-updater-segfault/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Install Sound Open Firmware
     </h2>
   </header>
@@ -193,22 +207,6 @@ Untuk mengetahui spek RAM mudah. Bagi slackers (pengguna Slackware) tidak perlu 
   </div>
   <footer class="entry-footer"><span title='2022-05-25 00:00:00 +0000 UTC'>25 May 2022</span></footer>
   <a class="entry-link" aria-label="post link to Mengetahui spek RAM" href="https://sasongko.web.id/post/2022-05-25-mengetahui-spek-ram/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Syntax PSPP Membuka File
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>PSPP merupakan software statistika yang open source, ringan tetapi sangat fungsional dan powerful. Ringan karena installer-nya hanya beberapa MB. Jauh lebih kecil daripada software sejenis yang proprietary. Fungsional dan powerful karena berbagai analisis dapat dilakukan dengan PSPP.
-PSPP bisa dijalankan dengan tampilan text ataupun grafis. Uktuk memulai pspp tampilan text
-$ pspp PSPP&gt; Untuk membuka file, pada PSPP prompt
-PSPP&gt; get file=&#39;tulis-nama-filenya yang berekstensi sav&#39;. Bagian dalam tanda kutip adalah file yang akan dibuka.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-05-25 00:00:00 +0000 UTC'>25 May 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Syntax PSPP Membuka File" href="https://sasongko.web.id/post/2023-05-25-syntax-pspp-membuka-file-sav/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

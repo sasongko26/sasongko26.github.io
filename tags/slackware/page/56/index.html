@@ -140,6 +140,21 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengembalikan File yang Terhapus dengan Testdisk
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/recovery file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.
+Sebagai root jalankan
+testdisk kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih No Log karena merasa log ini tidak terlalu penting. Selanjutnya akan terdeteksi media simpan yang terpasang di komputer. Di sini flashdisknya terdeteksi sebagai /dev/sdc. pilih Disk /dev/sdc kemudian Proceed untuk melanjutkan.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-10-30 00:00:00 +0000 UTC'>30 Oct 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Mengembalikan File yang Terhapus dengan Testdisk" href="https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Install Testdisk
     </h2>
   </header>
@@ -193,21 +208,6 @@ cd /usr/local/src wget http://slackbuilds.org/slackbuilds/14.1/network/youtube-d
   </div>
   <footer class="entry-footer"><span title='2015-09-30 00:00:00 +0000 UTC'>30 Sep 2015</span></footer>
   <a class="entry-link" aria-label="post link to Copy Paste di Terminal" href="https://sasongko.web.id/post/2015-09-30-copas-terminal/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Setting Internet XL Slackware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Di [catatan yang lalu]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) telah kami sampaikan cara konek internet di Slackware dengan modem, ppp, dan internet provider atau operator Tri. Kali ini akan kami ganti dengan operator XL.
-Sunting berkas /etc/ppp/options
-# General configuration options for PPPD: lock defaultroute noipdefault modem /dev/ttyUSB0 460800 crtscts # Uncomment the line below for more verbose error reporting: #debug # If you have a default route already, pppd may require the other side # to authenticate itself, which most ISPs will not do. To work around this, # uncomment the line below. Note that this may have negative side effects # on system security if you allow PPP dialins. See the docs in /usr/doc/ppp* # for more information. #noauth passive asyncmap 0 name &#34;3data&#34; Baris 19, ganti “3data” dengan “internet”.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-08-17 00:00:00 +0000 UTC'>17 Aug 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Setting Internet XL Slackware" href="https://sasongko.web.id/post/2015-08-17-setting-internet-xl-slackware/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
