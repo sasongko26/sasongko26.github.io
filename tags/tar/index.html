@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Posts | Catatan Sasongko</title>
+<title>Tar | Catatan Sasongko</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - Catatan Sasongko">
+<meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/">
+<link rel="canonical" href="https://sasongko.web.id/tags/tar/">
 <link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://sasongko.web.id/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
@@ -18,8 +18,8 @@
 <link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://sasongko.web.id/post/index.xml">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/">
+<link rel="alternate" type="application/rss+xml" href="https://sasongko.web.id/tags/tar/index.xml">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/tags/tar/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,31 +56,16 @@
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/">
+</noscript><meta property="og:url" content="https://sasongko.web.id/tags/tar/">
   <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Posts">
+  <meta property="og:title" content="Tar">
   <meta property="og:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Posts">
+<meta name="twitter:title" content="Tar">
 <meta name="twitter:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://sasongko.web.id/post/"
-    }
-  ]
-}
-</script>
 </head>
 
 <body class="list" id="top">
@@ -130,7 +115,7 @@
             </li>
             <li>
                 <a href="https://sasongko.web.id/post/" title="Posts">
-                    <span class="active"><i class='fa fa-list fa-fw'></i>Posts</span>
+                    <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
@@ -149,86 +134,87 @@
 <main class="main"> 
 <header class="page-header">
   <h1>
-    Posts
+    Tar
   </h1>
 </header>
 
-<article class="post-entry"> 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Convert jpg ke pdf
+    <h2 class="entry-hint-parent">Menghapus file dari tar
     </h2>
   </header>
   <div class="entry-content">
-    <p>Untuk menjadikan file jpg ke pdf caranya mudah. Misalkan file-gambar.jpg akan diubah menjadi pdf dengan nama dokumen.pdf
-convert file-gambar.jpg dokumen.pdf </p>
+    <p>Untuk menghapus file Screenshot_2020-08-06_08-31-22.png yang ada dalam screenshot.tar.xz, caranya
+$ tar f screenshot.tar.xz --delete Screenshot_2020-08-06_08-31-22.png </p>
   </div>
-  <footer class="entry-footer"><span title='2020-05-13 00:00:00 +0000 UTC'>13 May 2020</span></footer>
-  <a class="entry-link" aria-label="post link to Convert jpg ke pdf" href="https://sasongko.web.id/post/2020-05-13-convert-jpg-pdf/"></a>
+  <footer class="entry-footer"><span title='2021-01-30 00:00:00 +0000 UTC'>30 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Menghapus file dari tar" href="https://sasongko.web.id/post/2021-01-30-menghapus-file-dari-tar/"></a>
 </article>
 
-<article class="post-entry"> 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Melihat isi file zip
+    <h2 class="entry-hint-parent">Menambah file archive tar
     </h2>
   </header>
   <div class="entry-content">
-    <p>Menggunakan linux terutama slackware membuat pekerjaan lebih ringan dan efisien. Suatu ketika diberikan sebuah file terkompresi zip yang misterius. Misterius karena ukurannya besar dan konon kata empunya file tersebut ngehang saat akan dibuka di komputer dengan sistem bukan slackware juga bukan linux. Dan ketika dibuka di slackware ketahuanlah nama “penduduk” zip tersebut.
-Menggunakan zip
-zip -sf namafile.zip Atau dengan less
-less namafile.zip Atau bisa juga
-zipinfo namafile.zip </p>
+    <p>Untuk menambahkan file ke dalam tar archive mudah. Gunakan opsi -r atau –append pada command tar.
+Misalkan, file photo_2020-08-22_19-03-32.jpg yang ada di ~/Documents akan dimasukkan atau ditambahkan ke dalam file archive screenshot.tar.xz
+$ tar rf screenshot.tar.xz photo_2020-08-22_19-03-32.jpg Atau
+$ tar f screenshot.tar.xz --append photo_2020-08-22_19-03-32.jpg Apabila file photo_2020-08-22_19-03-32.jpg ingin langsung dihapus dari lokasi aslinya setelah ditambahkan ke tar, beri opsi –remove-files
+$ tar f screenshot.tar.xz --append --remove-files photo_2020-08-22_19-03-32.jpg </p>
   </div>
-  <footer class="entry-footer"><span title='2020-05-12 00:00:00 +0000 UTC'>12 May 2020</span></footer>
-  <a class="entry-link" aria-label="post link to Melihat isi file zip" href="https://sasongko.web.id/post/2020-05-12-melihat-isi-file-zip/"></a>
+  <footer class="entry-footer"><span title='2021-01-29 00:00:00 +0000 UTC'>29 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Menambah file archive tar" href="https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/"></a>
 </article>
 
-<article class="post-entry"> 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Trimming Video ffmpeg
+    <h2 class="entry-hint-parent">Mengetahui isi file tar archive
     </h2>
   </header>
   <div class="entry-content">
-    <p>Misalkan, kita akan mencuplik sebagian (trimming) video video-asli.mp4 dari menit ke 57 lebih 34 detik sampai durasi ke 1 jam 2 menit 5 detik. Fila hasil trimming adalah cuplikan.mp4
-ffmpeg -i video-asli.mp4 -ss 00:57:34 -to 01:02:05 -c copy cuplikan.mp4 </p>
-  </div>
-  <footer class="entry-footer"><span title='2020-05-05 00:00:00 +0000 UTC'>05 May 2020</span></footer>
-  <a class="entry-link" aria-label="post link to Trimming Video ffmpeg" href="https://sasongko.web.id/post/2020-05-05-trimming-video-ffmpeg/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengenal Objek R Vector
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.
-Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.
-Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).
+    <p>Catatan ini merupakan lanjutan dari sebelumnya yang membuat tar archive. Kali ini tentang bagaimana mengetahui apa saja file ada di dalam archive tersebut tanpa harus mengekstrak.
+Contoh, terdapat file screenshot2.tar.xz. Untuk mengetahui apa saja isinya
+$ tar tvf screenshot2.tar.xz -rw-r--r-- user1/users 580563 2020-07-15 10:17 Screenshot_2020-07-15_10-17-33.png -rw-r--r-- user1/users 851743 2020-08-03 10:31 Screenshot_2020-08-03_10-31-47.png -rw-r--r-- user1/users 9958 2020-08-04 16:33 Screenshot_2020-08-04_16-33-18.png -rw-r--r-- user1/users 822389 2020-08-06 08:23 Screenshot_2020-08-06_08-22-59.png -rw-r--r-- user1/users 737008 2020-08-06 08:31 Screenshot_2020-08-06_08-31-22.png -rw-r--r-- user1/users 243660 2020-12-04 18:44 Screenshot_2020-12-04_18-44-18.png -rw-r--r-- user1/users 122966 2021-01-12 01:21 Screenshot_2021-01-12_01-21-31.png Dapat diketahui bahwa file screenshot2.tar.xz berisi 7 file png screenshot sebagaimana tersebut di atas.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-04-29 00:00:00 +0000 UTC'>29 Apr 2020</span></footer>
-  <a class="entry-link" aria-label="post link to Mengenal Objek R Vector" href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/"></a>
+  <footer class="entry-footer"><span title='2021-01-24 00:00:00 +0000 UTC'>24 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mengetahui isi file tar archive" href="https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/"></a>
 </article>
 
-<article class="post-entry"> 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Install JASP
+    <h2 class="entry-hint-parent">Membuat archive tar
     </h2>
   </header>
   <div class="entry-content">
-    <p>JASP, singkatan dari Jeffreys’s Amazing Statistic Program, merupakan open source statistics software. Software ini layak dijadikan pilihan utama karena:
-Open source. Karena open source semua orang boleh memakai, melihat source code-nya dan berkontribusi (melaporkan masalah, mengusulkan fitur dan perbaikan). Silahkan menuju ke https://github.com/jasp-stats/jasp-desktop . Pengembangan dinaungi oleh akademisi dari University of Amsterdam, Duke University, University of Southampton, UNiversity of Sussex, University of Missouri, Athens University of Economics dan Business, Missouri State University, University of Groningen, Nyenrode Business University, University of Zurich dan Ludwig-Maximilians-Universität München. Menyediakan berbagai analisis baik analisis frequentist maupun Bayesian. Tabel hasil dalam format APA yang dengan mudahnya di-copas ke word processosr seperti LibreOffice Writer atau Microsoft Word. Tersedia untuk Linux, MacOS, dan Microsoft Windows. Install JASP Karena saya memakai Slackware maka cara yang ditulis di sini tentu saja yang berlaku untuk Slackware dan linux umumnya. Install menggunakan flatpak. Flatpak tersedia di SBo. Untuk install membutuhkan download dari repo sekitar 1,4GB.
+    <p>Terdapat file sebagai berikut:
+Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Ketujuh file tersebut akan disatukan dalam 1 archive dengan nama file screenshot.tar.gz.
+$ tar cvf screenshot.tar.gz Screen* Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Penjelasan command
+tar : manajemen archive yang digunakan aalah tar c : wajib dituliskan untuk create atau membuat archive v : opsi untuk verbose, menampilkan list file yang diproses f : wajib dituliskan dalam semua penggunaan tar karena f adalah file, identifier untuk file yang akan diproses screenshot.tar.gz : nama file archive. Ekstensi bisa .tar, .tar.gz, atau .tar.xz. Ketika ekstensi ini sering dipakai di dunia open source. Screen* : file yang akan di-archive. Karena filenya banyak dan mempunyai kemiripan pola maka digunakan regex agar lebih praktis. File ini juga bisa dituliskan satu persatu. </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-23 00:00:00 +0000 UTC'>23 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Membuat archive tar" href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Ekstrak File .tar.gz
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Kemarin di grup facebook Ubuntu Indonesia ada yang bertanya yang intinya
+Bagaimana cara install file .tar.gz?
+File dengan ekstensi tar.gz adalah file kompresi/arsip. ‘Saudara’ dari tar.gz yang juga sering dijumpai adalah [zip]({% post_url 2015-05-13-ekstrak-file-zip %}). Atau, bagi yang sebelum memakai linux sudah sangat familiar dengan Windows, tar.gz ini mirip dengan rar.
+Nah, file kompresi ini bukanlah file installer, tetapi bisa jadi mengandung file installer. File installer di linux ada berbagai macam ekstensinya, contoh deb, rpm, tgz, dan sh. Tiap file installer itu mempunyai cara install yang beda. Untuk menginstallnya tentu saja tergantung dari isi file tar.gz itu tadi.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-04-11 00:00:00 +0000 UTC'>11 Apr 2020</span></footer>
-  <a class="entry-link" aria-label="post link to Install JASP" href="https://sasongko.web.id/post/2020-04-11-install-jasp/"></a>
+  <footer class="entry-footer"><span title='2015-04-28 00:00:00 +0000 UTC'>28 Apr 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Ekstrak File .tar.gz" href="https://sasongko.web.id/post/2015-04-28-ekstrak-file-tar-gz/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
-    <a class="prev" href="https://sasongko.web.id/post/page/37/">
-      «&nbsp;Prev&nbsp;
-    </a>
-    <a class="next" href="https://sasongko.web.id/post/page/39/">Next&nbsp;&nbsp;»
+    <a class="next" href="https://sasongko.web.id/tags/tar/page/2/">Next&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>

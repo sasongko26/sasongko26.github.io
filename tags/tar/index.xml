@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tar on Catatan Sasongko</title>
+    <link>https://sasongko.web.id/tags/tar/</link>
+    <description>Recent content in Tar on Catatan Sasongko</description>
+    <generator>Hugo -- 0.140.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sasongko.web.id/tags/tar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menghapus file dari tar</title>
+      <link>https://sasongko.web.id/post/2021-01-30-menghapus-file-dari-tar/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2021-01-30-menghapus-file-dari-tar/</guid>
+      <description>&lt;p&gt;Untuk menghapus file Screenshot_2020-08-06_08-31-22.png yang ada dalam screenshot.tar.xz, caranya&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ tar f screenshot.tar.xz --delete Screenshot_2020-08-06_08-31-22.png
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Menambah file archive tar</title>
+      <link>https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/</link>
+      <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/</guid>
+      <description>&lt;p&gt;Untuk menambahkan file ke dalam &lt;em&gt;tar archive&lt;/em&gt; mudah. Gunakan opsi -r atau &amp;ndash;append pada &lt;em&gt;command&lt;/em&gt; &lt;strong&gt;tar&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Misalkan, file photo_2020-08-22_19-03-32.jpg yang ada di ~/Documents akan dimasukkan atau ditambahkan ke dalam file &lt;em&gt;archive&lt;/em&gt; screenshot.tar.xz&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ tar rf screenshot.tar.xz photo_2020-08-22_19-03-32.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Atau&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ tar f screenshot.tar.xz --append photo_2020-08-22_19-03-32.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Apabila file photo_2020-08-22_19-03-32.jpg ingin langsung dihapus dari lokasi aslinya setelah ditambahkan ke tar, beri opsi &amp;ndash;remove-files&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ tar f screenshot.tar.xz --append --remove-files photo_2020-08-22_19-03-32.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Mengetahui isi file tar archive</title>
+      <link>https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/</link>
+      <pubDate>Sun, 24 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/</guid>
+      <description>&lt;p&gt;Catatan ini merupakan lanjutan dari sebelumnya yang membuat &lt;em&gt;tar archive&lt;/em&gt;. Kali ini tentang bagaimana mengetahui apa saja file ada di dalam &lt;em&gt;archive&lt;/em&gt; tersebut tanpa harus mengekstrak.&lt;/p&gt;
+&lt;p&gt;Contoh, terdapat file screenshot2.tar.xz. Untuk mengetahui apa saja isinya&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ tar tvf screenshot2.tar.xz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- user1/users &lt;span class=&#34;m&#34;&gt;580563&lt;/span&gt; 2020-07-15 10:17 Screenshot_2020-07-15_10-17-33.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- user1/users &lt;span class=&#34;m&#34;&gt;851743&lt;/span&gt; 2020-08-03 10:31 Screenshot_2020-08-03_10-31-47.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- user1/users   &lt;span class=&#34;m&#34;&gt;9958&lt;/span&gt; 2020-08-04 16:33 Screenshot_2020-08-04_16-33-18.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- user1/users &lt;span class=&#34;m&#34;&gt;822389&lt;/span&gt; 2020-08-06 08:23 Screenshot_2020-08-06_08-22-59.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- user1/users &lt;span class=&#34;m&#34;&gt;737008&lt;/span&gt; 2020-08-06 08:31 Screenshot_2020-08-06_08-31-22.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- user1/users &lt;span class=&#34;m&#34;&gt;243660&lt;/span&gt; 2020-12-04 18:44 Screenshot_2020-12-04_18-44-18.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- user1/users &lt;span class=&#34;m&#34;&gt;122966&lt;/span&gt; 2021-01-12 01:21 Screenshot_2021-01-12_01-21-31.png
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Dapat diketahui bahwa file screenshot2.tar.xz berisi 7 file png screenshot sebagaimana tersebut di atas.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Membuat archive tar</title>
+      <link>https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/</guid>
+      <description>&lt;p&gt;Terdapat file sebagai berikut:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-07-15_10-17-33.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-08-03_10-31-47.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-08-04_16-33-18.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-08-06_08-22-59.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-08-06_08-31-22.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-12-04_18-44-18.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2021-01-12_01-21-31.png
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ketujuh file tersebut akan disatukan dalam 1 &lt;em&gt;archive&lt;/em&gt; dengan nama file &lt;em&gt;screenshot.tar.gz&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ tar cvf screenshot.tar.gz Screen*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-07-15_10-17-33.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-08-03_10-31-47.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-08-04_16-33-18.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-08-06_08-22-59.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-08-06_08-31-22.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-12-04_18-44-18.png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2021-01-12_01-21-31.png
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Penjelasan &lt;em&gt;command&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tar : manajemen &lt;em&gt;archive&lt;/em&gt; yang digunakan aalah &lt;em&gt;tar&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;c : wajib dituliskan untuk &lt;em&gt;create&lt;/em&gt; atau membuat &lt;em&gt;archive&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;v : opsi untuk &lt;em&gt;verbose&lt;/em&gt;, menampilkan list file yang diproses&lt;/li&gt;
+&lt;li&gt;f : wajib dituliskan dalam semua penggunaan &lt;em&gt;tar&lt;/em&gt; karena f adalah file, identifier untuk file yang akan diproses&lt;/li&gt;
+&lt;li&gt;screenshot.tar.gz : nama file &lt;em&gt;archive&lt;/em&gt;. Ekstensi bisa .tar, .tar.gz, atau .tar.xz. Ketika ekstensi ini sering dipakai di dunia &lt;em&gt;open source&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Screen* : file yang akan di-&lt;em&gt;archive&lt;/em&gt;. Karena filenya banyak dan mempunyai kemiripan pola maka digunakan &lt;em&gt;regex&lt;/em&gt; agar lebih praktis. File ini juga bisa dituliskan satu persatu.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Ekstrak File .tar.gz</title>
+      <link>https://sasongko.web.id/post/2015-04-28-ekstrak-file-tar-gz/</link>
+      <pubDate>Tue, 28 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2015-04-28-ekstrak-file-tar-gz/</guid>
+      <description>&lt;p&gt;Kemarin di grup facebook Ubuntu Indonesia ada yang bertanya yang intinya&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Bagaimana cara install file .tar.gz?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;File dengan ekstensi tar.gz adalah file kompresi/arsip. &amp;lsquo;Saudara&amp;rsquo; dari tar.gz yang juga sering dijumpai adalah [zip]({% post_url 2015-05-13-ekstrak-file-zip %}). Atau, bagi yang sebelum memakai linux sudah sangat familiar dengan Windows, tar.gz ini mirip dengan rar.&lt;/p&gt;
+&lt;p&gt;Nah, file kompresi ini &lt;em&gt;bukanlah&lt;/em&gt; file installer, tetapi &lt;strong&gt;bisa jadi&lt;/strong&gt; mengandung file installer. File installer di linux ada berbagai macam ekstensinya, contoh deb, rpm, tgz, dan sh. Tiap file installer itu mempunyai cara install yang beda. Untuk menginstallnya tentu saja tergantung dari isi file tar.gz itu tadi.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ekstrak File tar.xz</title>
+      <link>https://sasongko.web.id/post/2014-12-30-ekstrak-file-tarxz/</link>
+      <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2014-12-30-ekstrak-file-tarxz/</guid>
+      <description>&lt;p&gt;Berkas atau file dengan ekstensi &lt;em&gt;tar.xz&lt;/em&gt; adalah berkas kompresi/arsip. Untuk mengekstraknya mudah.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ tar xpf nama_file.tar.xz
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

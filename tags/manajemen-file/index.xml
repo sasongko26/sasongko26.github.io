@@ -353,9 +353,12 @@ Updating files: 100% (40245/40245), done.
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-05-12-melihat-isi-file-zip/</guid>
       <description>&lt;p&gt;Menggunakan linux terutama &lt;strong&gt;slackware&lt;/strong&gt; membuat pekerjaan lebih ringan dan efisien. Suatu ketika diberikan sebuah file terkompresi zip yang misterius. Misterius karena ukurannya besar dan konon kata empunya file tersebut &lt;em&gt;ngehang&lt;/em&gt; saat akan dibuka di komputer dengan sistem &lt;strong&gt;bukan slackware&lt;/strong&gt; juga &lt;strong&gt;bukan linux&lt;/strong&gt;. Dan ketika dibuka di &lt;strong&gt;slackware&lt;/strong&gt; ketahuanlah nama &amp;ldquo;penduduk&amp;rdquo; zip tersebut.&lt;/p&gt;
+&lt;p&gt;Menggunakan zip&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;zip -sf namafile.zip
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# atau&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;less namafile.zip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Atau dengan less&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;less namafile.zip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Atau bisa juga&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;zipinfo namafile.zip
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
