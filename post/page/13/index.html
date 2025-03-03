@@ -155,6 +155,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Kenggulan elilo dibanding grub
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Pascamigrasi dari elilo ke grub ada hal yang dirindukan. Zram dengan komresi zstd. Entah masalahnya di mana, zstd tidak bisa digunakan untuk zram apabila menggunakan grub. Menggunakan elilo aman damai sentosa lanjcar jaya. Padahal kernel dan initrd-nya sama.
+Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default lzo-rle. Alhamdulillah. Dengan adanya zram aktivitas komputasi di laptop dengan RAM hanya 2GB masih bisa dijalankan dengan lancar.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-04-08 00:00:00 +0000 UTC'>08 Apr 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Kenggulan elilo dibanding grub" href="https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Mengubah timeout grub
     </h2>
   </header>
@@ -208,22 +222,6 @@ mount -o rw,uid=1020,gid=120 /dev/sdb1 /media/hd0/ uid dan gid di sini hanya con
   </div>
   <footer class="entry-footer"><span title='2022-03-05 00:00:00 +0000 UTC'>05 Mar 2022</span></footer>
   <a class="entry-link" aria-label="post link to Mount media read write mode" href="https://sasongko.web.id/post/2022-03-05-mount-media-read-write-mode/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Konfigurasi mirror slackware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Slackpkg merupakan salah satu official slackware package manager. Fitur yang dimilikinya antara lain
-Cek apakah ada update Baca changelog Install, upgrade, reinstall, remove, blacklist packages Sebelum menggunakannya, pilih dahulu mirror yang akan digunakan
-# vi /etc/slackpkg/mirrors Pada file tersebut sudah tersedia list mirror yang bisa digunakan. Apakah menggunakan current atau stable (saat ini 15.0). Pilih mirrornya dengan cara uncomment baris alamat mirrornya. Contoh
-https://mirrors.slackware.com/slackware/slackware64-15.0/ untuk menggunakan mirror terdekat versi slackware 15.0
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-03-01 00:00:00 +0000 UTC'>01 Mar 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Konfigurasi mirror slackware" href="https://sasongko.web.id/post/2022-03-01-konfigurasi-mirror-slackware/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

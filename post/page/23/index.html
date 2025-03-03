@@ -155,6 +155,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">sbocheck /usr/sbo/repo exists and is not empty
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Malam ini, ketika akan update SBo, ternyata tanpa disadari internet disconnect sebelumnya.
+bash-5.1# sbocheck Updating SlackBuilds tree... fatal: unable to look up github.com (port 9418) (Temporary failure in name resolution) Could not sync from git://github.com/Ponce/slackbuilds.git. Setelah internet tidak ada masalah, gantian sbotools-nya yang masalah
+bash-5.1# sbocheck /usr/sbo/repo exists and is not empty. Exiting. Baiklah, local repository-nya minta dikosongkan dulu
+bash-5.1# rm -r /usr/sbo/repo bash-5.1# sbosnap fetch Pulling SlackBuilds tree... Cloning into &#39;/usr/sbo/repo&#39;... remote: Enumerating objects: 42, done. remote: Counting objects: 100% (42/42), done. remote: Compressing objects: 100% (42/42), done. remote: Total 498277 (delta 8), reused 12 (delta 0), pack-reused 498235 Receiving objects: 100% (498277/498277), 142.33 MiB | 199.00 KiB/s, done. Resolving deltas: 100% (345959/345959), done. Updating files: 100% (40245/40245), done. Recheck
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-04-10 00:00:00 +0000 UTC'>10 Apr 2021</span></footer>
+  <a class="entry-link" aria-label="post link to sbocheck /usr/sbo/repo exists and is not empty" href="https://sasongko.web.id/post/2021-04-10-sbocheck-repo-exists/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Jumlah baris dan kolom libreoffice calc
     </h2>
   </header>
@@ -203,19 +219,6 @@ $ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso </p>
   </div>
   <footer class="entry-footer"><span title='2021-03-27 00:00:00 +0000 UTC'>27 Mar 2021</span></footer>
   <a class="entry-link" aria-label="post link to Median data dengan python" href="https://sasongko.web.id/post/2021-03-27-median-data-python/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mean data dengan python
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau mean() yang dimiliki pandas.
-#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # mean print(&#39;rerata konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].mean(),&#39;kaleng&#39;) print(&#39;rerata konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].mean()) print(&#39;rerata konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].mean(), &#39;gelas&#39;) print(&#39;rerata konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].mean(), &#39;liter&#39;) </p>
-  </div>
-  <footer class="entry-footer"><span title='2021-03-26 00:00:00 +0000 UTC'>26 Mar 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Mean data dengan python" href="https://sasongko.web.id/post/2021-03-26-mean-data-python/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
