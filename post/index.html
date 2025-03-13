@@ -155,6 +155,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Pengaturan volume audio melalui terminal
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Langsung saja!
+OS: Slackware linux Sound: pipewire dan wireplumber Pertama, cek status dulu untuk mencari sinks ID-nya
+wpctl status Misal didapatkan ID-nya 70. Cek berapa volumenya sekarang. Nilai ini menjadi dasar seberapa kita harus menambah atau mengecilkan volumenya.
+wpctl get-volume 70 Angka 70 di atas adalah ID. Bisa berbeda antara satu dan lainnya. Misalkan didapatkan nilai volumenya 0.55. Maksudnya adalah volumenya 55%. Kita bisa mengubah volumenya dengan memberikan tanda &#43; atau - di akhirnya.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-01-15 00:00:00 +0000 UTC'>15 Jan 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Pengaturan volume audio melalui terminal" href="https://sasongko.web.id/post/2025-01-15-mengatur-volume-audio-terminal/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Kooha failed to start recording
     </h2>
   </header>
@@ -209,19 +225,6 @@ let (negara, tahun_merdeka: u16) = (&#34;Indonesia&#34;, 1945); </p>
   </div>
   <footer class="entry-footer"><span title='2025-01-11 00:00:00 +0000 UTC'>11 Jan 2025</span></footer>
   <a class="entry-link" aria-label="post link to Deklarasi banyak variabel rust" href="https://sasongko.web.id/post/2025-01-11-deklarasi-banyak-variabel-rust/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Operator aritmatika rust
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Operator aritmatika yang dimiliki rust adalah penjumlahan (&#43;), pengurangan (-), perkalian (*), pembagian, dan modulus atau sisa pembagian. Operasi aritmatika hanya bisa dijalankan terhadap variabel yang bertipe data sama.
-const A: f32 = 10.0; const B: f32 = 20.0; fn main(){ println!(&#34;A = {}&#34;, A); println!(&#34;B = {}&#34;, B); println!(&#34;A &#43; B = {}&#34;, A&#43;B); println!(&#34;A - B = {}&#34;, A-B); println!(&#34;A x B = {}&#34;, A*B); println!(&#34;A : B = {}&#34;, A/B); println!(&#34;A mod B = {}&#34;, A%B); println!(&#34;B mod A = {}&#34;, B%A); } </p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-11 00:00:00 +0000 UTC'>11 Jan 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Operator aritmatika rust" href="https://sasongko.web.id/post/2025-01-11-operator-aritmatika-rust/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

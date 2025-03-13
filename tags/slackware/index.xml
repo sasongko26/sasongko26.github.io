@@ -4,10 +4,26 @@
     <title>Slackware on Catatan Sasongko</title>
     <link>https://sasongko.web.id/tags/slackware/</link>
     <description>Recent content in Slackware on Catatan Sasongko</description>
-    <generator>Hugo -- 0.140.1</generator>
+    <generator>Hugo -- 0.143.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/tags/slackware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pengaturan volume audio melalui terminal</title>
+      <link>https://sasongko.web.id/post/2025-01-15-mengatur-volume-audio-terminal/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2025-01-15-mengatur-volume-audio-terminal/</guid>
+      <description>&lt;p&gt;Langsung saja!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OS: &lt;strong&gt;Slackware linux&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Sound: &lt;strong&gt;pipewire&lt;/strong&gt; dan &lt;strong&gt;wireplumber&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pertama, cek status dulu untuk mencari &lt;em&gt;sinks&lt;/em&gt; ID-nya&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wpctl status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Misal didapatkan ID-nya 70. Cek berapa volumenya sekarang. Nilai ini menjadi dasar seberapa kita harus menambah atau mengecilkan volumenya.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wpctl get-volume &lt;span class=&#34;m&#34;&gt;70&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Angka 70 di atas adalah ID. Bisa berbeda antara satu dan lainnya. Misalkan didapatkan nilai volumenya 0.55. Maksudnya adalah volumenya 55%.  Kita bisa mengubah volumenya dengan memberikan tanda + atau - di akhirnya.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Kooha failed to start recording</title>
       <link>https://sasongko.web.id/post/2025-01-14-kooha-failed-to-start-recording/</link>
@@ -2427,9 +2443,7 @@ Solusinya dari berbagai referensi (lupa mencatat linknya)&lt;/p&gt;
 &lt;p&gt;extra/wicd/wicd-1.7.4-x86_64-3.txz:  Removed.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This is unmaintained, possibly insecure, and doesn&amp;rsquo;t work with Python
-versions newer than 2.7.18. NetworkManager is a better choice these days.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
+versions newer than 2.7.18. NetworkManager is a better choice these days.&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;
 &lt;p&gt;Selama lebih dari 5 tahun ini, saya merasa lebih nyaman menggunakan &lt;strong&gt;wicd&lt;/strong&gt; daripada &lt;strong&gt;NetworkManager&lt;/strong&gt;. Kenyamanan ini sebenarnya karena saya tidak mau repot, &lt;strong&gt;NetworkManager&lt;/strong&gt; seringkali timbulkan masalah, salah satunya mengatur &lt;em&gt;hostname&lt;/em&gt; dan domain. Keduanya saya kosongi. Mengapa? Saya belum kepikiran nama apa yang cocok. Hehehe&amp;hellip;&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
@@ -4168,8 +4182,7 @@ Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
       <guid>https://sasongko.web.id/post/2015-04-28-ekstrak-file-tar-gz/</guid>
       <description>&lt;p&gt;Kemarin di grup facebook Ubuntu Indonesia ada yang bertanya yang intinya&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Bagaimana cara install file .tar.gz?&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Bagaimana cara install file .tar.gz?&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;File dengan ekstensi tar.gz adalah file kompresi/arsip. &amp;lsquo;Saudara&amp;rsquo; dari tar.gz yang juga sering dijumpai adalah [zip]({% post_url 2015-05-13-ekstrak-file-zip %}). Atau, bagi yang sebelum memakai linux sudah sangat familiar dengan Windows, tar.gz ini mirip dengan rar.&lt;/p&gt;
 &lt;p&gt;Nah, file kompresi ini &lt;em&gt;bukanlah&lt;/em&gt; file installer, tetapi &lt;strong&gt;bisa jadi&lt;/strong&gt; mengandung file installer. File installer di linux ada berbagai macam ekstensinya, contoh deb, rpm, tgz, dan sh. Tiap file installer itu mempunyai cara install yang beda. Untuk menginstallnya tentu saja tergantung dari isi file tar.gz itu tadi.&lt;/p&gt;</description>
     </item>

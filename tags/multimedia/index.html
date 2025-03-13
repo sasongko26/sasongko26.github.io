@@ -140,6 +140,22 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Pengaturan volume audio melalui terminal
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Langsung saja!
+OS: Slackware linux Sound: pipewire dan wireplumber Pertama, cek status dulu untuk mencari sinks ID-nya
+wpctl status Misal didapatkan ID-nya 70. Cek berapa volumenya sekarang. Nilai ini menjadi dasar seberapa kita harus menambah atau mengecilkan volumenya.
+wpctl get-volume 70 Angka 70 di atas adalah ID. Bisa berbeda antara satu dan lainnya. Misalkan didapatkan nilai volumenya 0.55. Maksudnya adalah volumenya 55%. Kita bisa mengubah volumenya dengan memberikan tanda &#43; atau - di akhirnya.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-01-15 00:00:00 +0000 UTC'>15 Jan 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Pengaturan volume audio melalui terminal" href="https://sasongko.web.id/post/2025-01-15-mengatur-volume-audio-terminal/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Kooha failed to start recording
     </h2>
   </header>
@@ -194,21 +210,6 @@ $ aplay -l **** List of PLAYBACK Hardware Devices **** card 0: sofessx8336 [sof-
   </div>
   <footer class="entry-footer"><span title='2024-02-29 00:00:00 +0000 UTC'>29 Feb 2024</span></footer>
   <a class="entry-link" aria-label="post link to Mengatasi Audio Tanpa Suara ES8336" href="https://sasongko.web.id/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Enable Disable Pipewire Slackware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Catatan tentang pipewire sebenarnya sudah pernah dituliskan. Tetapi, biar tidak lupa dan lebih mudah mencarinya kala lupa, tidak ada salahnya dibuat catatan tersendiri. Bedanya, ini lebih singkat dan mudah dikerjakan.
-Salah satu keberuntungan slackers adalah Patrick Volkerding menyediakan skrip untuk meng-enable dan disable pipewire. Skrip tersebut adalah
-/usr/sbin/pipewire-enable.sh /usr/sbin/pipewire-disable.sh Silakan dieksekusi sesuai kebutuhan.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-04-29 00:00:00 +0000 UTC'>29 Apr 2023</span></footer>
-  <a class="entry-link" aria-label="post link to Enable Disable Pipewire Slackware" href="https://sasongko.web.id/post/2023-04-29-enable-disable-pipewire-slackware/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
