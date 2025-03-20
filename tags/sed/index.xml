@@ -14,8 +14,8 @@
       <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2025-01-16-menambah-karakter-awal-baris-sed/</guid>
       <description>&lt;p&gt;Salah satu keunggulan &lt;strong&gt;slackware&lt;/strong&gt; adalah konfigurasi yang &lt;em&gt;text based&lt;/em&gt; walaupun bisa juga &lt;em&gt;graphical based&lt;/em&gt;. File konfigurasi dapat diedit menggunakan &lt;em&gt;text editor&lt;/em&gt; seperti &lt;em&gt;vim, emacs, kate&lt;/em&gt;, dll. Bahkan untuk kasus tertentu bisa langsung diedit tanpa membuka filenya.&lt;/p&gt;
-&lt;p&gt;Contoh kasus: akan memberikan komentar pada file baris 1-30. Komentar berupa tanda # di awal baris. Nama filenya aaaa.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;1,27s/^/#/&amp;#39;&lt;/span&gt; aaaa
+&lt;p&gt;Contoh kasus: akan memberikan komentar pada file baris 1-300. Komentar berupa tanda # di awal baris. Nama filenya aaaa.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;1,300s/^/#/&amp;#39;&lt;/span&gt; aaaa
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
