@@ -4,10 +4,20 @@
     <title>Catatan Sasongko</title>
     <link>https://sasongko.web.id/</link>
     <description>Recent content on Catatan Sasongko</description>
-    <generator>Hugo -- 0.143.0</generator>
+    <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menambahan karakter di awal baris dengan sed</title>
+      <link>https://sasongko.web.id/post/2025-01-16-menambah-karakter-awal-baris-sed/</link>
+      <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2025-01-16-menambah-karakter-awal-baris-sed/</guid>
+      <description>&lt;p&gt;Salah satu keunggulan &lt;strong&gt;slackware&lt;/strong&gt; adalah konfigurasi yang &lt;em&gt;text based&lt;/em&gt; walaupun bisa juga &lt;em&gt;graphical based&lt;/em&gt;. File konfigurasi dapat diedit menggunakan &lt;em&gt;text editor&lt;/em&gt; seperti &lt;em&gt;vim, emacs, kate&lt;/em&gt;, dll. Bahkan untuk kasus tertentu bisa langsung diedit tanpa membuka filenya.&lt;/p&gt;
+&lt;p&gt;Contoh kasus: akan memberikan komentar pada file baris 1-30. Komentar berupa tanda # di awal baris. Nama filenya aaaa.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;1,27s/^/#/&amp;#39;&lt;/span&gt; aaaa
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>Pengaturan volume audio melalui terminal</title>
       <link>https://sasongko.web.id/post/2025-01-15-mengatur-volume-audio-terminal/</link>
@@ -35,7 +45,7 @@
 Caused by:
     0: Failed to initialize pipeline state to playing
     1: Element failed to change its state
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Tidak ada penjelasasn lebih detil terkait &lt;em&gt;error&lt;/em&gt; ini. &lt;em&gt;Browsing&lt;/em&gt; ke sana kemari, termasuk github kooha mendapatkan petunjuk: direktori penyimpanan tidak ada. Cek pengaturan penyimpanan di ~/Videos/Kooha. Direktor ini beberapa hari lalu kami hapus. Coba membuat kembali direktorinya&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Tidak ada penjelasan lebih detil terkait &lt;em&gt;error&lt;/em&gt; ini. &lt;em&gt;Browsing&lt;/em&gt; ke sana kemari, termasuk github kooha mendapatkan petunjuk: direktori penyimpanan tidak ada. Cek pengaturan penyimpanan di ~/Videos/Kooha. Direktor ini beberapa hari lalu kami hapus. Coba membuat kembali direktorinya&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir Videos/Kooha
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Perekaman layar dengan kooha berjalan lancar seperti yang semula diharapkan.&lt;/p&gt;</description>
     </item>
@@ -2079,7 +2089,7 @@ matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat di
       <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2021-01-31-membuat-file-csv/</guid>
       <description>&lt;p&gt;File &lt;strong&gt;csv&lt;/strong&gt; merupakan file yang umum digunakan sebagai file data. Mudah dalam pembuatannya. Begitu juga dengan aksesnya. Bisa dibuat dengan &lt;em&gt;text editor, spreadsheet software&lt;/em&gt; maupun &lt;em&gt;statistical software&lt;/em&gt;. Pada kesempatan kali ini tidak menggunakan &lt;em&gt;statistical software&lt;/em&gt; seperti &lt;strong&gt;R&lt;/strong&gt;.&lt;/p&gt;
-&lt;h1 id=&#34;membuat-file-csv-dengan-_text-editor_&#34;&gt;Membuat file csv dengan &lt;em&gt;text editor&lt;/em&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;membuat-file-csv-dengan-text-editor&#34;&gt;Membuat file csv dengan &lt;em&gt;text editor&lt;/em&gt;&lt;/h1&gt;
 &lt;p&gt;Prinsip pembuatan adalah :&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Antar kolom dipisahkan oleh tanda koma (,)&lt;/li&gt;
@@ -2511,10 +2521,10 @@ Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefo
       <link>https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/</link>
       <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
       <guid>https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/</guid>
-      <description>&lt;h1 id=&#34;mengetahui-_working-directory_&#34;&gt;Mengetahui &lt;em&gt;working directory&lt;/em&gt;&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;mengetahui-working-directory&#34;&gt;Mengetahui &lt;em&gt;working directory&lt;/em&gt;&lt;/h1&gt;
 &lt;p&gt;Secara &lt;em&gt;default, working directory&lt;/em&gt; pada &lt;strong&gt;Slackware&lt;/strong&gt; adalah home directory user atau di mana &lt;em&gt;command&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;R&lt;!-- raw HTML omitted --&gt; dijalankan.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;getwd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;mengganti-_working-directory_&#34;&gt;Mengganti &lt;em&gt;working directory&lt;/em&gt;&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;mengganti-working-directory&#34;&gt;Mengganti &lt;em&gt;working directory&lt;/em&gt;&lt;/h1&gt;
 &lt;p&gt;Misal, akan berpindah &lt;em&gt;working directory&lt;/em&gt; ke &lt;!-- raw HTML omitted --&gt;Documents/project&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;setwd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Documents/project&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>

@@ -155,6 +155,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Membuat archive tar
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Terdapat file sebagai berikut:
+Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Ketujuh file tersebut akan disatukan dalam 1 archive dengan nama file screenshot.tar.gz.
+$ tar cvf screenshot.tar.gz Screen* Screenshot_2020-07-15_10-17-33.png Screenshot_2020-08-03_10-31-47.png Screenshot_2020-08-04_16-33-18.png Screenshot_2020-08-06_08-22-59.png Screenshot_2020-08-06_08-31-22.png Screenshot_2020-12-04_18-44-18.png Screenshot_2021-01-12_01-21-31.png Penjelasan command
+tar : manajemen archive yang digunakan aalah tar c : wajib dituliskan untuk create atau membuat archive v : opsi untuk verbose, menampilkan list file yang diproses f : wajib dituliskan dalam semua penggunaan tar karena f adalah file, identifier untuk file yang akan diproses screenshot.tar.gz : nama file archive. Ekstensi bisa .tar, .tar.gz, atau .tar.xz. Ketika ekstensi ini sering dipakai di dunia open source. Screen* : file yang akan di-archive. Karena filenya banyak dan mempunyai kemiripan pola maka digunakan regex agar lebih praktis. File ini juga bisa dituliskan satu persatu. </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-23 00:00:00 +0000 UTC'>23 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Membuat archive tar" href="https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Mengetahui IP lokal dengan nmcli
     </h2>
   </header>
@@ -211,20 +226,6 @@ Memasuki lingkungan ratpoison user disambut interface hitam (mungkin dengan dise
   </div>
   <footer class="entry-footer"><span title='2021-01-11 00:00:00 +0000 UTC'>11 Jan 2021</span></footer>
   <a class="entry-link" aria-label="post link to Menggunakan ratpoison" href="https://sasongko.web.id/post/2021-01-11-menggunakan-ratpoison/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengetahui kondisi baterai
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Mengecek kondisi baterai laptop melalui terminal atau command line interface sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara default sudah menyertakan desktop environment seperti xfce, kde, mate, cinnamon, budgie, lumina dan manokwari dengan interface yang cantik dan menarik. DE tersebut sudah mempunyai power manager lengkap dengan applet-nya yang tak pernah bosan nempel di panel.
-Bagaimana kalau ‘hanya’ menggunakan window manager seperti GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm atau ratpoison yang tidak mempunyai power manager sendiri? Melalui terminal lah jawabannya. Di sini digunakan upower yang secara default ada di Slackware
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-01-10 00:00:00 +0000 UTC'>10 Jan 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Mengetahui kondisi baterai" href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

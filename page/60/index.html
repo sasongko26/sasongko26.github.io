@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.143.0"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.145.0"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -149,6 +149,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Install Unrar
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Di antara file kompresi/arsip yang ada, kompresi yang tidak saya utamakan adalah rar. Simpel sih alasannya, karena secara default baik BlankOn maupun Slackware tidak meng-embed ekstraktornya :D. Harus install dulu. Pastikan tersambung internet untuk mengunduh berkas.
+Untuk BlankOn bisa install dari repo.
+$ sudo apt-get install unrar Sedangkan untuk Slackware install slackbuildnya saja.
+# cd /usr/local/src # wget http://slackbuilds.org/slackbuilds/14.1/system/unrar.tar.gz # tar xzf unrar.tgr.gz # cd unrar # wget http://www.rarlab.com/rar/unrarsrc-5.2.6.tar.gz # sh unrar.SlackBuild # installpkg /tmp/unrar-5.2.6-x86_64-1_SBo.tgz Install unrar selesai.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-25 00:00:00 +0000 UTC'>25 Jun 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Install Unrar" href="https://sasongko.web.id/post/2015-06-25-install-unrar/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">InstalL Sleuth Kit Slackware
     </h2>
   </header>
@@ -217,21 +233,6 @@ $ cd libisofs $ wget http://files.libburnia-project.org/releases/libisofs-1.4.0.
   </div>
   <footer class="entry-footer"><span title='2015-06-16 00:00:00 +0000 UTC'>16 Jun 2015</span></footer>
   <a class="entry-link" aria-label="post link to Install libisofs Slackware" href="https://sasongko.web.id/post/2015-06-16-install-libisofs-slackware/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Cek Paket Terinstall di Slackware
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Untuk mengetahui apakah suatu paket atau aplikasi telah terpasang di Slackware kita atau belum caranya mudah.
-$ ls /var/log/packages | grep nama_paket Contoh, mencari paket yang di nama paketnya ada kata xfce
-$ ls /var/log/packages | grep xfce gtk-xfce-engine-3.0.1-x86_64-1 libxfce4ui-4.10.0-x86_64-2 libxfce4util-4.10.1-x86_64-1 libxfcegui4-4.10.0-x86_64-2 xfce4-clipman-plugin-1.2.3-x86_64-2 xfce4-dev-tools-4.10.0-x86_64-1 xfce4-mixer-4.8.0-x86_64-1 xfce4-notifyd-0.2.4-x86_64-1 xfce4-panel-4.10.1-x86_64-2 xfce4-power-manager-1.2.0-x86_64-2 xfce4-screenshooter-1.8.1-x86_64-2 xfce4-session-4.10.1-x86_64-3 xfce4-settings-4.10.1-x86_64-1 xfce4-systemload-plugin-1.1.1-x86_64-2 xfce4-taskmanager-1.0.0-x86_64-2 xfce4-terminal-0.6.2-x86_64-1 xfce4-volumed-0.1.13-x86_64-1 xfce4-weather-plugin-0.8.3-x86_64-2 Jika tidak ada keluaran berarti paket tersebut belum diinstall.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-15 00:00:00 +0000 UTC'>15 Jun 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Cek Paket Terinstall di Slackware" href="https://sasongko.web.id/post/2015-06-15-cek-paket-terinstall-slackware/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.143.0"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.145.0"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -149,6 +149,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Setting Internet XL Slackware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Di [catatan yang lalu]({% post_url 2015-06-28-konek-internet-menggunakan-pppsetup %}) telah kami sampaikan cara konek internet di Slackware dengan modem, ppp, dan internet provider atau operator Tri. Kali ini akan kami ganti dengan operator XL.
+Sunting berkas /etc/ppp/options
+# General configuration options for PPPD: lock defaultroute noipdefault modem /dev/ttyUSB0 460800 crtscts # Uncomment the line below for more verbose error reporting: #debug # If you have a default route already, pppd may require the other side # to authenticate itself, which most ISPs will not do. To work around this, # uncomment the line below. Note that this may have negative side effects # on system security if you allow PPP dialins. See the docs in /usr/doc/ppp* # for more information. #noauth passive asyncmap 0 name &#34;3data&#34; Baris 19, ganti “3data” dengan “internet”.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-08-17 00:00:00 +0000 UTC'>17 Aug 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Setting Internet XL Slackware" href="https://sasongko.web.id/post/2015-08-17-setting-internet-xl-slackware/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Unduh ISO Slackware Current
     </h2>
   </header>
@@ -202,19 +217,6 @@ wget http://slackbuilds.org/slackbuilds/14.1/libraries/wxPython.tar.gz tar xzf w
   </div>
   <footer class="entry-footer"><span title='2015-07-18 00:00:00 +0000 UTC'>18 Jul 2015</span></footer>
   <a class="entry-link" aria-label="post link to Install wxPython" href="https://sasongko.web.id/post/2015-07-18-install-wxpython/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install pip
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Pip akan memudahkan kita semua untuk menginstall paket-paket yang terkait dengan python.
-wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py python get-pip.py </p>
-  </div>
-  <footer class="entry-footer"><span title='2015-07-13 00:00:00 +0000 UTC'>13 Jul 2015</span></footer>
-  <a class="entry-link" aria-label="post link to Install pip" href="https://sasongko.web.id/post/2015-07-13-install-pip/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

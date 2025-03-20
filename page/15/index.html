@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.143.0"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.145.0"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -149,6 +149,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Menggunakan pipewire
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Salah satu fitur baru yang dihadirkan Slackware 15.0 adalah masuknya pipewire sebagai alternatif dari pulseaudio. Bagaimana penggunaanya? Silakan simak catatan berikut ini.
+Pertama, edit /etc/pulse/client.conf. Ubah autospawn dari yes menjadi no.
+Hapus /etc/xdg/autostart/pulseaudio.desktop atau rename menjadi file yang “tidak penting”.
+Rename file berikut menjadi .desktop saja
+/etc/xdg/autostart/pipewire-media-session.desktop.sample /etc/xdg/autostart/pipewire-pulse.desktop.sample /etc/xdg/autostart/pipewire.desktop </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-02-19 00:00:00 +0000 UTC'>19 Feb 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Menggunakan pipewire" href="https://sasongko.web.id/post/2022-02-19-menggunakan-pipewire/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Operator perbandingan perl
     </h2>
   </header>
@@ -201,20 +217,6 @@ Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer ada
   </div>
   <footer class="entry-footer"><span title='2022-01-03 00:00:00 +0000 UTC'>03 Jan 2022</span></footer>
   <a class="entry-link" aria-label="post link to Operator aritmatika scalar perl" href="https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Membuat array perl dari scalar
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Array merupakan variabel pada perl dengan data yang nilainya majemuk. Sedangkan scalar bernilai tunggal. Catatan kali ini tentang bagaimana cara membuat array dari scalar yang tersedia.
-my $nama = &#34;Sasongko&#34;; my $jenis_kelamin = &#34;Laki-laki&#34;; my $distro = &#34;Slackware&#34;; my $tahun = 2021; Keempat scalar tersebut akan disatukan menjadi array @biodata.
-my @biodata = ($nama, $jenis_kelamin, $distro, $tahun); </p>
-  </div>
-  <footer class="entry-footer"><span title='2022-01-02 00:00:00 +0000 UTC'>02 Jan 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Membuat array perl dari scalar" href="https://sasongko.web.id/post/2022-01-02-membuat-array-perl-dari-scalar/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

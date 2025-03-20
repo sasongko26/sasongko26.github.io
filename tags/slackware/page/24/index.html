@@ -140,6 +140,19 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Median data dengan python
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi describe() atau median() yang dimiliki pandas.
+#!/usr/bin/env python3 import pandas as pd # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel data = pd.read_csv(&#34;../dataset/drinks.csv&#34;) # median print(&#39;median konsumsi bir adalah &#39;,data[&#39;beer_servings&#39;].median(),&#39;kaleng&#39;) print(&#39;median konsumsi spirit adalah &#39;, data[&#39;spirit_servings&#39;].median()) print(&#39;median konsumsi anggur adalah &#39;, data[&#39;wine_servings&#39;].median(), &#39;gelas&#39;) print(&#39;median konsumsi alkohol murni adalah &#39;, data[&#39;pure_alcohol&#39;].median(), &#39;liter&#39;) </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-27 00:00:00 +0000 UTC'>27 Mar 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Median data dengan python" href="https://sasongko.web.id/post/2021-03-27-median-data-python/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Mean data dengan python
     </h2>
   </header>
@@ -194,21 +207,6 @@ $ wget [url] -P [direktori] [url] : URL / alamat lengkap file yang akan di-downl
   </div>
   <footer class="entry-footer"><span title='2021-03-23 00:00:00 +0000 UTC'>23 Mar 2021</span></footer>
   <a class="entry-link" aria-label="post link to Menggunakan wget prefix directory" href="https://sasongko.web.id/post/2021-03-23-menggunakan-wget-prefix-directory/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengetahui dimensi dataset python
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Untuk mengetahui dimensi atau jumlah baris dan kolom dataset dapat menggunakan shape dari pandas. Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.shape) Output:
-(178539, 39) Dari output tersebut diketahui dataset mempunyai 178539 baris dan 39 kolom.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-03-22 00:00:00 +0000 UTC'>22 Mar 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Mengetahui dimensi dataset python" href="https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

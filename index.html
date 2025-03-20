@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.143.0"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.145.0"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -149,6 +149,20 @@
 
 <article class="first-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Menambahan karakter di awal baris dengan sed
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Salah satu keunggulan slackware adalah konfigurasi yang text based walaupun bisa juga graphical based. File konfigurasi dapat diedit menggunakan text editor seperti vim, emacs, kate, dll. Bahkan untuk kasus tertentu bisa langsung diedit tanpa membuka filenya.
+Contoh kasus: akan memberikan komentar pada file baris 1-30. Komentar berupa tanda # di awal baris. Nama filenya aaaa.
+sed -i &#39;1,27s/^/#/&#39; aaaa </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-01-16 00:00:00 +0000 UTC'>16 Jan 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Menambahan karakter di awal baris dengan sed" href="https://sasongko.web.id/post/2025-01-16-menambah-karakter-awal-baris-sed/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Pengaturan volume audio melalui terminal
     </h2>
   </header>
@@ -170,7 +184,7 @@ wpctl get-volume 70 Angka 70 di atas adalah ID. Bisa berbeda antara satu dan lai
   </header>
   <div class="entry-content">
     <p>Sewaktu akan merekam layar dengan kooha muncul error
-Failed to start recording Caused by: 0: Failed to initialize pipeline state to playing 1: Element failed to change its state Tidak ada penjelasasn lebih detil terkait error ini. Browsing ke sana kemari, termasuk github kooha mendapatkan petunjuk: direktori penyimpanan tidak ada. Cek pengaturan penyimpanan di ~/Videos/Kooha. Direktor ini beberapa hari lalu kami hapus. Coba membuat kembali direktorinya
+Failed to start recording Caused by: 0: Failed to initialize pipeline state to playing 1: Element failed to change its state Tidak ada penjelasan lebih detil terkait error ini. Browsing ke sana kemari, termasuk github kooha mendapatkan petunjuk: direktori penyimpanan tidak ada. Cek pengaturan penyimpanan di ~/Videos/Kooha. Direktor ini beberapa hari lalu kami hapus. Coba membuat kembali direktorinya
 mkdir Videos/Kooha Perekaman layar dengan kooha berjalan lancar seperti yang semula diharapkan.
 ...</p>
   </div>
@@ -204,21 +218,6 @@ let nama = &#34;Rustacean&#34;; println!(&#34;Hai {}, selamat pagi!&#34;, nama);
   </div>
   <footer class="entry-footer"><span title='2025-01-12 00:00:00 +0000 UTC'>12 Jan 2025</span></footer>
   <a class="entry-link" aria-label="post link to Menggunakan named argument pada println" href="https://sasongko.web.id/post/2025-01-12-menggunakan-named-argument-println-rust/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Deklarasi banyak variabel rust
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Rust mengakomodir deklarasi beberapa variabel sekaligus dalam 1 statement. Caranya dengan memasukkan semua variabel ke dalam kurung dan antarvariabel diberi separator/pemisah tanda koma. Contoh:
-Deklarasi variabel satu persatu
-let negara = &#34;Indonesia&#34;; let tahun_merdeka: u16 = 1945; Kedua statement tersebut bisa diringkas
-let (negara, tahun_merdeka: u16) = (&#34;Indonesia&#34;, 1945); </p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-11 00:00:00 +0000 UTC'>11 Jan 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Deklarasi banyak variabel rust" href="https://sasongko.web.id/post/2025-01-11-deklarasi-banyak-variabel-rust/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

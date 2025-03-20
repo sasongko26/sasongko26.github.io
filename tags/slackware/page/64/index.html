@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Slackware | Catatan Sasongko</title>
+<meta name="keywords" content="">
+<meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+<meta name="author" content="">
+<link rel="canonical" href="https://sasongko.web.id/tags/slackware/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://sasongko.web.id/tags/slackware/index.xml">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/tags/slackware/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://sasongko.web.id/tags/slackware/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Slackware">
+  <meta property="og:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Slackware">
+<meta name="twitter:description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sasongko.web.id/" title="Home">
+                    <span><i class='fa fa-home fa-fw'></i>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/post/" title="Posts">
+                    <span><i class='fa fa-list fa-fw'></i>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/about/" title="Profil">
+                    <span><i class='fa fa-user fa-fw'></i>Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sasongko.web.id/logo/" title="Logo">
+                    <span><i class='fa fa-user fa-fw'></i>Logo</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Slackware
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Menggunakan WGet Linux Download Manager
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume. Cara menggunakannya mudah.
+$ wget [url] untuk mem-pause download tekan Ctrl&#43;C. Dan untuk melanjutkan kembali tambahkan opsi -c.
+$ wget [url] -c Untuk lebih lengkapnya tentang wget ada di manual wget.
+$ wget -h GNU Wget 1.15, adalah sebuah non-interaktif network retriever. Penggunaan: wget [PILIHAN]... [URL]... Argumen yang wajib untuk pilihan panjang juga wajib untuk pilihan yang pendek. Memulai: -V, --version menampilkan versi dari Wget dan keluar. -h, --help menampilkan bantuan ini. -b, --background pergi ke background setelah memulai. -e, --execute=COMMAND menjalankan sebuah perintah `.wgetrc&#39;-style. Mencatat dan memasukan berkas: -o, --output-file=FILE pesan log pada FILE. -a, --append-output=FILE tambahkan pesan pada FILE. -d, --debug tampilkan banyak informasi debugging. -q, --quiet diam (tidak ada output). -v, --verbose jadi verbose (ini yang default). -nv, --no-verbose matikan verboseness, tanpa menjadi quiet. --report-speed=TYPE Output bandwidth as TYPE. TYPE can be bits. -i, --input-file=BERKAS download URLs ditemukan dalam lokal atau BERKAS eksternal. -F, --force-html perlakukan input file sebagai HTML. -B, --base=URL telusuri berkas masukan HTML (-i -F) relatif ke URL. --config=FILE Specify config file to use. Download: -t, --tries=NUMBER set nomor mencoba ke NUMBER (0 untuk tidak terbatas). --retry-connrefused coba lagi walaupun koneksi ditolak. -O, --output-document=FILE tulis document pada FILE. -nc, --no-clobber skip downloads that would download to existing files (overwriting them). -c, --continue lanjutkan mengambil file yang terdownload sebagian. --progress=TYPE pilih tipe gauge progress. -N, --timestamping jangan mengambil kembali file kecuali file lebih baru dari file local. --no-use-server-timestamps don&#39;t set the local file&#39;s timestamp by the one on the server. -S, --server-response tampilkan balasan server. --spider jangan mendownload apapun. -T, --timeout=SECONDS set semua nilai timeout pada SECONDS. --dns-timeout=SECS set the DNS lookup timeout pada SECS. --connect-timeout=SECS set the connect timeout pada SECS. --read-timeout=SECS set the read timeout pada SECS. -w, --wait=SECONDS tunggu SECONDS diantara pengambilan. --waitretry=SECONDS tunggu 1..SECONDS diantara pencobaan dari sebuah pengambilan. --random-wait wait from 0.5*WAIT...1.5*WAIT secs between retrievals. --no-proxy secara eksplisit mematikan proxy. -Q, --quota=NUMBER set pengambilan quota pada NUMBER. --bind-address=ADDRESS bind ke ADDRESS (hostname atau IP) pada local host. --limit-rate=RATE batasi kecepatan download ke RATE. --no-dns-cache matikan caching dari DNS lookups. --restrict-file-names=OS restrict karakter dalam nama file ke salah satu dari yang dibolehkan oleh OS. --ignore-case abaikan besar/kecil huruf ketika mencocokan files/direktori.. -4, --inet4-only hanya menghubungi ke alamat IPv4 saja. -6, --inet6-only hanya menghubungi ke alamat IPv6 saja. --prefer-family=FAMILY hubungi terlebih dahulu alamat dari family yang dispesifikasikan, salah satu dari IPv6, IPv4 atau none. --user=USER set kedua ftp dan http user pada USER. --password=PASS set kedua ftp dan http password pada PASS. --ask-password tanya untuk kata sandi. --no-iri non-aktifkan dukungan IRI. --local-encoding=ENC gunakan ENC sebagai pengkodean lokal untuk IRI. --remote-encoding=ENC gunakan ENC sebagai pengkodean baku remote. --unlink remove file before clobber. Direktori: -nd, --no-directories jangan membuat direktori. -x, --force-directories paksa pembuatan direktori. -nH, --no-host-directories jangan buat host directories. --protocol-directories gunakan nama protocol dalam direktori. -P, --directory-prefix=PREFIX simpan file pada PREFIX/... --cut-dirs=NUMBER abaikan NUMBER remote komponen direktori. Pilihan HTTP: --http-user=USER set http user pada USER. --http-password=PASS set http password pada PASS. --nocache dissallow server-cached data. --default-page=NAMA Ubah nama halaman baku (biasanya ini `index.html&#39;.). -E, --adjust-extension simpan HTML/CSS dokumen dengan ekstensi yang sesuai. --ignore-length abaikan `Content-Length&#39; bagian header. --header=STRING masukkan STRING dalam headers. --max-redirect batas maksimal yang diperbolehkan untuk redirection setiap halaman. --proxy-user=USER set USER sebagai username proxy. --proxy-password=PASS set PASS sebagai password proxy. --referer=URL masukkan `Referer: URL&#39; header dalam HTTP request. --save-headers simpan HTTP headers pada file. -U, --user-agent=AGENT identifikasi sebagai AGEN daripada sebagai Wget/VERSION. --no-http-keep-alive disable HTTP keep-alive (persistent koneksi). --no-cookies jangan menggunakan cookies. --load-cookies=FILE load cookies dari FILE sebelum session. --save-cookies=FILE simpan cookies pada FILE sesudah session. --keep-session-cookies load dan simpan session (non-permanen) cookies. --post-data=STRING gunakan metoda POST; kirim STRING sebagai data. --post-file=FILE gunakan metoda POST; kirim isi dari FILE. --method=HTTPMethod use method &#34;HTTPMethod&#34; in the header. --body-data=STRING Send STRING as data. --method MUST be set. --body-file=FILE Send contents of FILE. --method MUST be set. --content-disposition Lihat header Content-Disposition ketika memilih berkas lokal (EKSPERIMEN). --content-on-error output the received content on server errors. --auth-no-challenge Kirim informasi otentifikasi standar HTTP tanpa harus menunggu untuk ditanyai oleh server. Pilihan HTTPS (SSL/TLS): --secure-protocol=PR choose secure protocol, one of auto, SSLv2, SSLv3, TLSv1 and PFS. --https-only only follow secure HTTPS links --no-check-certificate jangan memvalidasi server certificate. --certificate=FILE client certificate file. --certificate-type=TYPE tipe sertifikate client, PEM atau DER. --private-key=FILE private key file. --private-key-type=TYPE tipe private key, PEM atau DER. --ca-certificate=FILE file yang berisi CA&#39;s. --ca-directory=DIR direktori dimana hash list dari CA&#39;s disimpan --random-file=FILE file dengan data acak untuk seeding SSL PRNG. --egd-file=FILE penamaan file EGD socket dengan data random. Pilihan FTP: --ftp-user=USER set ftp user pada USER. --ftp-password=PASS set ftp password pada PASS. --no-remove-listing jangan hapus file `.listing&#39;. --no-glob matikan FTP nama file globbing. --no-passive-ftp disable the &#34;passive&#34; mode trasfer. --preserve-permissions preserver remote file permissions. --retr-symlinks ketika berekursif, ambil linked-to files (bukan dir). WARC options: --warc-file=FILENAME save request/response data to a .warc.gz file. --warc-header=STRING insert STRING into the warcinfo record. --warc-max-size=NUMBER set maximum size of WARC files to NUMBER. --warc-cdx write CDX index files. --warc-dedup=FILENAME do not store records listed in this CDX file. --no-warc-compression do not compress WARC files with GZIP. --no-warc-digests do not calculate SHA1 digests. --no-warc-keep-log do not store the log file in a WARC record. --warc-tempdir=DIRECTORY location for temporary files created by the WARC writer. Recursive download: -r, --recursive spesifikasikan untuk mendownload rekursif. -l, --level=NUMBER maksimum kedalaman rekursi (inf atau 0 untuk tak terhingga). --delete-after delete files locally sesudah mendownloadnya. -k, --convert-links buat links dalam HTML yang didownload atau CSS yang menunjuk ke berkas lokal. --backups=N before writing file X, rotate up to N backup files. -K, --backup-converted sebelum mengubah file X, backup sebagai X.orig. -m, --mirror shortcut untuk -N -r -l inf --no-remove-listing. -p, --page-requisites ambil semua gambar, dll. yang diperlukan untuk menampilkan file HTML. --strict-comments hidupkan strick (SGML) handling dari komentar HTML. Recursive diterima/ditolak: -A, --accept=LIST list yang dipisahkan oleh koma yang berisiekstensi yang diterima. -R, --reject=LIST list yang dipisahkan oleh koma yang berisiekstensi yang ditolak. --accept-regex=REGEX regex matching accepted URLs. --reject-regex=REGEX regex matching rejected URLs. --regex-type=TYPE regex type (posix). -D, --domains=LIST list yang dipisahkan oleh koma yang berisidomains yang dibolehkan. --exclude-domains=LIST list yang dipisahkan oleh koma yang berisidomains yang direject/tolak. --follow-ftp ikuti link FTP dari dokumen HTML. --follow-tags=LIST list yang dipisahkan oleh koma yang berisitag HTML yang diikuti --ignore-tags=LIST list yang dipisahkan oleh koma yang berisitag HTML yang diabaikan. -H, --span-hosts pergi ke host asing ketika recursive. -L, --relative hanya mengikuti links relative saja. -I, --include-directories=LIST list dari direktori yang dibolehkan. --trust-server-names use the name specified by the redirection url last component. -X, --exclude-directories=LIST list dari direktori yang diabaikan. -np, --no-parent jangan merambah direktori atasnya. Laporkan bug dan saran kepada &lt;bug-wget@gnu.org&gt; </p>
+  </div>
+  <footer class="entry-footer"><span title='2014-03-23 10:28:12 +0000 UTC'>23 Mar 2014</span></footer>
+  <a class="entry-link" aria-label="post link to Menggunakan WGet Linux Download Manager" href="https://sasongko.web.id/post/2014-03-23-wget-linux-download-manager/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="https://sasongko.web.id/tags/slackware/page/63/">
+      «&nbsp;Prev&nbsp;
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
