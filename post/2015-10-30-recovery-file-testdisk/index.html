@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Mengembalikan File yang Terhapus dengan Testdisk | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, forensik, blankon">
 <meta name="description" content="Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/recovery file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.
@@ -16,16 +16,16 @@ Selanjutnya akan terdeteksi media simpan yang terpasang di komputer. Di sini fla
 
 pilih Disk /dev/sdc kemudian Proceed untuk melanjutkan.">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://sasongko.web.id/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
-<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2015-10-30-recovery-file-testdisk/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2015-10-30-recovery-file-testdisk/">
 <noscript>
     <style>
         #theme-toggle,
@@ -62,81 +62,7 @@ pilih Disk /dev/sdc kemudian Proceed untuk melanjutkan.">
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/">
-  <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Mengembalikan File yang Terhapus dengan Testdisk">
-  <meta property="og:description" content="Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/recovery file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.
-Sebagai root jalankan
-testdisk kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih No Log karena merasa log ini tidak terlalu penting. Selanjutnya akan terdeteksi media simpan yang terpasang di komputer. Di sini flashdisknya terdeteksi sebagai /dev/sdc. pilih Disk /dev/sdc kemudian Proceed untuk melanjutkan.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2015-10-30T00:00:00+00:00">
-    <meta property="article:modified_time" content="2015-10-30T00:00:00+00:00">
-    <meta property="article:tag" content="Slackware">
-    <meta property="article:tag" content="Forensik">
-    <meta property="article:tag" content="Blankon">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mengembalikan File yang Terhapus dengan Testdisk">
-<meta name="twitter:description" content="Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/recovery file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.
-Sebagai root jalankan
-testdisk
-kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih No Log karena merasa log ini tidak terlalu penting.
-
-Selanjutnya akan terdeteksi media simpan yang terpasang di komputer. Di sini flashdisknya terdeteksi sebagai /dev/sdc.
-
-pilih Disk /dev/sdc kemudian Proceed untuk melanjutkan.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://sasongko.web.id/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Mengembalikan File yang Terhapus dengan Testdisk",
-      "item": "https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Mengembalikan File yang Terhapus dengan Testdisk",
-  "name": "Mengembalikan File yang Terhapus dengan Testdisk",
-  "description": "Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/recovery file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.\nSebagai root jalankan\ntestdisk kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih No Log karena merasa log ini tidak terlalu penting. Selanjutnya akan terdeteksi media simpan yang terpasang di komputer. Di sini flashdisknya terdeteksi sebagai /dev/sdc. pilih Disk /dev/sdc kemudian Proceed untuk melanjutkan.\n",
-  "keywords": [
-    "slackware", "forensik", "blankon"
-  ],
-  "articleBody": "Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/recovery file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.\nSebagai root jalankan\ntestdisk kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih No Log karena merasa log ini tidak terlalu penting. Selanjutnya akan terdeteksi media simpan yang terpasang di komputer. Di sini flashdisknya terdeteksi sebagai /dev/sdc. pilih Disk /dev/sdc kemudian Proceed untuk melanjutkan.\nKemudian akan terdeteksi jenis partisinya. Di sini partisinya adalah Intel/PC Partition. Kemudian muncul berbagai opsi, pilih Advanced Selanjutnya, terlihat bahwa flashdisk ini hanya mempunyai 1 partisi dengan tipe FAT32 Pilih Undelete. Gunakan panah kanan kiri untuk berpindah opsi.\nAkan muncul file dan foldernya. Gunakan panah kanan untuk membuka folder, q untuk keluar, : untuk menandai file yang dipilih, a untuk memilih semua file, C untuk menyalin semua file terpilih, c untuk menyalin file yang terpilih saat itu saja. Karena akan mengembalikan semua file, maka pilih a, kemudian C.\nAkan muncul tawaran di mana file akan disalin ke mana. Silahkan gunakan tanda panah untuk berpindah direktori, setelah ketemu atau mantap lokasinya tekan C untuk mulai menyalin. Penyalinan sukses, tak ada 1 file pun yang gagal disalin/dipulihkan. Setelah selesai, tekan q, kemudian Quit ",
-  "wordCount" : "219",
-  "inLanguage": "en",
-  "datePublished": "2015-10-30T00:00:00Z",
-  "dateModified": "2015-10-30T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Catatan Sasongko",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sasongko.web.id/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -154,7 +80,7 @@ pilih Disk /dev/sdc kemudian Proceed untuk melanjutkan.">
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -180,22 +106,22 @@ pilih Disk /dev/sdc kemudian Proceed untuk melanjutkan.">
         </div>
         <ul id="menu">
             <li>
-                <a href="https://sasongko.web.id/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/post/" title="Posts">
+                <a href="http://localhost:1313/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/about/" title="Profil">
+                <a href="http://localhost:1313/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/logo/" title="Logo">
+                <a href="http://localhost:1313/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -218,47 +144,47 @@ pilih Disk /dev/sdc kemudian Proceed untuk melanjutkan.">
 <p>Sebagai root jalankan</p>
 <pre tabindex="0"><code>testdisk
 </code></pre><p>kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih <em>No Log</em> karena merasa log ini tidak terlalu penting.
-<img loading="lazy" src="https://sasongko.web.id/gambar/testdisk01.png"></p>
+<img loading="lazy" src="http://localhost:1313/gambar/testdisk01.png"></p>
 <p>Selanjutnya akan terdeteksi media simpan yang terpasang di komputer. Di sini flashdisknya terdeteksi sebagai /dev/sdc.
-<img loading="lazy" src="https://sasongko.web.id/gambar/testdisk02.png">
+<img loading="lazy" src="http://localhost:1313/gambar/testdisk02.png">
 pilih Disk /dev/sdc kemudian <em>Proceed</em> untuk melanjutkan.</p>
 <p>Kemudian akan terdeteksi jenis partisinya. Di sini partisinya adalah Intel/PC Partition.
-<img loading="lazy" src="https://sasongko.web.id/gambar/testdisk03.png"></p>
+<img loading="lazy" src="http://localhost:1313/gambar/testdisk03.png"></p>
 <p>Kemudian muncul berbagai opsi, pilih <em>Advanced</em>
-<img loading="lazy" src="https://sasongko.web.id/gambar/testdisk04.png"></p>
+<img loading="lazy" src="http://localhost:1313/gambar/testdisk04.png"></p>
 <p>Selanjutnya, terlihat bahwa flashdisk ini hanya mempunyai 1 partisi dengan tipe FAT32
-<img loading="lazy" src="https://sasongko.web.id/gambar/testdisk05.png">
+<img loading="lazy" src="http://localhost:1313/gambar/testdisk05.png">
 Pilih <em>Undelete</em>. Gunakan panah kanan kiri untuk berpindah opsi.</p>
 <p>Akan muncul file dan foldernya.
-<img loading="lazy" src="https://sasongko.web.id/gambar/testdisk06.png">
+<img loading="lazy" src="http://localhost:1313/gambar/testdisk06.png">
 Gunakan panah kanan untuk membuka folder, q untuk keluar, : untuk menandai file yang dipilih, a untuk memilih semua file, C untuk menyalin semua file terpilih, c untuk menyalin file yang terpilih saat itu saja.
 Karena akan mengembalikan semua file, maka pilih a, kemudian C.</p>
 <p>Akan muncul tawaran di mana file akan disalin ke mana.
-<img loading="lazy" src="https://sasongko.web.id/gambar/testdisk07.png"></p>
+<img loading="lazy" src="http://localhost:1313/gambar/testdisk07.png"></p>
 <p>Silahkan gunakan tanda panah untuk berpindah direktori, setelah ketemu atau mantap lokasinya tekan C untuk mulai menyalin.
-<img loading="lazy" src="https://sasongko.web.id/gambar/testdisk08.png"></p>
+<img loading="lazy" src="http://localhost:1313/gambar/testdisk08.png"></p>
 <p>Penyalinan sukses, tak ada 1 file pun yang gagal disalin/dipulihkan.
-<img loading="lazy" src="https://sasongko.web.id/gambar/testdisk09.png"></p>
+<img loading="lazy" src="http://localhost:1313/gambar/testdisk09.png"></p>
 <p>Setelah selesai, tekan q, kemudian <em>Quit</em>
-<img loading="lazy" src="https://sasongko.web.id/gambar/testdisk10.png">
-<img loading="lazy" src="https://sasongko.web.id/gambar/testdisk11.png">
-<img loading="lazy" src="https://sasongko.web.id/gambar/testdisk12.png"></p>
+<img loading="lazy" src="http://localhost:1313/gambar/testdisk10.png">
+<img loading="lazy" src="http://localhost:1313/gambar/testdisk11.png">
+<img loading="lazy" src="http://localhost:1313/gambar/testdisk12.png"></p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
-      <li><a href="https://sasongko.web.id/tags/forensik/">Forensik</a></li>
-      <li><a href="https://sasongko.web.id/tags/blankon/">Blankon</a></li>
+      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
+      <li><a href="http://localhost:1313/tags/forensik/">Forensik</a></li>
+      <li><a href="http://localhost:1313/tags/blankon/">Blankon</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

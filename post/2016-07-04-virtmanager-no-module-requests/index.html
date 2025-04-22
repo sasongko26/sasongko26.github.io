@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Virt-Manager ImportError: No module named requests | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, virtual manager, qemu, python, virtualisasi">
 <meta name="description" content="Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.
@@ -21,16 +21,16 @@ Traceback (most recent call last):
 ImportError: No module named requests
 Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests. Ini dibuktikan dengan output ls /var/log/packages|grep python-request yang kosong.">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://sasongko.web.id/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
-<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2016-07-04-virtmanager-no-module-requests/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2016-07-04-virtmanager-no-module-requests/">
 <noscript>
     <style>
         #theme-toggle,
@@ -67,87 +67,7 @@ Ternyata, ada masalah dependensi. ImportError: No module named requests menunjuk
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/">
-  <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Virt-Manager ImportError: No module named requests">
-  <meta property="og:description" content="Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.
-$ virt-manager Traceback (most recent call last): File &#34;/usr/share/virt-manager/virt-manager&#34;, line 33, in &lt;module&gt; from virtinst import util as util File &#34;/usr/share/virt-manager/virtinst/__init__.py&#34;, line 89, in &lt;module&gt; from virtinst.distroinstaller import DistroInstaller File &#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;, line 23, in &lt;module&gt; from . import urlfetcher File &#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;, line 34, in &lt;module&gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests. Ini dibuktikan dengan output ls /var/log/packages|grep python-request yang kosong.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2016-07-04T00:00:00+00:00">
-    <meta property="article:modified_time" content="2016-07-04T00:00:00+00:00">
-    <meta property="article:tag" content="Slackware">
-    <meta property="article:tag" content="Virtual Manager">
-    <meta property="article:tag" content="Qemu">
-    <meta property="article:tag" content="Python">
-    <meta property="article:tag" content="Virtualisasi">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Virt-Manager ImportError: No module named requests">
-<meta name="twitter:description" content="Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.
-$ virt-manager
-Traceback (most recent call last):
-  File &#34;/usr/share/virt-manager/virt-manager&#34;, line 33, in &lt;module&gt;
-    from virtinst import util as util
-  File &#34;/usr/share/virt-manager/virtinst/__init__.py&#34;, line 89, in &lt;module&gt;
-    from virtinst.distroinstaller import DistroInstaller
-  File &#34;/usr/share/virt-manager/virtinst/distroinstaller.py&#34;, line 23, in &lt;module&gt;
-    from . import urlfetcher
-  File &#34;/usr/share/virt-manager/virtinst/urlfetcher.py&#34;, line 34, in &lt;module&gt;
-    import requests
-ImportError: No module named requests
-Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests. Ini dibuktikan dengan output ls /var/log/packages|grep python-request yang kosong.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://sasongko.web.id/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Virt-Manager ImportError: No module named requests",
-      "item": "https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Virt-Manager ImportError: No module named requests",
-  "name": "Virt-Manager ImportError: No module named requests",
-  "description": "Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.\n$ virt-manager Traceback (most recent call last): File \u0026#34;/usr/share/virt-manager/virt-manager\u0026#34;, line 33, in \u0026lt;module\u0026gt; from virtinst import util as util File \u0026#34;/usr/share/virt-manager/virtinst/__init__.py\u0026#34;, line 89, in \u0026lt;module\u0026gt; from virtinst.distroinstaller import DistroInstaller File \u0026#34;/usr/share/virt-manager/virtinst/distroinstaller.py\u0026#34;, line 23, in \u0026lt;module\u0026gt; from . import urlfetcher File \u0026#34;/usr/share/virt-manager/virtinst/urlfetcher.py\u0026#34;, line 34, in \u0026lt;module\u0026gt; import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests. Ini dibuktikan dengan output ls /var/log/packages|grep python-request yang kosong.\n",
-  "keywords": [
-    "slackware", "virtual manager", "qemu", "python", "virtualisasi"
-  ],
-  "articleBody": "Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata Virtual Machine Manager tidak bisa dijalankan.\n$ virt-manager Traceback (most recent call last): File \"/usr/share/virt-manager/virt-manager\", line 33, in from virtinst import util as util File \"/usr/share/virt-manager/virtinst/__init__.py\", line 89, in from virtinst.distroinstaller import DistroInstaller File \"/usr/share/virt-manager/virtinst/distroinstaller.py\", line 23, in from . import urlfetcher File \"/usr/share/virt-manager/virtinst/urlfetcher.py\", line 34, in import requests ImportError: No module named requests Ternyata, ada masalah dependensi. ImportError: No module named requests menunjukkan tidak adanya modul requests, atau tidak terinstall paket python-requests. Ini dibuktikan dengan output ls /var/log/packages|grep python-request yang kosong.\nTerus bagaimana?\nInstall python-requests melalui sbopkg\nsbopkg -i python-requests ",
-  "wordCount" : "103",
-  "inLanguage": "en",
-  "datePublished": "2016-07-04T00:00:00Z",
-  "dateModified": "2016-07-04T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Catatan Sasongko",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sasongko.web.id/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -165,7 +85,7 @@ Ternyata, ada masalah dependensi. ImportError: No module named requests menunjuk
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -191,22 +111,22 @@ Ternyata, ada masalah dependensi. ImportError: No module named requests menunjuk
         </div>
         <ul id="menu">
             <li>
-                <a href="https://sasongko.web.id/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/post/" title="Posts">
+                <a href="http://localhost:1313/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/about/" title="Profil">
+                <a href="http://localhost:1313/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/logo/" title="Logo">
+                <a href="http://localhost:1313/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -247,18 +167,18 @@ Ternyata, ada masalah dependensi. ImportError: No module named requests menunjuk
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
-      <li><a href="https://sasongko.web.id/tags/virtual-manager/">Virtual Manager</a></li>
-      <li><a href="https://sasongko.web.id/tags/qemu/">Qemu</a></li>
-      <li><a href="https://sasongko.web.id/tags/python/">Python</a></li>
-      <li><a href="https://sasongko.web.id/tags/virtualisasi/">Virtualisasi</a></li>
+      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
+      <li><a href="http://localhost:1313/tags/virtual-manager/">Virtual Manager</a></li>
+      <li><a href="http://localhost:1313/tags/qemu/">Qemu</a></li>
+      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
+      <li><a href="http://localhost:1313/tags/virtualisasi/">Virtualisasi</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Forensik on Catatan Sasongko</title>
-    <link>https://sasongko.web.id/tags/forensik/</link>
+    <link>http://localhost:1313/tags/forensik/</link>
     <description>Recent content in Forensik on Catatan Sasongko</description>
-    <generator>Hugo -- 0.145.0</generator>
+    <generator>Hugo -- 0.146.5</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 25 Dec 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sasongko.web.id/tags/forensik/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/forensik/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mengetahui kapan komputer dinyalakan</title>
-      <link>https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</link>
+      <link>http://localhost:1313/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</link>
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</guid>
+      <guid>http://localhost:1313/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</guid>
       <description>&lt;p&gt;Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan &lt;strong&gt;dmesg&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ dmesg -T &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; head -1 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Fri Dec &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; 00:39:42 2020&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Linux version 5.10.2 
@@ -28,9 +28,9 @@
     </item>
     <item>
       <title>Start up time kernel 5.10.2</title>
-      <link>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</link>
+      <link>http://localhost:1313/post/2020-12-24-startup-time-kernel-5-10-2/</link>
       <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</guid>
+      <guid>http://localhost:1313/post/2020-12-24-startup-time-kernel-5-10-2/</guid>
       <description>&lt;p&gt;Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam &lt;em&gt;main tree&lt;/em&gt; &lt;strong&gt;slackware current&lt;/strong&gt;. Saat catatan ini dituliskan, sudah &amp;ldquo;mendarat&amp;rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk &lt;em&gt;start up&lt;/em&gt;. Yang dimaksud &lt;em&gt;start up&lt;/em&gt; di sini adalah kondisi dari eksekusi &lt;strong&gt;elilo&lt;/strong&gt; dan &lt;strong&gt;initrd&lt;/strong&gt; sampai muncul &lt;em&gt;login prompt&lt;/em&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ dmesg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tail -5
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;   20.687205&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Segment Routing with IPv6
@@ -41,9 +41,9 @@
     </item>
     <item>
       <title>Deteksi duplikasi file</title>
-      <link>https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/</link>
+      <link>http://localhost:1313/post/2020-06-01-deteksi-duplikasi-file/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/</guid>
+      <guid>http://localhost:1313/post/2020-06-01-deteksi-duplikasi-file/</guid>
       <description>&lt;p&gt;Walau sudah ada &lt;em&gt;tools&lt;/em&gt; yang secara langsung mengetahui duplikasi file di linux, saya lebih suka menggunakan &lt;em&gt;tools&lt;/em&gt; bawaan &lt;strong&gt;Slackware&lt;/strong&gt;. &lt;em&gt;Tools&lt;/em&gt; yang umum digunakan antara lain &lt;!-- raw HTML omitted --&gt;fslint&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;fdupes&lt;!-- raw HTML omitted --&gt; atau &lt;!-- raw HTML omitted --&gt;jdupes&lt;!-- raw HTML omitted --&gt;. Adapun &lt;em&gt;tools&lt;/em&gt; yang biasa saya gunakan&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;!-- raw HTML omitted --&gt;sha512sum&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
@@ -55,9 +55,9 @@
     </item>
     <item>
       <title>Mengapa Enkripsi dengan OpenSSL?</title>
-      <link>https://sasongko.web.id/post/2018-06-12-mengapa-openssl/</link>
+      <link>http://localhost:1313/post/2018-06-12-mengapa-openssl/</link>
       <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2018-06-12-mengapa-openssl/</guid>
+      <guid>http://localhost:1313/post/2018-06-12-mengapa-openssl/</guid>
       <description>&lt;p&gt;Mengapa saya suka mengenkripsi file dengan &lt;!-- raw HTML omitted --&gt;openssl&lt;!-- raw HTML omitted --&gt;? Karena&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Tersedia sebagai &lt;em&gt;official package&lt;/em&gt; &lt;strong&gt;Slackware&lt;/strong&gt; sehingga sangat mudah untuk &lt;em&gt;install/remove/upgrade&lt;/em&gt;&lt;/li&gt;
@@ -68,9 +68,9 @@
     </item>
     <item>
       <title>Enkripsi File dengan gnupg</title>
-      <link>https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/</link>
+      <link>http://localhost:1313/post/2017-01-14-enkripsi-dg-gpg/</link>
       <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2017-01-14-enkripsi-dg-gpg/</guid>
+      <guid>http://localhost:1313/post/2017-01-14-enkripsi-dg-gpg/</guid>
       <description>&lt;p&gt;Selain dengan [openssl]({% post_url 2017-01-08-enkripsi-dg-openssl %}), enkripsi file juga dapat dilakukan dengan &lt;!-- raw HTML omitted --&gt;gnupg&lt;!-- raw HTML omitted --&gt; atau yang biasa disebut dengan &lt;!-- raw HTML omitted --&gt;gpg&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ gpg -o file_hasil_enkripsi -c file_yang_akan_dienkripsi
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Sedangkan untuk dekripsi&lt;/p&gt;
@@ -79,31 +79,31 @@
     </item>
     <item>
       <title>Enkripsi File dengan OpenSSL</title>
-      <link>https://sasongko.web.id/post/2017-01-08-enkripsi-dg-openssl/</link>
+      <link>http://localhost:1313/post/2017-01-08-enkripsi-dg-openssl/</link>
       <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2017-01-08-enkripsi-dg-openssl/</guid>
+      <guid>http://localhost:1313/post/2017-01-08-enkripsi-dg-openssl/</guid>
       <description>&lt;p&gt;Salah satu yang membuat saya kepincut menggunakan GNU/Linux yaitu mudahnya mengamankan file. Salah satu caranya adalah dengan enkripsi. Di sini saya gunakan &lt;!-- raw HTML omitted --&gt;openssl&lt;!-- raw HTML omitted --&gt;. Cara lainnya yang dapat digunakan adalah dengan [gpg]({% post_url 2017-01-14-enkripsi-dg-gpg %}).&lt;/p&gt;
 &lt;p&gt;Contoh, saya punya file yang perlu diamankan. Katakanlah filenya &lt;!-- raw HTML omitted --&gt;indonesia-raya.odt&lt;!-- raw HTML omitted --&gt;. Saya enkripsi menggunakan &lt;!-- raw HTML omitted --&gt;openssl&lt;!-- raw HTML omitted --&gt; dengan &lt;em&gt;cipher rc4&lt;/em&gt;. File hasil enkripsi saya namai &lt;!-- raw HTML omitted --&gt;rahasia.odt&lt;!-- raw HTML omitted --&gt; yang saya taruh di fd dan fd saya &lt;!-- raw HTML omitted --&gt;mount&lt;!-- raw HTML omitted --&gt; di &lt;!-- raw HTML omitted --&gt;/media/hd0&lt;!-- raw HTML omitted --&gt;. Kemudian akan ditanya &lt;em&gt;password&lt;/em&gt; enkripsinya.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mengembalikan File yang Terhapus dengan Testdisk</title>
-      <link>https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/</link>
+      <link>http://localhost:1313/post/2015-10-30-recovery-file-testdisk/</link>
       <pubDate>Fri, 30 Oct 2015 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2015-10-30-recovery-file-testdisk/</guid>
+      <guid>http://localhost:1313/post/2015-10-30-recovery-file-testdisk/</guid>
       <description>&lt;p&gt;Melanjutkan [catatan kemarin]({% post_url 2015-10-29-install-testdisk %}), kali ini adalah cara menggunakan testdisk untuk mengembalikan/memulihkan/&lt;em&gt;recovery&lt;/em&gt; file yang terhapus. Misalkan dipunyai Flashdisk Toshiba berkapasitas 15 GB yang secara tak sengaja terhapus semua file yang di dalamnya.&lt;/p&gt;
 &lt;p&gt;Sebagai root jalankan&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;testdisk
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;kemudian akan muncul deskripsi tentang testdisk dan tawaran apakah akan membuat file log atau tidak. Di sini saya pilih &lt;em&gt;No Log&lt;/em&gt; karena merasa log ini tidak terlalu penting.
-&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/testdisk01.png&#34;&gt;&lt;/p&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/gambar/testdisk01.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Selanjutnya akan terdeteksi media simpan yang terpasang di komputer. Di sini flashdisknya terdeteksi sebagai /dev/sdc.
-&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/testdisk02.png&#34;&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/gambar/testdisk02.png&#34;&gt;
 pilih Disk /dev/sdc kemudian &lt;em&gt;Proceed&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Install Testdisk</title>
-      <link>https://sasongko.web.id/post/2015-10-29-install-testdisk/</link>
+      <link>http://localhost:1313/post/2015-10-29-install-testdisk/</link>
       <pubDate>Thu, 29 Oct 2015 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2015-10-29-install-testdisk/</guid>
+      <guid>http://localhost:1313/post/2015-10-29-install-testdisk/</guid>
       <description>&lt;p&gt;Testdisk adalah salah satu aplikasi &lt;em&gt;digital&lt;/em&gt; forensik multiplatform. Bisa dijalankan di Windows (NT4, 2000, 2003, XP, Vista dan 7), Linux, FreeBSD, OpenBSD, NetBSD, SunOS, dan MacOS. Adapun kegunaannya untuk mengembalikan partisi yang terhapus beserta file-file yang ada di dalamnya. Informasi lebih lengkap tentang testdisk bisa didapatkan di &lt;a href=&#34;http://www.cgsecurity.org/&#34;&gt;sini&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Sebenarnya untuk Slackware sudah ada &lt;em&gt;slackbuild&lt;/em&gt;-nya, tapi tidak ada salahnya kalau install dari kode sumber. Penginstallan dijalankan dengan level root.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;wget http://www.cgsecurity.org/testdisk-7.0.tar.bz2
@@ -116,9 +116,9 @@ make install
     </item>
     <item>
       <title>InstalL Sleuth Kit Slackware</title>
-      <link>https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/</link>
+      <link>http://localhost:1313/post/2015-06-18-install-sleuthkit-slackware/</link>
       <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2015-06-18-install-sleuthkit-slackware/</guid>
+      <guid>http://localhost:1313/post/2015-06-18-install-sleuthkit-slackware/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/sleuthkit&#34;&gt;The Sleuth Kit&lt;/a&gt; atau disingkat TSK adalah tools digital forensik yang bersifat open source, multiplatform dan text-mode (command line interface). TSK bisa digunakan untuk melakukan analisis pada barang bukti, atau lebih tepatnya citra disk (raw image). Misalnya untuk mengetahui berkas apa saja yang ada di dalam hardisk dan adakah berkas yang dihapus dari hardisk itu.&lt;/p&gt;
 &lt;p&gt;Dependensi:&lt;/p&gt;
 &lt;ul&gt;
@@ -130,29 +130,29 @@ make install
     </item>
     <item>
       <title>Mengubah LiveDVD Menjadi ISO</title>
-      <link>https://sasongko.web.id/post/2015-05-23-konversi-livedvd-iso/</link>
+      <link>http://localhost:1313/post/2015-05-23-konversi-livedvd-iso/</link>
       <pubDate>Sat, 23 May 2015 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2015-05-23-konversi-livedvd-iso/</guid>
+      <guid>http://localhost:1313/post/2015-05-23-konversi-livedvd-iso/</guid>
       <description>&lt;p&gt;Beberapa waktu lalu lihat DVD BlankOn 8 Rote nganggur di seonggok kumpulan CD/DVD. Enaknya diapain ya itu DVD? Kalau dibiarkan khawatirnya kotor malah ngga bisa digunakan lagi. Ya udah mending dibuat file ISO aja. Kalau dibuat file ISO insya Allah manfaatnya lebih banyak karena tersimpan di hardisk bisa lebih tahan lama daripada dalam bentuk DVD, dan suatu saat nanti kalau dibutuhkan tapi DVDnya ngga bisa dipakai tinggal dibakar aja ISOnya entah itu jadi DVD atau ke flashdisk. Jadi misalnya besok mau install BlankOn Rote ke netbook ga usah download lagi ISOnya cukup jadikan liveUSB aja.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Kompetisi Tipuan Atas Nama Toyota</title>
-      <link>https://sasongko.web.id/post/2014-06-24-penipuan-atas-nama-toyota/</link>
+      <link>http://localhost:1313/post/2014-06-24-penipuan-atas-nama-toyota/</link>
       <pubDate>Tue, 24 Jun 2014 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2014-06-24-penipuan-atas-nama-toyota/</guid>
+      <guid>http://localhost:1313/post/2014-06-24-penipuan-atas-nama-toyota/</guid>
       <description>&lt;p&gt;Kemarin penulis mendapat email, “Tantangan Buat Para Blogger SEO” yang isinya
-&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/email-penipuan.png&#34;&gt;&lt;/p&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/gambar/email-penipuan.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Tapi, karena curiga ini penipuan, penulis cek di website resmi Toyota ternyata tidak ada informasi kompetisi atau lomba menulis tersebut. Kemudian penulis tanyakan ke Customer Support Toyota via email&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/minta-klarifikasi-toyota.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/gambar/minta-klarifikasi-toyota.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;mendapatkan balasan&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/klarifikasi-toyota.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/gambar/klarifikasi-toyota.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Jadi, mari kita berinternet secara sehat, tidak melakukan penipuan dan waspada terhadap penipuan.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Definisi Komputer Forensik</title>
-      <link>https://sasongko.web.id/post/2013-11-10-definisi-komputer-forensik/</link>
+      <link>http://localhost:1313/post/2013-11-10-definisi-komputer-forensik/</link>
       <pubDate>Sun, 10 Nov 2013 17:03:56 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2013-11-10-definisi-komputer-forensik/</guid>
+      <guid>http://localhost:1313/post/2013-11-10-definisi-komputer-forensik/</guid>
       <description>&lt;p&gt;Digital forensik atau Computer forensic adalah serangkaian metodologi yang digunakan dalam melakukan akuisisi (imaging), pengumpulan, analisa, serta presentasi bukti digital. Bukti digital mencakup setiap informasi elektronik yang disimpan atau diolah menggunakan teknologi komputer sehingga dapat digunakan untuk mendukung atau menolak tentang bagaimana sebuah insiden atau tindakan pelanggaran hukum terjadi. Karena keterlibatan proses computer forensic adalah setelah terjadinya suatu insiden maka metodologi yang tepat sangat diperlukan untuk mempercepat proses investigasi serta mendapatkan bukti-bukti digital yang akurat.&lt;/p&gt;</description>
     </item>
   </channel>

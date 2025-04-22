@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Install Tor Browser | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, blankon, tor, firefox">
 <meta name="description" content="Tor Browser adalah peramban web yang sangat memerhatikan privasi. Kita bisa mengakses web secara anonim/ anonymous karena melewati jaringan Tor yang beraneka jalur.
 Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slackware 14.1 download link-nya expired. Tor Stable terbaru adalah versi 5.5.5 dan ini belum tersedia SBo resminya untuk Slackware. Jadi kita akan install mandiri. Tentu saja kita butuh koneksi internet untuk mengunduh berkasnya. Tor tersedia untuk Linux, Windows maupun Mac Os X, baik arsitektur 32 bit maupun 64 bit. Ini tidak hanya berlaku untuk Slackware tapi juga BlankOn. Di sini digunakan 64 bit. Proses instalasi dengan bukan root.">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/2016-04-29-install-tor/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://sasongko.web.id/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
-<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2016-04-29-install-tor/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2016-04-29-install-tor/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2016-04-29-install-tor/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,75 +56,7 @@ Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slack
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/2016-04-29-install-tor/">
-  <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Install Tor Browser">
-  <meta property="og:description" content="Tor Browser adalah peramban web yang sangat memerhatikan privasi. Kita bisa mengakses web secara anonim/ anonymous karena melewati jaringan Tor yang beraneka jalur.
-Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slackware 14.1 download link-nya expired. Tor Stable terbaru adalah versi 5.5.5 dan ini belum tersedia SBo resminya untuk Slackware. Jadi kita akan install mandiri. Tentu saja kita butuh koneksi internet untuk mengunduh berkasnya. Tor tersedia untuk Linux, Windows maupun Mac Os X, baik arsitektur 32 bit maupun 64 bit. Ini tidak hanya berlaku untuk Slackware tapi juga BlankOn. Di sini digunakan 64 bit. Proses instalasi dengan bukan root.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2016-04-29T00:00:00+00:00">
-    <meta property="article:modified_time" content="2016-04-29T00:00:00+00:00">
-    <meta property="article:tag" content="Slackware">
-    <meta property="article:tag" content="Blankon">
-    <meta property="article:tag" content="Tor">
-    <meta property="article:tag" content="Firefox">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Install Tor Browser">
-<meta name="twitter:description" content="Tor Browser adalah peramban web yang sangat memerhatikan privasi. Kita bisa mengakses web secara anonim/ anonymous karena melewati jaringan Tor yang beraneka jalur.
-Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slackware 14.1 download link-nya expired. Tor Stable terbaru adalah versi 5.5.5 dan ini belum tersedia SBo resminya untuk Slackware. Jadi kita akan install mandiri. Tentu saja kita butuh koneksi internet untuk mengunduh berkasnya. Tor tersedia untuk Linux, Windows maupun Mac Os X, baik arsitektur 32 bit maupun 64 bit. Ini tidak hanya berlaku untuk Slackware tapi juga BlankOn. Di sini digunakan 64 bit. Proses instalasi dengan bukan root.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://sasongko.web.id/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Install Tor Browser",
-      "item": "https://sasongko.web.id/post/2016-04-29-install-tor/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Install Tor Browser",
-  "name": "Install Tor Browser",
-  "description": "Tor Browser adalah peramban web yang sangat memerhatikan privasi. Kita bisa mengakses web secara anonim/ anonymous karena melewati jaringan Tor yang beraneka jalur.\nSebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slackware 14.1 download link-nya expired. Tor Stable terbaru adalah versi 5.5.5 dan ini belum tersedia SBo resminya untuk Slackware. Jadi kita akan install mandiri. Tentu saja kita butuh koneksi internet untuk mengunduh berkasnya. Tor tersedia untuk Linux, Windows maupun Mac Os X, baik arsitektur 32 bit maupun 64 bit. Ini tidak hanya berlaku untuk Slackware tapi juga BlankOn. Di sini digunakan 64 bit. Proses instalasi dengan bukan root.\n",
-  "keywords": [
-    "slackware", "blankon", "tor", "firefox"
-  ],
-  "articleBody": "Tor Browser adalah peramban web yang sangat memerhatikan privasi. Kita bisa mengakses web secara anonim/ anonymous karena melewati jaringan Tor yang beraneka jalur.\nSebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slackware 14.1 download link-nya expired. Tor Stable terbaru adalah versi 5.5.5 dan ini belum tersedia SBo resminya untuk Slackware. Jadi kita akan install mandiri. Tentu saja kita butuh koneksi internet untuk mengunduh berkasnya. Tor tersedia untuk Linux, Windows maupun Mac Os X, baik arsitektur 32 bit maupun 64 bit. Ini tidak hanya berlaku untuk Slackware tapi juga BlankOn. Di sini digunakan 64 bit. Proses instalasi dengan bukan root.\nwget https://www.torproject.org/dist/torbrowser/5.5.5/tor-browser-linux64-5.5.5_en-US.tar.xz tar xvJf tor-browser-linux64-5.5.5_en-US.tar.xz ./start-tor-browser.desktop Kemudian muncul jendela pengaturan network / jaringan. Gunakan saja pengaturan default dari Tor, klik Connect\nTunggu sebentar, koneksi ke jaringan Tor sedang disambungkan.\nSetelah tersambung, Tor siap digunakan. Harap perhatikan, jangan maximize jendela Tor, karena kalau jendelanya di-maximize bisa mengakibatkan kita kehilangan privasi karena posisi kita browsing bisa terdeteksi.\nUntuk menjalankan Tor, eksekusi file start-tor-browser.desktop.\nDan perlu diperhatikan juga, ada website yang memblokir diakses dari IP tertentu ataupun juga memblokir akses dari Tor.\n",
-  "wordCount" : "182",
-  "inLanguage": "en",
-  "datePublished": "2016-04-29T00:00:00Z",
-  "dateModified": "2016-04-29T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://sasongko.web.id/post/2016-04-29-install-tor/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Catatan Sasongko",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sasongko.web.id/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -142,7 +74,7 @@ Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slack
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -168,22 +100,22 @@ Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slack
         </div>
         <ul id="menu">
             <li>
-                <a href="https://sasongko.web.id/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/post/" title="Posts">
+                <a href="http://localhost:1313/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/about/" title="Profil">
+                <a href="http://localhost:1313/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/logo/" title="Logo">
+                <a href="http://localhost:1313/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -208,11 +140,11 @@ Sebenarnya di SBo sudah tersedia browser satu ini. Tapi sayang untuk versi Slack
 tar xvJf tor-browser-linux64-5.5.5_en-US.tar.xz
 ./start-tor-browser.desktop
 </code></pre><p>Kemudian muncul jendela pengaturan <em>network</em> / jaringan. Gunakan saja pengaturan <em>default</em> dari Tor, klik <!-- raw HTML omitted -->Connect<!-- raw HTML omitted --></p>
-<p><img loading="lazy" src="https://sasongko.web.id/gambar/tor-install.png"></p>
+<p><img loading="lazy" src="http://localhost:1313/gambar/tor-install.png"></p>
 <p>Tunggu sebentar, koneksi ke jaringan Tor sedang disambungkan.</p>
-<p><img loading="lazy" src="https://sasongko.web.id/gambar/tor-install-2.png"></p>
+<p><img loading="lazy" src="http://localhost:1313/gambar/tor-install-2.png"></p>
 <p>Setelah tersambung, Tor siap digunakan. Harap perhatikan, jangan <em>maximize</em> jendela Tor, karena kalau jendelanya di-<em>maximize</em> bisa mengakibatkan kita kehilangan privasi karena posisi kita <em>browsing</em> bisa terdeteksi.</p>
-<p><img loading="lazy" src="https://sasongko.web.id/gambar/tor-siap.png"></p>
+<p><img loading="lazy" src="http://localhost:1313/gambar/tor-siap.png"></p>
 <p>Untuk menjalankan Tor, eksekusi file <!-- raw HTML omitted -->start-tor-browser.desktop<!-- raw HTML omitted -->.</p>
 <p>Dan perlu diperhatikan juga, <strong>ada website yang memblokir diakses dari IP tertentu ataupun juga memblokir akses dari Tor</strong>.</p>
 
@@ -221,17 +153,17 @@ tar xvJf tor-browser-linux64-5.5.5_en-US.tar.xz
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
-      <li><a href="https://sasongko.web.id/tags/blankon/">Blankon</a></li>
-      <li><a href="https://sasongko.web.id/tags/tor/">Tor</a></li>
-      <li><a href="https://sasongko.web.id/tags/firefox/">Firefox</a></li>
+      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
+      <li><a href="http://localhost:1313/tags/blankon/">Blankon</a></li>
+      <li><a href="http://localhost:1313/tags/tor/">Tor</a></li>
+      <li><a href="http://localhost:1313/tags/firefox/">Firefox</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

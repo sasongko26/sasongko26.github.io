@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Virtual Manager on Catatan Sasongko</title>
-    <link>https://sasongko.web.id/tags/virtual-manager/</link>
+    <link>http://localhost:1313/tags/virtual-manager/</link>
     <description>Recent content in Virtual Manager on Catatan Sasongko</description>
-    <generator>Hugo -- 0.145.0</generator>
+    <generator>Hugo -- 0.146.5</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 11 Sep 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sasongko.web.id/tags/virtual-manager/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/virtual-manager/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mount qcow2</title>
-      <link>https://sasongko.web.id/post/2016-09-11-mount-qcow2/</link>
+      <link>http://localhost:1313/post/2016-09-11-mount-qcow2/</link>
       <pubDate>Sun, 11 Sep 2016 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2016-09-11-mount-qcow2/</guid>
+      <guid>http://localhost:1313/post/2016-09-11-mount-qcow2/</guid>
       <description>&lt;p&gt;Untuk mengaitkan/&lt;em&gt;mount&lt;/em&gt; berkas &lt;!-- raw HTML omitted --&gt;qcow2&lt;!-- raw HTML omitted --&gt; ternyata tidak bisa langsung di- &lt;em&gt;mount&lt;/em&gt; begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses &lt;em&gt;root&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Modul kernel NBD aktifkan dulu. Secara &lt;em&gt;default&lt;/em&gt; modul NBD nonaktif. Untuk mengaktifkannya&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;modprobe nbd &lt;span class=&#34;nv&#34;&gt;max_part&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;N
@@ -20,9 +20,9 @@
     </item>
     <item>
       <title>Virtual Manager unable to connect to libvirt</title>
-      <link>https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</link>
+      <link>http://localhost:1313/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</link>
       <pubDate>Tue, 05 Jul 2016 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</guid>
+      <guid>http://localhost:1313/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</guid>
       <description>&lt;p&gt;Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata &lt;!-- raw HTML omitted --&gt;Virtual Manager&lt;!-- raw HTML omitted --&gt; belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka &lt;em&gt;graphical front-end&lt;/em&gt;-nya, tapi ternyata kemudian muncul kotak dialog &lt;!-- raw HTML omitted --&gt;Virtual Machine Manager Connection Failure&lt;!-- raw HTML omitted --&gt; dengan detail sebagai berikut&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Unable to connect to libvirt.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -44,9 +44,9 @@
     </item>
     <item>
       <title>Virt-Manager ImportError: No module named requests</title>
-      <link>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</link>
+      <link>http://localhost:1313/post/2016-07-04-virtmanager-no-module-requests/</link>
       <pubDate>Mon, 04 Jul 2016 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</guid>
+      <guid>http://localhost:1313/post/2016-07-04-virtmanager-no-module-requests/</guid>
       <description>&lt;p&gt;Setelah [&lt;em&gt;upgrade slackbuilds&lt;/em&gt;]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata &lt;!-- raw HTML omitted --&gt;Virtual Machine Manager&lt;!-- raw HTML omitted --&gt; tidak bisa dijalankan.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ virt-manager
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Traceback &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;most recent call last&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:

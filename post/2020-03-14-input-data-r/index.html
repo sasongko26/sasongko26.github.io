@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Input Data R | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, r, statistik">
 <meta name="description" content="Input data dalam R sangat mudah dan ada beragam cara, yaitu:
@@ -15,16 +15,16 @@ Import dari file. Data dibuat tanpa menggunakan R dan disimpan ke dalam bentuk f
 
 Pada kesempatan ini yang digunakan adalah cara pertama. Misalkan datanya adalah nilai ujian dari 60 mahasiswa sebagai berikut :">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/2020-03-14-input-data-r/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://sasongko.web.id/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
-<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2020-03-14-input-data-r/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2020-03-14-input-data-r/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2020-03-14-input-data-r/">
 <noscript>
     <style>
         #theme-toggle,
@@ -61,79 +61,7 @@ Pada kesempatan ini yang digunakan adalah cara pertama. Misalkan datanya adalah 
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/2020-03-14-input-data-r/">
-  <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Input Data R">
-  <meta property="og:description" content="Input data dalam R sangat mudah dan ada beragam cara, yaitu:
-Menuliskan dalam bentuk syntax. Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100 Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel. Import dari file. Data dibuat tanpa menggunakan R dan disimpan ke dalam bentuk file. Data bisa dibuat menggunakan text editor (contoh vim, gvim, nano, pico, kate), aplikasi perkantoran (LibreOffice Calc dan Microsoft Excel) atau aplikasi statistik lainnya seperti SPSS, Minitab, dan Stata). Pada kesempatan ini yang digunakan adalah cara pertama. Misalkan datanya adalah nilai ujian dari 60 mahasiswa sebagai berikut :">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2020-03-14T00:00:00+00:00">
-    <meta property="article:modified_time" content="2020-03-14T00:00:00+00:00">
-    <meta property="article:tag" content="Slackware">
-    <meta property="article:tag" content="R">
-    <meta property="article:tag" content="Statistik">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Input Data R">
-<meta name="twitter:description" content="Input data dalam R sangat mudah dan ada beragam cara, yaitu:
-
-Menuliskan dalam bentuk syntax.  Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100
-Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel.
-Import dari file. Data dibuat tanpa menggunakan R dan disimpan ke dalam bentuk file. Data bisa dibuat menggunakan text editor (contoh vim, gvim, nano, pico, kate), aplikasi perkantoran (LibreOffice Calc dan Microsoft Excel) atau aplikasi statistik lainnya seperti SPSS, Minitab, dan Stata).
-
-Pada kesempatan ini yang digunakan adalah cara pertama. Misalkan datanya adalah nilai ujian dari 60 mahasiswa sebagai berikut :">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://sasongko.web.id/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Input Data R",
-      "item": "https://sasongko.web.id/post/2020-03-14-input-data-r/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Input Data R",
-  "name": "Input Data R",
-  "description": "Input data dalam R sangat mudah dan ada beragam cara, yaitu:\nMenuliskan dalam bentuk syntax. Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100 Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel. Import dari file. Data dibuat tanpa menggunakan R dan disimpan ke dalam bentuk file. Data bisa dibuat menggunakan text editor (contoh vim, gvim, nano, pico, kate), aplikasi perkantoran (LibreOffice Calc dan Microsoft Excel) atau aplikasi statistik lainnya seperti SPSS, Minitab, dan Stata). Pada kesempatan ini yang digunakan adalah cara pertama. Misalkan datanya adalah nilai ujian dari 60 mahasiswa sebagai berikut :\n",
-  "keywords": [
-    "slackware", "r", "statistik"
-  ],
-  "articleBody": "Input data dalam R sangat mudah dan ada beragam cara, yaitu:\nMenuliskan dalam bentuk syntax. Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100 Melalui data frame. Data diinput ke dalam bentuk tabel. Baris tabel menunjukkan kasus sedangkan kolomnya adalah variabel. Cocok digunakan apabila lebih dari 1 variabel. Import dari file. Data dibuat tanpa menggunakan R dan disimpan ke dalam bentuk file. Data bisa dibuat menggunakan text editor (contoh vim, gvim, nano, pico, kate), aplikasi perkantoran (LibreOffice Calc dan Microsoft Excel) atau aplikasi statistik lainnya seperti SPSS, Minitab, dan Stata). Pada kesempatan ini yang digunakan adalah cara pertama. Misalkan datanya adalah nilai ujian dari 60 mahasiswa sebagai berikut :\n25 60 79 32 57 74 52 70 82 36 75 77 81 95 41 65 92 85 55 66 52 10 64 75 78 25 80 98 81 67 41 71 83 54 64 72 88 62 74 45 60 78 89 76 48 84 84 90 15 79 35 67 17 82 69 74 63 80 85 61.\nSyntax-nya\nnilai \u003c- c(25, 60, 79, 32, 57, 74, 52, 70, 82, 36, 75, 77, 81, 95, 41, 65, 92, 85, 55, 66, 52, 10, 64, 75, 78, 25, 80, 98, 81, 67, 41, 71, 83, 54, 64, 72, 88, 62, 74, 45, 60, 78, 89, 76, 48, 84, 84, 90, 15, 79, 35, 67, 17, 82, 69, 74, 63, 80, 85, 61) Untuk menampilkan data tersebut\nnilai [1] 25 60 79 32 57 74 52 70 82 36 75 77 81 95 41 65 92 85 55 66 52 10 64 75 78 [26] 25 80 98 81 67 41 71 83 54 64 72 88 62 74 45 60 78 89 76 48 84 84 90 15 79 [51] 35 67 17 82 69 74 63 80 85 61 Kemudian, disarankan untuk mengecek apakah data sudah lengkap.\nlength(nilai) [1] 60 Output 60, sama dengan jumlah mahasiswa yang mengikuti ujian. Dengan demikian data sudah lengkap dan siap diolah lebih lanjut.\n",
-  "wordCount" : "354",
-  "inLanguage": "en",
-  "datePublished": "2020-03-14T00:00:00Z",
-  "dateModified": "2020-03-14T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://sasongko.web.id/post/2020-03-14-input-data-r/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Catatan Sasongko",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sasongko.web.id/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -151,7 +79,7 @@ Pada kesempatan ini yang digunakan adalah cara pertama. Misalkan datanya adalah 
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -177,22 +105,22 @@ Pada kesempatan ini yang digunakan adalah cara pertama. Misalkan datanya adalah 
         </div>
         <ul id="menu">
             <li>
-                <a href="https://sasongko.web.id/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/post/" title="Posts">
+                <a href="http://localhost:1313/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/about/" title="Profil">
+                <a href="http://localhost:1313/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/logo/" title="Logo">
+                <a href="http://localhost:1313/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -236,16 +164,16 @@ Pada kesempatan ini yang digunakan adalah cara pertama. Misalkan datanya adalah 
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
-      <li><a href="https://sasongko.web.id/tags/r/">R</a></li>
-      <li><a href="https://sasongko.web.id/tags/statistik/">Statistik</a></li>
+      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
+      <li><a href="http://localhost:1313/tags/r/">R</a></li>
+      <li><a href="http://localhost:1313/tags/statistik/">Statistik</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

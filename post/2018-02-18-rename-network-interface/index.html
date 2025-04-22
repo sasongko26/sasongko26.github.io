@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Rename Network Interface | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, networking">
 <meta name="description" content="Entah mengapa tadi kepikiran untuk jalankan ifconfig -a. Ternyata kemudian ada output yang menarik
@@ -32,16 +32,16 @@ wlan1: flags=4098&lt;BROADCAST,MULTICAST&gt;  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 Menariknya adalah angka index interface-nya. Semua 0 kecuali wlan yang 1 sendiri. Sebenarnya no problem sih, cuma ga sedap dipandang aja. Kalau indexnya kompak 0 kan cakep. Hahahaha&hellip;..">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/2018-02-18-rename-network-interface/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://sasongko.web.id/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
-<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2018-02-18-rename-network-interface/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2018-02-18-rename-network-interface/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2018-02-18-rename-network-interface/">
 <noscript>
     <style>
         #theme-toggle,
@@ -78,95 +78,7 @@ Menariknya adalah angka index interface-nya. Semua 0 kecuali wlan yang 1 sendiri
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/2018-02-18-rename-network-interface/">
-  <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Rename Network Interface">
-  <meta property="og:description" content="Entah mengapa tadi kepikiran untuk jalankan ifconfig -a. Ternyata kemudian ada output yang menarik
-eth0: flags=4099&lt;UP,BROADCAST,MULTICAST&gt; mtu 1500 ether c8:5b:76:66:51:6a txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt; mtu 65536 inet 127.0.0.1 netmask 255.0.0.0 inet6 ::1 prefixlen 128 scopeid 0x10&lt;host&gt; loop txqueuelen 1000 (Local Loopback) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 wlan1: flags=4098&lt;BROADCAST,MULTICAST&gt; mtu 1500 ether ca:b0:da:b5:3d:75 txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 Menariknya adalah angka index interface-nya. Semua 0 kecuali wlan yang 1 sendiri. Sebenarnya no problem sih, cuma ga sedap dipandang aja. Kalau indexnya kompak 0 kan cakep. Hahahaha…..">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2018-02-18T00:00:00+00:00">
-    <meta property="article:modified_time" content="2018-02-18T00:00:00+00:00">
-    <meta property="article:tag" content="Slackware">
-    <meta property="article:tag" content="Networking">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rename Network Interface">
-<meta name="twitter:description" content="Entah mengapa tadi kepikiran untuk jalankan ifconfig -a. Ternyata kemudian ada output yang menarik
-eth0: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu 1500
-        ether c8:5b:76:66:51:6a  txqueuelen 1000  (Ethernet)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
-        loop  txqueuelen 1000  (Local Loopback)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-wlan1: flags=4098&lt;BROADCAST,MULTICAST&gt;  mtu 1500
-        ether ca:b0:da:b5:3d:75  txqueuelen 1000  (Ethernet)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-Menariknya adalah angka index interface-nya. Semua 0 kecuali wlan yang 1 sendiri. Sebenarnya no problem sih, cuma ga sedap dipandang aja. Kalau indexnya kompak 0 kan cakep. Hahahaha&hellip;..">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://sasongko.web.id/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Rename Network Interface",
-      "item": "https://sasongko.web.id/post/2018-02-18-rename-network-interface/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Rename Network Interface",
-  "name": "Rename Network Interface",
-  "description": "Entah mengapa tadi kepikiran untuk jalankan ifconfig -a. Ternyata kemudian ada output yang menarik\neth0: flags=4099\u0026lt;UP,BROADCAST,MULTICAST\u0026gt; mtu 1500 ether c8:5b:76:66:51:6a txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 lo: flags=73\u0026lt;UP,LOOPBACK,RUNNING\u0026gt; mtu 65536 inet 127.0.0.1 netmask 255.0.0.0 inet6 ::1 prefixlen 128 scopeid 0x10\u0026lt;host\u0026gt; loop txqueuelen 1000 (Local Loopback) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 wlan1: flags=4098\u0026lt;BROADCAST,MULTICAST\u0026gt; mtu 1500 ether ca:b0:da:b5:3d:75 txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 Menariknya adalah angka index interface-nya. Semua 0 kecuali wlan yang 1 sendiri. Sebenarnya no problem sih, cuma ga sedap dipandang aja. Kalau indexnya kompak 0 kan cakep. Hahahaha\u0026hellip;..\n",
-  "keywords": [
-    "slackware", "networking"
-  ],
-  "articleBody": "Entah mengapa tadi kepikiran untuk jalankan ifconfig -a. Ternyata kemudian ada output yang menarik\neth0: flags=4099 mtu 1500 ether c8:5b:76:66:51:6a txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 lo: flags=73 mtu 65536 inet 127.0.0.1 netmask 255.0.0.0 inet6 ::1 prefixlen 128 scopeid 0x10 loop txqueuelen 1000 (Local Loopback) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 wlan1: flags=4098 mtu 1500 ether ca:b0:da:b5:3d:75 txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.0 B) RX errors 0 dropped 0 overruns 0 frame 0 TX packets 0 bytes 0 (0.0 B) TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0 Menariknya adalah angka index interface-nya. Semua 0 kecuali wlan yang 1 sendiri. Sebenarnya no problem sih, cuma ga sedap dipandang aja. Kalau indexnya kompak 0 kan cakep. Hahahaha…..\nPenelusuran mengapa interface-nya wlan1 bukan wlan0\n$ cat /etc/udev/rules.d/70-persistent-net.rules # PCI device 0x10ec:/sys/devices/pci0000:00/0000:00:1c.3/0000:03:00.0 (r8169) SUBSYSTEM==\"net\", ACTION==\"add\", DRIVERS==\"?*\", ATTR{address}==\"c8:5b:76:66:51:6a\", ATTR{dev_id}==\"0x0\", ATTR{type}==\"1\", KERNEL==\"eth*\", NAME=\"eth0\" # PCI device 0x168c:/sys/devices/pci0000:00/0000:00:1c.2/0000:02:00.0 (ath10k_pci) SUBSYSTEM==\"net\", ACTION==\"add\", DRIVERS==\"?*\", ATTR{address}==\"ca:b0:da:b5:3d:75\", ATTR{dev_id}==\"0x0\", ATTR{type}==\"1\", KERNEL==\"wlan*\", NAME=\"wlan0\" # PCI device 0x168c:/sys/devices/pci0000:00/0000:00:1c.2/0000:02:00.0 (ath10k_pci) SUBSYSTEM==\"net\", ACTION==\"add\", DRIVERS==\"?*\", ATTR{address}==\"ca:b0:da:b5:3d:75\", ATTR{dev_id}==\"0x0\", ATTR{type}==\"1\", KERNEL==\"wlan*\", NAME=\"wlan1\" # USB device 0x0cf3:0x9271 (usb) SUBSYSTEM==\"net\", ACTION==\"add\", DRIVERS==\"?*\", ATTR{address}==\"84:16:f9:18:92:40\", ATTR{dev_id}==\"0x0\", ATTR{type}==\"1\", KERNEL==\"wlan*\", NAME=\"wlan2\" Ternyata 1 device dengan address (ca:b0:da:b5:3d:75) diberi 2 nama yaitu wlan0 dan wlan1. Ya sudah yang wlan1 dikomen aja. Beres.\n",
-  "wordCount" : "262",
-  "inLanguage": "en",
-  "datePublished": "2018-02-18T00:00:00Z",
-  "dateModified": "2018-02-18T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://sasongko.web.id/post/2018-02-18-rename-network-interface/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Catatan Sasongko",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sasongko.web.id/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -184,7 +96,7 @@ Menariknya adalah angka index interface-nya. Semua 0 kecuali wlan yang 1 sendiri
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -210,22 +122,22 @@ Menariknya adalah angka index interface-nya. Semua 0 kecuali wlan yang 1 sendiri
         </div>
         <ul id="menu">
             <li>
-                <a href="https://sasongko.web.id/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/post/" title="Posts">
+                <a href="http://localhost:1313/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/about/" title="Profil">
+                <a href="http://localhost:1313/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/logo/" title="Logo">
+                <a href="http://localhost:1313/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -288,15 +200,15 @@ Menariknya adalah angka index interface-nya. Semua 0 kecuali wlan yang 1 sendiri
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
-      <li><a href="https://sasongko.web.id/tags/networking/">Networking</a></li>
+      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
+      <li><a href="http://localhost:1313/tags/networking/">Networking</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Network-Manager on Catatan Sasongko</title>
-    <link>https://sasongko.web.id/tags/network-manager/</link>
+    <link>http://localhost:1313/tags/network-manager/</link>
     <description>Recent content in Network-Manager on Catatan Sasongko</description>
-    <generator>Hugo -- 0.145.0</generator>
+    <generator>Hugo -- 0.146.5</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Jul 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sasongko.web.id/tags/network-manager/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/network-manager/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Menggunakan dhclient untuk NetworkManager</title>
-      <link>https://sasongko.web.id/post/2023-07-19-menggunakan-dhclient-networkmanager/</link>
+      <link>http://localhost:1313/post/2023-07-19-menggunakan-dhclient-networkmanager/</link>
       <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2023-07-19-menggunakan-dhclient-networkmanager/</guid>
+      <guid>http://localhost:1313/post/2023-07-19-menggunakan-dhclient-networkmanager/</guid>
       <description>&lt;p&gt;Ada sedikit masalah ketika menggunakan kernel 6.1.38. Masalah tersebut antara lain tidak stabilnya jaringan internet bila konek via NetworkManager, usb dan bluetooth yang kadang suka diskonek sendiri. Solusi untuk masalah jaringan dan bluetooth tersebut adalah mengganti dhcpcd dengan dhclient pada konfigurasi Network Manager /etc/NetworkManager/conf.d/00-dhcp-client.conf, sesuai masukan dari Pak Walesa.&lt;/p&gt;</description>
     </item>
     <item>
       <title>nmcli sw disabled</title>
-      <link>https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/</link>
+      <link>http://localhost:1313/post/2021-02-09-nmcli-sw-disabled/</link>
       <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2021-02-09-nmcli-sw-disabled/</guid>
+      <guid>http://localhost:1313/post/2021-02-09-nmcli-sw-disabled/</guid>
       <description>&lt;p&gt;Beberapa saat yang lalu penulis terkena &lt;em&gt;prank&lt;/em&gt; dari diri sendiri. Sebut saja demikian karena awalnya hanya iseng mengaktifkan &lt;strong&gt;flight mode&lt;/strong&gt; di laptop. Beberapa saat kemudian karena ada keperluan laptop dibiarkan begitu saja. Sewaktu menggunakan lagi, menyambungkan ke internet tidak bisa-bisa. Cek &lt;strong&gt;nmcli&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ nmcli
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;p2p-dev-wlan0: disconnected
@@ -46,9 +46,9 @@
     </item>
     <item>
       <title>Mengetahui IP lokal dengan nmcli</title>
-      <link>https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/</link>
+      <link>http://localhost:1313/post/2021-01-15-ip-lokal-nmcli/</link>
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2021-01-15-ip-lokal-nmcli/</guid>
+      <guid>http://localhost:1313/post/2021-01-15-ip-lokal-nmcli/</guid>
       <description>&lt;p&gt;Untuk mengetahui alamat ip lokal tanpa akses &lt;strong&gt;root&lt;/strong&gt; dapat menggunakan &lt;strong&gt;nmcli&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ nmcli
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wlan0: connected to Anatomi
@@ -70,12 +70,12 @@
     </item>
     <item>
       <title>NetworkManager device not ready</title>
-      <link>https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/</link>
+      <link>http://localhost:1313/post/2020-08-07-networkmanager-device-not-ready/</link>
       <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/</guid>
+      <guid>http://localhost:1313/post/2020-08-07-networkmanager-device-not-ready/</guid>
       <description>&lt;p&gt;Baru beberapa hari memakai (lagi) &lt;strong&gt;NetworkManager&lt;/strong&gt;, sudah bermasalah (lagi).&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;device not ready
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/networkmanager-device-not-ready.png&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/gambar/networkmanager-device-not-ready.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;begitulah&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;Padahal &lt;em&gt;network interface&lt;/em&gt;-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai &lt;strong&gt;NetworkManager&lt;/strong&gt;.
 Solusinya dari berbagai referensi (lupa mencatat linknya)&lt;/p&gt;
@@ -86,9 +86,9 @@ Solusinya dari berbagai referensi (lupa mencatat linknya)&lt;/p&gt;
     </item>
     <item>
       <title>Bye wicd</title>
-      <link>https://sasongko.web.id/post/2020-08-04-bye-wicd/</link>
+      <link>http://localhost:1313/post/2020-08-04-bye-wicd/</link>
       <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-08-04-bye-wicd/</guid>
+      <guid>http://localhost:1313/post/2020-08-04-bye-wicd/</guid>
       <description>&lt;p&gt;Sabtu, 1 Agustus 2020, Pat mengumumkan penghapusan &lt;strong&gt;wicd&lt;/strong&gt; dari repo &lt;strong&gt;slackware current&lt;/strong&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;extra/wicd/wicd-1.7.4-x86_64-3.txz:  Removed.&lt;/p&gt;
@@ -99,25 +99,25 @@ versions newer than 2.7.18. NetworkManager is a better choice these days.&lt;/p&
     </item>
     <item>
       <title>nmcli untuk konek wifi</title>
-      <link>https://sasongko.web.id/post/2016-12-07-nmcli-konek-wifi/</link>
+      <link>http://localhost:1313/post/2016-12-07-nmcli-konek-wifi/</link>
       <pubDate>Wed, 07 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2016-12-07-nmcli-konek-wifi/</guid>
+      <guid>http://localhost:1313/post/2016-12-07-nmcli-konek-wifi/</guid>
       <description>&lt;p&gt;Untuk konek internet baik itu melalui modem, LAN, maupun wifi, pengguna GNU/Linux lebih sering menggunakan &lt;!-- raw HTML omitted --&gt;network manager&lt;!-- raw HTML omitted --&gt; yang &lt;em&gt;applet&lt;/em&gt;-nya biasanya ada di panel sebelah kanan walau sebenarnya ada cara lain seperti &lt;!-- raw HTML omitted --&gt;ifconfig&lt;!-- raw HTML omitted --&gt; dan &lt;!-- raw HTML omitted --&gt;dhcpcd&lt;!-- raw HTML omitted --&gt;. Kalau dalam mode grafis sih saya rasa tidak masalah, tapi bagaimana kalau sedang berada dalam mode teks yang jelas tidak terpampang &lt;em&gt;applet network manager&lt;/em&gt;-nya? &lt;!-- raw HTML omitted --&gt;nmcli&lt;!-- raw HTML omitted --&gt; adalah solusinya.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mengatur DNS Default</title>
-      <link>https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/</link>
+      <link>http://localhost:1313/post/2016-08-07-mengatur-dns-default/</link>
       <pubDate>Sun, 07 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2016-08-07-mengatur-dns-default/</guid>
+      <guid>http://localhost:1313/post/2016-08-07-mengatur-dns-default/</guid>
       <description>&lt;p&gt;Secara &lt;em&gt;default&lt;/em&gt;, DNS atau &lt;em&gt;Domain Name Server&lt;/em&gt; yang digunakan adalah DNS dari operator/penyedia layanan internet. Namun sayangnya, operator tertentu kurang baik dalam penapisan/pemblokiran situs-situs negatif sehingga kadang konten-konten pornografi, judi, dan konten lainnya yang tidak sesuai dengan norma kesusilaan dan budaya Indonesia dapat sampai ke hadapan kita. Oleh karena itulah perlu menggunakan DNS lain.&lt;/p&gt;
 &lt;p&gt;Penggantian DNS ini ada 2 cara, yaitu manual dan otomatis.&lt;/p&gt;
 &lt;p&gt;Cara manual dengan menyunting berkas &lt;!-- raw HTML omitted --&gt;/etc/resolv.conf&lt;!-- raw HTML omitted --&gt;. Mengganti &lt;em&gt;nameserver&lt;/em&gt; yang ada dengan &lt;em&gt;nameserver&lt;/em&gt; yang diinginkan. Salah satu penyedia DNS penapisan situs negatif adalah &lt;a href=&#34;http://nawala.id&#34;&gt;Nawala&lt;/a&gt;. &lt;em&gt;Nameserver&lt;/em&gt; nya adalah:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Konek Internet dengan nmcli</title>
-      <link>https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/</link>
+      <link>http://localhost:1313/post/2016-06-26-konek-inet-nmcli/</link>
       <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2016-06-26-konek-inet-nmcli/</guid>
+      <guid>http://localhost:1313/post/2016-06-26-konek-inet-nmcli/</guid>
       <description>&lt;p&gt;Menyambung catatan tentang [hilangnya ikon atau NetworkManager]({% post_url 2015-12-26-ikon-networkmanager-hilang %}). Jika &lt;!-- raw HTML omitted --&gt;nm-applet&lt;!-- raw HTML omitted --&gt; tidak mempan untuk menampilkan &lt;em&gt;applet NetworkManager&lt;/em&gt;, maka kita bisa gunakan &lt;!-- raw HTML omitted --&gt;nmcli&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;nmcli&lt;!-- raw HTML omitted --&gt; adalah &lt;em&gt;NetworkManager&lt;/em&gt; dengan antarmuka teks (&lt;em&gt;command line interface&lt;/em&gt;).&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;nmcli
@@ -148,9 +148,9 @@ OBJECT
     </item>
     <item>
       <title>Tidak Ada Ikon NetworkManager di Panel</title>
-      <link>https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/</link>
+      <link>http://localhost:1313/post/2015-12-26-ikon-networkmanager-hilang/</link>
       <pubDate>Sat, 26 Dec 2015 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2015-12-26-ikon-networkmanager-hilang/</guid>
+      <guid>http://localhost:1313/post/2015-12-26-ikon-networkmanager-hilang/</guid>
       <description>&lt;p&gt;Iseng-iseng install lagi slackware tapi tanpa paket yang ada di kategori &lt;em&gt;ap&lt;/em&gt; atau direktori slackware/ap dan &lt;em&gt;xap&lt;/em&gt; (slackware64/xap).&lt;/p&gt;
 &lt;p&gt;Efek sampingnya adalah, tidak adanya ikon NetworkManager di panel. Di sini saya gunakan DE XFCE. Sementara itu paket direktori slackware/n semuanya terinstall.&lt;/p&gt;
 &lt;p&gt;Install dulu appletnya. Karena saya punya berkas ISOnya maka installnya bisa offline asalkan tahu di mana letak paketnya berada. Setelah mount ISOnya ke /mnt/iso,&lt;/p&gt;

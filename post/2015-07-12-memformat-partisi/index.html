@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Memformat Partisi | Catatan Sasongko</title>
 <meta name="keywords" content="slackware">
 <meta name="description" content="Melanjutkan catatan [kemarin]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) sekarang partisinya diformat menjadi ext4, format filesystem yang umum digunakan untuk linux dengan kestabilan yang tidak diragukan lagi.
@@ -32,16 +32,16 @@ Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done   
 ">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/2015-07-12-memformat-partisi/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://sasongko.web.id/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
-<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2015-07-12-memformat-partisi/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2015-07-12-memformat-partisi/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2015-07-12-memformat-partisi/">
 <noscript>
     <style>
         #theme-toggle,
@@ -78,95 +78,7 @@ Writing superblocks and filesystem accounting information: done
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/2015-07-12-memformat-partisi/">
-  <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Memformat Partisi">
-  <meta property="og:description" content="Melanjutkan catatan [kemarin]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) sekarang partisinya diformat menjadi ext4, format filesystem yang umum digunakan untuk linux dengan kestabilan yang tidak diragukan lagi.
-Partisi yang akan diformat ext4 adalah /dev/sda9 dan akan diberi label sebagai src. Pemformatan ini juga harus dilakukan root.
-# mkfs -t ext4 -L &#39;src&#39; /dev/sda9 mke2fs 1.42.8 (20-Jun-2013) Filesystem label=src OS type: Linux Block size=4096 (log=2) Fragment size=4096 (log=2) Stride=0 blocks, Stripe width=0 blocks 871408 inodes, 3482075 blocks 174103 blocks (5.00%) reserved for the super user First data block=0 Maximum filesystem blocks=3569352704 107 block groups 32768 blocks per group, 32768 fragments per group 8144 inodes per group Superblock backups stored on blocks: 32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208 Allocating group tables: done Writing inode tables: done Creating journal (32768 blocks): done Writing superblocks and filesystem accounting information: done ">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2015-07-12T00:00:00+00:00">
-    <meta property="article:modified_time" content="2015-07-12T00:00:00+00:00">
-    <meta property="article:tag" content="Slackware">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Memformat Partisi">
-<meta name="twitter:description" content="Melanjutkan catatan [kemarin]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) sekarang partisinya diformat menjadi ext4, format filesystem yang umum digunakan untuk linux dengan kestabilan yang tidak diragukan lagi.
-Partisi yang akan diformat ext4 adalah /dev/sda9 dan akan diberi label sebagai src. Pemformatan ini juga harus dilakukan root.
-# mkfs -t ext4 -L &#39;src&#39; /dev/sda9
-mke2fs 1.42.8 (20-Jun-2013)
-Filesystem label=src
-OS type: Linux
-Block size=4096 (log=2)
-Fragment size=4096 (log=2)
-Stride=0 blocks, Stripe width=0 blocks
-871408 inodes, 3482075 blocks
-174103 blocks (5.00%) reserved for the super user
-First data block=0
-Maximum filesystem blocks=3569352704
-107 block groups
-32768 blocks per group, 32768 fragments per group
-8144 inodes per group
-Superblock backups stored on blocks: 
-	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208
-
-Allocating group tables: done                            
-Writing inode tables: done                            
-Creating journal (32768 blocks): done
-Writing superblocks and filesystem accounting information: done   
-">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://sasongko.web.id/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Memformat Partisi",
-      "item": "https://sasongko.web.id/post/2015-07-12-memformat-partisi/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Memformat Partisi",
-  "name": "Memformat Partisi",
-  "description": "Melanjutkan catatan [kemarin]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) sekarang partisinya diformat menjadi ext4, format filesystem yang umum digunakan untuk linux dengan kestabilan yang tidak diragukan lagi.\nPartisi yang akan diformat ext4 adalah /dev/sda9 dan akan diberi label sebagai src. Pemformatan ini juga harus dilakukan root.\n# mkfs -t ext4 -L \u0026#39;src\u0026#39; /dev/sda9 mke2fs 1.42.8 (20-Jun-2013) Filesystem label=src OS type: Linux Block size=4096 (log=2) Fragment size=4096 (log=2) Stride=0 blocks, Stripe width=0 blocks 871408 inodes, 3482075 blocks 174103 blocks (5.00%) reserved for the super user First data block=0 Maximum filesystem blocks=3569352704 107 block groups 32768 blocks per group, 32768 fragments per group 8144 inodes per group Superblock backups stored on blocks: 32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208 Allocating group tables: done Writing inode tables: done Creating journal (32768 blocks): done Writing superblocks and filesystem accounting information: done ",
-  "keywords": [
-    "slackware"
-  ],
-  "articleBody": "Melanjutkan catatan [kemarin]({% post_url 2015-07-11-membuat-partisi-dengan-cgdisk %}) sekarang partisinya diformat menjadi ext4, format filesystem yang umum digunakan untuk linux dengan kestabilan yang tidak diragukan lagi.\nPartisi yang akan diformat ext4 adalah /dev/sda9 dan akan diberi label sebagai src. Pemformatan ini juga harus dilakukan root.\n# mkfs -t ext4 -L 'src' /dev/sda9 mke2fs 1.42.8 (20-Jun-2013) Filesystem label=src OS type: Linux Block size=4096 (log=2) Fragment size=4096 (log=2) Stride=0 blocks, Stripe width=0 blocks 871408 inodes, 3482075 blocks 174103 blocks (5.00%) reserved for the super user First data block=0 Maximum filesystem blocks=3569352704 107 block groups 32768 blocks per group, 32768 fragments per group 8144 inodes per group Superblock backups stored on blocks: 32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208 Allocating group tables: done Writing inode tables: done Creating journal (32768 blocks): done Writing superblocks and filesystem accounting information: done ",
-  "wordCount" : "136",
-  "inLanguage": "en",
-  "datePublished": "2015-07-12T00:00:00Z",
-  "dateModified": "2015-07-12T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://sasongko.web.id/post/2015-07-12-memformat-partisi/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Catatan Sasongko",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sasongko.web.id/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -184,7 +96,7 @@ Writing superblocks and filesystem accounting information: done
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -210,22 +122,22 @@ Writing superblocks and filesystem accounting information: done
         </div>
         <ul id="menu">
             <li>
-                <a href="https://sasongko.web.id/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/post/" title="Posts">
+                <a href="http://localhost:1313/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/about/" title="Profil">
+                <a href="http://localhost:1313/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/logo/" title="Logo">
+                <a href="http://localhost:1313/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -273,14 +185,14 @@ Writing superblocks and filesystem accounting information: done
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
+      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

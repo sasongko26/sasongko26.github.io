@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Uji normalitas dengan python | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, python, statistik">
 <meta name="description" content="Uji normalitas data dapat dilakukan dengan beberapa cara antara lain
@@ -18,16 +18,16 @@ Histogramnya
 
 Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://sasongko.web.id/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
-<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2021-05-02-uji-normalitas-python/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2021-05-02-uji-normalitas-python/">
 <noscript>
     <style>
         #theme-toggle,
@@ -64,84 +64,7 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/">
-  <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Uji normalitas dengan python">
-  <meta property="og:description" content="Uji normalitas data dapat dilakukan dengan beberapa cara antara lain
-Visual dengan grafik salah satunya histogram Uji statistik seperti Kolmogorov-Smirnov atau Shapiro-Wilk Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv dengan pengubahan nama variabel menjadi lebih singkat.
-Uji normalitas dengan histogram Histogramnya
-Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2021-05-02T00:00:00+00:00">
-    <meta property="article:modified_time" content="2021-05-02T00:00:00+00:00">
-    <meta property="article:tag" content="Slackware">
-    <meta property="article:tag" content="Python">
-    <meta property="article:tag" content="Statistik">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Uji normalitas dengan python">
-<meta name="twitter:description" content="Uji normalitas data dapat dilakukan dengan beberapa cara antara lain
-
-Visual dengan grafik salah satunya histogram
-Uji statistik seperti Kolmogorov-Smirnov atau Shapiro-Wilk
-
-Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv dengan pengubahan nama variabel menjadi lebih singkat.
-Uji normalitas dengan histogram
-Histogramnya
-
-Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://sasongko.web.id/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Uji normalitas dengan python",
-      "item": "https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Uji normalitas dengan python",
-  "name": "Uji normalitas dengan python",
-  "description": "Uji normalitas data dapat dilakukan dengan beberapa cara antara lain\nVisual dengan grafik salah satunya histogram Uji statistik seperti Kolmogorov-Smirnov atau Shapiro-Wilk Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv dengan pengubahan nama variabel menjadi lebih singkat.\nUji normalitas dengan histogram Histogramnya\nDari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.\n",
-  "keywords": [
-    "slackware", "python", "statistik"
-  ],
-  "articleBody": "Uji normalitas data dapat dilakukan dengan beberapa cara antara lain\nVisual dengan grafik salah satunya histogram Uji statistik seperti Kolmogorov-Smirnov atau Shapiro-Wilk Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv dengan pengubahan nama variabel menjadi lebih singkat.\nUji normalitas dengan histogram Histogramnya\nDari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.\nUji Kolmogorov-Smirnov dan Shapiro-Wilk Misalkan ditentukan level signifikansi 5% atau 0.05. Hipotesisnya adalah:\nH0: data tidak sesuai dengan distribusi normal HA: data sesuai dengan distribusi normal #!/usr/bin/python3 import pandas as pd from scipy.stats import kstest, shapiro # sumber data https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv # dengan editing header variabel alkohol = pd.read_csv(\"../dataset/drinks.csv\") # Uji Kolmogorov-Smirnov (kstest) dan Uji Shapiro-Wilk (shapiro) ksdata = kstest(alkohol['beer_servings'], 'norm') swdata = shapiro(alkohol['beer_servings']) print(ksdata) print(swdata) Hasilnya\nKstestResult(statistic=0.8950231589631885, pvalue=2.5964374859935023e-189) ShapiroResult(statistic=0.8826810121536255, pvalue=3.9431170134607285e-11) Dari hasil tersebut, kedua uji menunjukkan pvalue kurang dari 0.05. Sehingga H0 bisa diterima (data tidak sesuai dengan distribusi normal).\n",
-  "wordCount" : "163",
-  "inLanguage": "en",
-  "datePublished": "2021-05-02T00:00:00Z",
-  "dateModified": "2021-05-02T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Catatan Sasongko",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sasongko.web.id/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -159,7 +82,7 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -185,22 +108,22 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
         </div>
         <ul id="menu">
             <li>
-                <a href="https://sasongko.web.id/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/post/" title="Posts">
+                <a href="http://localhost:1313/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/about/" title="Profil">
+                <a href="http://localhost:1313/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/logo/" title="Logo">
+                <a href="http://localhost:1313/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -227,7 +150,7 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
 <p>Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari <a href="https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv">https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv</a> dengan pengubahan nama variabel menjadi lebih singkat.</p>
 <h1 id="uji-normalitas-dengan-histogram">Uji normalitas dengan histogram<a hidden class="anchor" aria-hidden="true" href="#uji-normalitas-dengan-histogram">#</a></h1>
 <p>Histogramnya</p>
-<p><img loading="lazy" src="https://sasongko.web.id/gambar/histogram-beer-servings-2010.png"></p>
+<p><img loading="lazy" src="http://localhost:1313/gambar/histogram-beer-servings-2010.png"></p>
 <p>Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.</p>
 <h1 id="uji-kolmogorov-smirnov-dan-shapiro-wilk">Uji Kolmogorov-Smirnov dan Shapiro-Wilk<a hidden class="anchor" aria-hidden="true" href="#uji-kolmogorov-smirnov-dan-shapiro-wilk">#</a></h1>
 <p>Misalkan ditentukan level signifikansi 5% atau 0.05. Hipotesisnya adalah:</p>
@@ -259,16 +182,16 @@ Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris denga
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
-      <li><a href="https://sasongko.web.id/tags/python/">Python</a></li>
-      <li><a href="https://sasongko.web.id/tags/statistik/">Statistik</a></li>
+      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
+      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
+      <li><a href="http://localhost:1313/tags/statistik/">Statistik</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

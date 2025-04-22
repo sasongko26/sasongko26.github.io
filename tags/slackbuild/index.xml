@@ -2,17 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Slackbuild on Catatan Sasongko</title>
-    <link>https://sasongko.web.id/tags/slackbuild/</link>
+    <link>http://localhost:1313/tags/slackbuild/</link>
     <description>Recent content in Slackbuild on Catatan Sasongko</description>
-    <generator>Hugo -- 0.145.0</generator>
+    <generator>Hugo -- 0.146.5</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sasongko.web.id/tags/slackbuild/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/slackbuild/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix flatpak cant open generated ld.so.cache</title>
+      <link>http://localhost:1313/post/2025-04-21-fix-flatpak-cant-open-generated-ld-so-cache/</link>
+      <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2025-04-21-fix-flatpak-cant-open-generated-ld-so-cache/</guid>
+      <description>&lt;p&gt;Beberapa waktu ini aplikasi yang diinstall via &lt;strong&gt;flatpak&lt;/strong&gt; tidak bisa dijalankan. Entah sejak kapan dan sebelumnya bagaimana saya lupa. Dugaan kuat terjadi setelah &lt;em&gt;upgrade&lt;/em&gt; &lt;strong&gt;flatpak&lt;/strong&gt;. Ketika di-&lt;em&gt;run&lt;/em&gt; muncul &lt;em&gt;error&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;error: can&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t open generated ld.so.cache
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Jalan-jalan ke &lt;a href=&#34;https://github.com/flatpak/flatpak/issues/6024&#34;&gt;githubnya &lt;strong&gt;flatpak&lt;/strong&gt;&lt;/a&gt;, ternyata memang ada &lt;em&gt;bug&lt;/em&gt;. &lt;em&gt;Slackbuild script&lt;/em&gt; saat &lt;em&gt;compile&lt;/em&gt; menggunakan opsi&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-Dsystem_bubblewrap&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;value&lt;/em&gt; &lt;strong&gt;true&lt;/strong&gt; ini diganti saja ke &lt;strong&gt;bwrap&lt;/strong&gt; menjadi&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-Dsystem_bublewrap&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;bwrap
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install ulang dengan perubahan ini hasilnya &lt;strong&gt;flatpak&lt;/strong&gt; normal lagi. Alhamdulillah.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Reverse Dependency sbopkg</title>
-      <link>https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/</link>
+      <link>http://localhost:1313/post/2019-04-20-reverse-dependency-sbopkg/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2019-04-20-reverse-dependency-sbopkg/</guid>
+      <guid>http://localhost:1313/post/2019-04-20-reverse-dependency-sbopkg/</guid>
       <description>&lt;p&gt;Secara &lt;em&gt;default&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;sbopkg&lt;!-- raw HTML omitted --&gt; tidak menyediakan fitur &lt;strong&gt;reverse dependency&lt;/strong&gt;. Adapun untuk butuh &lt;em&gt;dependency&lt;/em&gt;-nya apa saja bisa menggunakan &lt;!-- raw HTML omitted --&gt;sqg&lt;!-- raw HTML omitted --&gt;. Bagaimana tahu &lt;em&gt;reverse dependency&lt;/em&gt;-nya?&lt;/p&gt;
 &lt;p&gt;Ini cara sederhana yang saya gunakan&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep -w REQUIRES /var/lib/sbopkg/SBo/*/*/*/*.info &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -w nama_paket
@@ -20,17 +33,17 @@
     </item>
     <item>
       <title>Rilis Lumina 1.3.0</title>
-      <link>https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/</link>
+      <link>http://localhost:1313/post/2017-07-02-rilis-lumina-1/</link>
       <pubDate>Sun, 02 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/</guid>
+      <guid>http://localhost:1313/post/2017-07-02-rilis-lumina-1/</guid>
       <description>&lt;p&gt;Di suasana Idul Fitri, 26 Juni 2017, Ken Moore selaku &lt;em&gt;project leader&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;Lumina&lt;!-- raw HTML omitted --&gt; mengumumkan perihal rilisnya &lt;strong&gt;Lumina Desktop 1.3.0&lt;/strong&gt;. Selang 4 hari kemudian dirilis &lt;em&gt;patch&lt;/em&gt; yang pertama untuk 1.3.0. Catatan rilis resmi silahkan dibaca &lt;a href=&#34;https://lumina-desktop.org/version-1-3-0-released/&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini tergolong istimewa. Mulai versi 1.3.0 ini &lt;!-- raw HTML omitted --&gt;lumina&lt;!-- raw HTML omitted --&gt; semakin powerfull untuk digunakan di &lt;!-- raw HTML omitted --&gt;Slackware&lt;!-- raw HTML omitted --&gt;. Sampai dengan versi 1.2.0_p1 (1.2.0 patchset 1), &lt;!-- raw HTML omitted --&gt;Restart&lt;!-- raw HTML omitted --&gt; dan &lt;!-- raw HTML omitted --&gt;Power Off&lt;!-- raw HTML omitted --&gt; pada menu sama sekali tidak berfungsi. Namun mulai 1.3.0 &lt;!-- raw HTML omitted --&gt;reboot&lt;!-- raw HTML omitted --&gt; dan &lt;!-- raw HTML omitted --&gt;shutdown&lt;!-- raw HTML omitted --&gt; sudah bisa dijalankan melalui menu.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Maleo Slackbuild</title>
-      <link>https://sasongko.web.id/post/2016-10-29-maleo-slackbuild/</link>
+      <link>http://localhost:1313/post/2016-10-29-maleo-slackbuild/</link>
       <pubDate>Sat, 29 Oct 2016 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2016-10-29-maleo-slackbuild/</guid>
+      <guid>http://localhost:1313/post/2016-10-29-maleo-slackbuild/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Maleo&lt;/strong&gt; adalah paket khas &lt;a href=&#34;http://blankonlinux.or.id&#34;&gt;BlankOn&lt;/a&gt; untuk menjalankan aplikasi HTML5. Bagi pengguna &lt;em&gt;Slackware&lt;/em&gt; yang berminat silahkan mencoba &lt;em&gt;slackbuild&lt;/em&gt; yang saya buat di &lt;a href=&#34;https://github.com/sasongko26/maleo-slackbuilds&#34;&gt;sini&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Adapun dependensinya adalah :&lt;/p&gt;
 &lt;ul&gt;
@@ -42,9 +55,9 @@
     </item>
     <item>
       <title>Upgrade Slackbuilds Slackware 14.2</title>
-      <link>https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/</link>
+      <link>http://localhost:1313/post/2016-07-03-upgrade-slackbuilds/</link>
       <pubDate>Sun, 03 Jul 2016 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2016-07-03-upgrade-slackbuilds/</guid>
+      <guid>http://localhost:1313/post/2016-07-03-upgrade-slackbuilds/</guid>
       <description>&lt;p&gt;Setelah melakukan [ &lt;em&gt;upgrade&lt;/em&gt; sistem ke &lt;em&gt;Slackware 14.2&lt;/em&gt;]({% post_url 2016-07-03-upgrade-slackware-142 %}) ada baiknya &lt;em&gt;upgrade&lt;/em&gt; juga paket yang diinstal dari slackbuilds.org.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;Upgrade&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;sbopkg&lt;!-- raw HTML omitted --&gt; : &lt;!-- raw HTML omitted --&gt;sbopkg -u&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
@@ -69,9 +82,9 @@
     </item>
     <item>
       <title>Install sbopkg</title>
-      <link>https://sasongko.web.id/post/2016-05-03-install-sbopkg/</link>
+      <link>http://localhost:1313/post/2016-05-03-install-sbopkg/</link>
       <pubDate>Tue, 03 May 2016 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2016-05-03-install-sbopkg/</guid>
+      <guid>http://localhost:1313/post/2016-05-03-install-sbopkg/</guid>
       <description>&lt;p&gt;Adakalanya pengguna &lt;strong&gt;Slackware&lt;/strong&gt; membutuhkan paket/aplikasi di luar yang dirilis secara resmi oleh &lt;strong&gt;Slackware&lt;/strong&gt; tapi tidak mau repot &lt;em&gt;install&lt;/em&gt; dari kode sumber (&lt;em&gt;source code&lt;/em&gt;). &lt;a href=&#34;http://slackbuilds.org&#34;&gt;&lt;strong&gt;SlackBuilds.org (SBo)&lt;/strong&gt;&lt;/a&gt; inilah yang mewujudkannya. Di SBo tersedia ribuan paket yang dapat dijalankan dengan baik di &lt;strong&gt;Slackware&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Kecuali dalam bentuk &lt;em&gt;web interface&lt;/em&gt; SBo juga bisa dinikmati dalam bentuk &lt;em&gt;command line interface&lt;/em&gt; yang dinamakan &lt;strong&gt;sbopkg&lt;/strong&gt;. Sbopkg secara &lt;em&gt;default&lt;/em&gt; tidak ter-&lt;em&gt;install&lt;/em&gt; karena paket ini memang paket &lt;em&gt;third party&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Untuk &lt;em&gt;install&lt;/em&gt;-nya mudah. Tersedia kode sumber maupun paket binernya. Biar lebih praktis &lt;em&gt;install&lt;/em&gt; dari binernya saja. Pastikan tersambung internet untuk mengunduh.&lt;/p&gt;</description>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Flatpak on Catatan Sasongko</title>
+    <link>http://localhost:1313/tags/flatpak/</link>
+    <description>Recent content in Flatpak on Catatan Sasongko</description>
+    <generator>Hugo -- 0.146.5</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/flatpak/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix flatpak cant open generated ld.so.cache</title>
+      <link>http://localhost:1313/post/2025-04-21-fix-flatpak-cant-open-generated-ld-so-cache/</link>
+      <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2025-04-21-fix-flatpak-cant-open-generated-ld-so-cache/</guid>
+      <description>&lt;p&gt;Beberapa waktu ini aplikasi yang diinstall via &lt;strong&gt;flatpak&lt;/strong&gt; tidak bisa dijalankan. Entah sejak kapan dan sebelumnya bagaimana saya lupa. Dugaan kuat terjadi setelah &lt;em&gt;upgrade&lt;/em&gt; &lt;strong&gt;flatpak&lt;/strong&gt;. Ketika di-&lt;em&gt;run&lt;/em&gt; muncul &lt;em&gt;error&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;error: can&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t open generated ld.so.cache
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Jalan-jalan ke &lt;a href=&#34;https://github.com/flatpak/flatpak/issues/6024&#34;&gt;githubnya &lt;strong&gt;flatpak&lt;/strong&gt;&lt;/a&gt;, ternyata memang ada &lt;em&gt;bug&lt;/em&gt;. &lt;em&gt;Slackbuild script&lt;/em&gt; saat &lt;em&gt;compile&lt;/em&gt; menggunakan opsi&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-Dsystem_bubblewrap&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;value&lt;/em&gt; &lt;strong&gt;true&lt;/strong&gt; ini diganti saja ke &lt;strong&gt;bwrap&lt;/strong&gt; menjadi&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-Dsystem_bublewrap&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;bwrap
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install ulang dengan perubahan ini hasilnya &lt;strong&gt;flatpak&lt;/strong&gt; normal lagi. Alhamdulillah.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

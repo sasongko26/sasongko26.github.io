@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>R on Catatan Sasongko</title>
-    <link>https://sasongko.web.id/tags/r/</link>
+    <link>http://localhost:1313/tags/r/</link>
     <description>Recent content in R on Catatan Sasongko</description>
-    <generator>Hugo -- 0.145.0</generator>
+    <generator>Hugo -- 0.146.5</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 13 Jan 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sasongko.web.id/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rebuild R post-upgrade icu4c</title>
-      <link>https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/</link>
+      <link>http://localhost:1313/post/2021-01-13-rebuild-r-post-upgrade-icu4c/</link>
       <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/</guid>
+      <guid>http://localhost:1313/post/2021-01-13-rebuild-r-post-upgrade-icu4c/</guid>
       <description>&lt;p&gt;Pagi ini, saat akan mengeksekusi &lt;strong&gt;R&lt;/strong&gt;,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ R
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/lib64/R/bin/exec/R: error &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; loading shared libraries: libicuuc.so.67: cannot open shared object file: No such file or directory
@@ -29,9 +29,9 @@
     </item>
     <item>
       <title>Mengenal R_HOME</title>
-      <link>https://sasongko.web.id/post/2020-08-15-mengenal-r-home/</link>
+      <link>http://localhost:1313/post/2020-08-15-mengenal-r-home/</link>
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-08-15-mengenal-r-home/</guid>
+      <guid>http://localhost:1313/post/2020-08-15-mengenal-r-home/</guid>
       <description>&lt;p&gt;R_HOME adalah direktori tempat R diinstall. Maksudnya, pada direktori inilah terdapat file &lt;em&gt;binary&lt;/em&gt; dan konfigurasinya. Pada linux khususnya &lt;strong&gt;slackware&lt;/strong&gt;, R_HOME ada di&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/lib&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;,64&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;/R
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# tergantung arsitekturnya apakah 32bit atau 64bit.&lt;/span&gt;
@@ -39,9 +39,9 @@
     </item>
     <item>
       <title>Operasi direktori R</title>
-      <link>https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/</link>
+      <link>http://localhost:1313/post/2020-05-29-operasi-direktori-r/</link>
       <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-05-29-operasi-direktori-r/</guid>
+      <guid>http://localhost:1313/post/2020-05-29-operasi-direktori-r/</guid>
       <description>&lt;h1 id=&#34;mengetahui-working-directory&#34;&gt;Mengetahui &lt;em&gt;working directory&lt;/em&gt;&lt;/h1&gt;
 &lt;p&gt;Secara &lt;em&gt;default, working directory&lt;/em&gt; pada &lt;strong&gt;Slackware&lt;/strong&gt; adalah home directory user atau di mana &lt;em&gt;command&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;R&lt;!-- raw HTML omitted --&gt; dijalankan.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;getwd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
@@ -52,17 +52,17 @@
     </item>
     <item>
       <title>Mengenal objek R factor</title>
-      <link>https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/</link>
+      <link>http://localhost:1313/post/2020-05-22-mengenal-r-factor/</link>
       <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-05-22-mengenal-r-factor/</guid>
+      <guid>http://localhost:1313/post/2020-05-22-mengenal-r-factor/</guid>
       <description>&lt;p&gt;Factor adalah representasi data kategorik. Factor bisa dibuat dengan fungsi &lt;!-- raw HTML omitted --&gt;factor()&lt;!-- raw HTML omitted --&gt; atau &lt;!-- raw HTML omitted --&gt;cut()&lt;!-- raw HTML omitted --&gt;. Saya lebih sering menggunakan &lt;!-- raw HTML omitted --&gt;cut()&lt;!-- raw HTML omitted --&gt; karena lebih aplikatif saat akan mengubah skala data dari rasio atau interval ke ordinal.&lt;/p&gt;
 &lt;p&gt;Contoh, bmi adalah data &lt;em&gt;body mass index&lt;/em&gt; (BMI) atau indeks massa tubuh (IMT). Klasifikasi IMT ada 4 macam, yaitu&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mengenal Objek R Vector</title>
-      <link>https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/</link>
+      <link>http://localhost:1313/post/2020-04-29-mengenal-vector-r/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/</guid>
+      <guid>http://localhost:1313/post/2020-04-29-mengenal-vector-r/</guid>
       <description>&lt;p&gt;Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-&lt;em&gt;handle&lt;/em&gt; data.&lt;/p&gt;
 &lt;p&gt;Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.&lt;/p&gt;
 &lt;h1 id=&#34;apa-sih-vector&#34;&gt;Apa sih vector?&lt;/h1&gt;
@@ -70,9 +70,9 @@
     </item>
     <item>
       <title>Install JASP</title>
-      <link>https://sasongko.web.id/post/2020-04-11-install-jasp/</link>
+      <link>http://localhost:1313/post/2020-04-11-install-jasp/</link>
       <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-04-11-install-jasp/</guid>
+      <guid>http://localhost:1313/post/2020-04-11-install-jasp/</guid>
       <description>&lt;p&gt;JASP, singkatan dari Jeffreys&amp;rsquo;s Amazing Statistic Program, merupakan &lt;em&gt;open source statistics software&lt;/em&gt;. Software ini layak dijadikan pilihan utama karena:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;Open source&lt;/em&gt;. Karena &lt;em&gt;open source&lt;/em&gt; semua orang boleh memakai, melihat &lt;em&gt;source code&lt;/em&gt;-nya dan berkontribusi (melaporkan masalah, mengusulkan fitur dan perbaikan). Silahkan menuju ke &lt;a href=&#34;https://github.com/jasp-stats/jasp-desktop&#34;&gt;https://github.com/jasp-stats/jasp-desktop&lt;/a&gt; .&lt;/li&gt;
@@ -87,9 +87,9 @@ Install menggunakan flatpak. Flatpak tersedia di SBo. Untuk install membutuhkan 
     </item>
     <item>
       <title>Dispersi Data dengan R</title>
-      <link>https://sasongko.web.id/post/2020-04-04-dispersi-data-dengan-r/</link>
+      <link>http://localhost:1313/post/2020-04-04-dispersi-data-dengan-r/</link>
       <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-04-04-dispersi-data-dengan-r/</guid>
+      <guid>http://localhost:1313/post/2020-04-04-dispersi-data-dengan-r/</guid>
       <description>&lt;p&gt;Dispersi atau ukuran penyebaran data menunjukkan seberapa bervariasi suatu data.
 Kali ini data yang digunakan diambil dari dataset &lt;strong&gt;ldeaths&lt;/strong&gt; yang merupakan bagian dari &lt;strong&gt;UKLungDeaths&lt;/strong&gt;. Dataset &lt;strong&gt;UKLungDeaths&lt;/strong&gt; berisi data jumlah kematian akibat penyakit bronchitis, emphysema dan asma di Inggris dalam kurun waktu 1974-1979. Data ini disajikan berdasarkan bulan dan jenis kelamin. Secara total untuk kedua jenis kelamin ada di &lt;strong&gt;ldeaths&lt;/strong&gt;, laki-laki &lt;strong&gt;mdeaths&lt;/strong&gt; dan perempuan &lt;strong&gt;fdeaths&lt;/strong&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;nilai-minimal&#34;&gt;Nilai minimal&lt;/h1&gt;
@@ -111,9 +111,9 @@ Kali ini data yang digunakan diambil dari dataset &lt;strong&gt;ldeaths&lt;/stro
     </item>
     <item>
       <title>Tendensi Sentral dengan R</title>
-      <link>https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/</link>
+      <link>http://localhost:1313/post/2020-03-21-tendensi-sentral-dengan-r/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/</guid>
+      <guid>http://localhost:1313/post/2020-03-21-tendensi-sentral-dengan-r/</guid>
       <description>&lt;p&gt;Data yang digunakan :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nilai&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;[1]&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;79&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;57&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;74&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;52&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;70&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;82&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;36&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;75&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;77&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;81&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;95&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;41&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;65&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;92&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;85&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;55&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;66&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;52&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;64&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;75&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt;
@@ -150,9 +150,9 @@ Kali ini data yang digunakan diambil dari dataset &lt;strong&gt;ldeaths&lt;/stro
     </item>
     <item>
       <title>Input Data R</title>
-      <link>https://sasongko.web.id/post/2020-03-14-input-data-r/</link>
+      <link>http://localhost:1313/post/2020-03-14-input-data-r/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-03-14-input-data-r/</guid>
+      <guid>http://localhost:1313/post/2020-03-14-input-data-r/</guid>
       <description>&lt;p&gt;Input data dalam R sangat mudah dan ada beragam cara, yaitu:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Menuliskan dalam bentuk &lt;em&gt;syntax&lt;/em&gt;.  Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100&lt;/li&gt;
@@ -163,9 +163,9 @@ Kali ini data yang digunakan diambil dari dataset &lt;strong&gt;ldeaths&lt;/stro
     </item>
     <item>
       <title>Package bawaan R Slackware</title>
-      <link>https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/</link>
+      <link>http://localhost:1313/post/2020-02-13-r-slackware-default-packages/</link>
       <pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-02-13-r-slackware-default-packages/</guid>
+      <guid>http://localhost:1313/post/2020-02-13-r-slackware-default-packages/</guid>
       <description>&lt;p&gt;Berikut adalah &lt;em&gt;package&lt;/em&gt; atau &lt;em&gt;library&lt;/em&gt; &lt;strong&gt;R&lt;/strong&gt; yang secara &lt;em&gt;default&lt;/em&gt; terinstall di Slackware melalui SBo.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;KernSmooth&lt;/strong&gt;.Functions for Kernel Smoothing Supporting Wand &amp;amp; Jones (1995)&lt;/li&gt;
@@ -202,9 +202,9 @@ Kali ini data yang digunakan diambil dari dataset &lt;strong&gt;ldeaths&lt;/stro
     </item>
     <item>
       <title>Mengenal R</title>
-      <link>https://sasongko.web.id/post/2020-02-10-mengenal-r/</link>
+      <link>http://localhost:1313/post/2020-02-10-mengenal-r/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-02-10-mengenal-r/</guid>
+      <guid>http://localhost:1313/post/2020-02-10-mengenal-r/</guid>
       <description>&lt;p&gt;R adalah salah satu bahasa pemrograman yang banyak digunakan dan bersifat &lt;em&gt;open source&lt;/em&gt;. R bisa dikatakan sebagai bahasa pemrograman spesialis data. Tidak mengherankan kalau R digunakan untuk keperluan &lt;em&gt;handling data&lt;/em&gt; seperti statistik, &lt;em&gt;data mining, data science&lt;/em&gt; dan &lt;em&gt;machine learning&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Meskipun bersifat &lt;em&gt;open source&lt;/em&gt;, sampai sekarang belum ada sistem operasi &lt;em&gt;open source&lt;/em&gt; yang memasukkan R secara &lt;em&gt;default&lt;/em&gt; terinstall dalam sistemnya. Namun demikian beberapa distro linux menyertakan R ke dalam repo resmi. Distro tersebut antara lain Debian, OpenSUSE dan Ubuntu. Bagaimana dengan &lt;strong&gt;Slackware&lt;/strong&gt;? &lt;em&gt;Officiall repo&lt;/em&gt; tidak ada. Namun, bisa didapatkan dari komunitas &lt;strong&gt;SBo&lt;/strong&gt;. Apakah tersedia untuk Windows dan MacOS? Pengembang R sangat baik hati. Mereka juga membuat R untuk Windows dan MacOS. Jadi, R bisa digunakan semua sistem operasi komputer.&lt;/p&gt;</description>
     </item>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Rust on Catatan Sasongko</title>
-    <link>https://sasongko.web.id/tags/rust/</link>
+    <link>http://localhost:1313/tags/rust/</link>
     <description>Recent content in Rust on Catatan Sasongko</description>
-    <generator>Hugo -- 0.145.0</generator>
+    <generator>Hugo -- 0.146.5</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 13 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sasongko.web.id/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Operator perbandingan rust</title>
-      <link>https://sasongko.web.id/post/2025-01-13-operator-perbandingan-rust/</link>
+      <link>http://localhost:1313/post/2025-01-13-operator-perbandingan-rust/</link>
       <pubDate>Mon, 13 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2025-01-13-operator-perbandingan-rust/</guid>
+      <guid>http://localhost:1313/post/2025-01-13-operator-perbandingan-rust/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Rust&lt;/strong&gt; mengenal beberapa operator perbandingan, yaitu sama dengan (==), tidak sama dengan (!=), lebih kecil dari (&amp;lt;), lebih kecil atau sama dengan (&amp;lt;=), lebih besar dari (&amp;gt;), lebih besar atau sama dengan (&amp;gt;=). Hasil dari perbandingan ini adalah &lt;em&gt;bool&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Contoh:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -35,9 +35,9 @@
     </item>
     <item>
       <title>Menggunakan named argument pada println</title>
-      <link>https://sasongko.web.id/post/2025-01-12-menggunakan-named-argument-println-rust/</link>
+      <link>http://localhost:1313/post/2025-01-12-menggunakan-named-argument-println-rust/</link>
       <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2025-01-12-menggunakan-named-argument-println-rust/</guid>
+      <guid>http://localhost:1313/post/2025-01-12-menggunakan-named-argument-println-rust/</guid>
       <description>&lt;p&gt;Untuk menampilkan pesan ke &lt;em&gt;standard output&lt;/em&gt; yang biasanya adalah terminal emulator seperti konsole, xterm, alacritty, xfce-terminal, dll; &lt;strong&gt;rust&lt;/strong&gt; menggunakan &lt;strong&gt;println!&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nama&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Rustacean&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hai &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;, selamat pagi!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nama&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -45,9 +45,9 @@
     </item>
     <item>
       <title>Deklarasi banyak variabel rust</title>
-      <link>https://sasongko.web.id/post/2025-01-11-deklarasi-banyak-variabel-rust/</link>
+      <link>http://localhost:1313/post/2025-01-11-deklarasi-banyak-variabel-rust/</link>
       <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2025-01-11-deklarasi-banyak-variabel-rust/</guid>
+      <guid>http://localhost:1313/post/2025-01-11-deklarasi-banyak-variabel-rust/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Rust&lt;/strong&gt; mengakomodir deklarasi beberapa variabel sekaligus dalam 1 &lt;em&gt;statement&lt;/em&gt;. Caranya dengan memasukkan semua variabel ke dalam kurung dan antarvariabel diberi separator/pemisah tanda koma. Contoh:&lt;/p&gt;
 &lt;p&gt;Deklarasi variabel satu persatu&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;negara&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Indonesia&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -58,9 +58,9 @@
     </item>
     <item>
       <title>Operator aritmatika rust</title>
-      <link>https://sasongko.web.id/post/2025-01-11-operator-aritmatika-rust/</link>
+      <link>http://localhost:1313/post/2025-01-11-operator-aritmatika-rust/</link>
       <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2025-01-11-operator-aritmatika-rust/</guid>
+      <guid>http://localhost:1313/post/2025-01-11-operator-aritmatika-rust/</guid>
       <description>&lt;p&gt;Operator aritmatika yang dimiliki &lt;strong&gt;rust&lt;/strong&gt; adalah penjumlahan (+), pengurangan (-), perkalian (*), pembagian, dan modulus atau sisa pembagian. Operasi aritmatika hanya bisa dijalankan terhadap variabel yang bertipe data sama.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;f32&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;10.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;f32&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;20.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -78,9 +78,9 @@
     </item>
     <item>
       <title>Konstanta rust</title>
-      <link>https://sasongko.web.id/post/2025-01-10-konstanta-rust/</link>
+      <link>http://localhost:1313/post/2025-01-10-konstanta-rust/</link>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2025-01-10-konstanta-rust/</guid>
+      <guid>http://localhost:1313/post/2025-01-10-konstanta-rust/</guid>
       <description>&lt;p&gt;Konstanta dalam bahasa &lt;strong&gt;rust&lt;/strong&gt; seperti variabel yang kita bisa mendeklarasikannya. Konstanta bisa mempunyai lingkup global; lebih luas dari pada variabel. Deklarasi konstanta harus dengan manifes yang menyebutkan eksplisit tipe datanya. Nama konstanta ditulis huruf kapital. &lt;em&gt;Keyword&lt;/em&gt;-nya &lt;strong&gt;const&lt;/strong&gt; atau &lt;strong&gt;static&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;no&#34;&gt;NEGARA&lt;/span&gt;: &lt;span class=&#34;kp&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Indonesia&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -93,16 +93,16 @@
     </item>
     <item>
       <title>Deklarasi variabel rust</title>
-      <link>https://sasongko.web.id/post/2025-01-09-deklarasi-variabel-rust/</link>
+      <link>http://localhost:1313/post/2025-01-09-deklarasi-variabel-rust/</link>
       <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2025-01-09-deklarasi-variabel-rust/</guid>
+      <guid>http://localhost:1313/post/2025-01-09-deklarasi-variabel-rust/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Rust&lt;/strong&gt; menyediakan 2 cara deklarasi variabel. Cara pertama dengan inferensi, yaitu dengan tidak menuliskan tipe datanya. Cara ini seperti yang selama ini sudah ada di contoh-contoh catatan kami tentang &lt;strong&gt;rust&lt;/strong&gt;. &lt;strong&gt;Rust&lt;/strong&gt; akan menebak dan mengatur secara otomatis. Jika tidak didefinisikan, bilangan bulat akan diberikan tipe i32, sedangkan bilangan rasional f64. Cara kedua dengan manifes yaitu menuliskan tipe datanya. Cara menuliskannya yaitu dengan memberikan tanda titik dua setelah nama variabel diikuti dengan tipe datanya.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tipe data string literal rust</title>
-      <link>https://sasongko.web.id/post/2025-01-07-tipe-data-string-literal-rust/</link>
+      <link>http://localhost:1313/post/2025-01-07-tipe-data-string-literal-rust/</link>
       <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2025-01-07-tipe-data-string-literal-rust/</guid>
+      <guid>http://localhost:1313/post/2025-01-07-tipe-data-string-literal-rust/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Rust&lt;/strong&gt; mengenal tipe data &lt;em&gt;string literal&lt;/em&gt; (&amp;amp;str) atau &lt;em&gt;string slice&lt;/em&gt;. Tipe data ini mirip dengan &lt;em&gt;char&lt;/em&gt;, tetapi lebih banyak karakter yang bisa disimpan tidak hanya 1. &lt;em&gt;Assignment&lt;/em&gt; dengan mengapit nilai variabel dengan tanda kutip.&lt;/p&gt;
 &lt;p&gt;Contoh:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -114,9 +114,9 @@
     </item>
     <item>
       <title>Tipe data char rust</title>
-      <link>https://sasongko.web.id/post/2025-01-05-tipe-data-char-rust/</link>
+      <link>http://localhost:1313/post/2025-01-05-tipe-data-char-rust/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2025-01-05-tipe-data-char-rust/</guid>
+      <guid>http://localhost:1313/post/2025-01-05-tipe-data-char-rust/</guid>
       <description>&lt;p&gt;Tipe data &lt;em&gt;char&lt;/em&gt; di &lt;strong&gt;rust&lt;/strong&gt; hanya dapat menampung 1 karakter nilai. Tidak sepeti tipe data lainnya, nilai &lt;em&gt;char&lt;/em&gt; ditulis dengan diapit tanda kutip / petik satu.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inisial&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;S&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -126,16 +126,16 @@
     </item>
     <item>
       <title>Tipe data bool rust</title>
-      <link>https://sasongko.web.id/post/2025-01-04-tipe-data-bool-rust/</link>
+      <link>http://localhost:1313/post/2025-01-04-tipe-data-bool-rust/</link>
       <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2025-01-04-tipe-data-bool-rust/</guid>
+      <guid>http://localhost:1313/post/2025-01-04-tipe-data-bool-rust/</guid>
       <description>&lt;p&gt;Tipe data &lt;em&gt;bool&lt;/em&gt; di &lt;strong&gt;rust&lt;/strong&gt; tidak berbeda dengan di bahasa pemrograman lainnya. Hanya ada 2 nilai, yaitu &lt;em&gt;true&lt;/em&gt; atau &lt;em&gt;false&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tipe data floating point rust</title>
-      <link>https://sasongko.web.id/post/2025-01-03-tipe-data-floating-point-rust/</link>
+      <link>http://localhost:1313/post/2025-01-03-tipe-data-floating-point-rust/</link>
       <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2025-01-03-tipe-data-floating-point-rust/</guid>
+      <guid>http://localhost:1313/post/2025-01-03-tipe-data-floating-point-rust/</guid>
       <description>&lt;p&gt;&lt;em&gt;Floating point&lt;/em&gt; adalah tipe data yang memuat nilai desimal. Contoh: 3.14. Tipe data ini pada &lt;strong&gt;rust&lt;/strong&gt; ada 2 macam:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;f32 menampung nilai dari -340282350000000000000000000000000000000 sampai 340282350000000000000000000000000000000&lt;/li&gt;
@@ -144,9 +144,9 @@
     </item>
     <item>
       <title>Tipe data integer rust</title>
-      <link>https://sasongko.web.id/post/2025-01-02-tipe-data-integer-rust/</link>
+      <link>http://localhost:1313/post/2025-01-02-tipe-data-integer-rust/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2025-01-02-tipe-data-integer-rust/</guid>
+      <guid>http://localhost:1313/post/2025-01-02-tipe-data-integer-rust/</guid>
       <description>&lt;p&gt;Salah satu tipe data yang ada di &lt;strong&gt;rust&lt;/strong&gt; adalah integer. Integer ada &lt;em&gt;signed integer&lt;/em&gt; dan &lt;em&gt;unsigned integer&lt;/em&gt;. Signed integer ini ada 6 macam:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;i8 menampung nilai -128 sampai dengan 127&lt;/li&gt;
@@ -160,17 +160,17 @@
     </item>
     <item>
       <title>Immutabilitas variabel rust</title>
-      <link>https://sasongko.web.id/post/2025-01-01-immutabilitas-variabel-rust/</link>
+      <link>http://localhost:1313/post/2025-01-01-immutabilitas-variabel-rust/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2025-01-01-immutabilitas-variabel-rust/</guid>
+      <guid>http://localhost:1313/post/2025-01-01-immutabilitas-variabel-rust/</guid>
       <description>&lt;p&gt;Tak terasa hampir tepat setahun tidak menulis catatan tentang &lt;strong&gt;rust&lt;/strong&gt;. Mengawali tahun 2025 ini, mari kita lanjutkan. Semoga bisa istiqamah dan khatam menulis catatan &lt;strong&gt;rust&lt;/strong&gt;-nya.&lt;/p&gt;
 &lt;p&gt;Salah satu konsep menarik dari &lt;strong&gt;rust&lt;/strong&gt; adalah immutabilitas variabel. Variabel secara &lt;em&gt;default&lt;/em&gt; bersifat &lt;em&gt;immutable&lt;/em&gt; alias tidak bisa diganti nilainya; hanya bisa di-&lt;em&gt;assign&lt;/em&gt; 1x. &lt;strong&gt;Rust&lt;/strong&gt; membedakan antara deklarasi dan &lt;em&gt;assignment&lt;/em&gt;. Deklarasi adalah pendefinisian nama variabel dan tipe datanya, sedangkan &lt;em&gt;assignment&lt;/em&gt; adalah pemberian nilai ke variabel tersebut. Deklarasi dilakukan lebih dulu, baru kemudian &lt;em&gt;assignment&lt;/em&gt;. Memang biasanya ketika melakukan deklarasi sekalian &lt;em&gt;assignment&lt;/em&gt;, walaupun sebenarnya kedua hal ini bisa juga dilakukan secara terpisah.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Variabel rust</title>
-      <link>https://sasongko.web.id/post/2024-01-20-variabel-rust/</link>
+      <link>http://localhost:1313/post/2024-01-20-variabel-rust/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2024-01-20-variabel-rust/</guid>
+      <guid>http://localhost:1313/post/2024-01-20-variabel-rust/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Rust&lt;/strong&gt; mempunyai cara tersendiri untuk mendeklarasikan variabel, yaitu dengan diawali &lt;!-- raw HTML omitted --&gt;let&lt;!-- raw HTML omitted --&gt;. Kemudian, nama variabel dituliskan dengan huruf kecil semua dengan separator pemisah antarkata adalah &lt;em&gt;underscore&lt;/em&gt; (_). Contoh nama, kota_kelahiran, hasil_kali, dll.&lt;/p&gt;
 &lt;p&gt;Misalkan data kota kelahiran, akan kita deklarasikan sebagai kota_kelahiran&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -180,9 +180,9 @@
     </item>
     <item>
       <title>Sintaks komentar rust</title>
-      <link>https://sasongko.web.id/post/2024-01-15-sintaks-komentar-rust/</link>
+      <link>http://localhost:1313/post/2024-01-15-sintaks-komentar-rust/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2024-01-15-sintaks-komentar-rust/</guid>
+      <guid>http://localhost:1313/post/2024-01-15-sintaks-komentar-rust/</guid>
       <description>&lt;p&gt;Komentar pada &lt;strong&gt;rust&lt;/strong&gt; yang biasa digunakan ada 2 jenis, yaitu komentar baris dan komentar blok. Komentar baris diberikan dengan sintaks // pada awal komentar. Semua yang ada setelah tanda // pada baris tersebut akan dianggap sebagai komentar yang tidak akan dieksekusi. Komentar blok untuk memberikan komentar pada blok kode atau beberapa baris kode. Semua baris yang ada di antara /* dan */ dianggap sebagai komentar.&lt;/p&gt;
 &lt;p&gt;Contoh komentar baris&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// ini adalah komentar yang tidak akan dieksekusi
@@ -193,9 +193,9 @@
     </item>
     <item>
       <title>Coding pertama rust</title>
-      <link>https://sasongko.web.id/post/2023-12-01-coding-pertama-rust/</link>
+      <link>http://localhost:1313/post/2023-12-01-coding-pertama-rust/</link>
       <pubDate>Thu, 12 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2023-12-01-coding-pertama-rust/</guid>
+      <guid>http://localhost:1313/post/2023-12-01-coding-pertama-rust/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Rust&lt;/strong&gt; bahasa pemrograman yang saat ini sedang naik daun digadang-gadang sebagai suksesor C. Rust sudah banyak digunakan bahkan rencananya masuk sebagai &lt;em&gt;second language&lt;/em&gt; pada kernel linux sebagai pendamping C. Hal ini ditandai dengan adanya akomodasi &lt;strong&gt;rust&lt;/strong&gt; mulai kernel 6.1.&lt;/p&gt;
 &lt;p&gt;File &lt;em&gt;source code&lt;/em&gt; &lt;strong&gt;rust&lt;/strong&gt; berekstensi &lt;!-- raw HTML omitted --&gt;.rs&lt;!-- raw HTML omitted --&gt;. &lt;strong&gt;Rust&lt;/strong&gt; memerlukan kompilasi untuk dapat dijalankan karena &lt;strong&gt;rust&lt;/strong&gt; adalah &lt;em&gt;compiled language&lt;/em&gt;. Ada 2 cara kompilasi, yaitu dengan &lt;!-- raw HTML omitted --&gt;rustc/&lt;!-- raw HTML omitted --&gt; apabila programnya simple hanya terdiri dari 1 file .rs dan tanpa adanya dependensi, atau dengan &lt;!-- raw HTML omitted --&gt;cargo&lt;!-- raw HTML omitted --&gt; kalau programnya kompleks.&lt;/p&gt;</description>
     </item>

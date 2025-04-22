@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Download ISO BlankOn dengan ZSync | Catatan Sasongko</title>
 <meta name="keywords" content="blankon">
 <meta name="description" content="Sebagai anggota Quality Assurance (Tim Jaminan Kualitas) BlankOn, kami bertanggung jawab untuk menemukan kutu (bugs) sebanyak-banyaknya. Hampir setiap hari rilis iso baru dan 2 bulan sekali ada rilis kandidat baru, istilahnya sih jahitan.Tiap berkas iso baik itu i386 maupun amd64 berukuran sekitar 1GB. Kalau setiap hari iso tersebut harus diunduh, waaahhhh bakal tekor! :D
 Alhamdulillah iso BlankOn bisa diunduh dengan rsync dan zsync sehingga bisa lebih hemat karena tidak perlu mengunduh semua isi iso tapi hanya perubahannya saja. Walau demikian, kami akan sampaikan yang zsync nya saja dulu. Cara menggunakan zsync sangat mudah.">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/2014-04-15-download-iso-blankon-zsync/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://sasongko.web.id/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
-<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2014-04-15-download-iso-blankon-zsync/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2014-04-15-download-iso-blankon-zsync/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2014-04-15-download-iso-blankon-zsync/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,72 +56,7 @@ Alhamdulillah iso BlankOn bisa diunduh dengan rsync dan zsync sehingga bisa lebi
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/2014-04-15-download-iso-blankon-zsync/">
-  <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Download ISO BlankOn dengan ZSync">
-  <meta property="og:description" content="Sebagai anggota Quality Assurance (Tim Jaminan Kualitas) BlankOn, kami bertanggung jawab untuk menemukan kutu (bugs) sebanyak-banyaknya. Hampir setiap hari rilis iso baru dan 2 bulan sekali ada rilis kandidat baru, istilahnya sih jahitan.Tiap berkas iso baik itu i386 maupun amd64 berukuran sekitar 1GB. Kalau setiap hari iso tersebut harus diunduh, waaahhhh bakal tekor! :D
-Alhamdulillah iso BlankOn bisa diunduh dengan rsync dan zsync sehingga bisa lebih hemat karena tidak perlu mengunduh semua isi iso tapi hanya perubahannya saja. Walau demikian, kami akan sampaikan yang zsync nya saja dulu. Cara menggunakan zsync sangat mudah.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2014-04-15T07:22:12+00:00">
-    <meta property="article:modified_time" content="2014-04-15T07:22:12+00:00">
-    <meta property="article:tag" content="Blankon">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Download ISO BlankOn dengan ZSync">
-<meta name="twitter:description" content="Sebagai anggota Quality Assurance (Tim Jaminan Kualitas) BlankOn, kami bertanggung jawab untuk menemukan kutu (bugs) sebanyak-banyaknya. Hampir setiap hari rilis iso baru dan 2 bulan sekali ada rilis kandidat baru, istilahnya sih jahitan.Tiap berkas iso baik itu i386 maupun amd64 berukuran sekitar 1GB. Kalau setiap hari iso tersebut harus diunduh, waaahhhh bakal tekor! :D
-Alhamdulillah iso BlankOn bisa diunduh dengan rsync dan zsync sehingga bisa lebih hemat karena tidak perlu mengunduh semua isi iso tapi hanya perubahannya saja. Walau demikian, kami akan sampaikan yang zsync nya saja dulu. Cara menggunakan zsync sangat mudah.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://sasongko.web.id/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Download ISO BlankOn dengan ZSync",
-      "item": "https://sasongko.web.id/post/2014-04-15-download-iso-blankon-zsync/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Download ISO BlankOn dengan ZSync",
-  "name": "Download ISO BlankOn dengan ZSync",
-  "description": "Sebagai anggota Quality Assurance (Tim Jaminan Kualitas) BlankOn, kami bertanggung jawab untuk menemukan kutu (bugs) sebanyak-banyaknya. Hampir setiap hari rilis iso baru dan 2 bulan sekali ada rilis kandidat baru, istilahnya sih jahitan.Tiap berkas iso baik itu i386 maupun amd64 berukuran sekitar 1GB. Kalau setiap hari iso tersebut harus diunduh, waaahhhh bakal tekor! :D\nAlhamdulillah iso BlankOn bisa diunduh dengan rsync dan zsync sehingga bisa lebih hemat karena tidak perlu mengunduh semua isi iso tapi hanya perubahannya saja. Walau demikian, kami akan sampaikan yang zsync nya saja dulu. Cara menggunakan zsync sangat mudah.\n",
-  "keywords": [
-    "blankon"
-  ],
-  "articleBody": "Sebagai anggota Quality Assurance (Tim Jaminan Kualitas) BlankOn, kami bertanggung jawab untuk menemukan kutu (bugs) sebanyak-banyaknya. Hampir setiap hari rilis iso baru dan 2 bulan sekali ada rilis kandidat baru, istilahnya sih jahitan.Tiap berkas iso baik itu i386 maupun amd64 berukuran sekitar 1GB. Kalau setiap hari iso tersebut harus diunduh, waaahhhh bakal tekor! :D\nAlhamdulillah iso BlankOn bisa diunduh dengan rsync dan zsync sehingga bisa lebih hemat karena tidak perlu mengunduh semua isi iso tapi hanya perubahannya saja. Walau demikian, kami akan sampaikan yang zsync nya saja dulu. Cara menggunakan zsync sangat mudah.\nInstall zsync {% highlight bash %} $ sudo apt-get install zsync {% endhighlight %}\nDownload dengan Zsync Sebelumnya sudah ada iso yang kita miliki {% highlight bash %} $ ls tambora-desktop-amd64.iso tambora-desktop-i386.iso {% endhighlight %}\nAkan diunduh iso yang berarsitektur 64 bit (tambora-desktop-amd64.iso) yang terbaru. Pada direktori di mana tersimpan berkas iso jalankan zsync. {% highlight bash %} $ zsync url_iso $ zsync http://cdimage.blankonlinux.or.id/blankon/livedvd-harian/current/tambora-desktop-amd64.iso.zsync #################### 100.0% 43.9 kBps DONE\nreading seed file tambora-desktop-amd64.iso ***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************Read tambora-desktop-amd64.iso. Target 67.5% complete. downloading from http://cdimage.blankonlinux.or.id/blankon/livedvd-harian/current/tambora-desktop-amd64.iso: #############——- 68.4% 3.9 kBps ETA\n#############——- 69.7% 5.5 kBps ETA\n{% endhighlight %} Tampak bahwa iso yang sudah ada berbeda dengan iso yang terbaru. Iso lama berisi 67,5% iso terbaru. Jadi dalam kasus ini mengunduh dengan zsync lebih hemat 67,5% daripada mengunduh keseluruhan iso dari awal.\n",
-  "wordCount" : "220",
-  "inLanguage": "en",
-  "datePublished": "2014-04-15T07:22:12Z",
-  "dateModified": "2014-04-15T07:22:12Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://sasongko.web.id/post/2014-04-15-download-iso-blankon-zsync/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Catatan Sasongko",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sasongko.web.id/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -139,7 +74,7 @@ Alhamdulillah iso BlankOn bisa diunduh dengan rsync dan zsync sehingga bisa lebi
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -165,22 +100,22 @@ Alhamdulillah iso BlankOn bisa diunduh dengan rsync dan zsync sehingga bisa lebi
         </div>
         <ul id="menu">
             <li>
-                <a href="https://sasongko.web.id/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/post/" title="Posts">
+                <a href="http://localhost:1313/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/about/" title="Profil">
+                <a href="http://localhost:1313/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/logo/" title="Logo">
+                <a href="http://localhost:1313/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -229,14 +164,14 @@ Tampak bahwa iso yang sudah ada berbeda dengan iso yang terbaru. Iso lama berisi
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://sasongko.web.id/tags/blankon/">Blankon</a></li>
+      <li><a href="http://localhost:1313/tags/blankon/">Blankon</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Virtualisasi on Catatan Sasongko</title>
-    <link>https://sasongko.web.id/tags/virtualisasi/</link>
+    <link>http://localhost:1313/tags/virtualisasi/</link>
     <description>Recent content in Virtualisasi on Catatan Sasongko</description>
-    <generator>Hugo -- 0.145.0</generator>
+    <generator>Hugo -- 0.146.5</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 28 Sep 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sasongko.web.id/tags/virtualisasi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/virtualisasi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jalankan windows dari linux dengan qemu</title>
-      <link>https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/</link>
+      <link>http://localhost:1313/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/</guid>
+      <guid>http://localhost:1313/post/2024-09-28-jalankan-partisi-windows-dari-linux-dengan-qemu/</guid>
       <description>&lt;p&gt;Sebagian masyarakat memilih untuk &lt;em&gt;dualboot&lt;/em&gt; atau bahkan &lt;em&gt;multiboot&lt;/em&gt; dalam berkomputer. Satu Perangkat komputer diinstall lebih dari satu sistem operasi. Alhasil, harddisk pasti terbagi menjadi paling sedikit 2 partisi. Tak jarang, sistem operasi tersebut adalah linux dan windows. Kelemahan dari model seperti ini adalah pengguna harus memilih salah satu, mana sistem yang akan dijalankan. Namun, tidak demikian bila ada qemu.&lt;/p&gt;
 &lt;p&gt;Qemu memungkinkan sistem operasi windows dipanggil atau dijalankan dari linux. Untuk dapat menjalankannya perlu install qemu (tentu saja) dan edk2-ovmf. Keduanya tersedia di SBo.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Install Guest OS Qemu</title>
-      <link>https://sasongko.web.id/post/2023-06-27-install-guest-os-qemu/</link>
+      <link>http://localhost:1313/post/2023-06-27-install-guest-os-qemu/</link>
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2023-06-27-install-guest-os-qemu/</guid>
+      <guid>http://localhost:1313/post/2023-06-27-install-guest-os-qemu/</guid>
       <description>&lt;p&gt;Akan diinstall sebagai &lt;em&gt;guest os&lt;/em&gt; slackware, dengan file iso slackware.iso, &lt;em&gt;disk image&lt;/em&gt; slackware.qcow dan virtual RAM 5GB. Maka &lt;em&gt;command&lt;/em&gt; yang dijalankan dengan qemu adalah&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ qemu-system-x86_64 -enable-kvm -m &lt;span class=&#34;m&#34;&gt;5120&lt;/span&gt; -cdrom slackware.iso -drive &lt;span class=&#34;nv&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;slackware.qcow2 -boot d
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Membuat qemu disk image</title>
-      <link>https://sasongko.web.id/post/2023-06-26-membuat-qemu-disk-image/</link>
+      <link>http://localhost:1313/post/2023-06-26-membuat-qemu-disk-image/</link>
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2023-06-26-membuat-qemu-disk-image/</guid>
+      <guid>http://localhost:1313/post/2023-06-26-membuat-qemu-disk-image/</guid>
       <description>&lt;p&gt;Untuk membuat &lt;em&gt;disk image&lt;/em&gt; sebagai &lt;em&gt;storage&lt;/em&gt; sistem oprasi yang akan divirtualisasikan dengan qemu, bisa menggunakan &lt;em&gt;command&lt;/em&gt; yang mudah. Misalkan nama file adalah slack.img dengan &lt;em&gt;size&lt;/em&gt; 100G&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;c1&#34;&gt;#penggunaan: qemu-img create file_disk_imagenya sizenya &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ qemu-img create slack.img 100G
@@ -37,18 +37,18 @@
     </item>
     <item>
       <title>Convert dd ke vdi</title>
-      <link>https://sasongko.web.id/post/2023-06-22-convert-dd-to-vdi/</link>
+      <link>http://localhost:1313/post/2023-06-22-convert-dd-to-vdi/</link>
       <pubDate>Thu, 22 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2023-06-22-convert-dd-to-vdi/</guid>
+      <guid>http://localhost:1313/post/2023-06-22-convert-dd-to-vdi/</guid>
       <description>&lt;p&gt;Untuk konversi file dd/img menjadi vdi mudah. Pastikan sudah install virtualbox. Misalkan akan mengubah file1.dd menjadi file2.vdi,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ VBoxManage convertfromraw file1.dd --format VDI file2.vdi
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Virtualbox cannot register existing type NMAgentManagerError</title>
-      <link>https://sasongko.web.id/post/2022-10-30-virtualbox-updater-segfault/</link>
+      <link>http://localhost:1313/post/2022-10-30-virtualbox-updater-segfault/</link>
       <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2022-10-30-virtualbox-updater-segfault/</guid>
+      <guid>http://localhost:1313/post/2022-10-30-virtualbox-updater-segfault/</guid>
       <description>&lt;p&gt;Setelah &lt;strong&gt;install virtualbox&lt;/strong&gt; menggunakan &lt;em&gt;binary&lt;/em&gt;  .run, ketika dijalankan via terminal mengalami sgfault:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bash-5.2$ virtualbox
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;process:7040&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: GLib-GObject-WARNING **: 00:53:14.710: cannot register existing &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;NMAgentManagerError&amp;#39;&lt;/span&gt;
@@ -61,9 +61,9 @@
     </item>
     <item>
       <title>Menghapus docker image</title>
-      <link>https://sasongko.web.id/post/2021-11-14-hapus-docker-image/</link>
+      <link>http://localhost:1313/post/2021-11-14-hapus-docker-image/</link>
       <pubDate>Sun, 14 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2021-11-14-hapus-docker-image/</guid>
+      <guid>http://localhost:1313/post/2021-11-14-hapus-docker-image/</guid>
       <description>&lt;p&gt;&lt;em&gt;Docker image&lt;/em&gt; yang suah tidak digunakan sebaiknya dihapus saja, agar &lt;em&gt;storage&lt;/em&gt; lebih longgar. Pastikan docker daemon aktif&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dockerd
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;List docker imagenya&lt;/p&gt;
@@ -86,9 +86,9 @@
     </item>
     <item>
       <title>Jalankan QGIS docker</title>
-      <link>https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/</link>
+      <link>http://localhost:1313/post/2021-11-07-jalankan-qgis-docker/</link>
       <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2021-11-07-jalankan-qgis-docker/</guid>
+      <guid>http://localhost:1313/post/2021-11-07-jalankan-qgis-docker/</guid>
       <description>&lt;p&gt;Catatan kali ini melanjutkan catatan sebelumnya tentang install QGIS menggunakan flatpak. Sekarang berbeda, install dan jalankan QGIS menggunakan docker. Dengan slackware (dan linux pada umumnya), banyak jalan untuk menjalankan software/aplikasi.&lt;/p&gt;
 &lt;h1 id=&#34;install-docker-dan-docker-cli&#34;&gt;Install docker dan docker-cli&lt;/h1&gt;
 &lt;p&gt;QGIS akan dijalankan menggunakan docker tentu saja membutuhkan docker. Jika belum terinstall silahkan install dulu docker dan docker-cli. Keduanya ada di SBo.&lt;/p&gt;
@@ -97,9 +97,9 @@
     </item>
     <item>
       <title>Install Fedora di Slackware</title>
-      <link>https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/</link>
+      <link>http://localhost:1313/post/2021-10-24-install-fedora-di-slackware/</link>
       <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2021-10-24-install-fedora-di-slackware/</guid>
+      <guid>http://localhost:1313/post/2021-10-24-install-fedora-di-slackware/</guid>
       <description>&lt;p&gt;Tiba-tiba terlintas keinginan mencoba &lt;strong&gt;fedora&lt;/strong&gt;. Sejak mengenal linux tahun 2005an, saya belum pernah menggunakan &lt;strong&gt;fedora&lt;/strong&gt;. Entah kalau saat itu warnetnya pakai &lt;strong&gt;fedora&lt;/strong&gt; wkwkwkwk. Pertama memakai linux memang di warnet. Saat itu warnetnya menawarkan pakai Windows atau linux, saya pilih linux karena tarifnya 50% lebih murah.&lt;/p&gt;
 &lt;p&gt;Kembali ke topik. Berikut akan install &lt;strong&gt;fedora&lt;/strong&gt; secara virtual via &lt;strong&gt;lxc&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ lxc-create -n fedora -t download
@@ -107,9 +107,9 @@
     </item>
     <item>
       <title>Mount qcow2</title>
-      <link>https://sasongko.web.id/post/2016-09-11-mount-qcow2/</link>
+      <link>http://localhost:1313/post/2016-09-11-mount-qcow2/</link>
       <pubDate>Sun, 11 Sep 2016 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2016-09-11-mount-qcow2/</guid>
+      <guid>http://localhost:1313/post/2016-09-11-mount-qcow2/</guid>
       <description>&lt;p&gt;Untuk mengaitkan/&lt;em&gt;mount&lt;/em&gt; berkas &lt;!-- raw HTML omitted --&gt;qcow2&lt;!-- raw HTML omitted --&gt; ternyata tidak bisa langsung di- &lt;em&gt;mount&lt;/em&gt; begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses &lt;em&gt;root&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Modul kernel NBD aktifkan dulu. Secara &lt;em&gt;default&lt;/em&gt; modul NBD nonaktif. Untuk mengaktifkannya&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;modprobe nbd &lt;span class=&#34;nv&#34;&gt;max_part&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;N
@@ -117,9 +117,9 @@
     </item>
     <item>
       <title>Virtual Manager unable to connect to libvirt</title>
-      <link>https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</link>
+      <link>http://localhost:1313/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</link>
       <pubDate>Tue, 05 Jul 2016 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</guid>
+      <guid>http://localhost:1313/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/</guid>
       <description>&lt;p&gt;Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata &lt;!-- raw HTML omitted --&gt;Virtual Manager&lt;!-- raw HTML omitted --&gt; belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka &lt;em&gt;graphical front-end&lt;/em&gt;-nya, tapi ternyata kemudian muncul kotak dialog &lt;!-- raw HTML omitted --&gt;Virtual Machine Manager Connection Failure&lt;!-- raw HTML omitted --&gt; dengan detail sebagai berikut&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Unable to connect to libvirt.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -141,9 +141,9 @@
     </item>
     <item>
       <title>Virt-Manager ImportError: No module named requests</title>
-      <link>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</link>
+      <link>http://localhost:1313/post/2016-07-04-virtmanager-no-module-requests/</link>
       <pubDate>Mon, 04 Jul 2016 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2016-07-04-virtmanager-no-module-requests/</guid>
+      <guid>http://localhost:1313/post/2016-07-04-virtmanager-no-module-requests/</guid>
       <description>&lt;p&gt;Setelah [&lt;em&gt;upgrade slackbuilds&lt;/em&gt;]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata &lt;!-- raw HTML omitted --&gt;Virtual Machine Manager&lt;!-- raw HTML omitted --&gt; tidak bisa dijalankan.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ virt-manager
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Traceback &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;most recent call last&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:
@@ -160,9 +160,9 @@
     </item>
     <item>
       <title>Konversi VDI ke VMDK</title>
-      <link>https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/</link>
+      <link>http://localhost:1313/post/2014-10-14-konversi-vdi-ke-vmdk/</link>
       <pubDate>Tue, 14 Oct 2014 09:43:09 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2014-10-14-konversi-vdi-ke-vmdk/</guid>
+      <guid>http://localhost:1313/post/2014-10-14-konversi-vdi-ke-vmdk/</guid>
       <description>&lt;p&gt;Secara default, format hardisk virtual pada virtualbox adalah VDI. Format ini tidak bisa digunakan di vmware. Agar bisa digunakan di vmware harus dikonversi dulu menjadi VMDK. Kalau sudah terpasang virtualbox konversi VDI ke VMDK ini mudah.&lt;/p&gt;
 &lt;p&gt;Misalkan hardisk01.vdi akan dikonversi menjadi hardisk02.vmdk, maka caranya&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ VBoxManage clonehd hardisk01.vdi hardisk01.vmdk --format VMDK 

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Modifikasi htop | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, kernel">
 <meta name="description" content="Htop merupakan system monitoring tool yang cukup lengkap, bukan sekedar process viewer yang menampilkan proses apa saja yang berjalan. Dengan htop user dapat melihat running process, mencari process ataupun mengakhirinya.
@@ -12,16 +12,16 @@ Secara default tampilan htop sebagai berikut
 
 Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin menambahkan persentase baterai dan penggunaan zram. Caranya, tekan F2. Perhatikan kolom paling kanan Available Meters. Letakkan kursor di kolom tersebut, scroll sampai ketemu yang diinginkan. Tekan Enter untuk memilih atau menambahkan. Di sini dicontohkan Battery. Meter tersebut telah berpindah ke Right column/kolom sebelah kanan. Atur posisinya, apakah akan ditempatkan di kanan atau kiri (pada contoh ini kanan). Setelah itu tekan Enter lagi untuk mengunci posisinya.">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/2021-01-28-modifikasi-htop/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://sasongko.web.id/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
-<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2021-01-28-modifikasi-htop/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2021-01-28-modifikasi-htop/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2021-01-28-modifikasi-htop/">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,76 +58,7 @@ Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin men
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/2021-01-28-modifikasi-htop/">
-  <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Modifikasi htop">
-  <meta property="og:description" content="Htop merupakan system monitoring tool yang cukup lengkap, bukan sekedar process viewer yang menampilkan proses apa saja yang berjalan. Dengan htop user dapat melihat running process, mencari process ataupun mengakhirinya.
-Secara default tampilan htop sebagai berikut
-Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin menambahkan persentase baterai dan penggunaan zram. Caranya, tekan F2. Perhatikan kolom paling kanan Available Meters. Letakkan kursor di kolom tersebut, scroll sampai ketemu yang diinginkan. Tekan Enter untuk memilih atau menambahkan. Di sini dicontohkan Battery. Meter tersebut telah berpindah ke Right column/kolom sebelah kanan. Atur posisinya, apakah akan ditempatkan di kanan atau kiri (pada contoh ini kanan). Setelah itu tekan Enter lagi untuk mengunci posisinya.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2021-01-28T00:00:00+00:00">
-    <meta property="article:modified_time" content="2021-01-28T00:00:00+00:00">
-    <meta property="article:tag" content="Slackware">
-    <meta property="article:tag" content="Kernel">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Modifikasi htop">
-<meta name="twitter:description" content="Htop merupakan system monitoring tool yang cukup lengkap, bukan sekedar process viewer yang menampilkan proses apa saja yang berjalan. Dengan htop user dapat melihat running process, mencari process ataupun mengakhirinya.
-Secara default tampilan htop sebagai berikut
-
-Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin menambahkan persentase baterai dan penggunaan zram. Caranya, tekan F2. Perhatikan kolom paling kanan Available Meters. Letakkan kursor di kolom tersebut, scroll sampai ketemu yang diinginkan. Tekan Enter untuk memilih atau menambahkan. Di sini dicontohkan Battery. Meter tersebut telah berpindah ke Right column/kolom sebelah kanan. Atur posisinya, apakah akan ditempatkan di kanan atau kiri (pada contoh ini kanan). Setelah itu tekan Enter lagi untuk mengunci posisinya.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://sasongko.web.id/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Modifikasi htop",
-      "item": "https://sasongko.web.id/post/2021-01-28-modifikasi-htop/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Modifikasi htop",
-  "name": "Modifikasi htop",
-  "description": "Htop merupakan system monitoring tool yang cukup lengkap, bukan sekedar process viewer yang menampilkan proses apa saja yang berjalan. Dengan htop user dapat melihat running process, mencari process ataupun mengakhirinya.\nSecara default tampilan htop sebagai berikut\nBagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin menambahkan persentase baterai dan penggunaan zram. Caranya, tekan F2. Perhatikan kolom paling kanan Available Meters. Letakkan kursor di kolom tersebut, scroll sampai ketemu yang diinginkan. Tekan Enter untuk memilih atau menambahkan. Di sini dicontohkan Battery. Meter tersebut telah berpindah ke Right column/kolom sebelah kanan. Atur posisinya, apakah akan ditempatkan di kanan atau kiri (pada contoh ini kanan). Setelah itu tekan Enter lagi untuk mengunci posisinya.\n",
-  "keywords": [
-    "slackware", "kernel"
-  ],
-  "articleBody": "Htop merupakan system monitoring tool yang cukup lengkap, bukan sekedar process viewer yang menampilkan proses apa saja yang berjalan. Dengan htop user dapat melihat running process, mencari process ataupun mengakhirinya.\nSecara default tampilan htop sebagai berikut\nBagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin menambahkan persentase baterai dan penggunaan zram. Caranya, tekan F2. Perhatikan kolom paling kanan Available Meters. Letakkan kursor di kolom tersebut, scroll sampai ketemu yang diinginkan. Tekan Enter untuk memilih atau menambahkan. Di sini dicontohkan Battery. Meter tersebut telah berpindah ke Right column/kolom sebelah kanan. Atur posisinya, apakah akan ditempatkan di kanan atau kiri (pada contoh ini kanan). Setelah itu tekan Enter lagi untuk mengunci posisinya.\nApabila ingin menambahkan yang lain, dengan cara serupa. Penulis menambahkan zram pada Left column.\nSetelah selesai, tekan Esc.\n",
-  "wordCount" : "129",
-  "inLanguage": "en",
-  "datePublished": "2021-01-28T00:00:00Z",
-  "dateModified": "2021-01-28T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://sasongko.web.id/post/2021-01-28-modifikasi-htop/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Catatan Sasongko",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sasongko.web.id/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -145,7 +76,7 @@ Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin men
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -171,22 +102,22 @@ Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin men
         </div>
         <ul id="menu">
             <li>
-                <a href="https://sasongko.web.id/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/post/" title="Posts">
+                <a href="http://localhost:1313/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/about/" title="Profil">
+                <a href="http://localhost:1313/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/logo/" title="Logo">
+                <a href="http://localhost:1313/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -207,28 +138,28 @@ Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin men
   </header> 
   <div class="post-content"><p><strong>Htop</strong> merupakan <em>system monitoring tool</em> yang cukup lengkap, bukan sekedar <em>process viewer</em> yang menampilkan proses apa saja yang berjalan. Dengan <strong>htop</strong> <em>user</em> dapat melihat <em>running process</em>, mencari <em>process</em> ataupun mengakhirinya.</p>
 <p>Secara <em>default</em> tampilan <strong>htop</strong> sebagai berikut</p>
-<p><img loading="lazy" src="https://sasongko.web.id/gambar/htop-default.png"></p>
+<p><img loading="lazy" src="http://localhost:1313/gambar/htop-default.png"></p>
 <p>Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin menambahkan persentase baterai dan penggunaan zram. Caranya, tekan <code>F2</code>. Perhatikan kolom paling kanan <strong>Available Meters</strong>. Letakkan kursor di kolom tersebut, <em>scroll</em> sampai ketemu yang diinginkan. Tekan <code>Enter</code> untuk memilih atau menambahkan. Di sini dicontohkan <strong>Battery</strong>. Meter tersebut telah berpindah ke <strong>Right column</strong>/kolom sebelah kanan. Atur posisinya, apakah akan ditempatkan di kanan atau kiri (pada contoh ini kanan). Setelah itu tekan <code>Enter</code> lagi untuk mengunci posisinya.</p>
-<p><img loading="lazy" src="https://sasongko.web.id/gambar/htop-add-battery.png"></p>
+<p><img loading="lazy" src="http://localhost:1313/gambar/htop-add-battery.png"></p>
 <p>Apabila ingin menambahkan yang lain, dengan cara serupa. Penulis menambahkan zram pada <strong>Left column</strong>.</p>
-<p><img loading="lazy" src="https://sasongko.web.id/gambar/htop-add-zram.png"></p>
+<p><img loading="lazy" src="http://localhost:1313/gambar/htop-add-zram.png"></p>
 <p>Setelah selesai, tekan <code>Esc</code>.</p>
-<p><img loading="lazy" src="https://sasongko.web.id/gambar/htop-with-zram-battery.png"></p>
+<p><img loading="lazy" src="http://localhost:1313/gambar/htop-with-zram-battery.png"></p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
-      <li><a href="https://sasongko.web.id/tags/kernel/">Kernel</a></li>
+      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
+      <li><a href="http://localhost:1313/tags/kernel/">Kernel</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

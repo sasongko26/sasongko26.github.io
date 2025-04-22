@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Mengetahui kondisi baterai | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, terminal, battery, power-manager">
 <meta name="description" content="Mengecek kondisi baterai laptop melalui terminal atau command line interface sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara default sudah menyertakan desktop environment seperti xfce, kde, mate, cinnamon, budgie, lumina dan manokwari dengan interface yang cantik dan menarik. DE tersebut sudah mempunyai power manager lengkap dengan applet-nya yang tak pernah bosan nempel di panel.
 Bagaimana kalau &lsquo;hanya&rsquo; menggunakan window manager seperti GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm atau ratpoison yang tidak mempunyai power manager sendiri? Melalui terminal lah jawabannya. Di sini digunakan upower yang secara default ada di Slackware">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://sasongko.web.id/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
-<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2021-01-10-cli-mengetahui-kondisi-baterai/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2021-01-10-cli-mengetahui-kondisi-baterai/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,75 +56,7 @@ Bagaimana kalau &lsquo;hanya&rsquo; menggunakan window manager seperti GNUStep W
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/">
-  <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Mengetahui kondisi baterai">
-  <meta property="og:description" content="Mengecek kondisi baterai laptop melalui terminal atau command line interface sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara default sudah menyertakan desktop environment seperti xfce, kde, mate, cinnamon, budgie, lumina dan manokwari dengan interface yang cantik dan menarik. DE tersebut sudah mempunyai power manager lengkap dengan applet-nya yang tak pernah bosan nempel di panel.
-Bagaimana kalau ‘hanya’ menggunakan window manager seperti GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm atau ratpoison yang tidak mempunyai power manager sendiri? Melalui terminal lah jawabannya. Di sini digunakan upower yang secara default ada di Slackware">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2021-01-10T00:00:00+00:00">
-    <meta property="article:modified_time" content="2021-01-10T00:00:00+00:00">
-    <meta property="article:tag" content="Slackware">
-    <meta property="article:tag" content="Terminal">
-    <meta property="article:tag" content="Battery">
-    <meta property="article:tag" content="Power-Manager">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mengetahui kondisi baterai">
-<meta name="twitter:description" content="Mengecek kondisi baterai laptop melalui terminal atau command line interface sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara default sudah menyertakan desktop environment seperti xfce, kde, mate, cinnamon, budgie, lumina dan manokwari dengan interface yang cantik dan menarik. DE tersebut sudah mempunyai power manager lengkap dengan applet-nya yang tak pernah bosan nempel di panel.
-Bagaimana kalau &lsquo;hanya&rsquo; menggunakan window manager seperti GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm atau ratpoison yang tidak mempunyai power manager sendiri? Melalui terminal lah jawabannya. Di sini digunakan upower yang secara default ada di Slackware">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://sasongko.web.id/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Mengetahui kondisi baterai",
-      "item": "https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Mengetahui kondisi baterai",
-  "name": "Mengetahui kondisi baterai",
-  "description": "Mengecek kondisi baterai laptop melalui terminal atau command line interface sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara default sudah menyertakan desktop environment seperti xfce, kde, mate, cinnamon, budgie, lumina dan manokwari dengan interface yang cantik dan menarik. DE tersebut sudah mempunyai power manager lengkap dengan applet-nya yang tak pernah bosan nempel di panel.\nBagaimana kalau \u0026lsquo;hanya\u0026rsquo; menggunakan window manager seperti GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm atau ratpoison yang tidak mempunyai power manager sendiri? Melalui terminal lah jawabannya. Di sini digunakan upower yang secara default ada di Slackware\n",
-  "keywords": [
-    "slackware", "terminal", "battery", "power-manager"
-  ],
-  "articleBody": "Mengecek kondisi baterai laptop melalui terminal atau command line interface sangat mungkin jarang dilakukan. Sekarang hampir semua distro linux secara default sudah menyertakan desktop environment seperti xfce, kde, mate, cinnamon, budgie, lumina dan manokwari dengan interface yang cantik dan menarik. DE tersebut sudah mempunyai power manager lengkap dengan applet-nya yang tak pernah bosan nempel di panel.\nBagaimana kalau ‘hanya’ menggunakan window manager seperti GNUStep WindowMaker, twm, fluxbox, blackbox, fvwm, i3wm atau ratpoison yang tidak mempunyai power manager sendiri? Melalui terminal lah jawabannya. Di sini digunakan upower yang secara default ada di Slackware\nPertama cek dulu device yang dipegang upower\n$ upower -e /org/freedesktop/UPower/devices/line_power_ADP0 /org/freedesktop/UPower/devices/battery_BAT0 /org/freedesktop/UPower/devices/DisplayDevice Ada 3 devices :\nline_power_ADP0 battery_BAT0 DisplayDevice Untuk mengecek baterainya gunakan yang ke-2\n$ upower -i /org/freedesktop/UPower/devices/battery_BAT0 native-path: BAT0 vendor: CPT-LGS3 model: L15C3A03 serial: 5971 power supply: yes updated: Sun 10 Jan 2021 02:36:18 PM WIB (37 seconds ago) has history: yes has statistics: yes battery present: yes rechargeable: yes state: discharging warning-level: none energy: 8.76 Wh energy-empty: 0 Wh energy-full: 8.76 Wh energy-full-design: 23.76 Wh energy-rate: 0.595 W voltage: 12.064 V time to empty: 14.7 hours percentage: 100% capacity: 26.8939% technology: lithium-ion icon-name: 'battery-full-symbolic' Dari hasil tersebut di atas, terlihat baterai laptop yang digunakan dalam kondisi tidak sehat. Sudah saatnya diperbarui. Kapasitasnya 26,8939% walau terisi penuh 100%. Harap maklum, baterainya lithium-ion yang sudah lebih dari 4 tahun.\n",
-  "wordCount" : "223",
-  "inLanguage": "en",
-  "datePublished": "2021-01-10T00:00:00Z",
-  "dateModified": "2021-01-10T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://sasongko.web.id/post/2021-01-10-cli-mengetahui-kondisi-baterai/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Catatan Sasongko",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sasongko.web.id/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -142,7 +74,7 @@ Bagaimana kalau &lsquo;hanya&rsquo; menggunakan window manager seperti GNUStep W
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -168,22 +100,22 @@ Bagaimana kalau &lsquo;hanya&rsquo; menggunakan window manager seperti GNUStep W
         </div>
         <ul id="menu">
             <li>
-                <a href="https://sasongko.web.id/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/post/" title="Posts">
+                <a href="http://localhost:1313/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/about/" title="Profil">
+                <a href="http://localhost:1313/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/logo/" title="Logo">
+                <a href="http://localhost:1313/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -248,17 +180,17 @@ Bagaimana kalau &lsquo;hanya&rsquo; menggunakan window manager seperti GNUStep W
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
-      <li><a href="https://sasongko.web.id/tags/terminal/">Terminal</a></li>
-      <li><a href="https://sasongko.web.id/tags/battery/">Battery</a></li>
-      <li><a href="https://sasongko.web.id/tags/power-manager/">Power-Manager</a></li>
+      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
+      <li><a href="http://localhost:1313/tags/terminal/">Terminal</a></li>
+      <li><a href="http://localhost:1313/tags/battery/">Battery</a></li>
+      <li><a href="http://localhost:1313/tags/power-manager/">Power-Manager</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

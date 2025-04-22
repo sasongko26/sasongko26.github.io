@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Operator aritmatika scalar perl | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, perl">
 <meta name="description" content="Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.
@@ -78,16 +78,16 @@ say(&#34;a%b = $n&#34;);
 say(&#34;b%a = $o&#34;);
 ">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://sasongko.web.id/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
-<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2022-01-03-operasi-aritmatika-perl/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2022-01-03-operasi-aritmatika-perl/">
 <noscript>
     <style>
         #theme-toggle,
@@ -124,142 +124,7 @@ say(&#34;b%a = $o&#34;);
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/">
-  <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Operator aritmatika scalar perl">
-  <meta property="og:description" content="Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.
-Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.
-#!/usr/bin/perl use strict; use warnings; use feature &#39;say&#39;; my $a = 2; my $b = 25; say(&#34;Angka pertama (a) adalah $a&#34;); say(&#34;Angka kedua (b) adalah $b&#34;); # penjumlahan my $c = $a &#43; $b; say(&#34;a&#43;b = $c&#34;); # pengurangan my $d = $b - $a; say(&#34;b-a = $d&#34;); # perkalian my $e = $a * $b; say(&#34;a*b = $e&#34;); # pembagian my $f = $a / $b; my $g = $b / $a; say(&#34;a/b = $f&#34;); say(&#34;b/a = $g&#34;); # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(&#34;a^b = $h&#34;); say(&#34;b^a = $i&#34;); # autoincrement # tanda &#43; di depan say(&#34;Nilai a sebelum autoincrement = $a&#34;); my $j = &#43;&#43;$a; say(&#34;&#43;&#43;a = $j&#34;); say(&#34;Nilai a sesudah autoincrement = $a&#34;); # tanda &#43; di belakang say(&#34;Nilai b sebelum autoincrement $b&#34;); my $k = $b&#43;&#43;; say(&#34;$b&#43;&#43; = $k&#34;); say(&#34;Nilai b setelah autoincrement $b&#34;); # autodecrement # tanda - di depan say(&#34;c = a&#43;b. c sebelum autodecrement = $c&#34;); my $l = --$c; say(&#34;l = c setelah autodecrement = $l&#34;); # tanda - di belakang my $m = $c--; say(&#34;c setelah autodecrement = $m&#34;); # modulus (sisa hasil bagi) my $a = 3; my $b = 30; my $n = $a % $b; my $o = $b % $a; say(&#34;a = $a&#34;); say(&#34;b = $b&#34;); say(&#34;a%b = $n&#34;); say(&#34;b%a = $o&#34;); ">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2022-01-03T00:00:00+00:00">
-    <meta property="article:modified_time" content="2022-01-03T00:00:00+00:00">
-    <meta property="article:tag" content="Slackware">
-    <meta property="article:tag" content="Perl">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Operator aritmatika scalar perl">
-<meta name="twitter:description" content="Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.
-Pada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.
-#!/usr/bin/perl
-
-use strict;
-use warnings;
-use feature &#39;say&#39;;
-
-my $a = 2;
-my $b = 25;
-
-say(&#34;Angka pertama (a) adalah $a&#34;);
-say(&#34;Angka kedua (b) adalah $b&#34;);
-
-# penjumlahan
-my $c = $a &#43; $b;
-say(&#34;a&#43;b = $c&#34;);
-
-# pengurangan
-my $d = $b - $a;
-say(&#34;b-a = $d&#34;);
-
-# perkalian
-my $e = $a * $b;
-say(&#34;a*b = $e&#34;);
-
-# pembagian
-my $f = $a / $b;
-my $g = $b / $a;
-say(&#34;a/b = $f&#34;);
-say(&#34;b/a = $g&#34;);
-
-# pemangkatan
-my $h = $a ** $b;
-my $i = $b ** $a;
-say(&#34;a^b = $h&#34;);
-say(&#34;b^a = $i&#34;);
-
-# autoincrement
-# tanda &#43; di depan
-say(&#34;Nilai a sebelum autoincrement = $a&#34;);
-my $j = &#43;&#43;$a;
-say(&#34;&#43;&#43;a = $j&#34;);
-say(&#34;Nilai a sesudah autoincrement = $a&#34;);
-
-# tanda &#43; di belakang
-say(&#34;Nilai b sebelum autoincrement $b&#34;);
-my $k = $b&#43;&#43;;
-say(&#34;$b&#43;&#43; = $k&#34;);
-say(&#34;Nilai b setelah autoincrement $b&#34;);
-
-# autodecrement
-# tanda - di depan
-say(&#34;c = a&#43;b. c sebelum autodecrement = $c&#34;);
-my $l = --$c;
-say(&#34;l = c setelah autodecrement = $l&#34;);
-# tanda - di belakang
-my $m = $c--;
-say(&#34;c setelah autodecrement = $m&#34;);
-
-# modulus (sisa hasil bagi)
-my $a = 3;
-my $b = 30;
-my $n = $a % $b;
-my $o = $b % $a;
-say(&#34;a = $a&#34;);
-say(&#34;b = $b&#34;);
-say(&#34;a%b = $n&#34;);
-say(&#34;b%a = $o&#34;);
-">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://sasongko.web.id/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Operator aritmatika scalar perl",
-      "item": "https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Operator aritmatika scalar perl",
-  "name": "Operator aritmatika scalar perl",
-  "description": "Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.\nPada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.\n#!/usr/bin/perl use strict; use warnings; use feature \u0026#39;say\u0026#39;; my $a = 2; my $b = 25; say(\u0026#34;Angka pertama (a) adalah $a\u0026#34;); say(\u0026#34;Angka kedua (b) adalah $b\u0026#34;); # penjumlahan my $c = $a + $b; say(\u0026#34;a+b = $c\u0026#34;); # pengurangan my $d = $b - $a; say(\u0026#34;b-a = $d\u0026#34;); # perkalian my $e = $a * $b; say(\u0026#34;a*b = $e\u0026#34;); # pembagian my $f = $a / $b; my $g = $b / $a; say(\u0026#34;a/b = $f\u0026#34;); say(\u0026#34;b/a = $g\u0026#34;); # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(\u0026#34;a^b = $h\u0026#34;); say(\u0026#34;b^a = $i\u0026#34;); # autoincrement # tanda + di depan say(\u0026#34;Nilai a sebelum autoincrement = $a\u0026#34;); my $j = ++$a; say(\u0026#34;++a = $j\u0026#34;); say(\u0026#34;Nilai a sesudah autoincrement = $a\u0026#34;); # tanda + di belakang say(\u0026#34;Nilai b sebelum autoincrement $b\u0026#34;); my $k = $b++; say(\u0026#34;$b++ = $k\u0026#34;); say(\u0026#34;Nilai b setelah autoincrement $b\u0026#34;); # autodecrement # tanda - di depan say(\u0026#34;c = a+b. c sebelum autodecrement = $c\u0026#34;); my $l = --$c; say(\u0026#34;l = c setelah autodecrement = $l\u0026#34;); # tanda - di belakang my $m = $c--; say(\u0026#34;c setelah autodecrement = $m\u0026#34;); # modulus (sisa hasil bagi) my $a = 3; my $b = 30; my $n = $a % $b; my $o = $b % $a; say(\u0026#34;a = $a\u0026#34;); say(\u0026#34;b = $b\u0026#34;); say(\u0026#34;a%b = $n\u0026#34;); say(\u0026#34;b%a = $o\u0026#34;); ",
-  "keywords": [
-    "slackware", "perl"
-  ],
-  "articleBody": "Variabel scalar merupakan variabel tunggal dalam perl. Pada variabel ini bisa dilakukan beberapa operasi aritmatika seperti penjumlahan, pengurangan, perkalian, pembagian, modulus, pemangkatan, autoincrement, autodecrement.\nPada operasi aritnatika, dikenal bilangan bertipe integer dan float. Integer adalah bilangan bulat. Float bilangan desimal.\n#!/usr/bin/perl use strict; use warnings; use feature 'say'; my $a = 2; my $b = 25; say(\"Angka pertama (a) adalah $a\"); say(\"Angka kedua (b) adalah $b\"); # penjumlahan my $c = $a + $b; say(\"a+b = $c\"); # pengurangan my $d = $b - $a; say(\"b-a = $d\"); # perkalian my $e = $a * $b; say(\"a*b = $e\"); # pembagian my $f = $a / $b; my $g = $b / $a; say(\"a/b = $f\"); say(\"b/a = $g\"); # pemangkatan my $h = $a ** $b; my $i = $b ** $a; say(\"a^b = $h\"); say(\"b^a = $i\"); # autoincrement # tanda + di depan say(\"Nilai a sebelum autoincrement = $a\"); my $j = ++$a; say(\"++a = $j\"); say(\"Nilai a sesudah autoincrement = $a\"); # tanda + di belakang say(\"Nilai b sebelum autoincrement $b\"); my $k = $b++; say(\"$b++ = $k\"); say(\"Nilai b setelah autoincrement $b\"); # autodecrement # tanda - di depan say(\"c = a+b. c sebelum autodecrement = $c\"); my $l = --$c; say(\"l = c setelah autodecrement = $l\"); # tanda - di belakang my $m = $c--; say(\"c setelah autodecrement = $m\"); # modulus (sisa hasil bagi) my $a = 3; my $b = 30; my $n = $a % $b; my $o = $b % $a; say(\"a = $a\"); say(\"b = $b\"); say(\"a%b = $n\"); say(\"b%a = $o\"); ",
-  "wordCount" : "264",
-  "inLanguage": "en",
-  "datePublished": "2022-01-03T00:00:00Z",
-  "dateModified": "2022-01-03T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://sasongko.web.id/post/2022-01-03-operasi-aritmatika-perl/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Catatan Sasongko",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sasongko.web.id/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -277,7 +142,7 @@ say(&#34;b%a = $o&#34;);
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -303,22 +168,22 @@ say(&#34;b%a = $o&#34;);
         </div>
         <ul id="menu">
             <li>
-                <a href="https://sasongko.web.id/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/post/" title="Posts">
+                <a href="http://localhost:1313/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/about/" title="Profil">
+                <a href="http://localhost:1313/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/logo/" title="Logo">
+                <a href="http://localhost:1313/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -412,15 +277,15 @@ say(&#34;b%a = $o&#34;);
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
-      <li><a href="https://sasongko.web.id/tags/perl/">Perl</a></li>
+      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
+      <li><a href="http://localhost:1313/tags/perl/">Perl</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

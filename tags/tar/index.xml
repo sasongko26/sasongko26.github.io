@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tar on Catatan Sasongko</title>
-    <link>https://sasongko.web.id/tags/tar/</link>
+    <link>http://localhost:1313/tags/tar/</link>
     <description>Recent content in Tar on Catatan Sasongko</description>
-    <generator>Hugo -- 0.145.0</generator>
+    <generator>Hugo -- 0.146.5</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sasongko.web.id/tags/tar/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/tar/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Menghapus file dari tar</title>
-      <link>https://sasongko.web.id/post/2021-01-30-menghapus-file-dari-tar/</link>
+      <link>http://localhost:1313/post/2021-01-30-menghapus-file-dari-tar/</link>
       <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2021-01-30-menghapus-file-dari-tar/</guid>
+      <guid>http://localhost:1313/post/2021-01-30-menghapus-file-dari-tar/</guid>
       <description>&lt;p&gt;Untuk menghapus file Screenshot_2020-08-06_08-31-22.png yang ada dalam screenshot.tar.xz, caranya&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ tar f screenshot.tar.xz --delete Screenshot_2020-08-06_08-31-22.png
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Menambah file archive tar</title>
-      <link>https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/</link>
+      <link>http://localhost:1313/post/2021-01-29-menambah-file-archive-tar/</link>
       <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2021-01-29-menambah-file-archive-tar/</guid>
+      <guid>http://localhost:1313/post/2021-01-29-menambah-file-archive-tar/</guid>
       <description>&lt;p&gt;Untuk menambahkan file ke dalam &lt;em&gt;tar archive&lt;/em&gt; mudah. Gunakan opsi -r atau &amp;ndash;append pada &lt;em&gt;command&lt;/em&gt; &lt;strong&gt;tar&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Misalkan, file photo_2020-08-22_19-03-32.jpg yang ada di ~/Documents akan dimasukkan atau ditambahkan ke dalam file &lt;em&gt;archive&lt;/em&gt; screenshot.tar.xz&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ tar rf screenshot.tar.xz photo_2020-08-22_19-03-32.jpg
@@ -33,9 +33,9 @@
     </item>
     <item>
       <title>Mengetahui isi file tar archive</title>
-      <link>https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/</link>
+      <link>http://localhost:1313/post/2021-01-24-mengetahui-isi-tar-archive/</link>
       <pubDate>Sun, 24 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2021-01-24-mengetahui-isi-tar-archive/</guid>
+      <guid>http://localhost:1313/post/2021-01-24-mengetahui-isi-tar-archive/</guid>
       <description>&lt;p&gt;Catatan ini merupakan lanjutan dari sebelumnya yang membuat &lt;em&gt;tar archive&lt;/em&gt;. Kali ini tentang bagaimana mengetahui apa saja file ada di dalam &lt;em&gt;archive&lt;/em&gt; tersebut tanpa harus mengekstrak.&lt;/p&gt;
 &lt;p&gt;Contoh, terdapat file screenshot2.tar.xz. Untuk mengetahui apa saja isinya&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ tar tvf screenshot2.tar.xz
@@ -50,9 +50,9 @@
     </item>
     <item>
       <title>Membuat archive tar</title>
-      <link>https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/</link>
+      <link>http://localhost:1313/post/2021-01-23-membuat-archive-tar/</link>
       <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2021-01-23-membuat-archive-tar/</guid>
+      <guid>http://localhost:1313/post/2021-01-23-membuat-archive-tar/</guid>
       <description>&lt;p&gt;Terdapat file sebagai berikut:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-07-15_10-17-33.png
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Screenshot_2020-08-03_10-31-47.png
@@ -82,9 +82,9 @@
     </item>
     <item>
       <title>Ekstrak File .tar.gz</title>
-      <link>https://sasongko.web.id/post/2015-04-28-ekstrak-file-tar-gz/</link>
+      <link>http://localhost:1313/post/2015-04-28-ekstrak-file-tar-gz/</link>
       <pubDate>Tue, 28 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2015-04-28-ekstrak-file-tar-gz/</guid>
+      <guid>http://localhost:1313/post/2015-04-28-ekstrak-file-tar-gz/</guid>
       <description>&lt;p&gt;Kemarin di grup facebook Ubuntu Indonesia ada yang bertanya yang intinya&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Bagaimana cara install file .tar.gz?&lt;/p&gt;&lt;/blockquote&gt;
@@ -93,9 +93,9 @@
     </item>
     <item>
       <title>Ekstrak File tar.xz</title>
-      <link>https://sasongko.web.id/post/2014-12-30-ekstrak-file-tarxz/</link>
+      <link>http://localhost:1313/post/2014-12-30-ekstrak-file-tarxz/</link>
       <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2014-12-30-ekstrak-file-tarxz/</guid>
+      <guid>http://localhost:1313/post/2014-12-30-ekstrak-file-tarxz/</guid>
       <description>&lt;p&gt;Berkas atau file dengan ekstensi &lt;em&gt;tar.xz&lt;/em&gt; adalah berkas kompresi/arsip. Untuk mengekstraknya mudah.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ tar xpf nama_file.tar.xz
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>

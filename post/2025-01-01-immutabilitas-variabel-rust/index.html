@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Immutabilitas variabel rust | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, rust">
 <meta name="description" content="Tak terasa hampir tepat setahun tidak menulis catatan tentang rust. Mengawali tahun 2025 ini, mari kita lanjutkan. Semoga bisa istiqamah dan khatam menulis catatan rust-nya.
 Salah satu konsep menarik dari rust adalah immutabilitas variabel. Variabel secara default bersifat immutable alias tidak bisa diganti nilainya; hanya bisa di-assign 1x. Rust membedakan antara deklarasi dan assignment. Deklarasi adalah pendefinisian nama variabel dan tipe datanya, sedangkan assignment adalah pemberian nilai ke variabel tersebut. Deklarasi dilakukan lebih dulu, baru kemudian assignment. Memang biasanya ketika melakukan deklarasi sekalian assignment, walaupun sebenarnya kedua hal ini bisa juga dilakukan secara terpisah.">
 <meta name="author" content="">
-<link rel="canonical" href="https://sasongko.web.id/post/2025-01-01-immutabilitas-variabel-rust/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://sasongko.web.id/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
-<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2025-01-01-immutabilitas-variabel-rust/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2025-01-01-immutabilitas-variabel-rust/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2025-01-01-immutabilitas-variabel-rust/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,73 +56,7 @@ Salah satu konsep menarik dari rust adalah immutabilitas variabel. Variabel seca
         }
 
     </style>
-</noscript><meta property="og:url" content="https://sasongko.web.id/post/2025-01-01-immutabilitas-variabel-rust/">
-  <meta property="og:site_name" content="Catatan Sasongko">
-  <meta property="og:title" content="Immutabilitas variabel rust">
-  <meta property="og:description" content="Tak terasa hampir tepat setahun tidak menulis catatan tentang rust. Mengawali tahun 2025 ini, mari kita lanjutkan. Semoga bisa istiqamah dan khatam menulis catatan rust-nya.
-Salah satu konsep menarik dari rust adalah immutabilitas variabel. Variabel secara default bersifat immutable alias tidak bisa diganti nilainya; hanya bisa di-assign 1x. Rust membedakan antara deklarasi dan assignment. Deklarasi adalah pendefinisian nama variabel dan tipe datanya, sedangkan assignment adalah pemberian nilai ke variabel tersebut. Deklarasi dilakukan lebih dulu, baru kemudian assignment. Memang biasanya ketika melakukan deklarasi sekalian assignment, walaupun sebenarnya kedua hal ini bisa juga dilakukan secara terpisah.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2025-01-01T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-01-01T00:00:00+00:00">
-    <meta property="article:tag" content="Slackware">
-    <meta property="article:tag" content="Rust">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Immutabilitas variabel rust">
-<meta name="twitter:description" content="Tak terasa hampir tepat setahun tidak menulis catatan tentang rust. Mengawali tahun 2025 ini, mari kita lanjutkan. Semoga bisa istiqamah dan khatam menulis catatan rust-nya.
-Salah satu konsep menarik dari rust adalah immutabilitas variabel. Variabel secara default bersifat immutable alias tidak bisa diganti nilainya; hanya bisa di-assign 1x. Rust membedakan antara deklarasi dan assignment. Deklarasi adalah pendefinisian nama variabel dan tipe datanya, sedangkan assignment adalah pemberian nilai ke variabel tersebut. Deklarasi dilakukan lebih dulu, baru kemudian assignment. Memang biasanya ketika melakukan deklarasi sekalian assignment, walaupun sebenarnya kedua hal ini bisa juga dilakukan secara terpisah.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://sasongko.web.id/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Immutabilitas variabel rust",
-      "item": "https://sasongko.web.id/post/2025-01-01-immutabilitas-variabel-rust/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Immutabilitas variabel rust",
-  "name": "Immutabilitas variabel rust",
-  "description": "Tak terasa hampir tepat setahun tidak menulis catatan tentang rust. Mengawali tahun 2025 ini, mari kita lanjutkan. Semoga bisa istiqamah dan khatam menulis catatan rust-nya.\nSalah satu konsep menarik dari rust adalah immutabilitas variabel. Variabel secara default bersifat immutable alias tidak bisa diganti nilainya; hanya bisa di-assign 1x. Rust membedakan antara deklarasi dan assignment. Deklarasi adalah pendefinisian nama variabel dan tipe datanya, sedangkan assignment adalah pemberian nilai ke variabel tersebut. Deklarasi dilakukan lebih dulu, baru kemudian assignment. Memang biasanya ketika melakukan deklarasi sekalian assignment, walaupun sebenarnya kedua hal ini bisa juga dilakukan secara terpisah.\n",
-  "keywords": [
-    "slackware", "rust"
-  ],
-  "articleBody": "Tak terasa hampir tepat setahun tidak menulis catatan tentang rust. Mengawali tahun 2025 ini, mari kita lanjutkan. Semoga bisa istiqamah dan khatam menulis catatan rust-nya.\nSalah satu konsep menarik dari rust adalah immutabilitas variabel. Variabel secara default bersifat immutable alias tidak bisa diganti nilainya; hanya bisa di-assign 1x. Rust membedakan antara deklarasi dan assignment. Deklarasi adalah pendefinisian nama variabel dan tipe datanya, sedangkan assignment adalah pemberian nilai ke variabel tersebut. Deklarasi dilakukan lebih dulu, baru kemudian assignment. Memang biasanya ketika melakukan deklarasi sekalian assignment, walaupun sebenarnya kedua hal ini bisa juga dilakukan secara terpisah.\nDeklarasi memerlukan keyword yaitu let.\nlet a; berarti mendeklarasikan suatu variabel yang bernama a.\nAssignment tidak memerlukan keyword, tetapi variabelnya harus sudah dideklarasikan.\na = 5; memberikan nilai 5 ke dalam variabel a.\nlet a = 5; berarti melakukan deklarasi sekaligus assignment.\nVariabel secara default bersifat immutable. Jika sudah dideklarasikan bernilai 5 maka nilai tersebut tidak bisa diubah. Mari kita praktikkan\nfn main(){ let a = 5; println!(\"Nilai a awal: {}\", a); a = 10; println!(\"Nilai a yang baru: {}\", a); } Kita compile ternyata error.\nerror[E0384]: cannot assign twice to immutable variable `a` --\u003e 02immutabilitasvariabel.rs:4:5 | 2 | let a = 5; | - first assignment to `a` 3 | println!(\"Nilai a awal: {}\", a); 4 | a = 10; | ^^^^^^ cannot assign twice to immutable variable | help: consider making this binding mutable | 2 | let mut a = 5; | +++ error: aborting due to 1 previous error For more information about this error, try `rustc --explain E0384`. Mengapa error? Baris ke-2 mendeklarasikan variabel a dan assign nilainya dengan 5. Sampai tahap ini masih oke. Baris ke-4 melakukan assignment ke variabel a dengan nilai 10, yang artinya mengubah nilai variabel a dari 5 ke 10. Secara default variabel bersifat immutable. Di sinilah masalahnya.\nLantas bagaimana solusinya? Ada 2 cara. Cara pertama seperti yang ditunjukkan pada error message saat compile, yaitu dengan menambahkan keyword mut antara let dan nama variabelnya (a). Ini adalah cara yang disarankan.\nlet mut a = 5; Keyword mut menjadikan variabel a mutable alias bisa diganti atau di-assign lagi.\nCara ke-2 dengan membuat variabel baru dengan nama yang sama.\nlet a = 5; println!(\"Nilai a awal: {}\", a); let a = 10; println!(\"Nilai a yang baru: {}\", a); ",
-  "wordCount" : "380",
-  "inLanguage": "en",
-  "datePublished": "2025-01-01T00:00:00Z",
-  "dateModified": "2025-01-01T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://sasongko.web.id/post/2025-01-01-immutabilitas-variabel-rust/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Catatan Sasongko",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sasongko.web.id/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -140,7 +74,7 @@ Salah satu konsep menarik dari rust adalah immutabilitas variabel. Variabel seca
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -166,22 +100,22 @@ Salah satu konsep menarik dari rust adalah immutabilitas variabel. Variabel seca
         </div>
         <ul id="menu">
             <li>
-                <a href="https://sasongko.web.id/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/post/" title="Posts">
+                <a href="http://localhost:1313/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/about/" title="Profil">
+                <a href="http://localhost:1313/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="https://sasongko.web.id/logo/" title="Logo">
+                <a href="http://localhost:1313/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -250,15 +184,15 @@ Salah satu konsep menarik dari rust adalah immutabilitas variabel. Variabel seca
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
-      <li><a href="https://sasongko.web.id/tags/rust/">Rust</a></li>
+      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
+      <li><a href="http://localhost:1313/tags/rust/">Rust</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by
