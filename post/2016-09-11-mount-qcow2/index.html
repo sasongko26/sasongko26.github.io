@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Mount qcow2 | blackburn</title>
+<meta name="robots" content="index, follow">
+<title>Mount qcow2 | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, virtualisasi, qemu, virtual manager">
 <meta name="description" content="Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
 Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
 modprobe nbd max_part=N
 max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/post/2016-09-11-mount-qcow2/">
-<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2016-09-11-mount-qcow2/">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,7 +58,78 @@ max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 te
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://sasongko.web.id/post/2016-09-11-mount-qcow2/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Mount qcow2">
+  <meta property="og:description" content="Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
+Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
+modprobe nbd max_part=N max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2016-09-11T00:00:00+00:00">
+    <meta property="article:modified_time" content="2016-09-11T00:00:00+00:00">
+    <meta property="article:tag" content="Slackware">
+    <meta property="article:tag" content="Virtualisasi">
+    <meta property="article:tag" content="Qemu">
+    <meta property="article:tag" content="Virtual Manager">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mount qcow2">
+<meta name="twitter:description" content="Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root
+Modul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya
+modprobe nbd max_part=N
+max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://sasongko.web.id/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Mount qcow2",
+      "item": "https://sasongko.web.id/post/2016-09-11-mount-qcow2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Mount qcow2",
+  "name": "Mount qcow2",
+  "description": "Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root\nModul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya\nmodprobe nbd max_part=N max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.\n",
+  "keywords": [
+    "slackware", "virtualisasi", "qemu", "virtual manager"
+  ],
+  "articleBody": "Untuk mengaitkan/mount berkas qcow2 ternyata tidak bisa langsung di- mount begitu saja. Ada beberapa tahapan yang semuanya membutuhkan hak akses root\nModul kernel NBD aktifkan dulu. Secara default modul NBD nonaktif. Untuk mengaktifkannya\nmodprobe nbd max_part=N max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 tersebut kalau dijalankan dengan qemu berisi 8 partisi, maka nilai N adalah 8.\nSetalah modul NBD aktif, jalankan qemu-nbd. Di sini akan dijalankan qemu-nbd yang mengaktifkan koneksi file /mnt/virtual/image/ign11.qcow2 ke /dev/nbd0\u003e\nqemu-nbd -c /dev/nbd0 /mnt/virtual/image/ign11.qcow2 Berhubung qcow2 adalah harddisk virtual berisi sistem operasi (di sini isinya IGOS Nusantara 11) maka tidak mungkin hanya terdiri dari 1 partisi. Minimal ada 2 partisi, yaitu / dan /swap. Cek, tabel partisinya\nfdisk -l /dev/nbd0 Disk /dev/nbd0: 20 GiB, 21474836480 bytes, 41943040 sectors Units: sectors of 1 * 512 = 512 bytes Sector size (logical/physical): 512 bytes / 512 bytes I/O size (minimum/optimal): 512 bytes / 512 bytes Disklabel type: dos Disk identifier: 0x4173c32c Device Boot Start End Sectors Size Id Type /dev/nbd0p1 * 2048 1026047 1024000 500M 83 Linux /dev/nbd0p2 1026048 41943039 40916992 19.5G 8e Linux LVM Nah, ada 2 partisi. Eh, tapi ternyata tipenya LVM. Ya sudah, aktifkan saja. Scan dulu\nvgscan Reading all physical volumes. This may take a while... Found volume group \"in1-3mm_igos-nusantara\" using metadata type lvm2 Terdeteksi sebagai in1-3mm_igos-nusantara.\nKemudian aktifkan\nvgchange -ay 2 logical volume(s) in volume group \"in1-3mm_igos-nusantara\" now active Ada 2 logical volume atau partisi yang semuanya sudah aktif, Apa sajakah itu?\nls /dev/in1-3mm_igos-nusantara root swap Ada partisi root dan swap.\nMisalkan mount partisi root-nya ke /mnt/tmp\nmount /dev/in1-3mm_igos-nusantara/root /mnt/tmp Ok. Selesai. Alhamdulillah.\n",
+  "wordCount" : "264",
+  "inLanguage": "en",
+  "datePublished": "2016-09-11T00:00:00Z",
+  "dateModified": "2016-09-11T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sasongko.web.id/post/2016-09-11-mount-qcow2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Catatan Sasongko",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sasongko.web.id/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -76,9 +147,9 @@ max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 te
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="blackburn (Alt + H)">blackburn</a>
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -102,22 +173,22 @@ max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 te
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Home">
+                <a href="https://sasongko.web.id/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/post/" title="Posts">
+                <a href="https://sasongko.web.id/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Profil">
+                <a href="https://sasongko.web.id/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/logo/" title="Logo">
+                <a href="https://sasongko.web.id/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -179,17 +250,17 @@ max_part=N isikan jumlah partisi yang ingin ditangani pada N. Misalnya, qcow2 te
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
-      <li><a href="http://localhost:1313/tags/virtualisasi/">Virtualisasi</a></li>
-      <li><a href="http://localhost:1313/tags/qemu/">Qemu</a></li>
-      <li><a href="http://localhost:1313/tags/virtual-manager/">Virtual Manager</a></li>
+      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
+      <li><a href="https://sasongko.web.id/tags/virtualisasi/">Virtualisasi</a></li>
+      <li><a href="https://sasongko.web.id/tags/qemu/">Qemu</a></li>
+      <li><a href="https://sasongko.web.id/tags/virtual-manager/">Virtual Manager</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">blackburn</a></span> · 
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

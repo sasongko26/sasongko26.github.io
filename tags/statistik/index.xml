@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Statistik on blackburn</title>
-    <link>http://localhost:1313/tags/statistik/</link>
-    <description>Recent content in Statistik on blackburn</description>
+    <title>Statistik on Catatan Sasongko</title>
+    <link>https://sasongko.web.id/tags/statistik/</link>
+    <description>Recent content in Statistik on Catatan Sasongko</description>
     <generator>Hugo -- 0.146.5</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 25 May 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/statistik/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sasongko.web.id/tags/statistik/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Syntax PSPP Membuka File</title>
-      <link>http://localhost:1313/post/2023-05-25-syntax-pspp-membuka-file-sav/</link>
+      <link>https://sasongko.web.id/post/2023-05-25-syntax-pspp-membuka-file-sav/</link>
       <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023-05-25-syntax-pspp-membuka-file-sav/</guid>
+      <guid>https://sasongko.web.id/post/2023-05-25-syntax-pspp-membuka-file-sav/</guid>
       <description>&lt;p&gt;PSPP merupakan &lt;em&gt;software&lt;/em&gt; statistika yang &lt;em&gt;open source&lt;/em&gt;, ringan tetapi sangat fungsional dan &lt;em&gt;powerful&lt;/em&gt;. Ringan karena &lt;em&gt;installer&lt;/em&gt;-nya hanya beberapa MB. Jauh lebih kecil daripada &lt;em&gt;software&lt;/em&gt; sejenis yang &lt;em&gt;proprietary&lt;/em&gt;. Fungsional dan &lt;em&gt;powerful&lt;/em&gt; karena berbagai analisis dapat dilakukan dengan PSPP.&lt;/p&gt;
 &lt;p&gt;PSPP bisa dijalankan dengan tampilan &lt;em&gt;text&lt;/em&gt; ataupun grafis. Uktuk memulai pspp tampilan &lt;em&gt;text&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pspp
@@ -23,9 +23,9 @@
     </item>
     <item>
       <title>Uji normalitas dengan python</title>
-      <link>http://localhost:1313/post/2021-05-02-uji-normalitas-python/</link>
+      <link>https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/</link>
       <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-05-02-uji-normalitas-python/</guid>
+      <guid>https://sasongko.web.id/post/2021-05-02-uji-normalitas-python/</guid>
       <description>&lt;p&gt;Uji normalitas data dapat dilakukan dengan beberapa cara antara lain&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Visual dengan grafik salah satunya histogram&lt;/li&gt;
@@ -34,14 +34,14 @@
 &lt;p&gt;Berikut akan dilakukan uji normalitas atas data konsumsi bir tahun 2010. Data diambil dari &lt;a href=&#34;https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv&#34;&gt;https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv&lt;/a&gt; dengan pengubahan nama variabel menjadi lebih singkat.&lt;/p&gt;
 &lt;h1 id=&#34;uji-normalitas-dengan-histogram&#34;&gt;Uji normalitas dengan histogram&lt;/h1&gt;
 &lt;p&gt;Histogramnya&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/gambar/histogram-beer-servings-2010.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/histogram-beer-servings-2010.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Dari histogram tersebut tampak dengan jelas bahwa histogram tidak simetris dengan skewness positif. Maka dapat disimpulkan data konsumsi bir ini tidak mengikuti distribusi normal.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Membuat histogram dengan python</title>
-      <link>http://localhost:1313/post/2021-05-01-membuat-histogram-python/</link>
+      <link>https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/</link>
       <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-05-01-membuat-histogram-python/</guid>
+      <guid>https://sasongko.web.id/post/2021-05-01-membuat-histogram-python/</guid>
       <description>&lt;p&gt;Untuk membuat &lt;strong&gt;histogram&lt;/strong&gt; dengan &lt;strong&gt;python&lt;/strong&gt; dibutuhkan library &lt;strong&gt;pandas&lt;/strong&gt; dan &lt;strong&gt;matplotlib&lt;/strong&gt; dengan fungsi .hist() dan rangkaiannya seperti contoh histogram konsumsi bir berikut:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#!/usr/bin/python3&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -60,13 +60,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tight_layout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hasilnya:&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/gambar/histogram-beer-servings-2010.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/histogram-beer-servings-2010.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Median data dengan python</title>
-      <link>http://localhost:1313/post/2021-03-27-median-data-python/</link>
+      <link>https://sasongko.web.id/post/2021-03-27-median-data-python/</link>
       <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-03-27-median-data-python/</guid>
+      <guid>https://sasongko.web.id/post/2021-03-27-median-data-python/</guid>
       <description>&lt;p&gt;Misalkan akan dicari berapa median konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi &lt;strong&gt;describe()&lt;/strong&gt; atau &lt;strong&gt;median()&lt;/strong&gt; yang dimiliki &lt;strong&gt;pandas&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#!/usr/bin/env python3&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -85,9 +85,9 @@
     </item>
     <item>
       <title>Mean data dengan python</title>
-      <link>http://localhost:1313/post/2021-03-26-mean-data-python/</link>
+      <link>https://sasongko.web.id/post/2021-03-26-mean-data-python/</link>
       <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-03-26-mean-data-python/</guid>
+      <guid>https://sasongko.web.id/post/2021-03-26-mean-data-python/</guid>
       <description>&lt;p&gt;Misalkan akan dicari berapa rerata konsumsi alkohol perkapita? Jawabannya bisa diketahui dengan menggunakan fungsi &lt;strong&gt;describe()&lt;/strong&gt; atau &lt;strong&gt;mean()&lt;/strong&gt; yang dimiliki &lt;strong&gt;pandas&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#!/usr/bin/env python3&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -106,9 +106,9 @@
     </item>
     <item>
       <title>Statistik deskriptif dengan python</title>
-      <link>http://localhost:1313/post/2021-03-25-statistik-deskriptif-dengan-python/</link>
+      <link>https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/</link>
       <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-03-25-statistik-deskriptif-dengan-python/</guid>
+      <guid>https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/</guid>
       <description>&lt;p&gt;Untuk menampilkan statistik deskriptif suatu data, bisa menggunakan fungsi &lt;strong&gt;describe()&lt;/strong&gt; dari &lt;em&gt;library&lt;/em&gt; yang dimiliki &lt;strong&gt;python&lt;/strong&gt; yaitu &lt;strong&gt;pandas&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Berikut ini akan ditampilkan deskripsi data konsumsi alkohol dunia. Sumber data : &lt;a href=&#34;https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv&#34;&gt;https://github.com/fivethirtyeight/data/blob/master/alcohol-consumption/drinks.csv&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Data tersebut memuat konsumsi alkohol perkapita dari 193 negara. Ada 4 variabel yaitu :&lt;/p&gt;
@@ -122,9 +122,9 @@
     </item>
     <item>
       <title>Mengetahui struktur dataset</title>
-      <link>http://localhost:1313/post/2021-03-24-mengetahui-struktur-dataset-python/</link>
+      <link>https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/</link>
       <pubDate>Wed, 24 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-03-24-mengetahui-struktur-dataset-python/</guid>
+      <guid>https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/</guid>
       <description>&lt;p&gt;Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi &lt;strong&gt;info()&lt;/strong&gt; dari &lt;strong&gt;pandas&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Data diambil dari &lt;a href=&#34;https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/&#34;&gt;https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#!/usr/bin/env python3&lt;/span&gt;
@@ -183,9 +183,9 @@
     </item>
     <item>
       <title>Mengetahui dimensi dataset python</title>
-      <link>http://localhost:1313/post/2021-03-22-mengetahui-dimensi-dataset-python/</link>
+      <link>https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/</link>
       <pubDate>Mon, 22 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-03-22-mengetahui-dimensi-dataset-python/</guid>
+      <guid>https://sasongko.web.id/post/2021-03-22-mengetahui-dimensi-dataset-python/</guid>
       <description>&lt;p&gt;Untuk mengetahui dimensi atau jumlah baris dan kolom dataset dapat menggunakan shape dari pandas. Data diambil dari &lt;a href=&#34;https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/&#34;&gt;https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pandas&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pd&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read_csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -196,9 +196,9 @@
     </item>
     <item>
       <title>Menampilkan data baris terakhir python</title>
-      <link>http://localhost:1313/post/2021-03-21-menampilkan-data-baris-terakhir-python/</link>
+      <link>https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/</link>
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-03-21-menampilkan-data-baris-terakhir-python/</guid>
+      <guid>https://sasongko.web.id/post/2021-03-21-menampilkan-data-baris-terakhir-python/</guid>
       <description>&lt;p&gt;Untuk menampilkan data baris terakhir dengan python dapat menggunakan fungsi tail() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.&lt;/p&gt;
 &lt;p&gt;Data diambil dari &lt;a href=&#34;https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/&#34;&gt;https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pandas&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pd&lt;/span&gt;
@@ -220,9 +220,9 @@
     </item>
     <item>
       <title>Menampilkan data baris pertama python</title>
-      <link>http://localhost:1313/post/2021-03-20-menampilkan-data-baris-pertama-python/</link>
+      <link>https://sasongko.web.id/post/2021-03-20-menampilkan-data-baris-pertama-python/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-03-20-menampilkan-data-baris-pertama-python/</guid>
+      <guid>https://sasongko.web.id/post/2021-03-20-menampilkan-data-baris-pertama-python/</guid>
       <description>&lt;p&gt;Untuk menampilkan data baris pertama dengan python dapat menggunakan fungsi head() dari pandas. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.&lt;/p&gt;
 &lt;p&gt;Data diambil dari &lt;a href=&#34;https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/&#34;&gt;https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pandas&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pd&lt;/span&gt;
@@ -242,9 +242,9 @@
     </item>
     <item>
       <title>Load dataset csv dengan python</title>
-      <link>http://localhost:1313/post/2021-03-16-load-csv-python/</link>
+      <link>https://sasongko.web.id/post/2021-03-16-load-csv-python/</link>
       <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-03-16-load-csv-python/</guid>
+      <guid>https://sasongko.web.id/post/2021-03-16-load-csv-python/</guid>
       <description>&lt;p&gt;Misalkan ada dataset dalam format csv. Data tersebut dapat di-&lt;em&gt;load&lt;/em&gt; atau diimpor dengan &lt;strong&gt;python&lt;/strong&gt; dengan &lt;em&gt;library&lt;/em&gt; &lt;strong&gt;pandas&lt;/strong&gt;. Berikut script untuk load file data.csv.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import pandas as pd
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; pd.read_csv&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;data.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
@@ -252,9 +252,9 @@
     </item>
     <item>
       <title>Library python untuk statistika</title>
-      <link>http://localhost:1313/post/2021-03-15-library-python-statistika/</link>
+      <link>https://sasongko.web.id/post/2021-03-15-library-python-statistika/</link>
       <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-03-15-library-python-statistika/</guid>
+      <guid>https://sasongko.web.id/post/2021-03-15-library-python-statistika/</guid>
       <description>&lt;p&gt;Beberapa library atau module python yang sering digunakan untuk statistika adalah&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;numpy: digunakan untuk melakukan analisa data numerik dan perhitungan berbasis vektor atau matriks&lt;/li&gt;
@@ -266,9 +266,9 @@ matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat di
     </item>
     <item>
       <title>Membuat file csv</title>
-      <link>http://localhost:1313/post/2021-01-31-membuat-file-csv/</link>
+      <link>https://sasongko.web.id/post/2021-01-31-membuat-file-csv/</link>
       <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-01-31-membuat-file-csv/</guid>
+      <guid>https://sasongko.web.id/post/2021-01-31-membuat-file-csv/</guid>
       <description>&lt;p&gt;File &lt;strong&gt;csv&lt;/strong&gt; merupakan file yang umum digunakan sebagai file data. Mudah dalam pembuatannya. Begitu juga dengan aksesnya. Bisa dibuat dengan &lt;em&gt;text editor, spreadsheet software&lt;/em&gt; maupun &lt;em&gt;statistical software&lt;/em&gt;. Pada kesempatan kali ini tidak menggunakan &lt;em&gt;statistical software&lt;/em&gt; seperti &lt;strong&gt;R&lt;/strong&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;membuat-file-csv-dengan-text-editor&#34;&gt;Membuat file csv dengan &lt;em&gt;text editor&lt;/em&gt;&lt;/h1&gt;
 &lt;p&gt;Prinsip pembuatan adalah :&lt;/p&gt;
@@ -283,9 +283,9 @@ matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat di
     </item>
     <item>
       <title>Dispersi Data dengan R</title>
-      <link>http://localhost:1313/post/2020-04-04-dispersi-data-dengan-r/</link>
+      <link>https://sasongko.web.id/post/2020-04-04-dispersi-data-dengan-r/</link>
       <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2020-04-04-dispersi-data-dengan-r/</guid>
+      <guid>https://sasongko.web.id/post/2020-04-04-dispersi-data-dengan-r/</guid>
       <description>&lt;p&gt;Dispersi atau ukuran penyebaran data menunjukkan seberapa bervariasi suatu data.
 Kali ini data yang digunakan diambil dari dataset &lt;strong&gt;ldeaths&lt;/strong&gt; yang merupakan bagian dari &lt;strong&gt;UKLungDeaths&lt;/strong&gt;. Dataset &lt;strong&gt;UKLungDeaths&lt;/strong&gt; berisi data jumlah kematian akibat penyakit bronchitis, emphysema dan asma di Inggris dalam kurun waktu 1974-1979. Data ini disajikan berdasarkan bulan dan jenis kelamin. Secara total untuk kedua jenis kelamin ada di &lt;strong&gt;ldeaths&lt;/strong&gt;, laki-laki &lt;strong&gt;mdeaths&lt;/strong&gt; dan perempuan &lt;strong&gt;fdeaths&lt;/strong&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;nilai-minimal&#34;&gt;Nilai minimal&lt;/h1&gt;
@@ -307,9 +307,9 @@ Kali ini data yang digunakan diambil dari dataset &lt;strong&gt;ldeaths&lt;/stro
     </item>
     <item>
       <title>Tendensi Sentral dengan R</title>
-      <link>http://localhost:1313/post/2020-03-21-tendensi-sentral-dengan-r/</link>
+      <link>https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2020-03-21-tendensi-sentral-dengan-r/</guid>
+      <guid>https://sasongko.web.id/post/2020-03-21-tendensi-sentral-dengan-r/</guid>
       <description>&lt;p&gt;Data yang digunakan :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nilai&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;[1]&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;79&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;57&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;74&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;52&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;70&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;82&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;36&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;75&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;77&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;81&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;95&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;41&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;65&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;92&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;85&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;55&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;66&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;52&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;64&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;75&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt;
@@ -346,9 +346,9 @@ Kali ini data yang digunakan diambil dari dataset &lt;strong&gt;ldeaths&lt;/stro
     </item>
     <item>
       <title>Input Data R</title>
-      <link>http://localhost:1313/post/2020-03-14-input-data-r/</link>
+      <link>https://sasongko.web.id/post/2020-03-14-input-data-r/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2020-03-14-input-data-r/</guid>
+      <guid>https://sasongko.web.id/post/2020-03-14-input-data-r/</guid>
       <description>&lt;p&gt;Input data dalam R sangat mudah dan ada beragam cara, yaitu:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Menuliskan dalam bentuk &lt;em&gt;syntax&lt;/em&gt;.  Data diinput sebagai vektor. Penulis lebih suka menggunakan cara ini apabila data tersebut 1 variabel saja dan banyaknya tidak lebih dari 30. Kadang juga penulis gunakan untuk data yang banyaknya kurang dari 100&lt;/li&gt;

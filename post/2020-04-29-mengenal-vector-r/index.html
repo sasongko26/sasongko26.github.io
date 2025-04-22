@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Mengenal Objek R Vector | blackburn</title>
+<meta name="robots" content="index, follow">
+<title>Mengenal Objek R Vector | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, r">
 <meta name="description" content="Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.
 Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.
 Apa sih vector?
 Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/post/2020-04-29-mengenal-vector-r/">
-<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2020-04-29-mengenal-vector-r/">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,7 +58,76 @@ Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datu
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Mengenal Objek R Vector">
+  <meta property="og:description" content="Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.
+Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.
+Apa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2020-04-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-04-29T00:00:00+00:00">
+    <meta property="article:tag" content="Slackware">
+    <meta property="article:tag" content="R">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mengenal Objek R Vector">
+<meta name="twitter:description" content="Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.
+Vector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.
+Apa sih vector?
+Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://sasongko.web.id/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Mengenal Objek R Vector",
+      "item": "https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Mengenal Objek R Vector",
+  "name": "Mengenal Objek R Vector",
+  "description": "Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.\nVector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.\nApa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).\n",
+  "keywords": [
+    "slackware", "r"
+  ],
+  "articleBody": "Sebagai bahasa pemrograman, R mempunyai beberapa tipe objek, antara lain vector, matrix, factor, data frame, list. Bagi yang pernah berkecimpung di bahasa pemrograman lain mungkin tipe objek ini terasa aneh. R adalah bahasa pemrograman spesialis data, maka tipe objeknya pun disesuaikan agar mudah meng-handle data.\nVector merupakan objek yang sangat penting di R. Bisa dikata, semua data berasal dari vector.\nApa sih vector? Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datum atau data) yang seragam, bisa berupa angka atau karakter/string atau bisa juga boolean (TRUE FALSE).\nMembuat vector Misalkan akan dibuat vector x dengan elemen berupa angka 1\n\u003e x \u003c- 1 Vector kota dengan elemen kata Semarang. Semarang merupakan string, maka penulisannya diapit tanda kutip\n\u003e kota \u003c- \"Semarang\" Vector cek dengan elemen boolean TRUE\ncek \u003c- TRUE Jika vectornya memiliki elemen lebih dari 1, membuatnya dengan function yang bernama combine. Function ini didefinisikan dengan c(), elemennya dituliskan dalam tanda kurung.\n\u003e nama \u003c- c(\"Ali\", \"Budi\", \"Cici\", \"Deni\", \"Eka\") \u003e tinggi_badan \u003c- c(155, 178, 163, 158, 142) Operasi vector menampilkan vector Untuk menampilkan elemen atau isi dari vector cukup tuliskan nama vectornya. Contoh, menampilkan data tinggi badan yang dimasukkan ke dalam vector tinggi_badan\n\u003e tinggi_badan Angka dalam kurung siku di sebelah kiri pada tiap baris yang ditampilkan menunjukkan indeks/letak data ke berapa. Contoh [1] berarti data tepat di sebelah kanannya adalah data pertama. [20] berarti data tepat di kanannya adalah data ke-20. Begitu seterusnya.\nlength() Fungsi length() digunakan untuk mengetahui panjang vector (sebenarnya tidak hanya berlaku untuk vector, tapi juga objek lain seperti factor). Ketika data sudah dipegang, apa yang kemudian dilakukan? Ya, mengecek data. Salah satu pengecekannya adalah apakah data sudah lengkap? Kalau kuesioner yang harus diisi ada 10 item, apakah semua item sudah diisi? Ini contoh penggunaan length() dalam praktik.\nContoh, akan dicek berapa banyaknya data tinggi_badan\n\u003e length(tinggi_badan) 5 Indeks Indeks menunjukkan letak data tersebut. Penulisannya namavector[nomer_indeks]. Angka dalam kurung siku adalah nomor indeksnya. Contoh\n\u003e nama \u003c- c(\"Ali\", \"Budi\", \"Cici\", \"Deni\", \"Eka\") \u003e nama[1] [1] \"Ali\" \u003e nama[5] [1] \"Eka\" Kalau ingin menampilkan pengecualian gunakan indeks negatif. Misalnya, akan menampilkan 4 data pertama, berarti data ke-5 tidak ingin ditampilkan, maka\n\u003e nama[-5] [1] \"Ali\" \"Budi\" \"Cici\" \"Deni\" replace elemen Apabila ada data yang ternyata tidak sesuai, typo atau salah ketik misalnya, bisa diganti. Misalnya data nama, data ke-5 diganti dari Eka menjadi Erna\n\u003e nama[5] \u003c- \"Erna\" Penggantian ini bisa juga lebih dari 1 elemen. Misalkan data ke-4 dan 5 diganti menjadi Dedi dan Ema.\n\u003e nama[c(4,5)] \u003c- c(\"Dedi\", \"Ema\") Menambah elemen Misalkan data nama akan ditambahkan dengan Fahri, Gandi, Hilda, Imam, Joko.\n\u003e nama \u003c- append(nama,c(\"Fahri\", \"Gandi\", \"Hilda\", \"Imam\", \"Joko\")) [1] \"Ali\" \"Budi\" \"Cici\" \"Dedi\" \"Ema\" \"Fahri\" \"Gandi\" \"Hilda\" \"Imam\" [10] \"Joko\" Menghapus elemen Misalkan akan dihapus nama Budi yang merupakan elemen ke-2\n\u003e nama \u003c- nama[-2] Operasi matematika Misalkan, untuk keperluan menghitung body mass index atau indeks massa tubuh (IMT). Tinggi badan yang digunakan adalah dalam satuan meter. Sementara data yang masuk dalam centimeter. Akan dibuat variabel baru (berupa vector tentunya) IMT yang diperoleh dari menghitung berat_badan dibagi kuadrat tinggi_badan dalam meter.\nIMT \u003c- berat_badan/(tinggi_badan/100)^2 ",
+  "wordCount" : "515",
+  "inLanguage": "en",
+  "datePublished": "2020-04-29T00:00:00Z",
+  "dateModified": "2020-04-29T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sasongko.web.id/post/2020-04-29-mengenal-vector-r/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Catatan Sasongko",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sasongko.web.id/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -76,9 +145,9 @@ Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datu
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="blackburn (Alt + H)">blackburn</a>
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -102,22 +171,22 @@ Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datu
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Home">
+                <a href="https://sasongko.web.id/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/post/" title="Posts">
+                <a href="https://sasongko.web.id/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Profil">
+                <a href="https://sasongko.web.id/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/logo/" title="Logo">
+                <a href="https://sasongko.web.id/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -192,15 +261,15 @@ Mudahnya, vector bisa dikatakan sebagai variabel. Vector ini berisi elemen (datu
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
-      <li><a href="http://localhost:1313/tags/r/">R</a></li>
+      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
+      <li><a href="https://sasongko.web.id/tags/r/">R</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">blackburn</a></span> · 
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

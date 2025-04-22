@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Database on blackburn</title>
-    <link>http://localhost:1313/tags/database/</link>
-    <description>Recent content in Database on blackburn</description>
+    <title>Database on Catatan Sasongko</title>
+    <link>https://sasongko.web.id/tags/database/</link>
+    <description>Recent content in Database on Catatan Sasongko</description>
     <generator>Hugo -- 0.146.5</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Mar 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sasongko.web.id/tags/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Akses akun root mariadb tanpa password</title>
-      <link>http://localhost:1313/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/</link>
+      <link>https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/</link>
       <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/</guid>
+      <guid>https://sasongko.web.id/post/2023-03-22-akses-akun-root-mariadb-tanpa-password/</guid>
       <description>&lt;p&gt;Untuk akses root mariadb biasanya memerlukan password. Tapi sebenarnya root bisa diakses tanpa password. Pertama, hentikan dulu &lt;em&gt;service&lt;/em&gt; &lt;strong&gt;mariadb&lt;/strong&gt;-nya.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ /etc/rc.d/rc.mysqld stop
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kemudian, restart database server tanpa peduli otentikasinya.&lt;/p&gt;
@@ -32,9 +32,9 @@
     </item>
     <item>
       <title>Query SQL</title>
-      <link>http://localhost:1313/post/2021-06-24-query-sql/</link>
+      <link>https://sasongko.web.id/post/2021-06-24-query-sql/</link>
       <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-06-24-query-sql/</guid>
+      <guid>https://sasongko.web.id/post/2021-06-24-query-sql/</guid>
       <description>&lt;p&gt;&lt;em&gt;Relational Database Management System (RDBMS)&lt;/em&gt; adalah salah satu sistem database populer. Sistem pengolahan database ini menggunakan bahasa &lt;strong&gt;SQL&lt;/strong&gt; (dibaca sekuel atau es kiu el). &lt;em&gt;Tool&lt;/em&gt; yang dapat digunakan antara lain &lt;strong&gt;mariadb, mysql, postgresql&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Pada RDBMS dikenal adanya hirarki atau struktur, yaitu dari tertinggi &lt;strong&gt;database&lt;/strong&gt; yang terdiri atas &lt;strong&gt;tabel&lt;/strong&gt;. Tabel dibentuk oleh &lt;strong&gt;kolom&lt;/strong&gt; dengan data sejumlah barisnya.&lt;/p&gt;
 &lt;p&gt;Perintah SQL ada 2&lt;/p&gt;
@@ -47,9 +47,9 @@
     </item>
     <item>
       <title>Mariadb error 2002</title>
-      <link>http://localhost:1313/post/2021-06-01-mariadb-error-2002/</link>
+      <link>https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-06-01-mariadb-error-2002/</guid>
+      <guid>https://sasongko.web.id/post/2021-06-01-mariadb-error-2002/</guid>
       <description>&lt;p&gt;Lama tak terjun ke dunia database, ada pengaturan yang terlupakan sehingga muncul error.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ mariadb -u root -p
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enter password:
@@ -67,9 +67,9 @@
     </item>
     <item>
       <title>Memulai MariaDB</title>
-      <link>http://localhost:1313/post/2019-03-30-memulai-mariadb/</link>
+      <link>https://sasongko.web.id/post/2019-03-30-memulai-mariadb/</link>
       <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2019-03-30-memulai-mariadb/</guid>
+      <guid>https://sasongko.web.id/post/2019-03-30-memulai-mariadb/</guid>
       <description>&lt;h1 id=&#34;apa-itu-mariadb&#34;&gt;Apa itu MariaDB&lt;/h1&gt;
 &lt;p&gt;MariaDB adalah &lt;em&gt;software&lt;/em&gt; untuk manajemen basis data atau database. Merupakan pengembangan dari MySQL karena pada tahun 2010 MysSQL diakuisisi oleh Oracle.&lt;/p&gt;
 &lt;h1 id=&#34;install-mariadb&#34;&gt;Install MariaDB&lt;/h1&gt;

@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Grub on blackburn</title>
-    <link>http://localhost:1313/tags/grub/</link>
-    <description>Recent content in Grub on blackburn</description>
+    <title>Grub on Catatan Sasongko</title>
+    <link>https://sasongko.web.id/tags/grub/</link>
+    <description>Recent content in Grub on Catatan Sasongko</description>
     <generator>Hugo -- 0.146.5</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/grub/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sasongko.web.id/tags/grub/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Masuk UEFI Firmware Settings dari GRUB</title>
-      <link>http://localhost:1313/post/2023-06-02-masuk-uefi-firmware-settings-via-grub/</link>
+      <link>https://sasongko.web.id/post/2023-06-02-masuk-uefi-firmware-settings-via-grub/</link>
       <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023-06-02-masuk-uefi-firmware-settings-via-grub/</guid>
+      <guid>https://sasongko.web.id/post/2023-06-02-masuk-uefi-firmware-settings-via-grub/</guid>
       <description>&lt;p&gt;Kadang kita perlu mengubah pengaturan pada UEFI. Pengaturan tersebut misalnya pengaturan waktu, &lt;em&gt;secure boot&lt;/em&gt;, urutan &lt;em&gt;boot&lt;/em&gt; dan lain sebagainya. Untuk  masuk ke &lt;strong&gt;UEFI Firmware Settings&lt;/strong&gt; bisa dilakukan dari &lt;strong&gt;grub&lt;/strong&gt;. Yaitu dengan cara ketika menampilkan &lt;em&gt;bootloader&lt;/em&gt;, biasanya ada jeda waktu. Manfaatkan jeda waktu tersebut dengan segera menekan tombol &lt;strong&gt;c&lt;/strong&gt; untuk masuk ke &lt;em&gt;grub shell&lt;/em&gt;, kemudian pada &lt;em&gt;prompt&lt;/em&gt; yang disediakan ketik &lt;strong&gt;fwsetup&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grub&amp;gt; fwsetup
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Kenggulan elilo dibanding grub</title>
-      <link>http://localhost:1313/post/2022-04-08-keunggulan-elilo-dibanding-grub/</link>
+      <link>https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/</link>
       <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2022-04-08-keunggulan-elilo-dibanding-grub/</guid>
+      <guid>https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/</guid>
       <description>&lt;p&gt;Pascamigrasi dari &lt;strong&gt;elilo&lt;/strong&gt; ke &lt;strong&gt;grub&lt;/strong&gt; ada hal yang dirindukan. &lt;strong&gt;Zram&lt;/strong&gt; dengan komresi &lt;strong&gt;zstd&lt;/strong&gt;. Entah masalahnya di mana, &lt;strong&gt;zstd&lt;/strong&gt; tidak bisa digunakan untuk zram apabila menggunakan &lt;strong&gt;grub&lt;/strong&gt;. Menggunakan &lt;strong&gt;elilo&lt;/strong&gt; aman damai sentosa lanjcar jaya. Padahal &lt;strong&gt;kernel&lt;/strong&gt; dan &lt;strong&gt;initrd&lt;/strong&gt;-nya sama.&lt;/p&gt;
 &lt;p&gt;Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default &lt;strong&gt;lzo-rle&lt;/strong&gt;. Alhamdulillah. Dengan adanya &lt;strong&gt;zram&lt;/strong&gt; aktivitas komputasi di laptop dengan RAM hanya 2GB masih bisa dijalankan dengan lancar.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mengubah timeout grub</title>
-      <link>http://localhost:1313/post/2022-03-28-mengubah-grub-timeout/</link>
+      <link>https://sasongko.web.id/post/2022-03-28-mengubah-grub-timeout/</link>
       <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2022-03-28-mengubah-grub-timeout/</guid>
+      <guid>https://sasongko.web.id/post/2022-03-28-mengubah-grub-timeout/</guid>
       <description>&lt;p&gt;Secara default, &lt;em&gt;timeout&lt;/em&gt; &lt;strong&gt;grub&lt;/strong&gt; adalah 10 detik. Menurut penulis, 10 detik ini terlalu lama. Untuk mengubahnya ganti angka 10 ke detik yang diinginkan pada baris dengan GRUB_TIMEOUT pada file /etc/default/grub&lt;/p&gt;</description>
     </item>
     <item>
       <title>Menampilkan status penggunaan zram</title>
-      <link>http://localhost:1313/post/2022-03-27-menampilkan-status-penggunaan-zram/</link>
+      <link>https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/</link>
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2022-03-27-menampilkan-status-penggunaan-zram/</guid>
+      <guid>https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/</guid>
       <description>&lt;p&gt;Untuk menampilkan status penggunaan zram bisa dengan menjalankan&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# zramctl --output-all&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NAME     DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT
@@ -58,9 +58,9 @@ MOUNTPOINT	where the device is mounted&lt;/p&gt;</description>
     </item>
     <item>
       <title>Migrasi dari elilo ke grub</title>
-      <link>http://localhost:1313/post/2022-03-26-migrasi-elilo-ke-grub/</link>
+      <link>https://sasongko.web.id/post/2022-03-26-migrasi-elilo-ke-grub/</link>
       <pubDate>Sat, 26 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2022-03-26-migrasi-elilo-ke-grub/</guid>
+      <guid>https://sasongko.web.id/post/2022-03-26-migrasi-elilo-ke-grub/</guid>
       <description>&lt;p&gt;Aktif di-&lt;em&gt;maintain&lt;/em&gt; pengembang merupakan salah satu kriteria preferensi &lt;em&gt;software&lt;/em&gt; yang penulis gunakan. &lt;em&gt;elilo&lt;/em&gt; sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. &lt;strong&gt;Slackware&lt;/strong&gt; adalah distro yang masih bertahan menyediakan &lt;strong&gt;elilo&lt;/strong&gt;. Terima kasih PV.&lt;/p&gt;
 &lt;p&gt;Sejak pertama menggunakan &lt;strong&gt;slackware&lt;/strong&gt; dengan sistem &lt;strong&gt;UEFI&lt;/strong&gt; sekitar 2016, &lt;strong&gt;elilo&lt;/strong&gt; penulis jadikan pilihan utama &lt;em&gt;boot loader&lt;/em&gt;. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini &lt;strong&gt;elilo&lt;/strong&gt; sudah tidak dikembangkan &lt;em&gt;developer&lt;/em&gt; aslinya. Mengangkat &lt;strong&gt;grub&lt;/strong&gt; sebagai suksesor &lt;strong&gt;elilo&lt;/strong&gt; bukanlah hal buruk. &lt;strong&gt;Grub&lt;/strong&gt; ini sebenarnya sudah lama terinstall dan rutin ikut di-&lt;em&gt;upgrade&lt;/em&gt; juga, tapi memang tidak digunakan. Sekarang saatnya mengaktifkannya.&lt;/p&gt;</description>
     </item>

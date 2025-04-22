@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Mengatasi Audio Tanpa Suara ES8336 | blackburn</title>
+<meta name="robots" content="index, follow">
+<title>Mengatasi Audio Tanpa Suara ES8336 | Catatan Sasongko</title>
 <meta name="keywords" content="slackware, hardware, multimedia">
 <meta name="description" content="Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi
 Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz
@@ -28,16 +28,16 @@ card 0: sofessx8336 [sof-essx8336], device 7: HDMI 3 (*) []
   Subdevice #0: subdevice #0
 Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker. Yah, laptop masih diam seribu bahasa. Sound Open Firmware memberikan secercah harapan. Apalagi kemudian sof-firmware masuk ke repo current. Namun sayang, laptop masih membisu. Beberapa kali upgrade kernel, alsa, pulseaudio dan pipewire, masih saja tak terdengar. Alhamdulillah kemudian menemukan solusi dari issue yang dibuat oleh junocom di github alsa-project/alsa-ucm-conf.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/">
-<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://sasongko.web.id/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sasongko.web.id/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sasongko.web.id/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sasongko.web.id/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/">
+<link rel="alternate" hreflang="en" href="https://sasongko.web.id/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/">
 <noscript>
     <style>
         #theme-toggle,
@@ -74,7 +74,93 @@ Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari spea
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://sasongko.web.id/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/">
+  <meta property="og:site_name" content="Catatan Sasongko">
+  <meta property="og:title" content="Mengatasi Audio Tanpa Suara ES8336">
+  <meta property="og:description" content="Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi
+Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz Memory: 11,5 GiB of RAM Graphics Processor: Mesa Intel® UHD Graphics 600 dengan audio awalnya berupa dummy output alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.
+$ aplay -l **** List of PLAYBACK Hardware Devices **** card 0: sofessx8336 [sof-essx8336], device 0: ES8336 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 5: HDMI 1 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 6: HDMI 2 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 7: HDMI 3 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker. Yah, laptop masih diam seribu bahasa. Sound Open Firmware memberikan secercah harapan. Apalagi kemudian sof-firmware masuk ke repo current. Namun sayang, laptop masih membisu. Beberapa kali upgrade kernel, alsa, pulseaudio dan pipewire, masih saja tak terdengar. Alhamdulillah kemudian menemukan solusi dari issue yang dibuat oleh junocom di github alsa-project/alsa-ucm-conf.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-02-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-02-29T00:00:00+00:00">
+    <meta property="article:tag" content="Slackware">
+    <meta property="article:tag" content="Hardware">
+    <meta property="article:tag" content="Multimedia">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mengatasi Audio Tanpa Suara ES8336">
+<meta name="twitter:description" content="Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi
+Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz
+Memory: 11,5 GiB of RAM
+Graphics Processor: Mesa Intel® UHD Graphics 600
+dengan audio awalnya berupa dummy output alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.
+$ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: sofessx8336 [sof-essx8336], device 0: ES8336 (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: sofessx8336 [sof-essx8336], device 5: HDMI 1 (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: sofessx8336 [sof-essx8336], device 6: HDMI 2 (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: sofessx8336 [sof-essx8336], device 7: HDMI 3 (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker. Yah, laptop masih diam seribu bahasa. Sound Open Firmware memberikan secercah harapan. Apalagi kemudian sof-firmware masuk ke repo current. Namun sayang, laptop masih membisu. Beberapa kali upgrade kernel, alsa, pulseaudio dan pipewire, masih saja tak terdengar. Alhamdulillah kemudian menemukan solusi dari issue yang dibuat oleh junocom di github alsa-project/alsa-ucm-conf.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://sasongko.web.id/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Mengatasi Audio Tanpa Suara ES8336",
+      "item": "https://sasongko.web.id/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Mengatasi Audio Tanpa Suara ES8336",
+  "name": "Mengatasi Audio Tanpa Suara ES8336",
+  "description": "Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi\nProcessors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz Memory: 11,5 GiB of RAM Graphics Processor: Mesa Intel® UHD Graphics 600 dengan audio awalnya berupa dummy output alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.\n$ aplay -l **** List of PLAYBACK Hardware Devices **** card 0: sofessx8336 [sof-essx8336], device 0: ES8336 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 5: HDMI 1 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 6: HDMI 2 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 7: HDMI 3 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker. Yah, laptop masih diam seribu bahasa. Sound Open Firmware memberikan secercah harapan. Apalagi kemudian sof-firmware masuk ke repo current. Namun sayang, laptop masih membisu. Beberapa kali upgrade kernel, alsa, pulseaudio dan pipewire, masih saja tak terdengar. Alhamdulillah kemudian menemukan solusi dari issue yang dibuat oleh junocom di github alsa-project/alsa-ucm-conf.\n",
+  "keywords": [
+    "slackware", "hardware", "multimedia"
+  ],
+  "articleBody": "Sebenarnya sudah lama ingin menulis catatan ini, tapi berhubung baru ada kesempatan tertunda beberapa bulan. Awal tahun 2022 yang lalu, membeli laptop baru dengan spesifikasi\nProcessors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz Memory: 11,5 GiB of RAM Graphics Processor: Mesa Intel® UHD Graphics 600 dengan audio awalnya berupa dummy output alias tidak terdeteksi. Seiring waktu, ada dukungan dari kernel sehingga terdeteksi sebagai ES8336.\n$ aplay -l **** List of PLAYBACK Hardware Devices **** card 0: sofessx8336 [sof-essx8336], device 0: ES8336 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 5: HDMI 1 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 6: HDMI 2 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 card 0: sofessx8336 [sof-essx8336], device 7: HDMI 3 (*) [] Subdevices: 1/1 Subdevice #0: subdevice #0 Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari speaker. Yah, laptop masih diam seribu bahasa. Sound Open Firmware memberikan secercah harapan. Apalagi kemudian sof-firmware masuk ke repo current. Namun sayang, laptop masih membisu. Beberapa kali upgrade kernel, alsa, pulseaudio dan pipewire, masih saja tak terdengar. Alhamdulillah kemudian menemukan solusi dari issue yang dibuat oleh junocom di github alsa-project/alsa-ucm-conf.\nSolusinya adalah mengganti /usr/share/alsa/ucm2/Intel/sof-essx8336/HiFi.conf yang tersedia secara default dari alsa, dengan yang diberikan junocomp, yaitu\nSectionVerb { EnableSequence [ #disdevall \"\" # Disable all inputs / outputs # (may be duplicated with disdevall) cset \"name='Left Headphone Mixer Left DAC Switch' on\" cset \"name='Right Headphone Mixer Right DAC Switch' on\" ] } SectionDevice.\"Mic\" { Comment \"Analog Microphone\" EnableSequence [ cset \"name='Internal Mic Switch' on\" cset \"name='Headset Mic Switch' on\" ] DisableSequence [ ] Value { CapturePriority 100 CapturePCM \"hw:${CardId}\" CaptureMixerElem \"ADC PGA Gain\" CaptureMasterElem \"ADC\" } } SectionDevice.\"Speaker\" { Comment \"Speakers\" ConflictingDevice [ \"Headphones\" ] EnableSequence [ cset \"name='Speaker Switch' on\" cset \"name='Differential Mux' lin1-rin1\" ] DisableSequence [ cset \"name='Speaker Switch' off\" cset \"name='Differential Mux' lin2-rin2\" ] Value { PlaybackPriority 100 PlaybackPCM \"hw:${CardId}\" # The es8316 only has a HP-amp which is muxed to the speaker # or to the headpones output PlaybackMixerElem \"Headphone Mixer\" PlaybackMasterElem \"DAC\" } } SectionDevice.\"Headphones\" { Comment \"Headphones\" ConflictingDevice [ \"Speaker\" ] EnableSequence [ cset \"name='Headset Mic Switch' on\" cset \"name='Speaker Switch' off\" cset \"name='Differential Mux' lin2-rin2\" ] DisableSequence [ cset \"name='Differential Mux' lin1-rin1\" ] Value { PlaybackPriority 300 PlaybackPCM \"hw:${CardId}\" PlaybackMixerElem \"Headphone Mixer\" PlaybackMasterElem \"DAC\" JackControl \"Headphone Jack\" JackHWMute \"Speaker\" } } Include.hdmi.File \"/Intel/sof-essx8336/Hdmi.conf\" Dengan konfigurasi tersebut audio bisa terdengar.\n",
+  "wordCount" : "403",
+  "inLanguage": "en",
+  "datePublished": "2024-02-29T00:00:00Z",
+  "dateModified": "2024-02-29T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sasongko.web.id/post/2024-02-29-solved-mengatasi-audio-tanpa-suara-es8336/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Catatan Sasongko",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sasongko.web.id/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -92,9 +178,9 @@ Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari spea
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="blackburn (Alt + H)">blackburn</a>
+            <a href="https://sasongko.web.id/" accesskey="h" title="Catatan Sasongko (Alt + H)">Catatan Sasongko</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -118,22 +204,22 @@ Keberhasilan deteksi ini ternyata tidak diikuti dengan munculnya suara dari spea
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Home">
+                <a href="https://sasongko.web.id/" title="Home">
                     <span><i class='fa fa-home fa-fw'></i>Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/post/" title="Posts">
+                <a href="https://sasongko.web.id/post/" title="Posts">
                     <span><i class='fa fa-list fa-fw'></i>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Profil">
+                <a href="https://sasongko.web.id/about/" title="Profil">
                     <span><i class='fa fa-user fa-fw'></i>Profil</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/logo/" title="Logo">
+                <a href="https://sasongko.web.id/logo/" title="Logo">
                     <span><i class='fa fa-user fa-fw'></i>Logo</span>
                 </a>
             </li>
@@ -264,16 +350,16 @@ Graphics Processor: Mesa Intel® UHD Graphics 600
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/slackware/">Slackware</a></li>
-      <li><a href="http://localhost:1313/tags/hardware/">Hardware</a></li>
-      <li><a href="http://localhost:1313/tags/multimedia/">Multimedia</a></li>
+      <li><a href="https://sasongko.web.id/tags/slackware/">Slackware</a></li>
+      <li><a href="https://sasongko.web.id/tags/hardware/">Hardware</a></li>
+      <li><a href="https://sasongko.web.id/tags/multimedia/">Multimedia</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">blackburn</a></span> · 
+        <span>&copy; 2025 <a href="https://sasongko.web.id/">Catatan Sasongko</a></span> · 
 
     <span>
         Powered by

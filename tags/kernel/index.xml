@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Kernel on blackburn</title>
-    <link>http://localhost:1313/tags/kernel/</link>
-    <description>Recent content in Kernel on blackburn</description>
+    <title>Kernel on Catatan Sasongko</title>
+    <link>https://sasongko.web.id/tags/kernel/</link>
+    <description>Recent content in Kernel on Catatan Sasongko</description>
     <generator>Hugo -- 0.146.5</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Jul 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/kernel/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sasongko.web.id/tags/kernel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Menggunakan dhclient untuk NetworkManager</title>
-      <link>http://localhost:1313/post/2023-07-19-menggunakan-dhclient-networkmanager/</link>
+      <link>https://sasongko.web.id/post/2023-07-19-menggunakan-dhclient-networkmanager/</link>
       <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023-07-19-menggunakan-dhclient-networkmanager/</guid>
+      <guid>https://sasongko.web.id/post/2023-07-19-menggunakan-dhclient-networkmanager/</guid>
       <description>&lt;p&gt;Ada sedikit masalah ketika menggunakan kernel 6.1.38. Masalah tersebut antara lain tidak stabilnya jaringan internet bila konek via NetworkManager, usb dan bluetooth yang kadang suka diskonek sendiri. Solusi untuk masalah jaringan dan bluetooth tersebut adalah mengganti dhcpcd dengan dhclient pada konfigurasi Network Manager /etc/NetworkManager/conf.d/00-dhcp-client.conf, sesuai masukan dari Pak Walesa.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Install Sound Open Firmware</title>
-      <link>http://localhost:1313/post/2022-08-13-install-sof/</link>
+      <link>https://sasongko.web.id/post/2022-08-13-install-sof/</link>
       <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2022-08-13-install-sof/</guid>
+      <guid>https://sasongko.web.id/post/2022-08-13-install-sof/</guid>
       <description>&lt;p&gt;Langsung saja&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /opt
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/thesofproject/sof-bin.git
@@ -32,24 +32,24 @@
     </item>
     <item>
       <title>Kenggulan elilo dibanding grub</title>
-      <link>http://localhost:1313/post/2022-04-08-keunggulan-elilo-dibanding-grub/</link>
+      <link>https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/</link>
       <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2022-04-08-keunggulan-elilo-dibanding-grub/</guid>
+      <guid>https://sasongko.web.id/post/2022-04-08-keunggulan-elilo-dibanding-grub/</guid>
       <description>&lt;p&gt;Pascamigrasi dari &lt;strong&gt;elilo&lt;/strong&gt; ke &lt;strong&gt;grub&lt;/strong&gt; ada hal yang dirindukan. &lt;strong&gt;Zram&lt;/strong&gt; dengan komresi &lt;strong&gt;zstd&lt;/strong&gt;. Entah masalahnya di mana, &lt;strong&gt;zstd&lt;/strong&gt; tidak bisa digunakan untuk zram apabila menggunakan &lt;strong&gt;grub&lt;/strong&gt;. Menggunakan &lt;strong&gt;elilo&lt;/strong&gt; aman damai sentosa lanjcar jaya. Padahal &lt;strong&gt;kernel&lt;/strong&gt; dan &lt;strong&gt;initrd&lt;/strong&gt;-nya sama.&lt;/p&gt;
 &lt;p&gt;Untungnya, algoritma kompresi lainnya bisa digunakan, yaitu secara default &lt;strong&gt;lzo-rle&lt;/strong&gt;. Alhamdulillah. Dengan adanya &lt;strong&gt;zram&lt;/strong&gt; aktivitas komputasi di laptop dengan RAM hanya 2GB masih bisa dijalankan dengan lancar.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mengubah timeout grub</title>
-      <link>http://localhost:1313/post/2022-03-28-mengubah-grub-timeout/</link>
+      <link>https://sasongko.web.id/post/2022-03-28-mengubah-grub-timeout/</link>
       <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2022-03-28-mengubah-grub-timeout/</guid>
+      <guid>https://sasongko.web.id/post/2022-03-28-mengubah-grub-timeout/</guid>
       <description>&lt;p&gt;Secara default, &lt;em&gt;timeout&lt;/em&gt; &lt;strong&gt;grub&lt;/strong&gt; adalah 10 detik. Menurut penulis, 10 detik ini terlalu lama. Untuk mengubahnya ganti angka 10 ke detik yang diinginkan pada baris dengan GRUB_TIMEOUT pada file /etc/default/grub&lt;/p&gt;</description>
     </item>
     <item>
       <title>Menampilkan status penggunaan zram</title>
-      <link>http://localhost:1313/post/2022-03-27-menampilkan-status-penggunaan-zram/</link>
+      <link>https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/</link>
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2022-03-27-menampilkan-status-penggunaan-zram/</guid>
+      <guid>https://sasongko.web.id/post/2022-03-27-menampilkan-status-penggunaan-zram/</guid>
       <description>&lt;p&gt;Untuk menampilkan status penggunaan zram bisa dengan menjalankan&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# zramctl --output-all&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NAME     DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED MOUNTPOINT
@@ -71,47 +71,47 @@ MOUNTPOINT	where the device is mounted&lt;/p&gt;</description>
     </item>
     <item>
       <title>Migrasi dari elilo ke grub</title>
-      <link>http://localhost:1313/post/2022-03-26-migrasi-elilo-ke-grub/</link>
+      <link>https://sasongko.web.id/post/2022-03-26-migrasi-elilo-ke-grub/</link>
       <pubDate>Sat, 26 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2022-03-26-migrasi-elilo-ke-grub/</guid>
+      <guid>https://sasongko.web.id/post/2022-03-26-migrasi-elilo-ke-grub/</guid>
       <description>&lt;p&gt;Aktif di-&lt;em&gt;maintain&lt;/em&gt; pengembang merupakan salah satu kriteria preferensi &lt;em&gt;software&lt;/em&gt; yang penulis gunakan. &lt;em&gt;elilo&lt;/em&gt; sudah lama tidak ada aktivitas pengembangan. Debian, RHEL dan OpenSUSE juga sudah lama meninggalkannya. &lt;strong&gt;Slackware&lt;/strong&gt; adalah distro yang masih bertahan menyediakan &lt;strong&gt;elilo&lt;/strong&gt;. Terima kasih PV.&lt;/p&gt;
 &lt;p&gt;Sejak pertama menggunakan &lt;strong&gt;slackware&lt;/strong&gt; dengan sistem &lt;strong&gt;UEFI&lt;/strong&gt; sekitar 2016, &lt;strong&gt;elilo&lt;/strong&gt; penulis jadikan pilihan utama &lt;em&gt;boot loader&lt;/em&gt;. Simpel, mudah dikonfigurasi adalah alasannya. Namun, saat ini &lt;strong&gt;elilo&lt;/strong&gt; sudah tidak dikembangkan &lt;em&gt;developer&lt;/em&gt; aslinya. Mengangkat &lt;strong&gt;grub&lt;/strong&gt; sebagai suksesor &lt;strong&gt;elilo&lt;/strong&gt; bukanlah hal buruk. &lt;strong&gt;Grub&lt;/strong&gt; ini sebenarnya sudah lama terinstall dan rutin ikut di-&lt;em&gt;upgrade&lt;/em&gt; juga, tapi memang tidak digunakan. Sekarang saatnya mengaktifkannya.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Modifikasi htop</title>
-      <link>http://localhost:1313/post/2021-01-28-modifikasi-htop/</link>
+      <link>https://sasongko.web.id/post/2021-01-28-modifikasi-htop/</link>
       <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-01-28-modifikasi-htop/</guid>
+      <guid>https://sasongko.web.id/post/2021-01-28-modifikasi-htop/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Htop&lt;/strong&gt; merupakan &lt;em&gt;system monitoring tool&lt;/em&gt; yang cukup lengkap, bukan sekedar &lt;em&gt;process viewer&lt;/em&gt; yang menampilkan proses apa saja yang berjalan. Dengan &lt;strong&gt;htop&lt;/strong&gt; &lt;em&gt;user&lt;/em&gt; dapat melihat &lt;em&gt;running process&lt;/em&gt;, mencari &lt;em&gt;process&lt;/em&gt; ataupun mengakhirinya.&lt;/p&gt;
 &lt;p&gt;Secara &lt;em&gt;default&lt;/em&gt; tampilan &lt;strong&gt;htop&lt;/strong&gt; sebagai berikut&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/gambar/htop-default.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/htop-default.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Bagi penulis pribadi, informasi yang ditampilkan masih kurang. Penulis ingin menambahkan persentase baterai dan penggunaan zram. Caranya, tekan &lt;code&gt;F2&lt;/code&gt;. Perhatikan kolom paling kanan &lt;strong&gt;Available Meters&lt;/strong&gt;. Letakkan kursor di kolom tersebut, &lt;em&gt;scroll&lt;/em&gt; sampai ketemu yang diinginkan. Tekan &lt;code&gt;Enter&lt;/code&gt; untuk memilih atau menambahkan. Di sini dicontohkan &lt;strong&gt;Battery&lt;/strong&gt;. Meter tersebut telah berpindah ke &lt;strong&gt;Right column&lt;/strong&gt;/kolom sebelah kanan. Atur posisinya, apakah akan ditempatkan di kanan atau kiri (pada contoh ini kanan). Setelah itu tekan &lt;code&gt;Enter&lt;/code&gt; lagi untuk mengunci posisinya.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Aktivasi zram</title>
-      <link>http://localhost:1313/post/2021-01-26-aktivasi-zram/</link>
+      <link>https://sasongko.web.id/post/2021-01-26-aktivasi-zram/</link>
       <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-01-26-aktivasi-zram/</guid>
+      <guid>https://sasongko.web.id/post/2021-01-26-aktivasi-zram/</guid>
       <description>&lt;p&gt;Beberapa tahun ini perkembangan dunia &lt;em&gt;opensource&lt;/em&gt; bagus. Berbagai teknologi berkembang. Di antara teknologi tersebut adalah grafis yang semakin menawan, lebih tajam, dan disertai efek-efek yang sangat menarik. Perkembangan dari sisi &lt;em&gt;software&lt;/em&gt; berjalan beriringan dengan &lt;em&gt;hardware&lt;/em&gt;. Semakin tinggi spesifikasi &lt;em&gt;hardware&lt;/em&gt; semakin baik grafis yang dihasilkan. Demikian pula sebaliknya, apabila ingin &lt;em&gt;interface&lt;/em&gt; yang aduhai menawan, seyogyanya diimbangi &lt;em&gt;hardware&lt;/em&gt; yang mumpuni.&lt;/p&gt;
 &lt;p&gt;Perangkat yang penulis gunakan saat ini bisa dikatakan ketinggalan jaman. Tahun 2016, dengan RAM hanya 2 GB untuk komputasi perkantoran sehari-hari sangat layak dan bisa diandalkan. Namun, saat ini, saat kebutuhan &lt;em&gt;multitasking&lt;/em&gt; meningkat pesat, terlebih di era &lt;em&gt;work from home&lt;/em&gt; (WFH), beberapa aplikasi dijalankan sekaligus bersama-sama, apalagi ditambah dengan faktor U perangkatnya, RAM 2 GB terasa cepat penuh.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mengembalikan backlight</title>
-      <link>http://localhost:1313/post/2021-01-25-mengembalikan-intel-backlight/</link>
+      <link>https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/</link>
       <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-01-25-mengembalikan-intel-backlight/</guid>
+      <guid>https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/</guid>
       <description>&lt;p&gt;&lt;em&gt;Upgrade&lt;/em&gt; kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. &lt;em&gt;Backlight&lt;/em&gt; menjadi tidak berfungsi.  Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah &lt;code&gt;xbacklight&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ xbacklight
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;No outputs have backlight property
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img alt=&#34;&lt;em&gt;Brightness&lt;/em&gt; 100%. Mentok kanan!&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/gambar/brightness-100.png&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img alt=&#34;&lt;em&gt;Brightness&lt;/em&gt; 100%. Mentok kanan!&#34; loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/brightness-100.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Backlight&lt;/em&gt; atau &lt;em&gt;brightness&lt;/em&gt; 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).&lt;/p&gt;
 &lt;p&gt;Kebetulan, salah 1 situs yang sering penulis kunjungi, &lt;strong&gt;LinuxQuestions.Org&lt;/strong&gt; ada &lt;em&gt;thread&lt;/em&gt; yang &lt;a href=&#34;https://www.linuxquestions.org/questions/slackware-14/intel_backlight-not-working-on-current-4175688981/&#34;&gt;membahas masalah ini&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mengetahui kapan komputer dinyalakan</title>
-      <link>http://localhost:1313/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</link>
+      <link>https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</link>
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</guid>
+      <guid>https://sasongko.web.id/post/2020-12-24-mengetahui-kapan-komputer-dinyalakan/</guid>
       <description>&lt;p&gt;Untuk mengetahui kapan komputer/pc/laptop dinyalakan,gunakan &lt;strong&gt;dmesg&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ dmesg -T &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; head -1 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Fri Dec &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; 00:39:42 2020&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Linux version 5.10.2 
@@ -127,9 +127,9 @@ MOUNTPOINT	where the device is mounted&lt;/p&gt;</description>
     </item>
     <item>
       <title>Start up time kernel 5.10.2</title>
-      <link>http://localhost:1313/post/2020-12-24-startup-time-kernel-5-10-2/</link>
+      <link>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</link>
       <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2020-12-24-startup-time-kernel-5-10-2/</guid>
+      <guid>https://sasongko.web.id/post/2020-12-24-startup-time-kernel-5-10-2/</guid>
       <description>&lt;p&gt;Hanya dalam hitungan jam setelah Linus Torvalds merilis kernel 5.10, Patrick Volkerding langsung memasukkannya ke dalam &lt;em&gt;main tree&lt;/em&gt; &lt;strong&gt;slackware current&lt;/strong&gt;. Saat catatan ini dituliskan, sudah &amp;ldquo;mendarat&amp;rdquo; kernel 5.10.2. Penulis penasaran berapa lama waktu yang digunakan untuk &lt;em&gt;start up&lt;/em&gt;. Yang dimaksud &lt;em&gt;start up&lt;/em&gt; di sini adalah kondisi dari eksekusi &lt;strong&gt;elilo&lt;/strong&gt; dan &lt;strong&gt;initrd&lt;/strong&gt; sampai muncul &lt;em&gt;login prompt&lt;/em&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ dmesg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tail -5
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;   20.687205&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Segment Routing with IPv6
@@ -140,9 +140,9 @@ MOUNTPOINT	where the device is mounted&lt;/p&gt;</description>
     </item>
     <item>
       <title>Menggunakan Kernel Huge 4.14.0</title>
-      <link>http://localhost:1313/post/2017-11-22-switch-huge-kernel-4-14/</link>
+      <link>https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/</link>
       <pubDate>Wed, 22 Nov 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2017-11-22-switch-huge-kernel-4-14/</guid>
+      <guid>https://sasongko.web.id/post/2017-11-22-switch-huge-kernel-4-14/</guid>
       <description>&lt;p&gt;Melanjutkan [catatan yang lalu]({% post_url 2017-11-18-switch-generic-kernel-4-14 %}) tentang &lt;em&gt;bootloop&lt;/em&gt; apabila menggunakan kernel huge 4.14.0 sehingga harus beralih ke kernel generic. &lt;em&gt;Update&lt;/em&gt; terbaru kemarin, 21 November 2017 jam 05.05.41 UTC atau jam 12.05.41 WIB menyelesaikan masalah ini melalui &lt;em&gt;rebuilt&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;elilo&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;p&gt;Setelah &lt;em&gt;upgrade&lt;/em&gt; terutama untuk &lt;!-- raw HTML omitted --&gt;elilo&lt;!-- raw HTML omitted --&gt; jangan lupa menjalankan&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;eliloconfig
@@ -150,56 +150,56 @@ MOUNTPOINT	where the device is mounted&lt;/p&gt;</description>
     </item>
     <item>
       <title>Kernel 4.14.0 Masuk -Current, Beralih ke Kernel Generic</title>
-      <link>http://localhost:1313/post/2017-11-18-switch-generic-kernel-4-14/</link>
+      <link>https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/</link>
       <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2017-11-18-switch-generic-kernel-4-14/</guid>
+      <guid>https://sasongko.web.id/post/2017-11-18-switch-generic-kernel-4-14/</guid>
       <description>&lt;p&gt;Setelah 2 minggu, -Current kembali mendapatkan &lt;em&gt;update&lt;/em&gt; Jum&amp;rsquo;at kemarin tanggal 17 November 2017. Banyak &lt;em&gt;update&lt;/em&gt;, ada yang &lt;em&gt;upgraded, rebuilt, added,&lt;/em&gt; dan &lt;em&gt;removed&lt;/em&gt;. Salah satunya adalah masuknya kernel 4.14.0 yang merupakan kernel terbaru yang dirilis tanggal 12 November 2017 yang lalu.&lt;/p&gt;
 &lt;p&gt;Setelah &lt;em&gt;upgrade&lt;/em&gt; dan &lt;!-- raw HTML omitted --&gt;eliloconfig&lt;!-- raw HTML omitted --&gt; kemudian &lt;em&gt;restart&lt;/em&gt;, ternyata muncul masalah! &lt;em&gt;Bootloop&lt;/em&gt;!  &lt;!-- raw HTML omitted --&gt;Loading vmlinuz&amp;hellip; &lt;!-- raw HTML omitted --&gt; langsung &lt;em&gt;reboot&lt;/em&gt;. Begitu seterusnya.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Akibat Lupa eliloconfig</title>
-      <link>http://localhost:1313/post/2017-07-05-akibat-lupa-eliloconfig/</link>
+      <link>https://sasongko.web.id/post/2017-07-05-akibat-lupa-eliloconfig/</link>
       <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2017-07-05-akibat-lupa-eliloconfig/</guid>
+      <guid>https://sasongko.web.id/post/2017-07-05-akibat-lupa-eliloconfig/</guid>
       <description>&lt;p&gt;Kemarin melihat &lt;em&gt;ChangeLog&lt;/em&gt; ada beberapa &lt;em&gt;update&lt;/em&gt; yang sebagian di antaranya adalah &lt;em&gt;security fix&lt;/em&gt;. Salah satu &lt;em&gt;update&lt;/em&gt; adalah kernel. Melakukan &lt;em&gt;upgrade&lt;/em&gt; semuanya baik-baik saja dan lanjut &lt;!-- raw HTML omitted --&gt;shutdown&lt;!-- raw HTML omitted --&gt;. Siang ini, &lt;!-- raw HTML omitted --&gt;booting&lt;!-- raw HTML omitted --&gt; pun masih &lt;em&gt;fine&lt;/em&gt; dan &lt;em&gt;no problem&lt;/em&gt;. Begitu juga &lt;!-- raw HTML omitted --&gt;login&lt;!-- raw HTML omitted --&gt;. Baru terasa saat ingin masuk &lt;em&gt;desktop&lt;/em&gt; malah gagal.&lt;/p&gt;</description>
     </item>
     <item>
       <title>[SOLVED] Slackware Current Susah Booting dan Shutdown</title>
-      <link>http://localhost:1313/post/2016-05-05-solved-slackware-current-hang/</link>
+      <link>https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/</link>
       <pubDate>Thu, 05 May 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2016-05-05-solved-slackware-current-hang/</guid>
+      <guid>https://sasongko.web.id/post/2016-05-05-solved-slackware-current-hang/</guid>
       <description>&lt;p&gt;Tiga bulan lalu saya &lt;em&gt;sambat&lt;/em&gt; &lt;strong&gt;&lt;em&gt;Slackware current&lt;/em&gt;&lt;/strong&gt; [hang]({% post_url 2016-02-08-slackware-current-hang %}) saat &lt;em&gt;booting&lt;/em&gt; dan &lt;em&gt;shutdown&lt;/em&gt;. Sekarang  masalah tersebut teratasi.&lt;/p&gt;
 &lt;p&gt;Secara &lt;em&gt;default&lt;/em&gt; &lt;a href=&#34;http://www.bhinneka.com/Associate/asc_clicks.aspx?BARef=BATL150600397&amp;amp;BATrcID=linfocatatansas225204&amp;amp;CatID=02no&amp;amp;Link=http%3a%2f%2fwww.bhinneka.com%2fcategory%2fnotebook___laptop.aspx&#34;&gt;&lt;strong&gt;laptop&lt;/strong&gt;&lt;/a&gt; &lt;a href=&#34;http://www.bhinneka.com/Associate/asc_clicks.aspx?BARef=BATL150600398&amp;amp;BATrcID=linfocatatansas225204&amp;amp;Link=http%3a%2f%2fwww.bhinneka.com%2fproducts%2fsku00215793%2fasus_notebook_x453ma-bing-wx320b_-_black.aspx&#34;&gt;Asus X453MA&lt;/a&gt; diperuntukkan bagi pengguna &lt;em&gt;Microsoft Windows&lt;/em&gt;. Hal ini terlihat dari web resminya yang menyediakan &lt;em&gt;driver&lt;/em&gt; hanya untuk &lt;em&gt;Windows&lt;/em&gt; khususnya &lt;strong&gt;Windows 8.1&lt;/strong&gt; dan &lt;strong&gt;Windows 10&lt;/strong&gt;. Juga terlihat dari &amp;ldquo;paket bundling&amp;rdquo;-nya yang menyediakan &lt;em&gt;Windows preinstalled&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Sedangkan yang saya punya, sebenarnya dulu belinya sudah diinstallkan Windows 8.1 oleh pihak toko. Awalnya saya pilih kosongan aja sesuai aslinya. Tapi berhubung pihak toko menawarkan &lt;em&gt;Windows 8.1 trial&lt;/em&gt; 6 bulan dan saya kepengen icip-icip Windows 8.1 jadilah laptopnya ada Windowsnya. Nah, karena Windowsnya cuma trial, saya belum sanggup beli orinya (bajakan sih banyak yang jual) dan lebih suka pakai &lt;strong&gt;Linux&lt;/strong&gt;, Jadilah laptopnya ber-&lt;strong&gt;Slackware&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mouse Stuck</title>
-      <link>http://localhost:1313/post/2016-02-26-mouse-stuck/</link>
+      <link>https://sasongko.web.id/post/2016-02-26-mouse-stuck/</link>
       <pubDate>Fri, 26 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2016-02-26-mouse-stuck/</guid>
+      <guid>https://sasongko.web.id/post/2016-02-26-mouse-stuck/</guid>
       <description>&lt;p&gt;Setelah &lt;em&gt;upgrade current&lt;/em&gt; ternyata ada masalah dengan mouse. Mouse mengalami &lt;em&gt;stuck&lt;/em&gt;, ga ada respons saat &lt;em&gt;drag, drop&lt;/em&gt;, bahkan ga bisa klik baik klik kiri maupun kanan.
 Dari grup di &lt;em&gt;telegram&lt;/em&gt; dapat informasi dari Pak Willy hal serupa juga dialami oleh beberapa &lt;em&gt;slacker&lt;/em&gt; yang lainnya. Alhamdulillah masalah ini bisa &lt;em&gt;solved&lt;/em&gt; dengan mudahnya di Slackware64 saya.&lt;/p&gt;
 &lt;p&gt;Dengan akses root copas &lt;!-- raw HTML omitted --&gt;/lib/modprobe.d/psmouse.conf&lt;!-- raw HTML omitted --&gt; ke &lt;!-- raw HTML omitted --&gt;/etc/modprobe.d&lt;!-- raw HTML omitted --&gt;. Kemudian &lt;em&gt;uncomment&lt;/em&gt; baris terakhir.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Slackware Current Susah Booting dan Shutdown</title>
-      <link>http://localhost:1313/post/2016-02-08-slackware-current-hang/</link>
+      <link>https://sasongko.web.id/post/2016-02-08-slackware-current-hang/</link>
       <pubDate>Mon, 08 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2016-02-08-slackware-current-hang/</guid>
+      <guid>https://sasongko.web.id/post/2016-02-08-slackware-current-hang/</guid>
       <description>&lt;p&gt;Beberapa hari yang lalu (tepatnya kapan saya lupa) upgrade kernel dari 3.10.17, kernel yang dipakai Slackware64 14.1 ke kernel Current yaitu 4.4.0 (tapi saat catatan ini ditulis kernel Current sudah naik jadi 4.4.1). Upgrade kernel ini menimbulkan masalah, yaitu sering &lt;em&gt;stuck&lt;/em&gt; saat &lt;em&gt;boot&lt;/em&gt; dan &lt;em&gt;shutdown&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Masalah ini terjadi baik arsitektur x86 maupun x86_64. Pada x86 sesuai laporan dari milis &lt;em&gt;ID-Slackware&lt;/em&gt;, sedangkan pada x86_64 ini saya alami sendiri, dan setelah saya upgrade ke 4.4.1 pun belum ada perubahan berarti.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hapus Kernel Lama Debian</title>
-      <link>http://localhost:1313/post/2014-10-16-hapus-kernel-lama-debian/</link>
+      <link>https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/</link>
       <pubDate>Thu, 16 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2014-10-16-hapus-kernel-lama-debian/</guid>
+      <guid>https://sasongko.web.id/post/2014-10-16-hapus-kernel-lama-debian/</guid>
       <description>&lt;p&gt;Setelah upgrade kernel, ada yang kurang sreg. Ternyata kernelnya malah jadi ada 2. ini terlihat di grub&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/gambar/hapus-kernel-1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/hapus-kernel-1.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;OK, kernel yang lama (2.6.32-5-686) dihapus saja.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# apt-get remove linux-image-2.6.32-5-686
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;kemudian restart.&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/gambar/hapus-kernel-2.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://sasongko.web.id/gambar/hapus-kernel-2.png&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
