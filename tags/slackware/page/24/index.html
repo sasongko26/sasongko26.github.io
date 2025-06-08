@@ -10,7 +10,7 @@
 <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 <meta name="author" content="">
 <link rel="canonical" href="https://sasongko.web.id/tags/slackware/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.93f625d739f1d6a5c6f20c146bc6a8d26b233492b34b2220c54b12fd46a04ded.css" integrity="sha256-k/Yl1znx1qXG8gwUa8ao0msjNJKzSyIgxUsS/UagTe0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://sasongko.web.id/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
@@ -140,6 +140,19 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Burn iso ke dvd
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Misal, file slackware64-live-current.iso akan di-burn ke DVD. DVD terdeteksi oleh sistem sebagai /dev/sr0. Command dijalankan root.
+$ growisofs -dvd-compat -Z /dev/sr0=slackware64-live-current.iso </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-04-06 00:00:00 +0000 UTC'>06 Apr 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Burn iso ke dvd" href="https://sasongko.web.id/post/2021-04-06-burning-iso-dvd/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Transfer file dengan lftp
     </h2>
   </header>
@@ -191,22 +204,6 @@ beer_servings (konsumsi bir yang dinyatakan dalam kaleng) spirit_servings (konsu
   </div>
   <footer class="entry-footer"><span title='2021-03-25 00:00:00 +0000 UTC'>25 Mar 2021</span></footer>
   <a class="entry-link" aria-label="post link to Statistik deskriptif dengan python" href="https://sasongko.web.id/post/2021-03-25-statistik-deskriptif-dengan-python/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mengetahui struktur dataset
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Untuk menampilkan informasi struktur dataset dapat menggunakan fungsi info() dari pandas.
-Data diambil dari https://catalog.data.gov/dataset/alzheimers-disease-and-healthy-aging-data/
-#!/usr/bin/env python3 import pandas as pd data = pd.read_csv(&#34;Alzheimer_s_Disease_and_Healthy_Aging_Data.csv&#34;) print(data.info()) Outputnya
-&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt; RangeIndex: 178539 entries, 0 to 178538 Data columns (total 39 columns): # Column Non-Null Count Dtype --- ------ -------------- ----- 0 RowId 178539 non-null object 1 YearStart 178539 non-null int64 2 YearEnd 178539 non-null int64 3 LocationAbbr 178539 non-null object 4 LocationDesc 178539 non-null object 5 Datasource 178539 non-null object 6 Class 178539 non-null object 7 Topic 178539 non-null object 8 Question 178539 non-null object 9 Response 0 non-null float64 10 Data_Value_Unit 178539 non-null object 11 DataValueTypeID 178539 non-null object 12 Data_Value_Type 178539 non-null object 13 Data_Value 120885 non-null float64 14 Data_Value_Alt 0 non-null float64 15 Data_Value_Footnote_Symbol 70619 non-null object 16 Data_Value_Footnote 70619 non-null object 17 Low_Confidence_Limit 120750 non-null float64 18 High_Confidence_Limit 120750 non-null float64 19 Sample_Size 0 non-null float64 20 StratificationCategory1 178539 non-null object 21 Stratification1 178539 non-null object 22 StratificationCategory2 178539 non-null object 23 Stratification2 178539 non-null object 24 StratificationCategory3 0 non-null float64 25 Stratification3 0 non-null float64 26 Geolocation 159375 non-null object 27 ClassID 178539 non-null object 28 TopicID 178539 non-null object 29 QuestionID 178539 non-null object 30 ResponseID 0 non-null float64 31 LocationID 178539 non-null int64 32 StratificationCategoryID1 178539 non-null object 33 StratificationID1 178539 non-null object 34 StratificationCategoryID2 178539 non-null object 35 StratificationID2 178539 non-null object 36 StratificationCategoryID3 0 non-null float64 37 StratificationID3 0 non-null float64 38 Report 0 non-null float64 dtypes: float64(12), int64(3), object(24) memory usage: 53.1&#43; MB Dari output tersebut dapat diketahui antara lain:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-03-24 00:00:00 +0000 UTC'>24 Mar 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Mengetahui struktur dataset" href="https://sasongko.web.id/post/2021-03-24-mengetahui-struktur-dataset-python/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

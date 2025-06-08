@@ -4,10 +4,22 @@
     <title>Slackware on Catatan Sasongko</title>
     <link>https://sasongko.web.id/tags/slackware/</link>
     <description>Recent content in Slackware on Catatan Sasongko</description>
-    <generator>Hugo -- 0.146.5</generator>
+    <generator>Hugo -- 0.147.5</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sasongko.web.id/tags/slackware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengetahui kondisi baterai dengan inxi</title>
+      <link>https://sasongko.web.id/post/2025-06-08-mengetahui-kondisi-baterai-dengan_inxi/</link>
+      <pubDate>Sun, 08 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2025-06-08-mengetahui-kondisi-baterai-dengan_inxi/</guid>
+      <description>&lt;p&gt;Beberapa tahun yang lalu kami pernah mencatat bagaimana cara mengetahui kondisi baterai melalui &lt;em&gt;command line&lt;/em&gt; atau &lt;strong&gt;terminal&lt;/strong&gt;. Saat itu kami gunakan  &lt;strong&gt;upower&lt;/strong&gt;. Sekarang, mari kita lengkapi catatan tersebut dengan &lt;em&gt;tool&lt;/em&gt; lain, yaitu &lt;strong&gt;inxi&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Mengapa &lt;strong&gt;inxi&lt;/strong&gt;? Karena &lt;em&gt;command&lt;/em&gt;-nya lebih singkat daripada &lt;strong&gt;upower&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ inxi -B
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Battery:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ID-1: BAT0 charge: 14.7 Wh &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;38.7%&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; condition: 38.0/38.0 Wh &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;100.0%&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Output&lt;/em&gt; tersebut menunjukkan bahwa jumlah baterai i ( hanya ada ID-1) dengan daya aktif 14.7 Wh atau 38.7%. Kondisi baterai sempurna karena kapasitasnya 100%.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Fix flatpak can&#39;t open generated ld.so.cache</title>
       <link>https://sasongko.web.id/post/2025-04-21-fix-flatpak-cant-open-generated-ld-so-cache/</link>
@@ -2344,9 +2356,9 @@ matplotlib: digunakan untuk melakukan ploting atau penggambaran grafik, dapat di
     </item>
     <item>
       <title>Xfce 4.16 Masuk Current</title>
-      <link>https://sasongko.web.id/post/2020-12-28-xfce-4/</link>
+      <link>https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/</link>
       <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2020-12-28-xfce-4/</guid>
+      <guid>https://sasongko.web.id/post/2020-12-28-xfce-4.16-masuk-current/</guid>
       <description>&lt;p&gt;Pagi ini, Patrick memasukkan &lt;strong&gt;xfce 4.16&lt;/strong&gt; ke &lt;em&gt;slackware current main tree&lt;/em&gt; tanpa singgah di /testing. &lt;em&gt;Interface&lt;/em&gt; &lt;strong&gt;xfce 4.16&lt;/strong&gt; lebih cantik dan menarik dibanding sebelumnya. Demikian pula &lt;em&gt;icons&lt;/em&gt;-nya.&lt;/p&gt;
 &lt;p&gt;Sekitar satu bulan yang lalu, Patrick memasukkan ke /testing/vtown &lt;strong&gt;xfce&lt;/strong&gt; stable terbaru yaitu 4.14. Saat itu 4.16 sedang proses &lt;em&gt;development&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Ada beberapa hal yang menjadi catatan buat penulis terkait &lt;strong&gt;xfce 4.16&lt;/strong&gt; ini, yaitu&lt;/p&gt;
@@ -3263,9 +3275,9 @@ Kali ini data yang digunakan diambil dari dataset &lt;strong&gt;ldeaths&lt;/stro
     </item>
     <item>
       <title>Rilis Lumina 1.3.0</title>
-      <link>https://sasongko.web.id/post/2017-07-02-rilis-lumina-1/</link>
+      <link>https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/</link>
       <pubDate>Sun, 02 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>https://sasongko.web.id/post/2017-07-02-rilis-lumina-1/</guid>
+      <guid>https://sasongko.web.id/post/2017-07-02-rilis-lumina-1.3.0/</guid>
       <description>&lt;p&gt;Di suasana Idul Fitri, 26 Juni 2017, Ken Moore selaku &lt;em&gt;project leader&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;Lumina&lt;!-- raw HTML omitted --&gt; mengumumkan perihal rilisnya &lt;strong&gt;Lumina Desktop 1.3.0&lt;/strong&gt;. Selang 4 hari kemudian dirilis &lt;em&gt;patch&lt;/em&gt; yang pertama untuk 1.3.0. Catatan rilis resmi silahkan dibaca &lt;a href=&#34;https://lumina-desktop.org/version-1-3-0-released/&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Mungkin saja Moore tidak peduli dengan Idul Fitri, tapi bagi saya rilis kali ini tergolong istimewa. Mulai versi 1.3.0 ini &lt;!-- raw HTML omitted --&gt;lumina&lt;!-- raw HTML omitted --&gt; semakin powerfull untuk digunakan di &lt;!-- raw HTML omitted --&gt;Slackware&lt;!-- raw HTML omitted --&gt;. Sampai dengan versi 1.2.0_p1 (1.2.0 patchset 1), &lt;!-- raw HTML omitted --&gt;Restart&lt;!-- raw HTML omitted --&gt; dan &lt;!-- raw HTML omitted --&gt;Power Off&lt;!-- raw HTML omitted --&gt; pada menu sama sekali tidak berfungsi. Namun mulai 1.3.0 &lt;!-- raw HTML omitted --&gt;reboot&lt;!-- raw HTML omitted --&gt; dan &lt;!-- raw HTML omitted --&gt;shutdown&lt;!-- raw HTML omitted --&gt; sudah bisa dijalankan melalui menu.&lt;/p&gt;</description>
     </item>

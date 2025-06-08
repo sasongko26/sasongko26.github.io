@@ -10,7 +10,7 @@
 <meta name="description" content="Posts - Catatan Sasongko">
 <meta name="author" content="">
 <link rel="canonical" href="https://sasongko.web.id/post/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.93f625d739f1d6a5c6f20c146bc6a8d26b233492b34b2220c54b12fd46a04ded.css" integrity="sha256-k/Yl1znx1qXG8gwUa8ao0msjNJKzSyIgxUsS/UagTe0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://sasongko.web.id/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
@@ -155,6 +155,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Memperkecil ukuran file pdf
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Untuk memperkecil ukuran file pdf bisa mengeksekusi
+$ ps2pdf filelama.pdf filebaru.pdf Command tersebut akan membuat ukuran filebaru.pdf merupakan filelama.pdf dengan ukuran lebih kecil. Ada opsi yang bisa diberikan yang tentunya dapat digunakan sesuai kebutuhan
+-dPDFSETTINGS=/screen untuk mendapatkan ukuran yang jauh lebih kecil dengan kualitas 72 dpi. -dPDFSETTINGS=/ebooks untuk mendapatkan ukuran lebih kecil dengan kualitas 150 dpi. -dPDFSETTINGS=/prepress untuk kualitas 300 dpi. -dPDFSETTINGS=/printer untuk kualitas printer (300 dpi). -dPDFSETTINGS=/default untuk berbagai keperluan tapi kadang ukurannya tidak beda teralu jauh dengan aslinya. </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-09 00:00:00 +0000 UTC'>09 Jul 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Memperkecil ukuran file pdf" href="https://sasongko.web.id/post/2023-07-09-memperkecil-ukuran-file-pdf/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Install Guest OS Qemu
     </h2>
   </header>
@@ -203,20 +217,6 @@ $ VBoxManage convertfromraw file1.dd --format VDI file2.vdi </p>
   </div>
   <footer class="entry-footer"><span title='2023-06-10 00:00:00 +0000 UTC'>10 Jun 2023</span></footer>
   <a class="entry-link" aria-label="post link to Menggunakan tiling window KDE Plasma" href="https://sasongko.web.id/post/2022-06-10-tiling-window-kde-plasma/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">spdlog build error basic runtime
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Ketika build spdlog dari SBo ditemukan error
-n file included from /tmp/SBo/spdlog-1.11.0/include/spdlog/spdlog.h:12, from /tmp/SBo/spdlog-1.11.0/include/spdlog/spdlog-inl.h:7, from /tmp/SBo/spdlog-1.11.0/src/spdlog.cpp:8: /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:111: error: ‘basic_runtime’ is not a member of ‘fmt’ 168 | nvertible&lt;T, fmt::basic_string_view&lt;Char&gt;&gt;::value || std::is_same&lt;remove_cvref_t&lt;T&gt;, fmt::basic_runtime&lt;Char&gt;&gt;::value&gt; | ^~~~~~~~~~~~~ /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:111: error: ‘basic_runtime’ is not a member of ‘fmt’ /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:125: error: template argument 2 is invalid 168 | mt::basic_string_view&lt;Char&gt;&gt;::value || std::is_same&lt;remove_cvref_t&lt;T&gt;, fmt::basic_runtime&lt;Char&gt;&gt;::value&gt; | ^~~~ /tmp/SBo/spdlog-1.11.0/include/spdlog/common.h:168:138: error: expected ‘{’ before ‘&gt;’ token 168 | :basic_string_view&lt;Char&gt;&gt;::value || std::is_same&lt;remove_cvref_t&lt;T&gt;, fmt::basic_runtime&lt;Char&gt;&gt;::value&gt; | ^ make[2]: *** [CMakeFiles/spdlog.dir/build.make:76: CMakeFiles/spdlog.dir/src/spdlog.cpp.o] Error 1 make[1]: *** [CMakeFiles/Makefile2:100: CMakeFiles/spdlog.dir/all] Error 2 make: *** [Makefile:166: all] Error 2 Failures: spdlog: spdlog.SlackBuild return non-zero Spdlog ini mempunyai dependensi fmt. Fmt yang tersedia di current versi 10.0.0. Tapi versi ini gagal untuk build spdlog. Maka mt yang ada di current ini dihapus dan ganti dengan yang disediakan SBo (9.1.0).
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-06-03 00:00:00 +0000 UTC'>03 Jun 2023</span></footer>
-  <a class="entry-link" aria-label="post link to spdlog build error basic runtime" href="https://sasongko.web.id/post/2022-06-03-spdlog-build-error-basic-runtime/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

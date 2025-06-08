@@ -10,7 +10,7 @@
 <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 <meta name="author" content="">
 <link rel="canonical" href="https://sasongko.web.id/tags/hardware/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.93f625d739f1d6a5c6f20c146bc6a8d26b233492b34b2220c54b12fd46a04ded.css" integrity="sha256-k/Yl1znx1qXG8gwUa8ao0msjNJKzSyIgxUsS/UagTe0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://sasongko.web.id/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
@@ -140,6 +140,21 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengetahui kondisi baterai dengan inxi
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Beberapa tahun yang lalu kami pernah mencatat bagaimana cara mengetahui kondisi baterai melalui command line atau terminal. Saat itu kami gunakan upower. Sekarang, mari kita lengkapi catatan tersebut dengan tool lain, yaitu inxi.
+Mengapa inxi? Karena command-nya lebih singkat daripada upower.
+$ inxi -B Battery: ID-1: BAT0 charge: 14.7 Wh (38.7%) condition: 38.0/38.0 Wh (100.0%) Output tersebut menunjukkan bahwa jumlah baterai i ( hanya ada ID-1) dengan daya aktif 14.7 Wh atau 38.7%. Kondisi baterai sempurna karena kapasitasnya 100%.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-06-08 00:00:00 +0000 UTC'>08 Jun 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Mengetahui kondisi baterai dengan inxi" href="https://sasongko.web.id/post/2025-06-08-mengetahui-kondisi-baterai-dengan_inxi/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Mengatasi Audio Tanpa Suara ES8336
     </h2>
   </header>
@@ -195,20 +210,12 @@ Cek powertop ternyata banyak yang Bad seperti default-nya tanpa TLP. Padahal ser
   <footer class="entry-footer"><span title='2016-12-12 00:00:00 +0000 UTC'>12 Dec 2016</span></footer>
   <a class="entry-link" aria-label="post link to Enable TLP on i3wm" href="https://sasongko.web.id/post/2016-12-12-enable-tlp-on-i3/"></a>
 </article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Cek Harddisk Korup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Sewaktu booting, sekilas membaca some data may be corrupt. Untuk pesan error komplitnya belum sempat baca. Ya sudahlah setelah login langsung aja baca lognya
-dmesg | grep -i corrupt [ 19.076118] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck. Nah kan, ternyata ada kemungkinan partisi yang korup, yaitu /dev/sda1. Dan direkomendasikan untuk menjalankan fsck.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-08-17 00:00:00 +0000 UTC'>17 Aug 2016</span></footer>
-  <a class="entry-link" aria-label="post link to Cek Harddisk Korup" href="https://sasongko.web.id/post/2016-08-17-cek-harddisk-korup/"></a>
-</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://sasongko.web.id/tags/hardware/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
     </main>
     
 <footer class="footer">

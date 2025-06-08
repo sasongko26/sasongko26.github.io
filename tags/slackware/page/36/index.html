@@ -10,7 +10,7 @@
 <meta name="description" content="Catatan Penggunaan Slackware &amp; Open Source Software Lainnya">
 <meta name="author" content="">
 <link rel="canonical" href="https://sasongko.web.id/tags/slackware/">
-<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="https://sasongko.web.id/assets/css/stylesheet.93f625d739f1d6a5c6f20c146bc6a8d26b233492b34b2220c54b12fd46a04ded.css" integrity="sha256-k/Yl1znx1qXG8gwUa8ao0msjNJKzSyIgxUsS/UagTe0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://sasongko.web.id/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://sasongko.web.id/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://sasongko.web.id/favicon-32x32.png">
@@ -140,6 +140,23 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">NetworkManager device not ready
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Baru beberapa hari memakai (lagi) NetworkManager, sudah bermasalah (lagi).
+device not ready begitulah….
+Padahal network interface-nya terdeteksi semua dengan benar seperti biasanya jaman tidak pakai NetworkManager. Solusinya dari berbagai referensi (lupa mencatat linknya)
+echo &#34;managed=true&#34; &gt;&gt; /etc/NetworkManager/NetworkManager.conf Tapi, ternyata ini kemudian munculkan warning di syslog
+Aug 9 12:04:53 localhost NetworkManager[1047]: &lt;warn&gt; [1596949493.8398] config: unknown key &#39;managed&#39; in section [main] of file &#39;/etc/NetworkManager/NetworkManager.conf Ya sudah, kembalikan saja ke aslinya, dan restart (entah berapa kali restart sampai normal). Sampai sekarang belum terjadi lagi (dan semoga tidak akan terjadi lagi. Saya lelah dengan kerewelan NetworkManager).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-08-07 00:00:00 +0000 UTC'>07 Aug 2020</span></footer>
+  <a class="entry-link" aria-label="post link to NetworkManager device not ready" href="https://sasongko.web.id/post/2020-08-07-networkmanager-device-not-ready/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Bye wicd
     </h2>
   </header>
@@ -192,21 +209,6 @@ sha512sum awk uniq grep Misalkan, akan mencari adakah duplikasi file di folder D
   </div>
   <footer class="entry-footer"><span title='2020-06-01 00:00:00 +0000 UTC'>01 Jun 2020</span></footer>
   <a class="entry-link" aria-label="post link to Deteksi duplikasi file" href="https://sasongko.web.id/post/2020-06-01-deteksi-duplikasi-file/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Menggabungkan video ffmpeg
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Sebelum menggabungkan video, agar optimal, video-video yang akan digabungkan harus mempunyai frame size, frame rate, rata-rata volume dan container/format yang sama. Misalkan akan digabungkan 4 file video, yaitu
-piknik-1.mkv piknik-2.mkv piknik-3.mkv piknik-4.mkv Keempat file tersebut berada dalam folder yang sama. Kemudian mereka akan digabungkan menjadi piknik.mkv. Sebelum digabungkan, membuat list dulu bernama list-piknik yang juga berada sefolder dengan mereka berempat. List berisi video yang akan digabung.
-$ vim list-piknik file &#39;piknik-1.mkv&#39; file &#39;piknik-2.mkv&#39; file &#39;piknik-3.mkv&#39; file &#39;piknik-4.mkv&#39; Untuk menggabungnya
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-05-30 00:00:00 +0000 UTC'>30 May 2020</span></footer>
-  <a class="entry-link" aria-label="post link to Menggabungkan video ffmpeg" href="https://sasongko.web.id/post/2020-05-30-menggabungkan-video/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
