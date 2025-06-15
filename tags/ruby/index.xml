@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ruby on Catatan Sasongko</title>
+    <link>https://sasongko.web.id/tags/ruby/</link>
+    <description>Recent content in Ruby on Catatan Sasongko</description>
+    <generator>Hugo -- 0.147.5</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sasongko.web.id/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Could not find in locally installed gem</title>
+      <link>https://sasongko.web.id/post/2025-06-15-jekyll--coul-not-find-in-locally-installed-gem/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://sasongko.web.id/post/2025-06-15-jekyll--coul-not-find-in-locally-installed-gem/</guid>
+      <description>&lt;p&gt;Ketika akan menjalankan blog secara lokal yang menggunakan &lt;em&gt;jekyll&lt;/em&gt; ternyata muncul &lt;em&gt;error&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; jekyll serve
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Could not find uri-1.0.2 in locally installed gems
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Run &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;bundle install&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; to install missing gems.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kemudian mengikuti saran yang diberikan, masih tetap error.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ bundle install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Because your Gemfile specifies no global remote source, your bundle is locked to uri &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1.0.2&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; from locally installed gems. However, uri &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1.0.2&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; is not installed. You&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;ll need to either add a global remote &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; to your Gemfile or make sure uri &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1.0.2&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; is available locally before rerunning
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Bundler.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Solusinya:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -155,13 +155,28 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Could not find in locally installed gem
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Ketika akan menjalankan blog secara lokal yang menggunakan jekyll ternyata muncul error.
+$ bundle exec jekyll serve Could not find uri-1.0.2 in locally installed gems Run `bundle install` to install missing gems. Kemudian mengikuti saran yang diberikan, masih tetap error.
+$ bundle install Because your Gemfile specifies no global remote source, your bundle is locked to uri (1.0.2) from locally installed gems. However, uri (1.0.2) is not installed. You&#39;ll need to either add a global remote source to your Gemfile or make sure uri (1.0.2) is available locally before rerunning Bundler. Solusinya:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-06-15 00:00:00 +0000 UTC'>15 Jun 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Could not find in locally installed gem" href="https://sasongko.web.id/post/2025-06-15-jekyll--coul-not-find-in-locally-installed-gem/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Mengetahui kondisi baterai dengan inxi
     </h2>
   </header>
   <div class="entry-content">
     <p>Beberapa tahun yang lalu kami pernah mencatat bagaimana cara mengetahui kondisi baterai melalui command line atau terminal. Saat itu kami gunakan upower. Sekarang, mari kita lengkapi catatan tersebut dengan tool lain, yaitu inxi.
 Mengapa inxi? Karena command-nya lebih singkat daripada upower.
-$ inxi -B Battery: ID-1: BAT0 charge: 14.7 Wh (38.7%) condition: 38.0/38.0 Wh (100.0%) Output tersebut menunjukkan bahwa jumlah baterai i ( hanya ada ID-1) dengan daya aktif 14.7 Wh atau 38.7%. Kondisi baterai sempurna karena kapasitasnya 100%.
+$ inxi -B Battery: ID-1: BAT0 charge: 14.7 Wh (38.7%) condition: 38.0/38.0 Wh (100.0%) Output tersebut menunjukkan bahwa jumlah baterai 1 ( hanya ada ID-1) dengan daya aktif 14.7 Wh atau 38.7%. Kondisi baterai sempurna karena kapasitasnya 100%.
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-06-08 00:00:00 +0000 UTC'>08 Jun 2025</span></footer>
@@ -212,21 +227,6 @@ wpctl get-volume 70 Angka 70 di atas adalah ID. Bisa berbeda antara satu dan lai
   </div>
   <footer class="entry-footer"><span title='2025-01-15 00:00:00 +0000 UTC'>15 Jan 2025</span></footer>
   <a class="entry-link" aria-label="post link to Pengaturan volume audio melalui terminal" href="https://sasongko.web.id/post/2025-01-15-mengatur-volume-audio-terminal/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Kooha failed to start recording
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Sewaktu akan merekam layar dengan kooha muncul error
-Failed to start recording Caused by: 0: Failed to initialize pipeline state to playing 1: Element failed to change its state Tidak ada penjelasan lebih detil terkait error ini. Browsing ke sana kemari, termasuk github kooha mendapatkan petunjuk: direktori penyimpanan tidak ada. Cek pengaturan penyimpanan di ~/Videos/Kooha. Direktor ini beberapa hari lalu kami hapus. Coba membuat kembali direktorinya
-mkdir Videos/Kooha Perekaman layar dengan kooha berjalan lancar seperti yang semula diharapkan.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-14 00:00:00 +0000 UTC'>14 Jan 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Kooha failed to start recording" href="https://sasongko.web.id/post/2025-01-14-kooha-failed-to-start-recording/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

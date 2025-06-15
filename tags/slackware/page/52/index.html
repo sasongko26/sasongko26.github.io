@@ -140,6 +140,20 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Nonaktifkan Penghapusan Unduhan Slackpkg
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Secara default, slackpkg akan menghapus semua file yang di- download / unduh untuk melakukan install/upgrade paket segera setelah paket tersebut terinstall/upgrade. Ini terlihat dari file konfigurasinya yang terletak di /etc/slackpkg/slackpkg.conf pada baris 77
+DELALL=on Keuntungan dari konfigurasi ini menghemat ruang harddisk. Tapi saya lebih suka menonaktifkan fitur penghapusan ini. Jadi, pada bagian tersebut saya ubah on menjadi off.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-09-10 00:00:00 +0000 UTC'>10 Sep 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Nonaktifkan Penghapusan Unduhan Slackpkg" href="https://sasongko.web.id/post/2016-09-10-nonaktif-delall-slackpkg/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Cek Harddisk Korup
     </h2>
   </header>
@@ -194,20 +208,6 @@ Untuk mengetahui berapa persen brightness yang digunakan saat ini xbacklight. Se
   </div>
   <footer class="entry-footer"><span title='2016-07-10 00:00:00 +0000 UTC'>10 Jul 2016</span></footer>
   <a class="entry-link" aria-label="post link to Set Default Brightness" href="https://sasongko.web.id/post/2016-07-10-set-default-brightness/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Virtual Manager unable to connect to libvirt
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Melanjutkan [catatan kemarin]({% post_url 2016-07-04-virtmanager-no-module-requests %}), ternyata Virtual Manager belum bisa berjalan dengan baik. Sudah ada kemajuan sih dibanding yang kemarin, sudah bisa terbuka graphical front-end-nya, tapi ternyata kemudian muncul kotak dialog Virtual Machine Manager Connection Failure dengan detail sebagai berikut
-Unable to connect to libvirt. internal error: Cannot find suitable emulator for x86_64 Libvirt URI is: qemu:///system Traceback (most recent call last): File &#34;/usr/share/virt-manager/virtManager/connection.py&#34;, line 979, in _open_thread self._populate_initial_state() File &#34;/usr/share/virt-manager/virtManager/connection.py&#34;, line 941, in _populate_initial_state logging.debug(&#34;conn version=%s&#34;, self._backend.conn_version()) File &#34;/usr/share/virt-manager/virtinst/connection.py&#34;, line 316, in conn_version self._conn_version = self._libvirtconn.getVersion() File &#34;/usr/lib64/python2.7/site-packages/libvirt.py&#34;, line 3984, in getVersion if ret == -1: raise libvirtError (&#39;virConnectGetVersion() failed&#39;, conn=self) libvirtError: internal error: Cannot find suitable emulator for x86_64 Cek qemu apakah masih terinstall atau tidak. Harusnya sih memang terinstall karena saya belum pernah menghapusnya.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-07-05 00:00:00 +0000 UTC'>05 Jul 2016</span></footer>
-  <a class="entry-link" aria-label="post link to Virtual Manager unable to connect to libvirt" href="https://sasongko.web.id/post/2016-07-05-virtmanager-unable-to-connect-to-libvirt/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

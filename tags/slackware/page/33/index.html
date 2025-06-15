@@ -140,6 +140,21 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Mengembalikan backlight
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Upgrade kernel dari 5.10.2 ke 5.10.10 menimbulkan efek samping. Backlight menjadi tidak berfungsi. Padahal salah satu yang penulis jalankan otomatis ketika masuk ke X adalah xbacklight.
+$ xbacklight No outputs have backlight property Backlight atau brightness 100% terlalu terang, membuat mata lebih mudah lelah dan membutuhkan daya lebih banyak (baca: baterai laptop cepat habis).
+Kebetulan, salah 1 situs yang sering penulis kunjungi, LinuxQuestions.Org ada thread yang membahas masalah ini.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-25 00:00:00 +0000 UTC'>25 Jan 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Mengembalikan backlight" href="https://sasongko.web.id/post/2021-01-25-mengembalikan-intel-backlight/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Mengetahui isi file tar archive
     </h2>
   </header>
@@ -195,23 +210,6 @@ $ slackpkg file-search libicuuc.so Looking for libicuuc.so in package list. Plea
   </div>
   <footer class="entry-footer"><span title='2021-01-13 00:00:00 +0000 UTC'>13 Jan 2021</span></footer>
   <a class="entry-link" aria-label="post link to Rebuild R post-upgrade icu4c" href="https://sasongko.web.id/post/2021-01-13-rebuild-r-post-upgrade-icu4c/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Ekstraksi waktu pada changelog dengan sed
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Ini adalah keisengan di kala WFH alias work from home. Melakukan ekstraksi waktu pada changelog slackware64-current yang terakhir kami update 8 Januari 2021.
-Changelognya terdiri dari 4 bagian:
-Waktu Packages yang mengalami perubahan (Upgraded, Removed, Added, Rebuilt) Keterangan perubahan Pembatas update antarwaktu (&#43;————————–&#43;) Akan diambil yang no.1 saja.
-Hapus semua baris. Yang berawalan Sun, Mon, Tue, Wed, Thu, Fri, Sat jangan hapus. Kemudian hasilnya dibuat file baru bernama changelog-date.txt.
-$ sed &#39;/^(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/!d&#39; /var/lib/slackpkg/ChangeLog.txt &gt; changelog-date.txt Hapus semua baris yang berakhiran dengan tanda titik.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-01-12 00:00:00 +0000 UTC'>12 Jan 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Ekstraksi waktu pada changelog dengan sed" href="https://sasongko.web.id/post/2021-01-12-ekstraksi-waktu-changelog-sed/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
