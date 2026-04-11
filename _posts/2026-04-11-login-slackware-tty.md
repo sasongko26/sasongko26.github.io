@@ -10,11 +10,11 @@ Welcome to Linux 6.18.18 (tty1)
 darkstar login:
 ```
 
-"Sambutan" `Welcome to` diikuti dengan `Linux`, `6.18.18', dan `(tty1)`.  `Linux` adalah nama kernel yang aktif, `6.18.18` aalah versi kernel, dan `(tty1)` menunjukkan _teletypewriter_ yang aktif.
+"Sambutan" `Welcome to` diikuti dengan `Linux`, `6.18.18`, dan `(tty1)`.  `Linux` adalah nama kernel yang aktif, `6.18.18` adalah versi kernel, dan `(tty1)` menunjukkan _teletypewriter_ yang aktif.
 
 Baris berikutnya, `darkstar` adalah _hostname_ yang dituliskan saat install. Kemudian _login prompt_ `login:`. Kursor otomatis ditempatkan di sebelah kanan _login prompt_ ini. Masukkan _username_ kemudian `enter`.
 
-Kemudian muncul `password:' dan masukkan _password_-nya. Loh, kok kosong? Tidak ada tulisan yang terlihat, entah itu huruf, angka, ataupun asterisk layaknya kalau menuliskan _password_! _Keyboard_ tidak berfungsi? Install lancar tapi mengapa _login_ jadi kacau begini?
+Kemudian muncul `password:` dan masukkan _password_-nya. Loh, kok kosong? Tidak ada tulisan yang terlihat, entah itu huruf, angka, ataupun asterisk layaknya kalau menuliskan _password_! _Keyboard_ tidak berfungsi? Install lancar tapi mengapa _login_ jadi kacau begini?
 
 Pengguna baru, atau yang mencoba sebelum membaca-baca dokumentasi, mungkin akan panik. Inilah yang kami alami saat pertama kali menggunakan **slackware**. Sebelumnya kami memakai **BlankOn** dan di kantor (sama seperti kantor pada umumnya) _Microsoft Windows_ yang tampilannya grafis. Pindah **slackware** jadi _njegleg_ dalam bahasa Jawa. Orang Inggris menyebutnya _jetlag_.
 
