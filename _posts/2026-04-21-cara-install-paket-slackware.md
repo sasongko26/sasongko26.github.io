@@ -8,7 +8,7 @@ _Banyak jalan menuju Roma_. Peribahasa ini sangat cocok untuk menggambarkan inst
 
 1. Menggunakan `slackpkg install` atau `slackpkg install-new` jika termasuk paket standar, paket yang secara resmi ada di repo **slackware**.
 2. Menggunakan `pkgtool` atau `installpkg` untuk paket biner baik itu paket standar maupun komunitas.
-3. Menggunskan _slackbuilds_
-4. Kompilasi sendiri dari kode sumber tanpa _slackbuilds_.
+3. Menggunakan _slackbuilds_
+4. Kompilasi sendiri dari kode sumber tanpa [_slackbuilds_]({% post_url 2026-04-20-mengenal-slackbuild %}).
 
-_Step by step_ cara tersebut insyaalah di catatan berikutnya.
+_Step by step_ cara tersebut insyaallah di catatan berikutnya.
