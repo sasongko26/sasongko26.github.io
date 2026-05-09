@@ -1,0 +1,12 @@
+---
+date: 2026-04-27
+title: Apakah pengguna linux adalah hacker
+categories: [promosi]
+---
+Ada kesalahpahaman di masyarakat bahwa _linuxer_ atau pengguna linux adalah _hacker_. _Linuxer_ adalah pengguna linux, mereka yang menggunakan linux untuk memenuhi kebutuhannya terutama dalam hal komputasi atau berkomputer. Predikat _hacker_ awalnya disematkan kepada orang yang kreatif dalam bidang pemrograman komputer. Mereka memiliki pemahaman dan _skills_ tingkat tinggi, sehingga mampu mengeksplorasi dan mengatasi masalah pada sistem komputer. Pemahaman dan _skills_ tingkat tinggi inilah yang menyebabkan mereka seringkali tampak berpikir dan bertindak _out of the box_ bila dibandingkan orang lain. Sama sekali tidak ada kaitannya dengan dunia kriminal.
+
+_Linuxer_ memiliki pemahaman dan _skills_ yang bervariasi. Banyak dari _linuxer_ yang hanya bisa mengoperasikan linuxnya dalam mode desktop/grafis. Mereka umumnya adalah _linuxer_ pemula. Sangat banyak _linuxer_ yang merangkap sebagai **macan terminal** karena sama sekali tidak canggung bekerja dengan tampilan _command line interface_. Sebagian _linuxer_ menggunakan _linux_ untuk membuat surat, laporan keuangan, presentasi, mengirim email, mendengarkan lagu, memutar video/film, menggambar ataupun edit gambar/video. Sebagian _linuxer_ pekerjaan sehari-harinya adalah _programmer_ yang dituntut untuk memiliki pemahaman dan _skills_ pemrograman yang tinggi.
+
+Kembali ke judul, apakah _linuxer_ adalah _hacker_? Ya, sebagian. Karena hanya sebagian, kita tidak bisa _gebyah uyah_ atau menggeneralisir bahwa pengguna linux adalah _hacker_.
+
+Lalu, apakah linux cocok untuk masyarakat umum? Sangat cocok. Banyak distro linux bertebaran di dunia ini untuk mengakomodir kebutuhan dan selera yang sangat bervariasi. Bolehkah masyarakat umum memakai **slackware**? Jelas boleh! **Slackware** membuat kita mau belajar. Saat awal, semua _linuxer_ pasti belajar, termasuk _slackers_. Seiring waktu, _slackers_ tidak perlu menghabiskan waktu berjam-jam seharian untuk mempelajari bagaimana menggunakan **slackware** karena kalau sudah ada pengalaman biasanya langsung pakai saja beres. Kalau ada masalah biasanya sudah refleks apa yang seharusnya dilakukan atau bertanya kemana.
