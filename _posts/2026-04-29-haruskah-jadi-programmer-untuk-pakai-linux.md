@@ -1,0 +1,8 @@
+---
+date: 2026-04-29
+title: Haruskah menjadi programmer untuk memakai linux
+categories: [promosi]
+---
+"Apakah linux hanya boleh dipakai _programmer_?" Jawabannya: tidak! **Linux** banyak distronya. Ada distro yang bisa dipakai langsung oleh masyarakat umum seperti _mxlinux, ubuntu_ dan _linux mint_. Ada juga yang butuh tambahan pengetahuan dan _skills_ agar sangat nyaman menggunakannya seperti **slackware, archlinux** dan **gentoo**.
+
+"Apakah _programmer_ harus pakai _linux_?" Tentu saja, tidak! _Linux_ khususnya **slackware** secara _default_ menyediakan _tools_ atau _software_ dasar yang cukup lengkap bagi _programmer_. Semangat kemerdekaan (_freedom_) yang diusung menjadikan tidak ada keharusan untuk memakai _linux_. Seandaianya, kita membeli laptop, toko sudah menginstallkan _linux_ di laptop tersebut, hak kita tetap dihormati. Karena kita beli laptop, tentunya perlakuan kita atas laptop itu adalah kewenangan kita. Kita mau menggunakan laptop untuk apa juga adalah hak kita. Ya, _linux_ memberikan _freedom_, kebebasan, kemerdekaan kepada masyarakat. Ingin pakai silakan. Tidak pakai juga tidak mengapa, itu hak masyarakat. Tidak boleh dipaksa harus menggunakan sistem operasi tertentu. Demikian juga bagi _programmer_. _Linux_ sudah menyediakan banyak _tools_ berbagai bahasa pemrograman. Mau dipakai silakan, tidak juga boleh. Tidak ada paksaan. Dalam kenyataannya pun, _programmer_ ada yang pakai bukan linux, dan itu sah. Tentu saja mereka yang pakai linux juga tidak boleh dikucilkan, diremehken, di-_bully_, ataupun  dijauhi karena dianggap _hacker_.
