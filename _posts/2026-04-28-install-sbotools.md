@@ -48,4 +48,10 @@ Filenya adalah `/tmp/sbotools-4.1.4-noarch-1_SBo.tgz`.
 installpkg /tmp/sbotools-4.1.4-noarch-1_SBo.tgz
 ```
 
+9. Opsional, tapi sangat dianjurkan jika sudah install versi lama dari sbotools (versi 2.9.3). Memperbarui konfigurasi _default_ agar bisa berjalan di **slackware** 15.0 dan -_current_.
+```bash
+slackpkg new-config
+```
+Kemudian pilih O untuk memakai konfigurasi baru.
+
 Selesai, **sbotools** terinstall.
