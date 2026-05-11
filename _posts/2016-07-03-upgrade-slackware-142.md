@@ -1,6 +1,6 @@
 ---
 date: 2016-07-03
-title: "Upgrade slackware 14.2"
+title: Upgrade slackware 14.2
 categories: [manajemen paket]
 ---
 Sehubungan dengan telah rilisnya **Slackware 14.2** maka silahkan melakukan *upgrade* untuk mendapatkan keamanan yang lebih bagus dan fitur-fitur baru. Saya selama ini melakukan ***upgrade* bertahap demi penghematan kuota internet**. Dimulai dengan upgrade ke *current* karena saat itu versi *stable* yang baru (14.2) masih dalam proses pengembangan. *Upgrade* ini menggunakan slackpkg. Dan tentu saja membutuhkan sambungan internet.
