@@ -29,20 +29,6 @@ Terus bagaimana?
 
 Install python-requests melalui sbopkg
 
-<div class="highlight">
-
-``` chroma
+```bash
 sbopkg -i python-requests
 ```
-
-</div>
-
-</div>
-
-- [Slackware](https://sasongko.web.id/tags/slackware/)
-- [Virtual Manager](https://sasongko.web.id/tags/virtual-manager/)
-- [Qemu](https://sasongko.web.id/tags/qemu/)
-- [Python](https://sasongko.web.id/tags/python/)
-- [Virtualisasi](https://sasongko.web.id/tags/virtualisasi/)
-
-</div>
