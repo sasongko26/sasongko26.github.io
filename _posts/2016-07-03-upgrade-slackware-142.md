@@ -12,5 +12,5 @@ Sehubungan dengan telah rilisnya **Slackware 14.2** maka silahkan melakukan *upg
 5.  Setelah *upgrade* slackpkg pilih repo lagi karena ada perubahan alamat/URL repo kemudian *update* lagi.
 6.  Lanjut install paket-paket baru yang sebelumnya tidak ada : slackpkg install-new
 7.  *Upgrade* sistem : slackpkg upgrade-all. Akan ditampilkan paket yang bisa di-*upgrade*. Hilangkan tanda bintangnya dengan menekan tombol spasi bila tidak ingin paket tersebut di-*upgrade* kemudian OK.
-8.  Hapus paket yang tidak berguna. Paket yang perlu dihapus dan berbagai perubahan dari Slackware 14.1 ke 14.2 bisa dilihat [di sini](http://repo.ukdw.ac.id/slackware/slackware64-14.2/CHANGES_AND_HINTS.TXT) : slackpkg remove
+8.  Hapus paket yang tidak berguna. Paket yang perlu dihapus dan berbagai perubahan dari Slackware 14.1 ke 14.2 bisa dilihat CHANGES_AND_HINTS.TXT : slackpkg remove
 9.  Karena ada pergantian kernel, jangan lupa konfigurasi ulang *boot loader* itu lilo atau elilo. Kalau menggunakan lilo : liloconfig. Kalau menggunakan elilo : eliloconfig
