@@ -4,7 +4,7 @@ title: VirtManager no module request
 categories: [virtualisasi]
 tags: [virt manager]
 ---
-Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds %}) kemarin ternyata **Virtual Machine Manager** tidak bisa dijalankan.
+Setelah [upgrade slackbuilds]({% post_url 2016-07-03-upgrade-slackbuilds-post-slackware-142 %}) kemarin ternyata **Virtual Machine Manager** tidak bisa dijalankan.
 
 ```bash
 virt-manager
