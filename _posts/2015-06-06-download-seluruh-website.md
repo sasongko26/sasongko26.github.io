@@ -4,7 +4,7 @@ title: Download seluruh isi website
 categories: [jaringan]
 tags: [wget]
 ---
-Melanjutkan [catatan yang lalu]({% post_url 2014-03-23-wget-linux-download-manager %}), kali ini adalah penggunaan wget untuk mengunduh/download website secara keseluruhan/rekursif.
+Melanjutkan [catatan yang lalu]({% post_url 2014-03-23-menggunakan-wget-download-manager %}), kali ini adalah penggunaan wget untuk mengunduh/download website secara keseluruhan/rekursif.
 
 ```shell
 wget -r url
