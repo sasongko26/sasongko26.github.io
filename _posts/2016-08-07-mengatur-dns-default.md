@@ -8,7 +8,7 @@ Secara *default*, DNS atau *Domain Name Server* yang digunakan adalah DNS dari o
 
 Penggantian DNS ini ada 2 cara, yaitu manual dan otomatis.
 
-Cara manual dengan menyunting berkas /etc/resolv.conf. Mengganti *nameserver* yang ada dengan *nameserver* yang diinginkan. Salah satu penyedia DNS penapisan situs negatif adalah [Nawala](http://nawala.id). *Nameserver* nya adalah:
+Cara manual dengan menyunting berkas /etc/resolv.conf. Mengganti *nameserver* yang ada dengan *nameserver* yang diinginkan. Salah satu penyedia DNS penapisan situs negatif adalah Nawala http://nawala.id. *Nameserver* nya adalah:
 
 - 180.131.144.144
 - 180.131.145.145
