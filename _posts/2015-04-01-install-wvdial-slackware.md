@@ -15,13 +15,13 @@ Kita akan unduh dari sini
 
 WvStreams :
 
-- Slackbuild : <http://slackbuilds.org/slackbuilds/14.1/libraries/wvstreams.tar.gz>
-- Source code : <http://wvstreams.googlecode.com/files/wvstreams-4.6.1.tar.gz>
+- Slackbuild : http://slackbuilds.org/slackbuilds/14.1/libraries/wvstreams.tar.gz
+- Source code : http://wvstreams.googlecode.com/files/wvstreams-4.6.1.tar.gz
 
 WvDial :
 
-- Slackbuild : <http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tar.gz>
-- Source code : [http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tar.gz](http://wvstreams.googlecode.com/files/wvdial-1.61.tar.gz)
+- Slackbuild : http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tar.gz
+- Source code : http://slackbuilds.org/slackbuilds/14.1/network/wvdial.tarhttp://wvstreams.googlecode.com/files/wvdial-1.61.tar.gz
 
 Kemudian masuk ke /usr/local/src
 
