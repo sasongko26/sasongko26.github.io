@@ -2,7 +2,7 @@
 date: 2014-03-23
 title: Menggunakan wget download manager
 categories: [jaringan]
-tags:[wget]
+tags: [wget]
 ---
 Wget adalah download manager di linux. Secara default wget sudah terpasang dan bisa langsung digunakan. Wget sangat cocok digunakan untuk koneksi yang putus-nyambung-putus-nyambung-putus-nyambung atau keterbatasan kuota karena memiliki fitur resume. Cara menggunakannya mudah.
 
