@@ -1,5 +1,5 @@
 ---
-date; 2017-01-08
+date: 2017-01-08
 title: Enkripsi File dengan OpenSSL
 categories: [keamanan, forensik]
 tags: [openssl]
