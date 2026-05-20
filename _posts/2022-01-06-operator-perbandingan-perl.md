@@ -17,6 +17,7 @@ Operator perbandingan digunakan untuk membandingkan nilai. Data/nilai yang diban
 |\$a != \$b | \$a tidak sama dengan \$b \|
 
 # Perbandingan string
+
 |Contoh penulisan |Penjelasan |
 |\$a lt \$b | \$a lebih kecil dari \$b |
 |\$a gt \$b | \$a lebih besar dari \$b | 
