@@ -1,5 +1,5 @@
 ---
-date: 2029-04-30
+date: 2026-04-30
 title: Pentingnya update software
 categories: [promosi]
 tags: [keamanan]
