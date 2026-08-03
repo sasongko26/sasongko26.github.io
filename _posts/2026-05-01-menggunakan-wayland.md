@@ -7,8 +7,8 @@ categories: [desktop]
 
 Berikut adalah beberapa _software_ yang kami gunakan
 
-1. _Compositor_: labwc dengan waybar sebagai panel
-2. Terminal emulator: foot
+1. _Compositor_: labwc dengan [waybar]({% post_url 2026-05-02-install-waybar %}) sebagai panel
+2. Terminal emulator: [foot]({% post_url 2026-05-03-install-foot %})
 3. Text editor: emacs (build dengan pgtk)
 4. File manager: PCMan FM
 5. Image viewer: imv
