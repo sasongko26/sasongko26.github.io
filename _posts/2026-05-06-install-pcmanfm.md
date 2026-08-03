@@ -4,7 +4,7 @@ title: Install PCManFM
 categories: [desktop]
 tags: [file manager]
 ---
-_File manager_ memudahkan kita dalam manajemen file. Aktivitas seperti pembuatan file baru, _copas_, rename, delete, melihat cuplikan file, bisa menjadi lebih mudah. **PCManFM** berbasis GTK+3, sangat cepat dan ringan. Installnya mudah karena tersedia di SBo.
+_File manager_ memudahkan kita dalam manajemen file. Aktivitas seperti pembuatan file baru, _copas_, rename, delete, melihat cuplikan file, bisa menjadi lebih mudah. **PCManFM** berbasis GTK+3, sangat cepat dan ringan. Installnya mudah karena tersedia di [SBo]({% post_url 2026-04-26-mengenal-sbo %}).
 
 ```shell
 sboinstall pcmanfm
