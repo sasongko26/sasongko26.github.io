@@ -4,7 +4,7 @@ title: Menggunakan labwc
 categories: [desktop]
 tags: [labwc, wayland]
 ---
-Kalau kita mencari _wayland compositor_ yang ringan dan bisa _stacking_ maka **labwc** adalah jawabannya. Apalagi **Slackware** menyediakannya sebagai paket resmi menunjukkan **labwc** bukanlah _project_ sembarangan. Instalasi mudah. Begitu juga penggunaannya.
+Kalau kita mencari _wayland compositor_ yang ringan dan bisa _stacking_ maka **labwc** adalah jawabannya. Apalagi **Slackware** menyediakannya sebagai paket resmi (saat catatan ini ditulis aada di  _current_) menunjukkan **labwc** bukanlah _project_ sembarangan. Instalasi mudah. Begitu juga penggunaannya.
 
 Biasanya, _slackers_ menggunakan **labwc** untuk meningkatkan _user experience_ saat menjalankan _xfce on wayland_. Ya, dukungan wayland di xfce memang masih terbatas, tetapi arah ke sana sudah ada. 
 
@@ -24,14 +24,14 @@ dbus-run-session labwc
 
 Konfigurasi berada di di ~/.config. Jika direktori ini kosong sangat mungkin **labwc** yang dijalankan hanya akan menampilkan _blackscreen_. Klak-klik _mouse_ sana-sini juga tidak menghasilkan apa-apa. Terdapat 2 file utama yang seharusnya ada di direktori ini: autostart dan rc.xml.
 
-**labwc** akan menjalankan autostart segera setelah **labwc** start. Karena suka ada bar atau panel saya masukkan waybar ke autostart. 
+**labwc** akan menjalankan autostart segera setelah **labwc** start. Karena suka ada bar atau panel saya masukkan [waybar]({% post_url 2026-05-02-install-waybar %}) ke autostart. 
 
 ```shell
 #!/bin/bash
 waybar &
 fuzzel --daemon & > /dev/null &
 ```
-Untuk memudahkan menjalankan aplikasi saya juga memasukkan fuzzel ke autostart.
+Untuk memudahkan menjalankan aplikasi saya juga memasukkan [fuzzel]({% post_url 2026-05-05-install-fuzzel %}) ke autostart.
 
 Pengaturan berikutnya adalah tentang bagaimana membuat tombol pintasan keyboard. Pengaturan ini ada di rc.xml. Berikut contohnya
 
@@ -75,4 +75,3 @@ Pengaturan berikutnya adalah tentang bagaimana membuat tombol pintasan keyboard.
   </keyboard>
 </labwc_config>
 ```
-
