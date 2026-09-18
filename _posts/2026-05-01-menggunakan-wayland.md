@@ -14,7 +14,7 @@ Berikut adalah beberapa _software_ yang kami gunakan
 5. Image viewer: imv
 6. Video player: mpv
 7. Audio player: audacious
-8. Web browser: helium
+8. Web browser: [helium]({% post_url 2026-05-07-install-helium %})
 9. PDF viewer: zathura
 10. Pengolah spreadsheet: gnumeric
 11. Launcher: [fuzzel]({% post_url 2026-05-05-install-fuzzel %})
