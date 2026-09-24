@@ -1,8 +1,8 @@
 ---
 date: 2021-03-20
 title: Menampilkan data baris pertama python
-categories: [python, statistika]
-tags: [pandas]
+categories: [sains data]
+tags: [python, pandas]
 ---
 Untuk menampilkan data baris pertama dengan python dapat menggunakan fungsi head() dari **pandas**. Tuliskan banyaknya baris yang akan ditampilkan (n) dalam tanda kurung. Kalau n tidak ditulis maka secara default n=5.
 

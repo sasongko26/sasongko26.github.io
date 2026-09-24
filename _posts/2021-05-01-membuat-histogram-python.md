@@ -1,8 +1,8 @@
 ---
 date: 2021-05-01
 title: Membuat histogram dengan python
-categories: [statistika]
-tags: [python]
+categories: [sains data]
+tags: [python, matplotlib, pandas]
 ---
 
 Untuk membuat **histogram** dengan **python** dibutuhkan library **pandas** dan **matplotlib** dengan fungsi <code>.hist()</code> dan rangkaiannya seperti contoh histogram konsumsi bir berikut:

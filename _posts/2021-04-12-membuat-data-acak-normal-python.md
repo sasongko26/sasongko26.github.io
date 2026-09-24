@@ -1,7 +1,7 @@
 ---
 date: 2021-04-12
 title: Membuat data acak berdistribusi normal
-categories: [statistika]
+categories: [sains data]
 tags: [python]
 ---
 Catatan sebelumnya tentang bagaimana membuat data secara acak dengan python, kali ini hampir sama. Bedanya, data yang dibuat berasal dari distribusi Gaussian (distribusi normal). Akan dibuat data dengan besar sampel 200, mean 165, standar deviasi 12.5.

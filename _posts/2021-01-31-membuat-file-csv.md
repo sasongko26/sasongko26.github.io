@@ -1,7 +1,7 @@
 ---
 date: 2021-01-31
 title: Membuat file csv
-categories : [manajemen file, statistika, libreoffice]
+categories : [manajemen file]
 tags: [csv, libreoffice calc]
 ---
 File **csv** merupakan file yang umum digunakan sebagai file data. Mudah dalam pembuatannya. Begitu juga dengan aksesnya. Bisa dibuat dengan *text editor, spreadsheet software* maupun *statistical software*. Pada kesempatan kali ini tidak menggunakan *statistical software* seperti **R**.
