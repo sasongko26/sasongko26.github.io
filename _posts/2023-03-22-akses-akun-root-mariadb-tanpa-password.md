@@ -1,8 +1,8 @@
 ---
 date: 2023-03-22
-title: Akses akun root mariadb tanpa password
+title: Akses root mariadb tanpa password
 categories: [database]
-tags: [mariadb
+tags: [mariadb]
 ---
 
 Untuk akses _root_ **mariadb** biasanya memerlukan _password_. Tapi sebenarnya _root_ bisa diakses tanpa _password_. Walaupun sebenarnya hal itu sangat berbahaya. Sangat tidak disarankan. Tapi jika menginginkannya bisa saja dilakukan. Pertama, hentikan dulu *service* **mariadb**-nya.
@@ -11,7 +11,7 @@ Untuk akses _root_ **mariadb** biasanya memerlukan _password_. Tapi sebenarnya _
 /etc/rc.d/rc.mysqld stop
 ```
 
-Kemudian, restart _database server_ tanpa peduli otentikasinya.
+Kemudian, _restart database server_ tanpa peduli otentikasinya.
 
 ```shell
 mariadbd-safe --skip-grant-tables --skip-networking &
