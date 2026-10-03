@@ -18,4 +18,4 @@ Berikut adalah beberapa _software_ yang kami gunakan. _Software_ ini kami gunaka
 9. PDF viewer: [zathura]({% post_url 2026-05-08-install-zathura %})
 10. Pengolah spreadsheet: [gnumeric]({% post_url 2026-05-10-install-gnumeric %)}
 11. Launcher: [fuzzel]({% post_url 2026-05-05-install-fuzzel %})
-12. Pengambil screenshot: [grim]({% 2026-05-11 %})
+12. Pengambil screenshot: [grim]({% 2026-05-11-install-grim %})
