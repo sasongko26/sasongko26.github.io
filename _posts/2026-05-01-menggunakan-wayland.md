@@ -10,7 +10,7 @@ Berikut adalah beberapa _software_ yang kami gunakan. _Software_ ini kami gunaka
 1. _Compositor_: [labwc]({% post_url 2026-09-01-menggunakan-labwc %}) dengan [waybar]({% post_url 2026-05-02-install-waybar %}) sebagai panel
 2. Terminal emulator: [foot]({% post_url 2026-05-03-install-foot %})
 3. Text editor: emacs ([build dengan pgtk]({% post_url 2026-09-23-build-emacs-wayland %}))
-4. File manager: Midnight Commander dan kadang-kadang [PCMan FM]({% post_url 2026-05-06-install-pcmanfm %})
+4. File manager: Midnight Commander sudah terinstall secara _default_ dan kadang-kadang [PCMan FM]({% post_url 2026-05-06-install-pcmanfm %})
 5. Image viewer: [imv]({% post_url 2026-05-09-install-imv %})
 6. Video player: mpv sudah terintall secara _default_
 7. Audio player: audacious sudah terinstall secara _default_
