@@ -1,3 +1,4 @@
+---
 date: 2025-01-21
 title: Mengetahui ukuran array di rust
 categories: [pemrograman]
