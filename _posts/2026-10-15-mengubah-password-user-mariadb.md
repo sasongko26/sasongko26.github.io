@@ -9,7 +9,7 @@ _Password_ akun atau _user_ database **mariadb** yang sudah dibuat, seperti misa
 mariadb -u root -p
 ```
 
-Sudah masuk ke _prompt_ *mariadb**. Jalankan
+Sudah masuk ke _prompt_ **mariadb**. Jalankan
 
 ```sql
 ALTER USER nama_user IDENTIFIED BY 'tulis_password_barunya_di_sini';
