@@ -3,10 +3,8 @@ date: 2015-06-16
 title: Install libburn
 categories: [manajemen paket]
 tags: [libburn]
-
-Libburn adalah pustaka (*library*) untuk menulis ke CD, DVD, dan *blueray*.
-
-Berikut langkah-langkah installnya di slackware melalui slackbuild. Adapun versi libburn yang diinstall adalah 1.4.0.
+---
+Libburn adalah pustaka (*library*) untuk menulis ke CD, DVD, dan *blueray*. Berikut langkah-langkah installnya di slackware melalui slackbuild. Adapun versi libburn yang diinstall adalah 1.4.0.
 
 Pertama, pastikan [tersambung internet]({% post_url 2015-04-01-install-wvdial-slackware %}) untuk mengunduh paket. Kemudian unduh slackbuild libburn.
 
@@ -43,3 +41,5 @@ Install paketnya
 ```
 installpkg /tmp/libburn-1.4.0-x86_64-1_SBo.tgz
 ``
+
+Tetapi, cara tersebut di atas sudah tidak perlu repot-repot dilakukan lagi. `libburn` telah masuk ke repo resmi **slackware**.
