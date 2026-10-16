@@ -15,3 +15,6 @@ Ganti nama\_user dengan nama dari _user_ yang ingin diketahui databasenya. Kemud
 ```sql
 SHOW DATABASES;
 ```
+akan muncul database apa yang ada di _user_ itu.
+
+Selesai.
