@@ -2,7 +2,7 @@
 date: 2026-10-18
 title: Login mariadb
 categories: [database]
-tags: [mariadb]
+tags: [mariadb, login]
 ---
 Manajemen database dengan **mariadb** membutuhkan akses akun atau _user_ **mariadb**. Akses penuh dimiliki oleh **root**. Namun, untuk keamanan disarankan menggunakan _user_ selain **root**.
 

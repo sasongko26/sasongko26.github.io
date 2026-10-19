@@ -13,7 +13,7 @@ CREATE DATABASE nama_database;
 Ganti `nama_database` dengan nama database yang akan dibuat. Contoh, untuk membuat database bernama perpustakaan
 
 ```sql
-CRETAE DATABASE perpustakaan;
+CREATE DATABASE perpustakaan;
 ```
 
 Selesai.
