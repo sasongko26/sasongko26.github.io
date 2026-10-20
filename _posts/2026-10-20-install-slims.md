@@ -1,5 +1,5 @@
 ---
-date: 2026-10-21
+date: 2026-10-20
 title: Install slims
 categories: [sistem informasi manajemen]
 tags: [slims]
