@@ -63,4 +63,4 @@ Langkah selanjutnya, jalankan
 docker compose up -d --build
 ```
 
-Tunggu sebentar sampai semua _services_ berstatus `started`. Kemudian buka di web browser `localhost:8881`. Jika halaman **slims** muncul berarti sudah selesai diinstall. Adapun untuk menjalankan tugas sebagai pustakawan silakan login dengan _url_  'localhost:8881/?p=login`.
+Tunggu sebentar sampai semua _services_ berstatus `started`. Kemudian buka di web browser `localhost:8881`. Jika halaman **slims** muncul berarti sudah selesai diinstall. Adapun untuk menjalankan tugas sebagai pustakawan silakan login dengan _url_  `localhost:8881/?p=login`.
