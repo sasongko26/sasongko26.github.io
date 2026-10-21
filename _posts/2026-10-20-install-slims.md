@@ -22,10 +22,7 @@ Kalau hasilnya hanya `grep` berarti **docker** belum aktif. Jalankan
 bash /etc/rc.d/rc.docker start
 ```
 
-jika ingin docker langsung aktif setelah booting jangan lupa untuk menjadikannya _executable_ dengan
-```shell
-chmod +x /etc/rc.d/rc.docker
-```
+jika ingin **docker** langsung aktif setelah _booting_ silakan lihat [catatan yang lalu]({% post_url 2024-10-22-menjadikan-docker-aktif-setelah-boot %}). 
 
 Kemudian, _download_ **slims**
 ```shell
