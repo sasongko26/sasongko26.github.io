@@ -1,7 +1,7 @@
 ---
 date: 2026-10-20
 title: Install slims
-categories: [sistem informasi manajemen]
+categories: [manajemen pustaka]
 tags: [slims]
 ---
 **Slims** adalah sistem perpustakaan digital yang dirancang untuk memudahkan pengelolaan dan akses koleksi buku serta sumber informasi lainnya. Dengan teknologi modern, **slims** memungkinkan perpustakaan di berbagai tempat untuk mengelola data buku, peminjaman, pengembalian, dan katalog secara efisien dan terintegrasi. Sistem ini juga mendukung pencarian cepat dan akurat, sehingga masyarakat dapat dengan mudah menemukan buku yang dibutuhkan.
