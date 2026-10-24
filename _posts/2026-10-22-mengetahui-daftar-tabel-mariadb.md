@@ -1,5 +1,5 @@
 ---
-date: 2026-10-20
+date: 2026-10-22
 title: Mengetahui daftar tabel mariadb
 categories: [database]
 tags: [mariadb]
