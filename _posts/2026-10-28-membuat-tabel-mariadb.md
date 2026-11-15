@@ -25,6 +25,7 @@ Langkah berikutnya, pastikan _field_ atau kolom apa yang membentuk tabel. Jenis 
 _Field_ lain bisa ditambahkan sesuai kebutuhan.
 
 Nah, selesai menyusun konsep _field_ mari tuliskan dalam _sql_
+
 ```sql
 CREATE TABLE dosen (
        id INT PRIMARY KEY AUTO_INCREMENT,
@@ -33,4 +34,4 @@ CREATE TABLE dosen (
        gelar_belakang VARCHAR(100)
 );
 ```
-Jika muncul `Query OK` berarti sukses! Selamat! Untuk rekonfirmasi atau memastikan tabel sudah dibuat, bisa dicek dengan [menge-_list_ tabel yang ada]({% post_url 2026-10-22-mengetahui-daftar-tabel-mariadb.md %}). Insyaallah berlanjut ke catatan berikutnya.
+Jika muncul `Query OK` berarti sukses! Selamat! Untuk rekonfirmasi atau memastikan tabel sudah dibuat, bisa dicek dengan [menge-_list_ tabel yang ada]({% post_url 2026-10-22-mengetahui-daftar-tabel-mariadb %}). Insyaallah berlanjut ke catatan berikutnya.
